@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2"
+     xmlns:gx="http://www.google.com/kml/ext/2.2"
+     xmlns:kml="http://www.opengis.net/kml/2.2"
+     xmlns:atom="http://www.w3.org/2005/Atom">
+  <Document>
+    <name>PROJETO 3D: Catástrofe de Avalanche e Inundação Nepal-Tibete (2026)</name>
+    <open>1</open>
+    <description><![CDATA[
+      <div style="font-family: Arial, sans-serif; padding: 10px; max-width: 400px; color: #1e293b;">
+        <h2 style="color: #b91c1c; margin-top: 0;">Catástrofe Transfronteiriça Nepal-Tibete</h2>
+        <p><b>Data:</b> 26 de Agosto de 2026</p>
+        <p>Projeto 3D guiado para o Google Earth reconstituindo o colapso glacial no <b>Langtang Lirung (5.200m)</b>, barramento e rompimento do rio <b>Lhende Khola</b> e a devastação ao longo do vale do <b>Rio Trishuli</b> e do <b>Porto de Gyirong</b>.</p>
+        <hr style="border: 0; border-top: 1px solid #e2e8f0;">
+        <p style="font-size: 12px; color: #64748b;">Dê dois cliques no <b>"▶ Iniciar Tour Narrado 3D"</b> abaixo para iniciar o sobrevoo cinematográfico com câmera orbital automática.</p>
+      </div>
+    ]]></description>
+
+    <!-- ESTILOS VISUAIS E BALÕES INFORMATIVOS -->
+    <Style id="balloonStyleGlobal">
+      <BalloonStyle>
+        <bgColor>ffffffff</bgColor>
+        <textColor>ff000000</textColor>
+        <text><![CDATA[
+          <div style="font-family: 'Segoe UI', Arial, sans-serif; width: 380px; padding: 12px; line-height: 1.5; color: #0f172a;">
+            <div style="background-color: #f8fafc; border-left: 4px solid #ef4444; padding: 8px 12px; border-radius: 4px; margin-bottom: 10px;">
+              <span style="font-size: 10px; font-weight: bold; color: #ef4444; text-transform: uppercase; letter-spacing: 1px;">Etapa do Desastre</span>
+              <h3 style="margin: 2px 0 0 0; font-size: 16px; color: #0f172a;">$[name]</h3>
+            </div>
+            <div style="font-size: 13px; color: #334155;">
+              $[description]
+            </div>
+          </div>
+        ]]></text>
+      </BalloonStyle>
+    </Style>
+
+    <Style id="styleOrigin">
+      <IconStyle>
+        <color>ff0000ff</color>
+        <scale>1.5</scale>
+        <Icon><href>http://maps.google.com/mapfiles/kml/shapes/caution.png</href></Icon>
+      </IconStyle>
+      <LabelStyle><color>ffffffff</color><scale>1.1</scale></LabelStyle>
+      <BalloonStyle><text><![CDATA[$[description]]]></text></BalloonStyle>
+    </Style>
+
+    <Style id="styleDam">
+      <IconStyle>
+        <color>ff0055ff</color>
+        <scale>1.4</scale>
+        <Icon><href>http://maps.google.com/mapfiles/kml/shapes/water.png</href></Icon>
+      </IconStyle>
+      <LabelStyle><color>ffffffff</color><scale>1.0</scale></LabelStyle>
+    </Style>
+
+    <Style id="stylePort">
+      <IconStyle>
+        <color>ff00aaff</color>
+        <scale>1.3</scale>
+        <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+      </IconStyle>
+      <LabelStyle><color>ffffffff</color><scale>1.0</scale></LabelStyle>
+    </Style>
+
+    <Style id="styleHydro">
+      <IconStyle>
+        <color>ffff00aa</color>
+        <scale>1.3</scale>
+        <Icon><href>http://maps.google.com/mapfiles/kml/shapes/target.png</href></Icon>
+      </IconStyle>
+      <LabelStyle><color>ffffffff</color><scale>1.0</scale></LabelStyle>
+    </Style>
+
+    <Style id="styleDebrisPath">
+      <LineStyle>
+        <color>c00000ff</color>
+        <width>8</width>
+      </LineStyle>
+    </Style>
+
+    <Style id="styleAvalancheScar">
+      <LineStyle><color>ff0000ff</color><width>3</width></LineStyle>
+      <PolyStyle><color>800000ff</color></PolyStyle>
+    </Style>
+
+    <Style id="styleBorderLine">
+      <LineStyle>
+        <color>ff00ff00</color>
+        <width>3</width>
+      </LineStyle>
+    </Style>
+
+    <!-- ====================================================== -->
+    <!-- TOUR NARRADO AUTOMÁTICO 3D (CINEMATOGRÁFICO)           -->
+    <!-- ====================================================== -->
+    <gx:Tour>
+      <name>▶ Iniciar Tour Narrado 3D (Passo a Passo)</name>
+      <description>Clique para iniciar a animação 3D contínua que guia você pelas 6 etapas da catástrofe com ângulos de câmera inclinados e balões informativos.</description>
+      <gx:Playlist>
+        
+        <!-- PASSO 1: Visão Geral Regional (Himalaia Central) -->
+        <gx:FlyTo>
+          <gx:duration>6.0</gx:duration>
+          <gx:flyToMode>smooth</gx:flyToMode>
+          <LookAt>
+            <longitude>85.4200</longitude>
+            <latitude>28.2400</latitude>
+            <altitude>0</altitude>
+            <heading>20</heading>
+            <tilt>45</tilt>
+            <range>45000</range>
+            <altitudeMode>relativeToGround</altitudeMode>
+          </LookAt>
+        </gx:FlyTo>
+        <gx:Wait><gx:duration>3.0</gx:duration></gx:Wait>
+
+        <!-- PASSO 2: O Epicentro da Avalanche (Langtang Lirung a 5.200m) -->
+        <gx:FlyTo>
+          <gx:duration>7.0</gx:duration>
+          <gx:flyToMode>smooth</gx:flyToMode>
+          <LookAt>
+            <longitude>85.5194</longitude>
+            <latitude>28.2765</latitude>
+            <altitude>5200</altitude>
+            <heading>145</heading>
+            <tilt>68</tilt>
+            <range>7500</range>
+            <altitudeMode>relativeToGround</altitudeMode>
+          </LookAt>
+        </gx:FlyTo>
+        <gx:Wait><gx:duration>5.0</gx:duration></gx:Wait>
+
+        <!-- PASSO 3: O Barramento e Rompimento no Lhende Khola -->
+        <gx:FlyTo>
+          <gx:duration>6.0</gx:duration>
+          <gx:flyToMode>smooth</gx:flyToMode>
+          <LookAt>
+            <longitude>85.4800</longitude>
+            <latitude>28.2740</latitude>
+            <altitude>3950</altitude>
+            <heading>260</heading>
+            <tilt>62</tilt>
+            <range>6000</range>
+            <altitudeMode>relativeToGround</altitudeMode>
+          </LookAt>
+        </gx:FlyTo>
+        <gx:Wait><gx:duration>5.0</gx:duration></gx:Wait>
+
+        <!-- PASSO 4: Impacto no Porto de Gyirong (Tibete, China) -->
+        <gx:FlyTo>
+          <gx:duration>7.0</gx:duration>
+          <gx:flyToMode>smooth</gx:flyToMode>
+          <LookAt>
+            <longitude>85.3300</longitude>
+            <latitude>28.3970</latitude>
+            <altitude>2700</altitude>
+            <heading>350</heading>
+            <tilt>55</tilt>
+            <range>8000</range>
+            <altitudeMode>relativeToGround</altitudeMode>
+          </LookAt>
+        </gx:FlyTo>
+        <gx:Wait><gx:duration>5.0</gx:duration></gx:Wait>
+
+        <!-- PASSO 5: Devastação em Rasuwagadhi e Timure (Nepal) -->
+        <gx:FlyTo>
+          <gx:duration>7.0</gx:duration>
+          <gx:flyToMode>smooth</gx:flyToMode>
+          <LookAt>
+            <longitude>85.3810</longitude>
+            <latitude>28.2730</latitude>
+            <altitude>1814</altitude>
+            <heading>190</heading>
+            <tilt>65</tilt>
+            <range>5500</range>
+            <altitudeMode>relativeToGround</altitudeMode>
+          </LookAt>
+        </gx:FlyTo>
+        <gx:Wait><gx:duration>5.0</gx:duration></gx:Wait>
+
+        <!-- PASSO 6: A Cascata Hidrelétrica e Vales a Jusante (Trishuli) -->
+        <gx:FlyTo>
+          <gx:duration>8.0</gx:duration>
+          <gx:flyToMode>smooth</gx:flyToMode>
+          <LookAt>
+            <longitude>85.2400</longitude>
+            <latitude>28.0400</latitude>
+            <altitude>1000</altitude>
+            <heading>205</heading>
+            <tilt>50</tilt>
+            <range>22000</range>
+            <altitudeMode>relativeToGround</altitudeMode>
+          </LookAt>
+        </gx:FlyTo>
+        <gx:Wait><gx:duration>5.0</gx:duration></gx:Wait>
+
+        <!-- Final: Órbita Panorâmica de Fechamento -->
+        <gx:FlyTo>
+          <gx:duration>6.0</gx:duration>
+          <gx:flyToMode>smooth</gx:flyToMode>
+          <LookAt>
+            <longitude>85.4000</longitude>
+            <latitude>28.2200</latitude>
+            <altitude>0</altitude>
+            <heading>35</heading>
+            <tilt>58</tilt>
+            <range>35000</range>
+            <altitudeMode>relativeToGround</altitudeMode>
+          </LookAt>
+        </gx:FlyTo>
+
+      </gx:Playlist>
+    </gx:Tour>
+
+    <!-- ====================================================== -->
+    <!-- POLÍGONOS 3D E LINHAS DE FLUXO                         -->
+    <!-- ====================================================== -->
+    <Folder>
+      <name>Camadas Cartográficas 3D</name>
+      
+      <!-- Linha de Fronteira Nepal - China -->
+      <Placemark>
+        <name>Fronteira Internacional Nepal - China (Tibete)</name>
+        <styleUrl>#styleBorderLine</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            85.1000,28.3200,4500
+            85.2500,28.3000,4800
+            85.3810,28.2730,1814
+            85.4800,28.2740,3950
+            85.6000,28.2600,5600
+            85.7500,28.2800,6200
+          </coordinates>
+        </LineString>
+      </Placemark>
+
+      <!-- Cicatriz do Desprendimento Glacial (Polígono 3D) -->
+      <Placemark>
+        <name>Cicatriz de Ruptura Glacial (Langtang Lirung)</name>
+        <styleUrl>#styleAvalancheScar</styleUrl>
+        <Polygon>
+          <extrude>1</extrude>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>
+                85.5150,28.2800,400
+                85.5240,28.2800,400
+                85.5220,28.2730,200
+                85.5130,28.2730,200
+                85.5150,28.2800,400
+              </coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+
+      <!-- Trajetória da Torrente de Detritos (45 km) -->
+      <Placemark>
+        <name>Eixo da Onda de Detritos e Lama (45 km)</name>
+        <description>Vetor de escoamento hiperconcentrado descendo da cota 5.200m até 850m no rio Trishuli.</description>
+        <styleUrl>#styleDebrisPath</styleUrl>
+        <LineString>
+          <extrude>1</extrude>
+          <tessellate>1</tessellate>
+          <altitudeMode>clampToGround</altitudeMode>
+          <coordinates>
+            85.5194,28.2765,5200
+            85.4800,28.2740,3950
+            85.4200,28.2750,2400
+            85.3810,28.2730,1814
+            85.3780,28.2650,1780
+            85.3850,28.2520,1750
+            85.3500,28.2000,1580
+            85.3370,28.1610,1460
+            85.3000,28.1130,1300
+            85.2400,28.0400,1050
+            85.1800,27.9700,850
+          </coordinates>
+        </LineString>
+      </Placemark>
+    </Folder>
+
+    <!-- ====================================================== -->
+    <!-- MARCADORES E ESTAÇÕES NARRATIVAS                       -->
+    <!-- ====================================================== -->
+    <Folder>
+      <name>Marcos Narrativos e Hotspots do Desastre</name>
+      
+      <!-- Ponto 1: Origem do Colapso -->
+      <Placemark>
+        <name>1. Origem: Colapso de Rocha-Gelo no Langtang Lirung</name>
+        <styleUrl>#styleOrigin</styleUrl>
+        <LookAt>
+          <longitude>85.5194</longitude>
+          <latitude>28.2765</latitude>
+          <altitude>5200</altitude>
+          <heading>145</heading>
+          <tilt>68</tilt>
+          <range>7500</range>
+        </LookAt>
+        <description><![CDATA[
+          <div style="font-family: Arial, sans-serif; line-height: 1.4; color: #1e293b;">
+            <div style="background: #ef4444; color: #fff; padding: 6px 10px; border-radius: 4px; font-weight: bold; font-size: 13px;">
+              💥 26 AGO 2026 - 08:37 AM (Hora Local)
+            </div>
+            <p><b>Altitude:</b> ~5.200 m (Pico: 7.245 m) | <b>Queda Livre:</b> ~1.200 m</p>
+            <p><b>O Fenômeno:</b> Uma fatia maciça de geleira e permafrost rochoso descolou-se da face norte do Langtang Lirung, despencando em direção ao cânion profundo do rio Lhende Khola.</p>
+            <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 8px; border-radius: 4px; font-size: 12px; margin-top: 8px;">
+              <b>⚡ Sinal Sísmico de 4.4 mb:</b> O impacto de milhões de toneladas contra o leito rochoso gerou vibrações sismográficas registradas mundialmente (USGS). Cientistas confirmaram que o sinal foi produzido pelo impacto do colapso e não por um terremoto tectônico causador.
+            </div>
+          </div>
+        ]]></description>
+        <Point>
+          <coordinates>85.5194,28.2765,5200</coordinates>
+        </Point>
+      </Placemark>
+
+      <!-- Ponto 2: Barramento no Lhende Khola -->
+      <Placemark>
+        <name>2. Barramento & Ruptura Catastrófica (Lhende Khola)</name>
+        <styleUrl>#styleDam</styleUrl>
+        <LookAt>
+          <longitude>85.4800</longitude>
+          <latitude>28.2740</latitude>
+          <altitude>3950</altitude>
+          <heading>260</heading>
+          <tilt>62</tilt>
+          <range>6000</range>
+        </LookAt>
+        <description><![CDATA[
+          <div style="font-family: Arial, sans-serif; line-height: 1.4; color: #1e293b;">
+            <div style="background: #dc2626; color: #fff; padding: 6px 10px; border-radius: 4px; font-weight: bold; font-size: 13px;">
+              🌊 08:50 AM a 09:15 AM - Represamento & Estouro
+            </div>
+            <p><b>Altitude:</b> ~3.950 m (Desfiladeiro de Fronteira)</p>
+            <p>Os detritos da avalanche bloquearam instantaneamente o fluxo do rio Lhende Khola, criando uma represa natural de lama, gelo e pedregulhos.</p>
+            <p>Em menos de 30 minutos, o volume de água acumulado superou a resistência do barramento, rompendo-o violentamente e liberando uma onda de choque de detritos a mais de <b>50 km/h</b>.</p>
+          </div>
+        ]]></description>
+        <Point>
+          <coordinates>85.4800,28.2740,3950</coordinates>
+        </Point>
+      </Placemark>
+
+      <!-- Ponto 3: Porto de Gyirong (Tibete, China) -->
+      <Placemark>
+        <name>3. Porto Terrestre de Gyirong (Tibete, China)</name>
+        <styleUrl>#stylePort</styleUrl>
+        <LookAt>
+          <longitude>85.3300</longitude>
+          <latitude>28.3970</latitude>
+          <altitude>2700</altitude>
+          <heading>350</heading>
+          <tilt>55</tilt>
+          <range>8000</range>
+        </LookAt>
+        <description><![CDATA[
+          <div style="font-family: Arial, sans-serif; line-height: 1.4; color: #1e293b;">
+            <div style="background: #ea580c; color: #fff; padding: 6px 10px; border-radius: 4px; font-weight: bold; font-size: 13px;">
+              🏢 Impacto no Tibete (09:30 AM)
+            </div>
+            <p><b>Altitude:</b> ~2.700 m | <b>Status:</b> Zona de Desastre</p>
+            <p>O principal porto alfandegário e comercial que liga a China ao Nepal foi atingido por deslizamentos e refluxo de lama maciça.</p>
+            <p>Edifícios da aduana, armazéns e dezenas de veículos de carga foram soterrados. As redes de telecomunicações e estradas de acesso foram rompidas, mobilizando brigadas de resgate do Exército de Libertação Popular.</p>
+          </div>
+        ]]></description>
+        <Point>
+          <coordinates>85.3300,28.3970,2700</coordinates>
+        </Point>
+      </Placemark>
+
+      <!-- Ponto 4: Rasuwagadhi e Timure (Nepal) -->
+      <Placemark>
+        <name>4. Forte Rasuwagadhi & Vila de Timure (Nepal)</name>
+        <styleUrl>#stylePort</styleUrl>
+        <LookAt>
+          <longitude>85.3810</longitude>
+          <latitude>28.2730</latitude>
+          <altitude>1814</altitude>
+          <heading>190</heading>
+          <tilt>65</tilt>
+          <range>5500</range>
+        </LookAt>
+        <description><![CDATA[
+          <div style="font-family: Arial, sans-serif; line-height: 1.4; color: #1e293b;">
+            <div style="background: #b91c1c; color: #fff; padding: 6px 10px; border-radius: 4px; font-weight: bold; font-size: 13px;">
+              🚨 Devastação Transfronteiriça no Nepal (09:40 AM)
+            </div>
+            <p><b>Altitude:</b> 1.814 m (Rasuwagadhi) a 1.750 m (Timure)</p>
+            <p>A força combinada de água e megablocos varreu a histórica <b>Ponte da Amizade</b> e os postos de imigração nepalenses.</p>
+            <p>A vila de <b>Timure</b> ficou sob até 6 metros de cascalho e lama. Centenas de caminhoneiros, comerciantes e moradores foram surpreendidos sem tempo hábil de evacuação.</p>
+          </div>
+        ]]></description>
+        <Point>
+          <coordinates>85.3810,28.2730,1814</coordinates>
+        </Point>
+      </Placemark>
+
+      <!-- Ponto 5: UHE Rasuwagadhi -->
+      <Placemark>
+        <name>5. UHE Rasuwagadhi (111 MW)</name>
+        <styleUrl>#styleHydro</styleUrl>
+        <LookAt>
+          <longitude>85.3780</longitude>
+          <latitude>28.2650</latitude>
+          <altitude>1780</altitude>
+          <heading>180</heading>
+          <tilt>60</tilt>
+          <range>5000</range>
+        </LookAt>
+        <description><![CDATA[
+          <div style="font-family: Arial, sans-serif; line-height: 1.4; color: #1e293b;">
+            <div style="background: #9333ea; color: #fff; padding: 6px 10px; border-radius: 4px; font-weight: bold; font-size: 13px;">
+              ⚡ Impacto no Setor Elétrico
+            </div>
+            <p><b>Capacidade:</b> 111 MW | <b>Rio:</b> Bhote Koshi / Trishuli</p>
+            <p>A hidrelétrica sofreu invasão de água com alta carga sólida. As comportas de captação e os desarenadores foram completamente assoreados, forçando o corte emergencial e o desligamento em cadeia de mais de <b>400 MW</b> na bacia.</p>
+          </div>
+        ]]></description>
+        <Point>
+          <coordinates>85.3780,28.2650,1780</coordinates>
+        </Point>
+      </Placemark>
+
+      <!-- Ponto 6: Syabrubesi e Cascata do Trishuli -->
+      <Placemark>
+        <name>6. Syabrubesi & Cascata Hidrelétrica do Trishuli</name>
+        <styleUrl>#styleHydro</styleUrl>
+        <LookAt>
+          <longitude>85.2400</longitude>
+          <latitude>28.0400</latitude>
+          <altitude>1000</altitude>
+          <heading>205</heading>
+          <tilt>50</tilt>
+          <range>22000</range>
+        </LookAt>
+        <description><![CDATA[
+          <div style="font-family: Arial, sans-serif; line-height: 1.4; color: #1e293b;">
+            <div style="background: #2563eb; color: #fff; padding: 6px 10px; border-radius: 4px; font-weight: bold; font-size: 13px;">
+              📍 Propagação a Jusante (10:00 AM a 11:30 AM)
+            </div>
+            <p><b>Localidades:</b> Syabrubesi, Dhunche, UHE Chilime (22MW), UHE Trishuli-3A (60MW)</p>
+            <p>A torrente destruiu <b>19 pontes rodoviárias e comunitárias</b> e danificou mais de <b>42 km da Rodovia Pasang Lhamu</b>, isolando o vale do Langtang e impedindo o acesso terrestre das equipes de emergência.</p>
+          </div>
+        ]]></description>
+        <Point>
+          <coordinates>85.3370,28.1610,1460</coordinates>
+        </Point>
+      </Placemark>
+
+    </Folder>
+
+  </Document>
+</kml>
