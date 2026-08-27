@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Do Sol ao Rompimento: Cronologia Investigativa Nepal-Tibete 2026</title>
+  <style>
+    :root {
+      --bg: #0b1120;
+      --card-bg: #1e293b;
+      --border: #334155;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --blue-obs: #38bdf8;
+      --green-der: #4ade80;
+      --yellow-est: #facc15;
+      --orange-inf: #fb923c;
+      --purple-hyp: #c084fc;
+      --gray-unv: #94a3b8;
+      --red-alert: #f87171;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 16px;
+    }
+    .container { max-width: 1400px; margin: 0 auto; }
+    
+    header {
+      background: linear-gradient(135deg, #1e1b4b, #0f172a);
+      border: 1px solid #4338ca;
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.5);
+    }
+    h1 { font-size: 26px; color: #e0e7ff; margin-bottom: 8px; }
+    .subtitle { color: #a5b4fc; font-size: 15px; margin-bottom: 16px; }
+    
+    .badge-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .badge-obs { background: rgba(56, 189, 248, 0.15); color: var(--blue-obs); border: 1px solid var(--blue-obs); }
+    .badge-der { background: rgba(74, 222, 128, 0.15); color: var(--green-der); border: 1px solid var(--green-der); }
+    .badge-est { background: rgba(250, 204, 21, 0.15); color: var(--yellow-est); border: 1px solid var(--yellow-est); }
+    .badge-inf { background: rgba(251, 146, 60, 0.15); color: var(--orange-inf); border: 1px solid var(--orange-inf); }
+    .badge-hyp { background: rgba(192, 132, 252, 0.15); color: var(--purple-hyp); border: 1px solid var(--purple-hyp); }
+    .badge-unv { background: rgba(148, 163, 184, 0.15); color: var(--gray-unv); border: 1px solid var(--gray-unv); }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+    @media (max-width: 900px) {
+      .grid-2 { grid-template-columns: 1fr; }
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.3);
+    }
+    .card-title {
+      font-size: 18px;
+      color: #38bdf8;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* CONTROLE INTERATIVO DE DEFASAGEM */
+    .slider-box {
+      background: #0f172a;
+      border: 1px solid #3b82f6;
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 20px;
+    }
+    .slider-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    input[type=range] {
+      width: 100%;
+      height: 8px;
+      border-radius: 5px;
+      background: #334155;
+      outline: none;
+    }
+    .slider-readout {
+      font-size: 14px;
+      color: #93c5fd;
+      font-family: monospace;
+      font-weight: bold;
+    }
+    .disclaimer-box {
+      background: rgba(239, 68, 68, 0.1);
+      border-left: 4px solid #ef4444;
+      padding: 10px 14px;
+      font-size: 12px;
+      color: #fca5a5;
+      margin-top: 10px;
+      border-radius: 0 4px 4px 0;
+    }
+
+    /* TIMELINE VISUAL CANVAS */
+    .timeline-container {
+      background: #0f172a;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      padding: 16px;
+      overflow-x: auto;
+      margin-bottom: 24px;
+    }
+    canvas { width: 100%; height: auto; display: block; }
+
+    /* TABELA MASTER PREVIEW */
+    .table-container {
+      overflow-x: auto;
+      margin-top: 12px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      text-align: left;
+    }
+    th, td {
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border);
+    }
+    th {
+      background: #0f172a;
+      color: #93c5fd;
+      font-weight: 600;
+    }
+    tr:hover { background: rgba(255,255,255,0.03); }
+
+    /* DIAGRAMA CAUSAL */
+    .causal-chain {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+      gap: 10px;
+      padding: 16px 0;
+    }
+    .causal-node {
+      background: #0f172a;
+      border: 1px solid #38bdf8;
+      border-radius: 8px;
+      padding: 12px;
+      width: 180px;
+      text-align: center;
+      font-size: 13px;
+    }
+    .causal-arrow {
+      font-size: 20px;
+      color: #64748b;
+      font-weight: bold;
+    }
+    .status-tag {
+      font-size: 10px;
+      display: block;
+      margin-top: 4px;
+      font-weight: bold;
+    }
+
+    .source-link {
+      color: #38bdf8;
+      text-decoration: none;
+      font-size: 11px;
+    }
+    .source-link:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+    <!-- CABEÇALHO -->
+    <header>
+      <h1>Do Sol ao Rompimento: Cronologia Investigativa do Desastre Nepal–Tibete de 2026</h1>
+      <div class="subtitle">
+        Investigação Científica e Auditoria de Relações de Causa e Efeito entre a Erupção Solar M7 (25/08 10:02 UTC) e a Catástrofe Glacial no Langtang Lirung / Lhende Khola (26/08 02:52 UTC).
+      </div>
+      
+      <div class="badge-legend">
+        <span class="badge badge-obs">● Dado Observado</span>
+        <span class="badge badge-der">● Dado Derivado</span>
+        <span class="badge badge-est">● Estimativa</span>
+        <span class="badge badge-inf">● Inferência</span>
+        <span class="badge badge-hyp">● Hipótese</span>
+        <span class="badge badge-unv">● Não Verificado / Indisponível</span>
+      </div>
+    </header>
+
+    <!-- PAINEL INTERATIVO DE DEFASAGEM TEMPORAL -->
+    <div class="card slider-box">
+      <div class="slider-header">
+        <span style="font-weight: 600; color: #e0e7ff;">⏱️ Controle Interativo de Defasagem Solar-Atmosférica (Lag Analysis):</span>
+        <span class="slider-readout" id="lagReadout">Defasagem Atual: +16h 50min (Valor do Desastre)</span>
+      </div>
+      <input type="range" id="lagSlider" min="0" max="24" step="0.25" value="16.83" oninput="updateLag(this.value)">
+      <div style="display: flex; justify-content: space-between; font-size: 11px; color: #94a3b8; margin-top: 4px;">
+        <span>0h (Impacto Imediato de Raios X)</span>
+        <span>6h</span>
+        <span>12h (Chegada de Vento Solar Rápido)</span>
+        <span>16h 50min (Colapso 02:52 UTC)</span>
+        <span>24h (Limite da Janela)</span>
+      </div>
+      <div class="disclaimer-box">
+        ⚠️ <b>Princípio Científico Obrigatório:</b> A coincidência temporal entre o flare solar e a tempestade/avalanche através de um atraso ajustado <b>não comprova causalidade física</b> (risco de correlações espúrias por múltiplas comparações). A hipótese requer prova independente de variação mensurável no campo elétrico vertical $J_z$.
+      </div>
+    </div>
+
+    <!-- LINHA DO TEMPO SINCRONIZADA (CANVAS) -->
+    <div class="card" style="margin-bottom: 24px;">
+      <div class="card-title">
+        <span>📈 Séries Temporais Sincronizadas (25/08 00:00 UTC a 26/08 12:00 UTC)</span>
+        <span style="font-size: 12px; color: #94a3b8;">Marcadores Verticais: <b>10:02 UTC (Flare M7)</b> e <b>02:52 UTC (Colapso 4.4 mb)</b></span>
+      </div>
+      <div class="timeline-container">
+        <canvas id="timelineCanvas" width="1200" height="420"></canvas>
+      </div>
+      <div style="font-size: 12px; color: #94a3b8; display: flex; justify-content: space-between; flex-wrap: wrap;">
+        <span>Fontes: <a href="https://www.spaceweather.gov/" target="_blank" class="source-link">NOAA SWPC (GOES-16 XRS & DSCOVR)</a> | <a href="https://earthquake.usgs.gov/" target="_blank" class="source-link">USGS Seismology</a> | <a href="https://gpm.nasa.gov/" target="_blank" class="source-link">NASA GPM IMERG</a></span>
+        <span>Arquivo de Dados: <a href="data/processed/timeline_master.csv" class="source-link">data/processed/timeline_master.csv</a></span>
+      </div>
+    </div>
+
+    <!-- MAPA ESQUEMÁTICO & DIAGRAMA CAUSAL -->
+    <div class="grid-2">
+      
+      <!-- DIAGRAMA CAUSAL -->
+      <div class="card">
+        <div class="card-title">🔗 Diagrama da Cadeia Causal Investigada</div>
+        <div class="causal-chain">
+          <div class="causal-node" style="border-color: var(--blue-obs);">
+            <b>1. Flare Solar M7</b>
+            <div style="font-size: 11px; color: #94a3b8;">25/08 10:02 UTC</div>
+            <span class="status-tag" style="color: var(--blue-obs);">DADO OBSERVADO (GOES)</span>
+          </div>
+          <div class="causal-arrow">➔</div>
+          
+          <div class="causal-node" style="border-color: var(--green-der);">
+            <b>2. Absorção D-Region / SID</b>
+            <div style="font-size: 11px; color: #94a3b8;">25/08 10:10 UTC (+8 min)</div>
+            <span class="status-tag" style="color: var(--green-der);">DADO DERIVADO (D-RAP)</span>
+          </div>
+          <div class="causal-arrow">➔</div>
+          
+          <div class="causal-node" style="border-color: var(--purple-hyp);">
+            <b>3. Modulação ΔJz no Himalaia</b>
+            <div style="font-size: 11px; color: #94a3b8;">25/08 ~19:00 a 26/08 02:00</div>
+            <span class="status-tag" style="color: var(--purple-hyp);">HIPÓTESE (NÃO MEDIDO)</span>
+          </div>
+          <div class="causal-arrow">➔</div>
+
+          <div class="causal-node" style="border-color: var(--green-der);">
+            <b>4. Convecção / Tempestade</b>
+            <div style="font-size: 11px; color: #94a3b8;">25/08 23:00 - 26/08 02:00</div>
+            <span class="status-tag" style="color: var(--green-der);">DADO DERIVADO (GPM/INSAT)</span>
+          </div>
+          <div class="causal-arrow">➔</div>
+
+          <div class="causal-node" style="border-color: var(--blue-obs);">
+            <b>5. Colapso Langtang (4.4 mb)</b>
+            <div style="font-size: 11px; color: #94a3b8;">26/08 02:52:10 UTC</div>
+            <span class="status-tag" style="color: var(--blue-obs);">DADO OBSERVADO (USGS)</span>
+          </div>
+          <div class="causal-arrow">➔</div>
+
+          <div class="causal-node" style="border-color: var(--blue-obs);">
+            <b>6. Ruptura e Enxurrada (45 km)</b>
+            <div style="font-size: 11px; color: #94a3b8;">26/08 03:35 a 05:00 UTC</div>
+            <span class="status-tag" style="color: var(--blue-obs);">DADO OBSERVADO (ICIMOD)</span>
+          </div>
+        </div>
+
+        <div style="margin-top: 16px; font-size: 12px; color: #94a3b8; border-top: 1px solid var(--border); padding-top: 12px;">
+          <b>Mecanismo Alternativo Principal (Hipótese Nula):</b> O colapso foi puramente mecânico/térmico decorrente do ciclo sazonal de monção, degelo de permafrost rochoso a 5.200m e saturação hídrica basal acumulada ao longo de semanas.
+        </div>
+      </div>
+
+      <!-- MAPA ESQUEMÁTICO INTEGRADO -->
+      <div class="card">
+        <div class="card-title">🗺️ Mapa Estrutural do Corredor de Impacto</div>
+        <svg viewBox="0 0 500 320" style="width:100%; height:auto; background:#0f172a; border-radius:8px; border:1px solid #334155;">
+          <!-- Linha de Fronteira -->
+          <line x1="20" y1="130" x2="480" y2="130" stroke="#22c55e" stroke-dasharray="4,4" stroke-width="1.5" />
+          <text x="30" y="125" fill="#22c55e" font-size="10">TIBETE (CHINA)</text>
+          <text x="30" y="145" fill="#22c55e" font-size="10">NEPAL (RASUWA)</text>
+
+          <!-- Leito do Rio Lhende Khola e Trishuli -->
+          <path d="M 420 40 Q 360 80 300 90 T 220 130 T 210 180 T 170 230 T 130 280 T 80 300" fill="none" stroke="#ef4444" stroke-width="4" />
+          <text x="230" y="195" fill="#fca5a5" font-size="10">Leito do Trishuli (Enxurrada 45 km)</text>
+
+          <!-- Origem da Avalanche -->
+          <circle cx="420" cy="40" r="8" fill="#ef4444" stroke="#fff" stroke-width="2" />
+          <text x="340" y="30" fill="#fca5a5" font-size="11" font-weight="bold">Langtang Lirung (5.200m)</text>
+          <text x="340" y="42" fill="#94a3b8" font-size="9">02:52:10 UTC (4.4 mb)</text>
+
+          <!-- Lago de Barramento -->
+          <polygon points="300,85 320,80 315,95 295,95" fill="#38bdf8" opacity="0.8" />
+          <text x="250" y="75" fill="#38bdf8" font-size="10">Lago Lhende Khola (~3.950m)</text>
+
+          <!-- Fronteira e Rasuwagadhi -->
+          <rect x="210" y="122" width="16" height="16" fill="#f59e0b" />
+          <text x="130" y="125" fill="#fcd34d" font-size="10">Rasuwagadhi (1.814m)</text>
+
+          <!-- UHE Rasuwagadhi -->
+          <circle cx="210" cy="155" r="5" fill="#a855f7" />
+          <text x="110" y="158" fill="#d8b4fe" font-size="10">UHE Rasuwagadhi (111 MW)</text>
+
+          <!-- Syabrubesi -->
+          <circle cx="210" cy="180" r="5" fill="#38bdf8" />
+          <text x="140" y="185" fill="#93c5fd" font-size="10">Syabrubesi (1.460m)</text>
+
+          <!-- Núcleo Convectivo de Tempestade -->
+          <ellipse cx="360" cy="110" rx="45" ry="25" fill="rgba(168, 85, 247, 0.25)" stroke="#c084fc" stroke-dasharray="3,3" />
+          <text x="325" y="112" fill="#e9d5ff" font-size="9">Célula Convectiva GPM</text>
+          <text x="340" y="122" fill="#e9d5ff" font-size="8">(25/08 23:00 - 02:00)</text>
+
+          <!-- Raios Detectados -->
+          <text x="375" y="95" fill="#facc15" font-size="12">⚡</text>
+          <text x="350" y="130" fill="#facc15" font-size="12">⚡</text>
+        </svg>
+        <div style="font-size: 11px; color: #94a3b8; margin-top: 8px;">
+          Vetor georreferenciado interativo disponível em <a href="mapa_mestre_trishuli_google_earth.kml" class="source-link">mapa_mestre_trishuli_google_earth.kml</a>.
+        </div>
+      </div>
+
+    </div>
+
+    <!-- TABELA COMPARATIVA DE HIPÓTESES -->
+    <div class="card" style="margin-bottom: 24px;">
+      <div class="card-title">⚖️ Comparação Sistemática de Hipóteses Concorrentes</div>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Hipótese</th>
+              <th>Evidência Favorável</th>
+              <th>Evidência Contrária / Limitação</th>
+              <th>Dados Faltantes Essenciais</th>
+              <th>Grau de Confiança</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b>H1: Acoplamento Solar-Jz-Tempestade-Colapso</b></td>
+              <td>Flare M7 às 10:02 UTC antecede o desastre em 16h50min; células convectivas e descargas registradas à noite sobre a bacia.</td>
+              <td>Ausência de medição direta de $J_z$ e campo elétrico no Himalaia; vento solar não caracterizou supertempestade geomagnética severa ($Kp \le 3.7$).</td>
+              <td>Séries de eletrometria local (sensores de campo elétrico atmosférico) e requisição formal vDEC da CTBTO.</td>
+              <td><span class="badge badge-hyp">Hipótese Teórica</span></td>
+            </tr>
+            <tr>
+              <td><b>H2: Tempestade Convectiva Extrema Localizada ("Toró")</b></td>
+              <td>Satélites GPM e INSAT indicam topos de nuvens a -62°C e taxas de chuva de 18.5 mm/h sobre o relevo íngreme.</td>
+              <td>Pluviômetros de vale (DHM) registraram acumulados baixos a moderados (microclima de vale vs encosta).</td>
+              <td>Radar meteorológico Doppler com cobertura no vale do Langtang (inexistente na região).</td>
+              <td><span class="badge badge-der">Compatível / Plausível</span></td>
+            </tr>
+            <tr>
+              <td><b>H3: Colapso Mecânico Puramente Glaciológico (Hipótese Nula)</b></td>
+              <td>Geleira suspensa na face norte sob forte estresse gravitacional; sinal sísmico clássico de impacto (4.4 mb); histórico de instabilidade em Langtang.</td>
+              <td>Não explica isoladamente a aparente confluência de atividade elétrica anômala antes do desastre.</td>
+              <td>Modelagem termomecânica 3D de permafrost rochoso com dados de temperatura de subsuperfície.</td>
+              <td><span class="badge badge-obs">Alta Confiança</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- PAINEL O QUE SABEMOS / O QUE NÃO SABEMOS -->
+    <div class="grid-2" style="margin-bottom: 24px;">
+      <div class="card" style="border-left: 4px solid var(--blue-obs);">
+        <div class="card-title" style="color: var(--blue-obs);">✅ O que SABEMOS (Fatos Confirmados)</div>
+        <ul style="padding-left: 18px; font-size: 13px; color: #cbd5e1;">
+          <li><b>Flare Solar:</b> Ocorreu erupção de classe M7.0 às 10:02 UTC de 25/08/2026 (GOES-16).</li>
+          <li><b>Horário do Desastre:</b> O impacto da massa gerou sinal sísmico às 02:52:10 UTC de 26/08/2026 (USGS/ISC).</li>
+          <li><b>Intervalo Temporal:</b> O desastre ocorreu exatamente <b>16 horas, 50 minutos e 10 segundos</b> após o pico do flare.</li>
+          <li><b>Danos Físicos:</b> 25 pontes foram destruídas e 3 danificadas na bacia do Trishuli (ICIMOD).</li>
+          <li><b>Natureza da Estação KKN:</b> Kakani é uma estação sismográfica de banda larga, não um microbarômetro.</li>
+        </ul>
+      </div>
+
+      <div class="card" style="border-left: 4px solid var(--orange-inf);">
+        <div class="card-title" style="color: var(--orange-inf);">❓ O que NÃO SABEMOS (Incertezas e Lacunas)</div>
+        <ul style="padding-left: 18px; font-size: 13px; color: #cbd5e1;">
+          <li><b>Campo Elétrico Local ($J_z$):</b> Não há estação de medição de corrente vertical atmosférica no vale de Langtang.</li>
+          <li><b>Formas de Onda CTBTO:</b> Registros dos arrays I40PK e I31KZ requerem liberação formal via vDEC.</li>
+          <li><b>Chuva sobre a Geleira:</b> Pluviômetros de vale não cobrem a cota de 5.200 m (precipitação derivada apenas de satélite).</li>
+          <li><b>Estado do Lago antes do Colapso:</b> Ausência de imagens ópticas sem nuvens imediatamente antes de 25/08 impede descartar lago preexistente.</li>
+          <li><b>Mecanismo de Gatilho:</b> Se o desprendimento foi disparado por água líquida, vibração ou fadiga mecânica natural.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- PREVIEW DA TABELA MESTRA -->
+    <div class="card">
+      <div class="card-title">
+        <span>📋 Tabela-Mestra de Eventos (data/processed/timeline_master.csv)</span>
+        <a href="data/processed/timeline_master.csv" class="source-link" download style="font-size: 13px; padding: 4px 8px; background: #0f172a; border: 1px solid #38bdf8; border-radius: 4px;">📥 Baixar CSV Completo</a>
+      </div>
+      <div class="table-container">
+        <table id="masterTable">
+          <thead>
+            <tr>
+              <th>UTC</th>
+              <th>NPT (+5:45)</th>
+              <th>Categoria</th>
+              <th>Variável</th>
+              <th>Valor / Unidade</th>
+              <th>Status</th>
+              <th>Fonte Primária</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>25/08 09:48</td>
+              <td>25/08 15:33</td>
+              <td>Solar</td>
+              <td>Início do Flare M7</td>
+              <td>1.02e-5 W/m²</td>
+              <td><span class="badge badge-obs">Obs</span></td>
+              <td>NOAA SWPC / GOES-16</td>
+            </tr>
+            <tr>
+              <td>25/08 10:02</td>
+              <td>25/08 15:47</td>
+              <td>Solar</td>
+              <td>Pico do Flare M7.0</td>
+              <td>7.00e-5 W/m²</td>
+              <td><span class="badge badge-obs">Obs</span></td>
+              <td>NOAA SWPC / GOES-16</td>
+            </tr>
+            <tr>
+              <td>25/08 10:10</td>
+              <td>25/08 15:55</td>
+              <td>Ionosphere</td>
+              <td>Absorção SID (D-Region)</td>
+              <td>28.5 dB</td>
+              <td><span class="badge badge-der">Der</span></td>
+              <td>NOAA D-RAP Model</td>
+            </tr>
+            <tr>
+              <td>25/08 19:00</td>
+              <td>26/08 00:45</td>
+              <td>GEC</td>
+              <td>Densidade de Corrente Jz</td>
+              <td>3.85 pA/m²</td>
+              <td><span class="badge badge-hyp">Hyp</span></td>
+              <td>Modelo GEC Himalaya</td>
+            </tr>
+            <tr>
+              <td>25/08 23:45</td>
+              <td>26/08 05:30</td>
+              <td>Meteorology</td>
+              <td>Raios / Descargas</td>
+              <td>14 strokes/100km²</td>
+              <td><span class="badge badge-est">Est</span></td>
+              <td>WWLLN / GLD360 Proxy</td>
+            </tr>
+            <tr>
+              <td>26/08 01:30</td>
+              <td>26/08 07:15</td>
+              <td>Meteorology</td>
+              <td>Precipitação Localizada</td>
+              <td>18.5 mm/h</td>
+              <td><span class="badge badge-der">Der</span></td>
+              <td>NASA GPM IMERG</td>
+            </tr>
+            <tr>
+              <td>26/08 02:52:10</td>
+              <td>26/08 08:37:10</td>
+              <td>Geophysics</td>
+              <td>Sinal Sísmico de Impacto</td>
+              <td>4.4 mb</td>
+              <td><span class="badge badge-obs">Obs</span></td>
+              <td>USGS Earthquake Hazards</td>
+            </tr>
+            <tr>
+              <td>26/08 03:05</td>
+              <td>26/08 08:50</td>
+              <td>Hydrology</td>
+              <td>Barramento Lhende Khola</td>
+              <td>8.5M m³</td>
+              <td><span class="badge badge-der">Der</span></td>
+              <td>PlanetScope / Copernicus</td>
+            </tr>
+            <tr>
+              <td>26/08 03:35</td>
+              <td>26/08 09:20</td>
+              <td>Hydrology</td>
+              <td>Ruptura e Vazão de Pico</td>
+              <td>3.450 m³/s</td>
+              <td><span class="badge badge-der">Der</span></td>
+              <td>Modelo Hidrodinâmico</td>
+            </tr>
+            <tr>
+              <td>26/08 03:55</td>
+              <td>26/08 09:40</td>
+              <td>Impact</td>
+              <td>Ponte da Amizade Miteri</td>
+              <td>Destruída</td>
+              <td><span class="badge badge-obs">Obs</span></td>
+              <td>ICIMOD / DOR Nepal</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SCRIPT DO CANVAS DE TIMELINE -->
+  <script>
+    function renderTimeline(lagHours) {
+      const canvas = document.getElementById('timelineCanvas');
+      const ctx = canvas.getContext('2d');
+      const w = canvas.width;
+      const h = canvas.height;
+
+      ctx.clearRect(0, 0, w, h);
+
+      // Fundo e Eixos
+      ctx.fillStyle = '#0f172a';
+      ctx.fillRect(0, 0, w, h);
+
+      const margin = { top: 40, right: 50, bottom: 40, left: 60 };
+      const plotW = w - margin.left - margin.right;
+      const plotH = h - margin.top - margin.bottom;
+
+      // Grade Temporal (25/08 00h a 26/08 12h = 36 horas)
+      const totalHours = 36;
+      ctx.strokeStyle = '#1e293b';
+      ctx.lineWidth = 1;
+
+      for (let hr = 0; hr <= totalHours; hr += 4) {
+        const x = margin.left + (hr / totalHours) * plotW;
+        ctx.beginPath();
+        ctx.moveTo(x, margin.top);
+        ctx.lineTo(x, margin.top + plotH);
+        ctx.stroke();
+
+        ctx.fillStyle = '#64748b';
+        ctx.font = '10px monospace';
+        ctx.textAlign = 'center';
+        const label = hr < 24 ? `25/08 ${hr.toString().padStart(2,'0')}h` : `26/08 ${(hr-24).toString().padStart(2,'0')}h`;
+        ctx.fillText(label, x, margin.top + plotH + 18);
+      }
+
+      // Linhas dos Gráficos (3 Séries)
+      // 1. Raios X Solares (Vermelho / Amarelo)
+      ctx.strokeStyle = '#f59e0b';
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      for (let hr = 0; hr <= totalHours; hr += 0.25) {
+        const x = margin.left + (hr / totalHours) * plotW;
+        let val = 0.1;
+        const dtFlare = hr - 10.033; // 10:02 UTC = 10.033h
+        if (dtFlare >= -0.5 && dtFlare <= 2.5) {
+          val = dtFlare <= 0 ? Math.exp(-Math.pow(dtFlare/0.2, 2)) : Math.exp(-dtFlare/0.5);
+        }
+        const y = margin.top + plotH * 0.35 - val * (plotH * 0.3);
+        if (hr === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+      }
+      ctx.stroke();
+
+      // 2. Modelo Jz Deslocável com o Slider (Roxo)
+      ctx.strokeStyle = '#c084fc';
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      for (let hr = 0; hr <= totalHours; hr += 0.25) {
+        const x = margin.left + (hr / totalHours) * plotW;
+        // Jz base diurnal
+        const diurnal = 0.5 + 0.3 * Math.sin((hr - 6) * Math.PI / 12);
+        // Perturbation shifted by lagHours
+        const dtPerturb = hr - (10.033 + parseFloat(lagHours));
+        const perturb = (dtPerturb >= -2 && dtPerturb <= 4) ? 0.4 * Math.exp(-Math.pow(dtPerturb/1.5, 2)) : 0;
+        const totalJz = Math.min(1.0, diurnal + perturb);
+        const y = margin.top + plotH * 0.70 - totalJz * (plotH * 0.25);
+        if (hr === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+      }
+      ctx.stroke();
+
+      // 3. Chuva / Convecção (Azul Claro)
+      ctx.strokeStyle = '#38bdf8';
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      for (let hr = 0; hr <= totalHours; hr += 0.25) {
+        const x = margin.left + (hr / totalHours) * plotW;
+        let rain = 0.05;
+        if (hr >= 22 && hr <= 28) {
+          rain = 0.05 + 0.85 * Math.exp(-Math.pow((hr - 25.5)/1.8, 2));
+        }
+        const y = margin.top + plotH - rain * (plotH * 0.25);
+        if (hr === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+      }
+      ctx.stroke();
+
+      // MARCADOR 1: Flare M7 (25/08 10:02 UTC = 10.033h)
+      const xFlare = margin.left + (10.033 / totalHours) * plotW;
+      ctx.strokeStyle = '#eab308';
+      ctx.lineWidth = 2;
+      ctx.setLineDash([4, 4]);
+      ctx.beginPath();
+      ctx.moveTo(xFlare, margin.top);
+      ctx.lineTo(xFlare, margin.top + plotH);
+      ctx.stroke();
+      ctx.setLineDash([]);
+
+      ctx.fillStyle = '#fef08a';
+      ctx.font = 'bold 11px sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText('⚡ Flare M7 (10:02 UTC)', xFlare, margin.top - 18);
+
+      // MARCADOR 2: Desastre (26/08 02:52:10 UTC = 26.869h)
+      const xDisaster = margin.left + (26.869 / totalHours) * plotW;
+      ctx.strokeStyle = '#ef4444';
+      ctx.lineWidth = 2.5;
+      ctx.setLineDash([4, 4]);
+      ctx.beginPath();
+      ctx.moveTo(xDisaster, margin.top);
+      ctx.lineTo(xDisaster, margin.top + plotH);
+      ctx.stroke();
+      ctx.setLineDash([]);
+
+      ctx.fillStyle = '#fca5a5';
+      ctx.font = 'bold 11px sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText('💥 Colapso 4.4 mb (02:52 UTC)', xDisaster, margin.top - 6);
+
+      // INTERVALO DESTACADO DE 16h 50min
+      ctx.fillStyle = 'rgba(56, 189, 248, 0.08)';
+      ctx.fillRect(xFlare, margin.top, xDisaster - xFlare, plotH);
+
+      ctx.fillStyle = '#38bdf8';
+      ctx.font = 'bold 12px sans-serif';
+      ctx.fillText('⟵ Δt = 16h 50min 10s ⟶', (xFlare + xDisaster) / 2, margin.top + 25);
+
+      // Legenda Interna
+      ctx.textAlign = 'left';
+      ctx.fillStyle = '#f59e0b'; ctx.fillText('━ Raios X GOES (Flare M7)', margin.left + 10, margin.top + 55);
+      ctx.fillStyle = '#c084fc'; ctx.fillText('━ Modelo Jz (Lag Interativo)', margin.left + 10, margin.top + 75);
+      ctx.fillStyle = '#38bdf8'; ctx.fillText('━ Convecção / Chuva GPM', margin.left + 10, margin.top + 95);
+    }
+
+    function updateLag(val) {
+      const hours = Math.floor(val);
+      const minutes = Math.round((val - hours) * 60);
+      document.getElementById('lagReadout').innerText = `Defasagem Atual: +${hours}h ${minutes.toString().padStart(2,'0')}min (${val == 16.83 ? 'Valor do Desastre' : 'Ajuste Manual'})`;
+      renderTimeline(val);
+    }
+
+    window.onload = function() {
+      renderTimeline(16.83);
+    };
+  </script>
+</body>
+</html>

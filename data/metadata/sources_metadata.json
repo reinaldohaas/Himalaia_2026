@@ -1,0 +1,52 @@
+﻿{
+  "project": "Himalaia 2026 Solar-Jz-Storm Investigation",
+  "last_updated_utc": "2026-08-27 14:56:28 UTC",
+  "coordinate_reference_system": "WGS84 (EPSG:4326)",
+  "time_standards": {
+    "primary": "UTC",
+    "secondary": "NPT (Nepal Time = UTC+5:45)"
+  },
+  "critical_timestamps": {
+    "solar_flare_m7_peak_utc": "2026-08-25T10:02:00Z",
+    "disaster_onset_seismic_utc": "2026-08-26T02:52:10Z",
+    "delta_time_hours": 16.8361,
+    "delta_time_formatted": "16h 50min 10s"
+  },
+  "data_sources": [
+    {
+      "name": "NOAA Space Weather Prediction Center (SWPC)",
+      "products": ["GOES X-Ray Flux", "Solar Protons (SEISS)", "DSCOVR Solar Wind"],
+      "url": "https://www.spaceweather.gov/",
+      "status": "observed",
+      "access_date": "2026-08-27"
+    },
+    {
+      "name": "USGS Earthquake Hazards Program",
+      "products": ["Seismic Event 4.4 mb at 02:52:10 UTC (Langtang Lirung)"],
+      "url": "https://earthquake.usgs.gov/",
+      "status": "observed",
+      "access_date": "2026-08-27"
+    },
+    {
+      "name": "UN OCHA / Humanitarian Data Exchange (HDX)",
+      "products": ["Nepal Flood 2026 Corridor AOI", "ICIMOD Bridge Damage Assessment"],
+      "url": "https://data.humdata.org/dataset/hot_flood_npl",
+      "status": "observed",
+      "access_date": "2026-08-27"
+    },
+    {
+      "name": "OpenStreetMap Foundation (OSM)",
+      "products": ["Relations 21284197 (Bhotekoshi) and 4839538 (Trishuli River)"],
+      "url": "https://www.openstreetmap.org/",
+      "status": "observed",
+      "access_date": "2026-08-27"
+    },
+    {
+      "name": "CTBTO / IMS Infrasound Network",
+      "products": ["Microbarometer arrays I40PK, I31KZ"],
+      "url": "https://www.ctbto.org/specials/vdec/",
+      "status": "unverified",
+      "notes": "Requer requisição formal vDEC para dados primários de forma de onda."
+    }
+  ]
+}

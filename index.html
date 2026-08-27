@@ -1,129 +1,225 @@
-﻿<!DOCTYPE html>
-<html lang=pt-BR>
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-  <meta charset=UTF-8>
-  <meta name=viewport content=width=device-width, initial-scale=1.0>
-  <title>Portal de Monitoramento: Desastre Nepal-Tibete (2026)</title>
-  <script src=https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js></script>
-</head>
-<body class=bg-slate-950 text-slate-100 min-h-screen p-5 lg:p-10 font-sans flex flex-col items-center>
-
-  <div class=max-w-5xl w-full space-y-6>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catástrofe Nepal-Tibete 2026: Portal Integrado de Pesquisa e Visualização 3D</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --border: #334155;
+      --accent: #38bdf8;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 24px 16px;
+    }
+    .container { max-width: 1200px; margin: 0 auto; }
     
-    <!-- Hero Banner -->
-    <div class=bg-slate-900 border border-slate-800 rounded-3xl p-6 lg:p-8 shadow-2xl relative overflow-hidden>
-      <div class=absolute -right-10 -bottom-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl pointer-events-none></div>
-      <div class=flex items-center gap-2 mb-3>
-        <span class=px-3 py-1 text-xs font-bold rounded-full bg-red-500/20 text-red-400 border border-red-500/30>
-          CENTRAL DE DADOS GEOESPACIAIS
-        </span>
-        <span class=text-xs text-slate-400>Nepal (Rasuwa) • Tibete (Gyirong) | 26 Ago 2026</span>
-      </div>
-      <h1 class=text-2xl sm:text-4xl font-extrabold tracking-tight text-white mb-2>
-        Catástrofe de Avalanche & Inundação no Himalaia
-      </h1>
-      <p class=text-slate-400 text-sm sm:text-base leading-relaxed max-w-3xl mb-4>
-        Repositório integrado de monitoramento e análise científica sobre o colapso glacial no maciço do Langtang Lirung (5.200m), rompimento no rio Lhende Khola e devastação transfronteiriça na bacia do rio Trishuli.
-      </p>
+    header {
+      text-align: center;
+      margin-bottom: 32px;
+      padding: 24px;
+      background: linear-gradient(135deg, #1e293b, #0f172a);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    h1 { font-size: 28px; color: var(--text); margin-bottom: 8px; }
+    .subtitle { color: var(--accent); font-size: 16px; margin-bottom: 12px; }
+    .meta-tag {
+      display: inline-block;
+      background: rgba(56, 189, 248, 0.1);
+      color: var(--accent);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      padding: 4px 12px;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 600;
+    }
 
-      <!-- Google Earth Tour CTA Button in Header -->
-      <div class=flex flex-wrap items-center gap-3 pt-2>
-        <a href=nepal_tibet_disaster_tour.kml download=nepal_tibet_disaster_tour.kml class=px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white shadow-lg flex items-center gap-2 transition>
-          🌍 Baixar Projeto Google Earth (Tour 3D Narrado)
-        </a>
-        <a href=https://earth.google.com/web/@28.2765,85.5194,5200a,20000d,35y,55t,0r target=_blank class=px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 flex items-center gap-2 transition>
-          🚀 Abrir no Google Earth Web
-        </a>
-      </div>
-    </div>
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 20px;
+      margin-bottom: 32px;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent);
+    }
+    .card-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #e2e8f0;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .card-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      flex-grow: 1;
+    }
+    .btn {
+      display: inline-block;
+      text-align: center;
+      background: #0284c7;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 10px 16px;
+      border-radius: 6px;
+      font-size: 13px;
+      transition: background 0.2s;
+    }
+    .btn:hover { background: #0369a1; }
+    .btn-secondary {
+      background: #334155;
+      color: #e2e8f0;
+    }
+    .btn-secondary:hover { background: #475569; }
 
-    <!-- Main Navigation Cards -->
-    <div class=grid grid-cols-1 md:grid-cols-2 gap-5>
+    .highlight-card {
+      border: 2px solid #818cf8;
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(30, 41, 59, 0.9));
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+    <header>
+      <h1>Catástrofe Transfronteiriça Nepal-Tibete (2026)</h1>
+      <div class="subtitle">Portal Integrado de Pesquisa, Infográficos, Sensoriamento Remoto e Projetos 3D</div>
+      <span class="meta-tag">Langtang Lirung (5.200m) • Lhende Khola • Rio Trishuli • Erupção Solar M7 • Circuito Elétrico Jz</span>
+    </header>
+
+    <div class="grid">
       
-      <!-- Card 1: 3D Earth & Satellite/Radar Viewer -->
-      <a href=earth_3d_satellite_radar_viewer.html class=group bg-slate-900/90 hover:bg-slate-850 border border-slate-800 hover:border-blue-500/50 rounded-2xl p-6 transition-all duration-200 shadow-lg flex flex-col justify-between>
-        <div class=space-y-3>
-          <div class=flex items-center justify-between>
-            <span class=p-3 rounded-xl bg-blue-500/10 text-blue-400 text-2xl>🌍</span>
-            <span class=text-xs font-mono bg-blue-500/20 text-blue-300 px-2.5 py-1 rounded-full font-bold>3D WebGL / SAR</span>
+      <!-- DESTAQUE 1: INFOGRÁFICO INTERATIVO SOLAR-JZ-TEMPESTADE -->
+      <div class="card highlight-card">
+        <div>
+          <div class="card-title" style="color: #a5b4fc;">☀️ Infográfico Interativo: Do Sol ao Rompimento</div>
+          <div class="card-desc">
+            Visualização científica sincronizada investigando a hipótese da erupção solar M7 (25/08 10:02 UTC) até a ruptura glacial (26/08 02:52 UTC), com controle interativo de defasagem (lag 0–24h), mapa integrado, diagrama causal e tabela comparativa de hipóteses.
           </div>
-          <h2 class=text-lg font-bold text-white group-hover:text-blue-400 transition>
-            Visualizador 3D Google Earth & Radar SAR
-          </h2>
-          <p class=text-xs text-slate-400 leading-relaxed>
-            Navegação orbital 3D, camadas de satélite multiespectral (Planet/Sentinel-2), interferometria de radar (Sentinel-1 SAR), ShakeMap do USGS e sismograma do tremor 4.4M.
-          </p>
         </div>
-        <div class=mt-4 pt-4 border-t border-slate-800 flex items-center text-xs font-semibold text-blue-400 gap-1>
-          Abrir Visualizador 3D <span>→</span>
-        </div>
-      </a>
+        <a href="infografico_solar_jz_tempestade.html" class="btn" style="background: #4f46e5;">Abrir Infográfico Interativo ➔</a>
+      </div>
 
-      <!-- Card 2: 2D Interactive Map & Timeline -->
-      <a href=nepal_tibet_disaster_map.html class=group bg-slate-900/90 hover:bg-slate-850 border border-slate-800 hover:border-emerald-500/50 rounded-2xl p-6 transition-all duration-200 shadow-lg flex flex-col justify-between>
-        <div class=space-y-3>
-          <div class=flex items-center justify-between>
-            <span class=p-3 rounded-xl bg-emerald-500/10 text-emerald-400 text-2xl>🗺️</span>
-            <span class=text-xs font-mono bg-emerald-500/20 text-emerald-300 px-2.5 py-1 rounded-full font-bold>Cartografia 2D/2.5D</span>
+      <!-- DESTAQUE 2: PROJETO MESTRE 3D GOOGLE EARTH -->
+      <div class="card highlight-card">
+        <div>
+          <div class="card-title" style="color: #38bdf8;">🌍 Mapa Mestre 3D (Google Earth Pro / Web)</div>
+          <div class="card-desc">
+            Projeto KML oficial contendo o <b>talvegue real do rio (2.979 pontos do OpenStreetMap)</b>, o lago de barramento do Lhende Khola (~3.950m), 8 usinas hidrelétricas (>1.200 MW), 10 cidades/vilas, rodovias e o censo oficial de 33 pontes avaliadas pelo ICIMOD com cores por status.
           </div>
-          <h2 class=text-lg font-bold text-white group-hover:text-emerald-400 transition>
-            Mapa Interativo do Desastre & Linha do Tempo
-          </h2>
-          <p class=text-xs text-slate-400 leading-relaxed>
-            Painel cartográfico vetorial da bacia do Lhende Khola e Trishuli, simulação interativa da cronologia da onda de lama, perfil de elevação (6.400m) e inspeção de POIs.
-          </p>
         </div>
-        <div class=mt-4 pt-4 border-t border-slate-800 flex items-center text-xs font-semibold text-emerald-400 gap-1>
-          Abrir Mapa Interativo <span>→</span>
-        </div>
-      </a>
+        <a href="mapa_mestre_trishuli_google_earth.kml" class="btn" download>Baixar KML Mapa Mestre (125 KB)</a>
+      </div>
 
-      <!-- Card 3: Satellite & Seismic Dossier -->
-      <a href=analise_satelite_radar_sismica.md class=group bg-slate-900/90 hover:bg-slate-850 border border-slate-800 hover:border-amber-500/50 rounded-2xl p-6 transition-all duration-200 shadow-lg flex flex-col justify-between>
-        <div class=space-y-3>
-          <div class=flex items-center justify-between>
-            <span class=p-3 rounded-xl bg-amber-500/10 text-amber-400 text-2xl>📡</span>
-            <span class=text-xs font-mono bg-amber-500/20 text-amber-300 px-2.5 py-1 rounded-full font-bold>Dossiê Técnico</span>
+      <!-- ITEM 3: RELATÓRIO CIENTÍFICO SOLAR-JZ -->
+      <div class="card">
+        <div>
+          <div class="card-title">📄 Relatório Científico: Solar, Jz e Tempestades</div>
+          <div class="card-desc">
+            Monografia científica aprofundada examinando a física do Circuito Elétrico Global ($J_z$), modelos de coluna atmosférica no Himalaia, convecção orográfica noturna, acoplamento sismo-acústico e discriminação de fontes de infrassom.
           </div>
-          <h2 class=text-lg font-bold text-white group-hover:text-amber-400 transition>
-            Dossiê de Sensoriamento Remoto & Sismologia
-          </h2>
-          <p class=text-xs text-slate-400 leading-relaxed>
-            Relatório técnico sobre Copernicus EMSR927, PlanetScope (3m), retroespalhamento InSAR e a assinatura física de força descendente do tremor de magnitude 4.4.
-          </p>
         </div>
-        <div class=mt-4 pt-4 border-t border-slate-800 flex items-center text-xs font-semibold text-amber-400 gap-1>
-          Ler Dossiê Técnico <span>→</span>
-        </div>
-      </a>
+        <a href="analise_solar_jz_tempestades_infrassom.md" class="btn btn-secondary">Ver Relatório Científico (.md)</a>
+      </div>
 
-      <!-- Card 4: Full Scientific Report & KML Project -->
-      <div class=bg-slate-900/90 border border-slate-800 rounded-2xl p-6 shadow-lg flex flex-col justify-between space-y-4>
-        <div class=space-y-3>
-          <div class=flex items-center justify-between>
-            <span class=p-3 rounded-xl bg-purple-500/10 text-purple-400 text-2xl>📑</span>
-            <span class=text-xs font-mono bg-purple-500/20 text-purple-300 px-2.5 py-1 rounded-full font-bold>Projetos KML & Relatório</span>
+      <!-- ITEM 4: TABELA MESTRA CSV -->
+      <div class="card">
+        <div>
+          <div class="card-title">📊 Tabela-Mestra de Eventos (CSV)</div>
+          <div class="card-desc">
+            Cronologia auditável minuto a minuto com 17 eventos georreferenciados (UTC e NPT), categorizados com status epistemológico estrito (observed, derived, estimated, hypothesis, unverified) e links diretos para fontes primárias.
           </div>
-          <h2 class=text-lg font-bold text-white>
-            Relatório Completo & Tour 3D
-          </h2>
-          <p class=text-xs text-slate-400 leading-relaxed>
-            Acesse o relatório de impacto humano/energético ou baixe o arquivo de tour narrado 3D para sobrevoo guiado no Google Earth.
-          </p>
         </div>
-        <div class=pt-4 border-t border-slate-800 flex flex-wrap gap-2>
-          <a href=relatorio_avalanche_inundacao_nepal_tibete.md class=flex-1 text-center py-2 px-3 bg-purple-600/20 hover:bg-purple-600/30 text-purple-300 border border-purple-500/30 rounded-xl text-xs font-semibold transition>
-            📄 Ler Relatório Geral
-          </a>
-          <a href=nepal_tibet_disaster_tour.kml download=nepal_tibet_disaster_tour.kml class=flex-1 text-center py-2 px-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-semibold shadow transition>
-            🎬 Baixar Tour 3D KML
-          </a>
+        <a href="data/processed/timeline_master.csv" class="btn btn-secondary" download>Baixar timeline_master.csv</a>
+      </div>
+
+      <!-- ITEM 5: VISUALIZADOR 3D SATELLITE & RADAR -->
+      <div class="card">
+        <div>
+          <div class="card-title">🛰️ Visualizador 3D: Satélite e Radar SAR</div>
+          <div class="card-desc">
+            Visualizador interativo em WebGL simulando o globo 3D com alternância entre imagens ópticas de alta resolução, radar SAR Sentinel-1 (retroespalhamento/coerência) e comparador de relevo "Antes e Depois".
+          </div>
         </div>
+        <a href="earth_3d_satellite_radar_viewer.html" class="btn btn-secondary">Abrir Visualizador 3D</a>
+      </div>
+
+      <!-- ITEM 6: TOUR GUIADO 3D GOOGLE EARTH -->
+      <div class="card">
+        <div>
+          <div class="card-title">🎥 Tour Narrado 3D (Google Earth)</div>
+          <div class="card-desc">
+            Arquivo KML com sobrevoo cinematográfico automático orbital (gx:Tour) guiando você pelas 6 etapas do desastre, desde a escarpa a 5.200 m até o vale do Trishuli.
+          </div>
+        </div>
+        <a href="nepal_tibet_disaster_tour.kml" class="btn btn-secondary" download>Baixar nepal_tibet_disaster_tour.kml</a>
+      </div>
+
+      <!-- ITEM 7: PERFIL TÉCNICO DO RIO TRISHULI -->
+      <div class="card">
+        <div>
+          <div class="card-title">🌊 Monografia Técnica: Rio Trishuli</div>
+          <div class="card-desc">
+            Estudo completo sobre a hidrologia, a cascata de usinas hidrelétricas (>1.200 MW), vulnerabilidade a GLOFs e avalanches, transporte de sedimentos quartzíticos e relevância geopolítica transfronteiriça.
+          </div>
+        </div>
+        <a href="perfil_rio_trishuli.md" class="btn btn-secondary">Ver Perfil do Rio Trishuli (.md)</a>
+      </div>
+
+      <!-- ITEM 8: RELATÓRIO DE INFRASSOM AUDITADO -->
+      <div class="card">
+        <div>
+          <div class="card-title">🔊 Auditoria e Dados de Infrassom</div>
+          <div class="card-desc">
+            Relatório técnico auditado sobre a física do infrassom (0.1 a 5 Hz), discriminação de fontes (toró vs avalanche vs ruptura), correção de atraso de propagação e protocolo de requisição de dados do CTBTO/IMS via vDEC.
+          </div>
+        </div>
+        <a href="dados_infrassom_avalanche.md" class="btn btn-secondary">Ver Relatório de Infrassom (.md)</a>
+      </div>
+
+      <!-- ITEM 9: RELAÇÃO COMPLETA DE FONTES -->
+      <div class="card">
+        <div>
+          <div class="card-title">📚 Relação de Fontes e Bases de Dados</div>
+          <div class="card-desc">
+            Catalogação detalhada de todas as fontes primárias: NOAA SWPC, USGS, UN OCHA HDX, HOT OSM, ICIMOD, Copernicus EMS, Planet Labs e WDC Kyoto.
+          </div>
+        </div>
+        <a href="relacao_de_fontes.md" class="btn btn-secondary">Ver Relação de Fontes (.md)</a>
       </div>
 
     </div>
+
+    <footer style="text-align: center; font-size: 12px; color: var(--text-muted); border-top: 1px solid var(--border); padding-top: 16px;">
+      Repositório GitHub: <a href="https://github.com/reinaldohaas/Himalaia_2026" target="_blank" style="color: var(--accent); text-decoration: none;">github.com/reinaldohaas/Himalaia_2026</a> • Licença Open Database License (ODbL / CC-BY 4.0)
+    </footer>
 
   </div>
-
 </body>
 </html>
