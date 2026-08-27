@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Earth 3D & Radar/Satélite: Catástrofe Nepal-Tibete 2026</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <style>
+    .globe-canvas {
+      cursor: grab;
+    }
+    .globe-canvas:active {
+      cursor: grabbing;
+    }
+    .radar-sweep {
+      background: conic-gradient(from 0deg, rgba(16, 185, 129, 0) 0deg, rgba(16, 185, 129, 0.25) 300deg, rgba(16, 185, 129, 0.8) 360deg);
+      animation: sweep 4s linear infinite;
+    }
+    @keyframes sweep {
+      to { transform: rotate(360deg); }
+    }
+    .waveform-bar {
+      transition: height 0.1s ease;
+    }
+    .custom-scroll::-webkit-scrollbar {
+      width: 5px;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: rgba(148, 163, 184, 0.4);
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="bg-[var(--background)] text-[var(--foreground)] antialiased p-4 lg:p-6 min-h-screen flex flex-col font-sans">
+
+  <!-- Header Controls -->
+  <header class="bg-[var(--card)] border border-[var(--border)] rounded-2xl p-4 mb-4 shadow-sm">
+    <div class="flex flex-col xl:flex-row xl:items-center xl:justify-between gap-4">
+      <div>
+        <div class="flex flex-wrap items-center gap-2 mb-1">
+          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-blue-500/10 text-blue-500 border border-blue-500/20">
+            🛰️ SENSORIAMENTO REMOTO & SISMO-ACÚSTICA
+          </span>
+          <span class="text-xs text-[var(--muted-foreground)]">Sentinel-1 SAR | Sentinel-2 | PlanetScope | USGS ShakeMap</span>
+          <span class="text-xs font-mono bg-emerald-500/10 text-emerald-500 border border-emerald-500/30 px-2 py-0.5 rounded">Copernicus EMSR927 Ativo</span>
+        </div>
+        <h1 class="text-xl sm:text-2xl font-bold text-[var(--foreground)] tracking-tight">
+          Visualizador 3D Earth: Imagens de Satélite, Radar SAR e Intensidade Sísmica
+        </h1>
+        <p class="text-sm text-[var(--muted-foreground)]">
+          Análise orbital do colapso de gelo-rocha no Langtang Lirung (5.200m), deformação de encosta e propagação da torrente no vale transfronteiriço.
+        </p>
+      </div>
+
+      <!-- Quick Action Buttons -->
+      <div class="flex flex-wrap items-center gap-2 shrink-0">
+        <a href="nepal_tibet_disaster.kml" download="nepal_tibet_disaster.kml" class="px-3 py-2 text-xs rounded-xl font-semibold bg-emerald-600 hover:bg-emerald-700 text-white flex items-center gap-1.5 shadow transition">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+          Baixar KML (Google Earth)
+        </a>
+        <button onclick="openExternalEarth()" class="px-3 py-2 text-xs rounded-xl font-semibold bg-blue-600 hover:bg-blue-700 text-white flex items-center gap-1.5 shadow transition">
+          🌍 Abrir no Google Earth Web
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Workspace Grid -->
+  <div class="grid grid-cols-1 xl:grid-cols-12 gap-4 flex-grow">
+
+    <!-- Left / Center: Interactive 3D Viewer & Satellite Switcher (8 cols) -->
+    <div class="xl:col-span-8 flex flex-col gap-4">
+
+      <!-- 3D Earth / Imagery Canvas Container -->
+      <div class="bg-[var(--card)] border border-[var(--border)] rounded-2xl p-4 shadow-sm flex flex-col flex-grow min-h-[550px] relative overflow-hidden">
+        
+        <!-- Imagery Mode Switcher Bar -->
+        <div class="flex flex-wrap items-center justify-between gap-2 pb-3 mb-2 border-b border-[var(--border)] z-10">
+          <div class="flex items-center gap-1.5 overflow-x-auto py-1">
+            <span class="text-xs font-semibold text-[var(--muted-foreground)] mr-1">Modo de Visualização:</span>
+            <button id="btn-mode-sat" onclick="setImageryMode('sat')" class="px-2.5 py-1 text-xs rounded-lg font-medium bg-blue-500 text-white shadow transition">
+              🛰️ Satélite Óptico (RGB)
+            </button>
+            <button id="btn-mode-radar" onclick="setImageryMode('radar')" class="px-2.5 py-1 text-xs rounded-lg font-medium bg-[var(--muted)] text-[var(--foreground)] hover:bg-[var(--border)] transition">
+              📡 Radar SAR (Sentinel-1)
+            </button>
+            <button id="btn-mode-seismic" onclick="setImageryMode('seismic')" class="px-2.5 py-1 text-xs rounded-lg font-medium bg-[var(--muted)] text-[var(--foreground)] hover:bg-[var(--border)] transition">
+              ⚡ Intensidade Sísmica (USGS)
+            </button>
+            <button id="btn-mode-split" onclick="setImageryMode('split')" class="px-2.5 py-1 text-xs rounded-lg font-medium bg-[var(--muted)] text-[var(--foreground)] hover:bg-[var(--border)] transition">
+              ⚖️ Comparador Antes/Depois
+            </button>
+          </div>
+
+          <!-- Camera Presets -->
+          <div class="flex items-center gap-1">
+            <select id="camera-select" onchange="jumpToPreset(this.value)" class="text-xs bg-[var(--muted)] border border-[var(--border)] rounded-lg px-2 py-1 text-[var(--foreground)] outline-none">
+              <option value="overview">Visão Geral Transfronteiriça (3D)</option>
+              <option value="origin">1. Epicentro & Colapso (5.200m)</option>
+              <option value="dam">2. Represamento no Lhende Khola</option>
+              <option value="gyirong">3. Porto de Gyirong (Tibete)</option>
+              <option value="rasuwagadhi">4. Rasuwagadhi & Timure (Nepal)</option>
+              <option value="cascade">5. Cascata UHE Trishuli</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- 3D Canvas / Interactive Screen -->
+        <div id="globe-wrapper" class="relative flex-grow w-full h-[430px] bg-[#070b14] rounded-xl overflow-hidden border border-slate-800 flex items-center justify-center">
+          
+          <!-- Overlay HUD Information -->
+          <div class="absolute top-3 left-3 z-20 pointer-events-none bg-slate-900/85 backdrop-blur border border-slate-700/60 text-slate-200 text-xs px-3 py-2 rounded-lg shadow-lg">
+            <div class="font-bold flex items-center gap-1.5 text-slate-100" id="hud-title">
+              <span class="w-2.5 h-2.5 rounded-full bg-blue-500 inline-block"></span>
+              Óptico Multiespectral (Planet / Sentinel-2)
+            </div>
+            <div class="text-[11px] text-slate-400 mt-0.5" id="hud-subtitle">Resolução 3m • Banda RGB + Infravermelho Próximo (NIR)</div>
+          </div>
+
+          <!-- 3D Globe / Terrain Simulation Canvas -->
+          <canvas id="earth-3d-canvas" width="850" height="430" class="globe-canvas w-full h-full"></canvas>
+
+          <!-- Split Slider (Shown only in 'split' mode) -->
+          <div id="split-container" class="absolute inset-0 z-10 pointer-events-none hidden">
+            <div class="relative w-full h-full">
+              <!-- Divider line -->
+              <div id="split-line" class="absolute top-0 bottom-0 w-0.5 bg-white shadow-[0_0_10px_rgba(255,255,255,0.8)]" style="left: 50%;">
+                <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-slate-900 border-2 border-white text-white flex items-center justify-center text-xs pointer-events-auto cursor-ew-resize shadow-xl">
+                  ◀▶
+                </div>
+              </div>
+              <div class="absolute bottom-3 left-3 bg-black/70 text-white text-[11px] px-2 py-1 rounded backdrop-blur">
+                PRÉ-EVENTO (Geleira Íntegra)
+              </div>
+              <div class="absolute bottom-3 right-3 bg-red-950/80 text-red-200 border border-red-500/40 text-[11px] px-2 py-1 rounded backdrop-blur">
+                PÓS-EVENTO (Cicatriz & Lama)
+              </div>
+            </div>
+          </div>
+
+          <!-- Radar Sweep Overlay (Shown only in radar mode) -->
+          <div id="radar-overlay" class="absolute inset-0 pointer-events-none opacity-20 hidden">
+            <div class="w-full h-full radar-sweep"></div>
+          </div>
+
+          <!-- 3D Navigation Controls -->
+          <div class="absolute bottom-3 right-3 z-20 flex flex-col gap-1 bg-slate-900/80 backdrop-blur p-1 rounded-lg border border-slate-700">
+            <button onclick="adjustZoom(-0.15)" title="Aproximar" class="w-7 h-7 rounded bg-slate-800 hover:bg-slate-700 text-white text-sm font-bold flex items-center justify-center">+</button>
+            <button onclick="adjustZoom(0.15)" title="Afastar" class="w-7 h-7 rounded bg-slate-800 hover:bg-slate-700 text-white text-sm font-bold flex items-center justify-center">-</button>
+            <button onclick="reset3DView()" title="Resetar Câmera" class="w-7 h-7 rounded bg-slate-800 hover:bg-slate-700 text-white text-xs flex items-center justify-center">↺</button>
+          </div>
+
+        </div>
+
+        <!-- 3D Telemetry Bar -->
+        <div class="mt-3 grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
+          <div class="bg-[var(--muted)]/50 p-2 rounded-lg border border-[var(--border)]">
+            <span class="text-[var(--muted-foreground)] block text-[10px]">Posição Câmera 3D</span>
+            <span id="cam-coords" class="font-mono font-bold text-[var(--foreground)]">28.276° N, 85.519° E</span>
+          </div>
+          <div class="bg-[var(--muted)]/50 p-2 rounded-lg border border-[var(--border)]">
+            <span class="text-[var(--muted-foreground)] block text-[10px]">Elevação do Alvo</span>
+            <span id="cam-elevation" class="font-mono font-bold text-blue-500">5.200 m (Geleira)</span>
+          </div>
+          <div class="bg-[var(--muted)]/50 p-2 rounded-lg border border-[var(--border)]">
+            <span class="text-[var(--muted-foreground)] block text-[10px]">Ângulo de Visada (Tilt)</span>
+            <span id="cam-tilt" class="font-mono font-bold text-amber-500">58° (Perspectiva Oblíqua)</span>
+          </div>
+          <div class="bg-[var(--muted)]/50 p-2 rounded-lg border border-[var(--border)]">
+            <span class="text-[var(--muted-foreground)] block text-[10px]">Passagem do Satélite</span>
+            <span class="font-mono font-bold text-emerald-500">Sentinel-1 (Descendente)</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Seismic Waveform & Frequency Spectrogram Box -->
+      <div class="bg-[var(--card)] border border-[var(--border)] rounded-2xl p-4 shadow-sm">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+          <div class="flex items-center gap-2">
+            <span class="p-1.5 rounded-lg bg-red-500/10 text-red-500">📈</span>
+            <div>
+              <h3 class="text-xs font-bold uppercase tracking-wider text-[var(--foreground)]">
+                Assinatura Sismo-Acústica da Avalanche (USGS / ISC)
+              </h3>
+              <p class="text-[11px] text-[var(--muted-foreground)]">Sismograma de Banda Larga • Estação KKN (Katmandu, 65 km)</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-mono bg-red-500/20 text-red-400 px-2 py-0.5 rounded border border-red-500/30">
+              4.4 mb | 08:37:14 UTC+5:45
+            </span>
+          </div>
+        </div>
+
+        <!-- Waveform Simulation Canvas -->
+        <div class="h-28 w-full bg-[#0a0f1d] rounded-xl p-2 relative overflow-hidden border border-slate-800 flex items-center">
+          <canvas id="waveform-canvas" width="800" height="95" class="w-full h-full"></canvas>
+          <div class="absolute bottom-1 right-2 text-[9px] font-mono text-slate-500">Tempo (s) • Ondas de Superfície de Longo Período (Rayleigh)</div>
+        </div>
+
+        <div class="mt-2 text-[11px] text-[var(--muted-foreground)] flex items-center justify-between">
+          <span>🔍 <em>Início gradual (Emergent onset) sem ondas P/S impulsivas típicas de falha tectônica.</em></span>
+          <span class="text-amber-500 font-medium">Origem: Impacto de ~15M m³ de rocha/gelo</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Right: Satellite Data Inspector, Radar SAR Analysis & ShakeMap (4 cols) -->
+    <div class="xl:col-span-4 flex flex-col gap-4">
+
+      <!-- Remote Sensing Dossier Card -->
+      <div class="bg-[var(--card)] border border-[var(--border)] rounded-2xl p-4 shadow-sm space-y-3">
+        <div class="flex items-center justify-between border-b border-[var(--border)] pb-2.5">
+          <h3 class="text-xs font-bold uppercase tracking-wider text-[var(--foreground)] flex items-center gap-2">
+            <span>🛰️ Diagnóstico de Sensores</span>
+          </h3>
+          <span class="text-[10px] bg-blue-500/10 text-blue-500 px-2 py-0.5 rounded font-mono">Multi-Sensor</span>
+        </div>
+
+        <!-- Sensor Tab 1: Sentinel-1 Radar SAR -->
+        <div class="p-3 rounded-xl bg-[var(--muted)]/40 border border-[var(--border)] space-y-1.5">
+          <div class="flex items-center justify-between">
+            <span class="font-bold text-xs text-[var(--foreground)]">Sentinel-1 (Radar SAR C-Band)</span>
+            <span class="text-[10px] font-mono text-emerald-500">VV/VH Polarizado</span>
+          </div>
+          <p class="text-xs text-[var(--muted-foreground)] leading-relaxed">
+            • <strong>Interferometria (InSAR):</strong> Perda total de coerência de fase no cânion do Lhende Khola, delimitando com precisão a área de soterramento e erosão profunda.<br>
+            • <strong>Retroespalhamento:</strong> Superfícies inundadas e cobertas por lama úmida reduziram o sinal de retorno em até <strong>-6 dB</strong> ao longo do rio Trishuli.
+          </p>
+        </div>
+
+        <!-- Sensor Tab 2: PlanetScope & Sentinel-2 Optical -->
+        <div class="p-3 rounded-xl bg-[var(--muted)]/40 border border-[var(--border)] space-y-1.5">
+          <div class="flex items-center justify-between">
+            <span class="font-bold text-xs text-[var(--foreground)]">PlanetScope (3m) & Sentinel-2</span>
+            <span class="text-[10px] font-mono text-blue-500">RGB + NDVI/NDWI</span>
+          </div>
+          <p class="text-xs text-[var(--muted-foreground)] leading-relaxed">
+            • <strong>Cicatriz de Desprendimento:</strong> Fratura glacial de ~400 metros de largura exposta na cota 5.200m.<br>
+            • <strong>Índice de Água (NDWI):</strong> Confirma o extravasamento súbito do lago temporário represado e assoreamento nos reservatórios de <strong>Rasuwagadhi</strong> e <strong>Chilime</strong>.
+          </p>
+        </div>
+
+        <!-- Sensor Tab 3: Copernicus EMSR927 Rapid Mapping -->
+        <div class="p-3 rounded-xl bg-[var(--muted)]/40 border border-[var(--border)] space-y-1.5">
+          <div class="flex items-center justify-between">
+            <span class="font-bold text-xs text-[var(--foreground)]">Copernicus EMS (EMSR927)</span>
+            <span class="text-[10px] font-mono text-purple-500">Delineation & Grading</span>
+          </div>
+          <p class="text-xs text-[var(--muted-foreground)] leading-relaxed">
+            • <strong>Edificações Atingidas:</strong> Mais de 180 estruturas classificadas como <em>Destroyed</em> ou <em>Damaged</em> entre o Porto de Gyirong e Timure.<br>
+            • <strong>Infraestrutura Viária:</strong> 19 pontes rompidas e 42 km de rodovia bloqueados.
+          </p>
+        </div>
+      </div>
+
+      <!-- USGS ShakeMap & Seismic Intensity Table -->
+      <div class="bg-[var(--card)] border border-[var(--border)] rounded-2xl p-4 shadow-sm space-y-3">
+        <h4 class="text-xs font-bold uppercase tracking-wider text-[var(--foreground)] flex items-center justify-between">
+          <span>⚡ Intensidade Mercalli Modificada (MMI)</span>
+          <span class="text-[10px] text-[var(--muted-foreground)] font-normal">USGS ShakeMap</span>
+        </h4>
+
+        <div class="space-y-1.5 text-xs">
+          <div class="flex items-center justify-between p-2 rounded-lg bg-red-500/10 border border-red-500/20">
+            <div>
+              <div class="font-bold text-red-500">MMI V-VI (Forte)</div>
+              <div class="text-[10px] text-[var(--muted-foreground)]">Raio de 5 km (Langtang Lirung / Lhende Gorge)</div>
+            </div>
+            <span class="font-mono text-red-400 font-bold">PGA ~8-12%g</span>
+          </div>
+
+          <div class="flex items-center justify-between p-2 rounded-lg bg-amber-500/10 border border-amber-500/20">
+            <div>
+              <div class="font-bold text-amber-500">MMI IV (Moderado)</div>
+              <div class="text-[10px] text-[var(--muted-foreground)]">Porto de Gyirong, Rasuwagadhi, Timure</div>
+            </div>
+            <span class="font-mono text-amber-400 font-bold">PGA ~3-5%g</span>
+          </div>
+
+          <div class="flex items-center justify-between p-2 rounded-lg bg-blue-500/10 border border-blue-500/20">
+            <div>
+              <div class="font-bold text-blue-500">MMI II-III (Leve)</div>
+              <div class="text-[10px] text-[var(--muted-foreground)]">Dhunche, Nuwakot, Vale de Katmandu</div>
+            </div>
+            <span class="font-mono text-blue-400 font-bold">PGA &lt;1%g</span>
+          </div>
+        </div>
+
+        <div class="p-2.5 rounded-lg bg-[var(--muted)]/50 border border-[var(--border)] text-[11px] text-[var(--muted-foreground)]">
+          <strong class="text-[var(--foreground)]">Nota Geofísica:</strong> A ausência de réplicas tectônicas (*aftershocks*) subsequentes corroborou a tese de que o evento foi 100% induzido pela dinâmica de colapso gravitacional de massa de gelo e rocha.
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Interactive 3D Canvas & Simulation Engine -->
+  <script>
+    const canvas = document.getElementById('earth-3d-canvas');
+    const ctx = canvas.getContext('2d');
+
+    let currentMode = 'sat'; // 'sat', 'radar', 'seismic', 'split'
+    let currentPreset = 'overview';
+
+    // 3D Camera / Orbit State
+    let cam = {
+      rotX: 0.55,
+      rotY: -0.3,
+      zoom: 1.0,
+      targetX: 0,
+      targetY: 0,
+      isDragging: false,
+      lastMouseX: 0,
+      lastMouseY: 0
+    };
+
+    // 3D Point of Interests (Terrain points in normalized coordinates)
+    const points3D = [
+      { id: 'origin', name: 'Colapso Glacial (5.200m)', x: 0.15, y: -0.18, z: 0.45, color: '#ef4444', desc: 'Face Norte Langtang Lirung' },
+      { id: 'dam', name: 'Barramento Lhende Khola', x: 0.05, y: -0.08, z: 0.28, color: '#dc2626', desc: 'Rompimento da represa de detritos' },
+      { id: 'gyirong', name: 'Porto de Gyirong (Tibete)', x: -0.15, y: -0.25, z: 0.20, color: '#f97316', desc: 'Complexo aduaneiro soterrado' },
+      { id: 'rasuwagadhi', name: 'Rasuwagadhi & Timure', x: -0.05, y: 0.02, z: 0.15, color: '#a855f7', desc: 'Ponte da Amizade e UHE 111MW' },
+      { id: 'cascade', name: 'Cascata Trishuli (Nuwakot)', x: -0.22, y: 0.35, z: 0.05, color: '#3b82f6', desc: 'Upper Trishuli-3A e rede elétrica' }
+    ];
+
+    // Initialize Canvas Dimensions
+    function resizeCanvas() {
+      const rect = canvas.parentElement.getBoundingClientRect();
+      canvas.width = rect.width;
+      canvas.height = rect.height;
+      draw3DScene();
+    }
+    window.addEventListener('resize', resizeCanvas);
+
+    // Mouse Drag Controls for 3D Orbit
+    canvas.addEventListener('mousedown', (e) => {
+      cam.isDragging = true;
+      cam.lastMouseX = e.clientX;
+      cam.lastMouseY = e.clientY;
+    });
+
+    window.addEventListener('mouseup', () => {
+      cam.isDragging = false;
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      if (!cam.isDragging) return;
+      const dx = e.clientX - cam.lastMouseX;
+      const dy = e.clientY - cam.lastMouseY;
+      cam.rotY += dx * 0.008;
+      cam.rotX += dy * 0.008;
+      // Clamp tilt
+      if (cam.rotX < 0.1) cam.rotX = 0.1;
+      if (cam.rotX > 1.2) cam.rotX = 1.2;
+      cam.lastMouseX = e.clientX;
+      cam.lastMouseY = e.clientY;
+      updateTelemetry();
+      draw3DScene();
+    });
+
+    canvas.addEventListener('wheel', (e) => {
+      e.preventDefault();
+      adjustZoom(e.deltaY * 0.001);
+    });
+
+    function adjustZoom(delta) {
+      cam.zoom += delta;
+      if (cam.zoom < 0.5) cam.zoom = 0.5;
+      if (cam.zoom > 2.8) cam.zoom = 2.8;
+      updateTelemetry();
+      draw3DScene();
+    }
+
+    function reset3DView() {
+      cam.rotX = 0.55;
+      cam.rotY = -0.3;
+      cam.zoom = 1.0;
+      updateTelemetry();
+      draw3DScene();
+    }
+
+    function updateTelemetry() {
+      document.getElementById('cam-tilt').innerText = `${Math.round(cam.rotX * (180 / Math.PI))}° (Perspectiva 3D)`;
+    }
+
+    // 3D Rendering Pipeline
+    function draw3DScene() {
+      const w = canvas.width;
+      const h = canvas.height;
+      ctx.clearRect(0, 0, w, h);
+
+      const cx = w / 2;
+      const cy = h / 2 + 30;
+
+      // 1. Draw 3D Topographic Terrain Mesh (Central Himalaya / Gyirong & Rasuwa Gorge)
+      const gridSize = 24;
+      const spacing = 18 * cam.zoom;
+
+      ctx.save();
+      ctx.translate(cx, cy);
+
+      // Rotation matrix values
+      const cosX = Math.cos(cam.rotX);
+      const sinX = Math.sin(cam.rotX);
+      const cosY = Math.cos(cam.rotY);
+      const sinY = Math.sin(cam.rotY);
+
+      // Project 3D point (x, y, z) to 2D
+      function project(x, y, z) {
+        // Yaw
+        const x1 = x * cosY - y * sinY;
+        const y1 = x * sinY + y * cosY;
+        // Pitch
+        const y2 = y1 * cosX - z * sinX;
+        const z2 = y1 * sinX + z * cosX;
+        return {
+          px: x1,
+          py: y2,
+          depth: z2
+        };
+      }
+
+      // Generate Terrain Elevation Model
+      for (let i = -gridSize / 2; i < gridSize / 2; i++) {
+        for (let j = -gridSize / 2; j < gridSize / 2; j++) {
+          const x = i * spacing;
+          const y = j * spacing;
+
+          // Synthetic mountain relief calculation (Langtang peak + river canyon)
+          const distToPeak = Math.hypot(i - 4, j + 3);
+          const distToRiver = Math.abs(i + j * 0.4);
+          
+          let elevation = Math.max(0, (14 - distToPeak) * 9); // Langtang Peak
+          elevation -= Math.max(0, (4 - distToRiver) * 8);    // River Canyon
+          elevation += Math.sin(i * 0.4) * Math.cos(j * 0.4) * 6; // Terrain noise
+
+          const p1 = project(x, y, elevation);
+          const p2 = project(x + spacing, y, elevation);
+          const p3 = project(x + spacing, y + spacing, elevation);
+          const p4 = project(x, y + spacing, elevation);
+
+          // Color based on Mode
+          ctx.beginPath();
+          ctx.moveTo(p1.px, p1.py);
+          ctx.lineTo(p2.px, p2.py);
+          ctx.lineTo(p3.px, p3.py);
+          ctx.lineTo(p4.px, p4.py);
+          ctx.closePath();
+
+          if (currentMode === 'sat') {
+            // Satellite Optical Theme (Snow white on peaks, rugged granite, green valleys)
+            if (elevation > 55) {
+              ctx.fillStyle = '#f1f5f9'; // Snow / Glaciers
+              ctx.strokeStyle = '#cbd5e1';
+            } else if (elevation > 25) {
+              ctx.fillStyle = '#334155'; // Rock face / Scree
+              ctx.strokeStyle = '#1e293b';
+            } else {
+              ctx.fillStyle = '#064e3b'; // Valley vegetation
+              ctx.strokeStyle = '#022c22';
+            }
+          } else if (currentMode === 'radar') {
+            // SAR Interferometry Fringe / Backscatter Theme
+            const phase = (elevation * 0.4) % 1;
+            ctx.fillStyle = `hsl(${phase * 300}, 75%, 25%)`;
+            ctx.strokeStyle = '#10b981';
+          } else if (currentMode === 'seismic') {
+            // ShakeMap MMI Heatmap Theme
+            const distOrigin = Math.hypot(i - 3, j + 2);
+            if (distOrigin < 4) ctx.fillStyle = 'rgba(239, 68, 68, 0.7)';
+            else if (distOrigin < 8) ctx.fillStyle = 'rgba(249, 115, 22, 0.5)';
+            else ctx.fillStyle = 'rgba(59, 130, 246, 0.3)';
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+          } else {
+            // Split mode
+            ctx.fillStyle = '#1e293b';
+            ctx.strokeStyle = '#475569';
+          }
+
+          ctx.lineWidth = 0.5;
+          ctx.fill();
+          ctx.stroke();
+        }
+      }
+
+      // 2. Draw Vector River Flow & Avalanche Debris Path
+      const flowPoints = [
+        { x: 3 * spacing, y: -3 * spacing, z: 90 }, // Peak / Avalanche Start
+        { x: 1 * spacing, y: -1 * spacing, z: 45 }, // Dam
+        { x: -1 * spacing, y: 0.5 * spacing, z: 25 }, // Rasuwagadhi
+        { x: -3 * spacing, y: 3 * spacing, z: 10 },  // Syabrubesi
+        { x: -5 * spacing, y: 6 * spacing, z: 0 }    // Trishuli
+      ];
+
+      ctx.beginPath();
+      for (let k = 0; k < flowPoints.length; k++) {
+        const pt = flowPoints[k];
+        const pr = project(pt.x, pt.y, pt.z);
+        if (k === 0) ctx.moveTo(pr.px, pr.py);
+        else ctx.lineTo(pr.px, pr.py);
+      }
+      ctx.strokeStyle = currentMode === 'radar' ? '#34d399' : '#ef4444';
+      ctx.lineWidth = 4 * cam.zoom;
+      ctx.stroke();
+
+      // 3. Render 3D Point Markers & Labels
+      points3D.forEach(pt => {
+        const pr = project(pt.x * gridSize * spacing * 0.5, pt.y * gridSize * spacing * 0.5, pt.z * 100);
+        
+        // Marker Pin
+        ctx.beginPath();
+        ctx.arc(pr.px, pr.py, 6 * cam.zoom, 0, Math.PI * 2);
+        ctx.fillStyle = pt.color;
+        ctx.fill();
+        ctx.strokeStyle = '#ffffff';
+        ctx.lineWidth = 1.5;
+        ctx.stroke();
+
+        // Label Tag
+        ctx.font = 'bold 11px sans-serif';
+        ctx.fillStyle = '#f8fafc';
+        ctx.shadowColor = '#000000';
+        ctx.shadowBlur = 4;
+        ctx.fillText(pt.name, pr.px + 10, pr.py + 4);
+        ctx.shadowBlur = 0;
+      });
+
+      ctx.restore();
+    }
+
+    // Imagery Mode Switcher
+    function setImageryMode(mode) {
+      currentMode = mode;
+      const modes = ['sat', 'radar', 'seismic', 'split'];
+      modes.forEach(m => {
+        const btn = document.getElementById(`btn-mode-${m}`);
+        if (m === mode) {
+          btn.className = 'px-2.5 py-1 text-xs rounded-lg font-medium bg-blue-500 text-white shadow transition';
+        } else {
+          btn.className = 'px-2.5 py-1 text-xs rounded-lg font-medium bg-[var(--muted)] text-[var(--foreground)] hover:bg-[var(--border)] transition';
+        }
+      });
+
+      const hudTitle = document.getElementById('hud-title');
+      const hudSub = document.getElementById('hud-subtitle');
+      const radarOverlay = document.getElementById('radar-overlay');
+      const splitContainer = document.getElementById('split-container');
+
+      radarOverlay.classList.add('hidden');
+      splitContainer.classList.add('hidden');
+
+      if (mode === 'sat') {
+        hudTitle.innerHTML = '<span class="w-2.5 h-2.5 rounded-full bg-blue-500 inline-block"></span> Óptico Multiespectral (Planet / Sentinel-2)';
+        hudSub.innerText = 'Resolução 3m • Banda RGB + Infravermelho Próximo (NIR)';
+      } else if (mode === 'radar') {
+        hudTitle.innerHTML = '<span class="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block"></span> Radar SAR Interferométrico (Sentinel-1)';
+        hudSub.innerText = 'Banda C • Mapa de Coerência de Fase & Retroespalhamento VV/VH';
+        radarOverlay.classList.remove('hidden');
+      } else if (mode === 'seismic') {
+        hudTitle.innerHTML = '<span class="w-2.5 h-2.5 rounded-full bg-red-500 inline-block"></span> USGS ShakeMap & Aceleração Espectral';
+        hudSub.innerText = 'PGA (Peak Ground Acceleration) • Intensidade Mercalli MMI IV a VI';
+      } else if (mode === 'split') {
+        hudTitle.innerHTML = '<span class="w-2.5 h-2.5 rounded-full bg-amber-500 inline-block"></span> Comparador de Mudança Morfológica';
+        hudSub.innerText = 'Pré-Evento (Agosto 2026) vs. Pós-Evento de Rompimento';
+        splitContainer.classList.remove('hidden');
+      }
+
+      draw3DScene();
+    }
+
+    // Camera Preset Jumps
+    function jumpToPreset(val) {
+      currentPreset = val;
+      if (val === 'overview') {
+        cam.rotX = 0.55; cam.rotY = -0.3; cam.zoom = 1.0;
+        document.getElementById('cam-coords').innerText = '28.276° N, 85.519° E';
+        document.getElementById('cam-elevation').innerText = 'Visão Regional 3D';
+      } else if (val === 'origin') {
+        cam.rotX = 0.75; cam.rotY = -0.6; cam.zoom = 1.8;
+        document.getElementById('cam-coords').innerText = '28.2765° N, 85.5194° E';
+        document.getElementById('cam-elevation').innerText = '5.200 m (Langtang Lirung)';
+      } else if (val === 'dam') {
+        cam.rotX = 0.65; cam.rotY = -0.2; cam.zoom = 1.6;
+        document.getElementById('cam-coords').innerText = '28.2740° N, 85.4800° E';
+        document.getElementById('cam-elevation').innerText = '3.950 m (Lhende Khola)';
+      } else if (val === 'gyirong') {
+        cam.rotX = 0.45; cam.rotY = 0.4; cam.zoom = 1.5;
+        document.getElementById('cam-coords').innerText = '28.3970° N, 85.3300° E';
+        document.getElementById('cam-elevation').innerText = '2.700 m (Porto de Gyirong)';
+      } else if (val === 'rasuwagadhi') {
+        cam.rotX = 0.60; cam.rotY = 0.0; cam.zoom = 1.7;
+        document.getElementById('cam-coords').innerText = '28.2730° N, 85.3810° E';
+        document.getElementById('cam-elevation').innerText = '1.814 m (Rasuwagadhi)';
+      } else if (val === 'cascade') {
+        cam.rotX = 0.50; cam.rotY = -0.4; cam.zoom = 1.3;
+        document.getElementById('cam-coords').innerText = '27.9700° N, 85.1800° E';
+        document.getElementById('cam-elevation').innerText = '850 m (Trishuli-3A)';
+      }
+      updateTelemetry();
+      draw3DScene();
+    }
+
+    // Google Earth Web External Launcher
+    function openExternalEarth() {
+      const url = "https://earth.google.com/web/@28.2765,85.5194,5200a,20000d,35y,55t,0r";
+      window.open(url, '_blank');
+    }
+
+    // Seismic Waveform Animated Generator
+    function drawWaveform() {
+      const wCanvas = document.getElementById('waveform-canvas');
+      if (!wCanvas) return;
+      const wCtx = wCanvas.getContext('2d');
+      const w = wCanvas.width;
+      const h = wCanvas.height;
+      const mid = h / 2;
+
+      wCtx.fillStyle = '#0a0f1d';
+      wCtx.fillRect(0, 0, w, h);
+
+      // Grid
+      wCtx.strokeStyle = 'rgba(255, 255, 255, 0.07)';
+      wCtx.lineWidth = 1;
+      for (let x = 0; x < w; x += 50) {
+        wCtx.beginPath();
+        wCtx.moveTo(x, 0);
+        wCtx.lineTo(x, h);
+        wCtx.stroke();
+      }
+
+      // Signal Trace
+      wCtx.beginPath();
+      wCtx.moveTo(0, mid);
+
+      for (let x = 0; x < w; x++) {
+        let envelope = 0;
+        if (x > 120 && x < 600) {
+          // Emergent growth and long coda decay (avalanche signature)
+          const t = (x - 120) / 480;
+          envelope = Math.sin(t * Math.PI) * 35;
+        }
+
+        const noise = (Math.random() - 0.5) * 4;
+        const lowFreq = Math.sin(x * 0.08) * envelope;
+        const y = mid + lowFreq + noise;
+
+        wCtx.lineTo(x, y);
+      }
+
+      wCtx.strokeStyle = '#ef4444';
+      wCtx.lineWidth = 1.5;
+      wCtx.stroke();
+    }
+
+    // Initial setup
+    resizeCanvas();
+    drawWaveform();
+  </script>
+</body>
+</html>

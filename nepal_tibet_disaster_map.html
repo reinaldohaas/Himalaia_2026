@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapa e Monitoramento: Avalanche e Inundação Nepal-Tibete (2026)</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <style>
+    /* Custom styles and smooth animations */
+    .map-grid {
+      background-size: 30px 30px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    }
+    .contour-line {
+      fill: none;
+      stroke-dasharray: 4, 4;
+      opacity: 0.25;
+    }
+    .pulse-glow {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(1.35); }
+    }
+    .flow-dash {
+      stroke-dasharray: 8, 4;
+      animation: dashMove 1.5s linear infinite;
+    }
+    @keyframes dashMove {
+      from { stroke-dashoffset: 24; }
+      to { stroke-dashoffset: 0; }
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: rgba(150, 150, 150, 0.3);
+      border-radius: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: rgba(150, 150, 150, 0.5);
+    }
+  </style>
+</head>
+<body class="bg-[var(--background)] text-[var(--foreground)] antialiased p-4 lg:p-6 font-sans min-h-screen flex flex-col">
+
+  <!-- Header Banner -->
+  <header class="bg-[var(--card)] border border-[var(--border)] rounded-2xl p-5 mb-5 shadow-sm">
+    <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+      <div>
+        <div class="flex items-center gap-2 mb-1">
+          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-red-500/10 text-red-500 border border-red-500/20">
+            <span class="w-2 h-2 rounded-full bg-red-500 mr-1.5 animate-ping"></span>
+            DESASTRE TRANSFRONTEIRIÇO
+          </span>
+          <span class="text-xs text-[var(--muted-foreground)]">Região de Gyirong (Tibete, China) & Rasuwa (Nepal)</span>
+          <span class="text-xs font-mono bg-[var(--muted)] px-2 py-0.5 rounded text-[var(--muted-foreground)]">26-27 Ago 2026</span>
+        </div>
+        <h1 class="text-xl sm:text-2xl font-bold text-[var(--foreground)] tracking-tight">
+          Avalanche de Gelo-Rocha e Inundação Súbita: Bacia do Lhende Khola & Trishuli
+        </h1>
+        <p class="text-sm text-[var(--muted-foreground)] mt-1">
+          Monitoramento cartográfico do colapso no maciço do Langtang Lirung (5.200m), barramento fluvial e onda de detritos que atingiu o Porto de Gyirong, Rasuwagadhi e complexos hidrelétricos.
+        </p>
+      </div>
+
+      <!-- Quick KPI Stats -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center lg:text-right shrink-0">
+        <div class="bg-[var(--card)] p-2.5 rounded-xl border border-[var(--border)]">
+          <div class="text-xs text-[var(--muted-foreground)]">Magnitude Sísmica</div>
+          <div class="text-lg font-bold text-amber-500">4.4 mb</div>
+          <div class="text-[10px] text-[var(--muted-foreground)]">Impacto do colapso</div>
+        </div>
+        <div class="bg-[var(--card)] p-2.5 rounded-xl border border-[var(--border)]">
+          <div class="text-xs text-[var(--muted-foreground)]">Desnível do Fluxo</div>
+          <div class="text-lg font-bold text-blue-500">6.400 m</div>
+          <div class="text-[10px] text-[var(--muted-foreground)]">Em ~45 km de calha</div>
+        </div>
+        <div class="bg-[var(--card)] p-2.5 rounded-xl border border-[var(--border)]">
+          <div class="text-xs text-[var(--muted-foreground)]">Pontes Perdidas</div>
+          <div class="text-lg font-bold text-red-500">19+</div>
+          <div class="text-[10px] text-[var(--muted-foreground)]">Rodo & pedestres</div>
+        </div>
+        <div class="bg-[var(--card)] p-2.5 rounded-xl border border-[var(--border)]">
+          <div class="text-xs text-[var(--muted-foreground)]">Energia Afetada</div>
+          <div class="text-lg font-bold text-purple-500">>400 MW</div>
+          <div class="text-[10px] text-[var(--muted-foreground)]">Cascata de hidroelétricas</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Layout (Map + Sidebar) -->
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 flex-grow">
+
+    <!-- Left / Center: Interactive Map & Controls (8 cols) -->
+    <div class="lg:col-span-8 flex flex-col gap-4">
+
+      <!-- Map Card -->
+      <div class="bg-[var(--card)] border border-[var(--border)] rounded-2xl p-4 shadow-sm flex flex-col relative overflow-hidden flex-grow min-h-[540px]">
+        
+        <!-- Map Header / Layer Toggles -->
+        <div class="flex flex-wrap items-center justify-between gap-2 pb-3 mb-3 border-b border-[var(--border)] z-10">
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-semibold uppercase tracking-wider text-[var(--muted-foreground)]">Camadas Visuais:</span>
+            <div class="flex flex-wrap gap-1">
+              <button id="btn-layer-epicenter" onclick="toggleLayer('epicenter')" class="px-2.5 py-1 text-xs rounded-lg font-medium bg-red-500/20 text-red-500 border border-red-500/40 transition">
+                💥 Origem & Avalanche
+              </button>
+              <button id="btn-layer-flood" onclick="toggleLayer('flood')" class="px-2.5 py-1 text-xs rounded-lg font-medium bg-blue-500/20 text-blue-500 border border-blue-500/40 transition">
+                🌊 Fluxo de Detritos (Lhende/Trishuli)
+              </button>
+              <button id="btn-layer-infrastructure" onclick="toggleLayer('infrastructure')" class="px-2.5 py-1 text-xs rounded-lg font-medium bg-amber-500/20 text-amber-500 border border-amber-500/40 transition">
+                🏗️ Infraestrutura & Portos
+              </button>
+              <button id="btn-layer-border" onclick="toggleLayer('border')" class="px-2.5 py-1 text-xs rounded-lg font-medium bg-emerald-500/20 text-emerald-500 border border-emerald-500/40 transition">
+                🗺️ Fronteira & Topografia
+              </button>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <button onclick="resetMapView()" class="px-2 py-1 text-xs rounded bg-[var(--muted)] hover:bg-[var(--border)] text-[var(--foreground)] transition">
+              ↺ Centralizar
+            </button>
+            <span class="text-xs font-mono text-[var(--muted-foreground)]">28°16'N 85°22'E</span>
+          </div>
+        </div>
+
+        <!-- SVG Map Canvas -->
+        <div id="map-container" class="relative flex-grow w-full h-[460px] bg-[#0c1322] rounded-xl overflow-hidden border border-slate-800 map-grid cursor-grab active:cursor-grabbing select-none">
+
+          <!-- Coordinate Legend Overlay -->
+          <div class="absolute top-3 left-3 z-20 pointer-events-none bg-slate-900/85 backdrop-blur border border-slate-700/60 text-slate-200 text-xs px-3 py-2 rounded-lg shadow-lg">
+            <div class="font-bold flex items-center gap-2 text-slate-100">
+              <span class="w-2.5 h-2.5 rounded-sm bg-red-500 inline-block"></span>
+              Setor Transfronteiriço Nepal - Tibete
+            </div>
+            <div class="text-[11px] text-slate-400 mt-0.5">Maciço Langtang / Rio Trishuli / Porto Gyirong</div>
+          </div>
+
+          <!-- Interactive SVG Map -->
+          <svg id="himalaya-map" viewBox="0 0 900 650" class="w-full h-full">
+            <defs>
+              <!-- Gradients -->
+              <linearGradient id="tibetGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#1e293b" stop-opacity="0.9" />
+                <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95" />
+              </linearGradient>
+              <linearGradient id="nepalGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#0f172a" stop-opacity="0.9" />
+                <stop offset="100%" stop-color="#064e3b" stop-opacity="0.2" />
+              </linearGradient>
+              <linearGradient id="floodGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#ef4444" />
+                <stop offset="25%" stop-color="#f97316" />
+                <stop offset="60%" stop-color="#3b82f6" />
+                <stop offset="100%" stop-color="#06b6d4" />
+              </linearGradient>
+              <radialGradient id="avalancheBurst" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#ef4444" stop-opacity="0.9" />
+                <stop offset="60%" stop-color="#dc2626" stop-opacity="0.4" />
+                <stop offset="100%" stop-color="#991b1b" stop-opacity="0" />
+              </radialGradient>
+              <!-- Filter for glow -->
+              <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur stdDeviation="4" result="blur" />
+                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+              </filter>
+            </defs>
+
+            <!-- Background Regional Polygons -->
+            <!-- Tibet Region (North) -->
+            <path d="M 0,0 L 900,0 L 900,280 L 760,290 L 590,260 L 460,290 L 320,270 L 180,310 L 0,280 Z" fill="url(#tibetGrad)" />
+            <!-- Nepal Region (South) -->
+            <path d="M 0,280 L 180,310 L 320,270 L 460,290 L 590,260 L 760,290 L 900,280 L 900,650 L 0,650 Z" fill="url(#nepalGrad)" />
+
+            <!-- Mountain Terrain Relief Contours (Decorative Elevation Bands) -->
+            <g class="layer-relief" opacity="0.4">
+              <!-- High Himalaya Massifs -->
+              <ellipse cx="550" cy="240" rx="140" ry="80" class="contour-line" stroke="#94a3b8" />
+              <ellipse cx="560" cy="245" rx="90" ry="50" class="contour-line" stroke="#cbd5e1" />
+              <ellipse cx="570" cy="248" rx="45" ry="25" class="contour-line" stroke="#f8fafc" />
+
+              <ellipse cx="220" cy="180" rx="120" ry="70" class="contour-line" stroke="#94a3b8" />
+              <ellipse cx="210" cy="185" rx="70" ry="40" class="contour-line" stroke="#cbd5e1" />
+
+              <ellipse cx="780" cy="190" rx="100" ry="60" class="contour-line" stroke="#94a3b8" />
+            </g>
+
+            <!-- International Border (China / Nepal) -->
+            <g id="layer-border-group">
+              <path d="M 10,295 Q 120,320 220,290 T 380,275 T 480,285 T 580,265 T 720,285 T 890,270" 
+                    fill="none" stroke="#10b981" stroke-width="2.5" stroke-dasharray="8,6" opacity="0.8" />
+              <!-- Country Labels -->
+              <text x="70" y="90" fill="#64748b" font-size="22" font-weight="bold" letter-spacing="4">TIBETE (CHINA)</text>
+              <text x="60" y="115" fill="#475569" font-size="12">Condado de Gyirong / Bacia do Poiqu-Trishuli</text>
+              
+              <text x="70" y="580" fill="#64748b" font-size="22" font-weight="bold" letter-spacing="4">NEPAL</text>
+              <text x="70" y="605" fill="#475569" font-size="12">Distritos de Rasuwa & Nuwakot / Parque Nac. Langtang</text>
+
+              <rect x="420" y="272" width="120" height="20" rx="4" fill="#065f46" opacity="0.6"/>
+              <text x="430" y="286" fill="#a7f3d0" font-size="10" font-weight="bold">FRONTEIRA INTERNACIONAL</text>
+            </g>
+
+            <!-- Major Mountain Peaks -->
+            <g id="layer-peaks">
+              <!-- Langtang Lirung (7245m) -->
+              <polygon points="570,225 585,255 555,255" fill="#e2e8f0" stroke="#38bdf8" stroke-width="1.5" />
+              <text x="575" y="220" fill="#f8fafc" font-size="12" font-weight="bold">Mt. Langtang Lirung</text>
+              <text x="575" y="234" fill="#38bdf8" font-size="10">7.245 m (Origem do Desastre)</text>
+
+              <!-- Shishapangma (8027m) -->
+              <polygon points="760,170 773,195 747,195" fill="#cbd5e1" stroke="#94a3b8" stroke-width="1" />
+              <text x="765" y="165" fill="#cbd5e1" font-size="11" font-weight="bold">Shishapangma (Tibete)</text>
+              <text x="765" y="177" fill="#94a3b8" font-size="9">8.027 m</text>
+
+              <!-- Ganesh Himal (7422m) -->
+              <polygon points="210,165 223,190 197,190" fill="#cbd5e1" stroke="#94a3b8" stroke-width="1" />
+              <text x="215" y="160" fill="#cbd5e1" font-size="11" font-weight="bold">Ganesh Himal</text>
+              <text x="215" y="172" fill="#94a3b8" font-size="9">7.422 m</text>
+            </g>
+
+            <!-- River Drainage Network & Flash Flood Torrent -->
+            <g id="layer-rivers">
+              <!-- Secondary tributary: Chilime River -->
+              <path d="M 330,340 Q 370,390 440,410" fill="none" stroke="#0284c7" stroke-width="2.5" opacity="0.6" />
+              <!-- Langtang Valley River -->
+              <path d="M 720,380 Q 600,390 480,430" fill="none" stroke="#0284c7" stroke-width="2.5" opacity="0.6" />
+
+              <!-- THE MAIN DEBRIS & FLOOD SURGE PATH (Lhende Khola -> Bhote Koshi -> Trishuli) -->
+              <g id="layer-flood-group">
+                <!-- Outer flood halo -->
+                <path id="flood-main-halo" d="M 545,250 Q 520,270 490,285 Q 460,310 455,340 Q 450,380 445,430 Q 440,490 410,540 Q 380,590 350,630" 
+                      fill="none" stroke="#f43f5e" stroke-width="14" opacity="0.25" stroke-linecap="round" />
+                
+                <!-- Main Flood Path Line -->
+                <path id="flood-main-surge" d="M 545,250 Q 520,270 490,285 Q 460,310 455,340 Q 450,380 445,430 Q 440,490 410,540 Q 380,590 350,630" 
+                      fill="none" stroke="url(#floodGrad)" stroke-width="6" stroke-linecap="round" />
+
+                <!-- Animated flow indicator dashes -->
+                <path d="M 545,250 Q 520,270 490,285 Q 460,310 455,340 Q 450,380 445,430 Q 440,490 410,540 Q 380,590 350,630" 
+                      fill="none" stroke="#ffffff" stroke-width="2" class="flow-dash" opacity="0.85" />
+
+                <!-- Tributary flow back into Gyirong Valley in Tibet -->
+                <path d="M 490,285 Q 460,250 430,200 Q 410,160 395,120" 
+                      fill="none" stroke="#f97316" stroke-width="4.5" stroke-dasharray="6,4" opacity="0.9" />
+              </g>
+            </g>
+
+            <!-- Avalanche Origin & Rupture Dam Zone -->
+            <g id="layer-epicenter-group">
+              <!-- Glacial Failure zone at 5200m -->
+              <circle cx="545" cy="250" r="35" fill="url(#avalancheBurst)" class="pulse-glow" />
+              <circle cx="545" cy="250" r="14" fill="#ef4444" stroke="#ffffff" stroke-width="2.5" />
+              
+              <!-- Trajectory arrow -->
+              <line x1="545" y1="250" x2="495" y2="280" stroke="#fecaca" stroke-width="3" stroke-dasharray="4,2" marker-end="url(#arrow)" />
+              
+              <!-- Temporary Damming & Breach Point -->
+              <circle cx="495" cy="285" r="9" fill="#dc2626" stroke="#fbbf24" stroke-width="2" />
+              <rect x="508" y="278" width="130" height="22" rx="4" fill="#7f1d1d" opacity="0.9" />
+              <text x="514" y="293" fill="#fecaca" font-size="10" font-weight="bold">Barramento & Ruptura</text>
+            </g>
+
+            <!-- Critical POI Points / Hotspots -->
+            <g id="layer-infrastructure-group">
+              
+              <!-- 1. Gyirong Port (Tibet / China) -->
+              <g class="cursor-pointer group" onclick="showPoiDetail('gyirong')">
+                <circle cx="430" cy="200" r="10" fill="#ea580c" stroke="#ffffff" stroke-width="2" class="hover:r-12 transition" />
+                <rect x="315" y="190" width="105" height="20" rx="4" fill="#431407" opacity="0.9" />
+                <text x="322" y="204" fill="#ffedd5" font-size="10" font-weight="bold">🏢 Porto de Gyirong</text>
+              </g>
+
+              <!-- 2. Rasuwagadhi Border Fort & Customs (Nepal) -->
+              <g class="cursor-pointer group" onclick="showPoiDetail('rasuwagadhi')">
+                <circle cx="475" cy="305" r="9" fill="#dc2626" stroke="#ffffff" stroke-width="2" />
+                <rect x="490" y="302" width="120" height="20" rx="4" fill="#450a0a" opacity="0.9" />
+                <text x="496" y="316" fill="#fee2e2" font-size="10" font-weight="bold">🚨 Forte Rasuwagadhi</text>
+              </g>
+
+              <!-- 3. Rasuwagadhi Hydro Station (111 MW) -->
+              <g class="cursor-pointer group" onclick="showPoiDetail('hydro-rasuwagadhi')">
+                <circle cx="468" cy="330" r="8" fill="#a855f7" stroke="#ffffff" stroke-width="2" />
+                <text x="485" y="337" fill="#f3e8ff" font-size="10" font-weight="bold">⚡ UHE Rasuwagadhi (111MW)</text>
+              </g>
+
+              <!-- 4. Timure Village (Customs & Logistics) -->
+              <g class="cursor-pointer group" onclick="showPoiDetail('timure')">
+                <circle cx="460" cy="360" r="8" fill="#ef4444" stroke="#ffffff" stroke-width="2" />
+                <text x="478" y="367" fill="#fca5a5" font-size="10" font-weight="bold">🏘️ Timure (Soterrada)</text>
+              </g>
+
+              <!-- 5. Chilime Hydro (22 MW) & Junction -->
+              <g class="cursor-pointer group" onclick="showPoiDetail('chilime')">
+                <circle cx="440" cy="410" r="7" fill="#a855f7" stroke="#ffffff" stroke-width="1.5" />
+                <text x="320" y="415" fill="#e9d5ff" font-size="10">⚡ UHE Chilime (22MW)</text>
+              </g>
+
+              <!-- 6. Syabrubesi Hub -->
+              <g class="cursor-pointer group" onclick="showPoiDetail('syabrubesi')">
+                <circle cx="445" cy="440" r="9" fill="#f97316" stroke="#ffffff" stroke-width="2" />
+                <rect x="460" y="433" width="105" height="20" rx="4" fill="#2d1303" opacity="0.9" />
+                <text x="466" y="447" fill="#fed7aa" font-size="10" font-weight="bold">📍 Syabrubesi</text>
+              </g>
+
+              <!-- 7. Dhunche (Rasuwa HQ) -->
+              <g class="cursor-pointer group" onclick="showPoiDetail('dhunche')">
+                <circle cx="430" cy="490" r="8" fill="#10b981" stroke="#ffffff" stroke-width="2" />
+                <text x="445" y="496" fill="#a7f3d0" font-size="10" font-weight="bold">🏛️ Dhunche (Centro Resgate)</text>
+              </g>
+
+              <!-- 8. Trishuli-3A Hydro & Nuwakot Valley -->
+              <g class="cursor-pointer group" onclick="showPoiDetail('trishuli3a')">
+                <circle cx="390" cy="565" r="8" fill="#a855f7" stroke="#ffffff" stroke-width="2" />
+                <text x="250" y="570" fill="#f3e8ff" font-size="10" font-weight="bold">⚡ UHE Trishuli-3A (60MW)</text>
+              </g>
+
+              <!-- Destroyed Bridges Markings along river -->
+              <g fill="#ef4444" font-size="10">
+                <text x="430" y="315">✕ Ponte</text>
+                <text x="440" y="350">✕ Ponte</text>
+                <text x="425" y="430">✕ Ponte</text>
+                <text x="400" y="515">✕ Ponte</text>
+              </g>
+            </g>
+
+            <!-- Map Scale & North Arrow -->
+            <g transform="translate(800, 560)">
+              <circle cx="20" cy="20" r="18" fill="#0f172a" stroke="#475569" />
+              <polygon points="20,8 25,23 20,20 15,23" fill="#38bdf8" />
+              <polygon points="20,32 25,23 20,20 15,23" fill="#64748b" />
+              <text x="20" y="6" fill="#38bdf8" font-size="10" font-weight="bold" text-anchor="middle">N</text>
+              <line x1="-30" y1="50" x2="30" y2="50" stroke="#94a3b8" stroke-width="2" />
+              <line x1="-30" y1="46" x2="-30" y2="54" stroke="#94a3b8" stroke-width="2" />
+              <line x1="30" y1="46" x2="30" y2="54" stroke="#94a3b8" stroke-width="2" />
+              <text x="0" y="64" fill="#94a3b8" font-size="9" text-anchor="middle">10 km</text>
+            </g>
+
+          </svg>
+        </div>
+
+        <!-- Simulation / Timeline Control Bar -->
+        <div class="mt-3 bg-[var(--card)] p-3 rounded-xl border border-[var(--border)]">
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 mb-2">
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-bold text-[var(--foreground)]">Linha do Tempo da Tragédia (26 Ago 2026):</span>
+              <span id="timeline-time-badge" class="px-2 py-0.5 rounded text-xs font-mono bg-red-500/10 text-red-500 border border-red-500/30">
+                08:37 AM - Colapso Maciço & Tremor 4.4M
+              </span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <button onclick="stepTimeline(-1)" class="px-2 py-1 text-xs rounded bg-[var(--muted)] hover:bg-[var(--border)] text-[var(--foreground)]">◀ Anterior</button>
+              <button id="btn-play-pause" onclick="togglePlayTimeline()" class="px-3 py-1 text-xs rounded font-semibold bg-red-500 text-white hover:bg-red-600">▶ Simular</button>
+              <button onclick="stepTimeline(1)" class="px-2 py-1 text-xs rounded bg-[var(--muted)] hover:bg-[var(--border)] text-[var(--foreground)]">Próximo ▶</button>
+            </div>
+          </div>
+
+          <!-- Timeline Slider Steps -->
+          <div class="grid grid-cols-5 gap-1.5 text-center text-[10px]">
+            <div id="step-btn-0" onclick="setTimelineStep(0)" class="cursor-pointer p-1.5 rounded border border-red-500 bg-red-500/20 text-red-400 font-bold transition">
+              1. 08:37 AM<br><span class="text-[9px] font-normal">Avalanche (5.200m)</span>
+            </div>
+            <div id="step-btn-1" onclick="setTimelineStep(1)" class="cursor-pointer p-1.5 rounded border border-[var(--border)] bg-[var(--card)] text-[var(--muted-foreground)] transition">
+              2. 08:50 AM<br><span class="text-[9px] font-normal">Represamento Lhende</span>
+            </div>
+            <div id="step-btn-2" onclick="setTimelineStep(2)" class="cursor-pointer p-1.5 rounded border border-[var(--border)] bg-[var(--card)] text-[var(--muted-foreground)] transition">
+              3. 09:15 AM<br><span class="text-[9px] font-normal">Ruptura & Torrente</span>
+            </div>
+            <div id="step-btn-3" onclick="setTimelineStep(3)" class="cursor-pointer p-1.5 rounded border border-[var(--border)] bg-[var(--card)] text-[var(--muted-foreground)] transition">
+              4. 09:40 AM<br><span class="text-[9px] font-normal">Impacto em Gyirong/Timure</span>
+            </div>
+            <div id="step-btn-4" onclick="setTimelineStep(4)" class="cursor-pointer p-1.5 rounded border border-[var(--border)] bg-[var(--card)] text-[var(--muted-foreground)] transition">
+              5. 11:00 AM<br><span class="text-[9px] font-normal">Cascata Trishuli (UHEs)</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Elevation Profile Cross-Section Diagram -->
+      <div class="bg-[var(--card)] border border-[var(--border)] rounded-2xl p-4 shadow-sm">
+        <div class="flex items-center justify-between mb-2">
+          <h3 class="text-xs font-bold uppercase tracking-wider text-[var(--foreground)] flex items-center gap-1.5">
+            <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+            Perfil Topográfico e Queda Hidráulica (~6.400m de Desnível)
+          </h3>
+          <span class="text-[11px] text-[var(--muted-foreground)]">Gradiente de Energia Extremo: 142 m/km</span>
+        </div>
+        
+        <!-- SVG Chart of Elevation -->
+        <div class="h-32 w-full bg-[var(--muted)]/40 rounded-lg p-2 relative overflow-hidden flex items-end">
+          <svg viewBox="0 0 700 120" class="w-full h-full">
+            <!-- Grid lines -->
+            <line x1="0" y1="20" x2="700" y2="20" stroke="currentColor" stroke-opacity="0.1" stroke-dasharray="2,2" />
+            <line x1="0" y1="50" x2="700" y2="50" stroke="currentColor" stroke-opacity="0.1" stroke-dasharray="2,2" />
+            <line x1="0" y1="80" x2="700" y2="80" stroke="currentColor" stroke-opacity="0.1" stroke-dasharray="2,2" />
+            
+            <!-- Altitude labels -->
+            <text x="5" y="15" fill="currentColor" opacity="0.6" font-size="8">7.245 m (Pico)</text>
+            <text x="5" y="45" fill="currentColor" opacity="0.6" font-size="8">5.200 m (Geleira)</text>
+            <text x="5" y="75" fill="currentColor" opacity="0.6" font-size="8">2.800 m (Gyirong)</text>
+            <text x="5" y="110" fill="currentColor" opacity="0.6" font-size="8">800 m (Trishuli)</text>
+
+            <!-- Elevation Curve -->
+            <path d="M 50,15 L 120,45 L 220,70 L 350,85 L 480,95 L 600,105 L 680,112" 
+                  fill="none" stroke="#ef4444" stroke-width="3" />
+            <path d="M 50,15 L 120,45 L 220,70 L 350,85 L 480,95 L 600,105 L 680,112 L 680,120 L 50,120 Z" 
+                  fill="#ef4444" fill-opacity="0.15" />
+
+            <!-- Points on Profile -->
+            <circle cx="50" cy="15" r="4" fill="#38bdf8" />
+            <text x="55" y="25" fill="currentColor" font-size="8" font-weight="bold">Langtang Lirung</text>
+
+            <circle cx="120" cy="45" r="5" fill="#ef4444" class="pulse-glow" />
+            <text x="125" y="40" fill="#ef4444" font-size="8" font-weight="bold">Ruptura Glacial</text>
+
+            <circle cx="220" cy="70" r="4" fill="#f97316" />
+            <text x="225" y="65" fill="currentColor" font-size="8">Porto Gyirong (2.700m)</text>
+
+            <circle cx="350" cy="85" r="4" fill="#a855f7" />
+            <text x="355" y="80" fill="currentColor" font-size="8">Rasuwagadhi (1.800m)</text>
+
+            <circle cx="480" cy="95" r="4" fill="#a855f7" />
+            <text x="485" y="90" fill="currentColor" font-size="8">Syabrubesi (1.460m)</text>
+
+            <circle cx="680" cy="112" r="4" fill="#a855f7" />
+            <text x="610" y="110" fill="currentColor" font-size="8">Trishuli-3A (850m)</text>
+          </svg>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Right: Detailed Telemetry, POI Inspector & Historical Database (4 cols) -->
+    <div class="lg:col-span-4 flex flex-col gap-4">
+
+      <!-- Selected POI / Location Details Card -->
+      <div id="poi-inspector-card" class="bg-[var(--card)] border border-[var(--border)] rounded-2xl p-5 shadow-sm">
+        <div class="flex items-center justify-between border-b border-[var(--border)] pb-3 mb-3">
+          <div class="flex items-center gap-2">
+            <span class="p-2 rounded-xl bg-red-500/10 text-red-500" id="poi-icon">🚨</span>
+            <div>
+              <h3 id="poi-title" class="font-bold text-[var(--foreground)] text-base">Porto de Gyirong (Tibete)</h3>
+              <p id="poi-subtitle" class="text-xs text-[var(--muted-foreground)]">Fronteira China-Nepal | Alt. 2.700m</p>
+            </div>
+          </div>
+          <span id="poi-status-badge" class="text-[10px] uppercase font-bold px-2 py-0.5 rounded bg-red-500/20 text-red-500 border border-red-500/30">
+            Dano Severo
+          </span>
+        </div>
+
+        <!-- Dynamic POI Content -->
+        <div id="poi-body" class="text-xs space-y-3 text-[var(--foreground)] leading-relaxed custom-scrollbar max-h-[280px] overflow-y-auto pr-1">
+          <p>
+            O porto terrestre de <strong>Gyirong (Jilong)</strong>, a principal artéria comercial e turística entre a Região Autônoma do Tibete e o Nepal, foi atingido por deslizamentos e inundação de lama maciça gerada pelo refluxo e rompimento na cabeceira do vale.
+          </p>
+          <div class="bg-[var(--muted)]/60 p-2.5 rounded-lg border border-[var(--border)] space-y-1 text-[11px]">
+            <div class="flex justify-between">
+              <span class="text-[var(--muted-foreground)]">Coordenadas:</span>
+              <span class="font-mono font-medium">28.397° N, 85.330° E</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-[var(--muted-foreground)]">Vítimas/Desaparecidos:</span>
+              <span class="font-bold text-red-500">Dezenas no complexo alfandegário</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-[var(--muted-foreground)]">Infraestrutura:</span>
+              <span class="text-amber-500 font-medium">Prédios aduaneiros soterrados, via destruída</span>
+            </div>
+          </div>
+          <p class="text-[var(--muted-foreground)]">
+            As comunicações terrestres e redes elétricas foram rompidas, isolando a guarnição e grupos de turistas e motoristas de carga pesada.
+          </p>
+        </div>
+
+        <div class="mt-4 pt-3 border-t border-[var(--border)] flex gap-2">
+          <button onclick="focusOnMapPoint('gyirong')" class="flex-1 py-1.5 px-3 rounded-lg text-xs font-semibold bg-[var(--muted)] hover:bg-[var(--border)] text-[var(--foreground)] transition text-center">
+            🔍 Localizar no Mapa
+          </button>
+        </div>
+      </div>
+
+      <!-- Scientific & Causal Mechanism Box -->
+      <div class="bg-[var(--card)] border border-[var(--border)] rounded-2xl p-4 shadow-sm space-y-3">
+        <h4 class="text-xs font-bold uppercase tracking-wider text-[var(--foreground)] flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+          Causas Científicas do Fenômeno
+        </h4>
+        
+        <div class="space-y-2 text-xs text-[var(--muted-foreground)]">
+          <div class="p-2 rounded-lg bg-[var(--muted)]/40 border border-[var(--border)]">
+            <strong class="text-[var(--foreground)] block mb-0.5">1. Degradação do Permafrost de Encosta</strong>
+            O aquecimento acelerado no Himalaia (taxa 2x maior que a média global) descongela o gelo intersticial em paredes rochosas acima de 5.000m, anulando a coesão estrutural.
+          </div>
+
+          <div class="p-2 rounded-lg bg-[var(--muted)]/40 border border-[var(--border)]">
+            <strong class="text-[var(--foreground)] block mb-0.5">2. Mecanismo em Cascata (Cascading Hazard)</strong>
+            Queda livre de ~1.200m da massa de gelo e rocha no cânion estreito do Lhende Khola criou uma represa efêmera de detritos que colapsou em menos de 30 minutos.
+          </div>
+
+          <div class="p-2 rounded-lg bg-[var(--muted)]/40 border border-[var(--border)]">
+            <strong class="text-[var(--foreground)] block mb-0.5">3. Assinatura Sísmica Induzida (4.4 mb)</strong>
+            Especialistas e o USGS confirmaram que o sinal sísmico coincidente foi produzido pelo choque cinético do colapso de milhões de toneladas na base rochosa.
+          </div>
+        </div>
+      </div>
+
+      <!-- Transboundary Glacial Risks (Nepal & Tibet Historical Comparison) -->
+      <div class="bg-[var(--card)] border border-[var(--border)] rounded-2xl p-4 shadow-sm">
+        <h4 class="text-xs font-bold uppercase tracking-wider text-[var(--foreground)] mb-2 flex items-center justify-between">
+          <span>Desastres Históricos Comparáveis</span>
+          <span class="text-[10px] text-[var(--muted-foreground)] font-normal">Himalaia Central</span>
+        </h4>
+        
+        <div class="space-y-1.5 text-xs">
+          <div class="p-2 rounded bg-[var(--muted)]/40 flex justify-between items-center border border-[var(--border)]">
+            <div>
+              <div class="font-medium text-[var(--foreground)]">GLOF de Thame (Everest)</div>
+              <div class="text-[10px] text-[var(--muted-foreground)]">Lago Glacial Thyanbo • Nepal</div>
+            </div>
+            <span class="text-[10px] font-mono bg-blue-500/10 text-blue-500 px-1.5 py-0.5 rounded">Ago 2024</span>
+          </div>
+
+          <div class="p-2 rounded bg-[var(--muted)]/40 flex justify-between items-center border border-[var(--border)]">
+            <div>
+              <div class="font-medium text-[var(--foreground)]">Enxurrada do Rio Melamchi</div>
+              <div class="text-[10px] text-[var(--muted-foreground)]">Deslizamento em Cabeceira • Nepal</div>
+            </div>
+            <span class="text-[10px] font-mono bg-amber-500/10 text-amber-500 px-1.5 py-0.5 rounded">Jun 2021</span>
+          </div>
+
+          <div class="p-2 rounded bg-[var(--muted)]/40 flex justify-between items-center border border-[var(--border)]">
+            <div>
+              <div class="font-medium text-[var(--foreground)]">Avalanche do Shishapangma</div>
+              <div class="text-[10px] text-[var(--muted-foreground)]">Colapso de serac • Tibete</div>
+            </div>
+            <span class="text-[10px] font-mono bg-purple-500/10 text-purple-500 px-1.5 py-0.5 rounded">Out 2023</span>
+          </div>
+
+          <div class="p-2 rounded bg-[var(--muted)]/40 flex justify-between items-center border border-[var(--border)]">
+            <div>
+              <div class="font-medium text-[var(--foreground)]">Ruptura Glacial de Chamoli</div>
+              <div class="text-[10px] text-[var(--muted-foreground)]">Avalanche de Rocha/Gelo • Índia/Himalaia</div>
+            </div>
+            <span class="text-[10px] font-mono bg-red-500/10 text-red-500 px-1.5 py-0.5 rounded">Fev 2021</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- JavaScript Interactivity -->
+  <script>
+    // Data Store for POIs
+    const poiData = {
+      'gyirong': {
+        icon: '🏢',
+        title: 'Porto de Gyirong (Tibete, China)',
+        subtitle: 'Fronteira China-Nepal | Alt. 2.700m',
+        badge: 'Dano Severo',
+        badgeColor: 'bg-red-500/20 text-red-500 border-red-500/30',
+        coords: '28.397° N, 85.330° E',
+        victims: 'Dezenas no complexo alfandegário e vias',
+        infra: 'Edifícios aduaneiros soterrados, via de acesso destruída',
+        desc: 'O porto terrestre de <strong>Gyirong (Jilong)</strong>, a principal artéria comercial e turística entre a Região Autônoma do Tibete e o Nepal, foi atingido por fluxos de lama e bloqueio total. Comunicação e energia foram rompidas instantaneamente, mobilizando tropas de resgate da China.'
+      },
+      'rasuwagadhi': {
+        icon: '🚨',
+        title: 'Forte & Posto de Rasuwagadhi (Nepal)',
+        subtitle: 'Divisa Internacional | Alt. 1.814m',
+        badge: 'Zona de Catástrofe',
+        badgeColor: 'bg-red-500/20 text-red-500 border-red-500/30',
+        coords: '28.273° N, 85.381° E',
+        victims: 'Oficiais de fronteira e motoristas arrastados',
+        infra: 'Ponte da Amizade e pátios de inspeção varridos',
+        desc: 'O ponto de entrada de Rasuwagadhi recebeu a onda inicial da ruptura da represa no rio Lhende Khola. A força hidráulica combinada com blocos de rocha varreu instalações aduaneiras nepalenses e a ponte histórica.'
+      },
+      'hydro-rasuwagadhi': {
+        icon: '⚡',
+        title: 'UHE Rasuwagadhi (111 MW)',
+        subtitle: 'Rio Bhotekoshi / Trishuli | Alt. 1.780m',
+        badge: 'Inundada / Paralisada',
+        badgeColor: 'bg-purple-500/20 text-purple-500 border-purple-500/30',
+        coords: '28.265° N, 85.378° E',
+        victims: 'Trabalhadores no túnel e desarenadores',
+        infra: 'Casa de força e barragem submersas em sedimentos',
+        desc: 'A usina hidrelétrica de 111 MW sofreu inundação massiva em suas comportas de captação e desarenadores. Mais de 400 MW no corredor do rio Trishuli foram desligados emergencialmente da rede nacional do Nepal.'
+      },
+      'timure': {
+        icon: '🏘️',
+        title: 'Vila de Timure (Nepal)',
+        subtitle: 'Distrito de Rasuwa | Alt. 1.750m',
+        badge: 'Devastação Residencial',
+        badgeColor: 'bg-red-500/20 text-red-500 border-red-500/30',
+        coords: '28.252° N, 85.385° E',
+        victims: 'Centenas de desaparecidos (locais e caminhoneiros)',
+        infra: 'Dezenas de hotéis, armazéns e veículos submersos',
+        desc: 'A vila e polo comercial de Timure foi sepultada sob até 6 metros de cascalho, pedregulhos e lama espessa. Caminhões de carga que aguardavam trâmite aduaneiro foram arremessados no rio.'
+      },
+      'chilime': {
+        icon: '⚡',
+        title: 'UHE Chilime (22 MW)',
+        subtitle: 'Confluência Chilime/Trishuli | Alt. 1.550m',
+        badge: 'Operação Interrompida',
+        badgeColor: 'bg-amber-500/20 text-amber-500 border-amber-500/30',
+        coords: '28.188° N, 85.305° E',
+        victims: 'Evacuação preventiva do corpo técnico',
+        infra: 'Estruturas de desvio assoreadas',
+        desc: 'A confluência do rio Chilime com o Trishuli sofreu remanso de cheia violento, obrigando o fechamento das turbinas e abertura total de vertedouros para evitar danos estruturais irreversíveis.'
+      },
+      'syabrubesi': {
+        icon: '📍',
+        title: 'Syabrubesi (Polo Turístico & Trekking)',
+        subtitle: 'Porta de Entrada de Langtang | Alt. 1.460m',
+        badge: 'Isolada / Pontes Destruídas',
+        badgeColor: 'bg-orange-500/20 text-orange-500 border-orange-500/30',
+        coords: '28.161° N, 85.337° E',
+        victims: 'Turistas e guias de montanha isolados',
+        infra: 'Pontes pênseis e pontes de concreto rompidas',
+        desc: 'Syabrubesi perdeu suas conexões rodoviárias e pontes para o vale do Langtang. Helicópteros do Exército do Nepal e equipes internacionais concentram operações de resgate e lançamento de suprimentos.'
+      },
+      'dhunche': {
+        icon: '🏛️',
+        title: 'Dhunche (Capital Distrital de Rasuwa)',
+        subtitle: 'Sede Administrativa | Alt. 2.030m',
+        badge: 'Centro de Comando',
+        badgeColor: 'bg-emerald-500/20 text-emerald-500 border-emerald-500/30',
+        coords: '28.113° N, 85.300° E',
+        victims: 'Ponto de triagem hospitalar e evacuação médica',
+        infra: 'Rodovia Pasang Lhamu interditada em múltiplos trechos',
+        desc: 'Situada em cota mais elevada na encosta, Dhunche tornou-se a base de operações unificada entre a polícia nepalesa, forças armadas e agências da ONU para triagem e coordenação de alívio.'
+      },
+      'trishuli3a': {
+        icon: '⚡',
+        title: 'UHE Upper Trishuli-3A (60 MW)',
+        subtitle: 'Distrito de Nuwakot | Alt. 850m',
+        badge: 'Alerta de Pico de Vazão',
+        badgeColor: 'bg-purple-500/20 text-purple-500 border-purple-500/30',
+        coords: '27.970° N, 85.180° E',
+        victims: 'Operadores em alerta de inundação',
+        infra: 'Comportas abertas para escoar volume de detritos',
+        desc: 'Localizada no trecho inferior em Nuwakot, a usina de 60 MW recebeu o pico da onda de cheia ~2,5 horas após o rompimento montante, com vazão e carga de sedimentos em níveis críticos históricos.'
+      }
+    };
+
+    // Timeline Steps Definition
+    const timelineEvents = [
+      {
+        badge: '08:37 AM - Colapso Maciço & Tremor 4.4M',
+        desc: 'Ruptura de bloco glacial a 5.200m no Langtang Lirung; queda livre de 1.200m gerando sinal sísmico registrado internacionalmente.',
+        activePoi: 'epicenter'
+      },
+      {
+        badge: '08:50 AM - Bloqueio & Represamento Lhende',
+        desc: 'Milhões de m³ de gelo e rochas formam uma barragem natural instável no desfiladeiro do rio Lhende Khola.',
+        activePoi: 'dam'
+      },
+      {
+        badge: '09:15 AM - Ruptura Catastrófica da Represa',
+        desc: 'A represa natural transborda e colapsa repentinamente, liberando uma torrente de lama e megablocos a mais de 50 km/h.',
+        activePoi: 'rasuwagadhi'
+      },
+      {
+        badge: '09:40 AM - Destruição em Gyirong e Timure',
+        desc: 'A onda de cheia atinge instalações aduaneiras no Tibete e soterra povoados e o porto de Rasuwagadhi no Nepal.',
+        activePoi: 'timure'
+      },
+      {
+        badge: '11:00 AM - Propagação na Cascata do Trishuli',
+        desc: 'A torrente alcança Syabrubesi e as barragens hidrelétricas de Chilime e Trishuli-3A a jusante, rompendo pontes e linhas de transmissão.',
+        activePoi: 'trishuli3a'
+      }
+    ];
+
+    let currentTimelineStep = 0;
+    let isPlayingTimeline = false;
+    let timelineTimer = null;
+
+    function showPoiDetail(key) {
+      const data = poiData[key];
+      if (!data) return;
+
+      document.getElementById('poi-icon').innerText = data.icon;
+      document.getElementById('poi-title').innerText = data.title;
+      document.getElementById('poi-subtitle').innerText = data.subtitle;
+      
+      const badge = document.getElementById('poi-status-badge');
+      badge.innerText = data.badge;
+      badge.className = `text-[10px] uppercase font-bold px-2 py-0.5 rounded border ${data.badgeColor}`;
+
+      document.getElementById('poi-body').innerHTML = `
+        <p>${data.desc}</p>
+        <div class="bg-[var(--muted)]/60 p-2.5 rounded-lg border border-[var(--border)] space-y-1 text-[11px]">
+          <div class="flex justify-between">
+            <span class="text-[var(--muted-foreground)]">Coordenadas:</span>
+            <span class="font-mono font-medium">${data.coords}</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-[var(--muted-foreground)]">Impacto Humano:</span>
+            <span class="font-bold text-red-500">${data.victims}</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-[var(--muted-foreground)]">Infraestrutura:</span>
+            <span class="text-amber-500 font-medium">${data.infra}</span>
+          </div>
+        </div>
+      `;
+    }
+
+    function setTimelineStep(step) {
+      currentTimelineStep = step;
+      const event = timelineEvents[step];
+
+      // Update badge
+      document.getElementById('timeline-time-badge').innerText = event.badge;
+
+      // Update buttons
+      for (let i = 0; i < 5; i++) {
+        const btn = document.getElementById(`step-btn-${i}`);
+        if (i === step) {
+          btn.className = 'cursor-pointer p-1.5 rounded border border-red-500 bg-red-500/20 text-red-400 font-bold transition scale-105';
+        } else {
+          btn.className = 'cursor-pointer p-1.5 rounded border border-[var(--border)] bg-[var(--card)] text-[var(--muted-foreground)] transition';
+        }
+      }
+
+      // Automatically show related POI
+      if (step === 0 || step === 1) {
+        showPoiDetail('rasuwagadhi');
+      } else if (step === 2 || step === 3) {
+        showPoiDetail('timure');
+      } else if (step === 4) {
+        showPoiDetail('trishuli3a');
+      }
+    }
+
+    function stepTimeline(dir) {
+      let nextStep = currentTimelineStep + dir;
+      if (nextStep < 0) nextStep = 0;
+      if (nextStep > 4) nextStep = 4;
+      setTimelineStep(nextStep);
+    }
+
+    function togglePlayTimeline() {
+      isPlayingTimeline = !isPlayingTimeline;
+      const btn = document.getElementById('btn-play-pause');
+
+      if (isPlayingTimeline) {
+        btn.innerText = '⏸ Pausar';
+        btn.className = 'px-3 py-1 text-xs rounded font-semibold bg-amber-500 text-white hover:bg-amber-600';
+        timelineTimer = setInterval(() => {
+          let next = (currentTimelineStep + 1) % 5;
+          setTimelineStep(next);
+        }, 2800);
+      } else {
+        btn.innerText = '▶ Simular';
+        btn.className = 'px-3 py-1 text-xs rounded font-semibold bg-red-500 text-white hover:bg-red-600';
+        if (timelineTimer) clearInterval(timelineTimer);
+      }
+    }
+
+    // Layer Toggles
+    const layers = {
+      epicenter: true,
+      flood: true,
+      infrastructure: true,
+      border: true
+    };
+
+    function toggleLayer(layerId) {
+      layers[layerId] = !layers[layerId];
+      const elem = document.getElementById(`layer-${layerId}-group`);
+      const btn = document.getElementById(`btn-layer-${layerId}`);
+
+      if (elem) {
+        elem.style.display = layers[layerId] ? 'inline' : 'none';
+      }
+
+      if (layers[layerId]) {
+        btn.style.opacity = '1';
+        btn.style.textDecoration = 'none';
+      } else {
+        btn.style.opacity = '0.4';
+        btn.style.textDecoration = 'line-through';
+      }
+    }
+
+    function resetMapView() {
+      const svg = document.getElementById('himalaya-map');
+      svg.setAttribute('viewBox', '0 0 900 650');
+      setTimelineStep(0);
+    }
+
+    function focusOnMapPoint(key) {
+      showPoiDetail(key);
+      const svg = document.getElementById('himalaya-map');
+      // Gentle animated zoom
+      if (key === 'gyirong' || key === 'rasuwagadhi' || key === 'timure') {
+        svg.setAttribute('viewBox', '280 150 450 350');
+      } else if (key === 'syabrubesi' || key === 'trishuli3a') {
+        svg.setAttribute('viewBox', '250 350 450 300');
+      }
+    }
+
+    // Initialize with Gyirong on load
+    showPoiDetail('gyirong');
+  </script>
+</body>
+</html>
