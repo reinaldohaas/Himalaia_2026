@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2"
      xmlns:gx="http://www.google.com/kml/ext/2.2"
      xmlns:kml="http://www.opengis.net/kml/2.2"
@@ -363,7 +363,7 @@
       <!-- Rodovia Pasang Lhamu Highway (Nepal) -->
       <Placemark>
         <name>Rodovia Pasang Lhamu (Trishuli Highway)</name>
-        <description>Principal rota comercial terrestre ligando Katmandu a Rasuwagadhi e China.</description>
+        <description><![CDATA[Principal rota comercial terrestre ligando Katmandu a Rasuwagadhi e China.]]></description>
         <styleUrl>#styleHighwayPrimary</styleUrl>
         <LineString>
           <tessellate>1</tessellate>
@@ -385,7 +385,7 @@
       <!-- Rodovia Nacional G216 da China (Tibete) -->
       <Placemark>
         <name>Rodovia Nacional G216 (China - Tibete)</name>
-        <description>Corredor rodoviário ligando Gyirong ao Platô Tibetano e Shigatse.</description>
+        <description><![CDATA[Corredor rodoviário ligando Gyirong ao Platô Tibetano e Shigatse.]]></description>
         <styleUrl>#styleHighwayChina</styleUrl>
         <LineString>
           <tessellate>1</tessellate>
@@ -409,105 +409,105 @@
       <!-- PONTES DESTRUÍDAS (WASHED OUT) -->
       <Placemark>
         <name>🔴 Miteri Bridge (Ponte da Amizade) - Rasuwagadhi</name>
-        <description><b>Status:</b> WASHED OUT (Destruída)<br><b>Distrito:</b> Rasuwa (Fronteira Nepal-China)</description>
+        <description><![CDATA[<b>Status:</b> WASHED OUT (Destruída)<br><b>Distrito:</b> Rasuwa (Fronteira Nepal-China)]]></description>
         <styleUrl>#styleBridgeWashed</styleUrl>
         <Point><coordinates>85.378097,28.278944,1814</coordinates></Point>
       </Placemark>
 
       <Placemark>
         <name>🔴 Bhotekoshi Bridge at Chilime</name>
-        <description><b>Status:</b> WASHED OUT<br><b>Distrito:</b> Rasuwa</description>
+        <description><![CDATA[<b>Status:</b> WASHED OUT<br><b>Distrito:</b> Rasuwa]]></description>
         <styleUrl>#styleBridgeWashed</styleUrl>
         <Point><coordinates>85.340001,28.188000,1520</coordinates></Point>
       </Placemark>
 
       <Placemark>
         <name>🔴 Chilime Bridge, Chilime Khola</name>
-        <description><b>Status:</b> WASHED OUT<br><b>Distrito:</b> Rasuwa</description>
+        <description><![CDATA[<b>Status:</b> WASHED OUT<br><b>Distrito:</b> Rasuwa]]></description>
         <styleUrl>#styleBridgeWashed</styleUrl>
         <Point><coordinates>85.338500,28.184000,1490</coordinates></Point>
       </Placemark>
 
       <Placemark>
         <name>🔴 Syabrubesi Bridge</name>
-        <description><b>Status:</b> WASHED OUT<br><b>Distrito:</b> Rasuwa</description>
+        <description><![CDATA[<b>Status:</b> WASHED OUT<br><b>Distrito:</b> Rasuwa]]></description>
         <styleUrl>#styleBridgeWashed</styleUrl>
         <Point><coordinates>85.334000,28.161000,1460</coordinates></Point>
       </Placemark>
 
       <Placemark>
         <name>🔴 Trishuli River Bridge Mailung (Dam 1)</name>
-        <description><b>Status:</b> WASHED OUT<br><b>Distrito:</b> Rasuwa</description>
+        <description><![CDATA[<b>Status:</b> WASHED OUT<br><b>Distrito:</b> Rasuwa]]></description>
         <styleUrl>#styleBridgeWashed</styleUrl>
         <Point><coordinates>85.253500,28.067000,1090</coordinates></Point>
       </Placemark>
 
       <Placemark>
         <name>🔴 Trishuli River Bridge Mailung (Dam 2)</name>
-        <description><b>Status:</b> WASHED OUT<br><b>Distrito:</b> Rasuwa</description>
+        <description><![CDATA[<b>Status:</b> WASHED OUT<br><b>Distrito:</b> Rasuwa]]></description>
         <styleUrl>#styleBridgeWashed</styleUrl>
         <Point><coordinates>85.245000,28.052000,1030</coordinates></Point>
       </Placemark>
 
       <Placemark>
         <name>🔴 Boktekoshi River Bridge, Khalte</name>
-        <description><b>Status:</b> WASHED OUT<br><b>Distrito:</b> Nuwakot-Rasuwa</description>
+        <description><![CDATA[<b>Status:</b> WASHED OUT<br><b>Distrito:</b> Nuwakot-Rasuwa]]></description>
         <styleUrl>#styleBridgeWashed</styleUrl>
         <Point><coordinates>85.215000,28.013000,910</coordinates></Point>
       </Placemark>
 
       <Placemark>
         <name>🔴 Betrawati Old Bridge</name>
-        <description><b>Status:</b> WASHED OUT<br><b>Distrito:</b> Nuwakot-Rasuwa</description>
+        <description><![CDATA[<b>Status:</b> WASHED OUT<br><b>Distrito:</b> Nuwakot-Rasuwa]]></description>
         <styleUrl>#styleBridgeWashed</styleUrl>
         <Point><coordinates>85.204500,28.002000,885</coordinates></Point>
       </Placemark>
 
       <Placemark>
         <name>🔴 Betrawati New Bridge</name>
-        <description><b>Status:</b> WASHED OUT<br><b>Distrito:</b> Nuwakot-Rasuwa</description>
+        <description><![CDATA[<b>Status:</b> WASHED OUT<br><b>Distrito:</b> Nuwakot-Rasuwa]]></description>
         <styleUrl>#styleBridgeWashed</styleUrl>
         <Point><coordinates>85.203000,28.001500,885</coordinates></Point>
       </Placemark>
 
       <Placemark>
         <name>🔴 Trisuli River Bridge Tupche</name>
-        <description><b>Status:</b> WASHED OUT<br><b>Distrito:</b> Nuwakot</description>
+        <description><![CDATA[<b>Status:</b> WASHED OUT<br><b>Distrito:</b> Nuwakot]]></description>
         <styleUrl>#styleBridgeWashed</styleUrl>
         <Point><coordinates>85.180000,27.970000,830</coordinates></Point>
       </Placemark>
 
       <Placemark>
         <name>🔴 Trisuli River Bridge, Trisuli Bazzar (Old)</name>
-        <description><b>Status:</b> WASHED OUT<br><b>Distrito:</b> Nuwakot</description>
+        <description><![CDATA[<b>Status:</b> WASHED OUT<br><b>Distrito:</b> Nuwakot]]></description>
         <styleUrl>#styleBridgeWashed</styleUrl>
         <Point><coordinates>85.155000,27.915000,600</coordinates></Point>
       </Placemark>
 
       <Placemark>
         <name>🔴 Trisuli River Bridge, Trisuli Bazzar (New)</name>
-        <description><b>Status:</b> WASHED OUT<br><b>Distrito:</b> Nuwakot</description>
+        <description><![CDATA[<b>Status:</b> WASHED OUT<br><b>Distrito:</b> Nuwakot]]></description>
         <styleUrl>#styleBridgeWashed</styleUrl>
         <Point><coordinates>85.154000,27.914000,600</coordinates></Point>
       </Placemark>
 
       <Placemark>
         <name>🔴 Suspension Bridge at Devighat</name>
-        <description><b>Status:</b> WASHED OUT<br><b>Distrito:</b> Nuwakot</description>
+        <description><![CDATA[<b>Status:</b> WASHED OUT<br><b>Distrito:</b> Nuwakot]]></description>
         <styleUrl>#styleBridgeWashed</styleUrl>
         <Point><coordinates>85.120500,27.875500,520</coordinates></Point>
       </Placemark>
 
       <Placemark>
         <name>🔴 Trisuli River Bridge, Midhill Highway Devighat</name>
-        <description><b>Status:</b> WASHED OUT<br><b>Distrito:</b> Nuwakot</description>
+        <description><![CDATA[<b>Status:</b> WASHED OUT<br><b>Distrito:</b> Nuwakot]]></description>
         <styleUrl>#styleBridgeWashed</styleUrl>
         <Point><coordinates>85.119000,27.874000,520</coordinates></Point>
       </Placemark>
 
       <Placemark>
         <name>🔴 Trishuli River Bridge, Ratmate</name>
-        <description><b>Status:</b> WASHED OUT<br><b>Distrito:</b> Nuwakot</description>
+        <description><![CDATA[<b>Status:</b> WASHED OUT<br><b>Distrito:</b> Nuwakot]]></description>
         <styleUrl>#styleBridgeWashed</styleUrl>
         <Point><coordinates>85.080000,27.845000,450</coordinates></Point>
       </Placemark>
@@ -515,14 +515,14 @@
       <!-- PONTES DANIFICADAS (DAMAGED) -->
       <Placemark>
         <name>🟠 Trisuli River Bridge, Mastar Dhading</name>
-        <description><b>Status:</b> DAMAGED (Danificada)<br><b>Distrito:</b> Dhading</description>
+        <description><![CDATA[<b>Status:</b> DAMAGED (Danificada)<br><b>Distrito:</b> Dhading]]></description>
         <styleUrl>#styleBridgeDamaged</styleUrl>
         <Point><coordinates>84.950000,27.790000,340</coordinates></Point>
       </Placemark>
 
       <Placemark>
         <name>🟠 Kolpu Khola Bridge (Old)</name>
-        <description><b>Status:</b> DAMAGED<br><b>Distrito:</b> Dhading</description>
+        <description><![CDATA[<b>Status:</b> DAMAGED<br><b>Distrito:</b> Dhading]]></description>
         <styleUrl>#styleBridgeDamaged</styleUrl>
         <Point><coordinates>85.020000,27.810000,380</coordinates></Point>
       </Placemark>
@@ -530,14 +530,14 @@
       <!-- PONTES POUPADAS (SPARED) -->
       <Placemark>
         <name>🟢 Trishuli River Bridge, Benighat</name>
-        <description><b>Status:</b> SPARED (Intacta)<br><b>Distrito:</b> Dhading</description>
+        <description><![CDATA[<b>Status:</b> SPARED (Intacta)<br><b>Distrito:</b> Dhading]]></description>
         <styleUrl>#styleBridgeSpared</styleUrl>
         <Point><coordinates>84.820000,27.780000,290</coordinates></Point>
       </Placemark>
 
       <Placemark>
         <name>🟢 Trisuli River Bridge, Fisling</name>
-        <description><b>Status:</b> SPARED<br><b>Distrito:</b> Dhading / Chitwan</description>
+        <description><![CDATA[<b>Status:</b> SPARED<br><b>Distrito:</b> Dhading / Chitwan]]></description>
         <styleUrl>#styleBridgeSpared</styleUrl>
         <Point><coordinates>84.680000,27.760000,240</coordinates></Point>
       </Placemark>
@@ -545,4 +545,3 @@
 
   </Document>
 </kml>
-
