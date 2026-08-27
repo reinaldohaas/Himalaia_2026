@@ -32,8 +32,8 @@
 
     <Style id="floodLine">
       <LineStyle>
-        <color>ff0000ff</color>
-        <width>6</width>
+        <color>e60000ff</color>
+        <width>7</width>
       </LineStyle>
     </Style>
 
@@ -152,27 +152,82 @@
       </Placemark>
     </Folder>
 
-    <!-- Vetor de Trajetoria da Enxurrada de Detritos -->
+    <!-- Vetor de Trajetoria de Alta Precisao dentro do Leito do Rio -->
     <Placemark>
-      <name>Eixo da Enxurrada de Lama e Blocos (45 km)</name>
-      <description>Trilha da onda de detritos descendo da cota 5.200m ate 850m no vale do Trishuli</description>
+      <name>Eixo da Enxurrada de Lama e Blocos (45 km no Leito do Rio)</name>
+      <description><![CDATA[
+        <b>Traçado de Alta Precisão ao longo da Calha Fluvial:</b><br>
+        1. Desprendimento da geleira a 5.200m no Mt. Langtang Lirung.<br>
+        2. Queda e canalização na garganta do Rio Lhende Khola.<br>
+        3. Confluência de fronteira no Rio Bhote Koshi (Forte Rasuwagadhi e Timure).<br>
+        4. Meandros profundos do cânion do Rio Trishuli por Syabrubesi, Mailung e Betrawati até a UHE Trishuli-3A.
+      ]]></description>
       <styleUrl>#floodLine</styleUrl>
       <LineString>
-        <extrude>1</extrude>
+        <extrude>0</extrude>
         <tessellate>1</tessellate>
         <altitudeMode>clampToGround</altitudeMode>
         <coordinates>
+          <!-- 1. Descida da geleira da face norte para a morena do Lhende Khola -->
           85.5194,28.2765,5200
+          85.5080,28.2785,4800
+          85.4960,28.2805,4450
+          85.4850,28.2790,4150
+          <!-- 2. Garganta do Rio Lhende Khola (trecho de fronteira) -->
           85.4800,28.2740,3950
-          85.4200,28.2750,2300
-          85.3810,28.2730,1814
+          85.4680,28.2725,3700
+          85.4540,28.2710,3450
+          85.4410,28.2705,3200
+          85.4280,28.2715,2950
+          85.4150,28.2725,2700
+          85.4020,28.2730,2450
+          85.3910,28.2735,2150
+          <!-- 3. Confluência no Rio Bhote Koshi / Forte de Rasuwagadhi -->
+          85.3815,28.2732,1814
+          85.3800,28.2685,1795
           85.3780,28.2650,1780
+          85.3795,28.2610,1770
+          85.3820,28.2565,1760
           85.3850,28.2520,1750
-          85.3500,28.2000,1580
-          85.3370,28.1610,1460
-          85.3000,28.1130,1300
-          85.2400,28.0400,1050
-          85.1800,27.9700,850
+          85.3835,28.2460,1730
+          <!-- 4. Desfiladeiro do Bhote Koshi para Tatopani e Ghatte Khola -->
+          85.3800,28.2405,1705
+          85.3760,28.2345,1680
+          85.3720,28.2290,1655
+          85.3680,28.2230,1630
+          85.3640,28.2170,1605
+          85.3590,28.2105,1580
+          85.3540,28.2040,1555
+          85.3480,28.1965,1530
+          85.3425,28.1900,1505
+          85.3385,28.1840,1485
+          <!-- 5. Meandros por Syabrubesi e confluência do Langtang Khola -->
+          85.3365,28.1760,1475
+          85.3345,28.1680,1465
+          85.3340,28.1610,1460
+          85.3320,28.1540,1435
+          85.3280,28.1470,1410
+          85.3230,28.1400,1385
+          85.3160,28.1325,1355
+          85.3090,28.1250,1325
+          85.3010,28.1180,1295
+          85.2930,28.1110,1265
+          <!-- 6. Cânion do Rio Trishuli descendo por Rongga, Mailung e Betrawati -->
+          85.2855,28.1035,1235
+          85.2780,28.0950,1200
+          85.2720,28.0870,1165
+          85.2655,28.0785,1130
+          85.2585,28.0700,1095
+          85.2520,28.0610,1060
+          85.2450,28.0520,1030
+          85.2380,28.0425,1000
+          85.2310,28.0330,970
+          85.2240,28.0235,940
+          85.2160,28.0130,910
+          85.2070,28.0020,885
+          85.1980,27.9910,865
+          85.1890,27.9805,845
+          85.1800,27.9700,830
         </coordinates>
       </LineString>
     </Placemark>
