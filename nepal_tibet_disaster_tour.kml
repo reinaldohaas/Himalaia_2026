@@ -320,7 +320,7 @@
 
       <!-- Ponto 2: Barramento no Lhende Khola -->
       <Placemark>
-        <name>2. Barramento & Ruptura Catastrófica (Lhende Khola)</name>
+        <name>2. Barramento e Ruptura Catastrófica (Lhende Khola)</name>
         <styleUrl>#styleDam</styleUrl>
         <LookAt>
           <longitude>85.4800</longitude>
@@ -374,7 +374,7 @@
 
       <!-- Ponto 4: Rasuwagadhi e Timure (Nepal) -->
       <Placemark>
-        <name>4. Forte Rasuwagadhi & Vila de Timure (Nepal)</name>
+        <name>4. Forte Rasuwagadhi e Vila de Timure (Nepal)</name>
         <styleUrl>#stylePort</styleUrl>
         <LookAt>
           <longitude>85.3810</longitude>
@@ -427,7 +427,7 @@
 
       <!-- Ponto 6: Syabrubesi e Cascata do Trishuli -->
       <Placemark>
-        <name>6. Syabrubesi & Cascata Hidrelétrica do Trishuli</name>
+        <name>6. Syabrubesi e Cascata Hidrelétrica do Trishuli</name>
         <styleUrl>#styleHydro</styleUrl>
         <LookAt>
           <longitude>85.2400</longitude>
