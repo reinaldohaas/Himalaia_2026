@@ -1,0 +1,792 @@
+{
+ "type": "FeatureCollection",
+ "name": "hot_flood_npl_bridges_damage_icimod",
+ "crs": {
+  "type": "name",
+  "properties": {
+   "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+  }
+ },
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "s_no": 1,
+    "bridge_name": "Miteri Bridge, Rasuwagadhi",
+    "bridge_type": "Permanent",
+    "district": "Rasuwa",
+    "location": "Rasuwagadhi",
+    "jurisdiction": "DOR",
+    "northing_dms": "28°16'44.20\"N",
+    "easting_dms": "85°22'41.15\"E",
+    "length_m": null,
+    "status": "Washed out",
+    "status_en": "Washed out",
+    "data_source": "ICIMOD"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     85.378097,
+     28.278944
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "s_no": 4,
+    "bridge_name": "Bhotekoshi Bridge at Chilime",
+    "bridge_type": "Permanent",
+    "district": "Rasuwa",
+    "location": "Chilime",
+    "jurisdiction": "Others",
+    "northing_dms": "28°10'58.09\"N",
+    "easting_dms": "85°20'35.81\"E",
+    "length_m": null,
+    "status": "Washed out",
+    "status_en": "Washed out",
+    "data_source": "ICIMOD"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     85.343281,
+     28.182803
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "s_no": 5,
+    "bridge_name": "Chilime Bridge, Chilime Khola",
+    "bridge_type": "Permanent",
+    "district": "Rasuwa",
+    "location": "Chilime",
+    "jurisdiction": "DOR",
+    "northing_dms": "28°10'53.95\"N",
+    "easting_dms": "85°20'31.99\"E",
+    "length_m": null,
+    "status": "Washed out",
+    "status_en": "Washed out",
+    "data_source": "ICIMOD"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     85.342219,
+     28.181653
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "s_no": 7,
+    "bridge_name": "Syafrubesi Bridge",
+    "bridge_type": "Permanent",
+    "district": "Rasuwa",
+    "location": "Syafrubesi",
+    "jurisdiction": "DOR",
+    "northing_dms": "28°9'26.92\"N",
+    "easting_dms": "85°19'56.97\"E",
+    "length_m": null,
+    "status": "Washed Out",
+    "status_en": "Washed out",
+    "data_source": "ICIMOD"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     85.332492,
+     28.157478
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "s_no": 12,
+    "bridge_name": "Trishuli River Bridge Mailung near Trushuli 3A Dam1",
+    "bridge_type": "Permanent",
+    "district": "Rasuwa",
+    "location": "",
+    "jurisdiction": "Others",
+    "northing_dms": "28°3'45.28\"N",
+    "easting_dms": "85°12'22.77\"E",
+    "length_m": null,
+    "status": "Washed Out",
+    "status_en": "Washed out",
+    "data_source": "ICIMOD"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     85.206325,
+     28.062578
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "s_no": 13,
+    "bridge_name": "Trishuli River Bridge Mailung near Trushuli 3A Dam2",
+    "bridge_type": "Permanent",
+    "district": "Rasuwa",
+    "location": "",
+    "jurisdiction": "Others",
+    "northing_dms": "28°3'43.39\"N",
+    "easting_dms": "85°12'24.07\"E",
+    "length_m": null,
+    "status": "Washed Out",
+    "status_en": "Washed out",
+    "data_source": "ICIMOD"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     85.206686,
+     28.062053
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "s_no": 14,
+    "bridge_name": "Boktekoshi River Bridge, Khalte",
+    "bridge_type": "Permanent",
+    "district": "Nuwakot-Rasuwa",
+    "location": "Khalte",
+    "jurisdiction": "DOR",
+    "northing_dms": "27°59'43.23\"N",
+    "easting_dms": "85°11'5.60\"E",
+    "length_m": null,
+    "status": "Washed Out",
+    "status_en": "Washed out",
+    "data_source": "ICIMOD"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     85.184889,
+     27.995342
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "s_no": 15,
+    "bridge_name": "Betrawati Old Bridge",
+    "bridge_type": "Permanent",
+    "district": "Nuwakot-Rasuwa",
+    "location": "Betrawati",
+    "jurisdiction": "DOR",
+    "northing_dms": "27°58'27.62\"N",
+    "easting_dms": "85°11'8.92\"E",
+    "length_m": 70.0,
+    "status": "Washed Out",
+    "status_en": "Washed out",
+    "data_source": "ICIMOD"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     85.185811,
+     27.974339
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "s_no": 16,
+    "bridge_name": "Betrawati New Bridge",
+    "bridge_type": "Permanent",
+    "district": "Nuwakot-Rasuwa",
+    "location": "Betrawati",
+    "jurisdiction": "DOR",
+    "northing_dms": "27°58'27.62\"N",
+    "easting_dms": "85°11'8.92\"E",
+    "length_m": 70.0,
+    "status": "Washed Out",
+    "status_en": "Washed out",
+    "data_source": "ICIMOD"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     85.185811,
+     27.974339
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "s_no": 17,
+    "bridge_name": "Trisuli River Bridge Tupche",
+    "bridge_type": "Permanent",
+    "district": "Nuwakot",
+    "location": "Tupche",
+    "jurisdiction": "DOR",
+    "northing_dms": "27°57'49.60\"N",
+    "easting_dms": "85°10'22.12\"E",
+    "length_m": 100.0,
+    "status": "Washed Out",
+    "status_en": "Washed out",
+    "data_source": "ICIMOD"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     85.172811,
+     27.963778
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "s_no": 18,
+    "bridge_name": "Trisuli River Bridge ,Trisuli Bazzar(Old)",
+    "bridge_type": "Permanent",
+    "district": "Nuwakot",
+    "location": "Trisuli Bazzar",
+    "jurisdiction": "DOR",
+    "northing_dms": "27°55'18.58\"N",
+    "easting_dms": "85°8'58.02\"E",
+    "length_m": 60.0,
+    "status": "Washed Out",
+    "status_en": "Washed out",
+    "data_source": "ICIMOD"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     85.14945,
+     27.921828
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "s_no": 19,
+    "bridge_name": "Trisuli River Bridge ,Trisuli Bazzar(New)",
+    "bridge_type": "Permanent",
+    "district": "Nuwakot",
+    "location": "Trisuli Bazzar",
+    "jurisdiction": "DOR",
+    "northing_dms": "27°55'16.45\"N",
+    "easting_dms": "85°8'52.67\"E",
+    "length_m": 60.0,
+    "status": "Washed Out",
+    "status_en": "Washed out",
+    "data_source": "ICIMOD"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     85.147964,
+     27.921236
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "s_no": 20,
+    "bridge_name": "Trisuli River Bridge ,Simchaur",
+    "bridge_type": "Permanent",
+    "district": "Nuwakot",
+    "location": "Simchaur",
+    "jurisdiction": "DOR",
+    "northing_dms": "27°54'34.15\"N",
+    "easting_dms": "85°8'18.61\"E",
+    "length_m": 100.0,
+    "status": "Washed Out",
+    "status_en": "Washed out",
+    "data_source": "ICIMOD"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     85.138503,
+     27.909486
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "s_no": 21,
+    "bridge_name": "Suspension Bridge at Devighat near Jalshrot tatha Sinchai Division",
+    "bridge_type": "Permanent",
+    "district": "Nuwakot",
+    "location": "Devighat",
+    "jurisdiction": "Others",
+    "northing_dms": "27°53'32.43\"N",
+    "easting_dms": "85°8'11.40\"E",
+    "length_m": null,
+    "status": "Washed Out",
+    "status_en": "Washed out",
+    "data_source": "ICIMOD"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     85.1365,
+     27.892342
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "s_no": 22,
+    "bridge_name": "Trisuli River Bridge, Near Devighat, Midhill Highway",
+    "bridge_type": "Permanent",
+    "district": "Nuwakot",
+    "location": "Near DeviGhat",
+    "jurisdiction": "DOR",
+    "northing_dms": "27°52'13.22\"N",
+    "easting_dms": "85°6'58.41\"E",
+    "length_m": null,
+    "status": "Washed Out",
+    "status_en": "Washed out",
+    "data_source": "ICIMOD"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     85.116225,
+     27.870339
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "s_no": 23,
+    "bridge_name": "Tandi Khola Bridge, Devighat (Old)",
+    "bridge_type": "Permanent",
+    "district": "Nuwakot",
+    "location": "Devighat",
+    "jurisdiction": "DOR",
+    "northing_dms": "27°51'30.87\"N",
+    "easting_dms": "85°6'32.67\"E",
+    "length_m": 55.0,
+    "status": "Washed Out",
+    "status_en": "Washed out",
+    "data_source": "ICIMOD"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     85.109075,
+     27.858575
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "s_no": 24,
+    "bridge_name": "Tandi Khola Bridge, Devighat (New)",
+    "bridge_type": "Permanent",
+    "district": "Nuwakot",
+    "location": "Devighat",
+    "jurisdiction": "DOR",
+    "northing_dms": "27°51'30.87\"N",
+    "easting_dms": "85°6'32.67\"E",
+    "length_m": 55.0,
+    "status": "Washed Out",
+    "status_en": "Washed out",
+    "data_source": "ICIMOD"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     85.109075,
+     27.858575
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "s_no": 25,
+    "bridge_name": "Trisuli River Bridge,Khadgabhanjyang Srikhali Sadak",
+    "bridge_type": "Permanent",
+    "district": "Nuwakot",
+    "location": "Srikhali",
+    "jurisdiction": "DOR",
+    "northing_dms": "27°51'33.54\"N",
+    "easting_dms": "85°5'55.35\"E",
+    "length_m": 180.0,
+    "status": "Washed Out",
+    "status_en": "Washed out",
+    "data_source": "ICIMOD"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     85.098708,
+     27.859317
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "s_no": 26,
+    "bridge_name": "Trishuli River Bridge, Buddhasinghghat",
+    "bridge_type": "Permanent",
+    "district": "Nuwakot",
+    "location": "Buddhasinghghat",
+    "jurisdiction": "DOR",
+    "northing_dms": "27°51'34.13\"N",
+    "easting_dms": "85°3'42.97\"E",
+    "length_m": 180.0,
+    "status": "Washed Out",
+    "status_en": "Washed out",
+    "data_source": "ICIMOD"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     85.061936,
+     27.859481
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "s_no": 27,
+    "bridge_name": "Trishuli River Bridge, Ratmate",
+    "bridge_type": "Permanent",
+    "district": "Nuwakot",
+    "location": "Ratmate",
+    "jurisdiction": "DOR",
+    "northing_dms": "27°51'21.95\"N",
+    "easting_dms": "85°2'28.28\"E",
+    "length_m": 150.0,
+    "status": "Washed Out",
+    "status_en": "Washed out",
+    "data_source": "ICIMOD"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     85.041189,
+     27.856097
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "s_no": 28,
+    "bridge_name": "Trishuli River Bridge, Keurini, Fosretar",
+    "bridge_type": "Permanent",
+    "district": "Nuwakot",
+    "location": "Keurini, Fosretar",
+    "jurisdiction": "DOR",
+    "northing_dms": "27°49'57.09\"N",
+    "easting_dms": "85°1'20.40\"E",
+    "length_m": null,
+    "status": "Washed Out",
+    "status_en": "Washed out",
+    "data_source": "ICIMOD"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     85.022333,
+     27.832525
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "s_no": 29,
+    "bridge_name": "Trishuli River Bridge, BhimDhunga Lami Danda Sadak",
+    "bridge_type": "Permanent",
+    "district": "Dhading",
+    "location": "Near Galchhi",
+    "jurisdiction": "DOR",
+    "northing_dms": "27°48'9.68\"N",
+    "easting_dms": "85°0'9.98\"E",
+    "length_m": 150.0,
+    "status": "जोगिएको",
+    "status_en": "Spared",
+    "data_source": "ICIMOD"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     85.002772,
+     27.802689
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "s_no": 30,
+    "bridge_name": "Trishuli River Bridge, Baireni Syaltar Sadak",
+    "bridge_type": "Permanent",
+    "district": "Dhading",
+    "location": "Below Galchhi",
+    "jurisdiction": "DOR",
+    "northing_dms": "27°48'15.42\"N",
+    "easting_dms": "84°59'25.76\"E",
+    "length_m": 150.0,
+    "status": "Washed Out",
+    "status_en": "Washed out",
+    "data_source": "ICIMOD"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     84.990489,
+     27.804283
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "s_no": 31,
+    "bridge_name": "Trisuli River Bridge, Mastar Dhading",
+    "bridge_type": "Permanent",
+    "district": "Dhading",
+    "location": "Near Hamlet Resort",
+    "jurisdiction": "DOR",
+    "northing_dms": "27°48'42.69\"N",
+    "easting_dms": "84°57'54.95\"E",
+    "length_m": 140.0,
+    "status": "क्षतिग्रस्त",
+    "status_en": "Damaged",
+    "data_source": "ICIMOD"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     84.965264,
+     27.811858
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "s_no": 32,
+    "bridge_name": "Trisuli River Bridge, JareBagaicha",
+    "bridge_type": "Permanent",
+    "district": "Dhading",
+    "location": "JareBagaicha",
+    "jurisdiction": "DOR",
+    "northing_dms": "27°47'52.54\"N",
+    "easting_dms": "84°55'27.41\"E",
+    "length_m": 120.0,
+    "status": "Washed Out",
+    "status_en": "Washed out",
+    "data_source": "ICIMOD"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     84.924281,
+     27.797928
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "s_no": 33,
+    "bridge_name": "Trisuli River Bridge, Ghatbesi",
+    "bridge_type": "Permanent",
+    "district": "Dhading",
+    "location": "Ghatbesi",
+    "jurisdiction": "DOR",
+    "northing_dms": "27°48'24.79\"N",
+    "easting_dms": "84°54'6.77\"E",
+    "length_m": 200.0,
+    "status": "Washed Out",
+    "status_en": "Washed out",
+    "data_source": "ICIMOD"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     84.901881,
+     27.806886
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "s_no": 34,
+    "bridge_name": "Kolpu Khola Bridge (Old)",
+    "bridge_type": "Permanent",
+    "district": "Dhading",
+    "location": "",
+    "jurisdiction": "DOR",
+    "northing_dms": "27°48'36.40\"N",
+    "easting_dms": "85°0'58.36\"E",
+    "length_m": 40.0,
+    "status": "क्षतिग्रस्त",
+    "status_en": "Damaged",
+    "data_source": "ICIMOD"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     85.016211,
+     27.810111
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "s_no": 35,
+    "bridge_name": "Kolpu Khola Bridge (New)",
+    "bridge_type": "Permanent",
+    "district": "Dhading",
+    "location": "",
+    "jurisdiction": "DOR",
+    "northing_dms": "27°48'36.40\"N",
+    "easting_dms": "85°0'58.36\"E",
+    "length_m": 40.0,
+    "status": "क्षतिग्रस्त",
+    "status_en": "Damaged",
+    "data_source": "ICIMOD"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     85.016211,
+     27.810111
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "s_no": 36,
+    "bridge_name": "Trishuli River Bridge, Furke Khola",
+    "bridge_type": "Permanent",
+    "district": "Dhading",
+    "location": "Malelkhu",
+    "jurisdiction": "DOR",
+    "northing_dms": "27°48'9.16\"N",
+    "easting_dms": "84°50'38.67\"E",
+    "length_m": 120.0,
+    "status": "Washed Out",
+    "status_en": "Washed out",
+    "data_source": "ICIMOD"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     84.844075,
+     27.802544
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "s_no": 37,
+    "bridge_name": "Trishuli River Bridge, Benighat",
+    "bridge_type": "Permanent",
+    "district": "Dhading",
+    "location": "Benighat",
+    "jurisdiction": "DOR",
+    "northing_dms": "27°48'38.12\"N",
+    "easting_dms": "84°46'37.49\"E",
+    "length_m": null,
+    "status": "जोगिएको",
+    "status_en": "Spared",
+    "data_source": "ICIMOD"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     84.777081,
+     27.810589
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "s_no": 38,
+    "bridge_name": "Trisuli River Bridge, Fisling Gorkha",
+    "bridge_type": "Permanent",
+    "district": "Dhading",
+    "location": "Fishling",
+    "jurisdiction": "DOR",
+    "northing_dms": "27°50'40.66\"N",
+    "easting_dms": "84°39'43.43\"E",
+    "length_m": 145.0,
+    "status": "जोगिएको",
+    "status_en": "Spared",
+    "data_source": "ICIMOD"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     84.662064,
+     27.844628
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "s_no": 40,
+    "bridge_name": "Mugling Arch Bridge",
+    "bridge_type": "Permanent",
+    "district": "Chitwan",
+    "location": "Mugling",
+    "jurisdiction": "DOR",
+    "northing_dms": null,
+    "easting_dms": null,
+    "length_m": null,
+    "status": "जोगिएको",
+    "status_en": "Spared",
+    "data_source": "ICIMOD"
+   },
+   "geometry": null
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "s_no": 41,
+    "bridge_name": "Mugling Old Suspension Bridge",
+    "bridge_type": "Permanent",
+    "district": "Chitwan",
+    "location": "Mugling",
+    "jurisdiction": "DOR",
+    "northing_dms": null,
+    "easting_dms": null,
+    "length_m": null,
+    "status": "जोगिएको",
+    "status_en": "Spared",
+    "data_source": "ICIMOD"
+   },
+   "geometry": null
+  }
+ ]
+}
