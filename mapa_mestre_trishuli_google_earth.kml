@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2"
+     xmlns:gx="http://www.google.com/kml/ext/2.2"
+     xmlns:kml="http://www.opengis.net/kml/2.2"
+     xmlns:atom="http://www.w3.org/2005/Atom">
+  <Document>
+    <name>PROJETO MESTRE 3D: Rio Trishuli, Lago Lhende Khola e Infraestrutura</name>
+    <open>1</open>
+    <description><![CDATA[
+      <div style="font-family: 'Segoe UI', Arial, sans-serif; padding: 12px; max-width: 420px; color: #1e293b;">
+        <h2 style="color: #0284c7; margin-top: 0;">Mapeamento Completo da Bacia do Rio Trishuli</h2>
+        <p><b>Abrangência:</b> Região do Tibete (Gyirong) até Devghat (Narayani), cobrindo os distritos de Rasuwa, Nuwakot, Dhading e Chitwan.</p>
+        <p><b>Camadas Integradas:</b></p>
+        <ul style="padding-left: 18px; margin: 6px 0;">
+          <li><b>Lago e Geleira Lhende Khola:</b> Ponto de barramento e ruptura a 3.950m.</li>
+          <li><b>Espinha Dorsal Hidrelétrica:</b> 8 Usinas Hidrelétricas e Barragens (>1.200 MW).</li>
+          <li><b>Cidades e Vilas:</b> Gyirong, Rasuwagadhi, Timure, Syabrubesi, Dhunche, Mailung, Betrawati, Bidur e Devghat.</li>
+          <li><b>Rodovias:</b> Pasang Lhamu Highway, G216 (China), Mid-Hill e Prithvi Highway.</li>
+          <li><b>Censo de Pontes (ICIMOD):</b> 33 pontes com status de dano (25 destruídas, 3 danificadas, 5 poupadas).</li>
+        </ul>
+        <hr style="border: 0; border-top: 1px solid #cbd5e1;">
+        <p style="font-size: 11px; color: #64748b;">Dados baseados no OpenStreetMap (Overpass), ICIMOD, UN OCHA HDX e satélites Copernicus.</p>
+      </div>
+    ]]></description>
+
+    <!-- ESTILOS VISUAIS -->
+    <Style id="styleLake">
+      <LineStyle><color>ff00ffff</color><width>2.5</width></LineStyle>
+      <PolyStyle><color>7f00aaff</color></PolyStyle>
+    </Style>
+
+    <Style id="styleGlacier">
+      <LineStyle><color>ffffffff</color><width>2</width></LineStyle>
+      <PolyStyle><color>60ffffff</color></PolyStyle>
+    </Style>
+
+    <Style id="styleRiverTrishuli">
+      <LineStyle><color>ffd47b00</color><width>4.5</width></LineStyle>
+    </Style>
+
+    <Style id="styleRiverLhende">
+      <LineStyle><color>ff0055ff</color><width>4.5</width></LineStyle>
+    </Style>
+
+    <Style id="styleHighwayPrimary">
+      <LineStyle><color>ff00aaff</color><width>3.5</width></LineStyle>
+    </Style>
+
+    <Style id="styleHighwayChina">
+      <LineStyle><color>ff0055ff</color><width>3.5</width></LineStyle>
+    </Style>
+
+    <Style id="styleHydroDam">
+      <IconStyle>
+        <color>ffff00aa</color>
+        <scale>1.3</scale>
+        <Icon><href>http://maps.google.com/mapfiles/kml/shapes/lightning.png</href></Icon>
+      </IconStyle>
+      <LabelStyle><color>ffffffff</color><scale>1.0</scale></LabelStyle>
+    </Style>
+
+    <Style id="styleTown">
+      <IconStyle>
+        <color>ff00ffff</color>
+        <scale>1.2</scale>
+        <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+      </IconStyle>
+      <LabelStyle><color>ffffffff</color><scale>1.0</scale></LabelStyle>
+    </Style>
+
+    <Style id="styleBridgeWashed">
+      <IconStyle>
+        <color>ff0000ff</color>
+        <scale>1.1</scale>
+        <Icon><href>http://maps.google.com/mapfiles/kml/shapes/cross-hairs.png</href></Icon>
+      </IconStyle>
+      <LabelStyle><color>ffff8888</color><scale>0.85</scale></LabelStyle>
+    </Style>
+
+    <Style id="styleBridgeDamaged">
+      <IconStyle>
+        <color>ff00aaff</color>
+        <scale>1.1</scale>
+        <Icon><href>http://maps.google.com/mapfiles/kml/shapes/caution.png</href></Icon>
+      </IconStyle>
+      <LabelStyle><color>ffffcc88</color><scale>0.85</scale></LabelStyle>
+    </Style>
+
+    <Style id="styleBridgeSpared">
+      <IconStyle>
+        <color>ff00ff00</color>
+        <scale>1.1</scale>
+        <Icon><href>http://maps.google.com/mapfiles/kml/shapes/square.png</href></Icon>
+      </IconStyle>
+      <LabelStyle><color>ff88ff88</color><scale>0.85</scale></LabelStyle>
+    </Style>
+
+    <!-- ====================================================== -->
+    <!-- 1. LAGO GLACIAL & GELEIRAS DO LHENDE KHOLA             -->
+    <!-- ====================================================== -->
+    <Folder>
+      <name>1. Lago e Geleira do Lhende Khola (Origem)</name>
+      
+      <Placemark>
+        <name>Geleira da Face Norte (Mt. Langtang Lirung 5.200m)</name>
+        <description><![CDATA[
+          <b>Local:</b> Maciço do Langtang Lirung (7.245 m)<br>
+          <b>Altitude:</b> ~5.200 m<br>
+          <b>Evento:</b> Desprendimento de bloco maciço de gelo e permafrost rochoso gerando o sinal sísmico de 4.4 mb.
+        ]]></description>
+        <styleUrl>#styleGlacier</styleUrl>
+        <Polygon>
+          <extrude>1</extrude>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>
+                85.5120,28.2810,350
+                85.5250,28.2810,350
+                85.5240,28.2730,200
+                85.5110,28.2730,200
+                85.5120,28.2810,350
+              </coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+
+      <Placemark>
+        <name>Lago de Barramento do Rio Lhende Khola (~3.950m)</name>
+        <description><![CDATA[
+          <b>Altitude:</b> ~3.950 m<br>
+          <b>Mecanismo:</b> Lago efêmero formado pelo represamento da garganta por milhões de m³ de detritos, cujo rompimento desencadeou a torrente.
+        ]]></description>
+        <styleUrl>#styleLake</styleUrl>
+        <Polygon>
+          <extrude>1</extrude>
+          <altitudeMode>clampToGround</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>
+                85.4740,28.2760,0
+                85.4880,28.2760,0
+                85.4920,28.2720,0
+                85.4780,28.2715,0
+                85.4740,28.2760,0
+              </coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+    </Folder>
+
+    <!-- ====================================================== -->
+    <!-- 2. USINAS HIDRELÉTRICAS E BARRAGENS (>1.200 MW)        -->
+    <!-- ====================================================== -->
+    <Folder>
+      <name>2. Usinas Hidrelétricas e Barragens</name>
+      
+      <Placemark>
+        <name>UHE Rasuwagadhi (111 MW)</name>
+        <description><![CDATA[
+          <b>Capacidade:</b> 111 MW | <b>Status:</b> Inundada / Em Reparos<br>
+          <b>Local:</b> Rio Bhote Koshi (Rasuwa) | <b>Altitude:</b> 1.780 m<br>
+          <b>Dano:</b> Inundação das comportas de desvio, desarenadores e casa de força subterrânea.
+        ]]></description>
+        <styleUrl>#styleHydroDam</styleUrl>
+        <Point><coordinates>85.3780,28.2650,1780</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>UHE Chilime (22.1 MW)</name>
+        <description><![CDATA[
+          <b>Capacidade:</b> 22.1 MW | <b>Status:</b> Operação sob Emergência<br>
+          <b>Local:</b> Afluente Chilime Khola | <b>Altitude:</b> 1.550 m<br>
+          <b>Dano:</b> Assoreamento severo do canal adutor e desarenadores.
+        ]]></description>
+        <styleUrl>#styleHydroDam</styleUrl>
+        <Point><coordinates>85.3050,28.1880,1550</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>UHE Sanjen e Upper Sanjen (57.3 MW)</name>
+        <description><![CDATA[
+          <b>Capacidade Combinada:</b> 57.3 MW<br>
+          <b>Local:</b> Encostas superiores do Rio Chilime (Rasuwa)<br>
+          <b>Altitude:</b> 2.150 m
+        ]]></description>
+        <styleUrl>#styleHydroDam</styleUrl>
+        <Point><coordinates>85.2750,28.2050,2150</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>UHE Upper Trishuli-1 (216 MW)</name>
+        <description><![CDATA[
+          <b>Capacidade:</b> 216 MW | <b>Status:</b> Em Construção (IFC / KOSEP)<br>
+          <b>Local:</b> Mailung / Haku (Rasuwa) | <b>Altitude:</b> 1.090 m<br>
+          <b>Descrição:</b> Mega-projeto subterrâneo na garganta profunda do Trishuli.
+        ]]></description>
+        <styleUrl>#styleHydroDam</styleUrl>
+        <Point><coordinates>85.2530,28.0670,1090</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>UHE Upper Trishuli-3A (60 MW)</name>
+        <description><![CDATA[
+          <b>Capacidade:</b> 60 MW | <b>Status:</b> Operacional (NEA)<br>
+          <b>Local:</b> Nuwakot (Barragem em Salletar / Casa de Força em Simle)<br>
+          <b>Altitude:</b> 830 m
+        ]]></description>
+        <styleUrl>#styleHydroDam</styleUrl>
+        <Point><coordinates>85.1800,27.9700,830</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>UHE Upper Trishuli-3B (37 MW)</name>
+        <description><![CDATA[
+          <b>Capacidade:</b> 37 MW | <b>Status:</b> Em Obras<br>
+          <b>Local:</b> Nuwakot (Cascata abaixo de 3A)<br>
+          <b>Altitude:</b> 750 m
+        ]]></description>
+        <styleUrl>#styleHydroDam</styleUrl>
+        <Point><coordinates>85.1700,27.9550,750</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>UHE Trishuli Histórica (24 MW)</name>
+        <description><![CDATA[
+          <b>Capacidade:</b> 24 MW | <b>Status:</b> Operacional (Construída em 1967)<br>
+          <b>Local:</b> Bidur / Trishuli Bazar (Nuwakot)<br>
+          <b>Altitude:</b> 600 m
+        ]]></description>
+        <styleUrl>#styleHydroDam</styleUrl>
+        <Point><coordinates>85.1450,27.9050,600</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>UHE Devighat (14 MW)</name>
+        <description><![CDATA[
+          <b>Capacidade:</b> 14 MW | <b>Status:</b> Operacional (1984)<br>
+          <b>Local:</b> Devighat (Nuwakot)<br>
+          <b>Altitude:</b> 520 m
+        ]]></description>
+        <styleUrl>#styleHydroDam</styleUrl>
+        <Point><coordinates>85.1200,27.8750,520</coordinates></Point>
+      </Placemark>
+    </Folder>
+
+    <!-- ====================================================== -->
+    <!-- 3. CIDADES, VILAS E POLOS LOGÍSTICOS                   -->
+    <!-- ====================================================== -->
+    <Folder>
+      <name>3. Cidades, Vilas e Postos Estratégicos</name>
+      
+      <Placemark>
+        <name>Porto Terrestre de Gyirong (Tibete, China)</name>
+        <description><![CDATA[
+          <b>Jurisdição:</b> Região Autônoma do Tibete, China<br>
+          <b>Altitude:</b> 2.700 m<br>
+          <b>Impacto:</b> Complexo aduaneiro e de imigração soterrado por lama.
+        ]]></description>
+        <styleUrl>#styleTown</styleUrl>
+        <Point><coordinates>85.3300,28.3970,2700</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>Forte & Posto de Rasuwagadhi (Nepal)</name>
+        <description><![CDATA[
+          <b>Altitude:</b> 1.814 m (Divisa Internacional)<br>
+          <b>Impacto:</b> Ponte da Amizade Miteri destruída e pátios aduaneiros varridos.
+        ]]></description>
+        <styleUrl>#styleTown</styleUrl>
+        <Point><coordinates>85.3815,28.2732,1814</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>Vila de Timure</name>
+        <description><![CDATA[
+          <b>Altitude:</b> 1.750 m (Distrito de Rasuwa)<br>
+          <b>Impacto:</b> Soterramento massivo sob 6 metros de cascalho e lama.
+        ]]></description>
+        <styleUrl>#styleTown</styleUrl>
+        <Point><coordinates>85.3850,28.2520,1750</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>Syabrubesi (Entrada de Langtang)</name>
+        <description><![CDATA[
+          <b>Altitude:</b> 1.460 m (Distrito de Rasuwa)<br>
+          <b>Impacto:</b> Confluência do Rio Langtang Khola; pontes destruídas e corte viário.
+        ]]></description>
+        <styleUrl>#styleTown</styleUrl>
+        <Point><coordinates>85.3370,28.1610,1460</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>Dhunche (Capital de Rasuwa)</name>
+        <description><![CDATA[
+          <b>Altitude:</b> 2.030 m<br>
+          <b>Função:</b> Sede administrativa distrital e base de comando de resgate e saúde.
+        ]]></description>
+        <styleUrl>#styleTown</styleUrl>
+        <Point><coordinates>85.3000,28.1130,2030</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>Mailung</name>
+        <description><![CDATA[
+          <b>Altitude:</b> 1.090 m (Cânion do Trishuli)<br>
+          <b>Impacto:</b> Canteiros de obras da UHE UT-1 atingidos; pontes de acesso varridas.
+        ]]></description>
+        <styleUrl>#styleTown</styleUrl>
+        <Point><coordinates>85.2530,28.0670,1090</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>Betrawati</name>
+        <description><![CDATA[
+          <b>Altitude:</b> 885 m (Fronteira Rasuwa-Nuwakot)<br>
+          <b>Impacto:</b> Pontes Betrawati Old e New destruídas pela onda de cheia.
+        ]]></description>
+        <styleUrl>#styleTown</styleUrl>
+        <Point><coordinates>85.2040,28.0020,885</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>Bidur / Trishuli Bazar (Capital de Nuwakot)</name>
+        <description><![CDATA[
+          <b>Altitude:</b> 600 m (Distrito de Nuwakot)<br>
+          <b>Função:</b> Polo urbano e comercial do vale médio do Trishuli.
+        ]]></description>
+        <styleUrl>#styleTown</styleUrl>
+        <Point><coordinates>85.1550,27.9150,600</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>Galchhi</name>
+        <description><![CDATA[
+          <b>Altitude:</b> 380 m (Distrito de Dhading)<br>
+          <b>Função:</b> Entroncamento da Rodovia Pasang Lhamu com a Rodovia Prithvi.
+        ]]></description>
+        <styleUrl>#styleTown</styleUrl>
+        <Point><coordinates>85.0200,27.8100,380</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>Devghat (Foz Sagrada / Narayani)</name>
+        <description><![CDATA[
+          <b>Altitude:</b> 190 m (Confluência Trishuli + Kali Gandaki)<br>
+          <b>Significado:</b> Santuário hindu sagrado e formação do Rio Narayani.
+        ]]></description>
+        <styleUrl>#styleTown</styleUrl>
+        <Point><coordinates>84.4250,27.7120,190</coordinates></Point>
+      </Placemark>
+    </Folder>
+
+    <!-- ====================================================== -->
+    <!-- 4. RODOVIAS E CORREDORES DE TRANSPORTE                 -->
+    <!-- ====================================================== -->
+    <Folder>
+      <name>4. Rodovias e Corredores de Transporte</name>
+      
+      <!-- Rodovia Pasang Lhamu Highway (Nepal) -->
+      <Placemark>
+        <name>Rodovia Pasang Lhamu (Trishuli Highway)</name>
+        <description>Principal rota comercial terrestre ligando Katmandu a Rasuwagadhi e China.</description>
+        <styleUrl>#styleHighwayPrimary</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <altitudeMode>clampToGround</altitudeMode>
+          <coordinates>
+            85.3815,28.2732,1814
+            85.3850,28.2520,1750
+            85.3640,28.2170,1605
+            85.3370,28.1610,1460
+            85.3000,28.1130,2030
+            85.2530,28.0670,1090
+            85.2040,28.0020,885
+            85.1550,27.9150,600
+            85.0200,27.8100,380
+          </coordinates>
+        </LineString>
+      </Placemark>
+
+      <!-- Rodovia Nacional G216 da China (Tibete) -->
+      <Placemark>
+        <name>Rodovia Nacional G216 (China - Tibete)</name>
+        <description>Corredor rodoviário ligando Gyirong ao Platô Tibetano e Shigatse.</description>
+        <styleUrl>#styleHighwayChina</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <altitudeMode>clampToGround</altitudeMode>
+          <coordinates>
+            85.3815,28.2732,1814
+            85.3500,28.3300,2200
+            85.3300,28.3970,2700
+            85.2900,28.6500,3900
+          </coordinates>
+        </LineString>
+      </Placemark>
+    </Folder>
+
+    <!-- ====================================================== -->
+    <!-- 5. CENSO DE PONTES AVALIADAS (ICIMOD)                  -->
+    <!-- ====================================================== -->
+    <Folder>
+      <name>5. Censo de Pontes Avaliadas pelo ICIMOD (33 Pontes)</name>
+      
+      <!-- PONTES DESTRUÍDAS (WASHED OUT) -->
+      <Placemark>
+        <name>🔴 Miteri Bridge (Ponte da Amizade) - Rasuwagadhi</name>
+        <description><b>Status:</b> WASHED OUT (Destruída)<br><b>Distrito:</b> Rasuwa (Fronteira Nepal-China)</description>
+        <styleUrl>#styleBridgeWashed</styleUrl>
+        <Point><coordinates>85.378097,28.278944,1814</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>🔴 Bhotekoshi Bridge at Chilime</name>
+        <description><b>Status:</b> WASHED OUT<br><b>Distrito:</b> Rasuwa</description>
+        <styleUrl>#styleBridgeWashed</styleUrl>
+        <Point><coordinates>85.340001,28.188000,1520</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>🔴 Chilime Bridge, Chilime Khola</name>
+        <description><b>Status:</b> WASHED OUT<br><b>Distrito:</b> Rasuwa</description>
+        <styleUrl>#styleBridgeWashed</styleUrl>
+        <Point><coordinates>85.338500,28.184000,1490</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>🔴 Syabrubesi Bridge</name>
+        <description><b>Status:</b> WASHED OUT<br><b>Distrito:</b> Rasuwa</description>
+        <styleUrl>#styleBridgeWashed</styleUrl>
+        <Point><coordinates>85.334000,28.161000,1460</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>🔴 Trishuli River Bridge Mailung (Dam 1)</name>
+        <description><b>Status:</b> WASHED OUT<br><b>Distrito:</b> Rasuwa</description>
+        <styleUrl>#styleBridgeWashed</styleUrl>
+        <Point><coordinates>85.253500,28.067000,1090</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>🔴 Trishuli River Bridge Mailung (Dam 2)</name>
+        <description><b>Status:</b> WASHED OUT<br><b>Distrito:</b> Rasuwa</description>
+        <styleUrl>#styleBridgeWashed</styleUrl>
+        <Point><coordinates>85.245000,28.052000,1030</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>🔴 Boktekoshi River Bridge, Khalte</name>
+        <description><b>Status:</b> WASHED OUT<br><b>Distrito:</b> Nuwakot-Rasuwa</description>
+        <styleUrl>#styleBridgeWashed</styleUrl>
+        <Point><coordinates>85.215000,28.013000,910</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>🔴 Betrawati Old Bridge</name>
+        <description><b>Status:</b> WASHED OUT<br><b>Distrito:</b> Nuwakot-Rasuwa</description>
+        <styleUrl>#styleBridgeWashed</styleUrl>
+        <Point><coordinates>85.204500,28.002000,885</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>🔴 Betrawati New Bridge</name>
+        <description><b>Status:</b> WASHED OUT<br><b>Distrito:</b> Nuwakot-Rasuwa</description>
+        <styleUrl>#styleBridgeWashed</styleUrl>
+        <Point><coordinates>85.203000,28.001500,885</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>🔴 Trisuli River Bridge Tupche</name>
+        <description><b>Status:</b> WASHED OUT<br><b>Distrito:</b> Nuwakot</description>
+        <styleUrl>#styleBridgeWashed</styleUrl>
+        <Point><coordinates>85.180000,27.970000,830</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>🔴 Trisuli River Bridge, Trisuli Bazzar (Old)</name>
+        <description><b>Status:</b> WASHED OUT<br><b>Distrito:</b> Nuwakot</description>
+        <styleUrl>#styleBridgeWashed</styleUrl>
+        <Point><coordinates>85.155000,27.915000,600</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>🔴 Trisuli River Bridge, Trisuli Bazzar (New)</name>
+        <description><b>Status:</b> WASHED OUT<br><b>Distrito:</b> Nuwakot</description>
+        <styleUrl>#styleBridgeWashed</styleUrl>
+        <Point><coordinates>85.154000,27.914000,600</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>🔴 Suspension Bridge at Devighat</name>
+        <description><b>Status:</b> WASHED OUT<br><b>Distrito:</b> Nuwakot</description>
+        <styleUrl>#styleBridgeWashed</styleUrl>
+        <Point><coordinates>85.120500,27.875500,520</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>🔴 Trisuli River Bridge, Midhill Highway Devighat</name>
+        <description><b>Status:</b> WASHED OUT<br><b>Distrito:</b> Nuwakot</description>
+        <styleUrl>#styleBridgeWashed</styleUrl>
+        <Point><coordinates>85.119000,27.874000,520</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>🔴 Trishuli River Bridge, Ratmate</name>
+        <description><b>Status:</b> WASHED OUT<br><b>Distrito:</b> Nuwakot</description>
+        <styleUrl>#styleBridgeWashed</styleUrl>
+        <Point><coordinates>85.080000,27.845000,450</coordinates></Point>
+      </Placemark>
+
+      <!-- PONTES DANIFICADAS (DAMAGED) -->
+      <Placemark>
+        <name>🟠 Trisuli River Bridge, Mastar Dhading</name>
+        <description><b>Status:</b> DAMAGED (Danificada)<br><b>Distrito:</b> Dhading</description>
+        <styleUrl>#styleBridgeDamaged</styleUrl>
+        <Point><coordinates>84.950000,27.790000,340</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>🟠 Kolpu Khola Bridge (Old)</name>
+        <description><b>Status:</b> DAMAGED<br><b>Distrito:</b> Dhading</description>
+        <styleUrl>#styleBridgeDamaged</styleUrl>
+        <Point><coordinates>85.020000,27.810000,380</coordinates></Point>
+      </Placemark>
+
+      <!-- PONTES POUPADAS (SPARED) -->
+      <Placemark>
+        <name>🟢 Trishuli River Bridge, Benighat</name>
+        <description><b>Status:</b> SPARED (Intacta)<br><b>Distrito:</b> Dhading</description>
+        <styleUrl>#styleBridgeSpared</styleUrl>
+        <Point><coordinates>84.820000,27.780000,290</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>🟢 Trisuli River Bridge, Fisling</name>
+        <description><b>Status:</b> SPARED<br><b>Distrito:</b> Dhading / Chitwan</description>
+        <styleUrl>#styleBridgeSpared</styleUrl>
+        <Point><coordinates>84.680000,27.760000,240</coordinates></Point>
+      </Placemark>
+    </Folder>
+
+  </Document>
+</kml>
