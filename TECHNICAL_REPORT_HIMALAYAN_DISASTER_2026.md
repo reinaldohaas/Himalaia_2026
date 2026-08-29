@@ -128,7 +128,7 @@ python scripts/recalculate_jz_with_china_network.py
 # 3. Launch the local 4D Interactive Spatiotemporal Web Server:
 python server_miniforge.py
 ```
-Open your browser at: `http://localhost:8000/viewer_4d.html`
+Open your browser at: `https://reinaldohaas.github.io/Himalaia_2026/viewer_4d.html`
 
 ---
 

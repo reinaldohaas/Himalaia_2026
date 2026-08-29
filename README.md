@@ -14,14 +14,16 @@ An open-source scientific research project investigating the cascading disaster 
 
 ---
 
-## 🌐 Interactive 4D Web Visualizers
+## 🌐 Live Interactive Web Visualizers (GitHub Pages)
 
-When running the local server (`python server_miniforge.py` or `node server.js`):
-* **4D Spatiotemporal Web Viewer:** [`http://localhost:8000/viewer_4d.html`](http://localhost:8000/viewer_4d.html)  
+Access all interactive apps directly online via **GitHub Pages** (no installation required):
+* **🚀 4D Spatiotemporal Master Viewer:** [https://reinaldohaas.github.io/Himalaia_2026/viewer_4d.html](https://reinaldohaas.github.io/Himalaia_2026/viewer_4d.html)  
   *Features real-time timeline playback, multi-axis Chart.js series (Jz, Lightning, Rain, X-Ray), animated lake swelling/breach, 14-station magnetometer pulses, and downstream mudflow routing.*
-* **Master Infographic:** [`http://localhost:8000/index.html`](http://localhost:8000/index.html)
-* **3D Earth & SAR Viewer:** [`http://localhost:8000/earth_3d_satellite_radar_viewer.html`](http://localhost:8000/earth_3d_satellite_radar_viewer.html)
-* **GIS Infrastructure Damage Map:** [`http://localhost:8000/nepal_tibet_disaster_map.html`](http://localhost:8000/nepal_tibet_disaster_map.html)
+* **📊 Master Infographic & Data Portal:** [https://reinaldohaas.github.io/Himalaia_2026/](https://reinaldohaas.github.io/Himalaia_2026/) *(or index.html)*
+* **🛰️ 3D Earth & Sentinel-1 SAR Viewer:** [https://reinaldohaas.github.io/Himalaia_2026/earth_3d_satellite_radar_viewer.html](https://reinaldohaas.github.io/Himalaia_2026/earth_3d_satellite_radar_viewer.html)
+* **🗺️ GIS Infrastructure Damage Map (33 Bridges):** [https://reinaldohaas.github.io/Himalaia_2026/nepal_tibet_disaster_map.html](https://reinaldohaas.github.io/Himalaia_2026/nepal_tibet_disaster_map.html)
+
+*(Alternatively, you can also run locally via `python server_miniforge.py` or `node server.js` at `http://localhost:8000`)*
 
 ---
 
