@@ -1,38 +1,46 @@
-# High-Altitude Hazard Dynamics in the Langtang Basin (2026): Microphysics, Rock-Ice Collapse, and Environmental Signatures
+# High-Altitude Hazard Dynamics in the Langtang Basin (2026): Microphysics, Rock-Ice Collapse, Geomythology, and Environmental Signatures
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.12](https://img.shields.io/badge/Python-3.12-blue.svg)](https://www.python.org/)
-[![Status: Open for Collaboration](https://img.shields.io/badge/Collaboration-Open-brightgreen.svg)](https://github.com/reinaldohaas/Himalaia_2026)
-[![Data: Reproducible](https://img.shields.io/badge/Data-100%25%20Reproducible-success.svg)](https://github.com/reinaldohaas/Himalaia_2026)
+[![Status: Open for Collaboration](https://img.shields.io/badge/Collaboration-Open%20(China%20%26%20Nepal)-brightgreen.svg)](https://github.com/reinaldohaas/Himalaia_2026)
+[![Contact](https://img.shields.io/badge/Contact-reinaldo.haas%40gmail.com-blue.svg)](mailto:reinaldo.haas@gmail.com)
 
-An open-source scientific research project investigating the cascading disaster of **August 25–26, 2026**, in the transboundary Langtang Lirung / Gyirong Port / Trishuli River basin (Tibet, China – Nepal border).
+An open-source multidisciplinary investigation into the catastrophic cascading disaster of **August 25–26, 2026**, in the transboundary Langtang Lirung / Gyirong Port / Trishuli River basin (Tibet, China – Nepal border).
 
 ---
 
 ## 📖 Comprehensive Technical Report
 👉 **Read the full publication-ready technical document:** [`TECHNICAL_REPORT_HIMALAYAN_DISASTER_2026.md`](TECHNICAL_REPORT_HIMALAYAN_DISASTER_2026.md)
 
+*Key Sections Covered:*
+1. **Critical Anomalies in Conventional Models:** The ~10x water volume discrepancy ($14.2\text{ M m}^3$ liquid water vs. $1.5\text{ M m}^3$ coarse satellite rain), absence of widespread precursor rain, and strong acoustic/electrical signatures.
+2. **Working Hypotheses:** High-altitude convective focusing, secondary ice multiplication (SIP), electro-scavenging ($J_z$), and two-stage mechanical permafrost hydro-fracturing.
+3. **Geomythology & Indigenous Lore:** The Tibetan *Druk* (Thunder Dragon) tradition as historical qualitative memory of rare high-energy geomorphic events.
+4. **Quantitative Inverse Hydrology:** Open-channel Manning reconstruction ($Q_{\text{peak}} \approx 3,376\text{ m}^3/\text{s}$), sediment concentration subtraction ($C_v \approx 31.4\%$), and basin-scale rainfall depth modeling ($250\text{ to }950\text{ mm}$).
+5. **Trans-Himalayan 14-Station Magnetometer Network:** Ionospheric potential $V_I$ and $J_z$ inversion across China and South Asia.
+
 ---
 
 ## 🌐 Live Interactive Web Visualizers (GitHub Pages)
 
-Access all interactive apps directly online via **GitHub Pages** (no installation required):
+Access all interactive tools online with zero installation:
 * **🚀 4D Spatiotemporal Master Viewer:** [https://reinaldohaas.github.io/Himalaia_2026/viewer_4d.html](https://reinaldohaas.github.io/Himalaia_2026/viewer_4d.html)  
-  *Features real-time timeline playback, multi-axis Chart.js series (Jz, Lightning, Rain, X-Ray), animated lake swelling/breach, 14-station magnetometer pulses, and downstream mudflow routing.*
+  *Real-time timeline scrubber, multi-axis series (Jz, Lightning, Rain, X-Ray), animated lake swelling/breach, 14-station magnetometer dynamics, and downstream debris flow routing.*
 * **📊 Master Infographic & Data Portal:** [https://reinaldohaas.github.io/Himalaia_2026/](https://reinaldohaas.github.io/Himalaia_2026/) *(or index.html)*
 * **🛰️ 3D Earth & Sentinel-1 SAR Viewer:** [https://reinaldohaas.github.io/Himalaia_2026/earth_3d_satellite_radar_viewer.html](https://reinaldohaas.github.io/Himalaia_2026/earth_3d_satellite_radar_viewer.html)
 * **🗺️ GIS Infrastructure Damage Map (33 Bridges):** [https://reinaldohaas.github.io/Himalaia_2026/nepal_tibet_disaster_map.html](https://reinaldohaas.github.io/Himalaia_2026/nepal_tibet_disaster_map.html)
 
-*(Alternatively, you can also run locally via `python server_miniforge.py` or `node server.js` at `http://localhost:8000`)*
-
 ---
 
-## 🛰️ Spatial Datasets & Downloads Available in Repo
-* **Sentinel-2 Natural Color KMZ (2.13 MB):** [`2026-08-12-00_00_2026-08-12-23_59_Sentinel-2_L2A_Highlight_Optimized_Natural_Color_.kmz`](2026-08-12-00_00_2026-08-12-23_59_Sentinel-2_L2A_Highlight_Optimized_Natural_Color_.kmz)
-* **High-Res Lake GeoTIFF (3.17 MB):** [`sentinel_lhende_khola_lake.tif`](sentinel_lhende_khola_lake.tif)
-* **Google Earth KML Master Thalweg:** [`mapa_mestre_trishuli_google_earth.kml`](mapa_mestre_trishuli_google_earth.kml)
-* **Raw NOAA SWPC Telemetry:** [`data/raw/space_weather/goes_xrays_7day_real.json`](data/raw/space_weather/goes_xrays_7day_real.json) *(20,148 records)*
-* **Official Bridge Damage Census:** [`data/hot_flood_npl_bridges_damage_icimod.geojson`](data/hot_flood_npl_bridges_damage_icimod.geojson) *(33 bridges / UN OCHA / ICIMOD)*
+## 🤝 Call for Scientific Collaboration (China, Nepal & Global Groups)
+
+We warmly invite colleagues from **China** (CAS, ITPCAS, CEA, CMA) and **Nepal** (Tribhuvan University, DHM, ICIMOD, NEA), as well as international researchers in **Atmospheric Microphysics**, **High-Altitude Hydrology**, **Glacial Geomechanics**, and **Remote Sensing**, to collaborate with us.
+
+### 📬 How to Connect:
+* **Lead Investigator:** Reinaldo Haas
+* **Email:** [reinaldo.haas@gmail.com](mailto:reinaldo.haas@gmail.com)
+* **GitHub Issues / Discussions:** [https://github.com/reinaldohaas/Himalaia_2026/issues](https://github.com/reinaldohaas/Himalaia_2026/issues)
+* **Pull Requests:** Numerical flood routing (RAMMS / FLO-2D / HEC-RAS), high-resolution LES microphysical models (WRF), and InSAR phase analysis are actively welcomed.
 
 ---
 
@@ -53,11 +61,3 @@ python scripts/recalculate_jz_with_china_network.py
 python server_miniforge.py
 ```
 Open `http://localhost:8000/viewer_4d.html` in your browser.
-
----
-
-## 🤝 Open Call for Scientific Collaboration
-We invite researchers and working groups specializing in **High-Altitude Hydrology**, **Atmospheric Microphysics**, **Glacial Geomechanics**, and **Remote Sensing** to contribute to this investigation.
-
-* **GitHub Issues:** Open an issue to discuss modeling refinements, microphysical hypotheses, or data contributions.
-* **Pull Requests:** Numerical routing models, high-resolution LES simulations, and InSAR deformation analyses are welcomed.
