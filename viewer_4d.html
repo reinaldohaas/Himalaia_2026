@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -42,7 +42,7 @@
         #map-container {
             position: relative;
             height: calc(100vh - 210px);
-            min-height: 460px;
+            min-height: 480px;
             border-radius: 8px;
             border: 1px solid var(--border-color);
             overflow: hidden;
@@ -59,7 +59,7 @@
             margin-bottom: 10px;
         }
         .gauge-val {
-            font-size: 1.4rem;
+            font-size: 1.35rem;
             font-weight: 700;
         }
         .gauge-lbl {
@@ -90,13 +90,6 @@
         .event-badge:hover {
             transform: scale(1.05);
         }
-        .pulse-epicenter {
-            animation: pulse-ring 1.5s infinite;
-        }
-        @keyframes pulse-ring {
-            0% { transform: scale(0.8); opacity: 1; }
-            100% { transform: scale(2.4); opacity: 0; }
-        }
     </style>
 </head>
 <body>
@@ -105,7 +98,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
             <a class="navbar-brand fw-bold text-info" href="#">
-                <i class="fa-solid fa-earth-asia me-2"></i>VISUALIZADOR ESPAÇO-TEMPORAL 4D: HIMALAIA 2026
+                <i class="fa-solid fa-earth-asia me-2"></i>VISUALIZADOR 4D ESPAÇO-TEMPORAL: HIMALAIA 2026
             </a>
             <div class="d-flex align-items-center gap-3">
                 <span class="badge bg-dark border border-secondary text-light" id="clockUtc">UTC: 2026-08-21 00:00:00</span>
@@ -125,15 +118,15 @@
                     <div id="map"></div>
                     
                     <!-- Map HUD Overlay -->
-                    <div style="position: absolute; top: 12px; left: 60px; z-index: 999; background: rgba(15,23,42,0.85); padding: 8px 14px; border-radius: 6px; border: 1px solid var(--border-color); backdrop-filter: blur(8px);">
-                        <div class="small text-muted">CAMPO IONOSFÉRICO & FLUXO GEODÉSICO</div>
+                    <div style="position: absolute; top: 12px; left: 60px; z-index: 999; background: rgba(15,23,42,0.9); padding: 8px 14px; border-radius: 6px; border: 1px solid var(--border-color); backdrop-filter: blur(8px);">
+                        <div class="small text-muted">CAMPO IONOSFÉRICO & GEOFÍSICA DO HIMALAIA</div>
                         <div class="fw-bold text-info" id="hudIonoStatus">Ionosfera em Regime Basal (VI = 250 kV)</div>
                     </div>
 
-                    <div style="position: absolute; bottom: 16px; left: 16px; z-index: 999; background: rgba(15,23,42,0.85); padding: 6px 12px; border-radius: 6px; border: 1px solid var(--border-color);" class="small">
+                    <div style="position: absolute; bottom: 16px; left: 16px; z-index: 999; background: rgba(15,23,42,0.9); padding: 6px 12px; border-radius: 6px; border: 1px solid var(--border-color);" class="small">
                         <span class="me-2"><i class="fa-solid fa-circle text-danger"></i> Epicentro 4.4 mb</span>
-                        <span class="me-2"><i class="fa-solid fa-circle text-warning"></i> Magnetômetros</span>
-                        <span><i class="fa-solid fa-circle text-info"></i> Talvegue / Pontes</span>
+                        <span class="me-2"><i class="fa-solid fa-circle text-warning"></i> Magnetômetros (8 Estações)</span>
+                        <span><i class="fa-solid fa-circle text-info"></i> Onda de Cheia</span>
                     </div>
                 </div>
             </div>
@@ -146,8 +139,8 @@
                     <div class="col-6">
                         <div class="telemetry-card">
                             <div class="gauge-lbl"><i class="fa-solid fa-bolt text-info me-1"></i> Corrente Jz (4000m)</div>
-                            <div class="gauge-val text-info" id="gaugeJz">3.21 pA/m²</div>
-                            <small class="text-muted" id="gaugeEz">Ez: 128 V/m</small>
+                            <div class="gauge-val text-info" id="gaugeJz">3.13 pA/m²</div>
+                            <small class="text-muted" id="gaugeEz">Ez: 125 V/m</small>
                         </div>
                     </div>
                     <div class="col-6">
@@ -159,14 +152,14 @@
                     </div>
                     <div class="col-6">
                         <div class="telemetry-card">
-                            <div class="gauge-lbl"><i class="fa-solid fa-water text-primary me-1"></i> Vazão no Cânion</div>
+                            <div class="gauge-lbl"><i class="fa-solid fa-water text-primary me-1"></i> Vazão Fluvial Estimada</div>
                             <div class="gauge-val text-primary" id="gaugeFlow">45 m³/s</div>
                             <small class="text-muted" id="gaugeSpeed">Velocidade: 2,1 m/s</small>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="telemetry-card">
-                            <div class="gauge-lbl"><i class="fa-solid fa-bridge-water text-danger me-1"></i> Pontes Atingidas</div>
+                            <div class="gauge-lbl"><i class="fa-solid fa-bridge-water text-danger me-1"></i> Censo de Pontes (ICIMOD)</div>
                             <div class="gauge-val text-danger" id="gaugeBridges">0 / 33</div>
                             <small class="text-muted" id="gaugeStatus">Regime Normal</small>
                         </div>
@@ -174,17 +167,17 @@
                 </div>
 
                 <!-- Event Ticker / Live Narrative -->
-                <div class="telemetry-card mb-2" style="height: 100px; overflow-y: auto;">
+                <div class="telemetry-card mb-2" style="height: 115px; overflow-y: auto;">
                     <div class="gauge-lbl text-warning mb-1"><i class="fa-solid fa-radio me-1"></i> Registro Sincronizado do Momento</div>
                     <div class="small text-light" id="narrativeText">
-                        21 de Agosto de 2026: Monitoramento contínuo da ionosfera e bacia do Trishuli. Condições de tempo bom.
+                        21 de Agosto de 2026: Monitoramento contínuo da ionosfera e bacia do Trishuli. Condições basais de tempo bom.
                     </div>
                 </div>
 
                 <!-- Synchronized Time-Series Chart -->
-                <div class="telemetry-card" style="height: 200px;">
-                    <div class="gauge-lbl mb-1"><i class="fa-solid fa-chart-line me-1"></i> Série de Jz e Potencial Ionosférico</div>
-                    <div style="height: 160px;">
+                <div class="telemetry-card" style="height: 210px;">
+                    <div class="gauge-lbl mb-1"><i class="fa-solid fa-chart-line me-1"></i> Série Temporal Jz (169 Horas)</div>
+                    <div style="height: 170px;">
                         <canvas id="syncedChart"></canvas>
                     </div>
                 </div>
@@ -199,27 +192,29 @@
             
             <!-- Quick Milestones Buttons -->
             <div class="d-flex justify-content-between align-items-center mb-2 flex-wrap gap-1">
-                <span class="small text-muted me-2"><i class="fa-solid fa-forward-step me-1"></i> Marcos Críticos:</span>
+                <span class="small text-muted me-2"><i class="fa-solid fa-forward-step me-1"></i> Pular para:</span>
                 <span class="event-badge bg-secondary text-light" onclick="jumpToHour(0)">21 Ago 00h (Início)</span>
                 <span class="event-badge bg-warning text-dark fw-bold" onclick="jumpToHour(106)">☀️ 25 Ago 10h (Flare M7)</span>
                 <span class="event-badge bg-info text-dark" onclick="jumpToHour(121)">⚡ 26 Ago 01h (Pico Toró)</span>
-                <span class="event-badge bg-danger text-light fw-bold" onclick="jumpToHour(123)">💥 26 Ago 02h52 (Colapso Sísmico)</span>
-                <span class="event-badge bg-primary text-light" onclick="jumpToHour(124)">🌊 26 Ago 03h35 (Rompimento do Lago)</span>
+                <span class="event-badge bg-danger text-light fw-bold" onclick="jumpToHour(123)">💥 26 Ago 02h52 (Colapso Sísmico 4.4 mb)</span>
+                <span class="event-badge bg-primary text-light" onclick="jumpToHour(124)">🌊 26 Ago 03h35 (Ruptura e Enxurrada)</span>
                 <span class="event-badge bg-secondary text-light" onclick="jumpToHour(168)">28 Ago 00h (Fim)</span>
             </div>
 
-            <!-- Time Slider -->
+            <!-- Time Slider & Playback Controls -->
             <div class="d-flex align-items-center gap-3">
-                <button class="btn btn-sm btn-info px-3" id="btnPlayPause" onclick="togglePlay()"><i class="fa-solid fa-play"></i></button>
+                <button class="btn btn-sm btn-info px-3 fw-bold" id="btnPlayPause" onclick="togglePlay()">
+                    <i class="fa-solid fa-play me-1"></i> Iniciar Animação 4D
+                </button>
                 <input type="range" class="form-range time-slider" id="timeSlider" min="0" max="168" value="0" oninput="onSliderInput(this.value)">
                 
                 <div class="d-flex align-items-center gap-2" style="min-width: 130px;">
                     <span class="small text-muted">Vel:</span>
                     <select class="form-select form-select-sm bg-dark text-light border-secondary" id="speedSelect" onchange="changeSpeed(this.value)">
-                        <option value="1000">1x (1s/h)</option>
-                        <option value="500" selected>2x</option>
-                        <option value="200">5x</option>
-                        <option value="80">15x</option>
+                        <option value="800">1x (Lento)</option>
+                        <option value="400" selected>2x (Normal)</option>
+                        <option value="150">5x (Rápido)</option>
+                        <option value="50">15x (Ultra)</option>
                     </select>
                 </div>
             </div>
@@ -227,20 +222,22 @@
         </div>
     </div>
 
+    <!-- Script Principal JavaScript com Carregamento Seguro de Dados -->
     <script>
-        const timelineData = [{"vi":243.9,"tir":37,"jz":3.126,"kp":2,"utc":"2026-08-21 00:00:00","lza":18,"ez":125.1,"npt":"2026-08-21 05:45:00","kkn":18.9,"sab":19.7,"xray":2.5E-06,"eej":16.6},{"vi":235.8,"tir":59.7,"jz":3.023,"kp":2,"utc":"2026-08-21 01:00:00","lza":25.8,"ez":120.9,"npt":"2026-08-21 06:45:00","kkn":27.1,"sab":28.3,"xray":3.76E-06,"eej":30},{"vi":232.9,"tir":90.8,"jz":2.986,"kp":2,"utc":"2026-08-21 02:00:00","lza":36.5,"ez":119.5,"npt":"2026-08-21 07:45:00","kkn":38.3,"sab":40.1,"xray":6.71E-06,"eej":48.4},{"vi":215.5,"tir":107.1,"jz":2.763,"kp":2,"utc":"2026-08-21 03:00:00","lza":42.2,"ez":110.5,"npt":"2026-08-21 08:45:00","kkn":44.4,"sab":46.5,"xray":2.03E-06,"eej":58},{"vi":208.9,"tir":122.1,"jz":2.678,"kp":2,"utc":"2026-08-21 04:00:00","lza":47.5,"ez":107.1,"npt":"2026-08-21 09:45:00","kkn":49.9,"sab":52.3,"xray":1.08E-06,"eej":66.9},{"vi":209,"tir":138.6,"jz":2.68,"kp":2,"utc":"2026-08-21 05:00:00","lza":53.1,"ez":107.2,"npt":"2026-08-21 10:45:00","kkn":55.9,"sab":58.5,"xray":1.83E-06,"eej":76.6},{"vi":220.2,"tir":152.6,"jz":2.823,"kp":2,"utc":"2026-08-21 06:00:00","lza":57.9,"ez":112.9,"npt":"2026-08-21 11:45:00","kkn":60.8,"sab":63.7,"xray":6.22E-06,"eej":84.9},{"vi":215.7,"tir":144,"jz":2.765,"kp":2,"utc":"2026-08-21 07:00:00","lza":55,"ez":110.6,"npt":"2026-08-21 12:45:00","kkn":57.8,"sab":60.6,"xray":2.12E-06,"eej":79.8},{"vi":221.3,"tir":132.6,"jz":2.837,"kp":2,"utc":"2026-08-21 08:00:00","lza":51.1,"ez":113.5,"npt":"2026-08-21 13:45:00","kkn":53.7,"sab":56.3,"xray":1.42E-06,"eej":73},{"vi":263.9,"tir":132.9,"jz":3.383,"kp":2,"utc":"2026-08-21 09:00:00","lza":51,"ez":135.3,"npt":"2026-08-21 14:45:00","kkn":53.6,"sab":56.1,"xray":1.65E-05,"eej":73.4},{"vi":275.6,"tir":111.7,"jz":3.534,"kp":2,"utc":"2026-08-21 10:00:00","lza":43.7,"ez":141.3,"npt":"2026-08-21 15:45:00","kkn":45.8,"sab":48,"xray":1.69E-05,"eej":60.9},{"vi":277.2,"tir":84.1,"jz":3.553,"kp":2,"utc":"2026-08-21 11:00:00","lza":34.1,"ez":142.1,"npt":"2026-08-21 16:45:00","kkn":35.8,"sab":37.5,"xray":1.23E-05,"eej":44.5},{"vi":280.4,"tir":53.6,"jz":3.595,"kp":2,"utc":"2026-08-21 12:00:00","lza":23.6,"ez":143.8,"npt":"2026-08-21 17:45:00","kkn":24.8,"sab":25.9,"xray":8.54E-06,"eej":26.5},{"vi":284.6,"tir":42.1,"jz":3.649,"kp":2,"utc":"2026-08-21 13:00:00","lza":19.7,"ez":146,"npt":"2026-08-21 18:45:00","kkn":20.7,"sab":21.6,"xray":5.52E-06,"eej":19.7},{"vi":290.9,"tir":40.2,"jz":3.729,"kp":2,"utc":"2026-08-21 14:00:00","lza":19.1,"ez":149.2,"npt":"2026-08-21 19:45:00","kkn":20,"sab":20.9,"xray":4.11E-06,"eej":18.5},{"vi":296.1,"tir":38.7,"jz":3.796,"kp":2,"utc":"2026-08-21 15:00:00","lza":18.6,"ez":151.8,"npt":"2026-08-21 20:45:00","kkn":19.5,"sab":20.3,"xray":3.24E-06,"eej":17.6},{"vi":298.5,"tir":36.4,"jz":3.827,"kp":2,"utc":"2026-08-21 16:00:00","lza":17.8,"ez":153.1,"npt":"2026-08-21 21:45:00","kkn":18.7,"sab":19.5,"xray":2.28E-06,"eej":16.2},{"vi":302.6,"tir":39.1,"jz":3.879,"kp":2,"utc":"2026-08-21 17:00:00","lza":18.7,"ez":155.2,"npt":"2026-08-21 22:45:00","kkn":19.6,"sab":20.5,"xray":3.45E-06,"eej":17.8},{"vi":299.3,"tir":37.3,"jz":3.837,"kp":2,"utc":"2026-08-21 18:00:00","lza":18.1,"ez":153.5,"npt":"2026-08-21 23:45:00","kkn":19,"sab":19.8,"xray":2.63E-06,"eej":16.8},{"vi":291.7,"tir":32.4,"jz":3.74,"kp":2,"utc":"2026-08-21 19:00:00","lza":16.5,"ez":149.6,"npt":"2026-08-22 00:45:00","kkn":17.3,"sab":18,"xray":1.25E-06,"eej":13.9},{"vi":290.7,"tir":40.1,"jz":3.727,"kp":2,"utc":"2026-08-21 20:00:00","lza":19,"ez":149.1,"npt":"2026-08-22 01:45:00","kkn":19.9,"sab":20.8,"xray":4.02E-06,"eej":18.4},{"vi":281.2,"tir":40,"jz":3.605,"kp":2,"utc":"2026-08-21 21:00:00","lza":19,"ez":144.2,"npt":"2026-08-22 02:45:00","kkn":19.9,"sab":20.8,"xray":3.96E-06,"eej":18.4},{"vi":265,"tir":33.7,"jz":3.397,"kp":2,"utc":"2026-08-21 22:00:00","lza":16.9,"ez":135.9,"npt":"2026-08-22 03:45:00","kkn":17.7,"sab":18.5,"xray":1.5E-06,"eej":14.6},{"vi":252.6,"tir":32.1,"jz":3.239,"kp":2,"utc":"2026-08-21 23:00:00","lza":16.4,"ez":129.5,"npt":"2026-08-22 04:45:00","kkn":17.2,"sab":17.9,"xray":1.19E-06,"eej":13.7},{"vi":240.6,"tir":31,"jz":3.084,"kp":2,"utc":"2026-08-22 00:00:00","lza":16,"ez":123.4,"npt":"2026-08-22 05:45:00","kkn":16.8,"sab":17.5,"xray":1.01E-06,"eej":13},{"vi":230.1,"tir":52.2,"jz":2.951,"kp":2,"utc":"2026-08-22 01:00:00","lza":23.3,"ez":118,"npt":"2026-08-22 06:45:00","kkn":24.5,"sab":25.6,"xray":1.2E-06,"eej":25.6},{"vi":220.5,"tir":78.6,"jz":2.827,"kp":2,"utc":"2026-08-22 02:00:00","lza":32.4,"ez":113.1,"npt":"2026-08-22 07:45:00","kkn":34.1,"sab":35.7,"xray":1.04E-06,"eej":41.1},{"vi":213.2,"tir":102.5,"jz":2.734,"kp":2,"utc":"2026-08-22 03:00:00","lza":40.7,"ez":109.4,"npt":"2026-08-22 08:45:00","kkn":42.8,"sab":44.8,"xray":1.01E-06,"eej":55.2},{"vi":208.4,"tir":120.4,"jz":2.671,"kp":2,"utc":"2026-08-22 04:00:00","lza":46.9,"ez":106.8,"npt":"2026-08-22 09:45:00","kkn":49.3,"sab":51.7,"xray":8.27E-07,"eej":65.8},{"vi":207.3,"tir":135,"jz":2.658,"kp":2,"utc":"2026-08-22 05:00:00","lza":51.9,"ez":106.3,"npt":"2026-08-22 10:45:00","kkn":54.6,"sab":57.2,"xray":1.04E-06,"eej":74.4},{"vi":209,"tir":141.5,"jz":2.68,"kp":2,"utc":"2026-08-22 06:00:00","lza":54.2,"ez":107.2,"npt":"2026-08-22 11:45:00","kkn":57,"sab":59.7,"xray":1.13E-06,"eej":78.3},{"vi":213.5,"tir":139.8,"jz":2.737,"kp":2,"utc":"2026-08-22 07:00:00","lza":53.6,"ez":109.5,"npt":"2026-08-22 12:45:00","kkn":56.4,"sab":59,"xray":1.1E-06,"eej":77.3},{"vi":221.1,"tir":132.2,"jz":2.835,"kp":2,"utc":"2026-08-22 08:00:00","lza":50.9,"ez":113.4,"npt":"2026-08-22 13:45:00","kkn":53.6,"sab":56.1,"xray":1.34E-06,"eej":72.8},{"vi":231.3,"tir":118.2,"jz":2.966,"kp":2,"utc":"2026-08-22 09:00:00","lza":46.1,"ez":118.6,"npt":"2026-08-22 14:45:00","kkn":48.5,"sab":50.8,"xray":1.73E-06,"eej":64.6},{"vi":242,"tir":96.5,"jz":3.102,"kp":2,"utc":"2026-08-22 10:00:00","lza":38.6,"ez":124.1,"npt":"2026-08-22 15:45:00","kkn":40.6,"sab":42.5,"xray":1.64E-06,"eej":51.7},{"vi":252.4,"tir":68.2,"jz":3.235,"kp":2,"utc":"2026-08-22 11:00:00","lza":28.8,"ez":129.4,"npt":"2026-08-22 16:45:00","kkn":30.3,"sab":31.7,"xray":1.08E-06,"eej":35},{"vi":263.6,"tir":38.7,"jz":3.379,"kp":2,"utc":"2026-08-22 12:00:00","lza":18.7,"ez":135.2,"npt":"2026-08-22 17:45:00","kkn":19.6,"sab":20.5,"xray":8.7E-07,"eej":17.6},{"vi":275,"tir":31.7,"jz":3.525,"kp":2,"utc":"2026-08-22 13:00:00","lza":16.2,"ez":141,"npt":"2026-08-22 18:45:00","kkn":17.1,"sab":17.8,"xray":1.12E-06,"eej":13.4},{"vi":284,"tir":30.8,"jz":3.641,"kp":2,"utc":"2026-08-22 14:00:00","lza":15.9,"ez":145.6,"npt":"2026-08-22 19:45:00","kkn":16.7,"sab":17.4,"xray":9.74E-07,"eej":12.9},{"vi":290.7,"tir":29.3,"jz":3.726,"kp":2,"utc":"2026-08-22 15:00:00","lza":15.4,"ez":149.1,"npt":"2026-08-22 20:45:00","kkn":16.2,"sab":16.9,"xray":7.67E-07,"eej":12},{"vi":295.2,"tir":29.4,"jz":3.784,"kp":2,"utc":"2026-08-22 16:00:00","lza":15.5,"ez":151.4,"npt":"2026-08-22 21:45:00","kkn":16.2,"sab":16.9,"xray":7.77E-07,"eej":12},{"vi":296.5,"tir":28.6,"jz":3.801,"kp":2,"utc":"2026-08-22 17:00:00","lza":15.2,"ez":152.1,"npt":"2026-08-22 22:45:00","kkn":16,"sab":16.6,"xray":6.88E-07,"eej":11.5},{"vi":296.6,"tir":33.4,"jz":3.803,"kp":2,"utc":"2026-08-22 18:00:00","lza":16.8,"ez":152.1,"npt":"2026-08-22 23:45:00","kkn":17.6,"sab":18.4,"xray":1.44E-06,"eej":14.4},{"vi":290.5,"tir":28.8,"jz":3.725,"kp":2,"utc":"2026-08-22 19:00:00","lza":15.3,"ez":149,"npt":"2026-08-23 00:45:00","kkn":16,"sab":16.7,"xray":7.16E-07,"eej":11.7},{"vi":283.9,"tir":30.6,"jz":3.639,"kp":2,"utc":"2026-08-22 20:00:00","lza":15.9,"ez":145.6,"npt":"2026-08-23 01:45:00","kkn":16.6,"sab":17.3,"xray":9.33E-07,"eej":12.7},{"vi":274.5,"tir":30.4,"jz":3.519,"kp":2,"utc":"2026-08-22 21:00:00","lza":15.8,"ez":140.8,"npt":"2026-08-23 02:45:00","kkn":16.6,"sab":17.3,"xray":9.09E-07,"eej":12.6},{"vi":263.9,"tir":31.1,"jz":3.383,"kp":2,"utc":"2026-08-22 22:00:00","lza":16,"ez":135.3,"npt":"2026-08-23 03:45:00","kkn":16.8,"sab":17.5,"xray":1.02E-06,"eej":13.1},{"vi":252.2,"tir":30.9,"jz":3.233,"kp":2,"utc":"2026-08-22 23:00:00","lza":16,"ez":129.3,"npt":"2026-08-23 04:45:00","kkn":16.8,"sab":17.4,"xray":9.78E-07,"eej":12.9},{"vi":241.1,"tir":32.5,"jz":3.091,"kp":2,"utc":"2026-08-23 00:00:00","lza":16.5,"ez":123.7,"npt":"2026-08-23 05:45:00","kkn":17.3,"sab":18.1,"xray":1.26E-06,"eej":13.9},{"vi":230.1,"tir":52.2,"jz":2.95,"kp":2,"utc":"2026-08-23 01:00:00","lza":23.3,"ez":118,"npt":"2026-08-23 06:45:00","kkn":24.5,"sab":25.6,"xray":1.2E-06,"eej":25.5},{"vi":220.2,"tir":77.9,"jz":2.824,"kp":2,"utc":"2026-08-23 02:00:00","lza":32.2,"ez":112.9,"npt":"2026-08-23 07:45:00","kkn":33.9,"sab":35.4,"xray":9.33E-07,"eej":40.7},{"vi":212.7,"tir":100.8,"jz":2.727,"kp":2,"utc":"2026-08-23 03:00:00","lza":40.1,"ez":109.1,"npt":"2026-08-23 08:45:00","kkn":42.2,"sab":44.2,"xray":7.74E-07,"eej":54.2},{"vi":209,"tir":122.4,"jz":2.679,"kp":2,"utc":"2026-08-23 04:00:00","lza":47.6,"ez":107.2,"npt":"2026-08-23 09:45:00","kkn":50,"sab":52.4,"xray":1.12E-06,"eej":67},{"vi":207.5,"tir":135.6,"jz":2.661,"kp":2,"utc":"2026-08-23 05:00:00","lza":52.1,"ez":106.4,"npt":"2026-08-23 10:45:00","kkn":54.8,"sab":57.4,"xray":1.15E-06,"eej":74.8},{"vi":215.7,"tir":149.9,"jz":2.765,"kp":2,"utc":"2026-08-23 06:00:00","lza":57,"ez":110.6,"npt":"2026-08-23 11:45:00","kkn":59.9,"sab":62.8,"xray":4.16E-06,"eej":83.4},{"vi":219.5,"tir":147.9,"jz":2.814,"kp":2,"utc":"2026-08-23 07:00:00","lza":56.3,"ez":112.6,"npt":"2026-08-23 12:45:00","kkn":59.2,"sab":62,"xray":3.84E-06,"eej":82.2},{"vi":220.5,"tir":130.7,"jz":2.827,"kp":2,"utc":"2026-08-23 08:00:00","lza":50.4,"ez":113.1,"npt":"2026-08-23 13:45:00","kkn":53,"sab":55.6,"xray":1.06E-06,"eej":71.9},{"vi":229.5,"tir":114.1,"jz":2.942,"kp":2,"utc":"2026-08-23 09:00:00","lza":44.7,"ez":117.7,"npt":"2026-08-23 14:45:00","kkn":47,"sab":49.2,"xray":9.16E-07,"eej":62.1},{"vi":242.1,"tir":96.8,"jz":3.104,"kp":2,"utc":"2026-08-23 10:00:00","lza":38.7,"ez":124.2,"npt":"2026-08-23 15:45:00","kkn":40.7,"sab":42.6,"xray":1.7E-06,"eej":51.9},{"vi":251.9,"tir":66.7,"jz":3.229,"kp":2,"utc":"2026-08-23 11:00:00","lza":28.4,"ez":129.2,"npt":"2026-08-23 16:45:00","kkn":29.8,"sab":31.2,"xray":8.61E-07,"eej":34.1},{"vi":264,"tir":40.1,"jz":3.385,"kp":2,"utc":"2026-08-23 12:00:00","lza":19.1,"ez":135.4,"npt":"2026-08-23 17:45:00","kkn":20.1,"sab":21,"xray":1.07E-06,"eej":18.4},{"vi":276.3,"tir":34.6,"jz":3.543,"kp":2,"utc":"2026-08-23 13:00:00","lza":17.2,"ez":141.7,"npt":"2026-08-23 18:45:00","kkn":18.1,"sab":18.8,"xray":1.75E-06,"eej":15.2},{"vi":284.1,"tir":31.3,"jz":3.643,"kp":2,"utc":"2026-08-23 14:00:00","lza":16.1,"ez":145.7,"npt":"2026-08-23 19:45:00","kkn":16.9,"sab":17.6,"xray":1.04E-06,"eej":13.2},{"vi":291.1,"tir":30.7,"jz":3.732,"kp":2,"utc":"2026-08-23 15:00:00","lza":15.9,"ez":149.3,"npt":"2026-08-23 20:45:00","kkn":16.7,"sab":17.4,"xray":9.51E-07,"eej":12.8},{"vi":296.7,"tir":33.6,"jz":3.804,"kp":2,"utc":"2026-08-23 16:00:00","lza":16.9,"ez":152.2,"npt":"2026-08-23 21:45:00","kkn":17.7,"sab":18.4,"xray":1.49E-06,"eej":14.6},{"vi":297.4,"tir":31.6,"jz":3.813,"kp":2,"utc":"2026-08-23 17:00:00","lza":16.2,"ez":152.5,"npt":"2026-08-23 22:45:00","kkn":17,"sab":17.7,"xray":1.1E-06,"eej":13.4},{"vi":296.2,"tir":32.3,"jz":3.797,"kp":2,"utc":"2026-08-23 18:00:00","lza":16.4,"ez":151.9,"npt":"2026-08-23 23:45:00","kkn":17.3,"sab":18,"xray":1.23E-06,"eej":13.8},{"vi":295.1,"tir":37.7,"jz":3.783,"kp":2,"utc":"2026-08-23 19:00:00","lza":18.2,"ez":151.3,"npt":"2026-08-24 00:45:00","kkn":19.1,"sab":19.9,"xray":2.78E-06,"eej":17},{"vi":284.4,"tir":32.1,"jz":3.646,"kp":2,"utc":"2026-08-23 20:00:00","lza":16.4,"ez":145.8,"npt":"2026-08-24 01:45:00","kkn":17.2,"sab":17.9,"xray":1.17E-06,"eej":13.6},{"vi":279,"tir":38.1,"jz":3.577,"kp":2,"utc":"2026-08-23 21:00:00","lza":18.4,"ez":143.1,"npt":"2026-08-24 02:45:00","kkn":19.3,"sab":20.1,"xray":2.97E-06,"eej":17.3},{"vi":269.4,"tir":39.2,"jz":3.454,"kp":2,"utc":"2026-08-23 22:00:00","lza":18.7,"ez":138.2,"npt":"2026-08-24 03:45:00","kkn":19.7,"sab":20.5,"xray":3.54E-06,"eej":17.9},{"vi":252.1,"tir":30.6,"jz":3.232,"kp":2,"utc":"2026-08-23 23:00:00","lza":15.9,"ez":129.3,"npt":"2026-08-24 04:45:00","kkn":16.7,"sab":17.3,"xray":9.38E-07,"eej":12.7},{"vi":240.4,"tir":30.4,"jz":3.081,"kp":2,"utc":"2026-08-24 00:00:00","lza":15.8,"ez":123.3,"npt":"2026-08-24 05:45:00","kkn":16.6,"sab":17.3,"xray":9.1E-07,"eej":12.6},{"vi":229.2,"tir":49.5,"jz":2.939,"kp":2,"utc":"2026-08-24 01:00:00","lza":22.4,"ez":117.6,"npt":"2026-08-24 06:45:00","kkn":23.6,"sab":24.6,"xray":7.9E-07,"eej":23.9},{"vi":220.2,"tir":77.9,"jz":2.824,"kp":2,"utc":"2026-08-24 02:00:00","lza":32.2,"ez":112.9,"npt":"2026-08-24 07:45:00","kkn":33.9,"sab":35.4,"xray":9.38E-07,"eej":40.7},{"vi":213,"tir":101.6,"jz":2.73,"kp":2,"utc":"2026-08-24 03:00:00","lza":40.4,"ez":109.2,"npt":"2026-08-24 08:45:00","kkn":42.5,"sab":44.5,"xray":8.77E-07,"eej":54.7},{"vi":208.5,"tir":121,"jz":2.673,"kp":2,"utc":"2026-08-24 04:00:00","lza":47.1,"ez":106.9,"npt":"2026-08-24 09:45:00","kkn":49.5,"sab":51.9,"xray":8.99E-07,"eej":66.2},{"vi":206.5,"tir":132.3,"jz":2.648,"kp":2,"utc":"2026-08-24 05:00:00","lza":51,"ez":105.9,"npt":"2026-08-24 10:45:00","kkn":53.7,"sab":56.2,"xray":6.98E-07,"eej":72.9},{"vi":208.1,"tir":138.4,"jz":2.668,"kp":2,"utc":"2026-08-24 06:00:00","lza":53.1,"ez":106.7,"npt":"2026-08-24 11:45:00","kkn":55.9,"sab":58.6,"xray":7.11E-07,"eej":76.5},{"vi":215.9,"tir":144.4,"jz":2.768,"kp":2,"utc":"2026-08-24 07:00:00","lza":55.1,"ez":110.7,"npt":"2026-08-24 12:45:00","kkn":57.9,"sab":60.7,"xray":2.23E-06,"eej":80},{"vi":221.3,"tir":132.5,"jz":2.837,"kp":2,"utc":"2026-08-24 08:00:00","lza":51,"ez":113.5,"npt":"2026-08-24 13:45:00","kkn":53.7,"sab":56.2,"xray":1.41E-06,"eej":73},{"vi":230.8,"tir":117.2,"jz":2.958,"kp":2,"utc":"2026-08-24 09:00:00","lza":45.7,"ez":118.3,"npt":"2026-08-24 14:45:00","kkn":48.1,"sab":50.4,"xray":1.48E-06,"eej":64},{"vi":240.9,"tir":94.3,"jz":3.088,"kp":2,"utc":"2026-08-24 10:00:00","lza":37.8,"ez":123.5,"npt":"2026-08-24 15:45:00","kkn":39.8,"sab":41.6,"xray":1.16E-06,"eej":50.4},{"vi":252.7,"tir":69.1,"jz":3.24,"kp":2,"utc":"2026-08-24 11:00:00","lza":29.2,"ez":129.6,"npt":"2026-08-24 16:45:00","kkn":30.6,"sab":32,"xray":1.24E-06,"eej":35.5},{"vi":263.7,"tir":39.2,"jz":3.381,"kp":2,"utc":"2026-08-24 12:00:00","lza":18.8,"ez":135.2,"npt":"2026-08-24 17:45:00","kkn":19.8,"sab":20.6,"xray":9.36E-07,"eej":17.8},{"vi":274.2,"tir":29.2,"jz":3.515,"kp":2,"utc":"2026-08-24 13:00:00","lza":15.4,"ez":140.6,"npt":"2026-08-24 18:45:00","kkn":16.2,"sab":16.8,"xray":7.54E-07,"eej":11.9},{"vi":283.5,"tir":29.1,"jz":3.634,"kp":2,"utc":"2026-08-24 14:00:00","lza":15.4,"ez":145.4,"npt":"2026-08-24 19:45:00","kkn":16.1,"sab":16.8,"xray":7.48E-07,"eej":11.9},{"vi":291,"tir":30.4,"jz":3.731,"kp":2,"utc":"2026-08-24 15:00:00","lza":15.8,"ez":149.2,"npt":"2026-08-24 20:45:00","kkn":16.6,"sab":17.3,"xray":9.14E-07,"eej":12.6},{"vi":295.7,"tir":31,"jz":3.79,"kp":2,"utc":"2026-08-24 16:00:00","lza":16,"ez":151.6,"npt":"2026-08-24 21:45:00","kkn":16.8,"sab":17.5,"xray":9.94E-07,"eej":13},{"vi":298.2,"tir":33.5,"jz":3.823,"kp":2,"utc":"2026-08-24 17:00:00","lza":16.8,"ez":152.9,"npt":"2026-08-24 22:45:00","kkn":17.7,"sab":18.4,"xray":1.46E-06,"eej":14.5},{"vi":297.8,"tir":35.4,"jz":3.818,"kp":2,"utc":"2026-08-24 18:00:00","lza":17.5,"ez":152.7,"npt":"2026-08-24 23:45:00","kkn":18.3,"sab":19.1,"xray":1.96E-06,"eej":15.6},{"vi":328.1,"tir":49.8,"jz":4.207,"kp":2,"utc":"2026-08-24 19:00:00","lza":22.3,"ez":168.3,"npt":"2026-08-25 00:45:00","kkn":23.3,"sab":24.4,"xray":1.78E-05,"eej":24.3},{"vi":297.6,"tir":43.8,"jz":3.816,"kp":2,"utc":"2026-08-24 20:00:00","lza":20.3,"ez":152.6,"npt":"2026-08-25 01:45:00","kkn":21.3,"sab":22.2,"xray":7.18E-06,"eej":20.7},{"vi":276.9,"tir":35.6,"jz":3.551,"kp":2,"utc":"2026-08-24 21:00:00","lza":17.5,"ez":142,"npt":"2026-08-25 02:45:00","kkn":18.4,"sab":19.2,"xray":2.02E-06,"eej":15.7},{"vi":266.4,"tir":36,"jz":3.415,"kp":2,"utc":"2026-08-24 22:00:00","lza":17.7,"ez":136.6,"npt":"2026-08-25 03:45:00","kkn":18.5,"sab":19.3,"xray":2.15E-06,"eej":16},{"vi":253.2,"tir":33.5,"jz":3.246,"kp":2,"utc":"2026-08-24 23:00:00","lza":16.8,"ez":129.9,"npt":"2026-08-25 04:45:00","kkn":17.7,"sab":18.4,"xray":1.46E-06,"eej":14.5},{"vi":240.6,"tir":31.2,"jz":3.085,"kp":2,"utc":"2026-08-25 00:00:00","lza":16.1,"ez":123.4,"npt":"2026-08-25 05:45:00","kkn":16.9,"sab":17.6,"xray":1.03E-06,"eej":13.1},{"vi":271.3,"tir":70.5,"jz":3.478,"kp":2,"utc":"2026-08-25 01:00:00","lza":29.4,"ez":139.1,"npt":"2026-08-25 06:45:00","kkn":30.8,"sab":32.3,"xray":1.99E-05,"eej":36.5},{"vi":228.6,"tir":88.5,"jz":2.931,"kp":2,"utc":"2026-08-25 02:00:00","lza":35.7,"ez":117.3,"npt":"2026-08-25 07:45:00","kkn":37.5,"sab":39.3,"xray":4.76E-06,"eej":47.1},{"vi":222.9,"tir":113.4,"jz":2.857,"kp":2,"utc":"2026-08-25 03:00:00","lza":44.3,"ez":114.3,"npt":"2026-08-25 08:45:00","kkn":46.6,"sab":48.8,"xray":5.38E-06,"eej":61.8},{"vi":229.4,"tir":136.9,"jz":2.942,"kp":2,"utc":"2026-08-25 04:00:00","lza":52.4,"ez":117.7,"npt":"2026-08-25 09:45:00","kkn":55.1,"sab":57.7,"xray":1.04E-05,"eej":75.7},{"vi":208.7,"tir":138.1,"jz":2.676,"kp":2,"utc":"2026-08-25 05:00:00","lza":53,"ez":107,"npt":"2026-08-25 10:45:00","kkn":55.7,"sab":58.3,"xray":1.69E-06,"eej":76.3},{"vi":247.1,"tir":159.6,"jz":3.168,"kp":2,"utc":"2026-08-25 06:00:00","lza":60.2,"ez":126.7,"npt":"2026-08-25 11:45:00","kkn":63.3,"sab":66.3,"xray":1.84E-05,"eej":89.2},{"vi":224.7,"tir":151.1,"jz":2.881,"kp":2,"utc":"2026-08-25 07:00:00","lza":57.3,"ez":115.2,"npt":"2026-08-25 12:45:00","kkn":60.3,"sab":63.2,"xray":6.21E-06,"eej":84.1},{"vi":222.5,"tir":134.7,"jz":2.853,"kp":2,"utc":"2026-08-25 08:00:00","lza":51.8,"ez":114.1,"npt":"2026-08-25 13:45:00","kkn":54.4,"sab":57,"xray":1.96E-06,"eej":74.3},{"vi":364.8,"tir":141.6,"jz":4.677,"kp":2,"utc":"2026-08-25 09:00:00","lza":53.9,"ez":187.1,"npt":"2026-08-25 14:45:00","kkn":56.6,"sab":59.3,"xray":6.24E-05,"eej":78.6},{"vi":392.4,"tir":121,"jz":5.03,"kp":2,"utc":"2026-08-25 10:00:00","lza":46.7,"ez":201.2,"npt":"2026-08-25 15:45:00","kkn":49.1,"sab":51.4,"xray":7E-05,"eej":66.4},{"vi":264.2,"tir":79.9,"jz":3.387,"kp":2,"utc":"2026-08-25 11:00:00","lza":32.7,"ez":135.5,"npt":"2026-08-25 16:45:00","kkn":34.4,"sab":36,"xray":6.44E-06,"eej":42},{"vi":272.2,"tir":49.8,"jz":3.49,"kp":2,"utc":"2026-08-25 12:00:00","lza":22.4,"ez":139.6,"npt":"2026-08-25 17:45:00","kkn":23.5,"sab":24.5,"xray":4.79E-06,"eej":24.2},{"vi":283,"tir":41.2,"jz":3.628,"kp":2,"utc":"2026-08-25 13:00:00","lza":19.4,"ez":145.1,"npt":"2026-08-25 18:45:00","kkn":20.3,"sab":21.2,"xray":4.75E-06,"eej":19.1},{"vi":285.7,"tir":34.6,"jz":3.662,"kp":2,"utc":"2026-08-25 14:00:00","lza":17.2,"ez":146.5,"npt":"2026-08-25 19:45:00","kkn":18.1,"sab":18.8,"xray":1.75E-06,"eej":15.2},{"vi":292.3,"tir":33.8,"jz":3.748,"kp":2,"utc":"2026-08-25 15:00:00","lza":16.9,"ez":149.9,"npt":"2026-08-25 20:45:00","kkn":17.8,"sab":18.5,"xray":1.53E-06,"eej":14.7},{"vi":296,"tir":31.9,"jz":3.795,"kp":2,"utc":"2026-08-25 16:00:00","lza":16.3,"ez":151.8,"npt":"2026-08-25 21:45:00","kkn":17.1,"sab":17.8,"xray":1.15E-06,"eej":13.6},{"vi":297.2,"tir":31.1,"jz":3.811,"kp":2,"utc":"2026-08-25 17:00:00","lza":16,"ez":152.4,"npt":"2026-08-25 22:45:00","kkn":16.8,"sab":17.5,"xray":1.01E-06,"eej":13},{"vi":295.9,"tir":31.7,"jz":3.794,"kp":2,"utc":"2026-08-25 18:00:00","lza":16.2,"ez":151.7,"npt":"2026-08-25 23:45:00","kkn":17,"sab":17.7,"xray":1.11E-06,"eej":13.4},{"vi":291,"tir":30.3,"jz":3.73,"kp":2,"utc":"2026-08-25 19:00:00","lza":15.8,"ez":149.2,"npt":"2026-08-26 00:45:00","kkn":16.6,"sab":17.3,"xray":9.03E-07,"eej":12.6},{"vi":283.7,"tir":29.9,"jz":3.637,"kp":2,"utc":"2026-08-25 20:00:00","lza":15.6,"ez":145.5,"npt":"2026-08-26 01:45:00","kkn":16.4,"sab":17.1,"xray":8.42E-07,"eej":12.3},{"vi":274.4,"tir":30,"jz":3.518,"kp":2,"utc":"2026-08-25 21:00:00","lza":15.7,"ez":140.7,"npt":"2026-08-26 02:45:00","kkn":16.4,"sab":17.1,"xray":8.54E-07,"eej":12.4},{"vi":263.3,"tir":29,"jz":3.375,"kp":2,"utc":"2026-08-25 22:00:00","lza":15.3,"ez":135,"npt":"2026-08-26 03:45:00","kkn":16.1,"sab":16.8,"xray":7.31E-07,"eej":11.8},{"vi":251.9,"tir":30,"jz":3.23,"kp":2,"utc":"2026-08-25 23:00:00","lza":15.7,"ez":129.2,"npt":"2026-08-26 04:45:00","kkn":16.5,"sab":17.2,"xray":8.64E-07,"eej":12.4},{"vi":241.1,"tir":32.5,"jz":3.091,"kp":2,"utc":"2026-08-26 00:00:00","lza":16.5,"ez":123.6,"npt":"2026-08-26 05:45:00","kkn":17.3,"sab":18,"xray":1.26E-06,"eej":13.9},{"vi":229.8,"tir":51.2,"jz":2.946,"kp":2,"utc":"2026-08-26 01:00:00","lza":23,"ez":117.8,"npt":"2026-08-26 06:45:00","kkn":24.1,"sab":25.2,"xray":1.03E-06,"eej":24.9},{"vi":220.2,"tir":77.9,"jz":2.823,"kp":2,"utc":"2026-08-26 02:00:00","lza":32.2,"ez":112.9,"npt":"2026-08-26 07:45:00","kkn":33.9,"sab":35.4,"xray":9.32E-07,"eej":40.7},{"vi":212.8,"tir":101,"jz":2.728,"kp":2,"utc":"2026-08-26 03:00:00","lza":40.2,"ez":109.1,"npt":"2026-08-26 08:45:00","kkn":42.3,"sab":44.2,"xray":7.99E-07,"eej":54.3},{"vi":208,"tir":119.2,"jz":2.667,"kp":2,"utc":"2026-08-26 04:00:00","lza":46.5,"ez":106.7,"npt":"2026-08-26 09:45:00","kkn":48.9,"sab":51.2,"xray":6.83E-07,"eej":65.1},{"vi":206.6,"tir":132.6,"jz":2.649,"kp":2,"utc":"2026-08-26 05:00:00","lza":51.1,"ez":105.9,"npt":"2026-08-26 10:45:00","kkn":53.8,"sab":56.3,"xray":7.25E-07,"eej":73},{"vi":255,"tir":160.8,"jz":3.269,"kp":2,"utc":"2026-08-26 06:00:00","lza":60.6,"ez":130.8,"npt":"2026-08-26 11:45:00","kkn":63.7,"sab":66.8,"xray":2.2E-05,"eej":89.9},{"vi":213.8,"tir":140.7,"jz":2.741,"kp":2,"utc":"2026-08-26 07:00:00","lza":53.9,"ez":109.7,"npt":"2026-08-26 12:45:00","kkn":56.7,"sab":59.4,"xray":1.27E-06,"eej":77.8},{"vi":219.8,"tir":128.4,"jz":2.818,"kp":2,"utc":"2026-08-26 08:00:00","lza":49.7,"ez":112.7,"npt":"2026-08-26 13:45:00","kkn":52.2,"sab":54.7,"xray":7.47E-07,"eej":70.5},{"vi":229.1,"tir":112.5,"jz":2.937,"kp":2,"utc":"2026-08-26 09:00:00","lza":44.2,"ez":117.5,"npt":"2026-08-26 14:45:00","kkn":46.5,"sab":48.6,"xray":7.15E-07,"eej":61.1},{"vi":239.8,"tir":90.8,"jz":3.075,"kp":2,"utc":"2026-08-26 10:00:00","lza":36.7,"ez":123,"npt":"2026-08-26 15:45:00","kkn":38.6,"sab":40.4,"xray":6.76E-07,"eej":48.3},{"vi":253.3,"tir":70.4,"jz":3.248,"kp":2,"utc":"2026-08-26 11:00:00","lza":29.6,"ez":129.9,"npt":"2026-08-26 16:45:00","kkn":31.1,"sab":32.5,"xray":1.52E-06,"eej":36.3},{"vi":284.6,"tir":54.9,"jz":3.649,"kp":2,"utc":"2026-08-26 12:00:00","lza":24.1,"ez":146,"npt":"2026-08-26 17:45:00","kkn":25.2,"sab":26.4,"xray":1.04E-05,"eej":27.3},{"vi":275.3,"tir":32.6,"jz":3.53,"kp":2,"utc":"2026-08-26 13:00:00","lza":16.5,"ez":141.2,"npt":"2026-08-26 18:45:00","kkn":17.4,"sab":18.1,"xray":1.28E-06,"eej":14},{"vi":283.7,"tir":29.9,"jz":3.637,"kp":2,"utc":"2026-08-26 14:00:00","lza":15.6,"ez":145.5,"npt":"2026-08-26 19:45:00","kkn":16.4,"sab":17.1,"xray":8.4E-07,"eej":12.3},{"vi":291,"tir":30.6,"jz":3.731,"kp":2,"utc":"2026-08-26 15:00:00","lza":15.9,"ez":149.2,"npt":"2026-08-26 20:45:00","kkn":16.7,"sab":17.3,"xray":9.39E-07,"eej":12.8},{"vi":295.6,"tir":30.7,"jz":3.79,"kp":2,"utc":"2026-08-26 16:00:00","lza":15.9,"ez":151.6,"npt":"2026-08-26 21:45:00","kkn":16.7,"sab":17.4,"xray":9.62E-07,"eej":12.8},{"vi":297,"tir":30.4,"jz":3.808,"kp":2,"utc":"2026-08-26 17:00:00","lza":15.8,"ez":152.3,"npt":"2026-08-26 22:45:00","kkn":16.6,"sab":17.3,"xray":9.09E-07,"eej":12.6},{"vi":294.8,"tir":27.9,"jz":3.78,"kp":2,"utc":"2026-08-26 18:00:00","lza":15,"ez":151.2,"npt":"2026-08-26 23:45:00","kkn":15.7,"sab":16.4,"xray":6.18E-07,"eej":11.1},{"vi":292,"tir":33.1,"jz":3.744,"kp":2,"utc":"2026-08-26 19:00:00","lza":16.7,"ez":149.7,"npt":"2026-08-27 00:45:00","kkn":17.5,"sab":18.3,"xray":1.38E-06,"eej":14.2},{"vi":283.3,"tir":28.5,"jz":3.632,"kp":2,"utc":"2026-08-26 20:00:00","lza":15.2,"ez":145.3,"npt":"2026-08-27 01:45:00","kkn":15.9,"sab":16.6,"xray":6.77E-07,"eej":11.5},{"vi":280.2,"tir":39.2,"jz":3.592,"kp":2,"utc":"2026-08-26 21:00:00","lza":18.7,"ez":143.7,"npt":"2026-08-27 02:45:00","kkn":19.6,"sab":20.5,"xray":3.5E-06,"eej":17.9},{"vi":264.1,"tir":31.6,"jz":3.385,"kp":2,"utc":"2026-08-26 22:00:00","lza":16.2,"ez":135.4,"npt":"2026-08-27 03:45:00","kkn":17,"sab":17.7,"xray":1.09E-06,"eej":13.4},{"vi":252.2,"tir":30.9,"jz":3.233,"kp":2,"utc":"2026-08-26 23:00:00","lza":16,"ez":129.3,"npt":"2026-08-27 04:45:00","kkn":16.8,"sab":17.5,"xray":9.87E-07,"eej":13},{"vi":240.4,"tir":30.4,"jz":3.082,"kp":2,"utc":"2026-08-27 00:00:00","lza":15.8,"ez":123.3,"npt":"2026-08-27 05:45:00","kkn":16.6,"sab":17.3,"xray":9.17E-07,"eej":12.7},{"vi":239.1,"tir":61.9,"jz":3.066,"kp":2,"utc":"2026-08-27 01:00:00","lza":26.5,"ez":122.6,"npt":"2026-08-27 06:45:00","kkn":27.9,"sab":29.1,"xray":5.29E-06,"eej":31.4},{"vi":221.4,"tir":80.9,"jz":2.839,"kp":2,"utc":"2026-08-27 02:00:00","lza":33.2,"ez":113.6,"npt":"2026-08-27 07:45:00","kkn":34.9,"sab":36.5,"xray":1.48E-06,"eej":42.5},{"vi":214,"tir":104.4,"jz":2.743,"kp":2,"utc":"2026-08-27 03:00:00","lza":41.3,"ez":109.7,"npt":"2026-08-27 08:45:00","kkn":43.5,"sab":45.5,"xray":1.35E-06,"eej":56.4},{"vi":208.4,"tir":120.6,"jz":2.672,"kp":2,"utc":"2026-08-27 04:00:00","lza":47,"ez":106.9,"npt":"2026-08-27 09:45:00","kkn":49.4,"sab":51.7,"xray":8.56E-07,"eej":66},{"vi":207.7,"tir":136,"jz":2.663,"kp":2,"utc":"2026-08-27 05:00:00","lza":52.3,"ez":106.5,"npt":"2026-08-27 10:45:00","kkn":55,"sab":57.6,"xray":1.22E-06,"eej":75.1},{"vi":208.9,"tir":141.2,"jz":2.678,"kp":2,"utc":"2026-08-27 06:00:00","lza":54.1,"ez":107.1,"npt":"2026-08-27 11:45:00","kkn":56.9,"sab":59.6,"xray":1.09E-06,"eej":78.1},{"vi":213.8,"tir":140.7,"jz":2.741,"kp":2,"utc":"2026-08-27 07:00:00","lza":53.9,"ez":109.7,"npt":"2026-08-27 12:45:00","kkn":56.7,"sab":59.4,"xray":1.27E-06,"eej":77.8},{"vi":219.6,"tir":127.6,"jz":2.816,"kp":2,"utc":"2026-08-27 08:00:00","lza":49.4,"ez":112.6,"npt":"2026-08-27 13:45:00","kkn":52,"sab":54.4,"xray":6.58E-07,"eej":70},{"vi":229.3,"tir":113.5,"jz":2.94,"kp":2,"utc":"2026-08-27 09:00:00","lza":44.5,"ez":117.6,"npt":"2026-08-27 14:45:00","kkn":46.8,"sab":49,"xray":8.34E-07,"eej":61.7},{"vi":239.5,"tir":89,"jz":3.07,"kp":2,"utc":"2026-08-27 10:00:00","lza":36.1,"ez":122.8,"npt":"2026-08-27 15:45:00","kkn":38,"sab":39.7,"xray":5.19E-07,"eej":47.3},{"vi":251.3,"tir":64.2,"jz":3.222,"kp":2,"utc":"2026-08-27 11:00:00","lza":27.5,"ez":128.9,"npt":"2026-08-27 16:45:00","kkn":28.9,"sab":30.2,"xray":5.86E-07,"eej":32.6},{"vi":263.8,"tir":39.5,"jz":3.382,"kp":2,"utc":"2026-08-27 12:00:00","lza":18.9,"ez":135.3,"npt":"2026-08-27 17:45:00","kkn":19.9,"sab":20.7,"xray":9.77E-07,"eej":18},{"vi":274.2,"tir":29.4,"jz":3.516,"kp":2,"utc":"2026-08-27 13:00:00","lza":15.5,"ez":140.6,"npt":"2026-08-27 18:45:00","kkn":16.3,"sab":16.9,"xray":7.86E-07,"eej":12.1},{"vi":283,"tir":27.1,"jz":3.629,"kp":2,"utc":"2026-08-27 14:00:00","lza":14.7,"ez":145.1,"npt":"2026-08-27 19:45:00","kkn":15.4,"sab":16.1,"xray":5.47E-07,"eej":10.6},{"vi":290.2,"tir":26.9,"jz":3.72,"kp":2,"utc":"2026-08-27 15:00:00","lza":14.6,"ez":148.8,"npt":"2026-08-27 20:45:00","kkn":15.4,"sab":16,"xray":5.36E-07,"eej":10.6},{"vi":294.6,"tir":26.7,"jz":3.777,"kp":2,"utc":"2026-08-27 16:00:00","lza":14.6,"ez":151.1,"npt":"2026-08-27 21:45:00","kkn":15.3,"sab":15.9,"xray":5.2E-07,"eej":10.4},{"vi":296.3,"tir":27.5,"jz":3.799,"kp":2,"utc":"2026-08-27 17:00:00","lza":14.8,"ez":151.9,"npt":"2026-08-27 22:45:00","kkn":15.6,"sab":16.2,"xray":5.84E-07,"eej":10.9},{"vi":294.7,"tir":27.3,"jz":3.778,"kp":2,"utc":"2026-08-27 18:00:00","lza":14.8,"ez":151.1,"npt":"2026-08-27 23:45:00","kkn":15.5,"sab":16.1,"xray":5.65E-07,"eej":10.8},{"vi":290.1,"tir":26.4,"jz":3.719,"kp":2,"utc":"2026-08-27 19:00:00","lza":14.5,"ez":148.7,"npt":"2026-08-28 00:45:00","kkn":15.2,"sab":15.8,"xray":4.95E-07,"eej":10.3},{"vi":283,"tir":26.9,"jz":3.628,"kp":2,"utc":"2026-08-27 20:00:00","lza":14.6,"ez":145.1,"npt":"2026-08-28 01:45:00","kkn":15.4,"sab":16,"xray":5.35E-07,"eej":10.6},{"vi":273.9,"tir":28,"jz":3.511,"kp":2,"utc":"2026-08-27 21:00:00","lza":15,"ez":140.5,"npt":"2026-08-28 02:45:00","kkn":15.7,"sab":16.4,"xray":6.27E-07,"eej":11.2},{"vi":262.6,"tir":25.8,"jz":3.367,"kp":2,"utc":"2026-08-27 22:00:00","lza":14.3,"ez":134.7,"npt":"2026-08-28 03:45:00","kkn":15,"sab":15.6,"xray":4.51E-07,"eej":9.9},{"vi":251,"tir":26,"jz":3.218,"kp":2,"utc":"2026-08-27 23:00:00","lza":14.3,"ez":128.7,"npt":"2026-08-28 04:45:00","kkn":15.1,"sab":15.7,"xray":4.67E-07,"eej":10},{"vi":239.7,"tir":27.8,"jz":3.073,"kp":2,"utc":"2026-08-28 00:00:00","lza":14.9,"ez":122.9,"npt":"2026-08-28 05:45:00","kkn":15.7,"sab":16.3,"xray":6.13E-07,"eej":11.1}];
+        let timelineData = [];
         let currentIndex = 0;
         let isPlaying = false;
         let playInterval = null;
-        let playSpeed = 500;
+        let playSpeed = 400;
+        let syncedChart = null;
 
-        // 1. Inicializar Mapa Leaflet
+        // 1. Inicializar o Mapa Leaflet
         const map = L.map('map').setView([28.274, 85.450], 9);
         L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
             attribution: '&copy; OpenStreetMap &copy; CARTO'
         }).addTo(map);
 
-        // Estações Magnetométricas com Marcadores Dinâmicos
+        // Estações da Rede de Magnetômetros
         const stations = [
             { code: 'KKN', name: 'Kakani (Nepal - 56km)', lat: 27.801, lon: 85.280 },
             { code: 'LZA', name: 'Lhasa (Tibete - 561km)', lat: 29.645, lon: 91.035 },
@@ -253,74 +250,161 @@
         const stationMarkers = {};
         stations.forEach(st => {
             stationMarkers[st.code] = L.circleMarker([st.lat, st.lon], {
-                radius: 6, fillColor: '#f59e0b', color: '#ffffff', weight: 1, fillOpacity: 0.85
-            }).addTo(map).bindPopup(<b></b>);
+                radius: 6,
+                fillColor: '#f59e0b',
+                color: '#ffffff',
+                weight: 1,
+                fillOpacity: 0.85
+            }).addTo(map).bindPopup('<b>' + st.name + '</b><br>Monitoramento Geomagnético Regional');
         });
 
-        // Epicentro do Colapso Sísmico
+        // Marcador do Epicentro do Desastre
         const epicenterMarker = L.circleMarker([28.274, 85.483], {
-            radius: 12, fillColor: '#ef4444', color: '#ffffff', weight: 2, fillOpacity: 0.9
-        }).addTo(map).bindPopup('<b>💥 MACIÇO LANGTANG / LAGO LHENDE KHOLA</b><br>Colapso de 15M m³ e ruptura do lago.');
+            radius: 12,
+            fillColor: '#ef4444',
+            color: '#ffffff',
+            weight: 2,
+            fillOpacity: 0.9
+        }).addTo(map).bindPopup('<b>💥 MACIÇO LANGTANG / LAGO LHENDE KHOLA</b><br>Colapso Glacial de 15M m³ e Ruptura do Lago.');
 
-        // Marcador da Frente da Onda Fluvial
-        let floodMarker = L.circleMarker([28.274, 85.483], {
-            radius: 8, fillColor: '#06b6d4', color: '#ffffff', weight: 2, fillOpacity: 0.9
-        }).addTo(map);
+        // Marcador da Frente da Onda de Cheia
+        const floodMarker = L.circleMarker([28.274, 85.483], {
+            radius: 8,
+            fillColor: '#06b6d4',
+            color: '#ffffff',
+            weight: 2,
+            fillOpacity: 0.9
+        }).addTo(map).bindPopup('<b>🌊 FRENTE DA ONDA FLUVIAL</b>');
 
-        // 2. Gráfico Sincronizado com Linha de Tempo
-        const ctx = document.getElementById('syncedChart').getContext('2d');
-        const jzArray = timelineData.map(d => d.jz);
-        const labelsArray = timelineData.map(d => d.utc.substring(5, 13));
+        // Carregar o CSV diretamente via fetch
+        fetch('/data/processed/space_weather/jz_7day_magnetometer_inversion.csv')
+            .then(res => res.text())
+            .then(csvText => {
+                parseCsvData(csvText);
+                initChart();
+                updateFrame(0);
+            })
+            .catch(err => {
+                console.warn('Carregamento via fetch local falhou, usando fallback embutido...', err);
+                loadFallbackData();
+                initChart();
+                updateFrame(0);
+            });
 
-        const syncedChart = new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: labelsArray,
-                datasets: [{
-                    label: 'Jz (pA/m²)',
-                    data: jzArray,
-                    borderColor: '#06b6d4',
-                    borderWidth: 1.5,
-                    pointRadius: 0,
-                    tension: 0.2
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: { legend: { display: false } },
-                scales: {
-                    x: { display: false },
-                    y: {
-                        ticks: { color: '#94a3b8', font: { size: 10 } },
-                        grid: { color: '#1e293b' }
-                    }
+        function parseCsvData(text) {
+            const lines = text.trim().split('\n');
+            const headers = lines[0].split(',');
+            timelineData = [];
+
+            for (let i = 1; i < lines.length; i++) {
+                const cols = lines[i].split(',');
+                if (cols.length >= 16) {
+                    timelineData.push({
+                        utc: cols[0],
+                        npt: cols[1],
+                        xray: parseFloat(cols[2]),
+                        kp: parseFloat(cols[3]),
+                        kkn: parseFloat(cols[4]),
+                        lza: parseFloat(cols[5]),
+                        sab: parseFloat(cols[6]),
+                        abg: parseFloat(cols[9]),
+                        tir: parseFloat(cols[10]),
+                        eej: parseFloat(cols[12]),
+                        ey: parseFloat(cols[13]),
+                        vi: parseFloat(cols[14]),
+                        jz: parseFloat(cols[15]),
+                        ez: parseFloat(cols[16])
+                    });
                 }
             }
-        });
+            document.getElementById('timeSlider').max = timelineData.length - 1;
+        }
 
-        // 3. Atualização do Estado Espaço-Temporal
+        function loadFallbackData() {
+            // Gera 169 pontos de fallback se o CSV não estiver acessível
+            timelineData = [];
+            const start = new Date('2026-08-21T00:00:00Z').getTime();
+            for (let h = 0; h <= 168; h++) {
+                const cur = new Date(start + h * 3600 * 1000);
+                const utc = cur.toISOString().replace('T', ' ').substring(0, 19);
+                const npt = new Date(cur.getTime() + 345 * 60 * 1000).toISOString().replace('T', ' ').substring(0, 19);
+                
+                let xray = 2.5e-6;
+                let jz = 3.2;
+                let vi = 250;
+                let kkn = 20;
+                let lza = 18;
+                let tir = 35;
+                let eej = 15;
+
+                if (h === 106) { // Flare M7
+                    xray = 7.0e-5; jz = 5.03; vi = 392.4; kkn = 49.1; lza = 46.7; tir = 121; eej = 66.4;
+                } else if (h >= 120 && h <= 125) { // Desastre
+                    jz = 2.82; vi = 220; kkn = 33.9; lza = 32.2; tir = 77.9; eej = 40.7;
+                }
+
+                timelineData.push({
+                    utc: utc, npt: npt, xray: xray, kp: 2.0, kkn: kkn, lza: lza, sab: 20, abg: 15, tir: tir,
+                    eej: eej, ey: eej/85.0, vi: vi, jz: jz, ez: (jz*1e-12)/2.5e-14
+                });
+            }
+        }
+
+        function initChart() {
+            const ctx = document.getElementById('syncedChart').getContext('2d');
+            const jzArray = timelineData.map(d => d.jz);
+            const labelsArray = timelineData.map(d => d.utc.substring(5, 13));
+
+            syncedChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labelsArray,
+                    datasets: [{
+                        label: 'Jz (pA/m²)',
+                        data: jzArray,
+                        borderColor: '#06b6d4',
+                        backgroundColor: 'rgba(6, 182, 212, 0.15)',
+                        borderWidth: 1.5,
+                        pointRadius: 0,
+                        fill: true,
+                        tension: 0.2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        x: { display: false },
+                        y: {
+                            ticks: { color: '#94a3b8', font: { size: 10 } },
+                            grid: { color: '#1e293b' }
+                        }
+                    }
+                }
+            });
+        }
+
+        // 3. Atualizar Estado Espaço-Temporal
         function updateFrame(index) {
+            if (!timelineData || timelineData.length === 0) return;
             currentIndex = index;
             const d = timelineData[index];
 
-            // Atualizar Relógios
-            document.getElementById('clockUtc').innerText = UTC: ;
-            document.getElementById('clockNpt').innerText = NPT: ;
+            document.getElementById('clockUtc').innerText = 'UTC: ' + d.utc;
+            document.getElementById('clockNpt').innerText = 'NPT: ' + d.npt;
             document.getElementById('timeSlider').value = index;
 
-            // Atualizar Gauges
-            document.getElementById('gaugeJz').innerText = ${d.jz.toFixed(2)} pA/m²;
-            document.getElementById('gaugeEz').innerText = Ez:  V/m;
+            document.getElementById('gaugeJz').innerText = d.jz.toFixed(2) + ' pA/m²';
+            document.getElementById('gaugeEz').innerText = 'Ez: ' + d.ez.toFixed(0) + ' V/m';
             document.getElementById('gaugeXray').innerText = d.xray.toExponential(2);
-            document.getElementById('gaugeKp').innerText = Kp: ;
+            document.getElementById('gaugeKp').innerText = 'Kp: ' + d.kp.toFixed(2);
 
             // Dinâmica dos Magnetômetros
-            stationMarkers['KKN'].setRadius(Math.max(4, Math.min(16, d.kkn / 4.0)));
-            stationMarkers['LZA'].setRadius(Math.max(4, Math.min(16, d.lza / 4.0)));
-            stationMarkers['TIR'].setRadius(Math.max(4, Math.min(20, d.tir / 6.0)));
+            if (stationMarkers['KKN']) stationMarkers['KKN'].setRadius(Math.max(4, Math.min(16, d.kkn / 4.0)));
+            if (stationMarkers['LZA']) stationMarkers['LZA'].setRadius(Math.max(4, Math.min(16, d.lza / 4.0)));
+            if (stationMarkers['TIR']) stationMarkers['TIR'].setRadius(Math.max(4, Math.min(20, d.tir / 6.0)));
 
-            // Lógica Espacial e Narrativa de Eventos
             const hud = document.getElementById('hudIonoStatus');
             const narrative = document.getElementById('narrativeText');
             const gFlow = document.getElementById('gaugeFlow');
@@ -332,27 +416,30 @@
                 hud.innerText = '⚡ ERUPÇÃO SOLAR M7: Salto Ionosférico (VI = 392 kV)';
                 hud.className = 'fw-bold text-warning';
                 narrative.innerHTML = '<strong class="text-warning">☀️ 25/08 10:02 UTC:</strong> Flare solar de classe M7.0 registrado pelo GOES-18. Ionização imediata na Camada D e pico de corrente Jz no topo do Himalaia (5.03 pA/m²).';
-                epicenterMarker.setStyle({ fillColor: '#f59e0b' });
+                epicenterMarker.setStyle({ fillColor: '#f59e0b', radius: 16 });
+                floodMarker.setLatLng([28.274, 85.483]);
             } else if (d.utc.startsWith('2026-08-26 01')) {
                 hud.innerText = '🌧️ CONVECÇÃO PROFUNDA: Tempestade / Toró nas Cristas';
                 hud.className = 'fw-bold text-info';
                 narrative.innerHTML = '<strong class="text-info">⚡ 26/08 01:30 UTC:</strong> Célula convectiva severa descarrega chuvas torrenciais (85 mm) e relâmpagos frequentes nas cotas >4.200m com degelo Rain-on-Snow.';
+                epicenterMarker.setStyle({ fillColor: '#06b6d4', radius: 14 });
             } else if (d.utc.startsWith('2026-08-26 02')) {
                 hud.innerText = '💥 COLAPSO GLACIAL SÍSMICO: Queda de 15M m³ (4.4 mb)';
                 hud.className = 'fw-bold text-danger';
                 narrative.innerHTML = '<strong class="text-danger">💥 26/08 02:52:10 UTC:</strong> Desprendimento maciço de permafrost a 5.200m. Estrondo explosivo, tremor sísmico de 4.4 mb e ejeção da água do lago de 65,7 ha.';
-                epicenterMarker.setStyle({ fillColor: '#ef4444', radius: 20 });
+                epicenterMarker.setStyle({ fillColor: '#ef4444', radius: 22 });
+                floodMarker.setLatLng([28.274, 85.483]);
             } else if (d.utc.startsWith('2026-08-26 03')) {
                 hud.innerText = '🌊 RUPTURA E ENXURRADA: ~3.760 m³/s no Cânion';
                 hud.className = 'fw-bold text-danger';
-                narrative.innerHTML = '<strong class="text-danger">🌊 26/08 03:35 UTC:</strong> Transbordamento e ruptura da moraina temporária. Onda de cheia avança a 40 km/h destruindo pontes e atingindo a UHE Rasuwagadhi.';
+                narrative.innerHTML = '<strong class="text-danger">🌊 26/08 03:35 UTC:</strong> Transbordamento e ruptura da moraina temporária. Onda de cheia avança a 40 km/h destruindo 25 pontes e atingindo a UHE Rasuwagadhi.';
                 gFlow.innerText = '3.766 m³/s';
                 gSpeed.innerText = 'Velocidade: 11,2 m/s (40 km/h)';
                 gBridges.innerText = '25 / 33 Destruídas';
                 gStatus.innerText = 'ALERTA MÁXIMO DE CHEIA';
                 floodMarker.setLatLng([28.258, 85.378]); // UHE Rasuwagadhi
             } else {
-                hud.innerText = Ionosfera Operando (VI =  kV);
+                hud.innerText = 'Ionosfera em Regime Basal (VI = ' + d.vi.toFixed(0) + ' kV)';
                 hud.className = 'fw-bold text-info';
                 gFlow.innerText = '45 m³/s';
                 gSpeed.innerText = 'Velocidade: 2,1 m/s';
@@ -360,7 +447,7 @@
                 gStatus.innerText = 'Regime Normal';
                 epicenterMarker.setStyle({ fillColor: '#ef4444', radius: 10 });
                 floodMarker.setLatLng([28.274, 85.483]);
-                narrative.innerText = ${d.utc}: Monitoramento dos parâmetros eletrodinâmicos e hidrológicos da bacia.;
+                narrative.innerText = d.utc + ': Monitoramento dos parâmetros eletrodinâmicos e hidrológicos da bacia.';
             }
         }
 
@@ -369,7 +456,8 @@
             isPlaying = !isPlaying;
             const btn = document.getElementById('btnPlayPause');
             if (isPlaying) {
-                btn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+                btn.innerHTML = '<i class="fa-solid fa-pause me-1"></i> Pausar Animação';
+                btn.className = 'btn btn-sm btn-warning px-3 fw-bold';
                 playInterval = setInterval(() => {
                     if (currentIndex < timelineData.length - 1) {
                         updateFrame(currentIndex + 1);
@@ -378,7 +466,8 @@
                     }
                 }, playSpeed);
             } else {
-                btn.innerHTML = '<i class="fa-solid fa-play"></i>';
+                btn.innerHTML = '<i class="fa-solid fa-play me-1"></i> Iniciar Animação 4D';
+                btn.className = 'btn btn-sm btn-info px-3 fw-bold';
                 clearInterval(playInterval);
             }
         }
@@ -398,9 +487,6 @@
                 togglePlay();
             }
         }
-
-        // Inicializar no primeiro frame
-        updateFrame(0);
     </script>
 </body>
 </html>
