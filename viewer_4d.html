@@ -251,9 +251,32 @@
 
         // 1. Inicializar o Mapa Leaflet
         const map = L.map('map').setView([28.274, 85.450], 9);
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-            attribution: '&copy; OpenStreetMap &copy; CARTO'
-        }).addTo(map);
+        
+        // Camadas 100% Gratuitas e Abertas (Sem API Key / Sem Marca d'água)
+        const esriSatellite = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+            attribution: 'Tiles &copy; Esri &mdash; Source: Esri, Maxar, Earthstar Geographics',
+            maxZoom: 18
+        });
+
+        const esriTopo = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
+            attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
+            maxZoom: 18
+        });
+
+        const osmStandard = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors',
+            maxZoom: 18
+        });
+
+        esriSatellite.addTo(map);
+
+        // Controle de Camadas no Canto Superior Direito
+        L.control.layers({
+            "🛰️ Satélite Real (Esri)": esriSatellite,
+            "🏔️ Relevo Topográfico (Esri)": esriTopo,
+            "🗺️ OpenStreetMap Padrão": osmStandard
+        }, null, { position: 'topright' }).addTo(map);
+
 
         // Estações da Rede de Magnetômetros
         const stations = [
