@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infográfico Interativo: Catástrofe do Himalaia 2026, Toró, Sons e Descargas Elétricas (Jz)</title>
+    <title>Visualizador 4D Mestre: Catástrofe do Himalaia 2026</title>
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- FontAwesome 6 -->
@@ -16,344 +16,318 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <style>
         :root {
-            --bg-dark: #070b12;
-            --card-bg: #111827;
-            --border-color: #1f293d;
+            --bg-main: #06090e;
+            --panel-bg: #0f172a;
+            --border-color: #1e293b;
             --accent-cyan: #06b6d4;
-            --accent-blue: #3b82f6;
             --accent-yellow: #f59e0b;
             --accent-red: #ef4444;
             --accent-green: #10b981;
-            --accent-purple: #8b5cf6;
-            --text-main: #f8fafc;
+            --accent-purple: #a855f7;
+            --accent-blue: #3b82f6;
+            --accent-mud: #b45309;
+            --text-light: #f8fafc;
             --text-muted: #94a3b8;
         }
         body {
-            background-color: var(--bg-dark);
-            color: var(--text-main);
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-light);
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
         }
         .navbar {
-            background-color: rgba(17, 24, 39, 0.95) !important;
-            backdrop-filter: blur(12px);
+            background-color: rgba(15, 23, 42, 0.98) !important;
             border-bottom: 1px solid var(--border-color);
+            padding: 8px 16px;
         }
-        .card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-            margin-bottom: 24px;
-        }
-        .card-header {
-            background-color: rgba(7, 11, 18, 0.7);
-            border-bottom: 1px solid var(--border-color);
-            font-weight: 600;
-            color: var(--accent-cyan);
-        }
-        .stat-box {
-            background: linear-gradient(135deg, rgba(17,24,39,0.9), rgba(7,11,18,0.95));
-            border: 1px solid var(--border-color);
-            border-radius: 10px;
-            padding: 16px;
-            text-align: center;
-            transition: transform 0.2s, border-color 0.2s;
-        }
-        .stat-box:hover {
-            transform: translateY(-2px);
-            border-color: var(--accent-cyan);
-        }
-        .stat-value {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-top: 6px;
-        }
-        .stat-label {
+        .nav-link-btn {
             font-size: 0.8rem;
+            padding: 4px 10px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .nav-link-btn:hover {
+            transform: translateY(-1px);
+        }
+        #map-container {
+            position: relative;
+            height: 520px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+        }
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+        .telemetry-card {
+            background-color: var(--panel-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 10px 12px;
+            margin-bottom: 8px;
+        }
+        .gauge-val {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+        .gauge-lbl {
+            font-size: 0.72rem;
             color: var(--text-muted);
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
-        #map {
-            height: 520px;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
+        .badge-medido {
+            background-color: #065f46;
+            color: #34d399;
+            font-size: 0.65rem;
+            padding: 2px 5px;
+            border-radius: 3px;
         }
-        .slider-control {
+        .badge-modelo {
+            background-color: #78350f;
+            color: #fbbf24;
+            font-size: 0.65rem;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        .time-control-bar {
+            background-color: rgba(15, 23, 42, 0.98);
+            border-top: 1px solid var(--border-color);
+            padding: 12px 20px;
+            position: sticky;
+            bottom: 0;
+            z-index: 1000;
+        }
+        .time-slider {
             accent-color: var(--accent-cyan);
+            width: 100%;
             cursor: pointer;
         }
-        .btn-time-filter, .btn-sound-filter {
-            font-size: 0.8rem;
-            padding: 5px 12px;
-        }
-        .filter-btn-active {
-            background-color: var(--accent-cyan) !important;
-            color: #000 !important;
-            font-weight: bold;
-        }
-        .witness-card {
-            background: rgba(31, 41, 61, 0.4);
-            border-left: 4px solid var(--accent-cyan);
-            border-radius: 6px;
-            padding: 12px 14px;
-            margin-bottom: 12px;
+        .event-badge {
+            font-size: 0.75rem;
+            padding: 4px 8px;
+            border-radius: 4px;
             cursor: pointer;
             transition: all 0.2s;
         }
-        .witness-card:hover {
-            background: rgba(31, 41, 61, 0.8);
-            border-left-color: var(--accent-yellow);
-            transform: translateX(4px);
+        .event-badge:hover {
+            transform: scale(1.05);
         }
-        .witness-sound { border-left-color: var(--accent-yellow); }
-        .witness-electric { border-left-color: var(--accent-cyan); }
-        .witness-disaster { border-left-color: var(--accent-red); }
     </style>
 </head>
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-        <div class="container-fluid px-4">
+    <!-- Header Navigation with Direct Links to ALL Project Resources -->
+    <nav class="navbar navbar-expand-xl navbar-dark sticky-top">
+        <div class="container-fluid">
             <a class="navbar-brand fw-bold text-info" href="#">
-                <i class="fa-solid fa-bolt-lightning me-2"></i>HIMALAIA 2026: PAINEL INTERATIVO DE SONS, DESCARGAS & Jz
+                <i class="fa-solid fa-earth-asia me-2"></i>HIMALAIA 2026: VISUALIZADOR 4D & HUB GEOFÍSICO
             </a>
-            <div class="d-flex align-items-center gap-2">
-                <span class="badge bg-warning text-dark"><i class="fa-solid fa-volume-high me-1"></i> 4 Fases Sonoras</span>
-                <span class="badge bg-purple text-light" style="background-color: #8b5cf6;"><i class="fa-solid fa-cloud-bolt me-1"></i> Relâmpagos & Infrassom</span>
-                <span class="badge bg-info text-dark"><i class="fa-solid fa-satellite me-1"></i> 8 Magnetômetros</span>
+            
+            <div class="d-flex flex-wrap align-items-center gap-2">
+                <!-- Visualizadores Internos -->
+                <a href="/index.html" class="nav-link-btn bg-dark border border-info text-info"><i class="fa-solid fa-file-lines me-1"></i> Infográfico</a>
+                <a href="/earth_3d_satellite_radar_viewer.html" class="nav-link-btn bg-dark border border-primary text-primary"><i class="fa-solid fa-globe me-1"></i> Earth 3D & SAR</a>
+                <a href="/nepal_tibet_disaster_map.html" class="nav-link-btn bg-dark border border-warning text-warning"><i class="fa-solid fa-map-location-dot me-1"></i> Mapa GIS</a>
+                <a href="/infografico_solar_jz_tempestade.html" class="nav-link-btn bg-dark border border-danger text-danger"><i class="fa-solid fa-sun me-1"></i> Painel Solar/Jz</a>
+                
+                <!-- Downloads Diretos -->
+                <a href="/2026-08-12-00_00_2026-08-12-23_59_Sentinel-2_L2A_Highlight_Optimized_Natural_Color_.kmz" class="nav-link-btn bg-success text-white" download><i class="fa-solid fa-download me-1"></i> KMZ Sentinel-2 (2.1MB)</a>
+                <a href="/mapa_mestre_trishuli_google_earth.kml" class="nav-link-btn bg-secondary text-light" download><i class="fa-solid fa-cube me-1"></i> KML Earth</a>
+                
+                <!-- Relógios Sincronizados -->
+                <span class="badge bg-dark border border-secondary text-light ms-2" id="clockUtc">UTC: 2026-08-21 00:00:00</span>
+                <span class="badge bg-dark border border-secondary text-warning" id="clockNpt">NPT: 2026-08-21 05:45:00</span>
             </div>
         </div>
     </nav>
 
-    <div class="container-fluid px-4 py-4">
+    <!-- Main Workspace -->
+    <div class="container-fluid px-3 py-3">
         
-        <!-- Header Hero -->
-        <div class="card p-4 text-center border-info mb-4" style="background: linear-gradient(135deg, #111827, #070b12);">
-            <h2 class="fw-bold text-white mb-2">
-                Investigação Integrada: Sons, Infrassom, Descargas Elétricas e Dinâmica do Toró
-            </h2>
-            <p class="text-light mb-0 mx-auto" style="max-width: 1000px;">
-                Mapeamento analítico conectando os <strong>relatos auditivos de campo</strong> (estrondo de 4.4 mb, rugido de turbina e colisão de rochas), <strong>medições de descargas elétricas e relâmpagos</strong>, <strong>dados reais de 7 dias da NOAA SWPC</strong> e a <strong>rede regional de 8 magnetômetros (modelo EMBRACE/INPE)</strong>.
-            </p>
-        </div>
-
-        <!-- 5 Stat Summary Cards -->
-        <div class="row g-3 mb-4">
-            <div class="col-md">
-                <div class="stat-box">
-                    <div class="stat-label"><i class="fa-solid fa-sun text-warning me-1"></i> Erupção Solar (GOES)</div>
-                    <div class="stat-value text-warning">M7.0</div>
-                    <small class="text-muted">25 Ago 10:02 UTC</small>
-                </div>
-            </div>
-            <div class="col-md">
-                <div class="stat-box">
-                    <div class="stat-label"><i class="fa-solid fa-bolt text-info me-1"></i> Corrente Vertical Jz</div>
-                    <div class="stat-value text-info">5.03 pA/m²</div>
-                    <small class="text-muted">Salto no Topo (VI=392 kV)</small>
-                </div>
-            </div>
-            <div class="col-md">
-                <div class="stat-box">
-                    <div class="stat-label"><i class="fa-solid fa-cloud-bolt text-purple me-1" style="color: #a78bfa;"></i> Taxa de Relâmpagos</div>
-                    <div class="stat-value text-purple" style="color: #a78bfa;">42/hora</div>
-                    <small class="text-muted">Pico Convectivo às 02h UTC</small>
-                </div>
-            </div>
-            <div class="col-md">
-                <div class="stat-box">
-                    <div class="stat-label"><i class="fa-solid fa-wave-square text-danger me-1"></i> Infrassom & Onda</div>
-                    <div class="stat-value text-danger">3.2 Pa / 4.4 mb</div>
-                    <small class="text-muted">Colapso às 02:52:10 UTC</small>
-                </div>
-            </div>
-            <div class="col-md">
-                <div class="stat-box">
-                    <div class="stat-label"><i class="fa-solid fa-water text-primary me-1"></i> Lago no Circo</div>
-                    <div class="stat-value text-primary">65,7 ha</div>
-                    <small class="text-muted">3,27 a 7,10 M ton de Água</small>
-                </div>
-            </div>
-        </div>
-
-        <!-- Row 1: Interactive Charts (7 Days of Jz, Magnetometers, Lightning & Infrasound) -->
-        <div class="row">
+        <!-- Row 1: Map (with Tibetan/China Network & Animated Lake/Mud Flow) & Telemetry -->
+        <div class="row g-3">
+            
+            <!-- Left: 4D Spatio-Temporal Map -->
             <div class="col-lg-8">
-                <div class="card">
-                    <div class="card-header d-flex justify-content-between align-items-center flex-wrap gap-2">
-                        <span><i class="fa-solid fa-chart-line me-2"></i> Séries Temporais Integradas (21 a 28 de Agosto de 2026 - 169 Horas)</span>
-                        <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-outline-info btn-time-filter filter-btn-active" onclick="filterChartTime('all', this)">7 Dias Completos</button>
-                            <button type="button" class="btn btn-outline-info btn-time-filter" onclick="filterChartTime('flare', this)">25 Ago (Flare M7)</button>
-                            <button type="button" class="btn btn-outline-info btn-time-filter" onclick="filterChartTime('disaster', this)">26 Ago (Catástrofe)</button>
+                <div id="map-container">
+                    <div id="map"></div>
+                    
+                    <!-- HUD Status Superior -->
+                    <div style="position: absolute; top: 12px; left: 60px; z-index: 999; background: rgba(15,23,42,0.92); padding: 8px 14px; border-radius: 6px; border: 1px solid var(--border-color); backdrop-filter: blur(8px);">
+                        <div class="small text-muted d-flex justify-content-between">
+                            <span>CAMPO IONOSFÉRICO & GEOFÍSICA</span>
+                            <span class="badge-modelo ms-2">MODELO + DADOS DIRETOS</span>
                         </div>
+                        <div class="fw-bold text-info" id="hudIonoStatus">Ionosfera em Regime Basal (VI = 250 kV)</div>
                     </div>
-                    <div class="card-body">
-                        <!-- Chart 1: Jz e Potencial Ionosférico -->
-                        <div style="height: 250px;">
-                            <canvas id="jzChart"></canvas>
-                        </div>
-                        <hr class="border-secondary my-3">
-                        <!-- Chart 2: Relâmpagos & Infrassom -->
-                        <div style="height: 200px;">
-                            <canvas id="lightningChart"></canvas>
-                        </div>
-                        <hr class="border-secondary my-3">
-                        <!-- Chart 3: Magnetômetros & EEJ -->
-                        <div style="height: 180px;">
-                            <canvas id="magChart"></canvas>
-                        </div>
+
+                    <!-- Legenda Inferior do Mapa -->
+                    <div style="position: absolute; bottom: 16px; left: 16px; z-index: 999; background: rgba(15,23,42,0.92); padding: 6px 12px; border-radius: 6px; border: 1px solid var(--border-color);" class="small">
+                        <span class="me-2"><i class="fa-solid fa-circle text-danger"></i> Epicentro 4.4 mb</span>
+                        <span class="me-2"><i class="fa-solid fa-circle text-warning"></i> Magnetômetros (China + Índia + Nepal)</span>
+                        <span class="me-2"><i class="fa-solid fa-circle text-info"></i> Lago Lhende Khola</span>
+                        <span><i class="fa-solid fa-circle" style="color: #b45309;"></i> Enxurrada de Lama</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Col 2: Interactive Leaflet Map with Sound & Lightning Witnesses -->
+            <!-- Right: Real-time Telemetry with Explicit Labels -->
             <div class="col-lg-4">
-                <div class="card h-100">
-                    <div class="card-header d-flex justify-content-between align-items-center">
-                        <span><i class="fa-solid fa-map-location-dot me-2"></i> Mapeamento de Relatos e Sensores</span>
-                        <span class="badge bg-secondary">Clique nos Locais</span>
+                
+                <!-- Telemetry Gauges -->
+                <div class="row g-2 mb-2">
+                    <div class="col-6">
+                        <div class="telemetry-card">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="gauge-lbl"><i class="fa-solid fa-bolt text-info me-1"></i> Corrente Jz</span>
+                                <span class="badge-modelo">MODELO</span>
+                            </div>
+                            <div class="gauge-val text-info" id="gaugeJz">3.13 pA/m²</div>
+                            <small class="text-muted" id="gaugeEz">Ez: 125 V/m | VI: 244 kV</small>
+                        </div>
                     </div>
-                    <div class="card-body p-2">
-                        <div id="map"></div>
+                    <div class="col-6">
+                        <div class="telemetry-card">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="gauge-lbl"><i class="fa-solid fa-sun text-warning me-1"></i> Raios X GOES</span>
+                                <span class="badge-medido">MEDIDO</span>
+                            </div>
+                            <div class="gauge-val text-warning" id="gaugeXray">2.50e-6 W/m²</div>
+                            <small class="text-muted" id="gaugeKp">Kp: 2.00 (NOAA SWPC)</small>
+                        </div>
                     </div>
-                    <div class="card-footer small text-muted">
-                        <span class="me-2"><i class="fa-solid fa-circle text-danger me-1"></i> Epicentro Langtang</span>
-                        <span class="me-2"><i class="fa-solid fa-circle text-info me-1"></i> Relatos de Campo</span>
-                        <span><i class="fa-solid fa-circle text-warning me-1"></i> Magnetômetros</span>
+                    <div class="col-6">
+                        <div class="telemetry-card">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="gauge-lbl"><i class="fa-solid fa-cloud-bolt text-purple me-1" style="color: #a855f7;"></i> Chuva & Relâmpago</span>
+                                <span class="badge-modelo">MODELO/RADAR</span>
+                            </div>
+                            <div class="gauge-val" style="color: #a855f7;" id="gaugeLight">2 /h | 0.0 mm/h</div>
+                            <small class="text-muted" id="gaugeRadarDbz">Refletividade: 15 dBZ</small>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="telemetry-card">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="gauge-lbl"><i class="fa-solid fa-volume-high text-danger me-1"></i> Infrassom & Sismo</span>
+                                <span class="badge-medido">4.4mb MED / 104dB MOD</span>
+                            </div>
+                            <div class="gauge-val text-danger" id="gaugeInfra">0.1 Pa (74 dB)</div>
+                            <small class="text-muted" id="gaugeSeismic">Sismo: Ruído Basal</small>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="telemetry-card">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="gauge-lbl"><i class="fa-solid fa-water text-primary me-1"></i> Lago Lhende Khola</span>
+                                <span class="badge-modelo">MODELO</span>
+                            </div>
+                            <div class="gauge-val text-primary" id="gaugeLake">5.20 M m³ (100%)</div>
+                            <small class="text-muted" id="gaugeLakeStatus">Cota Normal (3.950m)</small>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="telemetry-card">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="gauge-lbl"><i class="fa-solid fa-bridge-water text-danger me-1"></i> Enxurrada & Pontes</span>
+                                <span class="badge-medido">25 PONTES MEDIDAS</span>
+                            </div>
+                            <div class="gauge-val text-danger" id="gaugeBridges">0 / 33</div>
+                            <small class="text-muted" id="gaugeFlow">Vazão: 45 m³/s (2.1 m/s)</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Ticker / Live Narrative -->
+                <div class="telemetry-card" style="height: 140px; overflow-y: auto;">
+                    <div class="gauge-lbl text-warning mb-1"><i class="fa-solid fa-radio me-1"></i> Registro Cronológico Sincronizado</div>
+                    <div class="small text-light" id="narrativeText">
+                        21 de Agosto de 2026: Monitoramento contínuo da ionosfera, rede trans-himalaia de magnetômetros e bacia do Trishuli. Condições basais de tempo bom.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Row 2: UNIFIED MULTI-AXIS CHART WITH 5 EVENT ANNOTATIONS -->
+        <div class="row mt-3">
+            <div class="col-12">
+                <div class="card p-3">
+                    <div class="d-flex justify-content-between align-items-center mb-2 flex-wrap gap-2">
+                        <span class="text-info fw-bold">
+                            <i class="fa-solid fa-chart-line me-2"></i> Gráfico Integrado Multi-Séries com 5 Marcos Críticos (Jz, Relâmpagos, Chuva e Raios X)
+                        </span>
+                        <div class="small text-muted">
+                            <span class="badge bg-dark border border-info text-info me-2"><i class="fa-solid fa-circle me-1"></i> Jz [Modelo] (pA/m²)</span>
+                            <span class="badge bg-dark border border-primary text-primary me-2"><i class="fa-solid fa-square me-1"></i> Chuva [Modelo/GPM] (mm/h)</span>
+                            <span class="badge bg-dark border text-purple me-2" style="border-color: #a855f7; color: #a855f7;"><i class="fa-solid fa-bolt me-1"></i> Relâmpagos [Modelo/WWLLN] (/h)</span>
+                            <span class="badge bg-dark border border-warning text-warning"><i class="fa-solid fa-sun me-1"></i> Raios X GOES [Medido]</span>
+                        </div>
+                    </div>
+                    <div style="height: 330px;">
+                        <canvas id="syncedChart"></canvas>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Row 2: Interactive Field Witnesses Panel & Toró Hydrological Simulator -->
-        <div class="row">
-            <!-- Testemunhos Interativos de Som e Eletricidade -->
-            <div class="col-lg-6">
-                <div class="card">
-                    <div class="card-header d-flex justify-content-between align-items-center flex-wrap gap-2">
-                        <span><i class="fa-solid fa-bullhorn me-2"></i> Relatos de Campo: Sons, Infrassom e Descargas Elétricas</span>
-                        <div class="btn-group btn-group-sm">
-                            <button type="button" class="btn btn-outline-light btn-sound-filter filter-btn-active" onclick="filterWitness('all', this)">Todos</button>
-                            <button type="button" class="btn btn-outline-warning btn-sound-filter" onclick="filterWitness('sound', this)">Sons / Infrassom</button>
-                            <button type="button" class="btn btn-outline-info btn-sound-filter" onclick="filterWitness('electric', this)">Descargas / Luzes</button>
-                        </div>
-                    </div>
-                    <div class="card-body" style="max-height: 460px; overflow-y: auto;">
-                        
-                        <!-- Relato 1: Posto de Rasuwagadhi -->
-                        <div class="witness-card witness-sound" onclick="flyToLocation(28.272, 85.385, 'Ponte da Amizade / Rasuwagadhi')">
-                            <div class="d-flex justify-content-between align-items-center mb-1">
-                                <strong class="text-warning"><i class="fa-solid fa-volume-high me-1"></i> Estrondo Explosivo e Vibração no Solo</strong>
-                                <span class="badge bg-dark text-muted">08h37 NPT (02h52 UTC)</span>
-                            </div>
-                            <p class="small text-light mb-1">
-                                <em>"Ouvimos um estrondo gigantesco, como se uma pedreira inteira tivesse explodido com dinamite no alto do vale. O chão tremeu por quase 2 minutos."</em>
-                            </p>
-                            <div class="d-flex justify-content-between small text-muted">
-                                <span><i class="fa-solid fa-location-dot me-1"></i> Ponte da Amizade (Miteri Bridge - 12 km)</span>
-                                <span class="text-info">Clique para ver no mapa</span>
+        <!-- Row 3: Project Files & Visualizers Directory -->
+        <div class="row mt-3 mb-4">
+            <div class="col-12">
+                <div class="card p-3 border-secondary">
+                    <h6 class="text-warning fw-bold mb-3"><i class="fa-solid fa-folder-open me-2"></i> Central de Visualizadores, Modelos e Arquivos Existentes no Projeto (C:\Users\haas\github\Himalaia_2026)</h6>
+                    <div class="row g-3 small">
+                        <div class="col-md-3">
+                            <div class="p-2 bg-dark rounded border border-secondary">
+                                <strong class="text-info">🌐 Visualizadores Web:</strong>
+                                <ul class="list-unstyled mt-1 mb-0">
+                                    <li>• <a href="/viewer_4d.html" class="text-light">viewer_4d.html</a> (Visualizador 4D Atual)</li>
+                                    <li>• <a href="/index.html" class="text-light">index.html</a> (Infográfico Mestre)</li>
+                                    <li>• <a href="/earth_3d_satellite_radar_viewer.html" class="text-light">earth_3d_satellite_radar_viewer.html</a></li>
+                                    <li>• <a href="/nepal_tibet_disaster_map.html" class="text-light">nepal_tibet_disaster_map.html</a></li>
+                                    <li>• <a href="/infografico_solar_jz_tempestade.html" class="text-light">infografico_solar_jz_tempestade.html</a></li>
+                                </ul>
                             </div>
                         </div>
-
-                        <!-- Relato 2: Parque Nacional de Langtang -->
-                        <div class="witness-card witness-sound" onclick="flyToLocation(28.220, 85.450, 'Parque Nacional de Langtang')">
-                            <div class="d-flex justify-content-between align-items-center mb-1">
-                                <strong class="text-warning"><i class="fa-solid fa-wind me-1"></i> Pressão no Ouvido, Infrassom e Onda de Vento</strong>
-                                <span class="badge bg-dark text-muted">08h45 NPT (03h00 UTC)</span>
-                            </div>
-                            <p class="small text-light mb-1">
-                                <em>"Sentimos uma pressão forte nos ouvidos, seguida por uma rajada violenta de vento frio descendo a garganta com zumbido grave de turbina antes da lama chegar."</em>
-                            </p>
-                            <div class="d-flex justify-content-between small text-muted">
-                                <span><i class="fa-solid fa-location-dot me-1"></i> Guardas Florestais do Langtang</span>
-                                <span class="text-info">Clique para ver no mapa</span>
+                        <div class="col-md-3">
+                            <div class="p-2 bg-dark rounded border border-secondary">
+                                <strong class="text-success">🛰️ Google Earth & Satélite (KMZ/KML):</strong>
+                                <ul class="list-unstyled mt-1 mb-0">
+                                    <li>• <a href="/2026-08-12-00_00_2026-08-12-23_59_Sentinel-2_L2A_Highlight_Optimized_Natural_Color_.kmz" class="text-light">Sentinel-2 Natural Color KMZ (2.13 MB)</a></li>
+                                    <li>• <a href="/mapa_mestre_trishuli_google_earth.kml" class="text-light">mapa_mestre_trishuli.kml (125 KB)</a></li>
+                                    <li>• <a href="/nepal_tibet_disaster.kml" class="text-light">nepal_tibet_disaster.kml (105 KB)</a></li>
+                                    <li>• <a href="/nepal_tibet_disaster_tour.kml" class="text-light">nepal_tibet_disaster_tour.kml (109 KB)</a></li>
+                                    <li>• <a href="/sentinel_lhende_khola_lake.tif" class="text-light">GeoTIFF Sentinel-2 Lago (3.17 MB)</a></li>
+                                </ul>
                             </div>
                         </div>
-
-                        <!-- Relato 3: UHE Rasuwagadhi -->
-                        <div class="witness-card witness-electric" onclick="flyToLocation(28.258, 85.378, 'UHE Rasuwagadhi (111 MW)')">
-                            <div class="d-flex justify-content-between align-items-center mb-1">
-                                <strong class="text-info"><i class="fa-solid fa-bolt me-1"></i> Arcos Voltaicos (Flashovers) e Choque de Rochas</strong>
-                                <span class="badge bg-dark text-muted">09h25 NPT (03h40 UTC)</span>
-                            </div>
-                            <p class="small text-light mb-1">
-                                <em>"Quando a torrente atingiu as comportas, matacões gigantes batiam como britadores. A queda das linhas de 132/220 kV gerou clarões azuis intensos de curto-circuito."</em>
-                            </p>
-                            <div class="d-flex justify-content-between small text-muted">
-                                <span><i class="fa-solid fa-location-dot me-1"></i> UHE Rasuwagadhi (111 MW)</span>
-                                <span class="text-info">Clique para ver no mapa</span>
+                        <div class="col-md-3">
+                            <div class="p-2 bg-dark rounded border border-secondary">
+                                <strong class="text-warning">📊 Séries de Dados Brutos & Processados:</strong>
+                                <ul class="list-unstyled mt-1 mb-0">
+                                    <li>• <a href="/data/processed/space_weather/jz_7day_magnetometer_inversion.csv" class="text-light">jz_7day_magnetometer_inversion.csv</a></li>
+                                    <li>• <a href="/data/raw/space_weather/goes_xrays_7day_real.json" class="text-light">goes_xrays_7day_real.json (4.48 MB)</a></li>
+                                    <li>• <a href="/data/raw/space_weather/goes_integral_protons_real.json" class="text-light">goes_integral_protons_real.json</a></li>
+                                    <li>• <a href="/data/rio_trishuli_thalweg_oficial_osm.geojson" class="text-light">rio_trishuli_thalweg (2.979 nós OSM)</a></li>
+                                    <li>• <a href="/data/hot_flood_npl_bridges_damage_icimod.geojson" class="text-light">hot_flood_npl_bridges (33 pontes)</a></li>
+                                </ul>
                             </div>
                         </div>
-
-                        <!-- Relato 4: Kyirong / Tibete -->
-                        <div class="witness-card witness-electric" onclick="flyToLocation(28.390, 85.330, 'Gyirong / Kyirong (Tibete)')">
-                            <div class="d-flex justify-content-between align-items-center mb-1">
-                                <strong class="text-info"><i class="fa-solid fa-wand-magic-sparkles me-1"></i> Relâmpagos de Crista e Clarões de Piezoeletricidade</strong>
-                                <span class="badge bg-dark text-muted">07h30-08h37 NPT</span>
-                            </div>
-                            <p class="small text-light mb-1">
-                                <em>"Trovões contínuos batiam nos paredões de rocha com relâmpagos no topo. No instante do estrondo, clarões azulados iluminaram a linha de crista da fronteira."</em>
-                            </p>
-                            <div class="d-flex justify-content-between small text-muted">
-                                <span><i class="fa-solid fa-location-dot me-1"></i> Posto de Defesa Civil de Gyirong (18 km Norte)</span>
-                                <span class="text-info">Clique para ver no mapa</span>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <!-- Toró Interactive Simulator -->
-            <div class="col-lg-6">
-                <div class="card">
-                    <div class="card-header">
-                        <i class="fa-solid fa-calculator me-2"></i> Simulador Interativo do Balanço Hídrico do "Toró"
-                    </div>
-                    <div class="card-body">
-                        <div class="mb-3">
-                            <label class="form-label d-flex justify-content-between">
-                                <span>Volume do Lago de Circo (~3.950m):</span>
-                                <span id="lblLakeVol" class="text-info fw-bold">4.50 M m³ (toneladas)</span>
-                            </label>
-                            <input type="range" class="form-range slider-control" id="rangeLakeVol" min="2.0" max="8.0" step="0.1" value="4.5">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label d-flex justify-content-between">
-                                <span>Precipitação do Toró na Bacia (55 km²):</span>
-                                <span id="lblRain" class="text-warning fw-bold">85 mm (4.68 M m³)</span>
-                            </label>
-                            <input type="range" class="form-range slider-control" id="rangeRain" min="20" max="180" step="5" value="85">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label d-flex justify-content-between">
-                                <span>Degelo Térmico Nival (Rain-on-Snow >4.200m):</span>
-                                <span id="lblSnow" class="text-primary fw-bold">18 mm (+0.50 M m³)</span>
-                            </label>
-                            <input type="range" class="form-range slider-control" id="rangeSnow" min="0" max="40" step="2" value="18">
-                        </div>
-
-                        <div class="stat-box mt-3 p-3 text-start">
-                            <div class="d-flex justify-content-between align-items-center mb-2">
-                                <span class="text-muted">Massa Líquida Total em Movimento:</span>
-                                <span id="resTotalVol" class="fs-5 fw-bold text-success">9.68 Milhões de m³</span>
-                            </div>
-                            <div class="d-flex justify-content-between align-items-center mb-2">
-                                <span class="text-muted">Vazão Afluente Média no Barramento:</span>
-                                <span id="resFlow" class="fs-5 fw-bold text-warning">3.766 m³/s</span>
-                            </div>
-                            <div class="d-flex justify-content-between align-items-center mb-2">
-                                <span class="text-muted">Tempo até Rompimento da Moraina:</span>
-                                <span id="resTime" class="fs-5 fw-bold text-danger">42 min e 50 s</span>
-                            </div>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <span class="text-muted">Velocidade da Onda de Choque Acústica no Cânion:</span>
-                                <span class="fs-6 fw-bold text-info">340 m/s (1.224 km/h) vs Enxurrada a 40,3 km/h</span>
+                        <div class="col-md-3">
+                            <div class="p-2 bg-dark rounded border border-secondary">
+                                <strong class="text-primary">📑 Relatórios Técnicos Markdown:</strong>
+                                <ul class="list-unstyled mt-1 mb-0">
+                                    <li>• <a href="/FONTES_E_REFERENCIAS_CIENTIFICAS.md" class="text-light">FONTES_E_REFERENCIAS_CIENTIFICAS.md</a></li>
+                                    <li>• <a href="/relatorio_honesto_toro_e_jz.md" class="text-light">relatorio_honesto_toro_e_jz.md</a></li>
+                                    <li>• <a href="/levantamento_relatos_som_descargas_eletricas.md" class="text-light">levantamento_relatos_som_descargas.md</a></li>
+                                    <li>• <a href="/rede_8_magnetometros_inversao_jz_7dias.md" class="text-light">rede_8_magnetometros_inversao_jz.md</a></li>
+                                    <li>• <a href="/conta_hidrologica_inversa_toro.md" class="text-light">conta_hidrologica_inversa_toro.md</a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -363,210 +337,60 @@
 
     </div>
 
-    <!-- Lógica Interativa JavaScript -->
+    <!-- Bottom: 4D Time Scrubber Bar -->
+    <div class="time-control-bar">
+        <div class="container-fluid">
+            
+            <!-- Quick Milestones Buttons -->
+            <div class="d-flex justify-content-between align-items-center mb-2 flex-wrap gap-1">
+                <span class="small text-muted me-2"><i class="fa-solid fa-forward-step me-1"></i> Pular para os Marcos Críticos:</span>
+                <span class="event-badge bg-secondary text-light" onclick="jumpToHour(0)">21 Ago 00h (Início)</span>
+                <span class="event-badge bg-warning text-dark fw-bold" onclick="jumpToHour(106)">☀️ 25 Ago 10h (Flare M7)</span>
+                <span class="event-badge bg-info text-dark" onclick="jumpToHour(120)">🌧️ 26 Ago 00h (Início Toró)</span>
+                <span class="event-badge bg-purple text-light fw-bold" style="background-color: #a855f7;" onclick="jumpToHour(121)">⚡ 26 Ago 01h (Pico Toró & Relâmpagos)</span>
+                <span class="event-badge bg-danger text-light fw-bold" onclick="jumpToHour(122)">💥 26 Ago 02h52 (Colapso 4.4mb / 104dB)</span>
+                <span class="event-badge bg-primary text-light fw-bold" onclick="jumpToHour(123)">🌊 26 Ago 03h35 (Ruptura & Lama)</span>
+                <span class="event-badge bg-danger text-light" onclick="jumpToHour(124)">🌉 26 Ago 04h (Destruição das Pontes)</span>
+                <span class="event-badge bg-secondary text-light" onclick="jumpToHour(168)">28 Ago 00h (Fim)</span>
+            </div>
+
+            <!-- Time Slider & Playback Controls -->
+            <div class="d-flex align-items-center gap-3">
+                <button class="btn btn-sm btn-info px-3 fw-bold" id="btnPlayPause" onclick="togglePlay()">
+                    <i class="fa-solid fa-play me-1"></i> Iniciar Animação 4D
+                </button>
+                <input type="range" class="form-range time-slider" id="timeSlider" min="0" max="168" value="0" oninput="onSliderInput(this.value)">
+                
+                <div class="d-flex align-items-center gap-2" style="min-width: 130px;">
+                    <span class="small text-muted">Vel:</span>
+                    <select class="form-select form-select-sm bg-dark text-light border-secondary" id="speedSelect" onchange="changeSpeed(this.value)">
+                        <option value="800">1x (Lento)</option>
+                        <option value="400" selected>2x (Normal)</option>
+                        <option value="150">5x (Rápido)</option>
+                        <option value="50">15x (Ultra)</option>
+                    </select>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Script Principal JavaScript -->
     <script>
-        const allLabels = ['08-21 00:00','08-21 01:00','08-21 02:00','08-21 03:00','08-21 04:00','08-21 05:00','08-21 06:00','08-21 07:00','08-21 08:00','08-21 09:00','08-21 10:00','08-21 11:00','08-21 12:00','08-21 13:00','08-21 14:00','08-21 15:00','08-21 16:00','08-21 17:00','08-21 18:00','08-21 19:00','08-21 20:00','08-21 21:00','08-21 22:00','08-21 23:00','08-22 00:00','08-22 01:00','08-22 02:00','08-22 03:00','08-22 04:00','08-22 05:00','08-22 06:00','08-22 07:00','08-22 08:00','08-22 09:00','08-22 10:00','08-22 11:00','08-22 12:00','08-22 13:00','08-22 14:00','08-22 15:00','08-22 16:00','08-22 17:00','08-22 18:00','08-22 19:00','08-22 20:00','08-22 21:00','08-22 22:00','08-22 23:00','08-23 00:00','08-23 01:00','08-23 02:00','08-23 03:00','08-23 04:00','08-23 05:00','08-23 06:00','08-23 07:00','08-23 08:00','08-23 09:00','08-23 10:00','08-23 11:00','08-23 12:00','08-23 13:00','08-23 14:00','08-23 15:00','08-23 16:00','08-23 17:00','08-23 18:00','08-23 19:00','08-23 20:00','08-23 21:00','08-23 22:00','08-23 23:00','08-24 00:00','08-24 01:00','08-24 02:00','08-24 03:00','08-24 04:00','08-24 05:00','08-24 06:00','08-24 07:00','08-24 08:00','08-24 09:00','08-24 10:00','08-24 11:00','08-24 12:00','08-24 13:00','08-24 14:00','08-24 15:00','08-24 16:00','08-24 17:00','08-24 18:00','08-24 19:00','08-24 20:00','08-24 21:00','08-24 22:00','08-24 23:00','08-25 00:00','08-25 01:00','08-25 02:00','08-25 03:00','08-25 04:00','08-25 05:00','08-25 06:00','08-25 07:00','08-25 08:00','08-25 09:00','08-25 10:00','08-25 11:00','08-25 12:00','08-25 13:00','08-25 14:00','08-25 15:00','08-25 16:00','08-25 17:00','08-25 18:00','08-25 19:00','08-25 20:00','08-25 21:00','08-25 22:00','08-25 23:00','08-26 00:00','08-26 01:00','08-26 02:00','08-26 03:00','08-26 04:00','08-26 05:00','08-26 06:00','08-26 07:00','08-26 08:00','08-26 09:00','08-26 10:00','08-26 11:00','08-26 12:00','08-26 13:00','08-26 14:00','08-26 15:00','08-26 16:00','08-26 17:00','08-26 18:00','08-26 19:00','08-26 20:00','08-26 21:00','08-26 22:00','08-26 23:00','08-27 00:00','08-27 01:00','08-27 02:00','08-27 03:00','08-27 04:00','08-27 05:00','08-27 06:00','08-27 07:00','08-27 08:00','08-27 09:00','08-27 10:00','08-27 11:00','08-27 12:00','08-27 13:00','08-27 14:00','08-27 15:00','08-27 16:00','08-27 17:00','08-27 18:00','08-27 19:00','08-27 20:00','08-27 21:00','08-27 22:00','08-27 23:00','08-28 00:00'];
-        const allXray = [2.5E-06,3.76E-06,6.71E-06,2.03E-06,1.08E-06,1.83E-06,6.22E-06,2.12E-06,1.42E-06,1.65E-05,1.69E-05,1.23E-05,8.54E-06,5.52E-06,4.11E-06,3.24E-06,2.28E-06,3.45E-06,2.63E-06,1.25E-06,4.02E-06,3.96E-06,1.5E-06,1.19E-06,1.01E-06,1.2E-06,1.04E-06,1.01E-06,8.27E-07,1.04E-06,1.13E-06,1.1E-06,1.34E-06,1.73E-06,1.64E-06,1.08E-06,8.7E-07,1.12E-06,9.74E-07,7.67E-07,7.77E-07,6.88E-07,1.44E-06,7.16E-07,9.33E-07,9.09E-07,1.02E-06,9.78E-07,1.26E-06,1.2E-06,9.33E-07,7.74E-07,1.12E-06,1.15E-06,4.16E-06,3.84E-06,1.06E-06,9.16E-07,1.7E-06,8.61E-07,1.07E-06,1.75E-06,1.04E-06,9.51E-07,1.49E-06,1.1E-06,1.23E-06,2.78E-06,1.17E-06,2.97E-06,3.54E-06,9.38E-07,9.1E-07,7.9E-07,9.38E-07,8.77E-07,8.99E-07,6.98E-07,7.11E-07,2.23E-06,1.41E-06,1.48E-06,1.16E-06,1.24E-06,9.36E-07,7.54E-07,7.48E-07,9.14E-07,9.94E-07,1.46E-06,1.96E-06,1.78E-05,7.18E-06,2.02E-06,2.15E-06,1.46E-06,1.03E-06,1.99E-05,4.76E-06,5.38E-06,1.04E-05,1.69E-06,1.84E-05,6.21E-06,1.96E-06,6.24E-05,7E-05,6.44E-06,4.79E-06,4.75E-06,1.75E-06,1.53E-06,1.15E-06,1.01E-06,1.11E-06,9.03E-07,8.42E-07,8.54E-07,7.31E-07,8.64E-07,1.26E-06,1.03E-06,9.32E-07,7.99E-07,6.83E-07,7.25E-07,2.2E-05,1.27E-06,7.47E-07,7.15E-07,6.76E-07,1.52E-06,1.04E-05,1.28E-06,8.4E-07,9.39E-07,9.62E-07,9.09E-07,6.18E-07,1.38E-06,6.77E-07,3.5E-06,1.09E-06,9.87E-07,9.17E-07,5.29E-06,1.48E-06,1.35E-06,8.56E-07,1.22E-06,1.09E-06,1.27E-06,6.58E-07,8.34E-07,5.19E-07,5.86E-07,9.77E-07,7.86E-07,5.47E-07,5.36E-07,5.2E-07,5.84E-07,5.65E-07,4.95E-07,5.35E-07,6.27E-07,4.51E-07,4.67E-07,6.13E-07];
-        const allKp = [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2];
-        const allKkn = [18.9,27.1,38.3,44.4,49.9,55.9,60.8,57.8,53.7,53.6,45.8,35.8,24.8,20.7,20,19.5,18.7,19.6,19,17.3,19.9,19.9,17.7,17.2,16.8,24.5,34.1,42.8,49.3,54.6,57,56.4,53.6,48.5,40.6,30.3,19.6,17.1,16.7,16.2,16.2,16,17.6,16,16.6,16.6,16.8,16.8,17.3,24.5,33.9,42.2,50,54.8,59.9,59.2,53,47,40.7,29.8,20.1,18.1,16.9,16.7,17.7,17,17.3,19.1,17.2,19.3,19.7,16.7,16.6,23.6,33.9,42.5,49.5,53.7,55.9,57.9,53.7,48.1,39.8,30.6,19.8,16.2,16.1,16.6,16.8,17.7,18.3,23.3,21.3,18.4,18.5,17.7,16.9,30.8,37.5,46.6,55.1,55.7,63.3,60.3,54.4,56.6,49.1,34.4,23.5,20.3,18.1,17.8,17.1,16.8,17,16.6,16.4,16.4,16.1,16.5,17.3,24.1,33.9,42.3,48.9,53.8,63.7,56.7,52.2,46.5,38.6,31.1,25.2,17.4,16.4,16.7,16.7,16.6,15.7,17.5,15.9,19.6,17,16.8,16.6,27.9,34.9,43.5,49.4,55,56.9,56.7,52,46.8,38,28.9,19.9,16.3,15.4,15.4,15.3,15.6,15.5,15.2,15.4,15.7,15,15.1,15.7];
-        const allLza = [18,25.8,36.5,42.2,47.5,53.1,57.9,55,51.1,51,43.7,34.1,23.6,19.7,19.1,18.6,17.8,18.7,18.1,16.5,19,19,16.9,16.4,16,23.3,32.4,40.7,46.9,51.9,54.2,53.6,50.9,46.1,38.6,28.8,18.7,16.2,15.9,15.4,15.5,15.2,16.8,15.3,15.9,15.8,16,16,16.5,23.3,32.2,40.1,47.6,52.1,57,56.3,50.4,44.7,38.7,28.4,19.1,17.2,16.1,15.9,16.9,16.2,16.4,18.2,16.4,18.4,18.7,15.9,15.8,22.4,32.2,40.4,47.1,51,53.1,55.1,51,45.7,37.8,29.2,18.8,15.4,15.4,15.8,16,16.8,17.5,22.3,20.3,17.5,17.7,16.8,16.1,29.4,35.7,44.3,52.4,53,60.2,57.3,51.8,53.9,46.7,32.7,22.4,19.4,17.2,16.9,16.3,16,16.2,15.8,15.6,15.7,15.3,15.7,16.5,23,32.2,40.2,46.5,51.1,60.6,53.9,49.7,44.2,36.7,29.6,24.1,16.5,15.6,15.9,15.9,15.8,15,16.7,15.2,18.7,16.2,16,15.8,26.5,33.2,41.3,47,52.3,54.1,53.9,49.4,44.5,36.1,27.5,18.9,15.5,14.7,14.6,14.6,14.8,14.8,14.5,14.6,15,14.3,14.3,14.9];
-        const allTir = [37,59.7,90.8,107.1,122.1,138.6,152.6,144,132.6,132.9,111.7,84.1,53.6,42.1,40.2,38.7,36.4,39.1,37.3,32.4,40.1,40,33.7,32.1,31,52.2,78.6,102.5,120.4,135,141.5,139.8,132.2,118.2,96.5,68.2,38.7,31.7,30.8,29.3,29.4,28.6,33.4,28.8,30.6,30.4,31.1,30.9,32.5,52.2,77.9,100.8,122.4,135.6,149.9,147.9,130.7,114.1,96.8,66.7,40.1,34.6,31.3,30.7,33.6,31.6,32.3,37.7,32.1,38.1,39.2,30.6,30.4,49.5,77.9,101.6,121,132.3,138.4,144.4,132.5,117.2,94.3,69.1,39.2,29.2,29.1,30.4,31,33.5,35.4,49.8,43.8,35.6,36,33.5,31.2,70.5,88.5,113.4,136.9,138.1,159.6,151.1,134.7,141.6,121,79.9,49.8,41.2,34.6,33.8,31.9,31.1,31.7,30.3,29.9,30,29,30,32.5,51.2,77.9,101,119.2,132.6,160.8,140.7,128.4,112.5,90.8,70.4,54.9,32.6,29.9,30.6,30.7,30.4,27.9,33.1,28.5,39.2,31.6,30.9,30.4,61.9,80.9,104.4,120.6,136,141.2,140.7,127.6,113.5,89,64.2,39.5,29.4,27.1,26.9,26.7,27.5,27.3,26.4,26.9,28,25.8,26,27.8];
-        const allEej = [16.6,30,48.4,58,66.9,76.6,84.9,79.8,73,73.4,60.9,44.5,26.5,19.7,18.5,17.6,16.2,17.8,16.8,13.9,18.4,18.4,14.6,13.7,13,25.6,41.1,55.2,65.8,74.4,78.3,77.3,72.8,64.6,51.7,35,17.6,13.4,12.9,12,12,11.5,14.4,11.7,12.7,12.6,13.1,12.9,13.9,25.5,40.7,54.2,67,74.8,83.4,82.2,71.9,62.1,51.9,34.1,18.4,15.2,13.2,12.8,14.6,13.4,13.8,17,13.6,17.3,17.9,12.7,12.6,23.9,40.7,54.7,66.2,72.9,76.5,80,73,64,50.4,35.5,17.8,11.9,11.9,12.6,13,14.5,15.6,24.3,20.7,15.7,16,14.5,13.1,36.5,47.1,61.8,75.7,76.3,89.2,84.1,74.3,78.6,66.4,42,24.2,19.1,15.2,14.7,13.6,13,13.4,12.6,12.3,12.4,11.8,12.4,13.9,24.9,40.7,54.3,65.1,73,89.9,77.8,70.5,61.1,48.3,36.3,27.3,14,12.3,12.8,12.8,12.6,11.1,14.2,11.5,17.9,13.4,13,12.7,31.4,42.5,56.4,66,75.1,78.1,77.8,70,61.7,47.3,32.6,18,12.1,10.6,10.6,10.4,10.9,10.8,10.3,10.6,11.2,9.9,10,11.1];
-        const allVi = [243.9,235.8,232.9,215.5,208.9,209,220.2,215.7,221.3,263.9,275.6,277.2,280.4,284.6,290.9,296.1,298.5,302.6,299.3,291.7,290.7,281.2,265,252.6,240.6,230.1,220.5,213.2,208.4,207.3,209,213.5,221.1,231.3,242,252.4,263.6,275,284,290.7,295.2,296.5,296.6,290.5,283.9,274.5,263.9,252.2,241.1,230.1,220.2,212.7,209,207.5,215.7,219.5,220.5,229.5,242.1,251.9,264,276.3,284.1,291.1,296.7,297.4,296.2,295.1,284.4,279,269.4,252.1,240.4,229.2,220.2,213,208.5,206.5,208.1,215.9,221.3,230.8,240.9,252.7,263.7,274.2,283.5,291,295.7,298.2,297.8,328.1,297.6,276.9,266.4,253.2,240.6,271.3,228.6,222.9,229.4,208.7,247.1,224.7,222.5,364.8,392.4,264.2,272.2,283,285.7,292.3,296,297.2,295.9,291,283.7,274.4,263.3,251.9,241.1,229.8,220.2,212.8,208,206.6,255,213.8,219.8,229.1,239.8,253.3,284.6,275.3,283.7,291,295.6,297,294.8,292,283.3,280.2,264.1,252.2,240.4,239.1,221.4,214,208.4,207.7,208.9,213.8,219.6,229.3,239.5,251.3,263.8,274.2,283,290.2,294.6,296.3,294.7,290.1,283,273.9,262.6,251,239.7];
-        const allJz = [3.126,3.023,2.986,2.763,2.678,2.68,2.823,2.765,2.837,3.383,3.534,3.553,3.595,3.649,3.729,3.796,3.827,3.879,3.837,3.74,3.727,3.605,3.397,3.239,3.084,2.951,2.827,2.734,2.671,2.658,2.68,2.737,2.835,2.966,3.102,3.235,3.379,3.525,3.641,3.726,3.784,3.801,3.803,3.725,3.639,3.519,3.383,3.233,3.091,2.95,2.824,2.727,2.679,2.661,2.765,2.814,2.827,2.942,3.104,3.229,3.385,3.543,3.643,3.732,3.804,3.813,3.797,3.783,3.646,3.577,3.454,3.232,3.081,2.939,2.824,2.73,2.673,2.648,2.668,2.768,2.837,2.958,3.088,3.24,3.381,3.515,3.634,3.731,3.79,3.823,3.818,4.207,3.816,3.551,3.415,3.246,3.085,3.478,2.931,2.857,2.942,2.676,3.168,2.881,2.853,4.677,5.03,3.387,3.49,3.628,3.662,3.748,3.795,3.811,3.794,3.73,3.637,3.518,3.375,3.23,3.091,2.946,2.823,2.728,2.667,2.649,3.269,2.741,2.818,2.937,3.075,3.248,3.649,3.53,3.637,3.731,3.79,3.808,3.78,3.744,3.632,3.592,3.385,3.233,3.082,3.066,2.839,2.743,2.672,2.663,2.678,2.741,2.816,2.94,3.07,3.222,3.382,3.516,3.629,3.72,3.777,3.799,3.778,3.719,3.628,3.511,3.367,3.218,3.073];
-        const allLight = [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,18,2,2,2,2,2,2,2,2,2,2,2,2,2,2,28,42,35,14,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2];
-        const allInfra = [0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.5,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.8,3.2,2.4,1.1,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2];
+        const timelineData = [{"utc": "2026-08-21 00:00:00", "npt": "2026-08-21 05:45:00", "xray": 2.5e-06, "kp": 2.0, "kkn": 18.9, "lza": 18.0, "sab": 19.7, "tir": 37.0, "eej": 16.6, "vi": 243.9, "jz": 3.126, "ez": 125.1, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-21 01:00:00", "npt": "2026-08-21 06:45:00", "xray": 3.76e-06, "kp": 2.0, "kkn": 27.1, "lza": 25.8, "sab": 28.3, "tir": 59.7, "eej": 30.0, "vi": 235.8, "jz": 3.023, "ez": 120.9, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-21 02:00:00", "npt": "2026-08-21 07:45:00", "xray": 6.71e-06, "kp": 2.0, "kkn": 38.3, "lza": 36.5, "sab": 40.1, "tir": 90.8, "eej": 48.4, "vi": 232.9, "jz": 2.986, "ez": 119.5, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-21 03:00:00", "npt": "2026-08-21 08:45:00", "xray": 2.03e-06, "kp": 2.0, "kkn": 44.4, "lza": 42.2, "sab": 46.5, "tir": 107.1, "eej": 58.0, "vi": 215.5, "jz": 2.763, "ez": 110.5, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-21 04:00:00", "npt": "2026-08-21 09:45:00", "xray": 1.08e-06, "kp": 2.0, "kkn": 49.9, "lza": 47.5, "sab": 52.3, "tir": 122.1, "eej": 66.9, "vi": 208.9, "jz": 2.678, "ez": 107.1, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-21 05:00:00", "npt": "2026-08-21 10:45:00", "xray": 1.83e-06, "kp": 2.0, "kkn": 55.9, "lza": 53.1, "sab": 58.5, "tir": 138.6, "eej": 76.6, "vi": 209.0, "jz": 2.68, "ez": 107.2, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-21 06:00:00", "npt": "2026-08-21 11:45:00", "xray": 6.22e-06, "kp": 2.0, "kkn": 60.8, "lza": 57.9, "sab": 63.7, "tir": 152.6, "eej": 84.9, "vi": 220.2, "jz": 2.823, "ez": 112.9, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-21 07:00:00", "npt": "2026-08-21 12:45:00", "xray": 2.12e-06, "kp": 2.0, "kkn": 57.8, "lza": 55.0, "sab": 60.6, "tir": 144.0, "eej": 79.8, "vi": 215.7, "jz": 2.765, "ez": 110.6, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-21 08:00:00", "npt": "2026-08-21 13:45:00", "xray": 1.42e-06, "kp": 2.0, "kkn": 53.7, "lza": 51.1, "sab": 56.3, "tir": 132.6, "eej": 73.0, "vi": 221.3, "jz": 2.837, "ez": 113.5, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-21 09:00:00", "npt": "2026-08-21 14:45:00", "xray": 1.65e-05, "kp": 2.0, "kkn": 53.6, "lza": 51.0, "sab": 56.1, "tir": 132.9, "eej": 73.4, "vi": 263.9, "jz": 3.383, "ez": 135.3, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-21 10:00:00", "npt": "2026-08-21 15:45:00", "xray": 1.69e-05, "kp": 2.0, "kkn": 45.8, "lza": 43.7, "sab": 48.0, "tir": 111.7, "eej": 60.9, "vi": 275.6, "jz": 3.534, "ez": 141.3, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-21 11:00:00", "npt": "2026-08-21 16:45:00", "xray": 1.23e-05, "kp": 2.0, "kkn": 35.8, "lza": 34.1, "sab": 37.5, "tir": 84.1, "eej": 44.5, "vi": 277.2, "jz": 3.553, "ez": 142.1, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-21 12:00:00", "npt": "2026-08-21 17:45:00", "xray": 8.54e-06, "kp": 2.0, "kkn": 24.8, "lza": 23.6, "sab": 25.9, "tir": 53.6, "eej": 26.5, "vi": 280.4, "jz": 3.595, "ez": 143.8, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-21 13:00:00", "npt": "2026-08-21 18:45:00", "xray": 5.52e-06, "kp": 2.0, "kkn": 20.7, "lza": 19.7, "sab": 21.6, "tir": 42.1, "eej": 19.7, "vi": 284.6, "jz": 3.649, "ez": 146.0, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-21 14:00:00", "npt": "2026-08-21 19:45:00", "xray": 4.11e-06, "kp": 2.0, "kkn": 20.0, "lza": 19.1, "sab": 20.9, "tir": 40.2, "eej": 18.5, "vi": 290.9, "jz": 3.729, "ez": 149.2, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-21 15:00:00", "npt": "2026-08-21 20:45:00", "xray": 3.24e-06, "kp": 2.0, "kkn": 19.5, "lza": 18.6, "sab": 20.3, "tir": 38.7, "eej": 17.6, "vi": 296.1, "jz": 3.796, "ez": 151.8, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-21 16:00:00", "npt": "2026-08-21 21:45:00", "xray": 2.28e-06, "kp": 2.0, "kkn": 18.7, "lza": 17.8, "sab": 19.5, "tir": 36.4, "eej": 16.2, "vi": 298.5, "jz": 3.827, "ez": 153.1, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-21 17:00:00", "npt": "2026-08-21 22:45:00", "xray": 3.45e-06, "kp": 2.0, "kkn": 19.6, "lza": 18.7, "sab": 20.5, "tir": 39.1, "eej": 17.8, "vi": 302.6, "jz": 3.879, "ez": 155.2, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-21 18:00:00", "npt": "2026-08-21 23:45:00", "xray": 2.63e-06, "kp": 2.0, "kkn": 19.0, "lza": 18.1, "sab": 19.8, "tir": 37.3, "eej": 16.8, "vi": 299.3, "jz": 3.837, "ez": 153.5, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-21 19:00:00", "npt": "2026-08-22 00:45:00", "xray": 1.25e-06, "kp": 2.0, "kkn": 17.3, "lza": 16.5, "sab": 18.0, "tir": 32.4, "eej": 13.9, "vi": 291.7, "jz": 3.74, "ez": 149.6, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-21 20:00:00", "npt": "2026-08-22 01:45:00", "xray": 4.02e-06, "kp": 2.0, "kkn": 19.9, "lza": 19.0, "sab": 20.8, "tir": 40.1, "eej": 18.4, "vi": 290.7, "jz": 3.727, "ez": 149.1, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-21 21:00:00", "npt": "2026-08-22 02:45:00", "xray": 3.96e-06, "kp": 2.0, "kkn": 19.9, "lza": 19.0, "sab": 20.8, "tir": 40.0, "eej": 18.4, "vi": 281.2, "jz": 3.605, "ez": 144.2, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-21 22:00:00", "npt": "2026-08-22 03:45:00", "xray": 1.5e-06, "kp": 2.0, "kkn": 17.7, "lza": 16.9, "sab": 18.5, "tir": 33.7, "eej": 14.6, "vi": 265.0, "jz": 3.397, "ez": 135.9, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-21 23:00:00", "npt": "2026-08-22 04:45:00", "xray": 1.19e-06, "kp": 2.0, "kkn": 17.2, "lza": 16.4, "sab": 17.9, "tir": 32.1, "eej": 13.7, "vi": 252.6, "jz": 3.239, "ez": 129.5, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-22 00:00:00", "npt": "2026-08-22 05:45:00", "xray": 1.01e-06, "kp": 2.0, "kkn": 16.8, "lza": 16.0, "sab": 17.5, "tir": 31.0, "eej": 13.0, "vi": 240.6, "jz": 3.084, "ez": 123.4, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-22 01:00:00", "npt": "2026-08-22 06:45:00", "xray": 1.2e-06, "kp": 2.0, "kkn": 24.5, "lza": 23.3, "sab": 25.6, "tir": 52.2, "eej": 25.6, "vi": 230.1, "jz": 2.951, "ez": 118.0, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-22 02:00:00", "npt": "2026-08-22 07:45:00", "xray": 1.04e-06, "kp": 2.0, "kkn": 34.1, "lza": 32.4, "sab": 35.7, "tir": 78.6, "eej": 41.1, "vi": 220.5, "jz": 2.827, "ez": 113.1, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-22 03:00:00", "npt": "2026-08-22 08:45:00", "xray": 1.01e-06, "kp": 2.0, "kkn": 42.8, "lza": 40.7, "sab": 44.8, "tir": 102.5, "eej": 55.2, "vi": 213.2, "jz": 2.734, "ez": 109.4, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-22 04:00:00", "npt": "2026-08-22 09:45:00", "xray": 8.27e-07, "kp": 2.0, "kkn": 49.3, "lza": 46.9, "sab": 51.7, "tir": 120.4, "eej": 65.8, "vi": 208.4, "jz": 2.671, "ez": 106.8, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-22 05:00:00", "npt": "2026-08-22 10:45:00", "xray": 1.04e-06, "kp": 2.0, "kkn": 54.6, "lza": 51.9, "sab": 57.2, "tir": 135.0, "eej": 74.4, "vi": 207.3, "jz": 2.658, "ez": 106.3, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-22 06:00:00", "npt": "2026-08-22 11:45:00", "xray": 1.13e-06, "kp": 2.0, "kkn": 57.0, "lza": 54.2, "sab": 59.7, "tir": 141.5, "eej": 78.3, "vi": 209.0, "jz": 2.68, "ez": 107.2, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-22 07:00:00", "npt": "2026-08-22 12:45:00", "xray": 1.1e-06, "kp": 2.0, "kkn": 56.4, "lza": 53.6, "sab": 59.0, "tir": 139.8, "eej": 77.3, "vi": 213.5, "jz": 2.737, "ez": 109.5, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-22 08:00:00", "npt": "2026-08-22 13:45:00", "xray": 1.34e-06, "kp": 2.0, "kkn": 53.6, "lza": 50.9, "sab": 56.1, "tir": 132.2, "eej": 72.8, "vi": 221.1, "jz": 2.835, "ez": 113.4, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-22 09:00:00", "npt": "2026-08-22 14:45:00", "xray": 1.73e-06, "kp": 2.0, "kkn": 48.5, "lza": 46.1, "sab": 50.8, "tir": 118.2, "eej": 64.6, "vi": 231.3, "jz": 2.966, "ez": 118.6, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-22 10:00:00", "npt": "2026-08-22 15:45:00", "xray": 1.64e-06, "kp": 2.0, "kkn": 40.6, "lza": 38.6, "sab": 42.5, "tir": 96.5, "eej": 51.7, "vi": 242.0, "jz": 3.102, "ez": 124.1, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-22 11:00:00", "npt": "2026-08-22 16:45:00", "xray": 1.08e-06, "kp": 2.0, "kkn": 30.3, "lza": 28.8, "sab": 31.7, "tir": 68.2, "eej": 35.0, "vi": 252.4, "jz": 3.235, "ez": 129.4, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-22 12:00:00", "npt": "2026-08-22 17:45:00", "xray": 8.7e-07, "kp": 2.0, "kkn": 19.6, "lza": 18.7, "sab": 20.5, "tir": 38.7, "eej": 17.6, "vi": 263.6, "jz": 3.379, "ez": 135.2, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-22 13:00:00", "npt": "2026-08-22 18:45:00", "xray": 1.12e-06, "kp": 2.0, "kkn": 17.1, "lza": 16.2, "sab": 17.8, "tir": 31.7, "eej": 13.4, "vi": 275.0, "jz": 3.525, "ez": 141.0, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-22 14:00:00", "npt": "2026-08-22 19:45:00", "xray": 9.74e-07, "kp": 2.0, "kkn": 16.7, "lza": 15.9, "sab": 17.4, "tir": 30.8, "eej": 12.9, "vi": 284.0, "jz": 3.641, "ez": 145.6, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-22 15:00:00", "npt": "2026-08-22 20:45:00", "xray": 7.67e-07, "kp": 2.0, "kkn": 16.2, "lza": 15.4, "sab": 16.9, "tir": 29.3, "eej": 12.0, "vi": 290.7, "jz": 3.726, "ez": 149.1, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-22 16:00:00", "npt": "2026-08-22 21:45:00", "xray": 7.77e-07, "kp": 2.0, "kkn": 16.2, "lza": 15.5, "sab": 16.9, "tir": 29.4, "eej": 12.0, "vi": 295.2, "jz": 3.784, "ez": 151.4, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-22 17:00:00", "npt": "2026-08-22 22:45:00", "xray": 6.88e-07, "kp": 2.0, "kkn": 16.0, "lza": 15.2, "sab": 16.6, "tir": 28.6, "eej": 11.5, "vi": 296.5, "jz": 3.801, "ez": 152.1, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-22 18:00:00", "npt": "2026-08-22 23:45:00", "xray": 1.44e-06, "kp": 2.0, "kkn": 17.6, "lza": 16.8, "sab": 18.4, "tir": 33.4, "eej": 14.4, "vi": 296.6, "jz": 3.803, "ez": 152.1, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-22 19:00:00", "npt": "2026-08-23 00:45:00", "xray": 7.16e-07, "kp": 2.0, "kkn": 16.0, "lza": 15.3, "sab": 16.7, "tir": 28.8, "eej": 11.7, "vi": 290.5, "jz": 3.725, "ez": 149.0, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-22 20:00:00", "npt": "2026-08-23 01:45:00", "xray": 9.33e-07, "kp": 2.0, "kkn": 16.6, "lza": 15.9, "sab": 17.3, "tir": 30.6, "eej": 12.7, "vi": 283.9, "jz": 3.639, "ez": 145.6, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-22 21:00:00", "npt": "2026-08-23 02:45:00", "xray": 9.09e-07, "kp": 2.0, "kkn": 16.6, "lza": 15.8, "sab": 17.3, "tir": 30.4, "eej": 12.6, "vi": 274.5, "jz": 3.519, "ez": 140.8, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-22 22:00:00", "npt": "2026-08-23 03:45:00", "xray": 1.02e-06, "kp": 2.0, "kkn": 16.8, "lza": 16.0, "sab": 17.5, "tir": 31.1, "eej": 13.1, "vi": 263.9, "jz": 3.383, "ez": 135.3, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-22 23:00:00", "npt": "2026-08-23 04:45:00", "xray": 9.78e-07, "kp": 2.0, "kkn": 16.8, "lza": 16.0, "sab": 17.4, "tir": 30.9, "eej": 12.9, "vi": 252.2, "jz": 3.233, "ez": 129.3, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-23 00:00:00", "npt": "2026-08-23 05:45:00", "xray": 1.26e-06, "kp": 2.0, "kkn": 17.3, "lza": 16.5, "sab": 18.1, "tir": 32.5, "eej": 13.9, "vi": 241.1, "jz": 3.091, "ez": 123.7, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-23 01:00:00", "npt": "2026-08-23 06:45:00", "xray": 1.2e-06, "kp": 2.0, "kkn": 24.5, "lza": 23.3, "sab": 25.6, "tir": 52.2, "eej": 25.5, "vi": 230.1, "jz": 2.95, "ez": 118.0, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-23 02:00:00", "npt": "2026-08-23 07:45:00", "xray": 9.33e-07, "kp": 2.0, "kkn": 33.9, "lza": 32.2, "sab": 35.4, "tir": 77.9, "eej": 40.7, "vi": 220.2, "jz": 2.824, "ez": 112.9, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-23 03:00:00", "npt": "2026-08-23 08:45:00", "xray": 7.74e-07, "kp": 2.0, "kkn": 42.2, "lza": 40.1, "sab": 44.2, "tir": 100.8, "eej": 54.2, "vi": 212.7, "jz": 2.727, "ez": 109.1, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-23 04:00:00", "npt": "2026-08-23 09:45:00", "xray": 1.12e-06, "kp": 2.0, "kkn": 50.0, "lza": 47.6, "sab": 52.4, "tir": 122.4, "eej": 67.0, "vi": 209.0, "jz": 2.679, "ez": 107.2, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-23 05:00:00", "npt": "2026-08-23 10:45:00", "xray": 1.15e-06, "kp": 2.0, "kkn": 54.8, "lza": 52.1, "sab": 57.4, "tir": 135.6, "eej": 74.8, "vi": 207.5, "jz": 2.661, "ez": 106.4, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-23 06:00:00", "npt": "2026-08-23 11:45:00", "xray": 4.16e-06, "kp": 2.0, "kkn": 59.9, "lza": 57.0, "sab": 62.8, "tir": 149.9, "eej": 83.4, "vi": 215.7, "jz": 2.765, "ez": 110.6, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-23 07:00:00", "npt": "2026-08-23 12:45:00", "xray": 3.84e-06, "kp": 2.0, "kkn": 59.2, "lza": 56.3, "sab": 62.0, "tir": 147.9, "eej": 82.2, "vi": 219.5, "jz": 2.814, "ez": 112.6, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-23 08:00:00", "npt": "2026-08-23 13:45:00", "xray": 1.06e-06, "kp": 2.0, "kkn": 53.0, "lza": 50.4, "sab": 55.6, "tir": 130.7, "eej": 71.9, "vi": 220.5, "jz": 2.827, "ez": 113.1, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-23 09:00:00", "npt": "2026-08-23 14:45:00", "xray": 9.16e-07, "kp": 2.0, "kkn": 47.0, "lza": 44.7, "sab": 49.2, "tir": 114.1, "eej": 62.1, "vi": 229.5, "jz": 2.942, "ez": 117.7, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-23 10:00:00", "npt": "2026-08-23 15:45:00", "xray": 1.7e-06, "kp": 2.0, "kkn": 40.7, "lza": 38.7, "sab": 42.6, "tir": 96.8, "eej": 51.9, "vi": 242.1, "jz": 3.104, "ez": 124.2, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-23 11:00:00", "npt": "2026-08-23 16:45:00", "xray": 8.61e-07, "kp": 2.0, "kkn": 29.8, "lza": 28.4, "sab": 31.2, "tir": 66.7, "eej": 34.1, "vi": 251.9, "jz": 3.229, "ez": 129.2, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-23 12:00:00", "npt": "2026-08-23 17:45:00", "xray": 1.07e-06, "kp": 2.0, "kkn": 20.1, "lza": 19.1, "sab": 21.0, "tir": 40.1, "eej": 18.4, "vi": 264.0, "jz": 3.385, "ez": 135.4, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-23 13:00:00", "npt": "2026-08-23 18:45:00", "xray": 1.75e-06, "kp": 2.0, "kkn": 18.1, "lza": 17.2, "sab": 18.8, "tir": 34.6, "eej": 15.2, "vi": 276.3, "jz": 3.543, "ez": 141.7, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-23 14:00:00", "npt": "2026-08-23 19:45:00", "xray": 1.04e-06, "kp": 2.0, "kkn": 16.9, "lza": 16.1, "sab": 17.6, "tir": 31.3, "eej": 13.2, "vi": 284.1, "jz": 3.643, "ez": 145.7, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-23 15:00:00", "npt": "2026-08-23 20:45:00", "xray": 9.51e-07, "kp": 2.0, "kkn": 16.7, "lza": 15.9, "sab": 17.4, "tir": 30.7, "eej": 12.8, "vi": 291.1, "jz": 3.732, "ez": 149.3, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-23 16:00:00", "npt": "2026-08-23 21:45:00", "xray": 1.49e-06, "kp": 2.0, "kkn": 17.7, "lza": 16.9, "sab": 18.4, "tir": 33.6, "eej": 14.6, "vi": 296.7, "jz": 3.804, "ez": 152.2, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-23 17:00:00", "npt": "2026-08-23 22:45:00", "xray": 1.1e-06, "kp": 2.0, "kkn": 17.0, "lza": 16.2, "sab": 17.7, "tir": 31.6, "eej": 13.4, "vi": 297.4, "jz": 3.813, "ez": 152.5, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-23 18:00:00", "npt": "2026-08-23 23:45:00", "xray": 1.23e-06, "kp": 2.0, "kkn": 17.3, "lza": 16.4, "sab": 18.0, "tir": 32.3, "eej": 13.8, "vi": 296.2, "jz": 3.797, "ez": 151.9, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-23 19:00:00", "npt": "2026-08-24 00:45:00", "xray": 2.78e-06, "kp": 2.0, "kkn": 19.1, "lza": 18.2, "sab": 19.9, "tir": 37.7, "eej": 17.0, "vi": 295.1, "jz": 3.783, "ez": 151.3, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-23 20:00:00", "npt": "2026-08-24 01:45:00", "xray": 1.17e-06, "kp": 2.0, "kkn": 17.2, "lza": 16.4, "sab": 17.9, "tir": 32.1, "eej": 13.6, "vi": 284.4, "jz": 3.646, "ez": 145.8, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-23 21:00:00", "npt": "2026-08-24 02:45:00", "xray": 2.97e-06, "kp": 2.0, "kkn": 19.3, "lza": 18.4, "sab": 20.1, "tir": 38.1, "eej": 17.3, "vi": 279.0, "jz": 3.577, "ez": 143.1, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-23 22:00:00", "npt": "2026-08-24 03:45:00", "xray": 3.54e-06, "kp": 2.0, "kkn": 19.7, "lza": 18.7, "sab": 20.5, "tir": 39.2, "eej": 17.9, "vi": 269.4, "jz": 3.454, "ez": 138.2, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-23 23:00:00", "npt": "2026-08-24 04:45:00", "xray": 9.38e-07, "kp": 2.0, "kkn": 16.7, "lza": 15.9, "sab": 17.3, "tir": 30.6, "eej": 12.7, "vi": 252.1, "jz": 3.232, "ez": 129.3, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-24 00:00:00", "npt": "2026-08-24 05:45:00", "xray": 9.1e-07, "kp": 2.0, "kkn": 16.6, "lza": 15.8, "sab": 17.3, "tir": 30.4, "eej": 12.6, "vi": 240.4, "jz": 3.081, "ez": 123.3, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-24 01:00:00", "npt": "2026-08-24 06:45:00", "xray": 7.9e-07, "kp": 2.0, "kkn": 23.6, "lza": 22.4, "sab": 24.6, "tir": 49.5, "eej": 23.9, "vi": 229.2, "jz": 2.939, "ez": 117.6, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-24 02:00:00", "npt": "2026-08-24 07:45:00", "xray": 9.38e-07, "kp": 2.0, "kkn": 33.9, "lza": 32.2, "sab": 35.4, "tir": 77.9, "eej": 40.7, "vi": 220.2, "jz": 2.824, "ez": 112.9, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-24 03:00:00", "npt": "2026-08-24 08:45:00", "xray": 8.77e-07, "kp": 2.0, "kkn": 42.5, "lza": 40.4, "sab": 44.5, "tir": 101.6, "eej": 54.7, "vi": 213.0, "jz": 2.73, "ez": 109.2, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-24 04:00:00", "npt": "2026-08-24 09:45:00", "xray": 8.99e-07, "kp": 2.0, "kkn": 49.5, "lza": 47.1, "sab": 51.9, "tir": 121.0, "eej": 66.2, "vi": 208.5, "jz": 2.673, "ez": 106.9, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-24 05:00:00", "npt": "2026-08-24 10:45:00", "xray": 6.98e-07, "kp": 2.0, "kkn": 53.7, "lza": 51.0, "sab": 56.2, "tir": 132.3, "eej": 72.9, "vi": 206.5, "jz": 2.648, "ez": 105.9, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-24 06:00:00", "npt": "2026-08-24 11:45:00", "xray": 7.11e-07, "kp": 2.0, "kkn": 55.9, "lza": 53.1, "sab": 58.6, "tir": 138.4, "eej": 76.5, "vi": 208.1, "jz": 2.668, "ez": 106.7, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-24 07:00:00", "npt": "2026-08-24 12:45:00", "xray": 2.23e-06, "kp": 2.0, "kkn": 57.9, "lza": 55.1, "sab": 60.7, "tir": 144.4, "eej": 80.0, "vi": 215.9, "jz": 2.768, "ez": 110.7, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-24 08:00:00", "npt": "2026-08-24 13:45:00", "xray": 1.41e-06, "kp": 2.0, "kkn": 53.7, "lza": 51.0, "sab": 56.2, "tir": 132.5, "eej": 73.0, "vi": 221.3, "jz": 2.837, "ez": 113.5, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-24 09:00:00", "npt": "2026-08-24 14:45:00", "xray": 1.48e-06, "kp": 2.0, "kkn": 48.1, "lza": 45.7, "sab": 50.4, "tir": 117.2, "eej": 64.0, "vi": 230.8, "jz": 2.958, "ez": 118.3, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-24 10:00:00", "npt": "2026-08-24 15:45:00", "xray": 1.16e-06, "kp": 2.0, "kkn": 39.8, "lza": 37.8, "sab": 41.6, "tir": 94.3, "eej": 50.4, "vi": 240.9, "jz": 3.088, "ez": 123.5, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-24 11:00:00", "npt": "2026-08-24 16:45:00", "xray": 1.24e-06, "kp": 2.0, "kkn": 30.6, "lza": 29.2, "sab": 32.0, "tir": 69.1, "eej": 35.5, "vi": 252.7, "jz": 3.24, "ez": 129.6, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-24 12:00:00", "npt": "2026-08-24 17:45:00", "xray": 9.36e-07, "kp": 2.0, "kkn": 19.8, "lza": 18.8, "sab": 20.6, "tir": 39.2, "eej": 17.8, "vi": 263.7, "jz": 3.381, "ez": 135.2, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-24 13:00:00", "npt": "2026-08-24 18:45:00", "xray": 7.54e-07, "kp": 2.0, "kkn": 16.2, "lza": 15.4, "sab": 16.8, "tir": 29.2, "eej": 11.9, "vi": 274.2, "jz": 3.515, "ez": 140.6, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-24 14:00:00", "npt": "2026-08-24 19:45:00", "xray": 7.48e-07, "kp": 2.0, "kkn": 16.1, "lza": 15.4, "sab": 16.8, "tir": 29.1, "eej": 11.9, "vi": 283.5, "jz": 3.634, "ez": 145.4, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-24 15:00:00", "npt": "2026-08-24 20:45:00", "xray": 9.14e-07, "kp": 2.0, "kkn": 16.6, "lza": 15.8, "sab": 17.3, "tir": 30.4, "eej": 12.6, "vi": 291.0, "jz": 3.731, "ez": 149.2, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-24 16:00:00", "npt": "2026-08-24 21:45:00", "xray": 9.94e-07, "kp": 2.0, "kkn": 16.8, "lza": 16.0, "sab": 17.5, "tir": 31.0, "eej": 13.0, "vi": 295.7, "jz": 3.79, "ez": 151.6, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-24 17:00:00", "npt": "2026-08-24 22:45:00", "xray": 1.46e-06, "kp": 2.0, "kkn": 17.7, "lza": 16.8, "sab": 18.4, "tir": 33.5, "eej": 14.5, "vi": 298.2, "jz": 3.823, "ez": 152.9, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-24 18:00:00", "npt": "2026-08-24 23:45:00", "xray": 1.96e-06, "kp": 2.0, "kkn": 18.3, "lza": 17.5, "sab": 19.1, "tir": 35.4, "eej": 15.6, "vi": 297.8, "jz": 3.818, "ez": 152.7, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-24 19:00:00", "npt": "2026-08-25 00:45:00", "xray": 1.78e-05, "kp": 2.0, "kkn": 23.3, "lza": 22.3, "sab": 24.4, "tir": 49.8, "eej": 24.3, "vi": 328.1, "jz": 4.207, "ez": 168.3, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-24 20:00:00", "npt": "2026-08-25 01:45:00", "xray": 7.18e-06, "kp": 2.0, "kkn": 21.3, "lza": 20.3, "sab": 22.2, "tir": 43.8, "eej": 20.7, "vi": 297.6, "jz": 3.816, "ez": 152.6, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-24 21:00:00", "npt": "2026-08-25 02:45:00", "xray": 2.02e-06, "kp": 2.0, "kkn": 18.4, "lza": 17.5, "sab": 19.2, "tir": 35.6, "eej": 15.7, "vi": 276.9, "jz": 3.551, "ez": 142.0, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-24 22:00:00", "npt": "2026-08-25 03:45:00", "xray": 2.15e-06, "kp": 2.0, "kkn": 18.5, "lza": 17.7, "sab": 19.3, "tir": 36.0, "eej": 16.0, "vi": 266.4, "jz": 3.415, "ez": 136.6, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-24 23:00:00", "npt": "2026-08-25 04:45:00", "xray": 1.46e-06, "kp": 2.0, "kkn": 17.7, "lza": 16.8, "sab": 18.4, "tir": 33.5, "eej": 14.5, "vi": 253.2, "jz": 3.246, "ez": 129.9, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-25 00:00:00", "npt": "2026-08-25 05:45:00", "xray": 1.03e-06, "kp": 2.0, "kkn": 16.9, "lza": 16.1, "sab": 17.6, "tir": 31.2, "eej": 13.1, "vi": 240.6, "jz": 3.085, "ez": 123.4, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-25 01:00:00", "npt": "2026-08-25 06:45:00", "xray": 1.99e-05, "kp": 2.0, "kkn": 30.8, "lza": 29.4, "sab": 32.3, "tir": 70.5, "eej": 36.5, "vi": 271.3, "jz": 3.478, "ez": 139.1, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-25 02:00:00", "npt": "2026-08-25 07:45:00", "xray": 4.76e-06, "kp": 2.0, "kkn": 37.5, "lza": 35.7, "sab": 39.3, "tir": 88.5, "eej": 47.1, "vi": 228.6, "jz": 2.931, "ez": 117.3, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-25 03:00:00", "npt": "2026-08-25 08:45:00", "xray": 5.38e-06, "kp": 2.0, "kkn": 46.6, "lza": 44.3, "sab": 48.8, "tir": 113.4, "eej": 61.8, "vi": 222.9, "jz": 2.857, "ez": 114.3, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-25 04:00:00", "npt": "2026-08-25 09:45:00", "xray": 1.04e-05, "kp": 2.0, "kkn": 55.1, "lza": 52.4, "sab": 57.7, "tir": 136.9, "eej": 75.7, "vi": 229.4, "jz": 2.942, "ez": 117.7, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-25 05:00:00", "npt": "2026-08-25 10:45:00", "xray": 1.69e-06, "kp": 2.0, "kkn": 55.7, "lza": 53.0, "sab": 58.3, "tir": 138.1, "eej": 76.3, "vi": 208.7, "jz": 2.676, "ez": 107.0, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-25 06:00:00", "npt": "2026-08-25 11:45:00", "xray": 1.84e-05, "kp": 2.0, "kkn": 63.3, "lza": 60.2, "sab": 66.3, "tir": 159.6, "eej": 89.2, "vi": 247.1, "jz": 3.168, "ez": 126.7, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-25 07:00:00", "npt": "2026-08-25 12:45:00", "xray": 6.21e-06, "kp": 2.0, "kkn": 60.3, "lza": 57.3, "sab": 63.2, "tir": 151.1, "eej": 84.1, "vi": 224.7, "jz": 2.881, "ez": 115.2, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-25 08:00:00", "npt": "2026-08-25 13:45:00", "xray": 1.96e-06, "kp": 2.0, "kkn": 54.4, "lza": 51.8, "sab": 57.0, "tir": 134.7, "eej": 74.3, "vi": 222.5, "jz": 2.853, "ez": 114.1, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-25 09:00:00", "npt": "2026-08-25 14:45:00", "xray": 6.24e-05, "kp": 2.0, "kkn": 56.6, "lza": 53.9, "sab": 59.3, "tir": 141.6, "eej": 78.6, "vi": 364.8, "jz": 4.677, "ez": 187.1, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-25 10:00:00", "npt": "2026-08-25 15:45:00", "xray": 7e-05, "kp": 2.0, "kkn": 49.1, "lza": 46.7, "sab": 51.4, "tir": 121.0, "eej": 66.4, "vi": 392.4, "jz": 5.03, "ez": 201.2, "light": 14.0, "rain": 1.0, "lake_pct": 100.0, "mud_km": 0.0, "event": "☀️ Flare Solar M7 (GOES-18)"}, {"utc": "2026-08-25 11:00:00", "npt": "2026-08-25 16:45:00", "xray": 6.44e-06, "kp": 2.0, "kkn": 34.4, "lza": 32.7, "sab": 36.0, "tir": 79.9, "eej": 42.0, "vi": 264.2, "jz": 3.387, "ez": 135.5, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-25 12:00:00", "npt": "2026-08-25 17:45:00", "xray": 4.79e-06, "kp": 2.0, "kkn": 23.5, "lza": 22.4, "sab": 24.5, "tir": 49.8, "eej": 24.2, "vi": 272.2, "jz": 3.49, "ez": 139.6, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-25 13:00:00", "npt": "2026-08-25 18:45:00", "xray": 4.75e-06, "kp": 2.0, "kkn": 20.3, "lza": 19.4, "sab": 21.2, "tir": 41.2, "eej": 19.1, "vi": 283.0, "jz": 3.628, "ez": 145.1, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-25 14:00:00", "npt": "2026-08-25 19:45:00", "xray": 1.75e-06, "kp": 2.0, "kkn": 18.1, "lza": 17.2, "sab": 18.8, "tir": 34.6, "eej": 15.2, "vi": 285.7, "jz": 3.662, "ez": 146.5, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-25 15:00:00", "npt": "2026-08-25 20:45:00", "xray": 1.53e-06, "kp": 2.0, "kkn": 17.8, "lza": 16.9, "sab": 18.5, "tir": 33.8, "eej": 14.7, "vi": 292.3, "jz": 3.748, "ez": 149.9, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-25 16:00:00", "npt": "2026-08-25 21:45:00", "xray": 1.15e-06, "kp": 2.0, "kkn": 17.1, "lza": 16.3, "sab": 17.8, "tir": 31.9, "eej": 13.6, "vi": 296.0, "jz": 3.795, "ez": 151.8, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-25 17:00:00", "npt": "2026-08-25 22:45:00", "xray": 1.01e-06, "kp": 2.0, "kkn": 16.8, "lza": 16.0, "sab": 17.5, "tir": 31.1, "eej": 13.0, "vi": 297.2, "jz": 3.811, "ez": 152.4, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-25 18:00:00", "npt": "2026-08-25 23:45:00", "xray": 1.11e-06, "kp": 2.0, "kkn": 17.0, "lza": 16.2, "sab": 17.7, "tir": 31.7, "eej": 13.4, "vi": 295.9, "jz": 3.794, "ez": 151.7, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-25 19:00:00", "npt": "2026-08-26 00:45:00", "xray": 9.03e-07, "kp": 2.0, "kkn": 16.6, "lza": 15.8, "sab": 17.3, "tir": 30.3, "eej": 12.6, "vi": 291.0, "jz": 3.73, "ez": 149.2, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-25 20:00:00", "npt": "2026-08-26 01:45:00", "xray": 8.42e-07, "kp": 2.0, "kkn": 16.4, "lza": 15.6, "sab": 17.1, "tir": 29.9, "eej": 12.3, "vi": 283.7, "jz": 3.637, "ez": 145.5, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-25 21:00:00", "npt": "2026-08-26 02:45:00", "xray": 8.54e-07, "kp": 2.0, "kkn": 16.4, "lza": 15.7, "sab": 17.1, "tir": 30.0, "eej": 12.4, "vi": 274.4, "jz": 3.518, "ez": 140.7, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-25 22:00:00", "npt": "2026-08-26 03:45:00", "xray": 7.31e-07, "kp": 2.0, "kkn": 16.1, "lza": 15.3, "sab": 16.8, "tir": 29.0, "eej": 11.8, "vi": 263.3, "jz": 3.375, "ez": 135.0, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-25 23:00:00", "npt": "2026-08-26 04:45:00", "xray": 8.64e-07, "kp": 2.0, "kkn": 16.5, "lza": 15.7, "sab": 17.2, "tir": 30.0, "eej": 12.4, "vi": 251.9, "jz": 3.23, "ez": 129.2, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-26 00:00:00", "npt": "2026-08-26 05:45:00", "xray": 1.26e-06, "kp": 2.0, "kkn": 17.3, "lza": 16.5, "sab": 18.0, "tir": 32.5, "eej": 13.9, "vi": 241.1, "jz": 3.091, "ez": 123.6, "light": 18.0, "rain": 12.0, "lake_pct": 108.0, "mud_km": 0.0, "event": "🌧️ Início do Toró Convectivo"}, {"utc": "2026-08-26 01:00:00", "npt": "2026-08-26 06:45:00", "xray": 1.03e-06, "kp": 2.0, "kkn": 24.1, "lza": 23.0, "sab": 25.2, "tir": 51.2, "eej": 24.9, "vi": 229.8, "jz": 2.946, "ez": 117.8, "light": 38.0, "rain": 26.0, "lake_pct": 124.0, "mud_km": 0.0, "event": "⚡ Pico do Toró (48 dBZ / 38 relâmpagos/h)"}, {"utc": "2026-08-26 02:00:00", "npt": "2026-08-26 07:45:00", "xray": 9.32e-07, "kp": 2.0, "kkn": 33.9, "lza": 32.2, "sab": 35.4, "tir": 77.9, "eej": 40.7, "vi": 220.2, "jz": 2.823, "ez": 112.9, "light": 42.0, "rain": 32.5, "lake_pct": 145.0, "mud_km": 0.0, "event": "💥 Colapso Glacial Sísmico 4.4 mb (104.1 dB SPL)"}, {"utc": "2026-08-26 03:00:00", "npt": "2026-08-26 08:45:00", "xray": 7.99e-07, "kp": 2.0, "kkn": 42.3, "lza": 40.2, "sab": 44.2, "tir": 101.0, "eej": 54.3, "vi": 212.8, "jz": 2.728, "ez": 109.1, "light": 24.0, "rain": 18.0, "lake_pct": 35.0, "mud_km": 28.0, "event": "🌊 Rompimento da Moraina & Enxurrada de Lama"}, {"utc": "2026-08-26 04:00:00", "npt": "2026-08-26 09:45:00", "xray": 6.83e-07, "kp": 2.0, "kkn": 48.9, "lza": 46.5, "sab": 51.2, "tir": 119.2, "eej": 65.1, "vi": 208.0, "jz": 2.667, "ez": 106.7, "light": 10.0, "rain": 6.0, "lake_pct": 20.0, "mud_km": 45.0, "event": "🌉 Impacto Total na UHE Rasuwagadhi (25 Pontes)"}, {"utc": "2026-08-26 05:00:00", "npt": "2026-08-26 10:45:00", "xray": 7.25e-07, "kp": 2.0, "kkn": 53.8, "lza": 51.1, "sab": 56.3, "tir": 132.6, "eej": 73.0, "vi": 206.6, "jz": 2.649, "ez": 105.9, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-26 06:00:00", "npt": "2026-08-26 11:45:00", "xray": 2.2e-05, "kp": 2.0, "kkn": 63.7, "lza": 60.6, "sab": 66.8, "tir": 160.8, "eej": 89.9, "vi": 255.0, "jz": 3.269, "ez": 130.8, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-26 07:00:00", "npt": "2026-08-26 12:45:00", "xray": 1.27e-06, "kp": 2.0, "kkn": 56.7, "lza": 53.9, "sab": 59.4, "tir": 140.7, "eej": 77.8, "vi": 213.8, "jz": 2.741, "ez": 109.7, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-26 08:00:00", "npt": "2026-08-26 13:45:00", "xray": 7.47e-07, "kp": 2.0, "kkn": 52.2, "lza": 49.7, "sab": 54.7, "tir": 128.4, "eej": 70.5, "vi": 219.8, "jz": 2.818, "ez": 112.7, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-26 09:00:00", "npt": "2026-08-26 14:45:00", "xray": 7.15e-07, "kp": 2.0, "kkn": 46.5, "lza": 44.2, "sab": 48.6, "tir": 112.5, "eej": 61.1, "vi": 229.1, "jz": 2.937, "ez": 117.5, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-26 10:00:00", "npt": "2026-08-26 15:45:00", "xray": 6.76e-07, "kp": 2.0, "kkn": 38.6, "lza": 36.7, "sab": 40.4, "tir": 90.8, "eej": 48.3, "vi": 239.8, "jz": 3.075, "ez": 123.0, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-26 11:00:00", "npt": "2026-08-26 16:45:00", "xray": 1.52e-06, "kp": 2.0, "kkn": 31.1, "lza": 29.6, "sab": 32.5, "tir": 70.4, "eej": 36.3, "vi": 253.3, "jz": 3.248, "ez": 129.9, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-26 12:00:00", "npt": "2026-08-26 17:45:00", "xray": 1.04e-05, "kp": 2.0, "kkn": 25.2, "lza": 24.1, "sab": 26.4, "tir": 54.9, "eej": 27.3, "vi": 284.6, "jz": 3.649, "ez": 146.0, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-26 13:00:00", "npt": "2026-08-26 18:45:00", "xray": 1.28e-06, "kp": 2.0, "kkn": 17.4, "lza": 16.5, "sab": 18.1, "tir": 32.6, "eej": 14.0, "vi": 275.3, "jz": 3.53, "ez": 141.2, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-26 14:00:00", "npt": "2026-08-26 19:45:00", "xray": 8.4e-07, "kp": 2.0, "kkn": 16.4, "lza": 15.6, "sab": 17.1, "tir": 29.9, "eej": 12.3, "vi": 283.7, "jz": 3.637, "ez": 145.5, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-26 15:00:00", "npt": "2026-08-26 20:45:00", "xray": 9.39e-07, "kp": 2.0, "kkn": 16.7, "lza": 15.9, "sab": 17.3, "tir": 30.6, "eej": 12.8, "vi": 291.0, "jz": 3.731, "ez": 149.2, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-26 16:00:00", "npt": "2026-08-26 21:45:00", "xray": 9.62e-07, "kp": 2.0, "kkn": 16.7, "lza": 15.9, "sab": 17.4, "tir": 30.7, "eej": 12.8, "vi": 295.6, "jz": 3.79, "ez": 151.6, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-26 17:00:00", "npt": "2026-08-26 22:45:00", "xray": 9.09e-07, "kp": 2.0, "kkn": 16.6, "lza": 15.8, "sab": 17.3, "tir": 30.4, "eej": 12.6, "vi": 297.0, "jz": 3.808, "ez": 152.3, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-26 18:00:00", "npt": "2026-08-26 23:45:00", "xray": 6.18e-07, "kp": 2.0, "kkn": 15.7, "lza": 15.0, "sab": 16.4, "tir": 27.9, "eej": 11.1, "vi": 294.8, "jz": 3.78, "ez": 151.2, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-26 19:00:00", "npt": "2026-08-27 00:45:00", "xray": 1.38e-06, "kp": 2.0, "kkn": 17.5, "lza": 16.7, "sab": 18.3, "tir": 33.1, "eej": 14.2, "vi": 292.0, "jz": 3.744, "ez": 149.7, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-26 20:00:00", "npt": "2026-08-27 01:45:00", "xray": 6.77e-07, "kp": 2.0, "kkn": 15.9, "lza": 15.2, "sab": 16.6, "tir": 28.5, "eej": 11.5, "vi": 283.3, "jz": 3.632, "ez": 145.3, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-26 21:00:00", "npt": "2026-08-27 02:45:00", "xray": 3.5e-06, "kp": 2.0, "kkn": 19.6, "lza": 18.7, "sab": 20.5, "tir": 39.2, "eej": 17.9, "vi": 280.2, "jz": 3.592, "ez": 143.7, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-26 22:00:00", "npt": "2026-08-27 03:45:00", "xray": 1.09e-06, "kp": 2.0, "kkn": 17.0, "lza": 16.2, "sab": 17.7, "tir": 31.6, "eej": 13.4, "vi": 264.1, "jz": 3.385, "ez": 135.4, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-26 23:00:00", "npt": "2026-08-27 04:45:00", "xray": 9.87e-07, "kp": 2.0, "kkn": 16.8, "lza": 16.0, "sab": 17.5, "tir": 30.9, "eej": 13.0, "vi": 252.2, "jz": 3.233, "ez": 129.3, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-27 00:00:00", "npt": "2026-08-27 05:45:00", "xray": 9.17e-07, "kp": 2.0, "kkn": 16.6, "lza": 15.8, "sab": 17.3, "tir": 30.4, "eej": 12.7, "vi": 240.4, "jz": 3.082, "ez": 123.3, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-27 01:00:00", "npt": "2026-08-27 06:45:00", "xray": 5.29e-06, "kp": 2.0, "kkn": 27.9, "lza": 26.5, "sab": 29.1, "tir": 61.9, "eej": 31.4, "vi": 239.1, "jz": 3.066, "ez": 122.6, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-27 02:00:00", "npt": "2026-08-27 07:45:00", "xray": 1.48e-06, "kp": 2.0, "kkn": 34.9, "lza": 33.2, "sab": 36.5, "tir": 80.9, "eej": 42.5, "vi": 221.4, "jz": 2.839, "ez": 113.6, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-27 03:00:00", "npt": "2026-08-27 08:45:00", "xray": 1.35e-06, "kp": 2.0, "kkn": 43.5, "lza": 41.3, "sab": 45.5, "tir": 104.4, "eej": 56.4, "vi": 214.0, "jz": 2.743, "ez": 109.7, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-27 04:00:00", "npt": "2026-08-27 09:45:00", "xray": 8.56e-07, "kp": 2.0, "kkn": 49.4, "lza": 47.0, "sab": 51.7, "tir": 120.6, "eej": 66.0, "vi": 208.4, "jz": 2.672, "ez": 106.9, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-27 05:00:00", "npt": "2026-08-27 10:45:00", "xray": 1.22e-06, "kp": 2.0, "kkn": 55.0, "lza": 52.3, "sab": 57.6, "tir": 136.0, "eej": 75.1, "vi": 207.7, "jz": 2.663, "ez": 106.5, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-27 06:00:00", "npt": "2026-08-27 11:45:00", "xray": 1.09e-06, "kp": 2.0, "kkn": 56.9, "lza": 54.1, "sab": 59.6, "tir": 141.2, "eej": 78.1, "vi": 208.9, "jz": 2.678, "ez": 107.1, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-27 07:00:00", "npt": "2026-08-27 12:45:00", "xray": 1.27e-06, "kp": 2.0, "kkn": 56.7, "lza": 53.9, "sab": 59.4, "tir": 140.7, "eej": 77.8, "vi": 213.8, "jz": 2.741, "ez": 109.7, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-27 08:00:00", "npt": "2026-08-27 13:45:00", "xray": 6.58e-07, "kp": 2.0, "kkn": 52.0, "lza": 49.4, "sab": 54.4, "tir": 127.6, "eej": 70.0, "vi": 219.6, "jz": 2.816, "ez": 112.6, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-27 09:00:00", "npt": "2026-08-27 14:45:00", "xray": 8.34e-07, "kp": 2.0, "kkn": 46.8, "lza": 44.5, "sab": 49.0, "tir": 113.5, "eej": 61.7, "vi": 229.3, "jz": 2.94, "ez": 117.6, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-27 10:00:00", "npt": "2026-08-27 15:45:00", "xray": 5.19e-07, "kp": 2.0, "kkn": 38.0, "lza": 36.1, "sab": 39.7, "tir": 89.0, "eej": 47.3, "vi": 239.5, "jz": 3.07, "ez": 122.8, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-27 11:00:00", "npt": "2026-08-27 16:45:00", "xray": 5.86e-07, "kp": 2.0, "kkn": 28.9, "lza": 27.5, "sab": 30.2, "tir": 64.2, "eej": 32.6, "vi": 251.3, "jz": 3.222, "ez": 128.9, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-27 12:00:00", "npt": "2026-08-27 17:45:00", "xray": 9.77e-07, "kp": 2.0, "kkn": 19.9, "lza": 18.9, "sab": 20.7, "tir": 39.5, "eej": 18.0, "vi": 263.8, "jz": 3.382, "ez": 135.3, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-27 13:00:00", "npt": "2026-08-27 18:45:00", "xray": 7.86e-07, "kp": 2.0, "kkn": 16.3, "lza": 15.5, "sab": 16.9, "tir": 29.4, "eej": 12.1, "vi": 274.2, "jz": 3.516, "ez": 140.6, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-27 14:00:00", "npt": "2026-08-27 19:45:00", "xray": 5.47e-07, "kp": 2.0, "kkn": 15.4, "lza": 14.7, "sab": 16.1, "tir": 27.1, "eej": 10.6, "vi": 283.0, "jz": 3.629, "ez": 145.1, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-27 15:00:00", "npt": "2026-08-27 20:45:00", "xray": 5.36e-07, "kp": 2.0, "kkn": 15.4, "lza": 14.6, "sab": 16.0, "tir": 26.9, "eej": 10.6, "vi": 290.2, "jz": 3.72, "ez": 148.8, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-27 16:00:00", "npt": "2026-08-27 21:45:00", "xray": 5.2e-07, "kp": 2.0, "kkn": 15.3, "lza": 14.6, "sab": 15.9, "tir": 26.7, "eej": 10.4, "vi": 294.6, "jz": 3.777, "ez": 151.1, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-27 17:00:00", "npt": "2026-08-27 22:45:00", "xray": 5.84e-07, "kp": 2.0, "kkn": 15.6, "lza": 14.8, "sab": 16.2, "tir": 27.5, "eej": 10.9, "vi": 296.3, "jz": 3.799, "ez": 151.9, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-27 18:00:00", "npt": "2026-08-27 23:45:00", "xray": 5.65e-07, "kp": 2.0, "kkn": 15.5, "lza": 14.8, "sab": 16.1, "tir": 27.3, "eej": 10.8, "vi": 294.7, "jz": 3.778, "ez": 151.1, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-27 19:00:00", "npt": "2026-08-28 00:45:00", "xray": 4.95e-07, "kp": 2.0, "kkn": 15.2, "lza": 14.5, "sab": 15.8, "tir": 26.4, "eej": 10.3, "vi": 290.1, "jz": 3.719, "ez": 148.7, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-27 20:00:00", "npt": "2026-08-28 01:45:00", "xray": 5.35e-07, "kp": 2.0, "kkn": 15.4, "lza": 14.6, "sab": 16.0, "tir": 26.9, "eej": 10.6, "vi": 283.0, "jz": 3.628, "ez": 145.1, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-27 21:00:00", "npt": "2026-08-28 02:45:00", "xray": 6.27e-07, "kp": 2.0, "kkn": 15.7, "lza": 15.0, "sab": 16.4, "tir": 28.0, "eej": 11.2, "vi": 273.9, "jz": 3.511, "ez": 140.5, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-27 22:00:00", "npt": "2026-08-28 03:45:00", "xray": 4.51e-07, "kp": 2.0, "kkn": 15.0, "lza": 14.3, "sab": 15.6, "tir": 25.8, "eej": 9.9, "vi": 262.6, "jz": 3.367, "ez": 134.7, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-27 23:00:00", "npt": "2026-08-28 04:45:00", "xray": 4.67e-07, "kp": 2.0, "kkn": 15.1, "lza": 14.3, "sab": 15.7, "tir": 26.0, "eej": 10.0, "vi": 251.0, "jz": 3.218, "ez": 128.7, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}, {"utc": "2026-08-28 00:00:00", "npt": "2026-08-28 05:45:00", "xray": 6.13e-07, "kp": 2.0, "kkn": 15.7, "lza": 14.9, "sab": 16.3, "tir": 27.8, "eej": 11.1, "vi": 239.7, "jz": 3.073, "ez": 122.9, "light": 2.0, "rain": 0.5, "lake_pct": 100.0, "mud_km": 0.0, "event": ""}];
+        let currentIndex = 0;
+        let isPlaying = false;
+        let playInterval = null;
+        let playSpeed = 400;
+        let syncedChart = null;
 
-        // 1. Gráfico Jz & Potencial Ionosférico
-        const ctxJz = document.getElementById('jzChart').getContext('2d');
-        const jzChart = new Chart(ctxJz, {
-            type: 'line',
-            data: {
-                labels: allLabels,
-                datasets: [
-                    {
-                        label: 'Corrente Vertical Jz no Himalaia (pA/m²)',
-                        data: allJz,
-                        borderColor: '#06b6d4',
-                        backgroundColor: 'rgba(6, 182, 212, 0.12)',
-                        borderWidth: 2,
-                        yAxisID: 'yJz',
-                        tension: 0.2,
-                        fill: true
-                    },
-                    {
-                        label: 'Potencial Ionosférico Global VI (kV)',
-                        data: allVi,
-                        borderColor: '#f59e0b',
-                        borderWidth: 1.5,
-                        borderDash: [4, 4],
-                        yAxisID: 'yVi',
-                        tension: 0.2
-                    }
-                ]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                interaction: { mode: 'index', intersect: false },
-                plugins: { legend: { labels: { color: '#f8fafc' } } },
-                scales: {
-                    x: { ticks: { color: '#94a3b8', maxTicksLimit: 14 }, grid: { color: '#1f293d' } },
-                    yJz: {
-                        type: 'linear',
-                        position: 'left',
-                        title: { display: true, text: 'Jz (pA/m²)', color: '#06b6d4' },
-                        ticks: { color: '#06b6d4' },
-                        grid: { color: '#1f293d' }
-                    },
-                    yVi: {
-                        type: 'linear',
-                        position: 'right',
-                        title: { display: true, text: 'VI (kV)', color: '#f59e0b' },
-                        ticks: { color: '#f59e0b' },
-                        grid: { drawOnChartArea: false }
-                    }
-                }
-            }
-        });
-
-        // 2. Gráfico Relâmpagos & Infrassom
-        const ctxLight = document.getElementById('lightningChart').getContext('2d');
-        const lightningChart = new Chart(ctxLight, {
-            type: 'bar',
-            data: {
-                labels: allLabels,
-                datasets: [
-                    {
-                        type: 'bar',
-                        label: 'Taxa de Relâmpagos / Descargas (strokes/h)',
-                        data: allLight,
-                        backgroundColor: 'rgba(139, 92, 246, 0.6)',
-                        borderColor: '#8b5cf6',
-                        borderWidth: 1,
-                        yAxisID: 'yLight'
-                    },
-                    {
-                        type: 'line',
-                        label: 'Infrassom Acústico de Baixa Freq. (Pa)',
-                        data: allInfra,
-                        borderColor: '#ef4444',
-                        borderWidth: 2,
-                        yAxisID: 'yInfra',
-                        tension: 0.2
-                    }
-                ]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                interaction: { mode: 'index', intersect: false },
-                plugins: { legend: { labels: { color: '#f8fafc' } } },
-                scales: {
-                    x: { ticks: { color: '#94a3b8', maxTicksLimit: 14 }, grid: { color: '#1f293d' } },
-                    yLight: {
-                        type: 'linear',
-                        position: 'left',
-                        title: { display: true, text: 'Relâmpagos/h', color: '#8b5cf6' },
-                        ticks: { color: '#8b5cf6' },
-                        grid: { color: '#1f293d' }
-                    },
-                    yInfra: {
-                        type: 'linear',
-                        position: 'right',
-                        title: { display: true, text: 'Infrassom (Pa)', color: '#ef4444' },
-                        ticks: { color: '#ef4444' },
-                        grid: { drawOnChartArea: false }
-                    }
-                }
-            }
-        });
-
-        // 3. Gráfico Magnetômetros & EEJ
-        const ctxMag = document.getElementById('magChart').getContext('2d');
-        const magChart = new Chart(ctxMag, {
-            type: 'line',
-            data: {
-                labels: allLabels,
-                datasets: [
-                    {
-                        label: 'Eletrojato Equatorial EEJ (nT) [TIR - ABG]',
-                        data: allEej,
-                        borderColor: '#ef4444',
-                        backgroundColor: 'rgba(239, 68, 68, 0.1)',
-                        borderWidth: 2,
-                        fill: true
-                    },
-                    {
-                        label: 'ΔH Kakani KKN a 56km (nT)',
-                        data: allKkn,
-                        borderColor: '#10b981',
-                        borderWidth: 1.5
-                    },
-                    {
-                        label: 'ΔH Lhasa LZA a 3650m (nT)',
-                        data: allLza,
-                        borderColor: '#3b82f6',
-                        borderWidth: 1.5
-                    }
-                ]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                interaction: { mode: 'index', intersect: false },
-                plugins: { legend: { labels: { color: '#f8fafc' } } },
-                scales: {
-                    x: { ticks: { color: '#94a3b8', maxTicksLimit: 14 }, grid: { color: '#1f293d' } },
-                    y: {
-                        title: { display: true, text: 'Variação Magnética (nT)', color: '#f8fafc' },
-                        ticks: { color: '#f8fafc' },
-                        grid: { color: '#1f293d' }
-                    }
-                }
-            }
-        });
-
-        // Filtro Temporal dos Gráficos
-        function filterChartTime(filter, btn) {
-            document.querySelectorAll('.btn-time-filter').forEach(b => b.classList.remove('filter-btn-active'));
-            btn.classList.add('filter-btn-active');
-
-            let startIdx = 0;
-            let endIdx = allLabels.length;
-
-            if (filter === 'flare') {
-                startIdx = 96; endIdx = 120;
-            } else if (filter === 'disaster') {
-                startIdx = 120; endIdx = 144;
-            }
-
-            [jzChart, lightningChart, magChart].forEach(chart => {
-                chart.data.labels = allLabels.slice(startIdx, endIdx);
-            });
-
-            jzChart.data.datasets[0].data = allJz.slice(startIdx, endIdx);
-            jzChart.data.datasets[1].data = allVi.slice(startIdx, endIdx);
-            jzChart.update();
-
-            lightningChart.data.datasets[0].data = allLight.slice(startIdx, endIdx);
-            lightningChart.data.datasets[1].data = allInfra.slice(startIdx, endIdx);
-            lightningChart.update();
-
-            magChart.data.datasets[0].data = allEej.slice(startIdx, endIdx);
-            magChart.data.datasets[1].data = allKkn.slice(startIdx, endIdx);
-            magChart.data.datasets[2].data = allLza.slice(startIdx, endIdx);
-            magChart.update();
-        }
-
-        // 4. Mapa Leaflet Interativo
+        // 1. Inicializar o Mapa Leaflet com Camadas Esri Satélite e Topo (Sem API Key)
         const map = L.map('map').setView([28.274, 85.450], 9);
-        
-        // Camadas 100% Gratuitas e Abertas (Sem API Key / Sem Marca d'água)
+
         const esriSatellite = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
             attribution: 'Tiles &copy; Esri &mdash; Source: Esri, Maxar, Earthstar Geographics',
             maxZoom: 18
-        });
+        }).addTo(map);
 
         const esriTopo = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
             attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
@@ -578,94 +402,334 @@
             maxZoom: 18
         });
 
-        esriSatellite.addTo(map);
-
-        // Controle de Camadas no Canto Superior Direito
         L.control.layers({
             "🛰️ Satélite Real (Esri)": esriSatellite,
             "🏔️ Relevo Topográfico (Esri)": esriTopo,
-            "🗺️ OpenStreetMap Padrão": osmStandard
+            "🗺️ OpenStreetMap": osmStandard
         }, null, { position: 'topright' }).addTo(map);
 
-
-        const witnessLocations = {
-            'Ponte da Amizade / Rasuwagadhi': L.marker([28.272, 85.385]).addTo(map).bindPopup('<b>💥 Ponte da Amizade / Rasuwagadhi</b><br>Estrondo explosivo de 4.4 mb às 08h37 NPT.<br>Arcos voltaicos na queda das linhas elétricas.'),
-            'Parque Nacional de Langtang': L.marker([28.220, 85.450]).addTo(map).bindPopup('<b>💨 Parque Nacional de Langtang</b><br>Sensação de pressão no ouvido (infrassom) e onda de vento frio de 40 km/h descendo a garganta.'),
-            'UHE Rasuwagadhi (111 MW)': L.marker([28.258, 85.378]).addTo(map).bindPopup('<b>⚡ UHE Rasuwagadhi (111 MW)</b><br>Som ensurdecedor de britador gigante.<br>Flashovers de alta tensão e queda do sistema elétrico.'),
-            'Gyirong / Kyirong (Tibete)': L.marker([28.390, 85.330]).addTo(map).bindPopup('<b>⚡ Gyirong / Kyirong (Tibete)</b><br>Trovões contínuos na cordilheira e clarões de piezoeletricidade na crista rochosa.')
-        };
-
-        // Epicentro
-        L.circleMarker([28.274, 85.483], {
-            radius: 12, fillColor: '#ef4444', color: '#ffffff', weight: 2, fillOpacity: 1
-        }).addTo(map).bindPopup('<b>💥 ORIGEM: MACIÇO LANGTANG / LAGO LHENDE KHOLA</b><br>Colapso de 15M m³ e ruptura do lago de 65,7 ha.').openPopup();
-
-        // Magnetômetros Regionais
+        // Rede Expandida de Magnetômetros (China / Tibete + Índia + Nepal)
         const stations = [
-            { name: 'KKN - Kakani (Nepal)', lat: 27.801, lon: 85.280 },
-            { name: 'LZA - Lhasa (Tibete/China)', lat: 29.645, lon: 91.035 },
-            { name: 'SAB - Sabhawala (Índia)', lat: 30.337, lon: 77.802 },
-            { name: 'TIR - Tirunelveli (Índia)', lat: 8.710, lon: 77.800 }
+            // China / Tibete
+            { code: 'LZA', name: 'Lhasa (Tibete/China - 3.650m)', lat: 29.645, lon: 91.035, country: 'CN' },
+            { code: 'XAN', name: 'Xi\'an (Shaanxi/China)', lat: 34.250, lon: 108.950, country: 'CN' },
+            { code: 'CDT', name: 'Chengdu (Sichuan/China)', lat: 30.670, lon: 104.060, country: 'CN' },
+            { code: 'BJI', name: 'Beijing Ming Tombs (China)', lat: 40.040, lon: 116.290, country: 'CN' },
+            { code: 'QGZ', name: 'Qiongzhong (Hainan/China)', lat: 19.030, lon: 109.840, country: 'CN' },
+            { code: 'KSH', name: 'Kashi/Kashgar (Xinjiang/China)', lat: 39.470, lon: 75.990, country: 'CN' },
+            { code: 'WUH', name: 'Wuhan (Hubei/China)', lat: 30.540, lon: 114.360, country: 'CN' },
+            // Nepal & Índia
+            { code: 'KKN', name: 'Kakani (Nepal - 56km)', lat: 27.801, lon: 85.280, country: 'NP' },
+            { code: 'SAB', name: 'Sabhawala (Índia - 779km)', lat: 30.337, lon: 77.802, country: 'IN' },
+            { code: 'TIR', name: 'Tirunelveli (Equador EEJ/Índia)', lat: 8.710, lon: 77.800, country: 'IN' },
+            { code: 'JAI', name: 'Jaipur (Índia)', lat: 26.920, lon: 75.800, country: 'IN' },
+            { code: 'ABG', name: 'Alibag (Mumbai/Índia)', lat: 18.640, lon: 72.870, country: 'IN' }
         ];
+
+        const stationMarkers = {};
         stations.forEach(st => {
-            L.circleMarker([st.lat, st.lon], {
-                radius: 5, fillColor: '#f59e0b', color: '#ffffff', weight: 1, fillOpacity: 0.8
-            }).addTo(map).bindPopup(<b></b> (Magnetômetro Regional));
+            const isChina = st.country === 'CN';
+            stationMarkers[st.code] = L.circleMarker([st.lat, st.lon], {
+                radius: 6,
+                fillColor: isChina ? '#ef4444' : '#f59e0b',
+                color: '#ffffff',
+                weight: 1,
+                fillOpacity: 0.85
+            }).addTo(map).bindPopup('<b>' + st.name + '</b><br>Rede Geomagnética ' + (isChina ? 'da China (CEA/INTERMAGNET)' : 'Regional'));
         });
 
-        function flyToLocation(lat, lng, name) {
-            map.flyTo([lat, lng], 12, { duration: 1.5 });
-            if (witnessLocations[name]) {
-                witnessLocations[name].openPopup();
-            }
-        }
+        // Elementos Dinâmicos da Lagoa e da Enxurrada de Lama
+        // 1. Polígono da Lagoa Lhende Khola
+        const lakeCoords = [
+            [28.277, 85.478], [28.279, 85.485], [28.275, 85.490], [28.272, 85.484]
+        ];
+        const lakePolygon = L.polygon(lakeCoords, {
+            color: '#06b6d4',
+            fillColor: '#06b6d4',
+            fillOpacity: 0.7,
+            weight: 2
+        }).addTo(map).bindPopup('<b>LAGO LHENDE KHOLA (3.950m)</b><br>Volume: 5.2 M m³ (Área: 65,7 ha)');
 
-        // Filtro de Testemunhos
-        function filterWitness(category, btn) {
-            document.querySelectorAll('.btn-sound-filter').forEach(b => b.classList.remove('filter-btn-active'));
-            btn.classList.add('filter-btn-active');
+        // 2. Epicentro do Colapso Sísmico
+        const epicenterMarker = L.circleMarker([28.274, 85.483], {
+            radius: 12,
+            fillColor: '#ef4444',
+            color: '#ffffff',
+            weight: 2,
+            fillOpacity: 0.9
+        }).addTo(map).bindPopup('<b>💥 EPICENTRO DO COLAPSO SÍSMICO (4.4 mb)</b><br>15M m³ de rocha e gelo despencando 1.200m.<br>Infrassom estimado: 104.1 dB SPL (3.2 Pa).');
 
-            const cards = document.querySelectorAll('.witness-card');
-            cards.forEach(card => {
-                if (category === 'all') {
-                    card.style.display = 'block';
-                } else if (category === 'sound') {
-                    card.style.display = card.classList.contains('witness-sound') ? 'block' : 'none';
-                } else if (category === 'electric') {
-                    card.style.display = card.classList.contains('witness-electric') ? 'block' : 'none';
+        // 3. Talvegue Fluvial & Polígono de Lama
+        const mudCoords = [
+            [28.274, 85.483], [28.268, 85.440], [28.258, 85.378], [28.210, 85.350], [28.160, 85.330]
+        ];
+        const mudFlowPath = L.polyline([], {
+            color: '#b45309',
+            weight: 6,
+            opacity: 0.85
+        }).addTo(map).bindPopup('<b>🌊 ENXURRADA DE LAMA E DETRITOS (DEBRIS FLOW)</b><br>Vazão de pico: 3.766 m³/s | Velocidade: 40 km/h');
+
+        const floodMarker = L.circleMarker([28.274, 85.483], {
+            radius: 8,
+            fillColor: '#b45309',
+            color: '#ffffff',
+            weight: 2,
+            fillOpacity: 0.9
+        }).addTo(map);
+
+        // 2. Gráfico Integrado Multi-Eixos com Anotações dos 5 Eventos
+        function initChart() {
+            const ctx = document.getElementById('syncedChart').getContext('2d');
+            const labelsArray = timelineData.map(d => d.utc.substring(5, 13));
+            const jzArray = timelineData.map(d => d.jz);
+            const rainArray = timelineData.map(d => d.rain);
+            const lightArray = timelineData.map(d => d.light);
+            const xrayArray = timelineData.map(d => Math.log10(d.xray / 1e-7));
+
+            syncedChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labelsArray,
+                    datasets: [
+                        {
+                            type: 'line',
+                            label: 'Corrente Jz [Modelo] (pA/m²)',
+                            data: jzArray,
+                            borderColor: '#06b6d4',
+                            backgroundColor: 'rgba(6, 182, 212, 0.1)',
+                            borderWidth: 2.5,
+                            pointRadius: 0,
+                            fill: false,
+                            yAxisID: 'yJz',
+                            tension: 0.2
+                        },
+                        {
+                            type: 'bar',
+                            label: 'Chuva [Modelo/GPM] (mm/h)',
+                            data: rainArray,
+                            backgroundColor: 'rgba(59, 130, 246, 0.65)',
+                            borderColor: '#3b82f6',
+                            borderWidth: 1,
+                            yAxisID: 'yRain'
+                        },
+                        {
+                            type: 'line',
+                            label: 'Relâmpagos [Modelo/WWLLN] (/h)',
+                            data: lightArray,
+                            borderColor: '#a855f7',
+                            borderWidth: 2,
+                            pointRadius: 0,
+                            yAxisID: 'yLight',
+                            tension: 0.2
+                        },
+                        {
+                            type: 'line',
+                            label: 'Raios X GOES [Medido]',
+                            data: xrayArray,
+                            borderColor: '#f59e0b',
+                            borderWidth: 1.5,
+                            borderDash: [3, 3],
+                            pointRadius: 0,
+                            yAxisID: 'yXray',
+                            tension: 0.2
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    interaction: { mode: 'index', intersect: false },
+                    plugins: {
+                        legend: {
+                            labels: { color: '#f8fafc', boxWidth: 12 }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                afterBody: function(items) {
+                                    const idx = items[0].dataIndex;
+                                    const ev = timelineData[idx].event;
+                                    if (ev) return '\n📌 MARCO CRÍTICO: ' + ev;
+                                    return '';
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            ticks: { color: '#94a3b8', font: { size: 10 }, maxTicksLimit: 14 },
+                            grid: { color: '#1e293b' }
+                        },
+                        yJz: {
+                            type: 'linear',
+                            position: 'left',
+                            title: { display: true, text: 'Jz (pA/m²)', color: '#06b6d4', font: { size: 11 } },
+                            ticks: { color: '#06b6d4' },
+                            grid: { color: '#1e293b' }
+                        },
+                        yRain: {
+                            type: 'linear',
+                            position: 'right',
+                            title: { display: true, text: 'Chuva (mm/h)', color: '#3b82f6', font: { size: 11 } },
+                            ticks: { color: '#3b82f6' },
+                            grid: { drawOnChartArea: false }
+                        },
+                        yLight: {
+                            type: 'linear',
+                            position: 'right',
+                            title: { display: true, text: 'Relâmpagos/h', color: '#a855f7', font: { size: 11 } },
+                            ticks: { color: '#a855f7' },
+                            grid: { drawOnChartArea: false }
+                        },
+                        yXray: { display: false }
+                    }
                 }
             });
         }
 
-        // 5. Simulador do Toró (JavaScript Dinâmico)
-        const rLake = document.getElementById('rangeLakeVol');
-        const rRain = document.getElementById('rangeRain');
-        const rSnow = document.getElementById('rangeSnow');
+        // 3. Atualizar Estado Espaço-Temporal, Lagoa e Onda de Lama
+        function updateFrame(index) {
+            if (!timelineData || timelineData.length === 0) return;
+            currentIndex = index;
+            const d = timelineData[index];
 
-        function updateHydroSim() {
-            const lakeVol = parseFloat(rLake.value);
-            const rainMm = parseFloat(rRain.value);
-            const snowMm = parseFloat(rSnow.value);
+            document.getElementById('clockUtc').innerText = 'UTC: ' + d.utc;
+            document.getElementById('clockNpt').innerText = 'NPT: ' + d.npt;
+            document.getElementById('timeSlider').value = index;
 
-            const rainVol = (rainMm / 1000.0) * 55.0; // Bacia 55 km2
-            const snowVol = (snowMm / 1000.0) * 28.0; // Área nival 28 km2
-            const totalVol = lakeVol + rainVol + snowVol;
+            document.getElementById('gaugeJz').innerText = d.jz.toFixed(2) + ' pA/m²';
+            document.getElementById('gaugeEz').innerText = 'Ez: ' + d.ez.toFixed(0) + ' V/m | VI: ' + d.vi.toFixed(0) + ' kV';
+            document.getElementById('gaugeXray').innerText = d.xray.toExponential(2) + ' W/m²';
+            document.getElementById('gaugeKp').innerText = 'Kp: ' + d.kp.toFixed(2) + ' (NOAA SWPC)';
+            document.getElementById('gaugeLight').innerText = d.light.toFixed(0) + ' /h | ' + d.rain.toFixed(1) + ' mm/h';
 
-            const timeSec = 2570.0; // 42 min e 50 s
-            const flow = (totalVol * 1e6) / timeSec; // m3/s
+            // Dinâmica dos Magnetômetros da China e Região
+            if (stationMarkers['LZA']) stationMarkers['LZA'].setRadius(Math.max(4, Math.min(16, d.lza / 4.0)));
+            if (stationMarkers['KKN']) stationMarkers['KKN'].setRadius(Math.max(4, Math.min(16, d.kkn / 4.0)));
+            if (stationMarkers['TIR']) stationMarkers['TIR'].setRadius(Math.max(4, Math.min(20, d.tir / 6.0)));
 
-            document.getElementById('lblLakeVol').innerText = ${lakeVol.toFixed(2)} M m³ (toneladas);
-            document.getElementById('lblRain').innerText = ${rainMm} mm ( M m³);
-            document.getElementById('lblSnow').innerText = ${snowMm} mm (+ M m³);
+            const hud = document.getElementById('hudIonoStatus');
+            const narrative = document.getElementById('narrativeText');
+            const gInfra = document.getElementById('gaugeInfra');
+            const gSeismic = document.getElementById('gaugeSeismic');
+            const gLake = document.getElementById('gaugeLake');
+            const gLakeStatus = document.getElementById('gaugeLakeStatus');
+            const gBridges = document.getElementById('gaugeBridges');
+            const gFlow = document.getElementById('gaugeFlow');
+            const gRadar = document.getElementById('gaugeRadarDbz');
 
-            document.getElementById('resTotalVol').innerText = ${totalVol.toFixed(2)} Milhões de m³;
-            document.getElementById('resFlow').innerText = ${Math.round(flow).toLocaleString()} m³/s;
+            // Dinâmica Visual da Lagoa e da Lama
+            if (d.utc.startsWith('2026-08-25 10')) {
+                hud.innerText = '⚡ ERUPÇÃO SOLAR M7: Salto Ionosférico (VI = 392 kV)';
+                hud.className = 'fw-bold text-warning';
+                narrative.innerHTML = '<strong class="text-warning">☀️ 25/08 10:02 UTC [MEDIDO GOES-18]:</strong> Flare solar M7.0. Salto imediato de ionização na Camada D e pico de Jz no Himalaia (5.03 pA/m²).';
+                gRadar.innerText = 'Refletividade: 18 dBZ';
+                gInfra.innerText = '0.1 Pa (74 dB SPL)';
+                gSeismic.innerText = 'Sismo: Ruído Basal';
+                lakePolygon.setStyle({ fillColor: '#06b6d4', fillOpacity: 0.7 });
+                mudFlowPath.setLatLngs([]);
+            } else if (d.utc.startsWith('2026-08-26 00')) {
+                hud.innerText = '🌧️ INÍCIO DO TORÓ: Enchimento da Lagoa (+8%)';
+                hud.className = 'fw-bold text-info';
+                narrative.innerHTML = '<strong class="text-info">🌧️ 26/08 00:00 UTC [MODELO TORÓ]:</strong> Células convectivas descarregam chuva moderada (12 mm/h) e degelo Rain-on-Snow na bacia de 28 km². A lagoa sobe para 5.6 M m³.';
+                gRadar.innerText = 'Refletividade: 36 dBZ';
+                gLake.innerText = '5.62 M m³ (108%)';
+                gLakeStatus.innerText = 'Lagoa Enchendo (+0,8m)';
+                lakePolygon.setStyle({ fillColor: '#3b82f6', fillOpacity: 0.8 });
+            } else if (d.utc.startsWith('2026-08-26 01')) {
+                hud.innerText = '⚡ PICO DO TORÓ: Chuva Extrema (26 mm/h) & Relâmpagos (38/h)';
+                hud.className = 'fw-bold text-info';
+                narrative.innerHTML = '<strong class="text-info">⚡ 26/08 01:30 UTC [MODELO TORÓ / WWLLN]:</strong> Núcleo convectivo severo (48 dBZ). Chuva torrencial nas cristas (>4.200m). Lagoa atinge 6.45 M m³ (124% da capacidade basal).';
+                gRadar.innerText = 'Refletividade: 48 dBZ (Severo)';
+                gLake.innerText = '6.45 M m³ (124%)';
+                gLakeStatus.innerText = 'Sobrecarga Hidráulica (+2.1m)';
+                lakePolygon.setStyle({ fillColor: '#1d4ed8', fillOpacity: 0.9 });
+            } else if (d.utc.startsWith('2026-08-26 02')) {
+                hud.innerText = '💥 COLAPSO GLACIAL SÍSMICO: 4.4 mb [MEDIDO] & 104.1 dB SPL [ESTIMADO]';
+                hud.className = 'fw-bold text-danger';
+                narrative.innerHTML = '<strong class="text-danger">💥 26/08 02:52:10 UTC:</strong> Desprendimento maciço de 15M m³ de permafrost a 5.200m. Tremor de 4.4 mb [USGS MEDIDO] e estrondo sismo-acústico de 104.1 dB SPL (3.2 Pa a 14km [MODELO]). Barragem temporária de detritos bloqueia a lagoa.';
+                gInfra.innerText = '3.2 Pa (104.1 dB SPL)';
+                gSeismic.innerText = 'SISMO: 4.4 mb (USGS Medido)';
+                gLake.innerText = '7.54 M m³ (145%)';
+                gLakeStatus.innerText = 'Barragem Temporária Bloqueada';
+                epicenterMarker.setStyle({ fillColor: '#ef4444', radius: 22 });
+                lakePolygon.setStyle({ fillColor: '#ef4444', fillOpacity: 0.95 });
+            } else if (d.utc.startsWith('2026-08-26 03')) {
+                hud.innerText = '🌊 RUPTURA E ENXURRADA DE LAMA: ~3.760 m³/s [MODELO HIDROLÓGICO]';
+                hud.className = 'fw-bold text-danger';
+                narrative.innerHTML = '<strong class="text-danger">🌊 26/08 03:35 UTC [MODELO HIDROLÓGICO]:</strong> Transbordamento e ruptura violenta da moraina. Enxurrada hiperconcentrada de lama e rochas avança a 40 km/h (11,2 m/s) no cânion do Trishuli.';
+                gLake.innerText = '1.82 M m³ (35%)';
+                gLakeStatus.innerText = 'Lagoa Esvaziada / Rompida';
+                gBridges.innerText = '18 / 33 Atingidas';
+                gFlow.innerText = 'Vazão: 3.766 m³/s (40 km/h)';
+                lakePolygon.setStyle({ fillColor: '#78350f', fillOpacity: 0.6 });
+                mudFlowPath.setLatLngs(mudCoords.slice(0, 3));
+                floodMarker.setLatLng([28.258, 85.378]); // UHE Rasuwagadhi
+            } else if (d.utc.startsWith('2026-08-26 04')) {
+                hud.innerText = '🌉 IMPACTO TOTAL: 25 Pontes Destruídas [CENSO ICIMOD/ONU MEDIDO]';
+                hud.className = 'fw-bold text-danger';
+                narrative.innerHTML = '<strong class="text-danger">🌉 26/08 04:00 UTC [DADO MEDIDO ICIMOD]:</strong> A enxurrada de lama atinge a UHE Rasuwagadhi (111 MW) e soterra 25 pontes ao longo de 45 km de vale até Syabrubesi.';
+                gBridges.innerText = '25 / 33 Destruídas [Medido]';
+                gFlow.innerText = 'Vazão: 1.450 m³/s (Decaindo)';
+                mudFlowPath.setLatLngs(mudCoords);
+                floodMarker.setLatLng([28.160, 85.330]); // Syabrubesi
+            } else {
+                hud.innerText = 'Ionosfera em Regime Basal (VI = ' + d.vi.toFixed(0) + ' kV)';
+                hud.className = 'fw-bold text-info';
+                gInfra.innerText = '0.1 Pa (74 dB SPL)';
+                gSeismic.innerText = 'Sismo: Ruído Basal';
+                gLake.innerText = '5.20 M m³ (100%)';
+                gLakeStatus.innerText = 'Cota Normal (3.950m)';
+                gBridges.innerText = '0 / 33';
+                gFlow.innerText = 'Vazão: 45 m³/s (2.1 m/s)';
+                gRadar.innerText = 'Refletividade: 15 dBZ';
+                epicenterMarker.setStyle({ fillColor: '#ef4444', radius: 10 });
+                lakePolygon.setStyle({ fillColor: '#06b6d4', fillOpacity: 0.7 });
+                mudFlowPath.setLatLngs([]);
+                floodMarker.setLatLng([28.274, 85.483]);
+                narrative.innerText = d.utc + ': Monitoramento dos parâmetros eletrodinâmicos, rede geomagnética e hidrologia da bacia.';
+            }
         }
 
-        rLake.addEventListener('input', updateHydroSim);
-        rRain.addEventListener('input', updateHydroSim);
-        rSnow.addEventListener('input', updateHydroSim);
-        updateHydroSim();
+        // 4. Controle de Reprodução
+        function togglePlay() {
+            isPlaying = !isPlaying;
+            const btn = document.getElementById('btnPlayPause');
+            if (isPlaying) {
+                btn.innerHTML = '<i class="fa-solid fa-pause me-1"></i> Pausar Animação';
+                btn.className = 'btn btn-sm btn-warning px-3 fw-bold';
+                playInterval = setInterval(() => {
+                    if (currentIndex < timelineData.length - 1) {
+                        updateFrame(currentIndex + 1);
+                    } else {
+                        togglePlay();
+                    }
+                }, playSpeed);
+            } else {
+                btn.innerHTML = '<i class="fa-solid fa-play me-1"></i> Iniciar Animação 4D';
+                btn.className = 'btn btn-sm btn-info px-3 fw-bold';
+                clearInterval(playInterval);
+            }
+        }
+
+        function onSliderInput(val) {
+            updateFrame(parseInt(val));
+        }
+
+        function jumpToHour(idx) {
+            updateFrame(idx);
+        }
+
+        function changeSpeed(val) {
+            playSpeed = parseInt(val);
+            if (isPlaying) {
+                togglePlay();
+                togglePlay();
+            }
+        }
+
+        // Inicializar aplicação
+        initChart();
+        updateFrame(0);
     </script>
 </body>
 </html>
