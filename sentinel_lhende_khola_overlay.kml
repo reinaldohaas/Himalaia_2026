@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
+  <Document>
+    <name>Sobreposição Orbital Sentinel-2: Lago Lhende Khola e Mt. Langtang Lirung</name>
+    <open>1</open>
+    <description><![CDATA[
+      <h2>Sobreposição de Imagem de Satélite Sentinel-2 (Copernicus / ESA)</h2>
+      <p><b>Local:</b> Cabeceira do Lhende Khola / Maciço do Mt. Langtang Lirung (7.245 m)</p>
+      <p><b>Coordenadas Centrais:</b> 28.2740° N, 85.4830° E</p>
+      <p><b>Altitude:</b> ~3.950 m a 5.200 m</p>
+      <p><b>Feições Visíveis:</b></p>
+      <ul>
+        <li>Espelho d'água azul-turquesa do lago proglacial de circo (65,7 hectares).</li>
+        <li>Escarpa norte de desprendimento do Langtang Lirung a 5.200 m.</li>
+        <li>Crista morainica terminal e garganta de escoamento da torrente.</li>
+        <li>Paredes rochosas íngremes com baixa retenção nival.</li>
+      </ul>
+      <p><i>Dica: Use a barra deslizante de transparência no painel 'Lugares' do Google Earth para alternar entre a imagem e o relevo base!</i></p>
+    ]]></description>
+
+    <!-- SOBREPOSIÇÃO NO TERRENO (GROUND OVERLAY) -->
+    <GroundOverlay>
+      <name>📷 Imagem Sentinel-2: Lago Lhende Khola e Langtang Lirung (3D Overlay)</name>
+      <description><![CDATA[
+        <b>Instrumento:</b> Copernicus Sentinel-2 MSI (Multispectral Instrument)<br>
+        <b>Resolução:</b> 10 metros por pixel<br>
+        <b>Área Coberta:</b> ~10.4 km (Leste-Oeste) x 6.6 km (Norte-Sul)
+      ]]></description>
+      <color>ffffffff</color>
+      <drawOrder>10</drawOrder>
+      <Icon>
+        <href>images/sentinel_lhende_khola_lake.jpg</href>
+        <viewBoundScale>0.75</viewBoundScale>
+      </Icon>
+      <altitudeMode>clampToGround</altitudeMode>
+      <LatLonBox>
+        <north>28.3050</north>
+        <south>28.2450</south>
+        <east>85.5360</east>
+        <west>85.4300</west>
+        <rotation>0.0</rotation>
+      </LatLonBox>
+    </GroundOverlay>
+
+    <!-- MARCADOR DO LAGO CENTRAL -->
+    <Placemark>
+      <name>Lago Lhende Khola (~3.950m)</name>
+      <description><![CDATA[
+        <b>Área do Espelho:</b> 65,7 hectares<br>
+        <b>Comprimento:</b> 1.765 metros<br>
+        <b>Volume Estimado:</b> 3,27 a 7,10 Milhões de Toneladas de Água
+      ]]></description>
+      <Point>
+        <coordinates>85.4830,28.2740,3950</coordinates>
+      </Point>
+    </Placemark>
+
+    <!-- MARCADOR DA ESCARPA DE ORIGEM DA AVALANCHE -->
+    <Placemark>
+      <name>Escarpa de Colapso (Mt. Langtang Lirung 5.200m)</name>
+      <description><![CDATA[
+        <b>Origem do Desprendimento:</b> 15 Milhões de m³ de gelo e rocha.<br>
+        <b>Horário Sísmico:</b> 26/08/2026 02:52:10 UTC (4.4 mb).
+      ]]></description>
+      <Point>
+        <coordinates>85.5194,28.2765,5200</coordinates>
+      </Point>
+    </Placemark>
+
+  </Document>
+</kml>

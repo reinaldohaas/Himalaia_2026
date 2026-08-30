@@ -3114,6 +3114,29 @@
     <!-- ====================================================== -->
     <Folder>
       <name>2. Lago e Geleira do Lhende Khola (Origem)</name>
+        <!-- SOBREPOSIÇÃO ORBITAL SENTINEL-2 NO TERRENO 3D -->
+        <GroundOverlay>
+          <name>📷 Imagem Sentinel-2: Lago e Circo do Langtang Lirung (3D Overlay)</name>
+          <description><![CDATA[
+            <b>Instrumento:</b> Copernicus Sentinel-2 MSI (10m resolução)<br>
+            <b>Área:</b> 10.4 km x 6.6 km cobrindo o circo glacial e lago a 3.950m.<br>
+            <i>Dica: Use a barra de transparência no Google Earth para alternar a visibilidade!</i>
+          ]]></description>
+          <color>ffffffff</color>
+          <drawOrder>10</drawOrder>
+          <Icon>
+            <href>images/sentinel_lhende_khola_lake.jpg</href>
+            <viewBoundScale>0.75</viewBoundScale>
+          </Icon>
+          <altitudeMode>clampToGround</altitudeMode>
+          <LatLonBox>
+            <north>28.3050</north>
+            <south>28.2450</south>
+            <east>85.5360</east>
+            <west>85.4300</west>
+            <rotation>0.0</rotation>
+          </LatLonBox>
+        </GroundOverlay>
       
       <Placemark>
         <name>Geleira da Face Norte (Mt. Langtang Lirung 5.200m)</name>
@@ -3559,3 +3582,4 @@
 
   </Document>
 </kml>
+
