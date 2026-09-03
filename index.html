@@ -283,9 +283,18 @@
                                 </span>
                                 <span class="fw-bold text-light" id="mapStatusText" style="font-size: 0.88rem;">Cânion Tridimensional do Trishuli</span>
                             </div>
-                            <div class="d-flex gap-1">
-                                <button onclick="reset3DCamera()" class="btn btn-xs btn-outline-info py-1 px-2" style="font-size: 0.70rem;">
-                                    <i class="fa-solid fa-compass me-1"></i> Vista 3D Padrão
+                            <div class="d-flex gap-1 flex-wrap">
+                                <button onclick="zoomRegion()" class="btn btn-xs btn-warning text-dark py-1 px-2 fw-bold" style="font-size: 0.70rem;">
+                                    <i class="fa-solid fa-magnifying-glass-plus me-1"></i> Zoom Região
+                                </button>
+                                <button onclick="zoomEpicenter()" class="btn btn-xs btn-outline-danger py-1 px-2" style="font-size: 0.70rem;">
+                                    💥 Epicentro (5.200m)
+                                </button>
+                                <button onclick="zoomSyabrubesi()" class="btn btn-xs btn-outline-info py-1 px-2" style="font-size: 0.70rem;">
+                                    📉 Syabrubesi
+                                </button>
+                                <button onclick="zoomOverview()" class="btn btn-xs btn-outline-secondary py-1 px-2" style="font-size: 0.70rem;">
+                                    🗺️ Bacia Completa
                                 </button>
                                 <button onclick="toggleTerrainExaggeration()" id="btnExag" class="btn btn-xs btn-outline-primary py-1 px-2" style="font-size: 0.70rem;">
                                     Relevo 1.5×
@@ -753,10 +762,10 @@
         // 1. Inicializar Motor MAPS 3D REAL (MapLibre GL JS com Terreno de Relevo e Satélite Google Earth)
         const map3d = new maplibregl.Map({
             container: 'map3d',
-            center: [85.340, 28.180],
-            zoom: 10.5,
-            pitch: 62,
-            bearing: 25,
+            center: [85.385, 28.260],
+            zoom: 12.8,
+            pitch: 68,
+            bearing: 32,
             style: {
                 version: 8,
                 sources: {
@@ -899,15 +908,24 @@
             updateState(timelineIdx);
         }
 
+        function zoomRegion() {
+            fly3DTo([85.385, 28.260], 13.0, 68, 32, currentIndex, '🔍 Zoom na Região do Impacto (Rasuwagadhi, Timure e Lhende Khola)');
+        }
+
+        function zoomEpicenter() {
+            fly3DTo([85.483, 28.274], 14.8, 72, 45, currentIndex, '💥 Zoom no Circo Glacial & Epicentro Sísmico (5.200m)');
+        }
+
+        function zoomSyabrubesi() {
+            fly3DTo([85.33249, 28.15748], 14.5, 65, 20, currentIndex, '📉 Zoom na Confluência Fluvial & Estação DHM');
+        }
+
+        function zoomOverview() {
+            fly3DTo([85.340, 28.180], 10.5, 45, 15, currentIndex, '🗺️ Visão Geral da Bacia do Rio Trishuli (45 km)');
+        }
+
         function reset3DCamera() {
-            map3d.flyTo({
-                center: [85.340, 28.180],
-                zoom: 10.5,
-                pitch: 62,
-                bearing: 25,
-                duration: 1500
-            });
-            document.getElementById('mapStatusText').innerText = 'Cânion Tridimensional do Trishuli';
+            zoomRegion();
         }
 
         function toggleTerrainExaggeration() {
