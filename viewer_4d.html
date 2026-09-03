@@ -609,6 +609,11 @@
             maxZoom: 18
         }).addTo(map);
 
+        const osmMap = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors',
+            maxZoom: 18
+        });
+
         const esriTopo = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
             attribution: 'Tiles &copy; Esri',
             maxZoom: 18
@@ -616,6 +621,7 @@
 
         L.control.layers({
             "🛰️ Satélite Esri (Real)": esriSatellite,
+            "🗺️ OpenStreetMap": osmMap,
             "🏔️ Relevo Topográfico (Esri)": esriTopo
         }, null, { position: 'topright' }).addTo(map);
 
@@ -648,13 +654,13 @@
 
         // Rede de 14 Magnetômetros (China + Nepal + Índia)
         const magnetometers = [
-            { code: 'LZA', name: 'Lhasa (Tibete - 3.650m)', lat: 29.645, lon: 91.035, cn: true },
-            { code: 'XAN', name: 'Xi'an (Shaanxi)', lat: 34.250, lon: 108.950, cn: true },
-            { code: 'CDT', name: 'Chengdu (Sichuan)', lat: 30.670, lon: 104.060, cn: true },
-            { code: 'BJI', name: 'Beijing (Ming Tombs)', lat: 40.040, lon: 116.290, cn: true },
-            { code: 'KKN', name: 'Kakani (Nepal - 56 km)', lat: 27.801, lon: 85.280, cn: false },
-            { code: 'SAB', name: 'Sabhawala (Índia)', lat: 30.337, lon: 77.802, cn: false },
-            { code: 'TIR', name: 'Tirunelveli (Equador EEJ)', lat: 8.710, lon: 77.800, cn: false }
+            { code: 'LZA', name: "Lhasa (Tibete - 3.650m)", lat: 29.645, lon: 91.035, cn: true },
+            { code: 'XAN', name: "Xi'an (Shaanxi)", lat: 34.250, lon: 108.950, cn: true },
+            { code: 'CDT', name: "Chengdu (Sichuan)", lat: 30.670, lon: 104.060, cn: true },
+            { code: 'BJI', name: "Beijing (Ming Tombs)", lat: 40.040, lon: 116.290, cn: true },
+            { code: 'KKN', name: "Kakani (Nepal - 56 km)", lat: 27.801, lon: 85.280, cn: false },
+            { code: 'SAB', name: "Sabhawala (Índia)", lat: 30.337, lon: 77.802, cn: false },
+            { code: 'TIR', name: "Tirunelveli (Equador EEJ)", lat: 8.710, lon: 77.800, cn: false }
         ];
 
         const magMarkers = {};
@@ -866,6 +872,8 @@
         // Iniciar aplicação
         initChart();
         updateState(0);
+        setTimeout(() => { map.invalidateSize(); }, 300);
+        window.addEventListener('resize', () => { map.invalidateSize(); });
     </script>
 </body>
 </html>
