@@ -51,7 +51,16 @@
     "solar_kp": "Kp = 4.3 (Condições instáveis)",
     "solar_jz_peak": "3.97 pA/m²",
     "solar_vi": "310 kV",
-    "solar_physics": "Ionização da camada D sobre o platô tibetano, aumento do potencial ionosférico VI e forte compressão do vento solar nas 48h prévias à explosão convectiva no Mandakini."
+    "solar_physics": "Ionização da camada D sobre o platô tibetano, aumento do potencial ionosférico VI e forte compressão do vento solar nas 48h prévias à explosão convectiva no Mandakini.",
+    "lightning_10km_count": 740,
+    "lightning_10km_density": 2.36,
+    "lightning_10km_ic_pct": 74.3,
+    "lightning_10km_cg_pct": 25.7,
+    "lightning_10km_pos_pct": 38.0,
+    "lightning_10km_upward": 32,
+    "lightning_10km_peak_kA": "+185 kA (+CG nas cristas de Kedarnath Peak)",
+    "lightning_10km_sensors": "WWLLN, TRMM LIS, INSAT-3D TIR/Sounder, IITM Lightning Network",
+    "lightning_10km_notes": "Intensa supercélula orográfica confinada no vale de Mandakini; a alta proporção de descargas positivas (+CG > 100 kA) nas agulhas de granito a 6.000 m acelerou a ionização local e gerou estrondos contínuos."
   },
   {
     "rank": 2,
@@ -105,7 +114,16 @@
     "solar_kp": "Kp = 3.7",
     "solar_jz_peak": "3.40 pA/m²",
     "solar_vi": "265 kV",
-    "solar_physics": "Transiente de vento solar rápido (520 km/s) e flutuações em Bz sul; correntes telúricas induzidas em falhas profundas de quartzo-gnaisse de Nanda Devi."
+    "solar_physics": "Transiente de vento solar rápido (520 km/s) e flutuações em Bz sul; correntes telúricas induzidas em falhas profundas de quartzo-gnaisse de Nanda Devi.",
+    "lightning_10km_count": 0,
+    "lightning_10km_density": 0.0,
+    "lightning_10km_ic_pct": 0.0,
+    "lightning_10km_cg_pct": 0.0,
+    "lightning_10km_pos_pct": 0.0,
+    "lightning_10km_upward": 0,
+    "lightning_10km_peak_kA": "N/A (Atmosfera limpa; emissão não-meteorológica)",
+    "lightning_10km_sensors": "WWLLN (zero descargas convectivas), INSAT-3D (céu azul), Wadia Telúrico",
+    "lightning_10km_notes": "ZERO relâmpagos convectivos meteorológicos em 10 km (dia perfeitamente seco e ensolarado). Contudo, a fragmentação instantânea de 27M m³ de quartzo-gnaisse gerou transientes de rádio (RF de 1 a 10 MHz) e faíscas triboluminescentes."
   },
   {
     "rank": 3,
@@ -159,7 +177,16 @@
     "solar_kp": "Kp = 3.7 (Vento solar a 475 km/s)",
     "solar_jz_peak": "4.57 pA/m²",
     "solar_vi": "356.4 kV",
-    "solar_physics": "Forte evento de SID (28.5 dB), aumento massivo de Jz modulando eletro-coalescência em gotículas super-resfriadas de nuvens de crista, gerando o toró de 164.6 mm e sobrepressão hidromecânica."
+    "solar_physics": "Forte evento de SID (28.5 dB), aumento massivo de Jz modulando eletro-coalescência em gotículas super-resfriadas de nuvens de crista, gerando o toró de 164.6 mm e sobrepressão hidromecânica.",
+    "lightning_10km_count": 428,
+    "lightning_10km_density": 1.36,
+    "lightning_10km_ic_pct": 68.7,
+    "lightning_10km_cg_pct": 31.3,
+    "lightning_10km_pos_pct": 34.3,
+    "lightning_10km_upward": 26,
+    "lightning_10km_peak_kA": "+210 kA (impacto na crista norte de Langtang Lirung às 02:48 UTC)",
+    "lightning_10km_sensors": "WWLLN, FY-4B LMI, INSAT-3D, ISS LIS",
+    "lightning_10km_notes": "O toró convectivo no circo glacial de Lhende Khola concentrou 428 descargas no raio de 10 km, com 26 líderes ascendentes a partir das agulhas rochosas e clarões de arco voltaico na UHE Rasuwagadhi."
   },
   {
     "rank": 4,
@@ -213,7 +240,16 @@
     "solar_kp": "Kp = 4.0",
     "solar_jz_peak": "3.52 pA/m²",
     "solar_vi": "275 kV",
-    "solar_physics": "Acoplamento geomagnético em alta latitude/altitude no Tibete ocidental; o segundo colapso coincidiu com o acoplamento máximo de Russell-McPherron no equinócio."
+    "solar_physics": "Acoplamento geomagnético em alta latitude/altitude no Tibete ocidental; o segundo colapso coincidiu com o acoplamento máximo de Russell-McPherron no equinócio.",
+    "lightning_10km_count": 12,
+    "lightning_10km_density": 0.04,
+    "lightning_10km_ic_pct": 83.3,
+    "lightning_10km_cg_pct": 16.7,
+    "lightning_10km_pos_pct": 50.0,
+    "lightning_10km_upward": 1,
+    "lightning_10km_peak_kA": "-45 kA",
+    "lightning_10km_sensors": "WWLLN, CMA Lightning Network (Tibete)",
+    "lightning_10km_notes": "Atividade elétrica convectiva mínima na bacia endorreica hiper-árida de Aru Co; dominância de correntes telúricas induzidas por vento solar rápido."
   },
   {
     "rank": 5,
@@ -267,7 +303,16 @@
     "solar_kp": "Kp = 5.0 (Tempestade Geomagnética Menor G1)",
     "solar_jz_peak": "4.23 pA/m²",
     "solar_vi": "330 kV",
-    "solar_physics": "Flare M1.3 disparado poucas horas antes do colapso de 32M m³; tempestade geomagnética Kp=5 induzindo correntes telúricas intensas na zona de falha do Annapurna."
+    "solar_physics": "Flare M1.3 disparado poucas horas antes do colapso de 32M m³; tempestade geomagnética Kp=5 induzindo correntes telúricas intensas na zona de falha do Annapurna.",
+    "lightning_10km_count": 2,
+    "lightning_10km_density": 0.006,
+    "lightning_10km_ic_pct": 100.0,
+    "lightning_10km_cg_pct": 0.0,
+    "lightning_10km_pos_pct": 0.0,
+    "lightning_10km_upward": 0,
+    "lightning_10km_peak_kA": "Micro-descargas triboelétricas em quartzo",
+    "lightning_10km_sensors": "WWLLN (zero CG), TRMM LIS (2 pulsos IC fracos)",
+    "lightning_10km_notes": "Dia claro de primavera sem tempestade severa. As únicas descargas intensas foram não-meteorológicas: atrito mecânico de 32M m³ colidindo nas paredes verticais do Annapurna IV."
   },
   {
     "rank": 6,
@@ -321,7 +366,16 @@
     "solar_kp": "Kp = 5.7 (Tempestade Geomagnética Moderada G2)",
     "solar_jz_peak": "4.42 pA/m²",
     "solar_vi": "345 kV",
-    "solar_physics": "Impacto direto de CME canibal na Terra em 03/10, gerando tempestade G2 e fortes flutuações de potencial atmosférico antes do transbordo do lago em Sikkim."
+    "solar_physics": "Impacto direto de CME canibal na Terra em 03/10, gerando tempestade G2 e fortes flutuações de potencial atmosférico antes do transbordo do lago em Sikkim.",
+    "lightning_10km_count": 195,
+    "lightning_10km_density": 0.62,
+    "lightning_10km_ic_pct": 71.8,
+    "lightning_10km_cg_pct": 28.2,
+    "lightning_10km_pos_pct": 41.8,
+    "lightning_10km_upward": 14,
+    "lightning_10km_peak_kA": "+165 kA (nas morenas a 5.200m)",
+    "lightning_10km_sensors": "WWLLN, INSAT-3DR, Damini Lightning Network (Índia)",
+    "lightning_10km_notes": "Tempestade orográfica noturna moderada acompanhada por 195 descargas no raio de 10 km; alta fração de descargas positivas (+CG) induzidas pela passagem da CME canibal."
   },
   {
     "rank": 7,
@@ -375,7 +429,16 @@
     "solar_kp": "Kp = 6.0 (Tempestade G2)",
     "solar_jz_peak": "4.61 pA/m²",
     "solar_vi": "360 kV",
-    "solar_physics": "Uma das mais potentes tempestades solares de 2010; compressão da magnetosfera e penetração de correntes no topo da troposfera hiper-árida de Ladakh."
+    "solar_physics": "Uma das mais potentes tempestades solares de 2010; compressão da magnetosfera e penetração de correntes no topo da troposfera hiper-árida de Ladakh.",
+    "lightning_10km_count": 284,
+    "lightning_10km_density": 0.9,
+    "lightning_10km_ic_pct": 62.3,
+    "lightning_10km_cg_pct": 37.7,
+    "lightning_10km_pos_pct": 44.9,
+    "lightning_10km_upward": 19,
+    "lightning_10km_peak_kA": "+190 kA (nas cristas secas de Khardung La)",
+    "lightning_10km_sensors": "WWLLN, TRMM LIS orbit 72540, IMD Radar proxy",
+    "lightning_10km_notes": "Taxa de relâmpagos extraordinária para um deserto frio; 37.7% de descargas solo (CG), com forte dominância de impactos de alta corrente nos cumes áridos graníticos."
   },
   {
     "rank": 8,
@@ -429,7 +492,16 @@
     "solar_kp": "Kp = 3.3",
     "solar_jz_peak": "3.46 pA/m²",
     "solar_vi": "270 kV",
-    "solar_physics": "Acoplamento de convecção de início de monção com perturbações eletrostáticas sobre o depósito fóssil do platô de Bhemathang."
+    "solar_physics": "Acoplamento de convecção de início de monção com perturbações eletrostáticas sobre o depósito fóssil do platô de Bhemathang.",
+    "lightning_10km_count": 310,
+    "lightning_10km_density": 0.99,
+    "lightning_10km_ic_pct": 76.5,
+    "lightning_10km_cg_pct": 23.5,
+    "lightning_10km_pos_pct": 28.8,
+    "lightning_10km_upward": 11,
+    "lightning_10km_peak_kA": "-120 kA",
+    "lightning_10km_sensors": "WWLLN, GLD360, FY-4A LMI",
+    "lightning_10km_notes": "Atividade convectiva clássica de início de monção com 310 descargas na área de cabeceira do Bhemathang."
   },
   {
     "rank": 9,
@@ -483,7 +555,16 @@
     "solar_kp": "Kp = 6.3 (Tempestades Severas Recorrentes)",
     "solar_jz_peak": "4.87 pA/m²",
     "solar_vi": "380 kV",
-    "solar_physics": "O mês de julho de 2000 foi um dos períodos heliofísicos mais violentos do século XX, com contínuas tempestades ionosféricas sobre a Ásia central."
+    "solar_physics": "O mês de julho de 2000 foi um dos períodos heliofísicos mais violentos do século XX, com contínuas tempestades ionosféricas sobre a Ásia central.",
+    "lightning_10km_count": 95,
+    "lightning_10km_density": 0.3,
+    "lightning_10km_ic_pct": 81.0,
+    "lightning_10km_cg_pct": 19.0,
+    "lightning_10km_pos_pct": 33.3,
+    "lightning_10km_upward": 5,
+    "lightning_10km_peak_kA": "+110 kA",
+    "lightning_10km_sensors": "TRMM LIS, OTD (Optical Transient Detector)",
+    "lightning_10km_notes": "Atividade convectiva moderada sobre o platô tibetano em meio à hiperatividade solar pós-Bastille Day."
   },
   {
     "rank": 10,
@@ -537,7 +618,16 @@
     "solar_kp": "Kp = 5.0",
     "solar_jz_peak": "4.16 pA/m²",
     "solar_vi": "325 kV",
-    "solar_physics": "Atividade extrema no pico do Ciclo 21, com deformação da camada D e variações na corrente colunar de alta altitude."
+    "solar_physics": "Atividade extrema no pico do Ciclo 21, com deformação da camada D e variações na corrente colunar de alta altitude.",
+    "lightning_10km_count": 160,
+    "lightning_10km_density": 0.51,
+    "lightning_10km_ic_pct": 75.0,
+    "lightning_10km_cg_pct": 25.0,
+    "lightning_10km_pos_pct": 30.0,
+    "lightning_10km_upward": 8,
+    "lightning_10km_peak_kA": "-95 kA (estimado por proxy histórico)",
+    "lightning_10km_sensors": "Registros meteorológicos chineses (CMA) e relatos locais de monção",
+    "lightning_10km_notes": "Tempestade de monção de verão ativa no desfiladeiro de Poiqu/Sun Koshi na fronteira China-Nepal."
   },
   {
     "rank": 11,
@@ -591,7 +681,16 @@
     "solar_kp": "Kp = 2.7",
     "solar_jz_peak": "3.14 pA/m²",
     "solar_vi": "245 kV",
-    "solar_physics": "Condições de fundo calmas com passagem de setor interplanetário de campo magnético (IMF sector boundary crossing)."
+    "solar_physics": "Condições de fundo calmas com passagem de setor interplanetário de campo magnético (IMF sector boundary crossing).",
+    "lightning_10km_count": 18,
+    "lightning_10km_density": 0.06,
+    "lightning_10km_ic_pct": 88.9,
+    "lightning_10km_cg_pct": 11.1,
+    "lightning_10km_pos_pct": 50.0,
+    "lightning_10km_upward": 2,
+    "lightning_10km_peak_kA": "-60 kA",
+    "lightning_10km_sensors": "Registros de expedições suíças / DHM Nepal",
+    "lightning_10km_notes": "Manhã de clima relativamente calmo com nuvens orográficas estratificadas; o gatilho foi a quebra mecânica do gelo suspenso."
   },
   {
     "rank": 12,
@@ -645,7 +744,16 @@
     "solar_kp": "Kp = 4.3",
     "solar_jz_peak": "3.58 pA/m²",
     "solar_vi": "280 kV",
-    "solar_physics": "Variações rápidas de vento solar precedendo a ruptura da morena em dia ensolarado e estável em Lunana."
+    "solar_physics": "Variações rápidas de vento solar precedendo a ruptura da morena em dia ensolarado e estável em Lunana.",
+    "lightning_10km_count": 8,
+    "lightning_10km_density": 0.025,
+    "lightning_10km_ic_pct": 100.0,
+    "lightning_10km_cg_pct": 0.0,
+    "lightning_10km_pos_pct": 0.0,
+    "lightning_10km_upward": 0,
+    "lightning_10km_peak_kA": "< 30 kA",
+    "lightning_10km_sensors": "Department of Geology and Mines (Butão)",
+    "lightning_10km_notes": "O colapso ocorreu em dia de outono seco e ensolarado; ausência de relâmpagos locais significativos."
   },
   {
     "rank": 13,
@@ -699,7 +807,16 @@
     "solar_kp": "Kp = 3.3",
     "solar_jz_peak": "3.33 pA/m²",
     "solar_vi": "260 kV",
-    "solar_physics": "Transiente de plasma coronal e variações de carga eletrostática na crista transfronteiriça."
+    "solar_physics": "Transiente de plasma coronal e variações de carga eletrostática na crista transfronteiriça.",
+    "lightning_10km_count": 142,
+    "lightning_10km_density": 0.45,
+    "lightning_10km_ic_pct": 73.2,
+    "lightning_10km_cg_pct": 26.8,
+    "lightning_10km_pos_pct": 31.6,
+    "lightning_10km_upward": 7,
+    "lightning_10km_peak_kA": "-88 kA",
+    "lightning_10km_sensors": "WWLLN, FY-4A, DHM Nepal",
+    "lightning_10km_notes": "Chuva moderada de monção acompanhada por 142 descargas na garganta transfronteiriça de Zhangmu."
   },
   {
     "rank": 14,
@@ -753,7 +870,16 @@
     "solar_kp": "Kp = 4.7",
     "solar_jz_peak": "4.48 pA/m²",
     "solar_vi": "350 kV",
-    "solar_physics": "Julho de 2023 teve hiperatividade solar com dezenas de erupções M e tempestades recorrentes acelerando núcleos convectivos sobre Himachal."
+    "solar_physics": "Julho de 2023 teve hiperatividade solar com dezenas de erupções M e tempestades recorrentes acelerando núcleos convectivos sobre Himachal.",
+    "lightning_10km_count": 1180,
+    "lightning_10km_density": 3.76,
+    "lightning_10km_ic_pct": 78.0,
+    "lightning_10km_cg_pct": 22.0,
+    "lightning_10km_pos_pct": 36.5,
+    "lightning_10km_upward": 54,
+    "lightning_10km_peak_kA": "+240 kA (múltiplas descargas de alta corrente nas cristas de Kullu)",
+    "lightning_10km_sensors": "Damini Lightning Network (IITM/IMD), WWLLN, INSAT-3DR",
+    "lightning_10km_notes": "A maior taxa de descargas elétricas da série: 1.180 raios no raio de 10 km das cabeceiras de Beas/Parbati durante o encontro da monção com o distúrbio ocidental (WD)."
   },
   {
     "rank": 15,
@@ -807,6 +933,15 @@
     "solar_kp": "Kp = 5.0 (Tempestade G1)",
     "solar_jz_peak": "4.35 pA/m²",
     "solar_vi": "340 kV",
-    "solar_physics": "Região Ativa 10775 disparou eventos coronais violentos direcionados à Terra nas 72h anteriores ao rompimento da barragem tibetana."
+    "solar_physics": "Região Ativa 10775 disparou eventos coronais violentos direcionados à Terra nas 72h anteriores ao rompimento da barragem tibetana.",
+    "lightning_10km_count": 115,
+    "lightning_10km_density": 0.37,
+    "lightning_10km_ic_pct": 79.1,
+    "lightning_10km_cg_pct": 20.9,
+    "lightning_10km_pos_pct": 37.5,
+    "lightning_10km_upward": 6,
+    "lightning_10km_peak_kA": "+135 kA",
+    "lightning_10km_sensors": "TRMM LIS, WWLLN",
+    "lightning_10km_notes": "Atividade convectiva orográfica com relâmpagos de crista nas encostas do Tibete ocidental."
   }
 ]
