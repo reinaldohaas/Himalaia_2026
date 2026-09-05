@@ -37,6 +37,11 @@ An open-source, reproducible scientific investigation into the catastrophic casc
 Access all interactive tools online with zero installation:
 * **🚀 4D Spatiotemporal Master Viewer:** [https://reinaldohaas.github.io/Himalaia_2026/viewer_4d.html](https://reinaldohaas.github.io/Himalaia_2026/viewer_4d.html)  
   *Real-time timeline scrubber, multi-axis series (Jz, Lightning, Rain, X-Ray), animated lake swelling/breach, 14-station magnetometer dynamics, and downstream debris flow routing.*
+* **🗺️ 15 Catástrofes do Himalaia (1980–2026) - Apresentação 3D:** [https://reinaldohaas.github.io/Himalaia_2026/mapa_ranking_himalaia_1980_2026.html](https://reinaldohaas.github.io/Himalaia_2026/mapa_ranking_himalaia_1980_2026.html)  
+  *Navegação forense interativa em 3D, epicentros de ruptura no cume (h ≈ 0 km), intensidade MMI, sons, cheiros/gases, faíscas de atrito e inconsistências físicas documentadas na literatura.*
+* **📑 Monografia de Revisão Bibliográfica de Inconsistências:** [`REVISAO_BIBLIOGRAFICA_INCONSISTENCIAS_HIMALAIA.md`](REVISAO_BIBLIOGRAFICA_INCONSISTENCIAS_HIMALAIA.md)  
+  *Compilação rigorosa do Paradoxo do Déficit Hídrico (Fluência >> Chuva + Fusão) e Discrepância Cinético-Sísmica com dados de periódicos peer-reviewed (Science, Nature, GRL, NHESS).*
+* **📥 KMZ Completo do Ranking (Google Earth Pro):** [`catastrofe_himalaia_1980_2026_ranking.kmz`](catastrofe_himalaia_1980_2026_ranking.kmz)
 * **📊 Master Infographic & Data Portal:** [https://reinaldohaas.github.io/Himalaia_2026/](https://reinaldohaas.github.io/Himalaia_2026/) *(or index.html)*
 * **🗺️ GIS Infrastructure Damage Map (33 Bridges):** [https://reinaldohaas.github.io/Himalaia_2026/nepal_tibet_disaster_map.html](https://reinaldohaas.github.io/Himalaia_2026/nepal_tibet_disaster_map.html)
 

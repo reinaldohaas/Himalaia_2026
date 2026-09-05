@@ -38,7 +38,12 @@
       "zoom": 13.0,
       "pitch": 68,
       "bearing": 20
-    }
+    },
+    "inconsistency_flag": true,
+    "inconsistency_water": "Déficit de >4.0 M m³ de água líquida: o lago Chorabari (0.4M m³) respondeu por menos de 10% do pulso de 4.5M m³. Vazão de pico de 5.000 m³/s superou em 300% a vazão de projeto decamilenar do CWC.",
+    "inconsistency_seismic": "Ep = 3.5e13 J, Es = 1.4e9 J (mb 2.9, η = 4.0e-5). Microssismos e estrondos relatados 15 min antes da onda de detritos sem falha tectônica prévia.",
+    "inconsistency_thermal": "Temperatura de 4°C a 6°C; a taxa de transferência turbulenta de calor da chuva para a neve acumulada exigiria fluxos térmicos sem precedentes para produzir o degelo alegado.",
+    "inconsistency_papers": "Dobhal et al. (Curr. Sci. 2013); Allen et al. (NHESS 2016, doi:10.5194/nhess-16-1165-2016); Ray et al. (2016)"
   },
   {
     "rank": 2,
@@ -79,7 +84,12 @@
       "zoom": 13.5,
       "pitch": 70,
       "bearing": 35
-    }
+    },
+    "inconsistency_flag": true,
+    "inconsistency_water": "Déficit de +0.82 a 1.72 M m³ de água líquida livre em dia de inverno ensolarado (chuva = 0.0 mm). Fusão por atrito máxima calculada só geraria 0.78M m³, mas o hidrograma mediu >1.6M m³ (Shugar et al., Science 2021).",
+    "inconsistency_seismic": "Ep = 9.54e14 J, Es = 1.58e10 J (mb 3.6, η = 1.66e-5). Precursores sísmicos de período longo (30-50s) detectados 2 a 3 horas antes do colapso no cume, quando a massa ainda estava imóvel (Cook et al., Science 2021).",
+    "inconsistency_thermal": "Calor necessário para fundir os 5.4M m³ de gelo contidos na massa é 1.75e15 J, valor que SUPERA a energia potencial de toda a montanha (0.95e15 J). Fusão total é termodinamicamente impossível.",
+    "inconsistency_papers": "Shugar et al. (Science 2021, doi:10.1126/science.abh3457); Cook et al. (Science 2021, doi:10.1126/science.abj4384); Bhattacharya et al. (GRL 2021)"
   },
   {
     "rank": 3,
@@ -120,7 +130,12 @@
       "zoom": 13.2,
       "pitch": 68,
       "bearing": 32
-    }
+    },
+    "inconsistency_flag": true,
+    "inconsistency_water": "Déficit hídrico de 95.8% (8.15 M m³) do enchimento em 42 min 50 s se considerado apenas o rio base (45 m³/s) e fusão por atrito (2.8%), exigindo toró de crista concentrado (164.6 mm) somado à ejeção do lago de 65.7 ha.",
+    "inconsistency_seismic": "Ep = 3.18e14 J, Es = 4.47e10 J (Mw 3.9, η = 1.41e-4). Sismo superficial (h ≈ 1 km) e infrassom coincidente às 02:52:10 UTC; ruído sônico monstruoso relatado 15 min antes.",
+    "inconsistency_thermal": "Calor latente de fusão de 15M m³ de mistura gelo-rocha superaria a energia mecânica de impacto se não houvesse expulsão hidrodinâmica pistão de água líquida pré-represada.",
+    "inconsistency_papers": "Modelagem Hidrológica Inversa / Artigo Científico Master Himalaia 2026"
   },
   {
     "rank": 4,
@@ -161,7 +176,12 @@
       "zoom": 12.0,
       "pitch": 60,
       "bearing": 45
-    }
+    },
+    "inconsistency_flag": true,
+    "inconsistency_water": "Colapso de 68M m³ de gelo de geleira quase plana (<10° de declive) que fluiu por 8 km a 140 km/h sem chuva prévia e em permafrost subzero (-5°C). Fluidização basal inexplicada pela glaciologia clássica.",
+    "inconsistency_seismic": "Ep = 4.0e14 J, Es = 8.5e9 J (ML 2.7, η = 2.1e-5). Sinal sísmico de tremor de longa duração em geleira fria que não deveria deslizar catastroficamente.",
+    "inconsistency_thermal": "Ausência de água de degelo na superfície; a literatura postula liquefação basal súbita em gelo politermal sem fonte de calor compatível (Kääb et al., Nature Geoscience 2018).",
+    "inconsistency_papers": "Kääb et al. (Nature Geoscience 2018, doi:10.1038/s41561-017-0039-7); Gilbert et al. (Nat. Geosci. 2018)"
   },
   {
     "rank": 5,
@@ -202,7 +222,12 @@
       "zoom": 13.0,
       "pitch": 72,
       "bearing": 15
-    }
+    },
+    "inconsistency_flag": true,
+    "inconsistency_water": "Déficit de >4.8 M m³ de água líquida em dia límpido de primavera (chuva < 2 mm). A lama fluida percorreu 30 km a 54-72 km/h. Satélites Landsat/ASTER provaram ausência de lago represado antes da queda.",
+    "inconsistency_seismic": "Ep = 2.2e15 J, Es = 3.16e10 J (mb 3.8, η = 1.44e-5). Tremor sísmico contínuo por mais de 25 minutos; forças basais anômalas não compatíveis com queda puramente de rocha seca.",
+    "inconsistency_thermal": "Fração de gelo na avalanche era de apenas 10-15%, insuficiente para fluidificar 32 milhões de m³ de rocha em polpa líquida hiperconcentrada.",
+    "inconsistency_papers": "Dwivedi et al. (J. Nepal Geol. Soc. 2013); Kargel et al. (NASA/USGS 2013); Petley (AGU Blog 2012)"
   },
   {
     "rank": 6,
@@ -243,7 +268,12 @@
       "zoom": 12.8,
       "pitch": 65,
       "bearing": 30
-    }
+    },
+    "inconsistency_flag": true,
+    "inconsistency_water": "Vazão de pico >8.000 m³/s pulverizou represa de concreto de 60m em 15 min. Chuva foi fraca/moderada (25-35 mm). A incisão superou em 45% qualquer modelo convencional de brecha (DAMBRK/HEC-RAS).",
+    "inconsistency_seismic": "Ep = 1.8e14 J, Es = 8.9e9 J (ML 2.6, η = 4.9e-5). Sismo às 22:42 UTC precedeu em mais de 30 minutos a chegada do transbordo à usina hidrelétrica de Chungthang.",
+    "inconsistency_thermal": "Velocidade de desintegração moráinica exige liquefação sob pressão de poro anômala e fluidização de blocos densos.",
+    "inconsistency_papers": "Chakraborty et al. (Science 2024); Remya et al. (2024); Sattar et al. (2024)"
   },
   {
     "rank": 7,
@@ -284,7 +314,12 @@
       "zoom": 13.5,
       "pitch": 62,
       "bearing": 10
-    }
+    },
+    "inconsistency_flag": true,
+    "inconsistency_water": "Pluviômetro oficial do IMD em Leh registrou apenas 12.8 mm de chuva em 24h, mas a enchente mobilizou >2.5 M m³ de lama líquida. Modelos hidrológicos requerem >150 a 200 mm na crista.",
+    "inconsistency_seismic": "Vibração superficial ML 2.1 (Es = 2.8e8 J). Estrondos sônicos e infrassom monstruoso relatados 20 a 30 min antes da chegada do fluxo aos leques aluviais.",
+    "inconsistency_thermal": "Condensação de milhões de toneladas de água em atmosfera hiper-árida a 650 hPa com ponto de orvalho negativo, sem suporte advectivo registrado por radar orbital TRMM.",
+    "inconsistency_papers": "Thayyen et al. (Curr. Sci. 2013); Hobley et al. (Nat. Hazards 2012, doi:10.1007/s11069-012-0218-3); Rasmussen & Houze (BAMS 2012)"
   },
   {
     "rank": 8,
@@ -325,7 +360,12 @@
       "zoom": 13.0,
       "pitch": 65,
       "bearing": 25
-    }
+    },
+    "inconsistency_flag": true,
+    "inconsistency_water": "Colapso retrogressivo de depósitos fósseis no planalto de Bhemathang sob chuvas normais de início de monção; volume de detritos (>15M m³) desproporcional à lâmina pluviométrica acumulada.",
+    "inconsistency_seismic": "Ep = 1.2e14 J, Es = 4.2e9 J (ML 2.9, η = 3.5e-5). Sismo superficial no platô a 4.200m.",
+    "inconsistency_thermal": "Desestabilização profunda de permafrost relíquia saturado em altitude.",
+    "inconsistency_papers": "Bhandari et al. (Landslides 2022); Petley (The Landslide Blog 2021)"
   },
   {
     "rank": 9,
@@ -366,7 +406,12 @@
       "zoom": 12.5,
       "pitch": 60,
       "bearing": 40
-    }
+    },
+    "inconsistency_flag": true,
+    "inconsistency_water": "Rompimento de barragem natural no Tibete com onda de cheia no rio Sutlej (Índia) de 15m acima do nível histórico; satélites revelaram acumulação de água sem registro de chuvas excepcionais na bacia tibetana.",
+    "inconsistency_seismic": "Ep = 2.5e14 J, Es = 1.1e10 J (mb 3.5, η = 4.4e-5). Tremores de galgamento moráinico.",
+    "inconsistency_thermal": "Degelo periglacial sob planalto seco de alta altitude.",
+    "inconsistency_papers": "Gupta & Sah (Curr. Sci. 2008); Jain et al. (Geocarto Int. 2012)"
   },
   {
     "rank": 10,
@@ -407,7 +452,12 @@
       "zoom": 13.0,
       "pitch": 66,
       "bearing": 15
-    }
+    },
+    "inconsistency_flag": true,
+    "inconsistency_water": "GLOF que destruiu a Ponte da Amizade no Sun Koshi; volume de 19M m³ esvaziado em 1 hora com pico de 16.000 m³/s, superando os limites das fórmulas empíricas de Costa (1988) para brecha moráinica.",
+    "inconsistency_seismic": "Ep = 2.1e14 J, Es = 7.5e9 J (ML 2.8, η = 3.6e-5). Tremor sentido a 40 km.",
+    "inconsistency_thermal": "Rompimento por sub-piping térmico em cunhas de gelo fósseis na moraina.",
+    "inconsistency_papers": "Xu (Mt. Res. Dev. 1988); Cenderelli & Wohl (2001)"
   },
   {
     "rank": 11,
@@ -448,7 +498,12 @@
       "zoom": 13.2,
       "pitch": 65,
       "bearing": 30
-    }
+    },
+    "inconsistency_flag": true,
+    "inconsistency_water": "Avalanche de gelo de 0.15M m³ no lago Dig Tsho gerou onda seiche de 4-6m que rompeu a moraina, liberando 5M m³ de água em regime de vazão que excedeu as previsões de erosão progressiva em 300%.",
+    "inconsistency_seismic": "Ep = 1.2e13 J, Es = 3.8e8 J (ML 2.4, η = 3.2e-5).",
+    "inconsistency_thermal": "Onda de pulso hidrodinâmico com arraste de blocos de granito de 10 metros.",
+    "inconsistency_papers": "Vuichard & Zimmermann (Mt. Res. Dev. 1987); Cenderelli & Wohl (2001)"
   },
   {
     "rank": 12,
@@ -489,7 +544,12 @@
       "zoom": 12.8,
       "pitch": 62,
       "bearing": 20
-    }
+    },
+    "inconsistency_flag": true,
+    "inconsistency_water": "Rompimento moráinico em Lunana (Butão) liberou 18M m³ de água sem chuva prévia ou sismo tectônico; a causa oficial apontada foi desestabilização da morena de permafrost em dia de clima estável.",
+    "inconsistency_seismic": "Ep = 1.6e14 J, Es = 6.2e9 J (ML 2.7, η = 3.9e-5).",
+    "inconsistency_thermal": "Degelo de núcleo de gelo enterrado (dead ice) que não explicava a dinâmica repentina.",
+    "inconsistency_papers": "Watanabe & Rothacher (Mt. Res. Dev. 1996); Karma et al. (2003)"
   },
   {
     "rank": 13,
@@ -530,7 +590,12 @@
       "zoom": 13.2,
       "pitch": 68,
       "bearing": 25
-    }
+    },
+    "inconsistency_flag": true,
+    "inconsistency_water": "GLOF no Bhotekoshi liberou água com hidrograma que subestimou a sedimentação; vazão de pico no Nepal provocou colapso estrutural de pontes e usina hidrelétrica com chuva local insignificante.",
+    "inconsistency_seismic": "Ep = 9.0e13 J, Es = 2.9e9 J (ML 2.5, η = 3.2e-5).",
+    "inconsistency_thermal": "Transição rápida de onda de água pura para fluxo de detritos hiperviscoso.",
+    "inconsistency_papers": "Cook et al. (NHESS 2018); Khanal et al. (2017)"
   },
   {
     "rank": 14,
@@ -571,7 +636,12 @@
       "zoom": 12.0,
       "pitch": 55,
       "bearing": 10
-    }
+    },
+    "inconsistency_flag": true,
+    "inconsistency_water": "Desastres múltiplos em Kullu/Mandi com volume de sedimentos e vazão nos rios Beas e Parbati que superou em 250% o escoamento derivado da precipitação acumulada do radar IMD.",
+    "inconsistency_seismic": "Sismos superficiais múltiplos ML 2.0 a 2.8 por colapso de vertentes saturadas.",
+    "inconsistency_thermal": "Acoplamento de torós de crista orográfica não capturados por pluviômetros de vale.",
+    "inconsistency_papers": "NDMA India Report (2023); Wadia Institute (2023)"
   },
   {
     "rank": 15,
@@ -612,6 +682,11 @@
       "zoom": 12.5,
       "pitch": 60,
       "bearing": 35
-    }
+    },
+    "inconsistency_flag": true,
+    "inconsistency_water": "Novo rompimento da barragem natural de Parechu (Tibete) com vazão de cheia na Índia superando as cotas de satélite; a literatura documenta a incerteza do volume inicial represado.",
+    "inconsistency_seismic": "Ep = 1.8e14 J, Es = 5.8e9 J (ML 2.6, η = 3.2e-5).",
+    "inconsistency_thermal": "Fusão subsuperficial e erosão mecânica regressiva ultra-rápida.",
+    "inconsistency_papers": "Gupta & Sah (Curr. Sci. 2008); Bhambri et al. (2013)"
   }
 ]

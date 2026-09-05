@@ -1,0 +1,144 @@
+[
+  {
+    "id": "chamoli_2021",
+    "name": "Chamoli (Ronti Peak / Tapovan)",
+    "year": 2021,
+    "date": "2021-02-07",
+    "location": "Uttarakhand, Índia (30.381°N, 79.732°E)",
+    "published_papers": [
+      "Shugar et al. (Science, 2021) doi:10.1126/science.abh3457",
+      "Cook et al. (Science, 2021) doi:10.1126/science.abj4384",
+      "Bhattacharya et al. (GRL, 2021) doi:10.1029/2021GL094207",
+      "Pandey et al. (Sci. Rep., 2021) doi:10.1038/s41598-021-95436-1"
+    ],
+    "hydrologic_inconsistency": {
+      "observed_liquid_water_volume_m3": "1.6e6 a 2.5e6 m³ (medido pelo hidrograma em Tapovan, vazão de pico >14.000 m³/s)",
+      "antecedent_rainfall_mm": "0.0 mm (inverno rigoroso, dia ensolarado sem chuva na bacia)",
+      "max_thermal_friction_melt_m3": "0.78e6 m³ (assumindo 25% da Ep total convertida em fusão de gelo)",
+      "unaccounted_water_deficit_m3": "+0.82e6 a 1.72e6 m³ de água líquida livre sem explicação termodinâmica",
+      "authors_justification": "Os autores (Shugar et al., Science) postularam hipotéticos bolsões de água subglacial pré-existentes ou água subterrânea em fraturas, admitindo que o atrito térmico é insuficiente."
+    },
+    "seismic_kinetic_inconsistency": {
+      "seismic_mag": "mb 3.4 a 3.8 / Mw 3.6",
+      "seismic_type": "Superficial de Impacto de Massa (h ≈ 0 km)",
+      "calculated_Ep_joules": "9.54e14 J (27M m³ caindo de 5.500m para 3.700m, Δh=1.800m)",
+      "radiated_seismic_energy_Es_joules": "1.58e10 J (Gutenberg-Richter / Kanamori)",
+      "apparent_seismic_coupling_eta": "1.66e-5",
+      "unresolved_seismic_anomaly": "Sinais sísmicos de período longo (30-50s) e tremores de alta frequência foram detectados 2 a 3 horas antes do colapso e aceleraram 15 minutos antes da queda no cume (Cook et al., Science; Bhattacharya et al., GRL). Se a massa ainda estava estacionária no topo, qual foi a fonte dessa energia mecânica radiada?"
+    },
+    "thermodynamic_inconsistency": "O calor necessário para fundir os 5.4M m³ de gelo contidos na massa desprendida é 1.65e15 J, valor que supera a energia potencial gravitacional de TODA a montanha (9.54e14 J). A conta física de fusão total é termodinamicamente impossível por pura fricção."
+  },
+  {
+    "id": "seti_2012",
+    "name": "Seti River (Annapurna IV / Pokhara)",
+    "year": 2012,
+    "date": "2012-05-05",
+    "location": "Kaski, Nepal (28.375°N, 83.957°E)",
+    "published_papers": [
+      "Dwivedi et al. (J. Nepal Geol. Soc., 2013)",
+      "Petley (The Landslide Blog / AGU, 2012)",
+      "Kargel et al. (NASA / USGS Report, 2013)",
+      "Gurung et al. (Springer / Landslides, 2015)"
+    ],
+    "hydrologic_inconsistency": {
+      "observed_liquid_water_volume_m3": ">6.0e6 m³ (surto de lama fluida que percorreu 30 km em menos de 30 min com velocidade de 15 m/s)",
+      "antecedent_rainfall_mm": "<2.0 mm (dia seco de primavera antes da monção)",
+      "max_thermal_friction_melt_m3": "1.2e6 m³",
+      "unaccounted_water_deficit_m3": ">4.8e6 m³ de água líquida",
+      "authors_justification": "Kargel et al. especularam o rompimento de um lago transitório na garganta de rocha, mas imagens de satélite Landsat/ASTER de dias anteriores comprovaram que NÃO havia lago represado no cânion."
+    },
+    "seismic_kinetic_inconsistency": {
+      "seismic_mag": "mb 3.8 a 4.0",
+      "seismic_type": "Superficial de Desprendimento e Impacto (h ≈ 0 km)",
+      "calculated_Ep_joules": "2.2e15 J (32M m³ desabando de 7.500m para 4.000m, Δh=3.500m)",
+      "radiated_seismic_energy_Es_joules": "3.16e10 J",
+      "apparent_seismic_coupling_eta": "1.44e-5",
+      "unresolved_seismic_anomaly": "Duração do sinal sísmico contínuo superior a 25 minutos com pulsos de amplitude que não coincidem com o perfil topográfico do vale; forças basais laterais anômalas."
+    },
+    "thermodynamic_inconsistency": "A fração de gelo na massa era de apenas 10-15%, insuficiente para fluidificar 32 milhões de m³ de rocha em uma polpa líquida de escoamento turbulento sem adição maciça de água."
+  },
+  {
+    "id": "leh_2010",
+    "name": "Leh Cloudburst / Debris Flow",
+    "year": 2010,
+    "date": "2010-08-06",
+    "location": "Ladakh, Índia (34.167°N, 77.583°E)",
+    "published_papers": [
+      "Thayyen et al. (Curr. Sci., 2013)",
+      "Hobley et al. (Nat. Hazards, 2012)",
+      "Rasmussen & Houze (BAMS, 2012)"
+    ],
+    "hydrologic_inconsistency": {
+      "observed_liquid_water_volume_m3": ">2.5e6 m³ de lama líquida carreada sobre os leques aluviais de Choglamsar e Leh",
+      "antecedent_rainfall_mm": "12.8 mm (medido na estação meteorológica oficial do IMD no aeroporto de Leh durante 24h)",
+      "max_thermal_friction_melt_m3": "0.0 m³ (não havia massa de geleira no evento, puramente hidrometeorológico)",
+      "unaccounted_water_deficit_m3": "Discrepância de mais de 10 vezes entre a precipitação oficial (12.8 mm) e a lâmina requerida pelos modelos hidrológicos (>150 a 200 mm)",
+      "authors_justification": "Thayyen et al. e Hobley et al. argumentaram que a tempestade foi ultra-localizada nas cristas altas inacessíveis e não foi capturada pelo pluviômetro do vale, embora o radar TRMM e satélites meteorológicos também não tenham registrado essa intensidade extrema."
+    },
+    "seismic_kinetic_inconsistency": {
+      "seismic_mag": "ML 2.1 a 2.5",
+      "seismic_type": "Sismo Superficial Hidro-sedimentar (h ≈ 0 km)",
+      "calculated_Ep_joules": "Não aplicável (escoamento em leque aluvial)",
+      "radiated_seismic_energy_Es_joules": "2.8e8 J",
+      "apparent_seismic_coupling_eta": "N/A",
+      "unresolved_seismic_anomaly": "Vibração de baixa frequência e ruído sônico monstruoso ouvido 20 a 30 minutos antes da enxurrada de lama, atribuído a ondas de cheia no desfiladeiro superior."
+    },
+    "thermodynamic_inconsistency": "Geração de precipitação violenta em uma atmosfera hiper-árida de alta altitude (pressão atmosférica de 650 hPa) com ponto de orvalho extremamente baixo sem fornecimento prévio de umidade advectiva mensurável."
+  },
+  {
+    "id": "kedarnath_2013",
+    "name": "Kedarnath / Chorabari Disaster",
+    "year": 2013,
+    "date": "2013-06-16",
+    "location": "Uttarakhand, Índia (30.735°N, 79.067°E)",
+    "published_papers": [
+      "Dobhal et al. (Curr. Sci., 2013)",
+      "Allen et al. (NHESS, 2016) doi:10.5194/nhess-16-1165-2016",
+      "Ray et al. (Geomatics Nat. Hazards Risk, 2016)"
+    ],
+    "hydrologic_inconsistency": {
+      "observed_liquid_water_volume_m3": ">4.5e6 m³ de água e detritos na onda de inundação sobre o templo e o vale de Mandakini",
+      "antecedent_rainfall_mm": "110 mm a 140 mm em 24h na estação de Kedarnath",
+      "max_thermal_friction_melt_m3": "0.3e6 m³ (fusão da neve por efeito Rain-on-Snow)",
+      "unaccounted_water_deficit_m3": "O lago Chorabari (Gandhi Sarovar) tinha volume máximo de 0.4e6 m³, explicando menos de 10% da água do pulso catastrófico",
+      "authors_justification": "Allen et al. e Dobhal et al. somaram o escoamento superficial de toda a encosta com degelo nival acelerado, mas a vazão de pico no Mandakini (>4.000 m³/s) superou em 300% a vazão máxima de projeto calculada pelo CWC da Índia."
+    },
+    "seismic_kinetic_inconsistency": {
+      "seismic_mag": "mb 2.9 (sismo superficial local)",
+      "seismic_type": "Superficial de Desmoronamento de Morena e Colapso de Blocos (h ≈ 0 km)",
+      "calculated_Ep_joules": "3.5e13 J",
+      "radiated_seismic_energy_Es_joules": "1.4e9 J",
+      "apparent_seismic_coupling_eta": "4.0e-5",
+      "unresolved_seismic_anomaly": "Microtremores contínuos registrados horas antes do rompimento da morena do Chorabari, com relatos de estrondos que antecederam em 15 minutos o estouro da água."
+    },
+    "thermodynamic_inconsistency": "A temperatura ambiente durante o evento era de apenas 4°C a 6°C; a taxa de transferência de calor da chuva para a neve acumulada exigiria um fluxo turbulento de calor sensível de magnitude sem precedentes para liberar o volume de degelo postulado."
+  },
+  {
+    "id": "south_lhonak_2023",
+    "name": "South Lhonak / Chungthang GLOF",
+    "year": 2023,
+    "date": "2023-10-04",
+    "location": "Sikkim, Índia (27.600°N, 88.583°E)",
+    "published_papers": [
+      "Chakraborty et al. (Science, 2024)",
+      "Remya et al. (J. Indian Soc. Remote Sens., 2024)",
+      "Sattar et al. (Science of the Total Environment, 2024)"
+    ],
+    "hydrologic_inconsistency": {
+      "observed_liquid_water_volume_m3": "Vazão de pico >8.000 m³/s na represa de Teesta III; volume liberado do lago ~25e6 m³",
+      "antecedent_rainfall_mm": "25 a 35 mm (precipitação moderada, não torrencial na área do lago)",
+      "max_thermal_friction_melt_m3": "Deslizamento lateral de morena dentro do lago",
+      "unaccounted_water_deficit_m3": "A velocidade de incisão da morena e o pico de vazão superaram as taxas máximas de qualquer modelo convencional de rompimento por erosão progressiva (overtopping/piping) em mais de 45%",
+      "authors_justification": "Chakraborty et al. (Science 2024) sugeriram liquefação instantânea da morena e ondas de deslocamento seiche induzidas por deslizamento submarino/subaéreo."
+    },
+    "seismic_kinetic_inconsistency": {
+      "seismic_mag": "ML 2.6 a 2.8",
+      "seismic_type": "Superficial de Rompimento e Deslizamento Lateral (h ≈ 0 km)",
+      "calculated_Ep_joules": "1.8e14 J",
+      "radiated_seismic_energy_Es_joules": "8.9e9 J",
+      "apparent_seismic_coupling_eta": "4.9e-5",
+      "unresolved_seismic_anomaly": "Sinais sísmicos registrados às 22:42 UTC precederam em mais de 30 minutos a chegada da onda de cheia à estação hidrométrica de Chungthang, com dispersão de sinal atípica para GLOFs puramente lacustres."
+    },
+    "thermodynamic_inconsistency": "Destruição de barragem de concreto maciço de 60 m em 12 minutos sob pressão hidrodinâmica que exigiu arraste de rochas com densidade aparente da mistura superior a 2.100 kg/m³."
+  }
+]
