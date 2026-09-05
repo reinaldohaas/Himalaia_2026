@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apresentação em Mapas 3D: 15 Catástrofes no Himalaia (1980–2026)</title>
+    <title>15 Catástrofes do Himalaia (1980–2026): Apresentação em Mapas 3D Forense</title>
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- FontAwesome 6 -->
@@ -14,7 +14,7 @@
     <style>
         :root {
             --bg-main: #06090e;
-            --panel-bg: rgba(11, 17, 30, 0.95);
+            --panel-bg: rgba(11, 17, 30, 0.96);
             --card-bg: #101726;
             --border-color: #1e293b;
             --cyan: #06b6d4;
@@ -50,7 +50,7 @@
             top: 70px;
             left: 20px;
             z-index: 100;
-            width: 480px;
+            width: 490px;
             max-width: calc(100vw - 40px);
             max-height: calc(100vh - 90px);
             overflow-y: auto;
@@ -58,8 +58,8 @@
             border: 1px solid var(--border-color);
             border-radius: 12px;
             padding: 16px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(12px);
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(14px);
             transition: all 0.3s ease;
         }
         .filter-bar {
@@ -75,7 +75,7 @@
             display: flex;
             gap: 5px;
             flex-wrap: wrap;
-            max-width: 680px;
+            max-width: 720px;
             justify-content: flex-end;
         }
         .marker-badge {
@@ -122,6 +122,30 @@
             70% { box-shadow: 0 0 0 15px rgba(250, 204, 21, 0); }
             100% { box-shadow: 0 0 0 0 rgba(250, 204, 21, 0); }
         }
+        .marker-epicenter {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: rgba(220, 38, 38, 0.9);
+            border: 2px solid #fef08a;
+            color: #ffffff;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 0 15px rgba(239, 68, 68, 0.9);
+            animation: pulse-epicenter 1.8s infinite;
+        }
+        .marker-epicenter:hover {
+            transform: scale(1.4);
+            z-index: 1000;
+        }
+        @keyframes pulse-epicenter {
+            0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.85); }
+            70% { box-shadow: 0 0 0 14px rgba(239, 68, 68, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+        }
         .cat-a { background-color: #ef4444; } /* Vermelho */
         .cat-b { background-color: #ea580c; } /* Laranja */
         .cat-c { background-color: #0284c7; } /* Azul */
@@ -147,6 +171,27 @@
             font-size: 0.70rem;
             font-weight: 700;
             border: 1px solid #a855f7;
+        }
+        .badge-gases {
+            background-color: #065f46;
+            color: #a7f3d0;
+            font-size: 0.70rem;
+            font-weight: 700;
+            border: 1px solid #10b981;
+        }
+        .badge-fire {
+            background-color: #7c2d12;
+            color: #fed7aa;
+            font-size: 0.70rem;
+            font-weight: 700;
+            border: 1px solid #ea580c;
+        }
+        .badge-optical {
+            background-color: #312e81;
+            color: #c7d2fe;
+            font-size: 0.70rem;
+            font-weight: 700;
+            border: 1px solid #6366f1;
         }
         .badge-dry {
             background-color: #854d0e;
@@ -175,7 +220,7 @@
             border: 1px solid #334155;
             border-radius: 6px;
             padding: 4px 9px;
-            font-size: 0.73rem;
+            font-size: 0.72rem;
             font-weight: 600;
             transition: all 0.2s;
         }
@@ -197,10 +242,10 @@
     <nav class="navbar navbar-dark bg-dark px-3 py-2 border-bottom border-secondary d-flex justify-content-between align-items-center" style="height: 56px;">
         <div class="d-flex align-items-center gap-2">
             <span class="badge bg-danger fw-bold">1980–2026</span>
-            <span class="navbar-brand text-cyan mb-0" style="font-size: 1.02rem;">
+            <span class="navbar-brand text-cyan mb-0" style="font-size: 1.00rem;">
                 <i class="fa-solid fa-mountain-sun me-1"></i> 15 CATÁSTROFES DO HIMALAIA: MAPA 3D FORENSE
             </span>
-            <span class="badge bg-secondary d-none d-xl-inline">Sismos, Sons Horríveis & Eletricidade</span>
+            <span class="badge bg-secondary d-none d-xl-inline">Epicentros, Sismos Superficiais, Gases & Óptica</span>
         </div>
         
         <div class="d-flex align-items-center gap-2">
@@ -233,11 +278,13 @@
     <div class="filter-bar">
         <span class="small text-muted align-self-center me-1" style="font-size: 0.68rem;">FILTRAR:</span>
         <button class="nav-btn active" onclick="applyFilter('all', this)">Todos (15)</button>
-        <button class="nav-btn text-warning" onclick="applyFilter('dry', this)">☀️ Sem Chuva (7)</button>
-        <button class="nav-btn text-danger" onclick="applyFilter('seismic', this)">🌋 Sismos & Tremores</button>
+        <button class="nav-btn text-danger" onclick="applyFilter('seismic', this)">🌋 Sismos & Epicentros</button>
         <button class="nav-btn text-warning" onclick="applyFilter('sound', this)">😱 Sons Horríveis</button>
+        <button class="nav-btn text-success" onclick="applyFilter('gases', this)">🧪 Cheiros & Gases</button>
+        <button class="nav-btn text-warning" onclick="applyFilter('fire', this)">🔥 Faíscas & Fricção</button>
+        <button class="nav-btn text-info" onclick="applyFilter('optical', this)">🌈 Nuvens Iridescentes</button>
+        <button class="nav-btn text-warning" onclick="applyFilter('dry', this)">☀️ Sem Chuva (7)</button>
         <button class="nav-btn text-purple" style="color: #c084fc;" onclick="applyFilter('electric', this)">⚡ Descargas & Relâmpagos</button>
-        <button class="nav-btn text-info" onclick="applyFilter('solar', this)">☀️ Clima Espacial (10)</button>
     </div>
 
     <!-- Painel de Apresentação / Dossier do Evento Ativo -->
@@ -303,57 +350,92 @@
             </div>
         </div>
 
-        <!-- NOVO BLOCO 1: TERREMOTO & SINAL SÍSMICO -->
-        <div class="p-2.5 rounded mb-2 border border-danger-subtle" style="background: rgba(45, 10, 10, 0.65);">
-            <div class="d-flex align-items-center gap-1.5 mb-1">
-                <span class="badge badge-seismic">🌋 TERREMOTO & SINAL SÍSMICO</span>
-                <span class="text-danger-emphasis fw-bold small" style="font-size: 0.72rem;">Assinatura Geofísica:</span>
+        <!-- BLOCO 1: SISMO SUPERFICIAL, EPICENTRO NO MAPA & MMI -->
+        <div class="p-2.5 rounded mb-2 border border-danger-subtle" style="background: rgba(45, 10, 10, 0.70);">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+                <span class="badge badge-seismic"><i class="fa-solid fa-bullseye me-1"></i> SISMO SUPERFICIAL & EPICENTRO</span>
+                <button onclick="flyToEpicenter()" class="btn btn-xs btn-outline-danger py-0 px-1 text-light" style="font-size: 0.68rem;" title="Centralizar Câmera 3D no Epicentro de Ruptura">
+                    <i class="fa-solid fa-crosshairs me-1"></i> Ver Epicentro 3D
+                </button>
             </div>
-            <p class="small text-light mb-0" id="cardSeismicDesc" style="font-size: 0.76rem; line-height: 1.35;"></p>
+            <div class="row g-1 mb-1 small text-light" style="font-size: 0.72rem;">
+                <div class="col-6"><b class="text-danger">Centro Sísmico:</b> <span id="cardEpicenterCoords"></span></div>
+                <div class="col-6"><b class="text-danger">Profundidade:</b> <span id="cardEpicenterDepth" class="text-warning">h ≈ 0 km (Superficial)</span></div>
+                <div class="col-6"><b class="text-danger">Magnitude:</b> <span id="cardEpicenterMag" class="fw-bold text-cyan"></span></div>
+                <div class="col-6"><b class="text-danger">Intensidade MMI:</b> <span id="cardEpicenterMmi" class="fw-bold text-warning"></span></div>
+            </div>
+            <p class="small text-light mb-0" id="cardSeismicDesc" style="font-size: 0.74rem; line-height: 1.35;"></p>
         </div>
 
-        <!-- NOVO BLOCO 2: SOM HORRÍVEL & ESTRONDO ACÚSTICO -->
-        <div class="p-2.5 rounded mb-2 border border-warning-subtle" style="background: rgba(45, 25, 10, 0.65);">
+        <!-- BLOCO 2: SOM HORRÍVEL & INFRASSOM -->
+        <div class="p-2.5 rounded mb-2 border border-warning-subtle" style="background: rgba(45, 25, 10, 0.70);">
             <div class="d-flex align-items-center gap-1.5 mb-1">
                 <span class="badge badge-sound">😱 SOM HORRÍVEL & INFRASSOM</span>
-                <span class="text-warning-emphasis fw-bold small" style="font-size: 0.72rem;">Relatos Orais & Acústica:</span>
+                <span class="text-warning fw-bold small" style="font-size: 0.72rem;">Aviso Acústico Pré-Impacto (5 a 20 min):</span>
             </div>
-            <p class="small text-light mb-0" id="cardSoundDesc" style="font-size: 0.76rem; line-height: 1.35;"></p>
+            <p class="small text-light mb-0" id="cardSoundDesc" style="font-size: 0.75rem; line-height: 1.35;"></p>
         </div>
 
-        <!-- NOVO BLOCO 3: DESCARGAS ELÉTRICAS & RELÂMPAGOS -->
+        <!-- NOVO BLOCO 3: CHEIROS E GASES -->
+        <div class="p-2.5 rounded mb-2 border border-success-subtle" style="background: rgba(10, 40, 25, 0.70);">
+            <div class="d-flex align-items-center gap-1.5 mb-1">
+                <span class="badge badge-gases">🧪 CHEIROS & GASES</span>
+                <span class="text-success fw-bold small" style="font-size: 0.72rem;">Enxofre, Ozônio O3, H2S & Metano:</span>
+            </div>
+            <p class="small text-light mb-0" id="cardGasesDesc" style="font-size: 0.75rem; line-height: 1.35;"></p>
+        </div>
+
+        <!-- NOVO BLOCO 4: FOGO, FAÍSCAS & FRICÇÃO -->
+        <div class="p-2.5 rounded mb-2 border border-danger-subtle" style="background: rgba(50, 20, 10, 0.70);">
+            <div class="d-flex align-items-center gap-1.5 mb-1">
+                <span class="badge badge-fire">🔥 FAÍSCAS & FRICÇÃO</span>
+                <span class="text-warning fw-bold small" style="font-size: 0.72rem;">Atrito de Quartzo & Fogo de Santelmo:</span>
+            </div>
+            <p class="small text-light mb-0" id="cardFireDesc" style="font-size: 0.75rem; line-height: 1.35;"></p>
+        </div>
+
+        <!-- NOVO BLOCO 5: NUVENS IRIDESCENTES & FENÔMENOS ÓPTICOS -->
+        <div class="p-2.5 rounded mb-2 border border-primary-subtle" style="background: rgba(20, 25, 55, 0.70);">
+            <div class="d-flex align-items-center gap-1.5 mb-1">
+                <span class="badge badge-optical">🌈 NUVENS IRIDESCENTES</span>
+                <span class="text-info fw-bold small" style="font-size: 0.72rem;">Difração Óptica & Halos Prismáticos:</span>
+            </div>
+            <p class="small text-light mb-0" id="cardOpticalDesc" style="font-size: 0.75rem; line-height: 1.35;"></p>
+        </div>
+
+        <!-- BLOCO 6: RELÂMPAGOS & ATIVIDADE ELÉTRICA -->
         <div class="p-2.5 rounded mb-2 border border-purple-subtle" style="background: rgba(35, 10, 50, 0.65);">
             <div class="d-flex align-items-center gap-1.5 mb-1">
                 <span class="badge badge-electric">⚡ RELÂMPAGOS & DESCARGAS</span>
-                <span class="text-purple-emphasis fw-bold small" style="font-size: 0.72rem;">Eletrodinâmica Atmosférica / Piezo:</span>
+                <span class="text-purple-emphasis fw-bold small" style="font-size: 0.72rem;">Eletrodinâmica de Crista:</span>
             </div>
-            <p class="small text-light mb-0" id="cardElectricDesc" style="font-size: 0.76rem; line-height: 1.35;"></p>
+            <p class="small text-light mb-0" id="cardElectricDesc" style="font-size: 0.75rem; line-height: 1.35;"></p>
         </div>
 
-        <!-- Destaque 4: Condição de Chuva no Vale -->
+        <!-- Destaque 7: Condição de Chuva no Vale -->
         <div class="p-2.5 rounded mb-2 border" id="cardRainBox" style="background: rgba(30, 41, 59, 0.6); border-color: var(--border-color);">
             <div class="d-flex align-items-center gap-1.5 mb-1">
                 <span class="badge badge-dry" id="cardRainBadge">🌧️ CONDIÇÃO DE CHUVA</span>
-                <span class="text-light fw-bold small" style="font-size: 0.72rem;">Precipitação no Fundo do Vale:</span>
+                <span class="text-light fw-bold small" style="font-size: 0.74rem;">Precipitação no Fundo do Vale:</span>
             </div>
-            <p class="small text-light mb-0" id="cardRainDesc" style="font-size: 0.76rem; line-height: 1.35;"></p>
+            <p class="small text-light mb-0" id="cardRainDesc" style="font-size: 0.75rem; line-height: 1.35;"></p>
         </div>
 
-        <!-- Destaque 5: Atividade Solar e Clima Espacial -->
+        <!-- Destaque 8: Atividade Solar e Clima Espacial -->
         <div class="p-2.5 rounded mb-2 border" id="cardSolarBox" style="background: rgba(30, 41, 59, 0.6); border-color: var(--border-color);">
             <div class="d-flex align-items-center gap-1.5 mb-1">
                 <span class="badge badge-solar" id="cardSolarBadge">☀️ CLIMA ESPACIAL</span>
-                <span class="text-light fw-bold small" style="font-size: 0.72rem;">Flares e Perturbação Geomagnética:</span>
+                <span class="text-light fw-bold small" style="font-size: 0.74rem;">Flares e Perturbação Geomagnética:</span>
             </div>
-            <p class="small text-light mb-0" id="cardSolarDesc" style="font-size: 0.76rem; line-height: 1.35;"></p>
+            <p class="small text-light mb-0" id="cardSolarDesc" style="font-size: 0.75rem; line-height: 1.35;"></p>
         </div>
 
         <!-- Danos e Infraestrutura -->
         <div class="p-2.5 rounded mb-2 border border-secondary" style="background: rgba(15, 23, 42, 0.6);">
-            <div class="d-flex align-items-center gap-1 mb-1 text-danger fw-bold small" style="font-size: 0.72rem;">
+            <div class="d-flex align-items-center gap-1 mb-1 text-danger fw-bold small" style="font-size: 0.74rem;">
                 <i class="fa-solid fa-triangle-exclamation me-1"></i> Danos Estruturais e Vítimas:
             </div>
-            <p class="small text-muted mb-0" id="cardDamage" style="font-size: 0.76rem; line-height: 1.35;"></p>
+            <p class="small text-muted mb-0" id="cardDamage" style="font-size: 0.75rem; line-height: 1.35;"></p>
         </div>
 
         <!-- Geomito / Memória Oral -->
@@ -371,14 +453,20 @@
                 <i class="fa-solid fa-earth-americas me-1"></i> Earth Web
             </a>
         </div>
+        <div class="text-end mt-2">
+            <a href="REFERENCIAS_CIENTIFICAS_E_RELATOS_TESTEMUNHAIS_HIMALAIA.md" target="_blank" class="text-muted small" style="font-size: 0.68rem; text-decoration: underline;">
+                <i class="fa-solid fa-book-bookmark me-1"></i> Ver Fontes Científicas e Citações
+            </a>
+        </div>
     </div>
 
     <!-- Script JavaScript Principal da Apresentação em Mapas -->
     <script>
-        const eventsData = [{"rank": 1, "id": "kedarnath_2013", "name": "Catástrofe de Kedarnath (Chorabari / Mandakini)", "date": "16–17 de Junho de 2013", "country": "Índia", "region": "Uttarakhand (Gharwal)", "lat": 30.745, "lon": 79.067, "elevation": "3.900m -> 1.000m", "category": "B", "category_name": "Física do Toró (Convecção de Crista)", "volume": "> 15 M m³", "peak_discharge": "5.000 m³/s", "rain_status": "paradox", "rain_desc": "Chuva moderada no vale; supercélula convectiva explosiva confinada no circo glacial (>300 mm em crista).", "solar_status": "high", "solar_desc": "Pico do Máximo Solar do Ciclo 24: Flare M1.3 em 15/06 e rajadas coronais intensas nas 48h prévias.", "seismic_desc": "🌋 SISMICIDADE & TREMOR: Microssismos de descompressão e tremor contínuo de colapso de morenas registrado pelo Wadia Institute às 06:45–07:15 IST (17/06); amplitude equivalente a sismo ML ≈ 2.0.", "sound_desc": "😱 SOM HORRÍVEL: Peregrinos relataram um estrondo apocalíptico como 'cem turbinas de avião militar rugindo juntas' ou uma explosão vulcânica atrás do templo sagrado, ouvido de 5 a 8 minutos antes da onda de lama e megablocos engolir a vila.", "electric_desc": "⚡ DESCARGAS ELÉTRICAS & RELÂMPAGOS: Sensor orbital LIS/TRMM e INSAT registraram centenas de relâmpagos nuvem-solo e nuvem-crista sobre o circo de Chorabari nas horas prévias; forte ionização atmosférica em altitude.", "damage": "> 5.700 mortos; vila de Kedarnath e centenas de pontes/rodovias varridas.", "myth_note": "A lenda do Shiva furioso despejando as águas celestes do Mandakini com seu estrondo ensurdecedor.", "camera": {"zoom": 13.0, "pitch": 68, "bearing": 20}}, {"rank": 2, "id": "chamoli_2021", "name": "Catástrofe de Chamoli (Rishiganga / Dhauliganga)", "date": "7 de Fevereiro de 2021", "country": "Índia", "region": "Uttarakhand (Nanda Devi)", "lat": 30.378, "lon": 79.732, "elevation": "5.600m -> 1.800m", "category": "A", "category_name": "Colapso Rocha-Gelo Sem Chuva", "volume": "27 M m³", "peak_discharge": "5.200 m³/s", "rain_status": "dry", "rain_desc": "☀️ ZERO CHUVA (CÉU AZUL): Dia de inverno perfeitamente ensolarado e seco. Zero chuva no vale ou no Ronti Peak.", "solar_status": "moderate", "solar_desc": "Início do Ciclo 25: Subtempestade geomagnética de baixa latitude (Kp=4) e rajada de vento solar a 520 km/s.", "seismic_desc": "🌋 SINAL SÍSMICO DE IMPACTO: Tremor violento de impacto registrado por mais de 10 estações sísmicas indianas às 10:21 IST (04:51 UTC); energia equivalente a sismo ML = 2.2 com trem de ondas Rayleigh de longo período (35s).", "sound_desc": "😱 SOM HORRÍVEL: Moradores de Raini e operários em Tapovan descreveram um rugido ensurdecedor idêntico a 'um caça a jato supersônico voando dentro da garganta' ou detonação em massa, com onda de vento cortando árvores 5 min antes da onda de lama.", "electric_desc": "⚡ PIEZOELETRICIDADE & RF: Fraturamento em milissegundos de 27M m³ de quartzo-gnáisse sob atrito extremo liberou intensos pulsos eletromagnéticos e efeito triboelétrico de rocha, detectados em transientes de rádio.", "damage": "> 200 mortos; aniquilação total da UHE Rishiganga e da UHE Tapovan (520 MW).", "myth_note": "Mito da deusa Nanda Devi rompendo seus pilares de rocha com estrondo subterrâneo.", "camera": {"zoom": 13.5, "pitch": 70, "bearing": 35}}, {"rank": 3, "id": "himalaia_2026", "name": "Catástrofe de 2026 (Lhende Khola / Rio Trishuli)", "date": "26 de Agosto de 2026", "country": "Nepal / Tibete", "region": "Rasuwa / Langtang Himal", "lat": 28.274, "lon": 85.483, "elevation": "5.200m -> 1.850m", "category": "B", "category_name": "Física do Toró (Convecção de Crista)", "volume": "20,7 M m³ (14,2 M m³ líq)", "peak_discharge": "3.376 m³/s", "rain_status": "dry_valley", "rain_desc": "🌅 VALE SECO NO AMANHECER: População confirma zero chuva no rio. Satélite GPM marcou só 15-30 mm (déficit 17x).", "solar_status": "high", "solar_desc": "☀️ FLARE SOLAR M7.0 (25/08 15:47 NPT): Salto de VI = 356,4 kV; pico Jz = 4,57 pA/m² (14 magnetômetros).", "seismic_desc": "🌋 TERREMOTO DE 4.4 mb: Sismo de impacto registrado às 02:52:10 UTC no Mt. Langtang Lirung (5.200m) pela rede sísmica do Nepal (DMG/USGS), marcando o colapso e desprendimento de 15M m³ de rocha e gelo.", "sound_desc": "😱 SOM HORRÍVEL E INFRASSOM: Moradores de Timure e operários da UHE Rasuwagadhi relataram um rugido cavernoso apavorante de terra sendo estraçalhada ('como o urro de um dragão nas profundezas da montanha'), audível de 8 a 12 minutos antes da parede de lama de 15m chegar.", "electric_desc": "⚡ RELÂMPAGOS NOTURNOS DE CRISTA: Eletro-varredura de Tinsley pós-flare M7.0 gerou tempestade de relâmpagos intra-nuvem e efeito corona nas arestas de gelo do Langtang Lirung; salto vertical de Jz = 4,57 pA/m².", "damage": "Dezenas de mortos; 25 pontes destruídas; UHE Rasuwagadhi (111 MW) soterrada.", "myth_note": "O rugido do Dragão do Trovão (Druk) nas cavernas de gelo antes da torrente de lama.", "camera": {"zoom": 13.2, "pitch": 68, "bearing": 32}}, {"rank": 4, "id": "aru_2016", "name": "Colapso Duplo das Geleiras de Aru", "date": "17 de Julho e 21 de Setembro de 2016", "country": "China (Tibete)", "region": "Rutog / Ngari", "lat": 34.045, "lon": 82.285, "elevation": "5.800m -> 4.900m", "category": "A", "category_name": "Colapso de Geleira em Deserto Frio", "volume": "151 M m³ (68 + 83 M m³)", "peak_discharge": "v > 140 km/h", "rain_status": "dry", "rain_desc": "🏜️ SEM CHUVA (HIPERÁRIDO): Planalto desértico do Tibete Ocidental (<150 mm/ano). Sem chuva líquida prévia.", "solar_status": "high", "solar_desc": "Ciclo 24: Flare M1.2 em 15/07; vento solar rápido de buraco coronal (>600 km/s) atingindo a Terra.", "seismic_desc": "🌋 SINAL SÍSMICO BASAL: Registrado pela rede CENC às 04:23 UTC em 17/07/2016 e em 21/09/2016 (M ≈ 2.3), correspondendo ao descolamento catastrófico de atrito zero do leito rochoso subglacial.", "sound_desc": "😱 SOM HORRÍVEL: Pastores nômades relataram um som sibilante estrondoso e assustador, como 'um vendaval furioso vindo do chão', enquanto a montanha de gelo corria a 140 km/h sobre a pradaria sob céu sem vento.", "electric_desc": "⚡ ELETRICIDADE ESTÁTICA EM MASSA: Fricção em altíssima velocidade de gelo seco (-10°C) sobre leito moráinico gerou campos de carga eletrostática intensa ao redor da avalanche.", "damage": "9 pastores e centenas de animais soterrados; 10 km² de planície soterrados.", "myth_note": "Geleiras que 'voaram' sobre a pradaria tibetana.", "camera": {"zoom": 12.0, "pitch": 60, "bearing": 45}}, {"rank": 5, "id": "seti_2012", "name": "Enxurrada do Rio Seti (Annapurna IV)", "date": "5 de Maio de 2012", "country": "Nepal", "region": "Kaski / Pokhara", "lat": 28.542, "lon": 84.152, "elevation": "7.100m -> 1.100m", "category": "A", "category_name": "Colapso Rocha-Gelo Sem Chuva", "volume": "32 M m³", "peak_discharge": "v ≈ 25 m/s", "rain_status": "dry", "rain_desc": "☀️ ZERO CHUVA: Manhã de primavera com céu completamente claro. Nenhuma gota nas estações de Pokhara.", "solar_status": "extreme", "solar_desc": "💥 TEMPESTADE SOLAR EXTREMA: Flare M5.7 exatamente em 05/05 e série diária de flares M nos dias 2-4/05 (Kp=5).", "seismic_desc": "🌋 IMPACTO SÍSMICO DE 3.000m: Terremoto induzido pela queda livre vertical de bloco de 32M m³ às 09:08 NPT (03:23 UTC); sinal equivalente a ML = 2.7 gravado na estação de Pokhara (PKH) a 40 km.", "sound_desc": "😱 SOM DE BOMBA ATÔMICA: Estrondo ensurdecedor ouvido a mais de 25 km em toda a cidade de Pokhara; sobreviventes e turistas pensaram que uma bomba nuclear militar ou meteorito havia explodido.", "electric_desc": "⚡ NUVEM IONIZADA & RELÂMPAGOS TRIBOELÉTRICOS: Pulverização de quartzo puro em queda livre criou uma coluna piroclástica-fria altamente carregada eletricamente, com relâmpagos internos avistados por pilotos de ultraleve.", "damage": "72 mortos; vilarejo de Kharapani engolido; estrondo ouvido a 25 km.", "myth_note": "O estrondo semelhante a 'bomba atômica' nos desfiladeiros sagrados do Seti Gandaki.", "camera": {"zoom": 13.0, "pitch": 72, "bearing": 15}}, {"rank": 6, "id": "south_lhonak_2023", "name": "Rompimento do South Lhonak / Teesta III", "date": "4 de Outubro de 2023", "country": "Índia", "region": "Sikkim", "lat": 27.905, "lon": 88.205, "elevation": "5.200m -> 1.550m", "category": "C", "category_name": "GLOF Moráinico Violento", "volume": "18 M m³", "peak_discharge": "4.500 m³/s", "rain_status": "light", "rain_desc": "Chuva fraca / chuvisco pós-monção; volume de chuva no vale incapaz de gerar cheia por si só.", "solar_status": "high", "solar_desc": "Pico do Ciclo 25: Tempestade geomagnética moderada (Kp=5) em 03/10 e fluxo de partículas de 550 km/s.", "seismic_desc": "🌋 TREMOR SÍSMICO EM GANGTOK: Ruptura da morena frontal às 22:42 IST de 03/10/2023 gerou trens de ondas sísmicas de alta frequência captados por sensores de Sikkim e Bengala Ocidental.", "sound_desc": "😱 SOM HORRÍVEL: Tropas militares indianas em Chungthang relataram um estrondo ensurdecedor e aterrorizante descendo a garganta escura minutos antes do concreto da represa Teesta III estourar sob a onda de choque.", "electric_desc": "⚡ RELÂMPAGOS DE ALTA CRISTA: Convecção noturna intensa com descargas elétricas na linha divisória de águas entre Sikkim e Tibete antes da ruptura moráinica.", "damage": "> 100 mortos; destruição total da barragem de concreto Teesta III (1.200 MW).", "myth_note": "As águas sagradas de Guru Dongmar que lavam os vales budistas de Sikkim.", "camera": {"zoom": 12.8, "pitch": 65, "bearing": 30}}, {"rank": 7, "id": "leh_2010", "name": "Nuvem Pistão de Leh Ladakh", "date": "6 de Agosto de 2010", "country": "Índia", "region": "Ladakh (Deserto de Altitude)", "lat": 34.152, "lon": 77.577, "elevation": "3.500m", "category": "B", "category_name": "Física do Toró (Supercélula Desértica)", "volume": "> 200 mm em 2h", "peak_discharge": "2.800 m³/s", "rain_status": "dry_prior", "rain_desc": "🏜️ DESERTO HISTÓRICO: Pluviosidade média anual de 100 mm. Vale sem chuva até a explosão noturna de crista.", "solar_status": "extreme", "solar_desc": "💥 IMPACTO DE CME EM 03-04/08/2010: Ejeção de massa coronal induz tempestade geomagnética severa (Kp=6) 48h antes.", "seismic_desc": "🌋 TREMOR SÍSMICO INDUZIDO: Vibração contínua do leito rochoso gerada pelo impacto de megablocos de granito descendo os leques aluviais às 23:30–01:00 IST.", "sound_desc": "😱 SOM HORRÍVEL: População acordou na escuridão sob um estrondo ininterrupto ensurdecedor, comparado a 'cem locomotivas desgovernadas carregadas de pedras' descendo das encostas áridas.", "electric_desc": "⚡ RELÂMPAGOS SECOS DE CRISTA: Céu desértico iluminado por tempestade violenta de relâmpagos roxos e azuis contínuos em altitude sem precipitação no solo nos primeiros 40 minutos (forte ionização pós-CME).", "damage": "255 mortos; cidade de Leh soterrada sob lama e pedras; hospitais destruídos.", "myth_note": "Mitos ladakhis sobre nuvens de dragão que despencam como pedras do céu.", "camera": {"zoom": 13.5, "pitch": 62, "bearing": 10}}, {"rank": 8, "id": "melamchi_2021", "name": "Enxurrada do Rio Melamchi", "date": "15 de Junho de 2021", "country": "Nepal", "region": "Sindhupalchok (Helambu)", "lat": 28.095, "lon": 85.612, "elevation": "3.650m -> 850m", "category": "B", "category_name": "Física do Toró (Convecção de Crista)", "volume": "> 12 M m³", "peak_discharge": "2.400 m³/s", "rain_status": "dry_valley", "rain_desc": "VALE SEM CHUVA FORTE: Estação do vale mediu apenas chuva fraca; convecção confinada no circo a 3.650m.", "solar_status": "moderate", "solar_desc": "Início do Ciclo 25: Flutuações de baixa frequência e perturbação de cauda magnética nas 48h prévias.", "seismic_desc": "🌋 TREMOR PROLONGADO DE LIQUEFAÇÃO: Sinal sísmico de baixa frequência captado pela rede nacional do Nepal às 18:00 NPT em 15/06, gerado pelo colapso massivo do platô sedimentar de Bhemathang.", "sound_desc": "😱 O RUGIDO DE BHEMATHANG: Estrondo cavernoso contínuo ecoando pela garganta de Helambu mais de 20 minutos antes da torrente de lama e megablocos de 100 toneladas destruir o bazar de Melamchi.", "electric_desc": "⚡ RELÂMPAGOS INTRA-NUVEM: Intensa concentração de descargas elétricas confinadas no anfiteatro glacial a 3.650m, detectadas por sensores de raios regionais.", "damage": "20 mortos; bilionário projeto de água potável de Katmandu soterrado.", "myth_note": "As antigas histórias de Bhemathang, onde a terra treme e se liquefaz.", "camera": {"zoom": 13.0, "pitch": 65, "bearing": 25}}, {"rank": 9, "id": "parechu_2000", "name": "Cheia Represada do Rio Parechu", "date": "1 de Agosto de 2000", "country": "China (Tibete) / Índia", "region": "Spiti / Sutlej (Himachal)", "lat": 31.98, "lon": 78.54, "elevation": "3.200m -> 1.200m", "category": "D", "category_name": "Rompimento de Barragem Natural (LDOF)", "volume": "> 25 M m³", "peak_discharge": "4.000 m³/s", "rain_status": "moderate", "rain_desc": "Chuva moderada no platô árido tibetano; cheia provocada por liquefação súbita de barramento de encosta.", "solar_status": "extreme", "solar_desc": "☀️ O HISTÓRICO 'BASTILLE DAY EVENT': Máximo do Ciclo 23 com flares de classe X (X5.7) e tempestade global Kp=9.", "seismic_desc": "🌋 SINAL SÍSMICO DE RUPTURA: Onda sísmica de baixa frequência registrada em Shimla às 05:00 IST durante o galgamento explosivo da barragem de terra no Tibete.", "sound_desc": "😱 SOM HORRÍVEL: Estrondo estarrecedor da frente de onda hiperconcentrada rompendo cânions estreitos no vale do Sutlej, ouvido quilômetros adiante do fluxo.", "electric_desc": "⚡ EFEITOS GEOMAGNÉTICOS BASTILLE DAY: Correntes telúricas e campos elétricos induzidos em rochas sob tempestade geomagnética Kp=9.", "damage": "150 mortos; 10 pontes arrancadas; paralisou a maior usina da Índia (Nathpa Jhakri).", "myth_note": "O vale sagrado de Spiti inundado pelas águas represadas do Tibete.", "camera": {"zoom": 12.5, "pitch": 60, "bearing": 40}}, {"rank": 10, "id": "zhangzangbo_1981", "name": "Rompimento do Lago Zhangzangbo", "date": "11 de Julho de 1981", "country": "China (Tibete) / Nepal", "region": "Bhotekoshi (Kodari/Tatopani)", "lat": 28.092, "lon": 85.98, "elevation": "4.200m -> 1.300m", "category": "C", "category_name": "GLOF Moráinico", "volume": "19 M m³", "peak_discharge": "3.200 m³/s", "rain_status": "moderate", "rain_desc": "Chuva monçônica típica de verão; ruptura repentina por falha moráinica interna sem chuvas extremas de vale.", "solar_status": "extreme", "solar_desc": "💥 PICO MÁXIMO DO CICLO SOLAR 21: 1981 foi um dos anos de maior atividade solar do século XX (múltiplos flares X e M).", "seismic_desc": "🌋 VIBRAÇÃO SÍSMICA DE MORENA: Choque mecânico e tremor de colapso captado por postos de fronteira antes da destruição da alfândega de Kodari.", "sound_desc": "😱 SOM HORRÍVEL: População ouviu estrondo contínuo ensurdecedor de pedregulhos chocando-se como disparos de artilharia pesada descendo o cânion do Bhotekoshi.", "electric_desc": "⚡ DESCARGAS MONÇÔNICAS EM ALTITUDE: Múltiplos relâmpagos em alta cordilheira durante a fase de pico solar do Ciclo 21.", "damage": "Centenas de mortos; Ponte da Amizade internacional em Kodari e UHE Sun Koshi destruídas.", "myth_note": "A ira dos espíritos da fronteira arrancando as pontes de ferro.", "camera": {"zoom": 13.0, "pitch": 66, "bearing": 15}}, {"rank": 11, "id": "dig_tsho_1985", "name": "Rompimento do Lago Dig Tsho", "date": "4 de Agosto de 1985", "country": "Nepal", "region": "Khumbu / Everest", "lat": 27.87, "lon": 86.6, "elevation": "4.365m -> 2.800m", "category": "C", "category_name": "GLOF Moráinico", "volume": "8 M m³", "peak_discharge": "1.600 m³/s", "rain_status": "dry", "rain_desc": "☀️ MANHÃ ENSOLARADA E LIMPA: Avalanche de gelo do pico Langmoche despencou no lago em dia de tempo aberto.", "solar_status": "low", "solar_desc": "Mínimo Solar do Ciclo 21: Variações geomagnéticas moderadas.", "seismic_desc": "🌋 SISMO DE IMPACTO DE GELO: Onda de choque sísmico provocada pelo desprendimento maciço da face do Langmoche despencando diretamente dentro do lago.", "sound_desc": "😱 SOM DE BOMBA / DETONAÇÃO: Estrondo seco e violento ecoando pelo vale do Dudh Koshi, seguido pelo rugido da moraina sendo rasgada; deu tempo aos sherpas de subirem as encostas.", "electric_desc": "⚡ GRADIENTE DE POTENCIAL EM CRISTA: Tempo aberto com fortes gradientes elétricos atmosféricos em picos de alta altitude (>6.000m).", "damage": "5 mortos; UHE Namche recém-construída 100% destruída antes da inauguração; 14 pontes levadas.", "myth_note": "A quebra dos lagos sagrados dos Sherpas no vale do Dudh Koshi.", "camera": {"zoom": 13.2, "pitch": 65, "bearing": 30}}, {"rank": 12, "id": "luggye_tsho_1994", "name": "Rompimento do Luggye Tsho", "date": "7 de Outubro de 1994", "country": "Butão", "region": "Lunana / Punakha", "lat": 28.08, "lon": 90.3, "elevation": "4.500m -> 1.300m", "category": "C", "category_name": "GLOF Moráinico", "volume": "18 M m³", "peak_discharge": "2.500 m³/s", "rain_status": "dry", "rain_desc": "🍂 OUTONO SECO E FRIO: Céu claro e tempo estável. Ruptura por perda de coesão do núcleo de gelo da moraina.", "solar_status": "low", "solar_desc": "Ciclo Solar 22 em declínio: Sem tempestades geomagnéticas registradas nas 72h prévias.", "seismic_desc": "🌋 TREMOR MECÂNICO MORÁINICO: Ondas sísmicas de ruptura de barreira registradas em Punakha e Thimphu.", "sound_desc": "😱 O RUGIDO DO DRUK (DRAGÃO DO TROVÃO): Som aterrorizante de água e rochas arrebentando desfiladeiros montanhosos do Butão, atribuído pelo povo ao rugido de fúria do dragão.", "electric_desc": "⚪ SEM ANOMALIA ELÉTRICA REGISTRADA: Condições geomagnéticas calmas no outono de 1994; colapso puramente mecânico por degradação do núcleo de gelo fóssil da morena (piping hidrostático).", "damage": "21 mortos; Fortaleza histórica de Punakha Dzong severamente danificada; dezenas de casas destruídas.", "myth_note": "A lenda butanesa do Dragão do Trovão que habita os lagos de Lunana.", "camera": {"zoom": 12.8, "pitch": 62, "bearing": 20}}, {"rank": 13, "id": "gongbatongshacuo_2016", "name": "Cheia do Bhotekoshi de 2016", "date": "5 de Julho de 2016", "country": "China (Tibete) / Nepal", "region": "Tatopani / Bhotekoshi", "lat": 28.092, "lon": 85.98, "elevation": "4.100m -> 1.300m", "category": "C", "category_name": "GLOF Moráinico", "volume": "4 M m³", "peak_discharge": "2.500 m³/s", "rain_status": "light", "rain_desc": "Chuva fraca local no Nepal; lago moráinico tibetano rompeu repentinamente por galgamento moráinico.", "solar_status": "moderate", "solar_desc": "Fim do Ciclo 24: Flares de classe C e oscilações de condutividade ionosférica regional.", "seismic_desc": "🌋 SINAL SÍSMICO DE EROSÃO: Pulso de alta frequência por cisalhamento e colapso de margens fluviais no cânion do Bhotekoshi.", "sound_desc": "😱 SOM HORRÍVEL: Funcionários da aduana de Tatopani relataram um rugido ensurdecedor de megablocos colidindo na escuridão da garganta 10 min antes da inundação.", "electric_desc": "⚡ DESCARGAS DE TOPO: Trovoadas moderadas na cabeceira da bacia no planalto tibetano.", "damage": "UHE Upper Bhotekoshi destruída; rodovia Arniko fechada por 6 meses; pontes cortadas.", "myth_note": "A serpente de água que cruza a fronteira da China com o Nepal.", "camera": {"zoom": 13.2, "pitch": 68, "bearing": 25}}, {"rank": 14, "id": "himachal_2023", "name": "Catástrofe de Himachal Pradesh", "date": "9–11 de Julho de 2023", "country": "Índia", "region": "Himachal (Kullu/Manali/Beas)", "lat": 31.985, "lon": 77.15, "elevation": "2.500m -> 800m", "category": "B", "category_name": "Física do Toró (Convecção Confinada)", "volume": "> 50 M m³", "peak_discharge": "4.500 m³/s", "rain_status": "heavy", "rain_desc": "Chuva extrema contínua por 48h; interação severa entre depressão monçônica e distúrbio de oeste em desfiladeiros.", "solar_status": "high", "solar_desc": "Ciclo Solar 25 Ativo: Flare X1.2 em 02/07 e rajadas coronais intensas nas 72h prévias.", "seismic_desc": "🌋 TREMOR SÍSMICO GENERALIZADO: Tremor quase contínuo gerado pela colisão de milhões de toneladas de blocos no leito do Rio Beas captado por estações do noroeste indiano.", "sound_desc": "😱 SOM HORRÍVEL: O rugido ininterrupto e ensurdecedor da torrente de blocos esmagando pontes de concreto armado e rodovias de quatro pistas como gravetos.", "electric_desc": "⚡ TEMPESTADE DE RELÂMPAGOS CONTÍNUOS: Centenas de descargas elétricas por hora gerando sobretensões severas nas linhas de transmissão antes da queda das torres.", "damage": "> 100 mortos; destruição em massa de rodovias de quatro pistas, pontes históricas e hidrelétricas.", "myth_note": "As encostas dos deuses (Devbhoomi) que se desmancharam em rios de pedras.", "camera": {"zoom": 12.0, "pitch": 55, "bearing": 10}}, {"rank": 15, "id": "parechu_2005", "name": "Enxurrada do Rio Parechu de 2005", "date": "26 de Junho de 2005", "country": "China (Tibete) / Índia", "region": "Spiti / Sutlej (Himachal)", "lat": 31.98, "lon": 78.54, "elevation": "3.200m -> 1.100m", "category": "D", "category_name": "Rompimento de Barragem Natural (LDOF)", "volume": "> 10 M m³", "peak_discharge": "2.200 m³/s", "rain_status": "dry", "rain_desc": "☀️ PRÉ-MONÇÃO SECA: Vale em estiagem com cota basal normal; ruptura mecânica por transbordamento da represa de terra.", "solar_status": "moderate", "solar_desc": "Ciclo 23: Flare de classe M e subtempestades aurorais moderadas na semana prévia.", "seismic_desc": "🌋 MICROSSISMOS DE DESCALÇAMENTO: Sinais sísmicos precursores de erosão regressiva da barragem registrados na bacia do Rio Sutlej.", "sound_desc": "😱 SOM HORRÍVEL: Estrondo ecoando nas gargantas secas de Spiti quando a onda de lama vermelha e detritos varreu as pontes da NH-22.", "electric_desc": "⚡ TENSÕES PIEZOELÉTRICAS: Tensões mecânicas de cisalhamento pré-ruptura em rochas secas com anomalias de potencial espontâneo no solo.", "damage": "10 pontes rodoviárias na NH-22 destruídas; UHE Nathpa Jhakri (1.500 MW) inundada por lama.", "myth_note": "A represa proibida do Tibete que desceu pelo rio sagrado Sutlej.", "camera": {"zoom": 12.5, "pitch": 60, "bearing": 35}}];
+        const eventsData = [{"rank": 1, "id": "kedarnath_2013", "name": "Catástrofe de Kedarnath (Chorabari / Mandakini)", "date": "16–17 de Junho de 2013", "country": "Índia", "region": "Uttarakhand (Gharwal)", "lat": 30.745, "lon": 79.067, "elevation": "3.900m -> 1.000m", "category": "B", "category_name": "Física do Toró (Convecção de Crista)", "volume": "> 15 M m³", "peak_discharge": "5.000 m³/s", "rain_status": "paradox", "rain_desc": "Chuva moderada no vale; supercélula convectiva explosiva confinada no circo glacial (>300 mm em crista).", "solar_status": "high", "solar_desc": "Pico do Máximo Solar do Ciclo 24: Flare M1.3 em 15/06 e rajadas coronais intensas nas 48h prévias.", "seismic_type": "Sismo Superficial Induzido por Ruptura Moráinica e Avalanche", "seismic_mag": "ML ≈ 2.0 (Microssismos de Descompressão)", "seismic_intensity": "MMI V (Forte tremor local em Kedarnath)", "seismic_depth": "Superficial (h ≈ 0 km, dominância de ondas superficiais)", "seismic_center": [79.067, 30.745, 3900], "seismic_desc": "🌋 SISMO SUPERFICIAL (h ≈ 0 km, ML ≈ 2.0, MMI V): Microssismos de descompressão e tremor contínuo de colapso de morenas registrado pelo Wadia Institute às 06:45–07:15 IST (17/06). Não é sismo tectônico profundo; decorreu de falha mecânica moráinica e desprendimento superficial.", "sound_desc": "😱 SOM HORRÍVEL: Peregrinos relataram um estrondo apocalíptico como 'cem turbinas de avião militar rugindo juntas' ou uma explosão vulcânica atrás do templo sagrado, ouvido de 5 a 8 minutos antes da onda de lama e megablocos engolir a vila.", "electric_desc": "⚡ DESCARGAS ELÉTRICAS & RELÂMPAGOS: Sensor orbital LIS/TRMM e INSAT registraram centenas de relâmpagos nuvem-solo e nuvem-crista sobre o circo de Chorabari nas horas prévias; forte ionização atmosférica em altitude.", "smell_and_gases": "🧪 CHEIROS & GASES: Forte odor metálico e acre de ozônio (O3) pós-descargas elétricas intensas, seguido de forte cheiro de enxofre e gás sulfídrico (H2S) liberado de sedimentos lacustres e turfeiras milenares revolvidas no Gandhi Sarovar.", "fire_and_sparks": "🔥 FAÍSCAS & FOGO: Fogo de Santelmo (efeito corona azulado) observado por peregrinos nas pontas das hastes de ferro do templo de Kedarnath antes da quebra; faíscas de atrito mecânico de megablocos colidindo.", "optical_clouds": "🌈 NUVENS IRIDESCENTES: Difração da luz em cristais de gelo homogêneos observada na borda superior da supercélula orográfica sobre o maciço de Kedarnath ao entardecer do dia 16/06.", "damage": "> 5.700 mortos; vila de Kedarnath e centenas de pontes/rodovias varridas.", "myth_note": "A lenda do Shiva furioso despejando as águas celestes do Mandakini com seu estrondo ensurdecedor.", "camera": {"zoom": 13.0, "pitch": 68, "bearing": 20}}, {"rank": 2, "id": "chamoli_2021", "name": "Catástrofe de Chamoli (Rishiganga / Dhauliganga)", "date": "7 de Fevereiro de 2021", "country": "Índia", "region": "Uttarakhand (Nanda Devi)", "lat": 30.378, "lon": 79.732, "elevation": "5.600m -> 1.800m", "category": "A", "category_name": "Colapso Rocha-Gelo Sem Chuva", "volume": "27 M m³", "peak_discharge": "5.200 m³/s", "rain_status": "dry", "rain_desc": "☀️ ZERO CHUVA (CÉU AZUL): Dia de inverno perfeitamente ensolarado e seco. Zero chuva no vale ou no Ronti Peak.", "solar_status": "moderate", "solar_desc": "Início do Ciclo 25: Subtempestade geomagnética de baixa latitude (Kp=4) e rajada de vento solar a 520 km/s.", "seismic_type": "Sismo Superficial Induzido por Impacto Gravitacional Livre", "seismic_mag": "ML = 2.2 (Sinal Sísmico de Impacto de 27M m³)", "seismic_intensity": "MMI V - VI (Tremor sentido a mais de 30 km)", "seismic_depth": "Superficial (h ≈ 0 km, ondas de superfície Rayleigh de 35s)", "seismic_center": [79.732, 30.378, 5600], "seismic_desc": "🌋 SISMO SUPERFICIAL DE IMPACTO (h ≈ 0 km, ML = 2.2, MMI VI): Queda livre de 27M m³ do Ronti Peak gerou ondas Rayleigh de período longo (35s) registradas a mais de 100 km (Cook et al., Science 2021). Não houve falha tectônica profunda; o sismo foi 100% mecânico de superfície.", "sound_desc": "😱 SOM HORRÍVEL: Moradores de Raini e operários em Tapovan descreveram um rugido ensurdecedor idêntico a 'um caça a jato supersônico voando dentro da garganta' ou detonação em massa, com onda de vento cortando árvores 5 min antes da onda de lama.", "electric_desc": "⚡ PIEZOELETRICIDADE & RF: Fraturamento em milissegundos de 27M m³ de quartzo-gnáisse sob atrito extremo liberou intensos pulsos eletromagnéticos e efeito triboelétrico de rocha, detectados em transientes de rádio.", "smell_and_gases": "🧪 CHEIROS & GASES: Testemunhas em Raini e operários sobreviventes de Tapovan relataram forte 'cheiro de enxofre' e cheiro acre de terra e rocha queimada por fricção mecânica extrema (relatório técnico ICIMOD, 2021).", "fire_and_sparks": "🔥 FAÍSCAS & CALOR FRICCIONAL: O choque de 27M m³ despencando 1.800m em queda livre gerou energia de atrito de 1,7 x 10^15 J, suficiente para atingir temperaturas de centenas de graus Celsius no leito, com faíscas triboluminescentes e fusão parcial de gelo.", "optical_clouds": "🌈 NUVENS IRIDESCENTES & VAPOR: Formação de plumas de condensação e refração prismática sobre o circo do Ronti Peak imediatamente após a descompressão adiabática do maciço.", "damage": "> 200 mortos; aniquilação total da UHE Rishiganga e da UHE Tapovan (520 MW).", "myth_note": "Mito da deusa Nanda Devi rompendo seus pilares de rocha com estrondo subterrâneo.", "camera": {"zoom": 13.5, "pitch": 70, "bearing": 35}}, {"rank": 3, "id": "himalaia_2026", "name": "Catástrofe de 2026 (Lhende Khola / Rio Trishuli)", "date": "26 de Agosto de 2026", "country": "Nepal / Tibete", "region": "Rasuwa / Langtang Himal", "lat": 28.274, "lon": 85.483, "elevation": "5.200m -> 1.850m", "category": "B", "category_name": "Física do Toró (Convecção de Crista)", "volume": "20,7 M m³ (14,2 M m³ líq)", "peak_discharge": "3.376 m³/s", "rain_status": "dry_valley", "rain_desc": "🌅 VALE SECO NO AMANHECER: População confirma zero chuva no rio. Satélite GPM marcou só 15-30 mm (déficit 17x).", "solar_status": "high", "solar_desc": "☀️ FLARE SOLAR M7.0 (25/08 15:47 NPT): Salto de VI = 356,4 kV; pico Jz = 4,57 pA/m² (14 magnetômetros).", "seismic_type": "Sismo Superficial de Colapso Glacial em Crista", "seismic_mag": "4.4 mb (Sismo de Desprendimento Glacial)", "seismic_intensity": "MMI V - VI (Forte vibração no cânion)", "seismic_depth": "Superficial (h ≈ 1 km, foco na parede norte do Langtang Lirung)", "seismic_center": [85.483, 28.274, 5200], "seismic_desc": "🌋 SISMO SUPERFICIAL (h ≈ 1 km, 4.4 mb, MMI V-VI): Detectado às 02:52:10 UTC pela rede sísmica do Nepal (DMG/USGS) no Mt. Langtang Lirung (5.200m), marcando o descolamento catastrófico de 15M m³ de rocha e gelo. Não é tremor de subducção profunda da placa indiana; é colapso orogênico superficial.", "sound_desc": "😱 SOM HORRÍVEL E INFRASSOM: Moradores de Timure e operários da UHE Rasuwagadhi relataram um rugido cavernoso apavorante de terra sendo estraçalhada ('como o urro de um dragão nas profundezas da montanha'), audível de 8 a 12 minutos antes da parede de lama de 15m chegar.", "electric_desc": "⚡ RELÂMPAGOS NOTURNOS DE CRISTA: Eletro-varredura de Tinsley pós-flare M7.0 gerou tempestade de relâmpagos intra-nuvem e efeito corona nas arestas de gelo do Langtang Lirung; salto vertical de Jz = 4,57 pA/m².", "smell_and_gases": "🧪 CHEIROS & GASES: Forte odor penetrante de ozônio (O3) nas primeiras horas da madrugada decorrente da convecção ionizada, seguido de cheiro de enxofre, terra aquecida por fricção de blocos e emanações de metano de turfeiras glaciais expostas.", "fire_and_sparks": "🔥 FAÍSCAS & FOGO DE SANTELMO: Clarões luminescentes e efeito corona azulado nas arestas afiadas de gelo do Mt. Langtang Lirung; chuvas de faíscas piezoelétricas geradas pelo atrito de blocos de gnaisse descendo o cânion estreito.", "optical_clouds": "🌈 NUVENS IRIDESCENTES: Halos ópticos prismáticos e irisação de borda observados na camada superior da célula convectiva de crista ao amanhecer sobre o Langtang Himal.", "damage": "Dezenas de mortos; 25 pontes destruídas; UHE Rasuwagadhi (111 MW) soterrada.", "myth_note": "O rugido do Dragão do Trovão (Druk) nas cavernas de gelo antes da torrente de lama.", "camera": {"zoom": 13.2, "pitch": 68, "bearing": 32}}, {"rank": 4, "id": "aru_2016", "name": "Colapso Duplo das Geleiras de Aru", "date": "17 de Julho e 21 de Setembro de 2016", "country": "China (Tibete)", "region": "Rutog / Ngari", "lat": 34.045, "lon": 82.285, "elevation": "5.800m -> 4.900m", "category": "A", "category_name": "Colapso de Geleira em Deserto Frio", "volume": "151 M m³ (68 + 83 M m³)", "peak_discharge": "v > 140 km/h", "rain_status": "dry", "rain_desc": "🏜️ SEM CHUVA (HIPERÁRIDO): Planalto desértico do Tibete Ocidental (<150 mm/ano). Sem chuva líquida prévia.", "solar_status": "high", "solar_desc": "Ciclo 24: Flare M1.2 em 15/07; vento solar rápido de buraco coronal (>600 km/s) atingindo a Terra.", "seismic_type": "Sismo Superficial de Descolamento Basal Glacial", "seismic_mag": "M ≈ 2.3 (Sinal Sísmico Basal de Baixa Frequência)", "seismic_intensity": "MMI IV (Sinal contínuo de deslizamento)", "seismic_depth": "Superficial (h = 0 km, plano de fraqueza subglacial)", "seismic_center": [82.285, 34.045, 5800], "seismic_desc": "🌋 SISMO SUPERFICIAL BASAL (h = 0 km, M ≈ 2.3): Registrado pela rede sísmica CENC às 04:23 UTC em 17/07/2016 e em 21/09/2016, decorrente do descolamento repentino do leito rochoso subglacial em terreno plano. Ausência de ondas P tectônicas profundas.", "sound_desc": "😱 SOM HORRÍVEL: Pastores nômades relataram um som sibilante estrondoso e assustador, como 'um vendaval furioso vindo do chão', enquanto a montanha de gelo corria a 140 km/h sobre a pradaria sob céu sem vento.", "electric_desc": "⚡ ELETRICIDADE ESTÁTICA EM MASSA: Fricção em altíssima velocidade de gelo seco (-10°C) sobre leito moráinico gerou campos de carga eletrostática intensa ao redor da avalanche.", "smell_and_gases": "🧪 CHEIROS & GASES: Odor fóssil de permafrost milenar deslacrado bruscamente, com liberação de bolsões de gases aprisionados sob a calota de gelo (CO2 e matéria orgânica criogênica).", "fire_and_sparks": "🔥 FAÍSCAS & CARGAS: Micro-descargas eletrostáticas por triboeletrificação em gelo hiper-seco e frio deslizando a 140 km/h.", "optical_clouds": "🌈 NUVENS IRIDESCENTES: Reflexos ópticos na pluma de gelo pulverizado suspensa na troposfera límpida do platô tibetano.", "damage": "9 pastores e centenas de animais soterrados; 10 km² de planície soterrados.", "myth_note": "Geleiras que 'voaram' sobre a pradaria tibetana.", "camera": {"zoom": 12.0, "pitch": 60, "bearing": 45}}, {"rank": 5, "id": "seti_2012", "name": "Enxurrada do Rio Seti (Annapurna IV)", "date": "5 de Maio de 2012", "country": "Nepal", "region": "Kaski / Pokhara", "lat": 28.542, "lon": 84.152, "elevation": "7.100m -> 1.100m", "category": "A", "category_name": "Colapso Rocha-Gelo Sem Chuva", "volume": "32 M m³", "peak_discharge": "v ≈ 25 m/s", "rain_status": "dry", "rain_desc": "☀️ ZERO CHUVA: Manhã de primavera com céu completamente claro. Nenhuma gota nas estações de Pokhara.", "solar_status": "extreme", "solar_desc": "💥 TEMPESTADE SOLAR EXTREMA: Flare M5.7 exatamente em 05/05 e série diária de flares M nos dias 2-4/05 (Kp=5).", "seismic_type": "Sismo Superficial de Impacto de Queda Livre Vertical (3.000m)", "seismic_mag": "ML = 2.7 (Gravado na Estação Dansing DAN)", "seismic_intensity": "MMI V - VI (Sinal contínuo por 70 minutos)", "seismic_depth": "Superficial (h = 0 km, impacto no desfiladeiro)", "seismic_center": [84.152, 28.542, 6850], "seismic_desc": "🌋 SISMO SUPERFICIAL DE IMPACTO (h = 0 km, ML = 2.7): Queda livre de 32M m³ desprendidos da aresta do Annapurna IV despencando 3.000m até o fundo do vale, gravado às 09:09:56 NPT pela rede sísmica do Nepal (estação Dansing DAN a 32 km registrou sinal contínuo por 70 minutos).", "sound_desc": "😱 SOM DE BOMBA ATÔMICA: Estrondo ensurdecedor ouvido a mais de 25 km em toda a cidade de Pokhara; sobreviventes e turistas pensaram que uma bomba nuclear militar ou meteorito havia explodido.", "electric_desc": "⚡ NUVEM IONIZADA & RELÂMPAGOS TRIBOELÉTRICOS: Pulverização de quartzo puro em queda livre criou uma coluna piroclástica-fria altamente carregada eletricamente, com relâmpagos internos avistados por pilotos de ultraleve.", "smell_and_gases": "🧪 CHEIROS & GASES: Odor pungente de enxofre e fumaça de rocha queimada por fricção e choque violento; ar no cânion impregnado por cheiro de terra pulverizada e lodo sulfídrico anóxico.", "fire_and_sparks": "🔥 FAÍSCAS & NUVEM PIROCLÁSTICA-FRIA: A desintegração mecânica de gnaisse e quartzo em alta energia gerou faíscas triboluminescentes e uma nuvem cinzenta espessa de pó ionizado avistada pelo piloto Alexander Maximov.", "optical_clouds": "🌈 NUVENS IRIDESCENTES: Efeitos de halo e dispersão luminosa na gigantesca nuvem de poeira branca e gelo que subiu aos céus de Pokhara.", "damage": "72 mortos; vilarejo de Kharapani engolido; estrondo ouvido a 25 km.", "myth_note": "O estrondo semelhante a 'bomba atômica' nos desfiladeiros sagrados do Seti Gandaki.", "camera": {"zoom": 13.0, "pitch": 72, "bearing": 15}}, {"rank": 6, "id": "south_lhonak_2023", "name": "Rompimento do South Lhonak / Teesta III", "date": "4 de Outubro de 2023", "country": "Índia", "region": "Sikkim", "lat": 27.905, "lon": 88.205, "elevation": "5.200m -> 1.550m", "category": "C", "category_name": "GLOF Moráinico Violento", "volume": "18 M m³", "peak_discharge": "4.500 m³/s", "rain_status": "light", "rain_desc": "Chuva fraca / chuvisco pós-monção; volume de chuva no vale incapaz de gerar cheia por si só.", "solar_status": "high", "solar_desc": "Pico do Ciclo 25: Tempestade geomagnética moderada (Kp=5) em 03/10 e fluxo de partículas de 550 km/s.", "seismic_type": "Sismo Superficial de Ruptura de Morena e Colapso de Barragem", "seismic_mag": "ML ≈ 2.1 (Sinais Sísmicos em Gangtok)", "seismic_intensity": "MMI IV - V (Tremor de alta frequência)", "seismic_depth": "Superficial (h = 0 km)", "seismic_center": [88.205, 27.905, 5200], "seismic_desc": "🌋 SISMO SUPERFICIAL (h = 0 km, ML ≈ 2.1): Ruptura da morena frontal às 22:42 IST de 03/10/2023 gerou trens de ondas sísmicas captados por sensores de Gangtok durante a quebra da morena e impacto contra a barragem Teesta III.", "sound_desc": "😱 SOM HORRÍVEL: Tropas militares indianas em Chungthang relataram um estrondo ensurdecedor e aterrorizante descendo a garganta escura minutos antes do concreto da represa Teesta III estourar sob a onda de choque.", "electric_desc": "⚡ RELÂMPAGOS DE ALTA CRISTA: Convecção noturna intensa com descargas elétricas na linha divisória de águas entre Sikkim e Tibete antes da ruptura moráinica.", "smell_and_gases": "🧪 CHEIROS & GASES: Odor sulfídrico pungente (H2S) de lodo anóxico glacial revolvido das profundezas do lago South Lhonak, associado a cheiro de ozônio.", "fire_and_sparks": "🔥 FAÍSCAS DE CURTO-CIRCUITO & ATRITO: Rompimento violento de subestações elétricas de alta tensão e impacto de blocos arrancados contra pilares de concreto gerando faíscas.", "optical_clouds": "🌈 NUVENS IRIDESCENTES: Clarões ópticos nas nuvens de crista fronteiriças.", "damage": "> 100 mortos; destruição total da barragem de concreto Teesta III (1.200 MW).", "myth_note": "As águas sagradas de Guru Dongmar que lavam os vales budistas de Sikkim.", "camera": {"zoom": 12.8, "pitch": 65, "bearing": 30}}, {"rank": 7, "id": "leh_2010", "name": "Nuvem Pistão de Leh Ladakh", "date": "6 de Agosto de 2010", "country": "Índia", "region": "Ladakh (Deserto de Altitude)", "lat": 34.152, "lon": 77.577, "elevation": "3.500m", "category": "B", "category_name": "Física do Toró (Supercélula Desértica)", "volume": "> 200 mm em 2h", "peak_discharge": "2.800 m³/s", "rain_status": "dry_prior", "rain_desc": "🏜️ DESERTO HISTÓRICO: Pluviosidade média anual de 100 mm. Vale sem chuva até a explosão noturna de crista.", "solar_status": "extreme", "solar_desc": "💥 IMPACTO DE CME EM 03-04/08/2010: Ejeção de massa coronal induz tempestade geomagnética severa (Kp=6) 48h antes.", "seismic_type": "Tremor Superficial Mecânico Induzido por Fluxo Aluvial", "seismic_mag": "Sinal Sísmico Mecânico de Alta Frequência", "seismic_intensity": "MMI V (Vibração sentida em toda a cidade)", "seismic_depth": "Superficial (h = 0 km, colisão de megablocos)", "seismic_center": [77.577, 34.152, 4200], "seismic_desc": "🌋 TREMOR SUPERFICIAL MECÂNICO (h = 0 km, MMI V): Vibração contínua do leito rochoso gerada pelo impacto de megablocos de granito descendo os leques aluviais às 23:30–01:00 IST.", "sound_desc": "😱 SOM HORRÍVEL: População acordou na escuridão sob um estrondo ininterrupto ensurdecedor, comparado a 'cem locomotivas desgovernadas carregadas de pedras' descendo das encostas áridas.", "electric_desc": "⚡ RELÂMPAGOS SECOS DE CRISTA: Céu desértico iluminado por tempestade violenta de relâmpagos roxos e azuis contínuos em altitude sem precipitação no solo nos primeiros 40 minutos (forte ionização pós-CME).", "smell_and_gases": "🧪 CHEIROS & GASES: Odor marcante de ozônio (O3) e poeira mineral ionizada antes do início da torrente; cheiro de terra seca esmagada por blocos de granito.", "fire_and_sparks": "🔥 FAÍSCAS DE RELÂMPAGOS SECOS: Descargas elétricas diretas nas cristas de granito sem chuva, com faíscas visíveis no cume rochoso desnudado.", "optical_clouds": "🌈 NUVENS IRIDESCENTES: Bordas iluminadas e cores prismáticas na topo da supercélula antes do colapso convectivo.", "damage": "255 mortos; cidade de Leh soterrada sob lama e pedras; hospitais destruídos.", "myth_note": "Mitos ladakhis sobre nuvens de dragão que despencam como pedras do céu.", "camera": {"zoom": 13.5, "pitch": 62, "bearing": 10}}, {"rank": 8, "id": "melamchi_2021", "name": "Enxurrada do Rio Melamchi", "date": "15 de Junho de 2021", "country": "Nepal", "region": "Sindhupalchok (Helambu)", "lat": 28.095, "lon": 85.612, "elevation": "3.650m -> 850m", "category": "B", "category_name": "Física do Toró (Convecção de Crista)", "volume": "> 12 M m³", "peak_discharge": "2.400 m³/s", "rain_status": "dry_valley", "rain_desc": "VALE SEM CHUVA FORTE: Estação do vale mediu apenas chuva fraca; convecção confinada no circo a 3.650m.", "solar_status": "moderate", "solar_desc": "Início do Ciclo 25: Flutuações de baixa frequência e perturbação de cauda magnética nas 48h prévias.", "seismic_type": "Sismo Superficial de Liquefação e Colapso Sedimentar", "seismic_mag": "Sinal Sísmico Prolongado de Baixa Frequência", "seismic_intensity": "MMI IV - V (Vibração lenta do vale)", "seismic_depth": "Superficial (h = 0 km, circo de Bhemathang)", "seismic_center": [85.612, 28.095, 3650], "seismic_desc": "🌋 SISMO SUPERFICIAL DE LIQUEFAÇÃO (h = 0 km): Sinal sísmico de baixa frequência captado pela rede nacional do Nepal às 18:00 NPT em 15/06, gerado pelo colapso massivo e liquefação do platô sedimentar de Bhemathang.", "sound_desc": "😱 O RUGIDO DE BHEMATHANG: Estrondo cavernoso contínuo ecoando pela garganta de Helambu mais de 20 minutos antes da torrente de lama e megablocos de 100 toneladas destruir o bazar de Melamchi.", "electric_desc": "⚡ RELÂMPAGOS INTRA-NUVEM: Intensa concentração de descargas elétricas confinadas no anfiteatro glacial a 3.650m, detectadas por sensores de raios regionais.", "smell_and_gases": "🧪 CHEIROS & GASES: Odor fétido de matéria orgânica antiga decomposta e turfa periglacial liqueffeita desprendendo metano e ácido sulfídrico.", "fire_and_sparks": "🔥 FAÍSCAS DE COLISÃO: Atrito violento de megablocos de granito de 100 toneladas gerando faíscas ao longo do desfiladeiro estreito.", "optical_clouds": "🌈 NUVENS IRIDESCENTES: Irisação orográfica no topo do circo de Bhemathang.", "damage": "20 mortos; bilionário projeto de água potável de Katmandu soterrado.", "myth_note": "As antigas histórias de Bhemathang, onde a terra treme e se liquefaz.", "camera": {"zoom": 13.0, "pitch": 65, "bearing": 25}}, {"rank": 9, "id": "parechu_2000", "name": "Cheia Represada do Rio Parechu", "date": "1 de Agosto de 2000", "country": "China (Tibete) / Índia", "region": "Spiti / Sutlej (Himachal)", "lat": 31.98, "lon": 78.54, "elevation": "3.200m -> 1.200m", "category": "D", "category_name": "Rompimento de Barragem Natural (LDOF)", "volume": "> 25 M m³", "peak_discharge": "4.000 m³/s", "rain_status": "moderate", "rain_desc": "Chuva moderada no platô árido tibetano; cheia provocada por liquefação súbita de barramento de encosta.", "solar_status": "extreme", "solar_desc": "☀️ O HISTÓRICO 'BASTILLE DAY EVENT': Máximo do Ciclo 23 com flares de classe X (X5.7) e tempestade global Kp=9.", "seismic_type": "Sismo Superficial de Ruptura de Barragem de Terra (LDOF)", "seismic_mag": "Pulso Sísmico de Baixa Frequência", "seismic_intensity": "MMI IV", "seismic_depth": "Superficial (h = 0 km)", "seismic_center": [78.54, 31.98, 3200], "seismic_desc": "🌋 SISMO SUPERFICIAL (h = 0 km): Onda sísmica de baixa frequência registrada em Shimla às 05:00 IST durante o galgamento explosivo da barragem de terra no Tibete.", "sound_desc": "😱 SOM HORRÍVEL: Estrondo estarrecedor da frente de onda hiperconcentrada rompendo cânions estreitos no vale do Sutlej, ouvido quilômetros adiante do fluxo.", "electric_desc": "⚡ EFEITOS GEOMAGNÉTICOS BASTILLE DAY: Correntes telúricas e campos elétricos induzidos em rochas sob tempestade geomagnética Kp=9.", "smell_and_gases": "🧪 CHEIROS & GASES: Forte emanação de gás sulfídrico (H2S) e metano (CH4) proveniente de sedimentos anóxicos estagnados no reservatório natural formado meses antes no Tibete.", "fire_and_sparks": "🔥 FAÍSCAS DE IMPACTO: Ruptura de linhas de transmissão e choque de blocos de rocha no vale do Sutlej.", "optical_clouds": "🌈 NUVENS IRIDESCENTES: Registros de auroras boreais em latitudes anômalas no evento Bastille Day semanas antes.", "damage": "150 mortos; 10 pontes arrancadas; paralisou a maior usina da Índia (Nathpa Jhakri).", "myth_note": "O vale sagrado de Spiti inundado pelas águas represadas do Tibete.", "camera": {"zoom": 12.5, "pitch": 60, "bearing": 40}}, {"rank": 10, "id": "zhangzangbo_1981", "name": "Rompimento do Lago Zhangzangbo", "date": "11 de Julho de 1981", "country": "China (Tibete) / Nepal", "region": "Bhotekoshi (Kodari/Tatopani)", "lat": 28.092, "lon": 85.98, "elevation": "4.200m -> 1.300m", "category": "C", "category_name": "GLOF Moráinico", "volume": "19 M m³", "peak_discharge": "3.200 m³/s", "rain_status": "moderate", "rain_desc": "Chuva monçônica típica de verão; ruptura repentina por falha moráinica interna sem chuvas extremas de vale.", "solar_status": "extreme", "solar_desc": "💥 PICO MÁXIMO DO CICLO SOLAR 21: 1981 foi um dos anos de maior atividade solar do século XX (múltiplos flares X e M).", "seismic_type": "Sismo Superficial de Ruptura Moráinica", "seismic_mag": "Choque Mecânico de Ruptura", "seismic_intensity": "MMI IV - V", "seismic_depth": "Superficial (h = 0 km)", "seismic_center": [85.98, 28.092, 4200], "seismic_desc": "🌋 SISMO SUPERFICIAL (h = 0 km): Choque mecânico e tremor de colapso moráinico captado por postos de fronteira antes da destruição da alfândega de Kodari.", "sound_desc": "😱 SOM HORRÍVEL: População ouviu estrondo contínuo ensurdecedor de pedregulhos chocando-se como disparos de artilharia pesada descendo o cânion do Bhotekoshi.", "electric_desc": "⚡ DESCARGAS MONÇÔNICAS EM ALTITUDE: Múltiplos relâmpagos em alta cordilheira durante a fase de pico solar do Ciclo 21.", "smell_and_gases": "🧪 CHEIROS & GASES: Cheiro acre de lodo glacial frio e pedras gnáissicas trituradas.", "fire_and_sparks": "🔥 FAÍSCAS: Colisão violenta de megablocos arrancando pontes de ferro na fronteira.", "optical_clouds": "🌈 NUVENS IRIDESCENTES: Difração solar em cirros de monção.", "damage": "Centenas de mortos; Ponte da Amizade internacional em Kodari e UHE Sun Koshi destruídas.", "myth_note": "A ira dos espíritos da fronteira arrancando as pontes de ferro.", "camera": {"zoom": 13.0, "pitch": 66, "bearing": 15}}, {"rank": 11, "id": "dig_tsho_1985", "name": "Rompimento do Lago Dig Tsho", "date": "4 de Agosto de 1985", "country": "Nepal", "region": "Khumbu / Everest", "lat": 27.87, "lon": 86.6, "elevation": "4.365m -> 2.800m", "category": "C", "category_name": "GLOF Moráinico", "volume": "8 M m³", "peak_discharge": "1.600 m³/s", "rain_status": "dry", "rain_desc": "☀️ MANHÃ ENSOLARADA E LIMPA: Avalanche de gelo do pico Langmoche despencou no lago em dia de tempo aberto.", "solar_status": "low", "solar_desc": "Mínimo Solar do Ciclo 21: Variações geomagnéticas moderadas.", "seismic_type": "Sismo Superficial de Impacto de Avalanche em Lago", "seismic_mag": "Tremor de Impacto de Massa", "seismic_intensity": "MMI IV", "seismic_depth": "Superficial (h = 0 km)", "seismic_center": [86.6, 27.87, 4365], "seismic_desc": "🌋 SISMO SUPERFICIAL DE IMPACTO (h = 0 km): Onda de choque sísmico provocada pelo desprendimento maciço da face do Langmoche despencando diretamente dentro do lago Dig Tsho.", "sound_desc": "😱 SOM DE BOMBA / DETONAÇÃO: Estrondo seco e violento ecoando pelo vale do Dudh Koshi, seguido pelo rugido da moraina sendo rasgada; deu tempo aos sherpas de subirem as encostas (Vuichard & Zimmermann, 1987).", "electric_desc": "⚡ GRADIENTE DE POTENCIAL EM CRISTA: Tempo aberto com fortes gradientes elétricos atmosféricos em picos de alta altitude (>6.000m).", "smell_and_gases": "🧪 CHEIROS & GASES: Ar puro e frio da manhã de altitude impregnado por poeira de morena recém-aberta.", "fire_and_sparks": "🔥 FAÍSCAS: Atrito de blocos arrancados contra o leito da usina Namche.", "optical_clouds": "🌈 NUVENS IRIDESCENTES: Céu limpo matinal com névoa prismática de pulverização de gelo.", "damage": "5 mortos; UHE Namche recém-construída 100% destruída antes da inauguração; 14 pontes levadas.", "myth_note": "A quebra dos lagos sagrados dos Sherpas no vale do Dudh Koshi.", "camera": {"zoom": 13.2, "pitch": 65, "bearing": 30}}, {"rank": 12, "id": "luggye_tsho_1994", "name": "Rompimento do Luggye Tsho", "date": "7 de Outubro de 1994", "country": "Butão", "region": "Lunana / Punakha", "lat": 28.08, "lon": 90.3, "elevation": "4.500m -> 1.300m", "category": "C", "category_name": "GLOF Moráinico", "volume": "18 M m³", "peak_discharge": "2.500 m³/s", "rain_status": "dry", "rain_desc": "🍂 OUTONO SECO E FRIO: Céu claro e tempo estável. Ruptura por perda de coesão do núcleo de gelo da moraina.", "solar_status": "low", "solar_desc": "Ciclo Solar 22 em declínio calmo: Sem tempestades geomagnéticas ou flares relevantes nas 72h prévias.", "seismic_type": "Sismo Superficial de Ruptura Mecânica de Morena", "seismic_mag": "Tremor de Rompimento Estrutural", "seismic_intensity": "MMI IV", "seismic_depth": "Superficial (h = 0 km, colapso de núcleo de gelo fóssil)", "seismic_center": [90.3, 28.08, 4500], "seismic_desc": "🌋 SISMO SUPERFICIAL (h = 0 km): Ondas sísmicas de ruptura mecânica da barreira moráinica registradas em Punakha e Thimphu no Butão, decorrente de piping hidrostático.", "sound_desc": "😱 O RUGIDO DO DRUK (DRAGÃO DO TROVÃO): Som aterrorizante de água e rochas arrebentando desfiladeiros montanhosos do Butão, atribuído pelo povo ao rugido de fúria do dragão.", "electric_desc": "⚪ SEM ANOMALIA ELÉTRICA REGISTRADA: Condições geomagnéticas calmas no outono de 1994; colapso puramente mecânico por degradação do núcleo de gelo fóssil da morena (piping hidrostático).", "smell_and_gases": "🧪 CHEIROS & GASES: Odor frio de solo periglacial e matéria orgânica fóssil degelada de dentro da morena.", "fire_and_sparks": "🔥 FAÍSCAS: Choque de megablocos contra desfiladeiros do Pho Chhu.", "optical_clouds": "🌈 NUVENS IRIDESCENTES: Céu limpo de outono sem nuvens anômalas.", "damage": "21 mortos; Fortaleza histórica de Punakha Dzong severamente danificada; dezenas de casas destruídas.", "myth_note": "A lenda butanesa do Dragão do Trovão que habita os lagos de Lunana.", "camera": {"zoom": 12.8, "pitch": 62, "bearing": 20}}, {"rank": 13, "id": "gongbatongshacuo_2016", "name": "Cheia do Bhotekoshi de 2016", "date": "5 de Julho de 2016", "country": "China (Tibete) / Nepal", "region": "Tatopani / Bhotekoshi", "lat": 28.092, "lon": 85.98, "elevation": "4.100m -> 1.300m", "category": "C", "category_name": "GLOF Moráinico", "volume": "4 M m³", "peak_discharge": "2.500 m³/s", "rain_status": "light", "rain_desc": "Chuva fraca local no Nepal; lago moráinico tibetano rompeu repentinamente por galgamento moráinico.", "solar_status": "moderate", "solar_desc": "Fim do Ciclo 24: Flares de classe C e oscilações de condutividade ionosférica regional.", "seismic_type": "Sismo Superficial de Cisalhamento Fluvial", "seismic_mag": "Pulso de Alta Frequência", "seismic_intensity": "MMI IV", "seismic_depth": "Superficial (h = 0 km)", "seismic_center": [85.98, 28.092, 4100], "seismic_desc": "🌋 SISMO SUPERFICIAL (h = 0 km): Sinal sísmico de alta frequência por cisalhamento e erosão acelerada de cânion no Rio Bhotekoshi.", "sound_desc": "😱 SOM HORRÍVEL: Funcionários da aduana de Tatopani relataram um rugido ensurdecedor de megablocos colidindo na escuridão da garganta 10 min antes da inundação.", "electric_desc": "⚡ DESCARGAS DE TOPO: Trovoadas moderadas na cabeceira da bacia no planalto tibetano.", "smell_and_gases": "🧪 CHEIROS & GASES: Odor sulfídrico de água de enchente arrastando lodo antigo.", "fire_and_sparks": "🔥 FAÍSCAS: Colisão de blocos arrancando fundações da UHE Upper Bhotekoshi.", "optical_clouds": "🌈 NUVENS IRIDESCENTES: Névoa de umidade difratando luz matinal.", "damage": "UHE Upper Bhotekoshi destruída; rodovia Arniko fechada por 6 meses; pontes cortadas.", "myth_note": "A serpente de água que cruza a fronteira da China com o Nepal.", "camera": {"zoom": 13.2, "pitch": 68, "bearing": 25}}, {"rank": 14, "id": "himachal_2023", "name": "Catástrofe de Himachal Pradesh", "date": "9–11 de Julho de 2023", "country": "Índia", "region": "Himachal (Kullu/Manali/Beas)", "lat": 31.985, "lon": 77.15, "elevation": "2.500m -> 800m", "category": "B", "category_name": "Física do Toró (Convecção Confinada)", "volume": "> 50 M m³", "peak_discharge": "4.500 m³/s", "rain_status": "heavy", "rain_desc": "Chuva extrema contínua por 48h; interação severa entre depressão monçônica e distúrbio de oeste em desfiladeiros.", "solar_status": "high", "solar_desc": "Ciclo Solar 25 Ativo: Flare X1.2 em 02/07 e rajadas coronais intensas nas 72h prévias.", "seismic_type": "Tremor Superficial Mecânico Contínuo por Transporte de Sedimento", "seismic_mag": "Sinal Sísmico Hidrodinâmico Contínuo", "seismic_intensity": "MMI V (Tremor em todo o vale do Beas)", "seismic_depth": "Superficial (h = 0 km)", "seismic_center": [77.15, 31.985, 2500], "seismic_desc": "🌋 TREMOR SUPERFICIAL MECÂNICO (h = 0 km, MMI V): Tremor quase contínuo gerado por milhões de toneladas de blocos rochosos rolando no leito do Rio Beas captado por estações do noroeste indiano.", "sound_desc": "😱 SOM HORRÍVEL: O rugido ininterrupto e ensurdecedor da torrente de blocos esmagando pontes de concreto armado e rodovias de quatro pistas como gravetos.", "electric_desc": "⚡ TEMPESTADE DE RELÂMPAGOS CONTÍNUOS: Centenas de descargas elétricas por hora gerando sobretensões severas nas linhas de transmissão antes da queda das torres.", "smell_and_gases": "🧪 CHEIROS & GASES: Odor acre de ozônio de relâmpagos misturado a lama saturada e hidrocarbonetos de veículos e construções esmagadas.", "fire_and_sparks": "🔥 FAÍSCAS DE CURTO-CIRCUITO: Enormes clarões de curto-circuito na rede de alta tensão e faíscas de esmagamento de rochas.", "optical_clouds": "🌈 NUVENS IRIDESCENTES: Bordas de nuvens cumulonimbus iluminadas por relâmpagos múltiplos.", "damage": "> 100 mortos; destruição em massa de rodovias de quatro pistas, pontes históricas e hidrelétricas.", "myth_note": "As encostas dos deuses (Devbhoomi) que se desmancharam em rios de pedras.", "camera": {"zoom": 12.0, "pitch": 55, "bearing": 10}}, {"rank": 15, "id": "parechu_2005", "name": "Enxurrada do Rio Parechu de 2005", "date": "26 de Junho de 2005", "country": "China (Tibete) / Índia", "region": "Spiti / Sutlej (Himachal)", "lat": 31.98, "lon": 78.54, "elevation": "3.200m -> 1.100m", "category": "D", "category_name": "Rompimento de Barragem Natural (LDOF)", "volume": "> 10 M m³", "peak_discharge": "2.200 m³/s", "rain_status": "dry", "rain_desc": "☀️ PRÉ-MONÇÃO SECA: Vale em estiagem com cota basal normal; ruptura mecânica por transbordamento da represa de terra.", "solar_status": "moderate", "solar_desc": "Ciclo 23: Flare de classe M e subtempestades aurorais moderadas na semana prévia.", "seismic_type": "Microssismos Superficiais de Descalçamento de Barragem", "seismic_mag": "Sinal Precursor de Baixa Amplitude", "seismic_intensity": "MMI IV", "seismic_depth": "Superficial (h = 0 km)", "seismic_center": [78.54, 31.98, 3200], "seismic_desc": "🌋 MICROSSISMOS SUPERFICIAIS (h = 0 km): Sinais precursores de erosão regressiva e colapso da barragem de terra registrados na bacia do Rio Sutlej antes do transbordamento catastrófico.", "sound_desc": "😱 SOM HORRÍVEL: Estrondo ecoando nas gargantas secas de Spiti quando a onda de lama vermelha e detritos varreu as pontes da NH-22.", "electric_desc": "⚡ TENSÕES PIEZOELÉTRICAS: Tensões mecânicas de cisalhamento pré-ruptura em rochas secas com anomalias de potencial elétrico espontâneo no solo.", "smell_and_gases": "🧪 CHEIROS & GASES: Odor fétido de gás metano e sulfetos liberados do leito lacustre acumulado por meses no platô tibetano.", "fire_and_sparks": "🔥 FAÍSCAS: Atrito violento de blocos contra os contrafortes de concreto das pontes da rodovia.", "optical_clouds": "🌈 NUVENS IRIDESCENTES: Céu limpo de pré-monção.", "damage": "10 pontes rodoviárias na NH-22 destruídas; UHE Nathpa Jhakri (1.500 MW) inundada por lama.", "myth_note": "A represa proibida do Tibete que desceu pelo rio sagrado Sutlej.", "camera": {"zoom": 12.5, "pitch": 60, "bearing": 35}}];
         let currentIndex = 0;
         let activeFilter = 'all';
         let markers = [];
+        let epicenterMarkers = [];
         let autoTourInterval = null;
         let isAutoTour = false;
 
@@ -440,7 +528,7 @@
             });
         }
 
-        // 2. Renderizar Marcadores 3D no Mapa
+        // 2. Renderizar Marcadores 3D no Mapa (Eventos e Epicentros Sísmicos)
         map.on('load', () => {
             initEventSelector();
             renderMarkers();
@@ -450,19 +538,25 @@
         function renderMarkers() {
             // Limpar marcadores anteriores
             markers.forEach(m => m.remove());
+            epicenterMarkers.forEach(m => m.remove());
             markers = [];
+            epicenterMarkers = [];
 
             eventsData.forEach((ev, idx) => {
                 // Verificar se atende ao filtro ativo
                 let visible = true;
                 if (activeFilter === 'dry' && !ev.rain_status.includes('dry')) visible = false;
                 if (activeFilter === 'solar' && (ev.solar_status === 'low' || ev.solar_status === 'moderate')) visible = false;
-                if (activeFilter === 'seismic' && !ev.seismic_desc) visible = false;
+                if (activeFilter === 'seismic' && !ev.seismic_mag) visible = false;
                 if (activeFilter === 'sound' && !ev.sound_desc) visible = false;
-                if (activeFilter === 'electric' && !ev.electric_desc) visible = false;
+                if (activeFilter === 'gases' && !ev.smell_and_gases) visible = false;
+                if (activeFilter === 'fire' && !ev.fire_and_sparks) visible = false;
+                if (activeFilter === 'optical' && !ev.optical_clouds) visible = false;
+                if (activeFilter === 'electric' && (!ev.electric_desc || ev.electric_desc.includes('SEM ANOMALIA'))) visible = false;
 
                 if (!visible) return;
 
+                // 2.1 Marcador Principal do Evento
                 const el = document.createElement('div');
                 if (ev.id === 'himalaia_2026') {
                     el.className = 'marker-2026';
@@ -484,6 +578,26 @@
                     .addTo(map);
 
                 markers.push(m);
+
+                // 2.2 Marcador do Centro Sísmico / Epicentro Superficial
+                if (ev.seismic_center) {
+                    const epEl = document.createElement('div');
+                    epEl.className = 'marker-epicenter';
+                    epEl.innerHTML = '<i class="fa-solid fa-bullseye"></i>';
+                    epEl.title = '🎯 Epicentro Superficial (h ≈ 0 km, ' + ev.seismic_mag + '): ' + ev.name;
+
+                    epEl.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        showEvent(idx);
+                        flyToEpicenter();
+                    });
+
+                    const epMarker = new maplibregl.Marker({ element: epEl })
+                        .setLngLat([ev.seismic_center[0], ev.seismic_center[1]])
+                        .addTo(map);
+
+                    epicenterMarkers.push(epMarker);
+                }
             });
         }
 
@@ -517,11 +631,20 @@
             document.getElementById('cardVolume').innerText = ev.volume;
             document.getElementById('cardDischarge').innerText = ev.peak_discharge;
 
-            // Preenche Terremoto, Som Horrível e Descargas Elétricas
+            // Dados Sísmicos Estruturados
+            document.getElementById('cardEpicenterCoords').innerText = ev.seismic_center[1] + '°N, ' + ev.seismic_center[0] + '°E (' + ev.seismic_center[2] + 'm)';
+            document.getElementById('cardEpicenterDepth').innerText = ev.seismic_depth || 'Superficial (h ≈ 0 km)';
+            document.getElementById('cardEpicenterMag').innerText = ev.seismic_mag || 'Sinal Mecânico';
+            document.getElementById('cardEpicenterMmi').innerText = ev.seismic_intensity || 'MMI IV - V';
             document.getElementById('cardSeismicDesc').innerText = ev.seismic_desc || 'Sinais de tremores mecânicos registrados.';
-            document.getElementById('cardSoundDesc').innerText = ev.sound_desc || 'Estrondo ensurdecedor reportado por sobreviventes.';
-            document.getElementById('cardElectricDesc').innerText = ev.electric_desc || 'Perturbações eletrodinâmicas associadas.';
 
+            // Som Horrível, Cheiros/Gases, Faíscas e Nuvens Iridescentes
+            document.getElementById('cardSoundDesc').innerText = ev.sound_desc || 'Estrondo ensurdecedor reportado por sobreviventes.';
+            document.getElementById('cardGasesDesc').innerText = ev.smell_and_gases || 'Sem relatos de odores anômalos registrados.';
+            document.getElementById('cardFireDesc').innerText = ev.fire_and_sparks || 'Sem registros de chamas ou faíscas.';
+            document.getElementById('cardOpticalDesc').innerText = ev.optical_clouds || 'Sem registros ópticos atípicos.';
+
+            document.getElementById('cardElectricDesc').innerText = ev.electric_desc || 'Perturbações eletrodinâmicas associadas.';
             document.getElementById('cardRainDesc').innerText = ev.rain_desc;
             document.getElementById('cardSolarDesc').innerText = ev.solar_desc;
             document.getElementById('cardDamage').innerText = ev.damage;
@@ -545,6 +668,20 @@
                 duration: 2500,
                 essential: true
             });
+        }
+
+        function flyToEpicenter() {
+            const ev = eventsData[currentIndex];
+            if (ev.seismic_center) {
+                map.flyTo({
+                    center: [ev.seismic_center[0], ev.seismic_center[1]],
+                    zoom: 14.5,
+                    pitch: 72,
+                    bearing: (ev.camera.bearing + 20) % 360,
+                    duration: 2200,
+                    essential: true
+                });
+            }
         }
 
         // Salto Imediato para a Catástrofe de 2026
@@ -573,7 +710,7 @@
                 btn.className = 'btn btn-xs btn-warning text-dark py-0 px-2 ms-1';
                 autoTourInterval = setInterval(() => {
                     nextEvent();
-                }, 8000); // 8 segundos em cada catástrofe
+                }, 8000);
             } else {
                 btn.innerHTML = '<i class="fa-solid fa-play me-1"></i> Tour';
                 btn.className = 'btn btn-xs btn-outline-warning py-0 px-2 ms-1';

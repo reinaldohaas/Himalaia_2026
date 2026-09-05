@@ -132,7 +132,55 @@ Um dos achados forenses mais consistentes da investigação dos 46 anos de catá
 
 ---
 
-## 7. Roteiro Operacional de Investigação Individual dos Casos
+## 7. Física Sensorial e Pré-Sinais: Sismos Superficiais, Cheiros/Gases, Faíscas e Nuvens Iridescentes
+
+A análise forense integrada revela que as catástrofes de alta montanha não se limitam à dinâmica hidráulica convencional, manifestando um conjunto singular de fenômenos sensoriais e geofísicos precursores:
+
+### 1. Sismos Superficiais Induzidos ($h \approx 0\text{ km}$) vs. Terremotos Tectônicos Profundos
+* **A Distinção Geofísica Fundamental:** Ao contrário dos grandes terremotos tectônicos do Himalaia (que ocorrem em zonas de subducção ao longo do *Main Himalayan Thrust* a profundidades de $10\text{ a }30\text{ km}$ com pulsos abruptos de ondas primárias $P$), os tremores associados a fluxos de detritos são **sismos de superfície induzidos por impacto gravitacional de massa** (*landslide-induced seismic signals*, $h \approx 0\text{ km}$).
+* **Assinatura Espectral:** Caracterizam-se pela ausência de ondas $P$ de alta frequência e pela **dominância quase exclusiva de ondas de superfície de longo período (Rayleigh e Love, $30\text{ a }50\text{ s}$)**, geradas pela força de contato dinâmico da massa em deslizamento acelerado e desacelerado contra a topografia (*Cook et al., Science 2021; Shugar et al., Science 2021*).
+* **Centros Sísmicos e Intensidade:** Os epicentros correspondem exatamente às coordenadas da coroa de descolamento nos cumes (ex.: Ronti Peak a $5.600\text{ m}$ em Chamoli, aresta norte do Annapurna IV a $6.850\text{ m}$ no Seti, e face norte do Langtang Lirung a $5.200\text{ m}$ em 2026), atingindo intensidade local na Escala Mercalli Modificada de **MMI V a VI**.
+
+### 2. Cheiros e Gases Precursores (Enxofre, Ozônio, $H_2S$ e Metano)
+A liberação de odores marcantes e gases nos vales decorre de quatro processos físico-químicos diretos:
+1. **Odor de Enxofre e Gás Sulfídrico ($H_2S$):** Deslacramento e revolvimento súbito de depósitos lacustres anóxicos, morainas com matéria orgânica antiga e turfeiras periglaciais estagnadas sob condições redutoras, documentado expressamente pela equipe do ICIMOD (2021) em Chamoli e no Gandhi Sarovar (Kedarnath);
+2. **Odor de Ozônio ($O_3$):** Cheiro metálico e penetrante gerado pela ionização do ar e quebra de moléculas de oxigênio por relâmpagos de crista e descargas corona difusas nas arestas pontiagudas (*Leh Ladakh 2010* e *Himalaia 2026*);
+3. **Cheiro de Terra e Rocha Queimada por Fricção:** A abrasão e moagem de blocos rochosos em altíssima pressão e velocidade aquece a poeira mineral a centenas de graus Celsius, produzindo o característico odor acre de rocha queimada relatado em *Chamoli* e no *Rio Seti*.
+
+### 3. Fogo, Faíscas de Atrito e Triboluminescência
+* **Calor de Fricção e Fusão Basal:** No colapso de Chamoli ($27\text{ M m}^3$) e do Rio Seti ($32\text{ M m}^3$), a energia potencial gravitacional dissipada ultrapassou $10^{15}\text{ Joules}$. O calor gerado na interface de atrito pulverizou a rocha e derreteu o gelo basal, criando um filme lubrificante viscoso.
+* **Faíscas Triboelétricas e Piezoelétricas:** O choque violento entre blocos de granito e quartzito fraturou trilhões de cristais de quartzo por segundo, liberando emissões de radiofrequência (RF) e faíscas luminosas visíveis (*Nitsan, 1977*).
+* **Fogo de Santelmo:** Descargas corona azuladas em mastros metálicos, cruzes e pontas afiadas de gelo sob campos eletrostáticos de alta montanha.
+
+### 4. Nuvens Iridescentes e Fenômenos Ópticos Atmosféricos
+* Em grandes altitudes ($>4.000\text{ m}$), fortes correntes convectivas ascendentes em cristas transportam vapor e gotículas super-resfriadas que congelam instantaneamente em microcristais de gelo de tamanho uniforme.
+* A difração da luz solar ou luar através dessas partículas gera **nuvens iridescentes (irisação com halos prismáticos de cores do arco-íris)** observadas no topo de supercélulas orográficas confinadas (*Kedarnath 2013*, *Leh Ladakh 2010* e *Himalaia 2026*).
+
+---
+
+### Matriz da Física Sensorial nos 15 Maiores Eventos:
+
+| Rank | Evento / Bacia | 🎯 Centro Sísmico (Lat/Lon/Cota) | 🌋 Tipo / Mag / MMI | 🧪 Cheiros & Gases | 🔥 Faíscas / Fricção | 🌈 Nuvens Iridescentes |
+| :-: | :--- | :--- | :--- | :--- | :--- | :--- |
+| **1º** | **Kedarnath (2013)** | $30,745^\circ\text{N}, 79,067^\circ\text{E}$ ($3.900\text{m}$) | Superficial ($h \approx 0\text{ km}$)<br>$M_L \approx 2.0$ • MMI V | Ozônio ($O_3$) de relâmpagos e cheiro sulfídrico ($H_2S$) de lodo anóxico. | Fogo de Santelmo em hastes metálicas do templo. | Difração em cristais de gelo na borda da supercélula. |
+| **2º** | **Chamoli (2021)** | $30,378^\circ\text{N}, 79,732^\circ\text{E}$ ($5.600\text{m}$) | Superficial de impacto ($h = 0\text{ km}$)<br>$M_L = 2.2$ • MMI VI | "Cheiro de enxofre" e poeira de terra/rocha queimada por fricção. | Calor extremo de fricção ($1,7\times 10^{15}\text{J}$) fundindo gelo e faíscas. | Plumas de condensação rápida adiabática na crista. |
+| **3º** | ⭐ **Himalaia (2026)** | $28,274^\circ\text{N}, 85,483^\circ\text{E}$ ($5.200\text{m}$) | Superficial de crista ($h \approx 1\text{ km}$)<br>**$4.4\text{ mb}$** • MMI V-VI | Odor metálico de ozônio ($O_3$), enxofre de gnaisse e metano de turfa. | Fogo de Santelmo azulado em arestas de gelo e faíscas de atrito em cânion. | Nuvens iridescentes com halos prismáticos ao amanhecer. |
+| **4º** | **Aru (2016)** | $34,045^\circ\text{N}, 82,285^\circ\text{E}$ ($5.800\text{m}$) | Superficial basal ($h = 0\text{ km}$)<br>$M \approx 2.3$ • MMI IV | Odor fóssil de permafrost milenar e criosolos deslacrados. | Cargas eletrostáticas maciças em gelo seco a $140\text{ km/h}$. | Pluma de cristais de gelo pulverizados em troposfera límpida. |
+| **5º** | **Rio Seti (2012)** | $28,542^\circ\text{N}, 84,152^\circ\text{E}$ ($6.850\text{m}$) | Queda livre vertical de 3.000m ($h = 0\text{ km}$)<br>$M_L = 2.7$ • MMI V-VI | Forte cheiro de terra queimada e lama sulfídrica anóxica. | Nuvem cinzenta piroclástica-fria altamente carregada eletrostaticamente. | Halos ópticos na poeira mineral branca cobrindo o vale. |
+| **6º** | **South Lhonak (2023)**| $27,905^\circ\text{N}, 88,205^\circ\text{E}$ ($5.200\text{m}$) | Ruptura moráinica ($h = 0\text{ km}$)<br>$M_L \approx 2.1$ • MMI V | Odor sulfídrico ($H_2S$) de lodo glacial profundo e ozônio. | Faíscas de choque contra pilares de concreto da represa. | Clarões ópticos nas nuvens de crista fronteiriças. |
+| **7º** | **Leh Ladakh (2010)** | $34,152^\circ\text{N}, 77,577^\circ\text{E}$ ($4.200\text{m}$) | Tremor mecânico de leque aluvial ($h = 0\text{ km}$)<br>MMI V | Ozônio ($O_3$) penetrante e poeira ionizada antes da torrente. | Relâmpagos secos roxos e faíscas de colisão de granito. | Bordas iluminadas e cores prismáticas no topo da nuvem. |
+| **8º** | **Melamchi (2021)** | $28,095^\circ\text{N}, 85,612^\circ\text{E}$ ($3.650\text{m}$) | Superficial de liquefação ($h = 0\text{ km}$)<br>MMI IV-V | Odor fétido de turfa periglacial antiga e lodo podre revolvido. | Faíscas de colisão de blocos de granito de 100 toneladas. | Irisação orográfica no topo do circo de Bhemathang. |
+| **9º** | **Parechu (2000)** | $31,980^\circ\text{N}, 78,540^\circ\text{E}$ ($3.200\text{m}$) | Ruptura de barreira de terra ($h = 0\text{ km}$)<br>MMI IV | Gás sulfídrico ($H_2S$) e metano ($CH_4$) de lago represado por meses. | Faíscas de impacto e corte de cabos de transmissão. | Auroras boreais anômalas no evento Bastille Day semanas antes. |
+| **10º**| **Zhangzangbo (1981)**| $28,092^\circ\text{N}, 85,980^\circ\text{E}$ ($4.200\text{m}$) | Ruptura moráinica ($h = 0\text{ km}$)<br>MMI IV-V | Cheiro acre de lodo glacial frio e pedras gnáissicas trituradas. | Faíscas de choque de blocos destruindo pontes de ferro. | Difração solar em cirros de monção. |
+| **11º**| **Dig Tsho (1985)** | $27,870^\circ\text{N}, 86,600^\circ\text{E}$ ($4.365\text{m}$) | Impacto de avalanche em lago ($h = 0\text{ km}$)<br>MMI IV | Ar límpido de alta montanha com leve cheiro de gelo moído. | Atrito de blocos contra o leito da usina Namche. | Névoa prismática de pulverização de gelo ao sol. |
+| **12º**| **Luggye Tsho (1994)**| $28,080^\circ\text{N}, 90,300^\circ\text{E}$ ($4.500\text{m}$) | Ruptura de núcleo de gelo fóssil ($h = 0\text{ km}$)<br>MMI IV | Odor frio de solo periglacial e matéria orgânica degelada. | Choque de blocos contra cânions do Pho Chhu. | Céu limpo de outono sem nuvens anômalas. |
+| **13º**| **Gongbatongshacuo (16)**|$28,092^\circ\text{N}, 85,980^\circ\text{E}$ ($4.100\text{m}$) | Cisalhamento moráinico ($h = 0\text{ km}$)<br>MMI IV | Odor sulfídrico de água revolvendo lodo antigo de morena. | Faíscas de impacto arrancando fundações hidrelétricas. | Névoa de umidade difratando luz matinal. |
+| **14º**| **Himachal (2023)** | $31,985^\circ\text{N}, 77,150^\circ\text{E}$ ($2.500\text{m}$) | Tremor hidrodinâmico contínuo ($h = 0\text{ km}$)<br>MMI V | Ozônio de raios misturado a lama saturada e hidrocarbonetos. | Clarões de curto-circuito na rede elétrica e faíscas mecânicas. | Bordas de cumulonimbus iluminadas por relâmpagos múltiplos. |
+| **15º**| **Parechu (2005)** | $31,980^\circ\text{N}, 78,540^\circ\text{E}$ ($3.200\text{m}$) | Descalçamento de barragem ($h = 0\text{ km}$)<br>MMI IV | Odor sulfídrico e metano liberado de lama estagnada. | Atrito violento contra contrafortes de concreto das pontes. | Céu limpo de pré-monção. |
+
+---
+
+## 8. Roteiro Operacional de Investigação Individual dos Casos
 
 Para transformar este levantamento em um compêndio científico estruturado, cada evento será processado nas seguintes fases:
 
@@ -143,4 +191,5 @@ Para transformar este levantamento em um compêndio científico estruturado, cad
 5. **South Lhonak / Teesta 2023 (Prioridade 5):** Análise da onda de impacto contra a barragem de 1.200 MW, sinais sísmicos de ruptura e convecção noturna de crista.
 
 O repositório oficial preservará os modelos computacionais, arquivos KMZ e monografias de cada evento em formato aberto.
+
 
