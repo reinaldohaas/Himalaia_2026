@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apresentação em Mapas 3D: 15 Catástrofes no Himalaia (1980–2026)</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- MapLibre GL JS 3D Engine -->
+    <script src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js"></script>
+    <link href="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css" rel="stylesheet" />
+    <style>
+        :root {
+            --bg-main: #06090e;
+            --panel-bg: rgba(11, 17, 30, 0.95);
+            --card-bg: #101726;
+            --border-color: #1e293b;
+            --cyan: #06b6d4;
+            --amber: #f59e0b;
+            --red: #ef4444;
+            --blue: #3b82f6;
+            --purple: #a855f7;
+            --green: #10b981;
+            --text-light: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-light);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            width: 100vw;
+            height: 100vh;
+        }
+        #map {
+            position: absolute;
+            top: 56px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: calc(100vh - 56px);
+        }
+        .presentation-card {
+            position: absolute;
+            top: 70px;
+            left: 20px;
+            z-index: 100;
+            width: 440px;
+            max-width: calc(100vw - 40px);
+            max-height: calc(100vh - 90px);
+            overflow-y: auto;
+            background: var(--panel-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(12px);
+            transition: all 0.3s ease;
+        }
+        .filter-bar {
+            position: absolute;
+            top: 70px;
+            right: 60px;
+            z-index: 100;
+            background: var(--panel-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 6px 10px;
+            backdrop-filter: blur(10px);
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            max-width: 600px;
+            justify-content: flex-end;
+        }
+        .marker-badge {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: 2px solid #ffffff;
+            color: #ffffff;
+            font-weight: 800;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 0 12px rgba(0,0,0,0.85);
+            transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .marker-badge:hover {
+            transform: scale(1.45) translateY(-5px);
+            z-index: 1000;
+        }
+        .cat-a { background-color: #ef4444; } /* Vermelho */
+        .cat-b { background-color: #ea580c; } /* Laranja */
+        .cat-c { background-color: #0284c7; } /* Azul */
+        .cat-d { background-color: #10b981; } /* Verde */
+        
+        .badge-dry {
+            background-color: #b45309;
+            color: #fef08a;
+            font-size: 0.72rem;
+            font-weight: 700;
+            border: 1px solid #f59e0b;
+        }
+        .badge-solar {
+            background-color: #7e22ce;
+            color: #f3e8ff;
+            font-size: 0.72rem;
+            font-weight: 700;
+            border: 1px solid #c084fc;
+        }
+        .custom-scroll::-webkit-scrollbar {
+            width: 5px;
+        }
+        .custom-scroll::-webkit-scrollbar-thumb {
+            background: rgba(148, 163, 184, 0.3);
+            border-radius: 4px;
+        }
+        .nav-btn {
+            background: #1e293b;
+            color: #f8fafc;
+            border: 1px solid #334155;
+            border-radius: 6px;
+            padding: 4px 10px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        .nav-btn:hover {
+            background: #0284c7;
+            color: #ffffff;
+            border-color: #38bdf8;
+        }
+        .nav-btn.active {
+            background: #0284c7;
+            color: #ffffff;
+            border-color: #38bdf8;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Principal Superior -->
+    <nav class="navbar navbar-dark bg-dark px-3 py-2 border-bottom border-secondary d-flex justify-content-between align-items-center" style="height: 56px;">
+        <div class="d-flex align-items-center gap-2">
+            <span class="badge bg-danger fw-bold">1980–2026</span>
+            <span class="navbar-brand text-cyan mb-0" style="font-size: 1.05rem;">
+                <i class="fa-solid fa-mountain-sun me-1"></i> AS 15 MAIORES CATÁSTROFES DO HIMALAIA: APRESENTAÇÃO EM MAPAS 3D
+            </span>
+            <span class="badge bg-secondary d-none d-lg-inline">46 Anos de Inversão Forense</span>
+        </div>
+        
+        <div class="d-flex align-items-center gap-2">
+            <a href="viewer_4d.html" class="btn btn-sm btn-outline-info">
+                <i class="fa-solid fa-circle-left me-1"></i> Painel 2026
+            </a>
+            <a href="catastrofe_himalaia_1980_2026_ranking.kmz" download="catastrofe_himalaia_1980_2026_ranking.kmz" class="btn btn-sm btn-success text-white fw-bold">
+                <i class="fa-solid fa-download me-1"></i> Baixar KMZ (15 Eventos)
+            </a>
+            <a href="ARTIGO_CIENTIFICO_CATASTROFE_HIMALAIA_2026.md" target="_blank" class="btn btn-sm btn-outline-light">
+                <i class="fa-solid fa-file-lines me-1"></i> Artigo Científico
+            </a>
+            <a href="https://github.com/reinaldohaas/Himalaia_2026" target="_blank" class="btn btn-sm btn-outline-info">
+                <i class="fa-brands fa-github me-1"></i> GitHub
+            </a>
+        </div>
+    </nav>
+
+    <!-- Mapa 3D Nativamente WebGL -->
+    <div id="map"></div>
+
+    <!-- Barra de Filtros Temáticos Flutuante -->
+    <div class="filter-bar">
+        <span class="small text-muted align-self-center me-1" style="font-size: 0.70rem;">FILTRAR:</span>
+        <button class="nav-btn active" onclick="applyFilter('all', this)">Todos (15)</button>
+        <button class="nav-btn" onclick="applyFilter('dry', this)">☀️ Sem Chuva / Céu Azul (6)</button>
+        <button class="nav-btn" onclick="applyFilter('solar', this)">⚡ Flares Solares / Espaço (10)</button>
+        <button class="nav-btn text-danger" onclick="applyFilter('catA', this)">🔴 Cat A (Rocha-Gelo)</button>
+        <button class="nav-btn text-warning" onclick="applyFilter('catB', this)">🟠 Cat B (Toró)</button>
+        <button class="nav-btn text-info" onclick="applyFilter('catC', this)">🔵 Cat C (GLOFs)</button>
+        <button class="nav-btn text-success" onclick="applyFilter('catD', this)">🟢 Cat D (LDOF)</button>
+    </div>
+
+    <!-- Painel de Apresentação / Dossier do Evento Ativo -->
+    <div class="presentation-card custom-scroll" id="presentationCard">
+        <div class="d-flex justify-content-between align-items-center mb-2 pb-2 border-bottom border-secondary">
+            <div>
+                <span class="badge bg-danger fw-bold me-1" id="cardRank">RANK 1º</span>
+                <span class="badge bg-secondary" id="cardCategory">Cat B</span>
+            </div>
+            <div class="d-flex gap-1 align-items-center">
+                <button onclick="prevEvent()" class="btn btn-xs btn-outline-secondary py-0 px-2 text-light" title="Evento Anterior">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <span class="text-muted small font-monospace" id="cardCounter" style="font-size: 0.72rem;">1 / 15</span>
+                <button onclick="nextEvent()" class="btn btn-xs btn-outline-secondary py-0 px-2 text-light" title="Próximo Evento">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+                <button onclick="toggleAutoTour()" id="btnAutoTour" class="btn btn-xs btn-outline-warning py-0 px-2 ms-1" style="font-size: 0.70rem;">
+                    <i class="fa-solid fa-play me-1"></i> Tour
+                </button>
+            </div>
+        </div>
+
+        <h5 class="fw-bold text-light mb-1" id="cardTitle" style="font-size: 1.05rem;">Carregando...</h5>
+        <div class="text-muted small mb-2" id="cardSubtitle" style="font-size: 0.78rem;">Localização e Data</div>
+
+        <!-- Métricas Rápidas -->
+        <div class="row g-2 mb-3">
+            <div class="col-6">
+                <div class="p-2 rounded bg-dark border border-secondary">
+                    <span class="text-muted d-block" style="font-size: 0.65rem;">VOLUME MOBILIZADO</span>
+                    <strong class="text-cyan" id="cardVolume" style="font-size: 0.90rem;">-</strong>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="p-2 rounded bg-dark border border-secondary">
+                    <span class="text-muted d-block" style="font-size: 0.65rem;">VAZÃO DE PICO (Qpico)</span>
+                    <strong class="text-primary" id="cardDischarge" style="font-size: 0.90rem;">-</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- Destaque 1: Condição de Chuva no Vale -->
+        <div class="p-2.5 rounded mb-2 border" id="cardRainBox" style="background: rgba(30, 41, 59, 0.6); border-color: var(--border-color);">
+            <div class="d-flex align-items-center gap-1.5 mb-1">
+                <span class="badge badge-dry" id="cardRainBadge">🌧️ CONDIÇÃO DE CHUVA</span>
+                <span class="text-light fw-bold small" style="font-size: 0.74rem;">Precipitação no Fundo do Vale:</span>
+            </div>
+            <p class="small text-light mb-0" id="cardRainDesc" style="font-size: 0.76rem; line-height: 1.35;"></p>
+        </div>
+
+        <!-- Destaque 2: Atividade Solar e Clima Espacial -->
+        <div class="p-2.5 rounded mb-2 border" id="cardSolarBox" style="background: rgba(30, 41, 59, 0.6); border-color: var(--border-color);">
+            <div class="d-flex align-items-center gap-1.5 mb-1">
+                <span class="badge badge-solar" id="cardSolarBadge">☀️ CLIMA ESPACIAL</span>
+                <span class="text-light fw-bold small" style="font-size: 0.74rem;">Flares e Perturbação Geomagnética:</span>
+            </div>
+            <p class="small text-light mb-0" id="cardSolarDesc" style="font-size: 0.76rem; line-height: 1.35;"></p>
+        </div>
+
+        <!-- Danos e Infraestrutura -->
+        <div class="p-2.5 rounded mb-2 border border-secondary" style="background: rgba(15, 23, 42, 0.6);">
+            <div class="d-flex align-items-center gap-1 mb-1 text-danger fw-bold small" style="font-size: 0.74rem;">
+                <i class="fa-solid fa-triangle-exclamation me-1"></i> Danos Estruturais e Vítimas:
+            </div>
+            <p class="small text-muted mb-0" id="cardDamage" style="font-size: 0.76rem; line-height: 1.35;"></p>
+        </div>
+
+        <!-- Geomito / Memória Oral -->
+        <div class="p-2 rounded mb-3 border border-secondary" style="background: rgba(26, 36, 56, 0.5); font-size: 0.72rem;">
+            <span class="text-warning fw-bold"><i class="fa-solid fa-dragon me-1"></i> Memória Oral / Geomito:</span>
+            <span class="text-light fst-italic" id="cardMyth"></span>
+        </div>
+
+        <!-- Botões de Ação do Card -->
+        <div class="d-flex gap-2">
+            <button onclick="flyToCurrentEvent()" class="btn btn-sm btn-outline-info flex-grow-1" style="font-size: 0.74rem;">
+                <i class="fa-solid fa-video me-1"></i> Vista 3D Detalhada
+            </button>
+            <a id="btnEarthWeb" href="#" target="_blank" class="btn btn-sm btn-outline-warning" style="font-size: 0.74rem;">
+                <i class="fa-solid fa-earth-americas me-1"></i> Earth Web
+            </a>
+        </div>
+    </div>
+
+    <!-- Script JavaScript Principal da Apresentação em Mapas -->
+    <script>
+        const eventsData = [{"rank": 1, "id": "kedarnath_2013", "name": "Catástrofe de Kedarnath (Chorabari / Mandakini)", "date": "16–17 de Junho de 2013", "country": "Índia", "region": "Uttarakhand (Gharwal)", "lat": 30.745, "lon": 79.067, "elevation": "3.900m -> 1.000m", "category": "B", "category_name": "Física do Toró (Convecção de Crista)", "volume": "> 15 M m³", "peak_discharge": "5.000 m³/s", "rain_status": "paradox", "rain_desc": "Chuva moderada no vale; supercélula convectiva explosiva confinada no circo glacial (>300 mm em crista).", "solar_status": "high", "solar_desc": "Pico do Máximo Solar do Ciclo 24: Flare M1.3 em 15/06 e rajadas coronais intensas nas 48h prévias.", "damage": "> 5.700 mortos; vila de Kedarnath e centenas de pontes/rodovias varridas.", "myth_note": "A lenda do Shiva furioso despejando as águas celestes do Mandakini de uma só vez.", "camera": {"zoom": 13.0, "pitch": 68, "bearing": 20}}, {"rank": 2, "id": "chamoli_2021", "name": "Catástrofe de Chamoli (Rishiganga / Dhauliganga)", "date": "7 de Fevereiro de 2021", "country": "Índia", "region": "Uttarakhand (Nanda Devi)", "lat": 30.378, "lon": 79.732, "elevation": "5.600m -> 1.800m", "category": "A", "category_name": "Colapso Rocha-Gelo Sem Chuva", "volume": "27 M m³", "peak_discharge": "5.200 m³/s", "rain_status": "dry", "rain_desc": "☀️ ZERO CHUVA (CÉU AZUL): Dia de inverno perfeitamente ensolarado e seco. Zero chuva no vale ou no Ronti Peak.", "solar_status": "moderate", "solar_desc": "Início do Ciclo 25: Subtempestade geomagnética de baixa latitude (Kp=4) e rajada de vento solar a 520 km/s.", "damage": "> 200 mortos; aniquilação total da UHE Rishiganga e da UHE Tapovan (520 MW).", "myth_note": "Mito da deusa Nanda Devi rompendo seus pilares de rocha.", "camera": {"zoom": 13.5, "pitch": 70, "bearing": 35}}, {"rank": 3, "id": "himalaia_2026", "name": "Catástrofe de 2026 (Lhende Khola / Rio Trishuli)", "date": "26 de Agosto de 2026", "country": "Nepal / Tibete", "region": "Rasuwa / Langtang Himal", "lat": 28.274, "lon": 85.483, "elevation": "5.200m -> 1.850m", "category": "B", "category_name": "Física do Toró (Convecção de Crista)", "volume": "20,7 M m³ (14,2 M m³ líq)", "peak_discharge": "3.376 m³/s", "rain_status": "dry_valley", "rain_desc": "🌅 VALE SECO NO AMANHECER: População confirma zero chuva no rio. Satélite GPM marcou só 15-30 mm (déficit 17x).", "solar_status": "high", "solar_desc": "☀️ FLARE SOLAR M7.0 (25/08 15:47 NPT): Salto de VI = 356,4 kV; pico Jz = 4,57 pA/m² (14 magnetômetros).", "damage": "Dezenas de mortos; 25 pontes destruídas; UHE Rasuwagadhi (111 MW) soterrada.", "myth_note": "O rugido do Dragão do Trovão (Druk) nas cavernas de gelo antes da torrente de lama.", "camera": {"zoom": 13.2, "pitch": 68, "bearing": 32}}, {"rank": 4, "id": "aru_2016", "name": "Colapso Duplo das Geleiras de Aru", "date": "17 de Julho e 21 de Setembro de 2016", "country": "China (Tibete)", "region": "Rutog / Ngari", "lat": 34.045, "lon": 82.285, "elevation": "5.800m -> 4.900m", "category": "A", "category_name": "Colapso de Geleira em Deserto Frio", "volume": "151 M m³ (68 + 83 M m³)", "peak_discharge": "v > 140 km/h", "rain_status": "dry", "rain_desc": "🏜️ SEM CHUVA (HIPERÁRIDO): Planalto desértico do Tibete Ocidental (<150 mm/ano). Sem chuva líquida prévia.", "solar_status": "high", "solar_desc": "Ciclo 24: Flare M1.2 em 15/07; vento solar rápido de buraco coronal (>600 km/s) atingindo a Terra.", "damage": "9 pastores e centenas de animais soterrados; 10 km² de planície soterrados.", "myth_note": "Geleiras que 'voaram' sobre a pradaria tibetana.", "camera": {"zoom": 12.0, "pitch": 60, "bearing": 45}}, {"rank": 5, "id": "seti_2012", "name": "Enxurrada do Rio Seti (Annapurna IV)", "date": "5 de Maio de 2012", "country": "Nepal", "region": "Kaski / Pokhara", "lat": 28.542, "lon": 84.152, "elevation": "7.100m -> 1.100m", "category": "A", "category_name": "Colapso Rocha-Gelo Sem Chuva", "volume": "32 M m³", "peak_discharge": "v ≈ 25 m/s", "rain_status": "dry", "rain_desc": "☀️ ZERO CHUVA: Manhã de primavera com céu completamente claro. Nenhuma gota nas estações de Pokhara.", "solar_status": "extreme", "solar_desc": "💥 TEMPESTADE SOLAR EXTREMA: Flare M5.7 exatamente em 05/05 e série diária de flares M nos dias 2-4/05 (Kp=5).", "damage": "72 mortos; vilarejo de Kharapani engolido; estrondo ouvido a 25 km.", "myth_note": "O estrondo semelhante a 'bomba atômica' nos desfiladeiros sagrados do Seti Gandaki.", "camera": {"zoom": 13.0, "pitch": 72, "bearing": 15}}, {"rank": 6, "id": "south_lhonak_2023", "name": "Rompimento do South Lhonak / Teesta III", "date": "4 de Outubro de 2023", "country": "Índia", "region": "Sikkim", "lat": 27.905, "lon": 88.205, "elevation": "5.200m -> 1.550m", "category": "C", "category_name": "GLOF Moráinico Violento", "volume": "18 M m³", "peak_discharge": "4.500 m³/s", "rain_status": "light", "rain_desc": "Chuva fraca / chuvisco pós-monção; volume de chuva no vale incapaz de gerar cheia por si só.", "solar_status": "high", "solar_desc": "Pico do Ciclo 25: Tempestade geomagnética moderada (Kp=5) em 03/10 e fluxo de partículas de 550 km/s.", "damage": "> 100 mortos; destruição total da barragem de concreto Teesta III (1.200 MW).", "myth_note": "As águas sagradas de Guru Dongmar que lavam os vales budistas de Sikkim.", "camera": {"zoom": 12.8, "pitch": 65, "bearing": 30}}, {"rank": 7, "id": "leh_2010", "name": "Nuvem Pistão de Leh Ladakh", "date": "6 de Agosto de 2010", "country": "Índia", "region": "Ladakh (Deserto de Altitude)", "lat": 34.152, "lon": 77.577, "elevation": "3.500m", "category": "B", "category_name": "Física do Toró (Supercélula Desértica)", "volume": "> 200 mm em 2h", "peak_discharge": "2.800 m³/s", "rain_status": "dry_prior", "rain_desc": "🏜️ DESERTO HISTÓRICO: Pluviosidade média anual de 100 mm. Vale sem chuva até a explosão noturna de crista.", "solar_status": "extreme", "solar_desc": "💥 IMPACTO DE CME EM 03-04/08/2010: Ejeção de massa coronal induz tempestade geomagnética severa (Kp=6) 48h antes.", "damage": "255 mortos; cidade de Leh soterrada sob lama e pedras; hospitais destruídos.", "myth_note": "Mitos ladakhis sobre nuvens de dragão que despencam como pedras do céu.", "camera": {"zoom": 13.5, "pitch": 62, "bearing": 10}}, {"rank": 8, "id": "melamchi_2021", "name": "Enxurrada do Rio Melamchi", "date": "15 de Junho de 2021", "country": "Nepal", "region": "Sindhupalchok (Helambu)", "lat": 28.095, "lon": 85.612, "elevation": "3.650m -> 850m", "category": "B", "category_name": "Física do Toró (Convecção de Crista)", "volume": "> 12 M m³", "peak_discharge": "2.400 m³/s", "rain_status": "dry_valley", "rain_desc": "VALE SEM CHUVA FORTE: Estação do vale mediu apenas chuva fraca; convecção confinada no circo a 3.650m.", "solar_status": "moderate", "solar_desc": "Início do Ciclo 25: Flutuações de baixa frequência e perturbação de cauda magnética nas 48h prévias.", "damage": "20 mortos; bilionário projeto de água potável de Katmandu soterrado.", "myth_note": "As antigas histórias de Bhemathang, onde a terra treme e se liquefaz.", "camera": {"zoom": 13.0, "pitch": 65, "bearing": 25}}, {"rank": 9, "id": "parechu_2000", "name": "Cheia Represada do Rio Parechu", "date": "1 de Agosto de 2000", "country": "China (Tibete) / Índia", "region": "Spiti / Sutlej (Himachal)", "lat": 31.98, "lon": 78.54, "elevation": "3.200m -> 1.200m", "category": "D", "category_name": "Rompimento de Barragem Natural (LDOF)", "volume": "> 25 M m³", "peak_discharge": "4.000 m³/s", "rain_status": "moderate", "rain_desc": "Chuva moderada no platô árido tibetano; cheia provocada por liquefação súbita de barramento de encosta.", "solar_status": "extreme", "solar_desc": "☀️ O HISTÓRICO 'BASTILLE DAY EVENT': Máximo do Ciclo 23 com flares de classe X (X5.7) e tempestade global Kp=9.", "damage": "150 mortos; 10 pontes arrancadas; paralisou a maior usina da Índia (Nathpa Jhakri).", "myth_note": "O vale sagrado de Spiti inundado pelas águas represadas do Tibete.", "camera": {"zoom": 12.5, "pitch": 60, "bearing": 40}}, {"rank": 10, "id": "zhangzangbo_1981", "name": "Rompimento do Lago Zhangzangbo", "date": "11 de Julho de 1981", "country": "China (Tibete) / Nepal", "region": "Bhotekoshi (Kodari/Tatopani)", "lat": 28.092, "lon": 85.98, "elevation": "4.200m -> 1.300m", "category": "C", "category_name": "GLOF Moráinico", "volume": "19 M m³", "peak_discharge": "3.200 m³/s", "rain_status": "moderate", "rain_desc": "Chuva monçônica típica de verão; ruptura repentina por falha moráinica interna sem chuvas extremas de vale.", "solar_status": "extreme", "solar_desc": "💥 PICO MÁXIMO DO CICLO SOLAR 21: 1981 foi um dos anos de maior atividade solar do século XX (múltiplos flares X e M).", "damage": "Centenas de mortos; Ponte da Amizade internacional em Kodari e UHE Sun Koshi destruídas.", "myth_note": "A ira dos espíritos da fronteira arrancando as pontes de ferro.", "camera": {"zoom": 13.0, "pitch": 66, "bearing": 15}}, {"rank": 11, "id": "dig_tsho_1985", "name": "Rompimento do Lago Dig Tsho", "date": "4 de Agosto de 1985", "country": "Nepal", "region": "Khumbu / Everest", "lat": 27.87, "lon": 86.6, "elevation": "4.365m -> 2.800m", "category": "C", "category_name": "GLOF Moráinico", "volume": "8 M m³", "peak_discharge": "1.600 m³/s", "rain_status": "dry", "rain_desc": "☀️ MANHÃ ENSOLARADA E LIMPA: Avalanche de gelo do pico Langmoche despencou no lago em dia de tempo aberto.", "solar_status": "low", "solar_desc": "Mínimo Solar do Ciclo 21: Variações geomagnéticas moderadas.", "damage": "5 mortos; UHE Namche recém-construída 100% destruída antes da inauguração; 14 pontes levadas.", "myth_note": "A quebra dos lagos sagrados dos Sherpas no vale do Dudh Koshi.", "camera": {"zoom": 13.2, "pitch": 65, "bearing": 30}}, {"rank": 12, "id": "luggye_tsho_1994", "name": "Rompimento do Luggye Tsho", "date": "7 de Outubro de 1994", "country": "Butão", "region": "Lunana / Punakha", "lat": 28.08, "lon": 90.3, "elevation": "4.500m -> 1.300m", "category": "C", "category_name": "GLOF Moráinico", "volume": "18 M m³", "peak_discharge": "2.500 m³/s", "rain_status": "dry", "rain_desc": "🍂 OUTONO SECO E FRIO: Céu claro e tempo estável. Ruptura por perda de coesão do núcleo de gelo da moraina.", "solar_status": "low", "solar_desc": "Ciclo Solar 22 em declínio: Sem tempestades geomagnéticas registradas nas 72h prévias.", "damage": "21 mortos; Fortaleza histórica de Punakha Dzong severamente danificada; dezenas de casas destruídas.", "myth_note": "A lenda butanesa do Dragão do Trovão que habita os lagos de Lunana.", "camera": {"zoom": 12.8, "pitch": 62, "bearing": 20}}, {"rank": 13, "id": "gongbatongshacuo_2016", "name": "Cheia do Bhotekoshi de 2016", "date": "5 de Julho de 2016", "country": "China (Tibete) / Nepal", "region": "Tatopani / Bhotekoshi", "lat": 28.092, "lon": 85.98, "elevation": "4.100m -> 1.300m", "category": "C", "category_name": "GLOF Moráinico", "volume": "4 M m³", "peak_discharge": "2.500 m³/s", "rain_status": "light", "rain_desc": "Chuva fraca local no Nepal; lago moráinico tibetano rompeu repentinamente por galgamento moráinico.", "solar_status": "moderate", "solar_desc": "Fim do Ciclo 24: Flares de classe C e oscilações de condutividade ionosférica regional.", "damage": "UHE Upper Bhotekoshi destruída; rodovia Arniko fechada por 6 meses; pontes cortadas.", "myth_note": "A serpente de água que cruza a fronteira da China com o Nepal.", "camera": {"zoom": 13.2, "pitch": 68, "bearing": 25}}, {"rank": 14, "id": "himachal_2023", "name": "Catástrofe de Himachal Pradesh", "date": "9–11 de Julho de 2023", "country": "Índia", "region": "Himachal (Kullu/Manali/Beas)", "lat": 31.985, "lon": 77.15, "elevation": "2.500m -> 800m", "category": "B", "category_name": "Física do Toró (Convecção Confinada)", "volume": "> 50 M m³", "peak_discharge": "4.500 m³/s", "rain_status": "heavy", "rain_desc": "Chuva extrema contínua por 48h; interação severa entre depressão monçônica e distúrbio de oeste em desfiladeiros.", "solar_status": "high", "solar_desc": "Ciclo Solar 25 Ativo: Flare X1.2 em 02/07 e rajadas coronais intensas nas 72h prévias.", "damage": "> 100 mortos; destruição em massa de rodovias de quatro pistas, pontes históricas e hidrelétricas.", "myth_note": "As encostas dos deuses (Devbhoomi) que se desmancharam em rios de pedras.", "camera": {"zoom": 12.0, "pitch": 55, "bearing": 10}}, {"rank": 15, "id": "parechu_2005", "name": "Enxurrada do Rio Parechu de 2005", "date": "26 de Junho de 2005", "country": "China (Tibete) / Índia", "region": "Spiti / Sutlej (Himachal)", "lat": 31.98, "lon": 78.54, "elevation": "3.200m -> 1.100m", "category": "D", "category_name": "Rompimento de Barragem Natural (LDOF)", "volume": "> 10 M m³", "peak_discharge": "2.200 m³/s", "rain_status": "dry", "rain_desc": "☀️ PRÉ-MONÇÃO SECA: Vale em estiagem com cota basal normal; ruptura mecânica por transbordamento da represa de terra.", "solar_status": "moderate", "solar_desc": "Ciclo 23: Flare de classe M e subtempestades aurorais moderadas na semana prévia.", "damage": "10 pontes rodoviárias na NH-22 destruídas; UHE Nathpa Jhakri (1.500 MW) inundada por lama.", "myth_note": "A represa proibida do Tibete que desceu pelo rio sagrado Sutlej.", "camera": {"zoom": 12.5, "pitch": 60, "bearing": 35}}];
+        let currentIndex = 0;
+        let activeFilter = 'all';
+        let markers = [];
+        let autoTourInterval = null;
+        let isAutoTour = false;
+
+        // 1. Inicializar Motor Maps 3D WebGL (MapLibre GL JS + Google Earth Satellite + Relevo DEM)
+        const map = new maplibregl.Map({
+            container: 'map',
+            center: [82.0, 30.0],
+            zoom: 5.8,
+            pitch: 45,
+            bearing: 15,
+            style: {
+                version: 8,
+                sources: {
+                    'google-hybrid': {
+                        type: 'raster',
+                        tiles: ['https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}'],
+                        tileSize: 256
+                    },
+                    'terrain-dem': {
+                        type: 'raster-dem',
+                        tiles: ['https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png'],
+                        encoding: 'terrarium',
+                        tileSize: 256,
+                        maxzoom: 15
+                    }
+                },
+                layers: [
+                    {
+                        id: 'satellite-layer',
+                        type: 'raster',
+                        source: 'google-hybrid'
+                    }
+                ],
+                terrain: {
+                    source: 'terrain-dem',
+                    exaggeration: 1.5
+                },
+                sky: {}
+            }
+        });
+
+        map.addControl(new maplibregl.NavigationControl({
+            visualizePitch: true,
+            showZoom: true,
+            showCompass: true
+        }), 'top-right');
+
+        // 2. Renderizar Marcadores 3D no Mapa
+        map.on('load', () => {
+            renderMarkers();
+            showEvent(0);
+        });
+
+        function renderMarkers() {
+            // Limpar marcadores anteriores
+            markers.forEach(m => m.remove());
+            markers = [];
+
+            eventsData.forEach((ev, idx) => {
+                // Verificar se atende ao filtro ativo
+                let visible = true;
+                if (activeFilter === 'dry' && !ev.rain_status.includes('dry')) visible = false;
+                if (activeFilter === 'solar' && (ev.solar_status === 'low' || ev.solar_status === 'moderate')) visible = false;
+                if (activeFilter === 'catA' && ev.category !== 'A') visible = false;
+                if (activeFilter === 'catB' && ev.category !== 'B') visible = false;
+                if (activeFilter === 'catC' && ev.category !== 'C') visible = false;
+                if (activeFilter === 'catD' && ev.category !== 'D') visible = false;
+
+                if (!visible) return;
+
+                const el = document.createElement('div');
+                el.className = 'marker-badge cat-' + ev.category.toLowerCase();
+                el.innerText = ev.rank;
+                el.title = 'Rank ' + ev.rank + 'º: ' + ev.name;
+
+                el.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    showEvent(idx);
+                });
+
+                const m = new maplibregl.Marker({ element: el })
+                    .setLngLat([ev.lon, ev.lat])
+                    .addTo(map);
+
+                markers.push(m);
+            });
+        }
+
+        // 3. Exibir Evento no Card e Voar em 3D
+        function showEvent(idx) {
+            currentIndex = idx;
+            const ev = eventsData[idx];
+
+            document.getElementById('cardRank').innerText = 'RANK ' + ev.rank + 'º';
+            document.getElementById('cardCategory').innerText = 'Cat ' + ev.category + ' (' + ev.category_name + ')';
+            document.getElementById('cardCategory').className = 'badge cat-' + ev.category.toLowerCase();
+            document.getElementById('cardCounter').innerText = (idx + 1) + ' / ' + eventsData.length;
+
+            document.getElementById('cardTitle').innerText = ev.name;
+            document.getElementById('cardSubtitle').innerHTML = '<i class="fa-solid fa-location-dot me-1 text-danger"></i> ' + ev.region + ' (' + ev.country + ') • <i class="fa-solid fa-calendar me-1 text-info"></i> ' + ev.date;
+
+            document.getElementById('cardVolume').innerText = ev.volume;
+            document.getElementById('cardDischarge').innerText = ev.peak_discharge;
+
+            document.getElementById('cardRainDesc').innerText = ev.rain_desc;
+            document.getElementById('cardSolarDesc').innerText = ev.solar_desc;
+            document.getElementById('cardDamage').innerText = ev.damage;
+            document.getElementById('cardMyth').innerText = ev.myth_note || 'Registro de memórias e lendas orais associadas.';
+
+            // Link Google Earth Web
+            const earthUrl = 'https://earth.google.com/web/@' + ev.lat + ',' + ev.lon + ',3000a,25000d,35y,' + ev.camera.bearing + 'h,' + ev.camera.pitch + 't,0r';
+            document.getElementById('btnEarthWeb').href = earthUrl;
+
+            // Voo 3D Cinemático
+            flyToCurrentEvent();
+        }
+
+        function flyToCurrentEvent() {
+            const ev = eventsData[currentIndex];
+            map.flyTo({
+                center: [ev.lon, ev.lat],
+                zoom: ev.camera.zoom,
+                pitch: ev.camera.pitch,
+                bearing: ev.camera.bearing,
+                duration: 2500,
+                essential: true
+            });
+        }
+
+        function nextEvent() {
+            let nextIdx = (currentIndex + 1) % eventsData.length;
+            showEvent(nextIdx);
+        }
+
+        function prevEvent() {
+            let prevIdx = (currentIndex - 1 + eventsData.length) % eventsData.length;
+            showEvent(prevIdx);
+        }
+
+        function toggleAutoTour() {
+            isAutoTour = !isAutoTour;
+            const btn = document.getElementById('btnAutoTour');
+            if (isAutoTour) {
+                btn.innerHTML = '<i class="fa-solid fa-pause me-1"></i> Pausa';
+                btn.className = 'btn btn-xs btn-warning text-dark py-0 px-2 ms-1';
+                autoTourInterval = setInterval(() => {
+                    nextEvent();
+                }, 8000); // 8 segundos em cada catástrofe
+            } else {
+                btn.innerHTML = '<i class="fa-solid fa-play me-1"></i> Tour';
+                btn.className = 'btn btn-xs btn-outline-warning py-0 px-2 ms-1';
+                clearInterval(autoTourInterval);
+            }
+        }
+
+        function applyFilter(filterType, btnEl) {
+            activeFilter = filterType;
+            document.querySelectorAll('.filter-bar .nav-btn').forEach(b => b.classList.remove('active'));
+            if (btnEl) btnEl.classList.add('active');
+            renderMarkers();
+        }
+
+        // Atalhos de teclado (Setas Esquerda/Direita)
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') nextEvent();
+            if (e.key === 'ArrowLeft') prevEvent();
+        });
+    </script>
+</body>
+</html>
