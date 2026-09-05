@@ -25,10 +25,11 @@ Para testar a universalidade dessa metodologia, este programa cataloga os **10 m
 
 ---
 
-## 2. Matriz Geral dos 10 Eventos Selecionados (2000–2026)
+### 2. Matriz Geral dos 11 Eventos Selecionados (2000–2026)
 
 | # | Evento / Bacia | País / Região | Data Exata | Tipo Morfogenético | Volume Mobilizado | Danos Estruturais / Impacto |
-| :-: | :--- | :--- | :-: | :--- | :---: | :--- |
+| :-: | :--- | :--- | :---: | :--- | :---: | :--- |
+| **00** | **Catástrofe de 2026** (Lhende Khola / Rio Trishuli) | Nepal / Tibete (Rasuwa) | 26/08/2026 | Convecção Oculta de Crista (Toró) + Colapso Glacial | $20,7\text{ M m}^3$ ($14,2\text{ M m}^3$ líq) | Destruição da UHE Rasuwagadhi ($111\text{ MW}$); 25 pontes; alfândega Miteri. |
 | **01** | **Catástrofe de Chamoli** (Rishiganga–Dhauliganga) | Índia (Uttarakhand) | 07/02/2021 | Avalanche de Rocha-Gelo ($5.600\text{m}$) $\rightarrow$ Torrente de Detritos | $27\text{ M m}^3$ de rocha/gelo | Destruição da UHE Rishiganga e UHE Tapovan ($520\text{ MW}$); >200 mortos. |
 | **02** | **Desastre de Kedarnath** (Rio Mandakini) | Índia (Uttarakhand) | 16-17/06/2013 | Convecção Extrema (Toró) + Ruptura de Moraina (Chorabari) | $>15\text{ M m}^3$ de água/detritos | Vila de Kedarnath varrida; >5.700 mortos; colapso de pontes. |
 | **03** | **Enxurrada do Rio Seti** (Garganta de Pokhara) | Nepal (Kaski) | 05/05/2012 | Queda de Bloco no Annapurna IV ($7.000\text{m}$) $\rightarrow$ Lama Pulverizada | $32\text{ M m}^3$ de rocha-gelo | Vilarejo de Kharapani engolido; 72 mortos; "som de bomba" a 25 km. |
@@ -43,6 +44,20 @@ Para testar a universalidade dessa metodologia, este programa cataloga os **10 m
 ---
 
 ## 3. Detalhamento Individual dos Casos para Investigação Passo a Passo
+
+---
+
+### Caso 00 (Caso Benchmark Mestre): A Catástrofe de 2026 (Lhende Khola / Rio Trishuli) – 26/08/2026
+* **Coordenadas de Origem:** $28,277^\circ\text{N}, 85,485^\circ\text{E}$ (Circo Glacial do Lhende Khola / Langtang Himal, cota $3.950\text{ m} \rightarrow 5.200\text{ m}$).
+* **Coordenadas de Impacto:** $28,2835^\circ\text{N}, 85,3850^\circ\text{E}$ (Deságue no Bhote Koshi) até $28,2361^\circ\text{N}, 85,3585^\circ\text{E}$ (Timure / UHE Rasuwagadhi, cota $1.850\text{ m}$).
+* **O Fato Observado vs. Narrativa Oficial:**
+  * *Narrativa Oficial Inicial:* Noticiado pela imprensa nepalesa como "rompimento súbito de lago glacial (GLOF) na fronteira tibetana".
+  * *Fato Comprovado por Satélite (Sentinel-2 / PlanetScope):* Não existia lago volumétrico prévio (>10M m³). Havia apenas depressão moráinica rasa com capacidade de 1 a 5M m³. O volume escoado de $20,7\text{ M m}^3$ com $14,2\text{ M m}^3$ de água líquida demandou precipitação ultra-concentrada de $>500\text{ mm}$ no circo, enquanto os vales e radares GPM registraram apenas $15\text{–}30\text{ mm}$ (déficit de $17\times$).
+* **Fenomenologia Investigada (Inversão Forense Completa):**
+  * **Hidráulica de Manning:** $Q_{\text{pico}} = 3.376\text{ m}^3/\text{s}$, velocidade de $12,4\text{ m/s}$ e tempo de ascensão de 42 minutos e 50 segundos.
+  * **Acoplamento Espacial:** Flare solar de classe M7.0 em 25/08 às 15:47 NPT defasado em 16h50min; pulso ionosférico $V_I = 356,4\text{ kV}$; anomalia vertical $J_z = 4,57\text{ pA/m}^2$.
+  * **Assinatura Sísmica e Acústica:** Sinal de $4.4\text{ mb}$ às 02:52:10 UTC correspondente ao colapso do bloco glacial a $5.200\text{ m}$, seguido de estrondo sônico prévio de 8 a 12 minutos ouvido pela população antes do impacto do fluxo de lama.
+  * **Danos:** Destruição de 25 pontes, soterramento da UHE Rasuwagadhi ($111\text{ MW}$) e corte da Rodovia da Amizade internacional.
 
 ---
 

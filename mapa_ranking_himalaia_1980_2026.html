@@ -50,7 +50,7 @@
             top: 70px;
             left: 20px;
             z-index: 100;
-            width: 440px;
+            width: 450px;
             max-width: calc(100vw - 40px);
             max-height: calc(100vh - 90px);
             overflow-y: auto;
@@ -75,7 +75,7 @@
             display: flex;
             gap: 6px;
             flex-wrap: wrap;
-            max-width: 600px;
+            max-width: 620px;
             justify-content: flex-end;
         }
         .marker-badge {
@@ -96,6 +96,31 @@
         .marker-badge:hover {
             transform: scale(1.45) translateY(-5px);
             z-index: 1000;
+        }
+        .marker-2026 {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 3px solid #facc15 !important;
+            background: radial-gradient(circle, #ea580c 0%, #b91c1c 100%);
+            color: #fef08a;
+            font-weight: 900;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 0 25px rgba(250, 204, 21, 0.9), 0 0 10px rgba(239, 68, 68, 0.8);
+            animation: pulse-gold 2s infinite;
+        }
+        .marker-2026:hover {
+            transform: scale(1.5) translateY(-6px);
+            z-index: 1000;
+        }
+        @keyframes pulse-gold {
+            0% { box-shadow: 0 0 0 0 rgba(250, 204, 21, 0.8); }
+            70% { box-shadow: 0 0 0 15px rgba(250, 204, 21, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(250, 204, 21, 0); }
         }
         .cat-a { background-color: #ef4444; } /* Vermelho */
         .cat-b { background-color: #ea580c; } /* Laranja */
@@ -154,15 +179,19 @@
             <span class="navbar-brand text-cyan mb-0" style="font-size: 1.05rem;">
                 <i class="fa-solid fa-mountain-sun me-1"></i> AS 15 MAIORES CATÁSTROFES DO HIMALAIA: APRESENTAÇÃO EM MAPAS 3D
             </span>
-            <span class="badge bg-secondary d-none d-lg-inline">46 Anos de Inversão Forense</span>
+            <span class="badge bg-secondary d-none d-xl-inline">46 Anos de Inversão Forense</span>
         </div>
         
         <div class="d-flex align-items-center gap-2">
+            <!-- Botão de Destaque Mestre para a Catástrofe de 2026 -->
+            <button onclick="jumpTo2026()" class="btn btn-sm btn-warning text-dark fw-bold shadow-sm" title="Pular diretamente para o Evento de 26 de Agosto de 2026">
+                <i class="fa-solid fa-star text-danger me-1"></i> Catástrofe de 2026
+            </button>
             <a href="viewer_4d.html" class="btn btn-sm btn-outline-info">
                 <i class="fa-solid fa-circle-left me-1"></i> Painel 2026
             </a>
             <a href="catastrofe_himalaia_1980_2026_ranking.kmz" download="catastrofe_himalaia_1980_2026_ranking.kmz" class="btn btn-sm btn-success text-white fw-bold">
-                <i class="fa-solid fa-download me-1"></i> Baixar KMZ (15 Eventos)
+                <i class="fa-solid fa-download me-1"></i> KMZ (15 Eventos)
             </a>
             <a href="ARTIGO_CIENTIFICO_CATASTROFE_HIMALAIA_2026.md" target="_blank" class="btn btn-sm btn-outline-light">
                 <i class="fa-solid fa-file-lines me-1"></i> Artigo Científico
@@ -180,7 +209,7 @@
     <div class="filter-bar">
         <span class="small text-muted align-self-center me-1" style="font-size: 0.70rem;">FILTRAR:</span>
         <button class="nav-btn active" onclick="applyFilter('all', this)">Todos (15)</button>
-        <button class="nav-btn" onclick="applyFilter('dry', this)">☀️ Sem Chuva / Céu Azul (6)</button>
+        <button class="nav-btn" onclick="applyFilter('dry', this)">☀️ Sem Chuva / Vale Seco (7)</button>
         <button class="nav-btn" onclick="applyFilter('solar', this)">⚡ Flares Solares / Espaço (10)</button>
         <button class="nav-btn text-danger" onclick="applyFilter('catA', this)">🔴 Cat A (Rocha-Gelo)</button>
         <button class="nav-btn text-warning" onclick="applyFilter('catB', this)">🟠 Cat B (Toró)</button>
@@ -190,6 +219,19 @@
 
     <!-- Painel de Apresentação / Dossier do Evento Ativo -->
     <div class="presentation-card custom-scroll" id="presentationCard">
+        
+        <!-- Menu Seletor Direto de Eventos -->
+        <div class="mb-2">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+                <span class="text-muted small fw-bold" style="font-size: 0.68rem; letter-spacing: 0.5px;">SELECIONAR EVENTO DO RANKING:</span>
+                <span class="text-cyan small font-monospace" id="cardCounter" style="font-size: 0.72rem;">1 / 15</span>
+            </div>
+            <select id="eventSelector" class="form-select form-select-sm bg-dark text-cyan border-secondary" style="font-size: 0.78rem; font-weight: 600;" onchange="showEvent(parseInt(this.value))">
+                <!-- Populado dinamicamente no JS -->
+            </select>
+        </div>
+
+        <!-- Controles de Slide Anterior / Próximo / Tour -->
         <div class="d-flex justify-content-between align-items-center mb-2 pb-2 border-bottom border-secondary">
             <div>
                 <span class="badge bg-danger fw-bold me-1" id="cardRank">RANK 1º</span>
@@ -197,16 +239,26 @@
             </div>
             <div class="d-flex gap-1 align-items-center">
                 <button onclick="prevEvent()" class="btn btn-xs btn-outline-secondary py-0 px-2 text-light" title="Evento Anterior">
-                    <i class="fa-solid fa-chevron-left"></i>
+                    <i class="fa-solid fa-chevron-left"></i> Anterior
                 </button>
-                <span class="text-muted small font-monospace" id="cardCounter" style="font-size: 0.72rem;">1 / 15</span>
                 <button onclick="nextEvent()" class="btn btn-xs btn-outline-secondary py-0 px-2 text-light" title="Próximo Evento">
-                    <i class="fa-solid fa-chevron-right"></i>
+                    Próximo <i class="fa-solid fa-chevron-right"></i>
                 </button>
                 <button onclick="toggleAutoTour()" id="btnAutoTour" class="btn btn-xs btn-outline-warning py-0 px-2 ms-1" style="font-size: 0.70rem;">
-                    <i class="fa-solid fa-play me-1"></i> Tour
+                    <i class="fa-solid fa-play me-1"></i> Tour 3D
                 </button>
             </div>
+        </div>
+
+        <!-- Banner Exclusivo quando o Evento de 2026 estiver Ativo -->
+        <div id="banner2026" class="alert alert-warning py-1.5 px-2 mb-2 small fw-bold text-dark d-none align-items-center justify-content-between" style="border: 1px solid #eab308; background: #fef08a;">
+            <div class="d-flex align-items-center gap-1.5">
+                <i class="fa-solid fa-star text-danger fs-6"></i>
+                <span style="font-size: 0.74rem;">ESTUDO DE CASO MESTRE: 26 DE AGOSTO DE 2026</span>
+            </div>
+            <a href="viewer_4d.html" class="badge bg-dark text-warning text-decoration-none py-1 px-2" style="font-size: 0.68rem;">
+                Abrir 4D <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i>
+            </a>
         </div>
 
         <h5 class="fw-bold text-light mb-1" id="cardTitle" style="font-size: 1.05rem;">Carregando...</h5>
@@ -217,13 +269,13 @@
             <div class="col-6">
                 <div class="p-2 rounded bg-dark border border-secondary">
                     <span class="text-muted d-block" style="font-size: 0.65rem;">VOLUME MOBILIZADO</span>
-                    <strong class="text-cyan" id="cardVolume" style="font-size: 0.90rem;">-</strong>
+                    <strong class="text-cyan" id="cardVolume" style="font-size: 0.88rem;">-</strong>
                 </div>
             </div>
             <div class="col-6">
                 <div class="p-2 rounded bg-dark border border-secondary">
                     <span class="text-muted d-block" style="font-size: 0.65rem;">VAZÃO DE PICO (Qpico)</span>
-                    <strong class="text-primary" id="cardDischarge" style="font-size: 0.90rem;">-</strong>
+                    <strong class="text-primary" id="cardDischarge" style="font-size: 0.88rem;">-</strong>
                 </div>
             </div>
         </div>
@@ -324,8 +376,23 @@
             showCompass: true
         }), 'top-right');
 
+        // Inicializar Dropdown de Seleção de Eventos
+        function initEventSelector() {
+            const selectEl = document.getElementById('eventSelector');
+            selectEl.innerHTML = '';
+            eventsData.forEach((ev, idx) => {
+                const opt = document.createElement('option');
+                opt.value = idx;
+                let prefix = ev.rank < 10 ? '0' + ev.rank : ev.rank;
+                let star = ev.id === 'himalaia_2026' ? '⭐ ' : '';
+                opt.innerText = `${star}${prefix}º - ${ev.name} (${ev.country})`;
+                selectEl.appendChild(opt);
+            });
+        }
+
         // 2. Renderizar Marcadores 3D no Mapa
         map.on('load', () => {
+            initEventSelector();
             renderMarkers();
             showEvent(0);
         });
@@ -348,9 +415,15 @@
                 if (!visible) return;
 
                 const el = document.createElement('div');
-                el.className = 'marker-badge cat-' + ev.category.toLowerCase();
-                el.innerText = ev.rank;
-                el.title = 'Rank ' + ev.rank + 'º: ' + ev.name;
+                if (ev.id === 'himalaia_2026') {
+                    el.className = 'marker-2026';
+                    el.innerHTML = '<i class="fa-solid fa-star"></i>';
+                    el.title = '⭐ RANK 3º: Catástrofe de 2026 (Lhende Khola / Rio Trishuli)';
+                } else {
+                    el.className = 'marker-badge cat-' + ev.category.toLowerCase();
+                    el.innerText = ev.rank;
+                    el.title = 'Rank ' + ev.rank + 'º: ' + ev.name;
+                }
 
                 el.addEventListener('click', (e) => {
                     e.stopPropagation();
@@ -369,6 +442,20 @@
         function showEvent(idx) {
             currentIndex = idx;
             const ev = eventsData[idx];
+
+            // Atualiza Seletor Dropdown
+            const selectEl = document.getElementById('eventSelector');
+            if (selectEl) selectEl.value = idx;
+
+            // Banner 2026
+            const b2026 = document.getElementById('banner2026');
+            if (ev.id === 'himalaia_2026') {
+                b2026.classList.remove('d-none');
+                b2026.classList.add('d-flex');
+            } else {
+                b2026.classList.remove('d-flex');
+                b2026.classList.add('d-none');
+            }
 
             document.getElementById('cardRank').innerText = 'RANK ' + ev.rank + 'º';
             document.getElementById('cardCategory').innerText = 'Cat ' + ev.category + ' (' + ev.category_name + ')';
@@ -404,6 +491,14 @@
                 duration: 2500,
                 essential: true
             });
+        }
+
+        // Salto Imediato para a Catástrofe de 2026
+        function jumpTo2026() {
+            const idx2026 = eventsData.findIndex(e => e.id === 'himalaia_2026');
+            if (idx2026 !== -1) {
+                showEvent(idx2026);
+            }
         }
 
         function nextEvent() {
