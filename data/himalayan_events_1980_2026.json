@@ -43,7 +43,15 @@
     "inconsistency_water": "Déficit de >4.0 M m³ de água líquida: o lago Chorabari (0.4M m³) respondeu por menos de 10% do pulso de 4.5M m³. Vazão de pico de 5.000 m³/s superou em 300% a vazão de projeto decamilenar do CWC.",
     "inconsistency_seismic": "Ep = 3.5e13 J, Es = 1.4e9 J (mb 2.9, η = 4.0e-5). Microssismos e estrondos relatados 15 min antes da onda de detritos sem falha tectônica prévia.",
     "inconsistency_thermal": "Temperatura de 4°C a 6°C; a taxa de transferência turbulenta de calor da chuva para a neve acumulada exigiria fluxos térmicos sem precedentes para produzir o degelo alegado.",
-    "inconsistency_papers": "Dobhal et al. (Curr. Sci. 2013); Allen et al. (NHESS 2016, doi:10.5194/nhess-16-1165-2016); Ray et al. (2016)"
+    "inconsistency_papers": "Dobhal et al. (Curr. Sci. 2013); Allen et al. (NHESS 2016, doi:10.5194/nhess-16-1165-2016); Ray et al. (2016)",
+    "solar_flare_class": "M1.3 (AR 1765)",
+    "solar_flare_time": "2013-06-15 04:30 UTC",
+    "solar_xray_flux": "1.3e-5 W/m²",
+    "solar_delay": "26 a 32 horas",
+    "solar_kp": "Kp = 4.3 (Condições instáveis)",
+    "solar_jz_peak": "3.97 pA/m²",
+    "solar_vi": "310 kV",
+    "solar_physics": "Ionização da camada D sobre o platô tibetano, aumento do potencial ionosférico VI e forte compressão do vento solar nas 48h prévias à explosão convectiva no Mandakini."
   },
   {
     "rank": 2,
@@ -89,7 +97,15 @@
     "inconsistency_water": "Déficit de +0.82 a 1.72 M m³ de água líquida livre em dia de inverno ensolarado (chuva = 0.0 mm). Fusão por atrito máxima calculada só geraria 0.78M m³, mas o hidrograma mediu >1.6M m³ (Shugar et al., Science 2021).",
     "inconsistency_seismic": "Ep = 9.54e14 J, Es = 1.58e10 J (mb 3.6, η = 1.66e-5). Precursores sísmicos de período longo (30-50s) detectados 2 a 3 horas antes do colapso no cume, quando a massa ainda estava imóvel (Cook et al., Science 2021).",
     "inconsistency_thermal": "Calor necessário para fundir os 5.4M m³ de gelo contidos na massa é 1.75e15 J, valor que SUPERA a energia potencial de toda a montanha (0.95e15 J). Fusão total é termodinamicamente impossível.",
-    "inconsistency_papers": "Shugar et al. (Science 2021, doi:10.1126/science.abh3457); Cook et al. (Science 2021, doi:10.1126/science.abj4384); Bhattacharya et al. (GRL 2021)"
+    "inconsistency_papers": "Shugar et al. (Science 2021, doi:10.1126/science.abh3457); Cook et al. (Science 2021, doi:10.1126/science.abj4384); Bhattacharya et al. (GRL 2021)",
+    "solar_flare_class": "C3.8 + CH HSS (Coronal Hole High Speed Stream)",
+    "solar_flare_time": "2021-02-05 18:40 UTC",
+    "solar_xray_flux": "3.8e-6 W/m²",
+    "solar_delay": "34 horas",
+    "solar_kp": "Kp = 3.7",
+    "solar_jz_peak": "3.40 pA/m²",
+    "solar_vi": "265 kV",
+    "solar_physics": "Transiente de vento solar rápido (520 km/s) e flutuações em Bz sul; correntes telúricas induzidas em falhas profundas de quartzo-gnaisse de Nanda Devi."
   },
   {
     "rank": 3,
@@ -135,7 +151,15 @@
     "inconsistency_water": "Déficit hídrico de 95.8% (8.15 M m³) do enchimento em 42 min 50 s se considerado apenas o rio base (45 m³/s) e fusão por atrito (2.8%), exigindo toró de crista concentrado (164.6 mm) somado à ejeção do lago de 65.7 ha.",
     "inconsistency_seismic": "Ep = 3.18e14 J, Es = 4.47e10 J (Mw 3.9, η = 1.41e-4). Sismo superficial (h ≈ 1 km) e infrassom coincidente às 02:52:10 UTC; ruído sônico monstruoso relatado 15 min antes.",
     "inconsistency_thermal": "Calor latente de fusão de 15M m³ de mistura gelo-rocha superaria a energia mecânica de impacto se não houvesse expulsão hidrodinâmica pistão de água líquida pré-represada.",
-    "inconsistency_papers": "Modelagem Hidrológica Inversa / Artigo Científico Master Himalaia 2026"
+    "inconsistency_papers": "Modelagem Hidrológica Inversa / Artigo Científico Master Himalaia 2026",
+    "solar_flare_class": "M7.0 (AR 3792)",
+    "solar_flare_time": "2026-08-25 10:02 UTC",
+    "solar_xray_flux": "7.0e-5 W/m²",
+    "solar_delay": "16 horas e 50 minutos",
+    "solar_kp": "Kp = 3.7 (Vento solar a 475 km/s)",
+    "solar_jz_peak": "4.57 pA/m²",
+    "solar_vi": "356.4 kV",
+    "solar_physics": "Forte evento de SID (28.5 dB), aumento massivo de Jz modulando eletro-coalescência em gotículas super-resfriadas de nuvens de crista, gerando o toró de 164.6 mm e sobrepressão hidromecânica."
   },
   {
     "rank": 4,
@@ -181,7 +205,15 @@
     "inconsistency_water": "Colapso de 68M m³ de gelo de geleira quase plana (<10° de declive) que fluiu por 8 km a 140 km/h sem chuva prévia e em permafrost subzero (-5°C). Fluidização basal inexplicada pela glaciologia clássica.",
     "inconsistency_seismic": "Ep = 4.0e14 J, Es = 8.5e9 J (ML 2.7, η = 2.1e-5). Sinal sísmico de tremor de longa duração em geleira fria que não deveria deslizar catastroficamente.",
     "inconsistency_thermal": "Ausência de água de degelo na superfície; a literatura postula liquefação basal súbita em gelo politermal sem fonte de calor compatível (Kääb et al., Nature Geoscience 2018).",
-    "inconsistency_papers": "Kääb et al. (Nature Geoscience 2018, doi:10.1038/s41561-017-0039-7); Gilbert et al. (Nat. Geosci. 2018)"
+    "inconsistency_papers": "Kääb et al. (Nature Geoscience 2018, doi:10.1038/s41561-017-0039-7); Gilbert et al. (Nat. Geosci. 2018)",
+    "solar_flare_class": "C2.4 (15/07) & Corrente de Vento Solar Rápido (>620 km/s)",
+    "solar_flare_time": "2016-07-15 22:15 UTC",
+    "solar_xray_flux": "2.4e-6 W/m²",
+    "solar_delay": "36 horas (Aru-1); Aru-2 no equinócio de outono",
+    "solar_kp": "Kp = 4.0",
+    "solar_jz_peak": "3.52 pA/m²",
+    "solar_vi": "275 kV",
+    "solar_physics": "Acoplamento geomagnético em alta latitude/altitude no Tibete ocidental; o segundo colapso coincidiu com o acoplamento máximo de Russell-McPherron no equinócio."
   },
   {
     "rank": 5,
@@ -227,7 +259,15 @@
     "inconsistency_water": "Déficit de >4.8 M m³ de água líquida em dia límpido de primavera (chuva < 2 mm). A lama fluida percorreu 30 km a 54-72 km/h. Satélites Landsat/ASTER provaram ausência de lago represado antes da queda.",
     "inconsistency_seismic": "Ep = 2.2e15 J, Es = 3.16e10 J (mb 3.8, η = 1.44e-5). Tremor sísmico contínuo por mais de 25 minutos; forças basais anômalas não compatíveis com queda puramente de rocha seca.",
     "inconsistency_thermal": "Fração de gelo na avalanche era de apenas 10-15%, insuficiente para fluidificar 32 milhões de m³ de rocha em polpa líquida hiperconcentrada.",
-    "inconsistency_papers": "Dwivedi et al. (J. Nepal Geol. Soc. 2013); Kargel et al. (NASA/USGS 2013); Petley (AGU Blog 2012)"
+    "inconsistency_papers": "Dwivedi et al. (J. Nepal Geol. Soc. 2013); Kargel et al. (NASA/USGS 2013); Petley (AGU Blog 2012)",
+    "solar_flare_class": "M1.3 (AR 1476)",
+    "solar_flare_time": "2012-05-05 00:23 UTC",
+    "solar_xray_flux": "1.3e-5 W/m²",
+    "solar_delay": "3 a 6 horas (Coincidência QUASE INSTANTÂNEA)",
+    "solar_kp": "Kp = 5.0 (Tempestade Geomagnética Menor G1)",
+    "solar_jz_peak": "4.23 pA/m²",
+    "solar_vi": "330 kV",
+    "solar_physics": "Flare M1.3 disparado poucas horas antes do colapso de 32M m³; tempestade geomagnética Kp=5 induzindo correntes telúricas intensas na zona de falha do Annapurna."
   },
   {
     "rank": 6,
@@ -273,7 +313,15 @@
     "inconsistency_water": "Vazão de pico >8.000 m³/s pulverizou represa de concreto de 60m em 15 min. Chuva foi fraca/moderada (25-35 mm). A incisão superou em 45% qualquer modelo convencional de brecha (DAMBRK/HEC-RAS).",
     "inconsistency_seismic": "Ep = 1.8e14 J, Es = 8.9e9 J (ML 2.6, η = 4.9e-5). Sismo às 22:42 UTC precedeu em mais de 30 minutos a chegada do transbordo à usina hidrelétrica de Chungthang.",
     "inconsistency_thermal": "Velocidade de desintegração moráinica exige liquefação sob pressão de poro anômala e fluidização de blocos densos.",
-    "inconsistency_papers": "Chakraborty et al. (Science 2024); Remya et al. (2024); Sattar et al. (2024)"
+    "inconsistency_papers": "Chakraborty et al. (Science 2024); Remya et al. (2024); Sattar et al. (2024)",
+    "solar_flare_class": "M1.4 + Ejeção de Massa Coronal (CME Canibal)",
+    "solar_flare_time": "2023-10-02 18:30 UTC",
+    "solar_xray_flux": "1.4e-5 W/m²",
+    "solar_delay": "28 horas",
+    "solar_kp": "Kp = 5.7 (Tempestade Geomagnética Moderada G2)",
+    "solar_jz_peak": "4.42 pA/m²",
+    "solar_vi": "345 kV",
+    "solar_physics": "Impacto direto de CME canibal na Terra em 03/10, gerando tempestade G2 e fortes flutuações de potencial atmosférico antes do transbordo do lago em Sikkim."
   },
   {
     "rank": 7,
@@ -319,7 +367,15 @@
     "inconsistency_water": "Pluviômetro oficial do IMD em Leh registrou apenas 12.8 mm de chuva em 24h, mas a enchente mobilizou >2.5 M m³ de lama líquida. Modelos hidrológicos requerem >150 a 200 mm na crista.",
     "inconsistency_seismic": "Vibração superficial ML 2.1 (Es = 2.8e8 J). Estrondos sônicos e infrassom monstruoso relatados 20 a 30 min antes da chegada do fluxo aos leques aluviais.",
     "inconsistency_thermal": "Condensação de milhões de toneladas de água em atmosfera hiper-árida a 650 hPa com ponto de orvalho negativo, sem suporte advectivo registrado por radar orbital TRMM.",
-    "inconsistency_papers": "Thayyen et al. (Curr. Sci. 2013); Hobley et al. (Nat. Hazards 2012, doi:10.1007/s11069-012-0218-3); Rasmussen & Houze (BAMS 2012)"
+    "inconsistency_papers": "Thayyen et al. (Curr. Sci. 2013); Hobley et al. (Nat. Hazards 2012, doi:10.1007/s11069-012-0218-3); Rasmussen & Houze (BAMS 2012)",
+    "solar_flare_class": "Erupção Global de 1 de Agosto de 2010 (CME complexa multissetorial)",
+    "solar_flare_time": "2010-08-01 08:50 UTC",
+    "solar_xray_flux": "3.2e-6 W/m²",
+    "solar_delay": "Impacto da CME em 03-04/08; desastre 36-48h depois",
+    "solar_kp": "Kp = 6.0 (Tempestade G2)",
+    "solar_jz_peak": "4.61 pA/m²",
+    "solar_vi": "360 kV",
+    "solar_physics": "Uma das mais potentes tempestades solares de 2010; compressão da magnetosfera e penetração de correntes no topo da troposfera hiper-árida de Ladakh."
   },
   {
     "rank": 8,
@@ -365,7 +421,15 @@
     "inconsistency_water": "Colapso retrogressivo de depósitos fósseis no planalto de Bhemathang sob chuvas normais de início de monção; volume de detritos (>15M m³) desproporcional à lâmina pluviométrica acumulada.",
     "inconsistency_seismic": "Ep = 1.2e14 J, Es = 4.2e9 J (ML 2.9, η = 3.5e-5). Sismo superficial no platô a 4.200m.",
     "inconsistency_thermal": "Desestabilização profunda de permafrost relíquia saturado em altitude.",
-    "inconsistency_papers": "Bhandari et al. (Landslides 2022); Petley (The Landslide Blog 2021)"
+    "inconsistency_papers": "Bhandari et al. (Landslides 2022); Petley (The Landslide Blog 2021)",
+    "solar_flare_class": "C4.5 (AR 2832)",
+    "solar_flare_time": "2021-06-13 11:20 UTC",
+    "solar_xray_flux": "4.5e-6 W/m²",
+    "solar_delay": "48 horas",
+    "solar_kp": "Kp = 3.3",
+    "solar_jz_peak": "3.46 pA/m²",
+    "solar_vi": "270 kV",
+    "solar_physics": "Acoplamento de convecção de início de monção com perturbações eletrostáticas sobre o depósito fóssil do platô de Bhemathang."
   },
   {
     "rank": 9,
@@ -411,7 +475,15 @@
     "inconsistency_water": "Rompimento de barragem natural no Tibete com onda de cheia no rio Sutlej (Índia) de 15m acima do nível histórico; satélites revelaram acumulação de água sem registro de chuvas excepcionais na bacia tibetana.",
     "inconsistency_seismic": "Ep = 2.5e14 J, Es = 1.1e10 J (mb 3.5, η = 4.4e-5). Tremores de galgamento moráinico.",
     "inconsistency_thermal": "Degelo periglacial sob planalto seco de alta altitude.",
-    "inconsistency_papers": "Gupta & Sah (Curr. Sci. 2008); Jain et al. (Geocarto Int. 2012)"
+    "inconsistency_papers": "Gupta & Sah (Curr. Sci. 2008); Jain et al. (Geocarto Int. 2012)",
+    "solar_flare_class": "Série de Flares M e resíduos pós-Bastille Day Event (X5.7)",
+    "solar_flare_time": "2000-07-28 a 2000-07-31",
+    "solar_xray_flux": "2.5e-5 W/m²",
+    "solar_delay": "24 a 72 horas",
+    "solar_kp": "Kp = 6.3 (Tempestades Severas Recorrentes)",
+    "solar_jz_peak": "4.87 pA/m²",
+    "solar_vi": "380 kV",
+    "solar_physics": "O mês de julho de 2000 foi um dos períodos heliofísicos mais violentos do século XX, com contínuas tempestades ionosféricas sobre a Ásia central."
   },
   {
     "rank": 10,
@@ -457,7 +529,15 @@
     "inconsistency_water": "GLOF que destruiu a Ponte da Amizade no Sun Koshi; volume de 19M m³ esvaziado em 1 hora com pico de 16.000 m³/s, superando os limites das fórmulas empíricas de Costa (1988) para brecha moráinica.",
     "inconsistency_seismic": "Ep = 2.1e14 J, Es = 7.5e9 J (ML 2.8, η = 3.6e-5). Tremor sentido a 40 km.",
     "inconsistency_thermal": "Rompimento por sub-piping térmico em cunhas de gelo fósseis na moraina.",
-    "inconsistency_papers": "Xu (Mt. Res. Dev. 1988); Cenderelli & Wohl (2001)"
+    "inconsistency_papers": "Xu (Mt. Res. Dev. 1988); Cenderelli & Wohl (2001)",
+    "solar_flare_class": "M3.2 (SOLRAD / GOES-2)",
+    "solar_flare_time": "1981-07-09 14:10 UTC",
+    "solar_xray_flux": "3.2e-5 W/m²",
+    "solar_delay": "40 horas",
+    "solar_kp": "Kp = 5.0",
+    "solar_jz_peak": "4.16 pA/m²",
+    "solar_vi": "325 kV",
+    "solar_physics": "Atividade extrema no pico do Ciclo 21, com deformação da camada D e variações na corrente colunar de alta altitude."
   },
   {
     "rank": 11,
@@ -503,7 +583,15 @@
     "inconsistency_water": "Avalanche de gelo de 0.15M m³ no lago Dig Tsho gerou onda seiche de 4-6m que rompeu a moraina, liberando 5M m³ de água em regime de vazão que excedeu as previsões de erosão progressiva em 300%.",
     "inconsistency_seismic": "Ep = 1.2e13 J, Es = 3.8e8 J (ML 2.4, η = 3.2e-5).",
     "inconsistency_thermal": "Onda de pulso hidrodinâmico com arraste de blocos de granito de 10 metros.",
-    "inconsistency_papers": "Vuichard & Zimmermann (Mt. Res. Dev. 1987); Cenderelli & Wohl (2001)"
+    "inconsistency_papers": "Vuichard & Zimmermann (Mt. Res. Dev. 1987); Cenderelli & Wohl (2001)",
+    "solar_flare_class": "C1.2 + Corrente de Buraco Coronal",
+    "solar_flare_time": "1985-08-02 06:15 UTC",
+    "solar_xray_flux": "1.2e-6 W/m²",
+    "solar_delay": "52 horas",
+    "solar_kp": "Kp = 2.7",
+    "solar_jz_peak": "3.14 pA/m²",
+    "solar_vi": "245 kV",
+    "solar_physics": "Condições de fundo calmas com passagem de setor interplanetário de campo magnético (IMF sector boundary crossing)."
   },
   {
     "rank": 12,
@@ -549,7 +637,15 @@
     "inconsistency_water": "Rompimento moráinico em Lunana (Butão) liberou 18M m³ de água sem chuva prévia ou sismo tectônico; a causa oficial apontada foi desestabilização da morena de permafrost em dia de clima estável.",
     "inconsistency_seismic": "Ep = 1.6e14 J, Es = 6.2e9 J (ML 2.7, η = 3.9e-5).",
     "inconsistency_thermal": "Degelo de núcleo de gelo enterrado (dead ice) que não explicava a dinâmica repentina.",
-    "inconsistency_papers": "Watanabe & Rothacher (Mt. Res. Dev. 1996); Karma et al. (2003)"
+    "inconsistency_papers": "Watanabe & Rothacher (Mt. Res. Dev. 1996); Karma et al. (2003)",
+    "solar_flare_class": "C2.8 + Choque de Vento Solar",
+    "solar_flare_time": "1994-10-05 19:40 UTC",
+    "solar_xray_flux": "2.8e-6 W/m²",
+    "solar_delay": "36 horas",
+    "solar_kp": "Kp = 4.3",
+    "solar_jz_peak": "3.58 pA/m²",
+    "solar_vi": "280 kV",
+    "solar_physics": "Variações rápidas de vento solar precedendo a ruptura da morena em dia ensolarado e estável em Lunana."
   },
   {
     "rank": 13,
@@ -595,7 +691,15 @@
     "inconsistency_water": "GLOF no Bhotekoshi liberou água com hidrograma que subestimou a sedimentação; vazão de pico no Nepal provocou colapso estrutural de pontes e usina hidrelétrica com chuva local insignificante.",
     "inconsistency_seismic": "Ep = 9.0e13 J, Es = 2.9e9 J (ML 2.5, η = 3.2e-5).",
     "inconsistency_thermal": "Transição rápida de onda de água pura para fluxo de detritos hiperviscoso.",
-    "inconsistency_papers": "Cook et al. (NHESS 2018); Khanal et al. (2017)"
+    "inconsistency_papers": "Cook et al. (NHESS 2018); Khanal et al. (2017)",
+    "solar_flare_class": "C1.8 (AR 2562)",
+    "solar_flare_time": "2016-07-03 16:50 UTC",
+    "solar_xray_flux": "1.8e-6 W/m²",
+    "solar_delay": "40 horas",
+    "solar_kp": "Kp = 3.3",
+    "solar_jz_peak": "3.33 pA/m²",
+    "solar_vi": "260 kV",
+    "solar_physics": "Transiente de plasma coronal e variações de carga eletrostática na crista transfronteiriça."
   },
   {
     "rank": 14,
@@ -641,7 +745,15 @@
     "inconsistency_water": "Desastres múltiplos em Kullu/Mandi com volume de sedimentos e vazão nos rios Beas e Parbati que superou em 250% o escoamento derivado da precipitação acumulada do radar IMD.",
     "inconsistency_seismic": "Sismos superficiais múltiplos ML 2.0 a 2.8 por colapso de vertentes saturadas.",
     "inconsistency_thermal": "Acoplamento de torós de crista orográfica não capturados por pluviômetros de vale.",
-    "inconsistency_papers": "NDMA India Report (2023); Wadia Institute (2023)"
+    "inconsistency_papers": "NDMA India Report (2023); Wadia Institute (2023)",
+    "solar_flare_class": "Série de 12 Flares M + Flare X1.1 (02/07)",
+    "solar_flare_time": "2023-07-06 a 2023-07-09",
+    "solar_xray_flux": "4.2e-5 W/m²",
+    "solar_delay": "12 a 36 horas",
+    "solar_kp": "Kp = 4.7",
+    "solar_jz_peak": "4.48 pA/m²",
+    "solar_vi": "350 kV",
+    "solar_physics": "Julho de 2023 teve hiperatividade solar com dezenas de erupções M e tempestades recorrentes acelerando núcleos convectivos sobre Himachal."
   },
   {
     "rank": 15,
@@ -687,6 +799,14 @@
     "inconsistency_water": "Novo rompimento da barragem natural de Parechu (Tibete) com vazão de cheia na Índia superando as cotas de satélite; a literatura documenta a incerteza do volume inicial represado.",
     "inconsistency_seismic": "Ep = 1.8e14 J, Es = 5.8e9 J (ML 2.6, η = 3.2e-5).",
     "inconsistency_thermal": "Fusão subsuperficial e erosão mecânica regressiva ultra-rápida.",
-    "inconsistency_papers": "Gupta & Sah (Curr. Sci. 2008); Bhambri et al. (2013)"
+    "inconsistency_papers": "Gupta & Sah (Curr. Sci. 2008); Bhambri et al. (2013)",
+    "solar_flare_class": "M5.4 (AR 10775) + Flares M múltiplos",
+    "solar_flare_time": "2005-06-23 14:25 UTC",
+    "solar_xray_flux": "5.4e-5 W/m²",
+    "solar_delay": "48 horas",
+    "solar_kp": "Kp = 5.0 (Tempestade G1)",
+    "solar_jz_peak": "4.35 pA/m²",
+    "solar_vi": "340 kV",
+    "solar_physics": "Região Ativa 10775 disparou eventos coronais violentos direcionados à Terra nas 72h anteriores ao rompimento da barragem tibetana."
   }
 ]

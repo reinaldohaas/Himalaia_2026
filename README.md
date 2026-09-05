@@ -41,6 +41,8 @@ Access all interactive tools online with zero installation:
   *Navegação forense interativa em 3D, epicentros de ruptura no cume (h ≈ 0 km), intensidade MMI, sons, cheiros/gases, faíscas de atrito e inconsistências físicas documentadas na literatura.*
 * **📑 Monografia de Revisão Bibliográfica de Inconsistências:** [`REVISAO_BIBLIOGRAFICA_INCONSISTENCIAS_HIMALAIA.md`](REVISAO_BIBLIOGRAFICA_INCONSISTENCIAS_HIMALAIA.md)  
   *Compilação rigorosa do Paradoxo do Déficit Hídrico (Fluência >> Chuva + Fusão) e Discrepância Cinético-Sísmica com dados de periódicos peer-reviewed (Science, Nature, GRL, NHESS).*
+* **☀️ Estudo de Clima Espacial (Raios X Solar & Jz):** [`ESTUDO_CORRELACAO_SOLAR_RAIOS_X_JZ_HIMALAIA.md`](ESTUDO_CORRELACAO_SOLAR_RAIOS_X_JZ_HIMALAIA.md)  
+  *Levantamento de picos de raios X (GOES), erupções Classe M/X, índice Kp e densidade de corrente Jz nas 12h a 72h anteriores a cada um dos 15 eventos históricos.*
 * **📥 KMZ Completo do Ranking (Google Earth Pro):** [`catastrofe_himalaia_1980_2026_ranking.kmz`](catastrofe_himalaia_1980_2026_ranking.kmz)
 * **📊 Master Infographic & Data Portal:** [https://reinaldohaas.github.io/Himalaia_2026/](https://reinaldohaas.github.io/Himalaia_2026/) *(or index.html)*
 * **🗺️ GIS Infrastructure Damage Map (33 Bridges):** [https://reinaldohaas.github.io/Himalaia_2026/nepal_tibet_disaster_map.html](https://reinaldohaas.github.io/Himalaia_2026/nepal_tibet_disaster_map.html)
