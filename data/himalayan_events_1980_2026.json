@@ -71,7 +71,7 @@
     "lightning_20km_upward": 88,
     "lightning_20km_peak_kA": "+185 kA (+CG nas cristas de Kedarnath Peak)",
     "lightning_20km_notes": "Na janela ampliada de 45 horas desde o flare M1.3, o raio de 20 km acumulou 2.640 descargas ao longo de todo o cânion do Mandakini, com 88 descargas ascendentes de crista e alta proporção de super-raios +CG.",
-    "audio_narration": "Evento 1: Catástrofe de Kedarnath. A contradição física central reside no enorme déficit de água líquida: o lago Chorabari comportava menos de 400 mil metros cúbicos, mas a onda destrutiva mobilizou mais de 4,5 milhões de metros cúbicos, superando em 300% a vazão decamilenar de projeto. Sobreviventes relataram um estrondo ensurdecedor como cem turbinas de avião e microssismos superficiais de magnitude 2.0 minutos antes da quebra da morena. No raio de 20 km da bacia, sensores registraram 2.640 descargas elétricas na janela de 45 horas após o flare solar M1.3, com super-raios de até mais 185 quiloampères concentrados nas cristas de granito."
+    "audio_narration": "Evento 1: Catástrofe de Kedarnath. No âmbito sísmico, registrou-se um sismo superficial de magnitude 2.0 com intensidade Mercalli 5 e profundidade zero quilômetros, decorrente de microssismos de descompressão e ruptura moráinica ouvidos de cinco a oito minutos antes da torrente. A contradição física mestre é o déficit hídrico: o lago Chorabari continha apenas 400 mil metros cúbicos de água, mas a onda de lama mobilizou mais de 4,5 milhões de metros cúbicos, com vazão de pico de 5.000 metros cúbicos por segundo, superando em 300% a vazão de projeto decamilenar. No domínio eletrodinâmico de 20 quilômetros, sensores registraram 2.640 descargas elétricas após o flare solar M1.3, com super-raios positivos de até mais 185 quiloampères concentrados nas agulhas de granito do cume."
   },
   {
     "rank": 2,
@@ -145,7 +145,7 @@
     "lightning_20km_upward": 0,
     "lightning_20km_peak_kA": "N/A (Atmosfera livre de nuvens convectivas)",
     "lightning_20km_notes": "Mesmo ampliando para 20 km e 34 horas desde a perturbação solar, houve ZERO descargas meteorológicas. Confirma que o colapso foi puramente mecânico/telúrico com triboluminescência de quartzo.",
-    "audio_narration": "Evento 2: Catástrofe de Chamoli. Uma das maiores anomalias físicas já documentadas na revista Science. Em pleno inverno rigoroso, sob céu perfeitamente azul e absolutamente zero de chuva, 27 milhões de metros cúbicos de rocha e gelo despencaram do Ronti Peak, gerando mais de 1,6 milhão de metros cúbicos de lama líquida fluida. O atrito mecânico é fisicamente insuficiente para fundir essa quantidade de gelo, pois o calor latente exigiria mais energia do que toda a energia gravitacional da montanha. Além disso, precursores sísmicos de período longo foram detectados horas antes do cume se mover, acompanhados de zero descargas meteorológicas e emissões puramente piezoelétricas de quartzo."
+    "audio_narration": "Evento 2: Catástrofe de Chamoli. O sinal sísmico foi um sismo superficial de magnitude 2.2 e intensidade Mercalli 6, com profundidade zero quilômetros no Ronti Peak, gerando ondas Rayleigh de 35 segundos sentidas a mais de 30 quilômetros. Cientistas da revista Science documentaram precursores sísmicos de período longo duas a três horas antes da quebra, quando o maciço ainda estava imóvel. A contradição física é histórica: sob dia ensolarado de inverno e rigorosamente zero chuva, a avalanche gerou mais de 1,6 milhão de metros cúbicos de água líquida. O calor latente para fundir esse gelo superaria a energia gravitacional de toda a montanha. Na atmosfera, registraram-se zero descargas meteorológicas, confirmando que a atividade elétrica observada foi puramente piezoelétrica e triboluminescente do quartzo triturado."
   },
   {
     "rank": 3,
@@ -219,7 +219,7 @@
     "lightning_20km_upward": 64,
     "lightning_20km_peak_kA": "+210 kA (Crista norte do Langtang Lirung)",
     "lightning_20km_notes": "Na janela de 17h33min entre o flare M7.0 e a quebra da represa, o raio de 20 km registrou 1.460 flashes com 64 descargas ascendentes a partir das cristas de fronteira Nepal-Tibete.",
-    "audio_narration": "Evento 3: Catástrofe de 2026 em Lhende Khola. A modelagem hidrológica inversa comprova um déficit hídrico estarrecedor de 95,8% no enchimento da represa temporária em menos de 43 minutos, sob vale seco no amanhecer. O evento foi precedido por um sismo superficial de 4.4 de magnitude no Langtang Lirung e infrassom apavorante audível 12 minutos antes da lama chegar. Na janela de 17 horas após o flare solar M7.0, foram computadas 1.460 descargas elétricas no raio de 20 km com um super-raio de mais 210 quiloampères na crista minutos antes do colapso, impulsionado por um salto na corrente vertical Jz de 4,57 picoampères por metro quadrado."
+    "audio_narration": "Evento 3: Catástrofe de 2026 em Lhende Khola. O evento foi disparado por um sismo superficial de magnitude 4.4 mb com hipocentro a apenas 1 quilômetro na parede norte do Langtang Lirung e intensidade Mercalli 6, gravado às 02 horas e 52 minutos. Moradores relataram um rugido de infrassom monstruoso 12 minutos antes da chegada da onda de lama de 15 metros. A contradição física comprovada pela modelagem inversa revela um déficit de água de 95,8%, com 8,15 milhões de metros cúbicos inexplicados pela vazão basal em uma manhã de vale seco. No raio de 20 quilômetros da bacia, computaram-se 1.460 descargas elétricas na esteira do flare solar M7.0, culminando em um super-raio de mais 210 quiloampères na crista minutos antes do descolamento da montanha, sob um salto na corrente vertical Jz de 4,57 picoampères por metro quadrado."
   },
   {
     "rank": 4,
@@ -293,7 +293,7 @@
     "lightning_20km_upward": 3,
     "lightning_20km_peak_kA": "-45 kA",
     "lightning_20km_notes": "Atividade convectiva muito reduzida no planalto tibetano árido (38 descargas a 20 km); prevalência de acoplamento geomagnético e correntes telúricas basais.",
-    "audio_narration": "Evento 4: Colapso Duplo das Geleiras de Aru. No deserto frio do Tibete ocidental, duas geleiras gigantes em declive suave de menos de 10 graus deslizaram a 140 km/h sobre a estepe congelada sem chuva alguma. A glaciologia clássica não explica a fluidização basal em permafrost subzero a menos 5 graus Celsius. O sismo de deslizamento basal superficial foi acompanhado por um vendaval sísmico de baixa frequência e acoplamento com vento solar veloz de 620 km/s."
+    "audio_narration": "Evento 4: Colapso das Geleiras de Aru. O sinal sísmico registrou um tremor de deslizamento basal superficial de magnitude 2.3 com intensidade Mercalli 4 e profundidade zero quilômetros, sem ondas P tectônicas profundas. A contradição glaciológica é total: no planalto desértico do Tibete, com menos de 150 milímetros de chuva por ano, duas geleiras quase planas com declive menor que 10 graus despencaram a 140 quilômetros por hora sobre a estepe congelada em permafrost subzero de menos 5 graus Celsius. A atividade elétrica meteorológica foi quase nula, com apenas 38 descargas a 20 quilômetros e corrente máxima de menos 45 quiloampères, mas com forte acoplamento a um vento solar veloz superior a 620 quilômetros por segundo."
   },
   {
     "rank": 5,
@@ -367,7 +367,7 @@
     "lightning_20km_upward": 0,
     "lightning_20km_peak_kA": "Pulsos de rádio RF e triboluminescência",
     "lightning_20km_notes": "Nas 3h15min entre o flare M1.3 e o colapso, houve apenas 8 pulsos IC periféricos fracos nas bordas do Annapurna em 20 km; zero descargas nuvem-solo.",
-    "audio_narration": "Evento 5: Enxurrada do Rio Seti. Manhã ensolarada de primavera sem chuvas em Pokhara. 32 milhões de metros cúbicos caíram 3.000 metros em queda livre do Annapurna IV, gerando um som comparado a uma bomba atômica e um sismo superficial que durou 70 minutos. Satélites provaram a inexistência de lago represado antes da queda, revelando um déficit inexplicado de quase 5 milhões de metros cúbicos de água líquida livre."
+    "audio_narration": "Evento 5: Enxurrada do Rio Seti. Registrou-se um sismo superficial de impacto mecânico de magnitude 2.7 com intensidade Mercalli 6, que manteve a estação Dansing vibrando por 70 minutos contínuos após 32 milhões de metros cúbicos despencarem 3.000 metros do Annapurna IV. Sobreviventes relataram um estrondo ensurdecedor semelhante a uma bomba atômica ouvido a 25 quilômetros. A contradição física: manhã ensolarada de primavera sem chuva, e imagens de satélite Landsat provaram que não havia nenhum lago represado antes do desastre, deixando um déficit inexplicado de quase 5 milhões de metros cúbicos de lama líquida fluida. Houve apenas 8 pulsos elétricos periféricos e intensas faíscas triboelétricas em quartzo."
   },
   {
     "rank": 6,
@@ -441,7 +441,7 @@
     "lightning_20km_upward": 38,
     "lightning_20km_peak_kA": "+165 kA (Morenas glaciais a 5.200m)",
     "lightning_20km_notes": "Em 28 horas desde o flare M1.4 e chegada da CME, o raio de 20 km capturou 720 flashes ao redor de South Lhonak, geleira Zemu e cristas de Sikkim.",
-    "audio_narration": "Evento 6: Rompimento do South Lhonak. Ruptura moráinica com pico de vazão superior a 8.000 metros cúbicos por segundo pulverizando uma barragem de concreto de 60 metros em 15 minutos, sob chuva fraca de apenas 25 milímetros. O sismo superficial de colapso moráinico às 22:42 precedeu em mais de 30 minutos a chegada do transbordo à usina Teesta III. Houve forte acoplamento com uma ejeção de massa coronal solar canibal e 720 descargas a 20 km."
+    "audio_narration": "Evento 6: Rompimento do South Lhonak e Teesta 3. Sismo superficial de magnitude 2.1 e intensidade Mercalli 5 com profundidade zero quilômetros às 22 horas e 42 minutos, gerado pela ruptura da morena frontal e choque contra a barragem Teesta 3. A contradição hidrológica: sob chuva fraca de apenas 25 milímetros, a vazão de pico superou 8.000 metros cúbicos por segundo, pulverizando uma represa de concreto de 60 metros em 15 minutos, excedendo em 45% qualquer modelo convencional de brecha. Na bacia de 20 quilômetros, computaram-se 720 descargas elétricas com super-raio de mais 165 quiloampères nas morenas, sob impacto de uma ejeção de massa coronal solar canibal."
   },
   {
     "rank": 7,
@@ -515,7 +515,7 @@
     "lightning_20km_upward": 45,
     "lightning_20km_peak_kA": "+190 kA (Cristas de Khardung La)",
     "lightning_20km_notes": "Na janela de 48h desde o impacto da CME, o raio de 20 km de Leh registrou 980 descargas, com excepcional concentração de descargas positivas (+CG) nos leques aluviais e cristas áridas.",
-    "audio_narration": "Evento 7: Nuvem Pistão de Leh Ladakh. O pluviômetro oficial do IMD marcou apenas 12,8 milímetros de chuva em 24 horas no deserto de altitude, enquanto a enxurrada aluvial de lama líquida exigia mais de 150 a 200 milímetros. Tremores sísmicos superficiais mecânicos e estrondos sônicos antecederam o fluxo em 30 minutos, acompanhados por 980 descargas atmosféricas secas após uma tempestade solar severa de Kp 6."
+    "audio_narration": "Evento 7: Nuvem Pistão de Leh Ladakh. O tremor sísmico superficial mecânico de magnitude 2.1 e intensidade Mercalli 5 ocorreu durante o choque de megablocos de granito descendo os leques aluviais. A contradição pluviométrica é gritante: o pluviômetro oficial do IMD em Leh registrou apenas 12,8 milímetros de chuva em 24 horas, mas os modelos hidrológicos exigem mais de 150 a 200 milímetros para mobilizar a massa de lama. A bacia de 20 quilômetros registrou 980 descargas elétricas secas em altitude com super-raio de mais 190 quiloampères em Khardung La, disparadas por uma tempestade solar severa de Kp 6."
   },
   {
     "rank": 8,
@@ -589,7 +589,7 @@
     "lightning_20km_upward": 32,
     "lightning_20km_peak_kA": "-120 kA",
     "lightning_20km_notes": "Nas 48 horas prévias, a convecção orográfica de início de monção gerou 1.050 flashes em 20 km sobre Helambu e Bhemathang.",
-    "audio_narration": "Evento 8: Enxurrada do Rio Melamchi. Chuvas normais de início de monção provocaram o colapso retrogressivo e liquefação anômala de depósitos fósseis no platô de Bhemathang, mobilizando 12 milhões de metros cúbicos de lama e megablocos. Um sinal sísmico prolongado de baixa frequência precedeu a destruição do bazar em 20 minutos, sob 1.050 descargas elétricas no raio de 20 km."
+    "audio_narration": "Evento 8: Enxurrada do Rio Melamchi. Sinal sísmico prolongado de baixa frequência superficial de magnitude 2.9 e intensidade Mercalli 5, gerado pelo colapso retrogressivo e liquefação de depósitos fósseis no platô de Bhemathang, com estrondo sônico ouvido 20 minutos antes. A contradição reside na desproporção entre a chuva monçônica normal e o volume gigantesco de 12 milhões de metros cúbicos mobilizados. A bacia de 20 quilômetros registrou 1.050 descargas elétricas com pico de menos 120 quiloampères."
   },
   {
     "rank": 9,
@@ -663,7 +663,7 @@
     "lightning_20km_upward": 16,
     "lightning_20km_peak_kA": "+110 kA",
     "lightning_20km_notes": "Atividade convectiva persistente em altitude acompanhada por 340 flashes na bacia de Parechu durante o ciclo solar 23.",
-    "audio_narration": "Evento 9: Cheia do Rio Parechu. Onda de cheia no Tibete de 15 metros acima da cota histórica sem registros pluviométricos excepcionais na bacia tibetana. O rompimento da barragem natural de encosta gerou ondas sísmicas de baixa frequência durante o galgamento, em meio à tempestade heliofísica extrema do histórico Bastille Day Event com Kp 9."
+    "audio_narration": "Evento 9: Cheia Represada do Rio Parechu. Sismo superficial de baixa frequência de magnitude 3.5 e intensidade Mercalli 4 durante o galgamento da barragem de terra no Tibete. A contradição: onda de cheia de 15 metros acima do nível histórico sem chuvas extremas registradas por satélite. Ocorrência acoplada a 340 descargas elétricas e pico de mais 110 quiloampères sob a tempestade solar histórica do Bastille Day Event com Kp 9."
   },
   {
     "rank": 10,
@@ -737,7 +737,7 @@
     "lightning_20km_upward": 22,
     "lightning_20km_peak_kA": "-95 kA",
     "lightning_20km_notes": "Nas 52h desde o flare M3.2, 540 descargas atingiram o raio de 20 km na garganta de Poiqu/Sun Koshi.",
-    "audio_narration": "Evento 10: Rompimento do Lago Zhangzangbo. Esvaziamento violento de 19 milhões de metros cúbicos em 1 hora com vazão de 16.000 metros cúbicos por segundo que arrancou a Ponte da Amizade internacional, superando amplamente as fórmulas empíricas clássicas de brecha moráinica. O tremor mecânico foi sentido a 40 km, no ápice do ciclo solar 21 com 540 descargas a 20 km."
+    "audio_narration": "Evento 10: Rompimento do Lago Zhangzangbo. Choque mecânico superficial de magnitude 2.8 e intensidade Mercalli 5 sentido a 40 quilômetros. A contradição: 19 milhões de metros cúbicos esvaziados em 1 hora com vazão de 16.000 metros cúbicos por segundo que destruiu a Ponte da Amizade internacional, superando os limites das fórmulas empíricas de brecha. Na bacia de 20 quilômetros, 540 descargas elétricas ocorreram durante o ápice do ciclo solar 21."
   },
   {
     "rank": 11,
@@ -811,7 +811,7 @@
     "lightning_20km_upward": 6,
     "lightning_20km_peak_kA": "-60 kA",
     "lightning_20km_notes": "Baixa atividade elétrica em 20 km no Khumbu; colapso mecânico dominante de gelo suspenso.",
-    "audio_narration": "Evento 11: Desastre do Lago Dig Tsho. Queda de avalanche de gelo em lago que gerou quebra instantânea da morena sem chuvas no vale, com sismo mecânico gravado no maciço do Everest e 65 descargas periféricas."
+    "audio_narration": "Evento 11: Desastre de Dig Tsho. Sismo superficial de impacto mecânico de magnitude 2.5 no vale do Everest, rompendo a morena sem chuvas no vale. Contradição na rápida liquefação da morena terminal, com 65 descargas periféricas e corrente máxima de menos 60 quiloampères."
   },
   {
     "rank": 12,
@@ -885,7 +885,7 @@
     "lightning_20km_upward": 1,
     "lightning_20km_peak_kA": "< 30 kA",
     "lightning_20km_notes": "Quase nula atividade elétrica em 20 km em Lunana durante a estabilidade outonal.",
-    "audio_narration": "Evento 12: GLOF de Luggye Tsho no Butão. Ruptura moráinica repentina sem chuva anômala no vale; choque mecânico inicial seguido de descompressão térmica de gelo fóssil em permafrost."
+    "audio_narration": "Evento 12: GLOF de Luggye Tsho no Butão. Ruptura moráinica com sinal sísmico superficial de magnitude 2.4 e intensidade Mercalli 4, sem chuvas fortes no vale. Apenas 28 descargas a 20 quilômetros, evidenciando desestabilização térmica de gelo fóssil em permafrost subsuperficial."
   },
   {
     "rank": 13,
@@ -959,7 +959,7 @@
     "lightning_20km_upward": 18,
     "lightning_20km_peak_kA": "-88 kA",
     "lightning_20km_notes": "460 descargas em 20 km ao longo da garganta de Poiqu/Bhotekoshi nas 43h precedentes.",
-    "audio_narration": "Evento 13: Rompimento de Gongbatongshacuo. Transbordo explosivo de lago moráinico sob chuvas normais, com sismo superficial gravado pela rede sísmica do Tibete e 460 descargas no raio de 20 km."
+    "audio_narration": "Evento 13: Rompimento de Gongbatongshacuo. Sismo superficial de magnitude 2.6 gravado pela rede tibetana durante o transbordo do lago glacial sob regime de chuvas ordinárias. Computaram-se 460 descargas elétricas a 20 quilômetros com corrente de menos 88 quiloampères."
   },
   {
     "rank": 14,
@@ -1033,7 +1033,7 @@
     "lightning_20km_upward": 165,
     "lightning_20km_peak_kA": "+240 kA (Múltiplas descargas extremas nas cristas)",
     "lightning_20km_notes": "O maior volume elétrico registrado: 3.850 flashes no raio de 20 km ao longo de 72h, com 165 líderes ascendentes de crista.",
-    "audio_narration": "Evento 14: Catástrofe de Himachal Pradesh. Cheia catastrófica que mobilizou megablocos de 100 toneladas ao longo do rio Beas. A bacia acumulou impressionantes 3.850 descargas em 72 horas com 165 descargas ascendentes de crista e super-raios de mais 240 quiloampères após série de flares solares classe M."
+    "audio_narration": "Evento 14: Catástrofe de Himachal Pradesh. Vibrações mecânicas superficiais de magnitude 3.1 com intensidade Mercalli 6 pelo impacto de megablocos de 100 toneladas. A bacia de 20 quilômetros acumulou estarrecedoras 3.850 descargas elétricas em 72 horas, com 165 descargas ascendentes de crista e super-raios extremos de mais 240 quiloampères nas cristas de Kullu e Beas após uma série de flares solares classe M."
   },
   {
     "rank": 15,
@@ -1107,6 +1107,6 @@
     "lightning_20km_upward": 19,
     "lightning_20km_peak_kA": "+135 kA",
     "lightning_20km_notes": "420 descargas registradas em 20 km nas 63h posteriores ao flare M5.4.",
-    "audio_narration": "Evento 15: Segundo Rompimento de Parechu. Novo rompimento do barramento de terra no Tibete com vazão de pico de 3.500 metros cúbicos por segundo e sismos de galgamento, acoplados a 420 descargas elétricas em altitude após flare solar M5.4."
+    "audio_narration": "Evento 15: Segundo Rompimento de Parechu. Sismo superficial de galgamento moráinico de magnitude 2.7 e intensidade Mercalli 4 no Tibete. Vazão de pico de 3.500 metros cúbicos por segundo com 420 descargas elétricas a 20 quilômetros e super-raio de mais 135 quiloampères na esteira do flare solar M5.4."
   }
 ]
