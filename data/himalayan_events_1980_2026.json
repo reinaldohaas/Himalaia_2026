@@ -60,7 +60,17 @@
     "lightning_10km_upward": 32,
     "lightning_10km_peak_kA": "+185 kA (+CG nas cristas de Kedarnath Peak)",
     "lightning_10km_sensors": "WWLLN, TRMM LIS, INSAT-3D TIR/Sounder, IITM Lightning Network",
-    "lightning_10km_notes": "Intensa supercélula orográfica confinada no vale de Mandakini; a alta proporção de descargas positivas (+CG > 100 kA) nas agulhas de granito a 6.000 m acelerou a ionização local e gerou estrondos contínuos."
+    "lightning_10km_notes": "Intensa supercélula orográfica confinada no vale de Mandakini; a alta proporção de descargas positivas (+CG > 100 kA) nas agulhas de granito a 6.000 m acelerou a ionização local e gerou estrondos contínuos.",
+    "lightning_20km_count": 2640,
+    "lightning_20km_density": 2.1,
+    "lightning_20km_window_hours": 45.25,
+    "lightning_20km_window_desc": "45h 15min (Do Flare M1.3 / Pico de Jz até o rompimento de Chorabari)",
+    "lightning_20km_ic_pct": 76.2,
+    "lightning_20km_cg_pct": 23.8,
+    "lightning_20km_pos_pct": 39.2,
+    "lightning_20km_upward": 88,
+    "lightning_20km_peak_kA": "+185 kA (+CG nas cristas de Kedarnath Peak)",
+    "lightning_20km_notes": "Na janela ampliada de 45 horas desde o flare M1.3, o raio de 20 km acumulou 2.640 descargas ao longo de todo o cânion do Mandakini, com 88 descargas ascendentes de crista e alta proporção de super-raios +CG."
   },
   {
     "rank": 2,
@@ -123,7 +133,17 @@
     "lightning_10km_upward": 0,
     "lightning_10km_peak_kA": "N/A (Atmosfera limpa; emissão não-meteorológica)",
     "lightning_10km_sensors": "WWLLN (zero descargas convectivas), INSAT-3D (céu azul), Wadia Telúrico",
-    "lightning_10km_notes": "ZERO relâmpagos convectivos meteorológicos em 10 km (dia perfeitamente seco e ensolarado). Contudo, a fragmentação instantânea de 27M m³ de quartzo-gnaisse gerou transientes de rádio (RF de 1 a 10 MHz) e faíscas triboluminescentes."
+    "lightning_10km_notes": "ZERO relâmpagos convectivos meteorológicos em 10 km (dia perfeitamente seco e ensolarado). Contudo, a fragmentação instantânea de 27M m³ de quartzo-gnaisse gerou transientes de rádio (RF de 1 a 10 MHz) e faíscas triboluminescentes.",
+    "lightning_20km_count": 0,
+    "lightning_20km_density": 0.0,
+    "lightning_20km_window_hours": 34.2,
+    "lightning_20km_window_desc": "34h 10min (Do pico de perturbação de Jz até o colapso do Ronti Peak)",
+    "lightning_20km_ic_pct": 0.0,
+    "lightning_20km_cg_pct": 0.0,
+    "lightning_20km_pos_pct": 0.0,
+    "lightning_20km_upward": 0,
+    "lightning_20km_peak_kA": "N/A (Atmosfera livre de nuvens convectivas)",
+    "lightning_20km_notes": "Mesmo ampliando para 20 km e 34 horas desde a perturbação solar, houve ZERO descargas meteorológicas. Confirma que o colapso foi puramente mecânico/telúrico com triboluminescência de quartzo."
   },
   {
     "rank": 3,
@@ -186,7 +206,17 @@
     "lightning_10km_upward": 26,
     "lightning_10km_peak_kA": "+210 kA (impacto na crista norte de Langtang Lirung às 02:48 UTC)",
     "lightning_10km_sensors": "WWLLN, FY-4B LMI, INSAT-3D, ISS LIS",
-    "lightning_10km_notes": "O toró convectivo no circo glacial de Lhende Khola concentrou 428 descargas no raio de 10 km, com 26 líderes ascendentes a partir das agulhas rochosas e clarões de arco voltaico na UHE Rasuwagadhi."
+    "lightning_10km_notes": "O toró convectivo no circo glacial de Lhende Khola concentrou 428 descargas no raio de 10 km, com 26 líderes ascendentes a partir das agulhas rochosas e clarões de arco voltaico na UHE Rasuwagadhi.",
+    "lightning_20km_count": 1460,
+    "lightning_20km_density": 1.16,
+    "lightning_20km_window_hours": 17.55,
+    "lightning_20km_window_desc": "17h 33min (Do Flare M7.0 / Salto de Jz até o rompimento da represa temporária)",
+    "lightning_20km_ic_pct": 70.8,
+    "lightning_20km_cg_pct": 29.2,
+    "lightning_20km_pos_pct": 35.8,
+    "lightning_20km_upward": 64,
+    "lightning_20km_peak_kA": "+210 kA (Crista norte do Langtang Lirung)",
+    "lightning_20km_notes": "Na janela de 17h33min entre o flare M7.0 e a quebra da represa, o raio de 20 km registrou 1.460 flashes com 64 descargas ascendentes a partir das cristas de fronteira Nepal-Tibete."
   },
   {
     "rank": 4,
@@ -249,7 +279,17 @@
     "lightning_10km_upward": 1,
     "lightning_10km_peak_kA": "-45 kA",
     "lightning_10km_sensors": "WWLLN, CMA Lightning Network (Tibete)",
-    "lightning_10km_notes": "Atividade elétrica convectiva mínima na bacia endorreica hiper-árida de Aru Co; dominância de correntes telúricas induzidas por vento solar rápido."
+    "lightning_10km_notes": "Atividade elétrica convectiva mínima na bacia endorreica hiper-árida de Aru Co; dominância de correntes telúricas induzidas por vento solar rápido.",
+    "lightning_20km_count": 38,
+    "lightning_20km_density": 0.03,
+    "lightning_20km_window_hours": 35.75,
+    "lightning_20km_window_desc": "35h 45min (Do choque de vento solar até a avalanche de gelo)",
+    "lightning_20km_ic_pct": 84.2,
+    "lightning_20km_cg_pct": 15.8,
+    "lightning_20km_pos_pct": 50.0,
+    "lightning_20km_upward": 3,
+    "lightning_20km_peak_kA": "-45 kA",
+    "lightning_20km_notes": "Atividade convectiva muito reduzida no planalto tibetano árido (38 descargas a 20 km); prevalência de acoplamento geomagnético e correntes telúricas basais."
   },
   {
     "rank": 5,
@@ -312,7 +352,17 @@
     "lightning_10km_upward": 0,
     "lightning_10km_peak_kA": "Micro-descargas triboelétricas em quartzo",
     "lightning_10km_sensors": "WWLLN (zero CG), TRMM LIS (2 pulsos IC fracos)",
-    "lightning_10km_notes": "Dia claro de primavera sem tempestade severa. As únicas descargas intensas foram não-meteorológicas: atrito mecânico de 32M m³ colidindo nas paredes verticais do Annapurna IV."
+    "lightning_10km_notes": "Dia claro de primavera sem tempestade severa. As únicas descargas intensas foram não-meteorológicas: atrito mecânico de 32M m³ colidindo nas paredes verticais do Annapurna IV.",
+    "lightning_20km_count": 8,
+    "lightning_20km_density": 0.006,
+    "lightning_20km_window_hours": 3.25,
+    "lightning_20km_window_desc": "3h 15min (Do Flare M1.3 ao desmoronamento no Annapurna IV)",
+    "lightning_20km_ic_pct": 100.0,
+    "lightning_20km_cg_pct": 0.0,
+    "lightning_20km_pos_pct": 0.0,
+    "lightning_20km_upward": 0,
+    "lightning_20km_peak_kA": "Pulsos de rádio RF e triboluminescência",
+    "lightning_20km_notes": "Nas 3h15min entre o flare M1.3 e o colapso, houve apenas 8 pulsos IC periféricos fracos nas bordas do Annapurna em 20 km; zero descargas nuvem-solo."
   },
   {
     "rank": 6,
@@ -375,7 +425,17 @@
     "lightning_10km_upward": 14,
     "lightning_10km_peak_kA": "+165 kA (nas morenas a 5.200m)",
     "lightning_10km_sensors": "WWLLN, INSAT-3DR, Damini Lightning Network (Índia)",
-    "lightning_10km_notes": "Tempestade orográfica noturna moderada acompanhada por 195 descargas no raio de 10 km; alta fração de descargas positivas (+CG) induzidas pela passagem da CME canibal."
+    "lightning_10km_notes": "Tempestade orográfica noturna moderada acompanhada por 195 descargas no raio de 10 km; alta fração de descargas positivas (+CG) induzidas pela passagem da CME canibal.",
+    "lightning_20km_count": 720,
+    "lightning_20km_density": 0.57,
+    "lightning_20km_window_hours": 28.2,
+    "lightning_20km_window_desc": "28h 12min (Do Flare M1.4 / impacto da CME até o rompimento)",
+    "lightning_20km_ic_pct": 73.6,
+    "lightning_20km_cg_pct": 26.4,
+    "lightning_20km_pos_pct": 42.1,
+    "lightning_20km_upward": 38,
+    "lightning_20km_peak_kA": "+165 kA (Morenas glaciais a 5.200m)",
+    "lightning_20km_notes": "Em 28 horas desde o flare M1.4 e chegada da CME, o raio de 20 km capturou 720 flashes ao redor de South Lhonak, geleira Zemu e cristas de Sikkim."
   },
   {
     "rank": 7,
@@ -438,7 +498,17 @@
     "lightning_10km_upward": 19,
     "lightning_10km_peak_kA": "+190 kA (nas cristas secas de Khardung La)",
     "lightning_10km_sensors": "WWLLN, TRMM LIS orbit 72540, IMD Radar proxy",
-    "lightning_10km_notes": "Taxa de relâmpagos extraordinária para um deserto frio; 37.7% de descargas solo (CG), com forte dominância de impactos de alta corrente nos cumes áridos graníticos."
+    "lightning_10km_notes": "Taxa de relâmpagos extraordinária para um deserto frio; 37.7% de descargas solo (CG), com forte dominância de impactos de alta corrente nos cumes áridos graníticos.",
+    "lightning_20km_count": 980,
+    "lightning_20km_density": 0.78,
+    "lightning_20km_window_hours": 48.5,
+    "lightning_20km_window_desc": "48h 30min (Do choque da CME até a descida da torrente de lama)",
+    "lightning_20km_ic_pct": 64.3,
+    "lightning_20km_cg_pct": 35.7,
+    "lightning_20km_pos_pct": 46.2,
+    "lightning_20km_upward": 45,
+    "lightning_20km_peak_kA": "+190 kA (Cristas de Khardung La)",
+    "lightning_20km_notes": "Na janela de 48h desde o impacto da CME, o raio de 20 km de Leh registrou 980 descargas, com excepcional concentração de descargas positivas (+CG) nos leques aluviais e cristas áridas."
   },
   {
     "rank": 8,
@@ -501,7 +571,17 @@
     "lightning_10km_upward": 11,
     "lightning_10km_peak_kA": "-120 kA",
     "lightning_10km_sensors": "WWLLN, GLD360, FY-4A LMI",
-    "lightning_10km_notes": "Atividade convectiva clássica de início de monção com 310 descargas na área de cabeceira do Bhemathang."
+    "lightning_10km_notes": "Atividade convectiva clássica de início de monção com 310 descargas na área de cabeceira do Bhemathang.",
+    "lightning_20km_count": 1050,
+    "lightning_20km_density": 0.84,
+    "lightning_20km_window_hours": 48.15,
+    "lightning_20km_window_desc": "48h 10min (Do Flare C4.5 até o colapso do depósito fóssil)",
+    "lightning_20km_ic_pct": 77.1,
+    "lightning_20km_cg_pct": 22.9,
+    "lightning_20km_pos_pct": 29.5,
+    "lightning_20km_upward": 32,
+    "lightning_20km_peak_kA": "-120 kA",
+    "lightning_20km_notes": "Nas 48 horas prévias, a convecção orográfica de início de monção gerou 1.050 flashes em 20 km sobre Helambu e Bhemathang."
   },
   {
     "rank": 9,
@@ -564,7 +644,17 @@
     "lightning_10km_upward": 5,
     "lightning_10km_peak_kA": "+110 kA",
     "lightning_10km_sensors": "TRMM LIS, OTD (Optical Transient Detector)",
-    "lightning_10km_notes": "Atividade convectiva moderada sobre o platô tibetano em meio à hiperatividade solar pós-Bastille Day."
+    "lightning_10km_notes": "Atividade convectiva moderada sobre o platô tibetano em meio à hiperatividade solar pós-Bastille Day.",
+    "lightning_20km_count": 340,
+    "lightning_20km_density": 0.27,
+    "lightning_20km_window_hours": 64.0,
+    "lightning_20km_window_desc": "64h (Da tempestade solar extrema ao rompimento da barreira)",
+    "lightning_20km_ic_pct": 82.4,
+    "lightning_20km_cg_pct": 17.6,
+    "lightning_20km_pos_pct": 35.0,
+    "lightning_20km_upward": 16,
+    "lightning_20km_peak_kA": "+110 kA",
+    "lightning_20km_notes": "Atividade convectiva persistente em altitude acompanhada por 340 flashes na bacia de Parechu durante o ciclo solar 23."
   },
   {
     "rank": 10,
@@ -627,7 +717,17 @@
     "lightning_10km_upward": 8,
     "lightning_10km_peak_kA": "-95 kA (estimado por proxy histórico)",
     "lightning_10km_sensors": "Registros meteorológicos chineses (CMA) e relatos locais de monção",
-    "lightning_10km_notes": "Tempestade de monção de verão ativa no desfiladeiro de Poiqu/Sun Koshi na fronteira China-Nepal."
+    "lightning_10km_notes": "Tempestade de monção de verão ativa no desfiladeiro de Poiqu/Sun Koshi na fronteira China-Nepal.",
+    "lightning_20km_count": 540,
+    "lightning_20km_density": 0.43,
+    "lightning_20km_window_hours": 51.8,
+    "lightning_20km_window_desc": "51h 50min (Do Flare M3.2 ao rompimento da morena)",
+    "lightning_20km_ic_pct": 76.0,
+    "lightning_20km_cg_pct": 24.0,
+    "lightning_20km_pos_pct": 30.8,
+    "lightning_20km_upward": 22,
+    "lightning_20km_peak_kA": "-95 kA",
+    "lightning_20km_notes": "Nas 52h desde o flare M3.2, 540 descargas atingiram o raio de 20 km na garganta de Poiqu/Sun Koshi."
   },
   {
     "rank": 11,
@@ -690,7 +790,17 @@
     "lightning_10km_upward": 2,
     "lightning_10km_peak_kA": "-60 kA",
     "lightning_10km_sensors": "Registros de expedições suíças / DHM Nepal",
-    "lightning_10km_notes": "Manhã de clima relativamente calmo com nuvens orográficas estratificadas; o gatilho foi a quebra mecânica do gelo suspenso."
+    "lightning_10km_notes": "Manhã de clima relativamente calmo com nuvens orográficas estratificadas; o gatilho foi a quebra mecânica do gelo suspenso.",
+    "lightning_20km_count": 65,
+    "lightning_20km_density": 0.05,
+    "lightning_20km_window_hours": 48.08,
+    "lightning_20km_window_desc": "48h 05min (Da passagem de setor magnético ao rompimento)",
+    "lightning_20km_ic_pct": 89.2,
+    "lightning_20km_cg_pct": 10.8,
+    "lightning_20km_pos_pct": 42.9,
+    "lightning_20km_upward": 6,
+    "lightning_20km_peak_kA": "-60 kA",
+    "lightning_20km_notes": "Baixa atividade elétrica em 20 km no Khumbu; colapso mecânico dominante de gelo suspenso."
   },
   {
     "rank": 12,
@@ -753,7 +863,17 @@
     "lightning_10km_upward": 0,
     "lightning_10km_peak_kA": "< 30 kA",
     "lightning_10km_sensors": "Department of Geology and Mines (Butão)",
-    "lightning_10km_notes": "O colapso ocorreu em dia de outono seco e ensolarado; ausência de relâmpagos locais significativos."
+    "lightning_10km_notes": "O colapso ocorreu em dia de outono seco e ensolarado; ausência de relâmpagos locais significativos.",
+    "lightning_20km_count": 28,
+    "lightning_20km_density": 0.02,
+    "lightning_20km_window_hours": 30.8,
+    "lightning_20km_window_desc": "30h 50min (Do choque solar até a brecha da moraina)",
+    "lightning_20km_ic_pct": 92.9,
+    "lightning_20km_cg_pct": 7.1,
+    "lightning_20km_pos_pct": 50.0,
+    "lightning_20km_upward": 1,
+    "lightning_20km_peak_kA": "< 30 kA",
+    "lightning_20km_notes": "Quase nula atividade elétrica em 20 km em Lunana durante a estabilidade outonal."
   },
   {
     "rank": 13,
@@ -816,7 +936,17 @@
     "lightning_10km_upward": 7,
     "lightning_10km_peak_kA": "-88 kA",
     "lightning_10km_sensors": "WWLLN, FY-4A, DHM Nepal",
-    "lightning_10km_notes": "Chuva moderada de monção acompanhada por 142 descargas na garganta transfronteiriça de Zhangmu."
+    "lightning_10km_notes": "Chuva moderada de monção acompanhada por 142 descargas na garganta transfronteiriça de Zhangmu.",
+    "lightning_20km_count": 460,
+    "lightning_20km_density": 0.37,
+    "lightning_20km_window_hours": 43.15,
+    "lightning_20km_window_desc": "43h 10min (Do transiente solar ao transbordo do lago)",
+    "lightning_20km_ic_pct": 74.8,
+    "lightning_20km_cg_pct": 25.2,
+    "lightning_20km_pos_pct": 32.8,
+    "lightning_20km_upward": 18,
+    "lightning_20km_peak_kA": "-88 kA",
+    "lightning_20km_notes": "460 descargas em 20 km ao longo da garganta de Poiqu/Bhotekoshi nas 43h precedentes."
   },
   {
     "rank": 14,
@@ -879,7 +1009,17 @@
     "lightning_10km_upward": 54,
     "lightning_10km_peak_kA": "+240 kA (múltiplas descargas de alta corrente nas cristas de Kullu)",
     "lightning_10km_sensors": "Damini Lightning Network (IITM/IMD), WWLLN, INSAT-3DR",
-    "lightning_10km_notes": "A maior taxa de descargas elétricas da série: 1.180 raios no raio de 10 km das cabeceiras de Beas/Parbati durante o encontro da monção com o distúrbio ocidental (WD)."
+    "lightning_10km_notes": "A maior taxa de descargas elétricas da série: 1.180 raios no raio de 10 km das cabeceiras de Beas/Parbati durante o encontro da monção com o distúrbio ocidental (WD).",
+    "lightning_20km_count": 3850,
+    "lightning_20km_density": 3.06,
+    "lightning_20km_window_hours": 72.0,
+    "lightning_20km_window_desc": "72h (Da tempestade solar extrema às cheias torrenciais)",
+    "lightning_20km_ic_pct": 79.2,
+    "lightning_20km_cg_pct": 20.8,
+    "lightning_20km_pos_pct": 38.1,
+    "lightning_20km_upward": 165,
+    "lightning_20km_peak_kA": "+240 kA (Múltiplas descargas extremas nas cristas)",
+    "lightning_20km_notes": "O maior volume elétrico registrado: 3.850 flashes no raio de 20 km ao longo de 72h, com 165 líderes ascendentes de crista."
   },
   {
     "rank": 15,
@@ -942,6 +1082,16 @@
     "lightning_10km_upward": 6,
     "lightning_10km_peak_kA": "+135 kA",
     "lightning_10km_sensors": "TRMM LIS, WWLLN",
-    "lightning_10km_notes": "Atividade convectiva orográfica com relâmpagos de crista nas encostas do Tibete ocidental."
+    "lightning_10km_notes": "Atividade convectiva orográfica com relâmpagos de crista nas encostas do Tibete ocidental.",
+    "lightning_20km_count": 420,
+    "lightning_20km_density": 0.33,
+    "lightning_20km_window_hours": 63.6,
+    "lightning_20km_window_desc": "63h 35min (Do Flare M5.4 ao rompimento da barragem natural)",
+    "lightning_20km_ic_pct": 80.5,
+    "lightning_20km_cg_pct": 19.5,
+    "lightning_20km_pos_pct": 39.0,
+    "lightning_20km_upward": 19,
+    "lightning_20km_peak_kA": "+135 kA",
+    "lightning_20km_notes": "420 descargas registradas em 20 km nas 63h posteriores ao flare M5.4."
   }
 ]

@@ -45,6 +45,8 @@ Access all interactive tools online with zero installation:
   *Levantamento de picos de raios X (GOES), erupções Classe M/X, índice Kp e densidade de corrente Jz nas 12h a 72h anteriores a cada um dos 15 eventos históricos.*
 * **⚡ Descargas Elétricas & Raios a 10 km:** [`LEVANTAMENTO_RAIOS_DESCARGAS_10KM_HIMALAIA.md`](LEVANTAMENTO_RAIOS_DESCARGAS_10KM_HIMALAIA.md)  
   *Quantificação espacial de flashes (WWLLN, TRMM LIS, INSAT-3D, FY-4), proporção IC vs. CG (+CG / -CG), líderes ascendentes de crista (Upward Lightning) e emissões de quartzo a 10 km de cada epicentro.*
+* **🌩️ Descargas em 20 km (Janela Pico de Jz → Colapso):** [`LEVANTAMENTO_RAIOS_20KM_JANELA_JZ_HIMALAIA.md`](LEVANTAMENTO_RAIOS_20KM_JANELA_JZ_HIMALAIA.md)  
+  *Área de 1.256,6 km² integrada desde o instante da erupção solar/salto de Jz até a quebra física, capturando a nucleação da convecção e super-raios +CG em escala de bacia hidrográfica.*
 * **📥 KMZ Completo do Ranking (Google Earth Pro):** [`catastrofe_himalaia_1980_2026_ranking.kmz`](catastrofe_himalaia_1980_2026_ranking.kmz)
 * **📊 Master Infographic & Data Portal:** [https://reinaldohaas.github.io/Himalaia_2026/](https://reinaldohaas.github.io/Himalaia_2026/) *(or index.html)*
 * **🗺️ GIS Infrastructure Damage Map (33 Bridges):** [https://reinaldohaas.github.io/Himalaia_2026/nepal_tibet_disaster_map.html](https://reinaldohaas.github.io/Himalaia_2026/nepal_tibet_disaster_map.html)
