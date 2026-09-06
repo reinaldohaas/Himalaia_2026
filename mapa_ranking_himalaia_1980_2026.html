@@ -249,6 +249,10 @@
         </div>
         
         <div class="d-flex align-items-center gap-2">
+            <!-- Botão de Início do Tour 360° Interativo -->
+            <button onclick="toggleAutoTour()" id="navBtnTour" class="btn btn-sm btn-outline-warning text-warning fw-bold shadow-sm" title="Iniciar Tour Automático 360° (Giro + Zoom Out em todos os 15 eventos)">
+                <i class="fa-solid fa-compass fa-spin me-1" style="animation-duration: 5s;"></i> Tour 360°
+            </button>
             <!-- Botão de Destaque Mestre para a Catástrofe de 2026 -->
             <button onclick="jumpTo2026()" class="btn btn-sm btn-warning text-dark fw-bold shadow-sm" title="Pular diretamente para o Evento de 26 de Agosto de 2026">
                 <i class="fa-solid fa-star text-danger me-1"></i> Catástrofe de 2026
@@ -276,6 +280,16 @@
 
     <!-- Mapa 3D Nativamente WebGL -->
     <div id="map"></div>
+
+    <!-- Overlay Flutuante de Status do Tour 360° -->
+    <div id="tourStatusOverlay" class="d-none align-items-center gap-2 px-3 py-1.5 rounded-pill shadow-lg border" style="position: absolute; top: 68px; left: 50%; transform: translateX(-50%); z-index: 105; background: rgba(10, 15, 29, 0.94); border-color: #eab308; backdrop-filter: blur(12px);">
+        <span class="spinner-grow spinner-grow-sm text-warning" role="status"></span>
+        <span id="tourStageBadge" class="badge bg-warning text-dark fw-bold" style="font-size: 0.72rem;">GIRO 360°</span>
+        <span id="tourStatusText" class="fw-bold text-light small" style="font-size: 0.80rem;">Evento 1/15</span>
+        <button onclick="stopAutoTour()" class="btn btn-xs btn-danger py-0 px-2 rounded-pill ms-2 fw-bold" style="font-size: 0.70rem;">
+            <i class="fa-solid fa-pause me-1"></i> Pausar
+        </button>
+    </div>
 
     <!-- Barra de Filtros Temáticos Flutuante -->
     <div class="filter-bar">
@@ -318,8 +332,8 @@
                 <button onclick="nextEvent()" class="btn btn-xs btn-outline-secondary py-0 px-2 text-light" title="Próximo Evento">
                     Próximo <i class="fa-solid fa-chevron-right"></i>
                 </button>
-                <button onclick="toggleAutoTour()" id="btnAutoTour" class="btn btn-xs btn-outline-warning py-0 px-2 ms-1" style="font-size: 0.70rem;">
-                    <i class="fa-solid fa-play me-1"></i> Tour 3D
+                <button onclick="toggleAutoTour()" id="btnAutoTour" class="btn btn-xs btn-warning text-dark fw-bold py-0 px-2 ms-1 shadow-sm" style="font-size: 0.70rem;" title="Iniciar Tour Automático com Giro 360° e Zoom Out em Cada um dos 15 Eventos">
+                    <i class="fa-solid fa-play me-1"></i> Tour 360°
                 </button>
             </div>
         </div>
@@ -517,8 +531,38 @@
         let activeFilter = 'all';
         let markers = [];
         let epicenterMarkers = [];
-        let autoTourInterval = null;
-        let isAutoTour = false;
+        let isTourRunning = false;
+        let tourRafId = null;
+        let tourTimeoutId = null;
+        let currentTourStage = 'idle'; // 'flyin', 'orbit', 'zoomout', 'idle'
+
+        // Gerador de Polígono Circular para o Raio de 20 km
+        function getCircleCoordinates(lon, lat, radiusKm = 20, points = 72) {
+            const coords = [];
+            const distanceX = radiusKm / (111.320 * Math.cos(lat * Math.PI / 180));
+            const distanceY = radiusKm / 110.574;
+            for (let i = 0; i <= points; i++) {
+                const theta = (i / points) * (2 * Math.PI);
+                const x = distanceX * Math.cos(theta);
+                const y = distanceY * Math.sin(theta);
+                coords.push([lon + x, lat + y]);
+            }
+            return [coords];
+        }
+
+        function updateBasinCircle(lon, lat, eventName) {
+            const circleData = {
+                type: 'Feature',
+                geometry: {
+                    type: 'Polygon',
+                    coordinates: getCircleCoordinates(lon, lat, 20)
+                },
+                properties: { name: 'Bacia 20 km - ' + eventName }
+            };
+            if (map && map.getSource('basin-circle-20km')) {
+                map.getSource('basin-circle-20km').setData(circleData);
+            }
+        }
 
         // 1. Inicializar Motor Maps 3D WebGL (MapLibre GL JS + Google Earth Satellite + Relevo DEM)
         const map = new maplibregl.Map({
@@ -581,8 +625,49 @@
         // 2. Renderizar Marcadores 3D no Mapa (Eventos e Epicentros Sísmicos)
         map.on('load', () => {
             initEventSelector();
+
+            // Adicionar Camada da Bacia Regional (Raio 20 km)
+            map.addSource('basin-circle-20km', {
+                type: 'geojson',
+                data: {
+                    type: 'Feature',
+                    geometry: {
+                        type: 'Polygon',
+                        coordinates: getCircleCoordinates(eventsData[0].lon, eventsData[0].lat, 20)
+                    },
+                    properties: { name: 'Bacia 20 km' }
+                }
+            });
+
+            map.addLayer({
+                id: 'basin-circle-20km-fill',
+                type: 'fill',
+                source: 'basin-circle-20km',
+                paint: {
+                    'fill-color': '#f59e0b',
+                    'fill-opacity': 0.07
+                }
+            });
+
+            map.addLayer({
+                id: 'basin-circle-20km-line',
+                type: 'line',
+                source: 'basin-circle-20km',
+                paint: {
+                    'line-color': '#facc15',
+                    'line-width': 2.2,
+                    'line-dasharray': [3, 2],
+                    'line-opacity': 0.85
+                }
+            });
+
             renderMarkers();
             showEvent(0);
+
+            // Interromper o tour caso o usuário interaja manualmente com o mapa
+            map.on('dragstart', () => {
+                if (isTourRunning) stopAutoTour();
+            });
         });
 
         function renderMarkers() {
@@ -651,8 +736,8 @@
             });
         }
 
-        // 3. Exibir Evento no Card e Voar em 3D
-        function showEvent(idx) {
+        // 3. Atualizar Dados do Evento no Card de Apresentação
+        function updateEventCardContent(idx) {
             currentIndex = idx;
             const ev = eventsData[idx];
 
@@ -704,7 +789,14 @@
             const earthUrl = 'https://earth.google.com/web/@' + ev.lat + ',' + ev.lon + ',3000a,25000d,35y,' + ev.camera.bearing + 'h,' + ev.camera.pitch + 't,0r';
             document.getElementById('btnEarthWeb').href = earthUrl;
 
-            // Voo 3D Cinemático
+            // Atualiza Polígono da Bacia de 20 km
+            updateBasinCircle(ev.lon, ev.lat, ev.name);
+        }
+
+        // Exibir Evento Manualmente (interrompe tour automático e voa ao ponto)
+        function showEvent(idx) {
+            stopAutoTour();
+            updateEventCardContent(idx);
             flyToCurrentEvent();
         }
 
@@ -752,20 +844,171 @@
             showEvent(prevIdx);
         }
 
-        function toggleAutoTour() {
-            isAutoTour = !isAutoTour;
+        // Atualiza a Interface do Tour 360°
+        function updateTourUI(running, stageText = '', eventRank = 1, eventName = '') {
             const btn = document.getElementById('btnAutoTour');
-            if (isAutoTour) {
-                btn.innerHTML = '<i class="fa-solid fa-pause me-1"></i> Pausa';
-                btn.className = 'btn btn-xs btn-warning text-dark py-0 px-2 ms-1';
-                autoTourInterval = setInterval(() => {
-                    nextEvent();
-                }, 8000);
+            const navBtn = document.getElementById('navBtnTour');
+            const overlay = document.getElementById('tourStatusOverlay');
+            const overlayText = document.getElementById('tourStatusText');
+            const overlayStage = document.getElementById('tourStageBadge');
+
+            if (running) {
+                if (btn) {
+                    btn.innerHTML = '<i class="fa-solid fa-pause me-1"></i> Pausa 360°';
+                    btn.className = 'btn btn-xs btn-danger text-white fw-bold py-0 px-2 ms-1 shadow-sm';
+                }
+                if (navBtn) {
+                    navBtn.innerHTML = '<i class="fa-solid fa-pause me-1"></i> Pausar Tour 360°';
+                    navBtn.className = 'btn btn-sm btn-danger text-white fw-bold shadow-sm';
+                }
+                if (overlay) {
+                    overlay.classList.remove('d-none');
+                    overlay.classList.add('d-flex');
+                }
+                if (overlayStage) overlayStage.innerText = stageText.toUpperCase();
+                if (overlayText) overlayText.innerText = `[${eventRank}/15] ${eventName}`;
             } else {
-                btn.innerHTML = '<i class="fa-solid fa-play me-1"></i> Tour';
-                btn.className = 'btn btn-xs btn-outline-warning py-0 px-2 ms-1';
-                clearInterval(autoTourInterval);
+                if (btn) {
+                    btn.innerHTML = '<i class="fa-solid fa-play me-1"></i> Tour 360°';
+                    btn.className = 'btn btn-xs btn-warning text-dark fw-bold py-0 px-2 ms-1 shadow-sm';
+                }
+                if (navBtn) {
+                    navBtn.innerHTML = '<i class="fa-solid fa-compass fa-spin me-1" style="animation-duration: 5s;"></i> Tour 360°';
+                    navBtn.className = 'btn btn-sm btn-outline-warning text-warning fw-bold shadow-sm';
+                }
+                if (overlay) {
+                    overlay.classList.remove('d-flex');
+                    overlay.classList.add('d-none');
+                }
             }
+        }
+
+        // Parar o Tour 360° Limpando Animações e Timers
+        function stopAutoTour() {
+            isTourRunning = false;
+            currentTourStage = 'idle';
+            if (tourRafId) {
+                cancelAnimationFrame(tourRafId);
+                tourRafId = null;
+            }
+            if (tourTimeoutId) {
+                clearTimeout(tourTimeoutId);
+                tourTimeoutId = null;
+            }
+            map.stop();
+            updateTourUI(false);
+        }
+
+        // Ligar/Desligar Tour 360°
+        function toggleAutoTour() {
+            if (isTourRunning) {
+                stopAutoTour();
+            } else {
+                startAutoTour();
+            }
+        }
+
+        function startAutoTour() {
+            stopAutoTour();
+            isTourRunning = true;
+            runEventTourCycle(currentIndex);
+        }
+
+        // Ciclo Cinemático por Evento: (1) Aproximação -> (2) Giro 360° -> (3) Zoom Out Bacia 20 km -> (4) Próximo
+        function runEventTourCycle(idx) {
+            if (!isTourRunning) return;
+            currentIndex = idx;
+            const ev = eventsData[idx];
+
+            // Atualiza Card de Informações e Círculo 20 km
+            updateEventCardContent(idx);
+            updateBasinCircle(ev.lon, ev.lat, ev.name);
+
+            // ----------------------------------------------------
+            // ETAPA 1: APROXIMAÇÃO 3D AO CUME / EPICENTRO (FLY-IN)
+            // ----------------------------------------------------
+            currentTourStage = 'flyin';
+            updateTourUI(true, '1. Aproximando Cume', ev.rank, ev.name);
+
+            const targetZoom = ev.camera.zoom || 13.0;
+            const targetPitch = ev.camera.pitch || 68;
+            const initialBearing = ev.camera.bearing !== undefined ? ev.camera.bearing : 20;
+
+            map.flyTo({
+                center: [ev.lon, ev.lat],
+                zoom: targetZoom,
+                pitch: targetPitch,
+                bearing: initialBearing,
+                duration: 2500,
+                essential: true
+            });
+
+            // Aguarda o término do voo (2500ms + 300ms de amortecimento)
+            tourTimeoutId = setTimeout(() => {
+                if (!isTourRunning) return;
+
+                // ----------------------------------------------------
+                // ETAPA 2: GIRO ORBITAL 360° COMPLETO EM RELEVO 3D
+                // ----------------------------------------------------
+                currentTourStage = 'orbit';
+                updateTourUI(true, '2. Giro Orbital 360°', ev.rank, ev.name);
+
+                const orbitDuration = 8000; // 8 segundos para volta completa de 360°
+                const startBearing = map.getBearing();
+                const orbitStartTime = performance.now();
+
+                function orbitFrame(now) {
+                    if (!isTourRunning) return;
+                    const elapsed = now - orbitStartTime;
+                    const progress = Math.min(1, elapsed / orbitDuration);
+
+                    // Rotação suave contínua em torno do cume / epicentro
+                    const currentBearing = (startBearing + progress * 360) % 360;
+                    map.setBearing(currentBearing);
+
+                    if (progress < 1) {
+                        tourRafId = requestAnimationFrame(orbitFrame);
+                    } else {
+                        // Rotação 360° concluída com sucesso
+                        tourRafId = null;
+                        tourTimeoutId = setTimeout(() => {
+                            if (!isTourRunning) return;
+
+                            // ----------------------------------------------------
+                            // ETAPA 3: ZOOM OUT PANORÂMICO (BACIA DE 20 KM)
+                            // ----------------------------------------------------
+                            currentTourStage = 'zoomout';
+                            updateTourUI(true, '3. Zoom Out Bacia 20 km', ev.rank, ev.name);
+
+                            // Recuo de câmera para enquadrar o raio de 20 km (área de 1.256 km²)
+                            const regionalZoom = Math.max(9.6, targetZoom - 3.4);
+                            const regionalPitch = 42;
+
+                            map.easeTo({
+                                zoom: regionalZoom,
+                                pitch: regionalPitch,
+                                duration: 3200,
+                                easing: (t) => t * (2 - t)
+                            });
+
+                            // Aguarda o recuo (3200ms) + 1800ms de contemplação regional da bacia
+                            tourTimeoutId = setTimeout(() => {
+                                if (!isTourRunning) return;
+
+                                // ----------------------------------------------------
+                                // ETAPA 4: AVANÇO AUTOMÁTICO PARA O PRÓXIMO EVENTO
+                                // ----------------------------------------------------
+                                let nextIdx = (currentIndex + 1) % eventsData.length;
+                                runEventTourCycle(nextIdx);
+                            }, 5000);
+
+                        }, 300);
+                    }
+                }
+
+                tourRafId = requestAnimationFrame(orbitFrame);
+
+            }, 2800);
         }
 
         function applyFilter(filterType, btnEl) {
@@ -775,10 +1018,15 @@
             renderMarkers();
         }
 
-        // Atalhos de teclado (Setas Esquerda/Direita)
+        // Atalhos de teclado (Setas Esquerda/Direita para navegar, Barra de Espaço para Tour 360°)
         window.addEventListener('keydown', (e) => {
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT' || e.target.tagName === 'TEXTAREA') return;
             if (e.key === 'ArrowRight') nextEvent();
             if (e.key === 'ArrowLeft') prevEvent();
+            if (e.code === 'Space') {
+                e.preventDefault();
+                toggleAutoTour();
+            }
         });
     </script>
 </body>
