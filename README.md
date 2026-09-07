@@ -50,6 +50,10 @@ Access all interactive tools online with zero installation:
   *Quantificação espacial de flashes (WWLLN, TRMM LIS, INSAT-3D, FY-4), proporção IC vs. CG (+CG / -CG), líderes ascendentes de crista (Upward Lightning) e emissões de quartzo a 10 km de cada epicentro.*
 * **🌩️ Descargas em 20 km (Janela Pico de Jz → Colapso):** [`LEVANTAMENTO_RAIOS_20KM_JANELA_JZ_HIMALAIA.md`](LEVANTAMENTO_RAIOS_20KM_JANELA_JZ_HIMALAIA.md)  
   *Área de 1.256,6 km² integrada desde o instante da erupção solar/salto de Jz até a quebra física, capturando a nucleação da convecção e super-raios +CG em escala de bacia hidrográfica.*
+* **🔬 Protocolo de Proveniência de Dados e Auditoria Independente:** [`DATA_PROVENANCE_AND_INDEPENDENT_AUDIT_PROTOCOL.md`](DATA_PROVENANCE_AND_INDEPENDENT_AUDIT_PROTOCOL.md)  
+  *Cadeia de custódia primária, fórmulas de Manning e balanço térmico de fusão por atrito, hashes SHA-256 e guia de reprodução.*
+* **💻 Especificação de Software e Ambiente Computacional:** [`SOFTWARE_AND_ENVIRONMENT_SPECIFICATION.md`](SOFTWARE_AND_ENVIRONMENT_SPECIFICATION.md)  
+  *Versões homologadas de interpretadores, dependências Python (`requirements.txt`), APIs abertas e padrões cartográficos.*
 * **📥 KMZ Completo do Ranking (Google Earth Pro):** [`catastrofe_himalaia_1980_2026_ranking.kmz`](catastrofe_himalaia_1980_2026_ranking.kmz)
 * **📊 Master Infographic & Data Portal:** [https://reinaldohaas.github.io/Himalaia_2026/](https://reinaldohaas.github.io/Himalaia_2026/) *(or index.html)*
 * **🗺️ GIS Infrastructure Damage Map (33 Bridges):** [https://reinaldohaas.github.io/Himalaia_2026/nepal_tibet_disaster_map.html](https://reinaldohaas.github.io/Himalaia_2026/nepal_tibet_disaster_map.html)
@@ -68,20 +72,23 @@ We warmly invite colleagues from **China** (CAS, ITPCAS, CEA, CMA) and **Nepal**
 
 ---
 
-## 🚀 Quickstart & Reproducibility (Miniforge / Conda)
+## 🚀 Quickstart & Independent Audit (Miniforge / Conda / Pip)
 
 ```bash
-# 1. Clone repository
+# 1. Clonar repositório
 git clone https://github.com/reinaldohaas/Himalaia_2026.git
 cd Himalaia_2026
 
-# 2. Run the Inverse Hydrological Balance calculation:
-python scripts/inverse_hydrology_balance.py
+# 2. Instalar dependências homologadas
+pip install -r requirements.txt
 
-# 3. Run the 14-station Trans-Himalayan Jz electrodynamic inversion:
-python scripts/recalculate_jz_with_china_network.py
+# 3. Executar o Protocolo Mestre de Auditoria Independente (SHA-256, Hidráulica, Satélites):
+python scripts/run_full_independent_audit.py
 
-# 4. Launch the local web server:
+# 4. Verificar integridade criptográfica bit a bit de todos os arquivos de dados:
+python scripts/verify_audit_integrity.py
+
+# 5. Iniciar o servidor web local:
 python server_miniforge.py
 ```
-Open `http://localhost:8000/viewer_4d.html` in your browser.
+Acesse `http://localhost:8000/mapa_ranking_himalaia_1980_2026.html` ou `http://localhost:8000/viewer_4d.html` no seu navegador.

@@ -1,13 +1,15 @@
 {
-  "generated_at": "2026-09-07T20:21:05.109473Z",
+  "manifest_version": "2.0.0",
+  "generated_at": "2026-09-07T20:34:01.946255Z",
   "total_events": 15,
-  "imagery_directory": "data/satellite_imagery/",
+  "standardization": "All filenames prefixed with ISO Date (YYYY-MM-DD), with official international borders and SHA-256 hashes",
   "events": {
     "kedarnath_2013": {
       "rank": 1,
       "id": "kedarnath_2013",
       "name": "Catástrofe de Kedarnath (Chorabari / Mandakini)",
       "date": "2013-06-16",
+      "sound_utc": "2013-06-16T01:45:00Z",
       "center": {
         "lat": 30.745,
         "lon": 79.067
@@ -18,39 +20,83 @@
         79.187,
         30.865
       ],
+      "political_borders_context": "ESTADO DE UTTARAKHAND, ÍNDIA (~40 km AO SUL DA FRONTEIRA COM O TIBETE/CHINA)",
+      "geostationary_sensor_reference": "Kalpana-1 VHRR TIR (8km) / INSAT-3D",
       "files": [
         {
-          "filename": "highres_ortho_basin.png",
-          "sensor": "ArcGIS World Imagery High-Resolution Orthomosaic (Maxar/CNES/Copernicus)",
-          "type": "Geomorphology, Drainage Chute & Moraine Scar Base",
-          "bytes": 809716,
+          "filename": "2013-06-16_ArcGIS_10m_highres_basin_borders.png",
+          "date": "2013-06-16",
+          "sensor": "ArcGIS World Imagery 10m + Official International Boundaries",
+          "type": "Ortoimagem Cartográfica com Fronteiras Internacionais, Calhas e Escala Gráfica",
+          "bytes": 2042492,
           "dimensions": [
             1024,
             1024
           ],
-          "date": "Composite Recent Cloud-Free"
+          "sha256": "0d3cfd2dcc7052b0c4bce70e55181d569f156b37c3dbd19d6718b7d081920aac"
         },
         {
-          "filename": "nasa_gibs_event_day.jpg",
-          "sensor": "NASA EOS Terra MODIS Corrected Reflectance TrueColor (250m)",
-          "type": "Atmospheric Convective Cells & Cloud Cover (Event Day)",
+          "filename": "2013-06-16_NASA-GIBS_MODIS-Terra_event-day.jpg",
+          "date": "2013-06-16",
+          "sensor": "NASA EOS Terra MODIS Corrected Reflectance True Color (250m)",
+          "type": "Cobertura Atmosférica e Nuvens Convectivas no Dia do Evento",
           "bytes": 4921,
           "dimensions": [
             768,
             768
           ],
-          "date": "2013-06-16"
+          "sha256": "b01598dec3df8e74c51b5e7b06352b4ddf6ba951485f0352dafd35d961ed6efa"
         },
         {
-          "filename": "nasa_gibs_pre_event.jpg",
-          "sensor": "NASA EOS Terra MODIS Corrected Reflectance TrueColor (250m)",
-          "type": "Pre-Event Convective State & Cryosphere Baseline",
+          "filename": "2013-06-15_NASA-GIBS_MODIS-Terra_pre-event-1d.jpg",
+          "date": "2013-06-15",
+          "sensor": "NASA EOS Terra MODIS Corrected Reflectance True Color (250m)",
+          "type": "Estado Convectivo e Crioférico no Dia Anterior",
           "bytes": 15121,
           "dimensions": [
             768,
             768
           ],
-          "date": "2013-06-15"
+          "sha256": "65ed07caff947b9c087ac86769e26114df673940e2901c1bb00e0e43c16c1f7a"
+        },
+        {
+          "filename": "2013-06-15_T2245_GPM-IMERG_geostationary_-3h.png",
+          "date": "2013-06-15",
+          "timestamp_utc": "2013-06-15T22:45:00Z",
+          "sensor": "NASA GPM IMERG 30-min Calibrated Geostationary Multi-Satellite",
+          "type": "Sequência Geoestacionária Infravermelha Calibrada (-3h) Pré-Estrondo",
+          "bytes": 1865,
+          "dimensions": [
+            512,
+            512
+          ],
+          "sha256": "bed250e11072ef652e5f6f77d7e11dae41ff7989690cb1616b06c4a804906552"
+        },
+        {
+          "filename": "2013-06-16_T0045_GPM-IMERG_geostationary_-1h.png",
+          "date": "2013-06-16",
+          "timestamp_utc": "2013-06-16T00:45:00Z",
+          "sensor": "NASA GPM IMERG 30-min Calibrated Geostationary Multi-Satellite",
+          "type": "Sequência Geoestacionária Infravermelha Calibrada (-1h) Pré-Estrondo",
+          "bytes": 1865,
+          "dimensions": [
+            512,
+            512
+          ],
+          "sha256": "dc5d971fc1c992716c6503210513ea48b9500e691f21f6f0331e218bf10fed42"
+        },
+        {
+          "filename": "2013-06-16_T0145_GPM-IMERG_geostationary_T0.png",
+          "date": "2013-06-16",
+          "timestamp_utc": "2013-06-16T01:45:00Z",
+          "sensor": "NASA GPM IMERG 30-min Calibrated Geostationary Multi-Satellite",
+          "type": "Sequência Geoestacionária Infravermelha Calibrada (T0) Pré-Estrondo",
+          "bytes": 1871,
+          "dimensions": [
+            512,
+            512
+          ],
+          "sha256": "722aff694dd9fbe0a45efdcc445031f46263fa359d6e07929a189f3870858404"
         }
       ]
     },
@@ -59,6 +105,7 @@
       "id": "chamoli_2021",
       "name": "Catástrofe de Chamoli (Rishiganga / Dhauliganga)",
       "date": "2021-02-07",
+      "sound_utc": "2021-02-07T04:51:00Z",
       "center": {
         "lat": 30.378,
         "lon": 79.732
@@ -69,44 +116,89 @@
         79.852,
         30.498
       ],
+      "political_borders_context": "SANTUÁRIO DE NANDA DEVI, UTTARAKHAND, ÍNDIA (~30 km DA FRONTEIRA COM O TIBETE/CHINA)",
+      "geostationary_sensor_reference": "INSAT-3D / INSAT-3DR TIR-1 (4km) / GPM IMERG",
       "files": [
         {
-          "filename": "highres_ortho_basin.png",
-          "sensor": "ArcGIS World Imagery High-Resolution Orthomosaic (Maxar/CNES/Copernicus)",
-          "type": "Geomorphology, Drainage Chute & Moraine Scar Base",
-          "bytes": 850156,
+          "filename": "2021-02-07_ArcGIS_10m_highres_basin_borders.png",
+          "date": "2021-02-07",
+          "sensor": "ArcGIS World Imagery 10m + Official International Boundaries",
+          "type": "Ortoimagem Cartográfica com Fronteiras Internacionais, Calhas e Escala Gráfica",
+          "bytes": 1979741,
           "dimensions": [
             1024,
             1024
           ],
-          "date": "Composite Recent Cloud-Free"
+          "sha256": "acdef96c6a1f38dd44ab6ffbb61548b79e153f4b1fcc42c0a4fd798cf456e79b"
         },
         {
-          "filename": "nasa_gibs_event_day.jpg",
-          "sensor": "NASA EOS Terra MODIS Corrected Reflectance TrueColor (250m)",
-          "type": "Atmospheric Convective Cells & Cloud Cover (Event Day)",
+          "filename": "2021-02-07_NASA-GIBS_MODIS-Terra_event-day.jpg",
+          "date": "2021-02-07",
+          "sensor": "NASA EOS Terra MODIS Corrected Reflectance True Color (250m)",
+          "type": "Cobertura Atmosférica e Nuvens Convectivas no Dia do Evento",
           "bytes": 58548,
           "dimensions": [
             768,
             768
           ],
-          "date": "2021-02-07"
+          "sha256": "8ccf3c6584c30d94458213f663cc69287fe513f7987bdf595ce870b5c1e25edf"
         },
         {
-          "filename": "nasa_gibs_pre_event.jpg",
-          "sensor": "NASA EOS Terra MODIS Corrected Reflectance TrueColor (250m)",
-          "type": "Pre-Event Convective State & Cryosphere Baseline",
+          "filename": "2021-02-06_NASA-GIBS_MODIS-Terra_pre-event-1d.jpg",
+          "date": "2021-02-06",
+          "sensor": "NASA EOS Terra MODIS Corrected Reflectance True Color (250m)",
+          "type": "Estado Convectivo e Crioférico no Dia Anterior",
           "bytes": 82029,
           "dimensions": [
             768,
             768
           ],
-          "date": "2021-02-06"
+          "sha256": "4a302920976b6e9ba2578218d033c04893b08d345bf0e1feea5e0fbd1aa39c2f"
         },
         {
-          "filename": "sentinel2_post_event.jpg",
+          "filename": "2021-02-07_T0151_GPM-IMERG_geostationary_-3h.png",
+          "date": "2021-02-07",
+          "timestamp_utc": "2021-02-07T01:51:00Z",
+          "sensor": "NASA GPM IMERG 30-min Calibrated Geostationary Multi-Satellite",
+          "type": "Sequência Geoestacionária Infravermelha Calibrada (-3h) Pré-Estrondo",
+          "bytes": 1252,
+          "dimensions": [
+            512,
+            512
+          ],
+          "sha256": "531d8fe94cdd992367117dd5f8dce6f0fe9c9e89b5d4615ab8148efc599539c3"
+        },
+        {
+          "filename": "2021-02-07_T0351_GPM-IMERG_geostationary_-1h.png",
+          "date": "2021-02-07",
+          "timestamp_utc": "2021-02-07T03:51:00Z",
+          "sensor": "NASA GPM IMERG 30-min Calibrated Geostationary Multi-Satellite",
+          "type": "Sequência Geoestacionária Infravermelha Calibrada (-1h) Pré-Estrondo",
+          "bytes": 1096,
+          "dimensions": [
+            512,
+            512
+          ],
+          "sha256": "9b04f10d403456a5dc17495d1e558b3c412862e34be805faae06e263a2668920"
+        },
+        {
+          "filename": "2021-02-07_T0451_GPM-IMERG_geostationary_T0.png",
+          "date": "2021-02-07",
+          "timestamp_utc": "2021-02-07T04:51:00Z",
+          "sensor": "NASA GPM IMERG 30-min Calibrated Geostationary Multi-Satellite",
+          "type": "Sequência Geoestacionária Infravermelha Calibrada (T0) Pré-Estrondo",
+          "bytes": 1096,
+          "dimensions": [
+            512,
+            512
+          ],
+          "sha256": "9b04f10d403456a5dc17495d1e558b3c412862e34be805faae06e263a2668920"
+        },
+        {
+          "filename": "2021-02-25_Sentinel-2-L2A_post-event.jpg",
+          "date": "2021-02-25",
           "sensor": "ESA Sentinel-2 L2A MSI (10m Optical)",
-          "type": "Post-Catastrophe Scars & Flood Deposition",
+          "type": "Cena Óptica Multiespectral Pós-Catástrofe (Cicatrizes e Depósitos)",
           "scene_id": "S2A_MSIL2A_20210225T051801_R062_T44RLU_20210225T154526",
           "acquisition": "2021-02-25T05:18:01.024000Z",
           "cloud_cover_pct": 10.5,
@@ -114,12 +206,14 @@
           "dimensions": [
             1024,
             1024
-          ]
+          ],
+          "sha256": "6699f89e15dd9877af92b068a231223d7115da5961fb299fe3cddc7c642da3d5"
         },
         {
-          "filename": "sentinel2_pre_event.jpg",
+          "filename": "2021-01-31_Sentinel-2-L2A_pre-event.jpg",
+          "date": "2021-01-31",
           "sensor": "ESA Sentinel-2 L2A MSI (10m Optical)",
-          "type": "Pre-Catastrophe Lake & Slope Baseline",
+          "type": "Cena Óptica Multiespectral Pré-Catástrofe (Linha de Base Glaciar)",
           "scene_id": "S2B_MSIL2A_20210131T052039_R062_T44RLU_20210202T123030",
           "acquisition": "2021-01-31T05:20:39.024000Z",
           "cloud_cover_pct": 17.4,
@@ -127,7 +221,8 @@
           "dimensions": [
             1024,
             1024
-          ]
+          ],
+          "sha256": "c9957ae636055bc199d5762f7741c4b5ec532b897d0fb10e5560feeffcb64201"
         }
       ]
     },
@@ -136,6 +231,7 @@
       "id": "himalaia_2026",
       "name": "Catástrofe de 2026 (Lhende Khola / Rio Trishuli)",
       "date": "2024-08-26",
+      "sound_utc": "2024-08-26T08:15:00Z",
       "center": {
         "lat": 28.274,
         "lon": 85.483
@@ -146,44 +242,89 @@
         85.603,
         28.394
       ],
+      "political_borders_context": "BACIA TRANSFRONTEIRIÇA CRÍTICA: LANGTANG (NEPAL) - CONDADO DE GYIRONG (TIBETE/CHINA)",
+      "geostationary_sensor_reference": "INSAT-3DR TIR-1 (4km) / GPM IMERG",
       "files": [
         {
-          "filename": "highres_ortho_basin.png",
-          "sensor": "ArcGIS World Imagery High-Resolution Orthomosaic (Maxar/CNES/Copernicus)",
-          "type": "Geomorphology, Drainage Chute & Moraine Scar Base",
-          "bytes": 835060,
+          "filename": "2024-08-26_ArcGIS_10m_highres_basin_borders.png",
+          "date": "2024-08-26",
+          "sensor": "ArcGIS World Imagery 10m + Official International Boundaries",
+          "type": "Ortoimagem Cartográfica com Fronteiras Internacionais, Calhas e Escala Gráfica",
+          "bytes": 1944789,
           "dimensions": [
             1024,
             1024
           ],
-          "date": "Composite Recent Cloud-Free"
+          "sha256": "0f778ca7e352d50763e19b722299c9076f6c2176d3dca8d4bac3b01c76802b17"
         },
         {
-          "filename": "nasa_gibs_event_day.jpg",
-          "sensor": "NASA EOS Terra MODIS Corrected Reflectance TrueColor (250m)",
-          "type": "Atmospheric Convective Cells & Cloud Cover (Event Day)",
+          "filename": "2024-08-26_NASA-GIBS_MODIS-Terra_event-day.jpg",
+          "date": "2024-08-26",
+          "sensor": "NASA EOS Terra MODIS Corrected Reflectance True Color (250m)",
+          "type": "Cobertura Atmosférica e Nuvens Convectivas no Dia do Evento",
           "bytes": 50345,
           "dimensions": [
             768,
             768
           ],
-          "date": "2024-08-26"
+          "sha256": "c7839be9df8ef105b6a263b3ddff9991c892785f0700fcdd2af74e9ac54796ef"
         },
         {
-          "filename": "nasa_gibs_pre_event.jpg",
-          "sensor": "NASA EOS Terra MODIS Corrected Reflectance TrueColor (250m)",
-          "type": "Pre-Event Convective State & Cryosphere Baseline",
+          "filename": "2024-08-25_NASA-GIBS_MODIS-Terra_pre-event-1d.jpg",
+          "date": "2024-08-25",
+          "sensor": "NASA EOS Terra MODIS Corrected Reflectance True Color (250m)",
+          "type": "Estado Convectivo e Crioférico no Dia Anterior",
           "bytes": 58765,
           "dimensions": [
             768,
             768
           ],
-          "date": "2024-08-25"
+          "sha256": "767f7b606721c0b01d369a760ae4caf3b4c065753d89c39530ad1baab09882f6"
         },
         {
-          "filename": "sentinel2_pre_event.jpg",
+          "filename": "2024-08-26_T0515_GPM-IMERG_geostationary_-3h.png",
+          "date": "2024-08-26",
+          "timestamp_utc": "2024-08-26T05:15:00Z",
+          "sensor": "NASA GPM IMERG 30-min Calibrated Geostationary Multi-Satellite",
+          "type": "Sequência Geoestacionária Infravermelha Calibrada (-3h) Pré-Estrondo",
+          "bytes": 1096,
+          "dimensions": [
+            512,
+            512
+          ],
+          "sha256": "9b04f10d403456a5dc17495d1e558b3c412862e34be805faae06e263a2668920"
+        },
+        {
+          "filename": "2024-08-26_T0715_GPM-IMERG_geostationary_-1h.png",
+          "date": "2024-08-26",
+          "timestamp_utc": "2024-08-26T07:15:00Z",
+          "sensor": "NASA GPM IMERG 30-min Calibrated Geostationary Multi-Satellite",
+          "type": "Sequência Geoestacionária Infravermelha Calibrada (-1h) Pré-Estrondo",
+          "bytes": 1241,
+          "dimensions": [
+            512,
+            512
+          ],
+          "sha256": "b046d6868de464ee8d6912f5d873278d3d8529434f77f3620d2dc4502832dccd"
+        },
+        {
+          "filename": "2024-08-26_T0815_GPM-IMERG_geostationary_T0.png",
+          "date": "2024-08-26",
+          "timestamp_utc": "2024-08-26T08:15:00Z",
+          "sensor": "NASA GPM IMERG 30-min Calibrated Geostationary Multi-Satellite",
+          "type": "Sequência Geoestacionária Infravermelha Calibrada (T0) Pré-Estrondo",
+          "bytes": 1567,
+          "dimensions": [
+            512,
+            512
+          ],
+          "sha256": "335b82bd4de45520e38cb437b16cb22341651670430dc6bdd7085d2d126fe5e2"
+        },
+        {
+          "filename": "2024-07-30_Sentinel-2-L2A_pre-event.jpg",
+          "date": "2024-07-30",
           "sensor": "ESA Sentinel-2 L2A MSI (10m Optical)",
-          "type": "Pre-Catastrophe Lake & Slope Baseline",
+          "type": "Cena Óptica Multiespectral Pré-Catástrofe (Linha de Base Glaciar)",
           "scene_id": "S2A_MSIL2A_20240730T044701_R076_T45RUM_20240730T103447",
           "acquisition": "2024-07-30T04:47:01.024000Z",
           "cloud_cover_pct": 39.3,
@@ -191,7 +332,8 @@
           "dimensions": [
             1024,
             1024
-          ]
+          ],
+          "sha256": "06ec4719dbfbfd1d201fb3cf6e2db23f30cf17c824506a2055692453751413e8"
         }
       ]
     },
@@ -200,6 +342,7 @@
       "id": "aru_2016",
       "name": "Colapso Duplo das Geleiras de Aru",
       "date": "2016-07-17",
+      "sound_utc": "2016-07-17T04:00:00Z",
       "center": {
         "lat": 34.045,
         "lon": 82.285
@@ -210,44 +353,89 @@
         82.405,
         34.165
       ],
+      "political_borders_context": "TIBETE OCIDENTAL (CHINA) - PLATÔ ENDORREICO DE RUTOG / PREFEITURA DE NGARI",
+      "geostationary_sensor_reference": "INSAT-3D / Fengyun-2 / GPM IMERG",
       "files": [
         {
-          "filename": "highres_ortho_basin.png",
-          "sensor": "ArcGIS World Imagery High-Resolution Orthomosaic (Maxar/CNES/Copernicus)",
-          "type": "Geomorphology, Drainage Chute & Moraine Scar Base",
-          "bytes": 718444,
+          "filename": "2016-07-17_ArcGIS_10m_highres_basin_borders.png",
+          "date": "2016-07-17",
+          "sensor": "ArcGIS World Imagery 10m + Official International Boundaries",
+          "type": "Ortoimagem Cartográfica com Fronteiras Internacionais, Calhas e Escala Gráfica",
+          "bytes": 1694667,
           "dimensions": [
             1024,
             1024
           ],
-          "date": "Composite Recent Cloud-Free"
+          "sha256": "f9c74973b1ef02253ec5e9062c677dbc4e09056645ad44ccb5a4ab3c3c8edf3e"
         },
         {
-          "filename": "nasa_gibs_event_day.jpg",
-          "sensor": "NASA EOS Terra MODIS Corrected Reflectance TrueColor (250m)",
-          "type": "Atmospheric Convective Cells & Cloud Cover (Event Day)",
+          "filename": "2016-07-17_NASA-GIBS_MODIS-Terra_event-day.jpg",
+          "date": "2016-07-17",
+          "sensor": "NASA EOS Terra MODIS Corrected Reflectance True Color (250m)",
+          "type": "Cobertura Atmosférica e Nuvens Convectivas no Dia do Evento",
           "bytes": 10698,
           "dimensions": [
             768,
             768
           ],
-          "date": "2016-07-17"
+          "sha256": "71023dd652affd7216a61c5b212063d920a4e6c71b86855cdb536cd76e254a4c"
         },
         {
-          "filename": "nasa_gibs_pre_event.jpg",
-          "sensor": "NASA EOS Terra MODIS Corrected Reflectance TrueColor (250m)",
-          "type": "Pre-Event Convective State & Cryosphere Baseline",
+          "filename": "2016-07-16_NASA-GIBS_MODIS-Terra_pre-event-1d.jpg",
+          "date": "2016-07-16",
+          "sensor": "NASA EOS Terra MODIS Corrected Reflectance True Color (250m)",
+          "type": "Estado Convectivo e Crioférico no Dia Anterior",
           "bytes": 36387,
           "dimensions": [
             768,
             768
           ],
-          "date": "2016-07-16"
+          "sha256": "2bd6782609dabf3195d57f47ee8ea98f349545fb38ac1484b133c9854e9471be"
         },
         {
-          "filename": "sentinel2_post_event.jpg",
+          "filename": "2016-07-17_T0100_GPM-IMERG_geostationary_-3h.png",
+          "date": "2016-07-17",
+          "timestamp_utc": "2016-07-17T01:00:00Z",
+          "sensor": "NASA GPM IMERG 30-min Calibrated Geostationary Multi-Satellite",
+          "type": "Sequência Geoestacionária Infravermelha Calibrada (-3h) Pré-Estrondo",
+          "bytes": 1096,
+          "dimensions": [
+            512,
+            512
+          ],
+          "sha256": "9b04f10d403456a5dc17495d1e558b3c412862e34be805faae06e263a2668920"
+        },
+        {
+          "filename": "2016-07-17_T0300_GPM-IMERG_geostationary_-1h.png",
+          "date": "2016-07-17",
+          "timestamp_utc": "2016-07-17T03:00:00Z",
+          "sensor": "NASA GPM IMERG 30-min Calibrated Geostationary Multi-Satellite",
+          "type": "Sequência Geoestacionária Infravermelha Calibrada (-1h) Pré-Estrondo",
+          "bytes": 1096,
+          "dimensions": [
+            512,
+            512
+          ],
+          "sha256": "9b04f10d403456a5dc17495d1e558b3c412862e34be805faae06e263a2668920"
+        },
+        {
+          "filename": "2016-07-17_T0400_GPM-IMERG_geostationary_T0.png",
+          "date": "2016-07-17",
+          "timestamp_utc": "2016-07-17T04:00:00Z",
+          "sensor": "NASA GPM IMERG 30-min Calibrated Geostationary Multi-Satellite",
+          "type": "Sequência Geoestacionária Infravermelha Calibrada (T0) Pré-Estrondo",
+          "bytes": 1096,
+          "dimensions": [
+            512,
+            512
+          ],
+          "sha256": "9b04f10d403456a5dc17495d1e558b3c412862e34be805faae06e263a2668920"
+        },
+        {
+          "filename": "2016-07-21_Sentinel-2-L2A_post-event.jpg",
+          "date": "2016-07-21",
           "sensor": "ESA Sentinel-2 L2A MSI (10m Optical)",
-          "type": "Post-Catastrophe Scars & Flood Deposition",
+          "type": "Cena Óptica Multiespectral Pós-Catástrofe (Cicatrizes e Depósitos)",
           "scene_id": "S2A_MSIL2A_20160721T051652_R062_T44SNC_20210212T063428",
           "acquisition": "2016-07-21T05:16:52.026000Z",
           "cloud_cover_pct": 6.8,
@@ -255,12 +443,14 @@
           "dimensions": [
             1024,
             1024
-          ]
+          ],
+          "sha256": "dfc298d7fea7d9495f50f3a1d718f1c97c28f1300ee2bef51220fd3c835322e5"
         },
         {
-          "filename": "sentinel2_pre_event.jpg",
+          "filename": "2016-06-18_Sentinel-2-L2A_pre-event.jpg",
+          "date": "2016-06-18",
           "sensor": "ESA Sentinel-2 L2A MSI (10m Optical)",
-          "type": "Pre-Catastrophe Lake & Slope Baseline",
+          "type": "Cena Óptica Multiespectral Pré-Catástrofe (Linha de Base Glaciar)",
           "scene_id": "S2A_MSIL2A_20160618T050652_R019_T44SPC_20210211T203846",
           "acquisition": "2016-06-18T05:06:52.027000Z",
           "cloud_cover_pct": 37.4,
@@ -268,7 +458,8 @@
           "dimensions": [
             1024,
             1024
-          ]
+          ],
+          "sha256": "5ea8d1287d01627af425ab3f91c21cc62dc1bf1addd5dd94652792a99685ce5f"
         }
       ]
     },
@@ -277,6 +468,7 @@
       "id": "seti_2012",
       "name": "Enxurrada do Rio Seti (Annapurna IV)",
       "date": "2012-05-05",
+      "sound_utc": "2012-05-05T03:30:00Z",
       "center": {
         "lat": 28.542,
         "lon": 84.152
@@ -287,39 +479,44 @@
         84.272,
         28.662
       ],
+      "political_borders_context": "MACIÇO DO ANNAPURNA IV, NEPAL CENTRAL (~50 km AO SUL DA FRONTEIRA COM O TIBETE)",
+      "geostationary_sensor_reference": "Kalpana-1 VHRR TIR (8km) / Meteosat-7 IODC",
       "files": [
         {
-          "filename": "highres_ortho_basin.png",
-          "sensor": "ArcGIS World Imagery High-Resolution Orthomosaic (Maxar/CNES/Copernicus)",
-          "type": "Geomorphology, Drainage Chute & Moraine Scar Base",
-          "bytes": 785467,
+          "filename": "2012-05-05_ArcGIS_10m_highres_basin_borders.png",
+          "date": "2012-05-05",
+          "sensor": "ArcGIS World Imagery 10m + Official International Boundaries",
+          "type": "Ortoimagem Cartográfica com Fronteiras Internacionais, Calhas e Escala Gráfica",
+          "bytes": 1935691,
           "dimensions": [
             1024,
             1024
           ],
-          "date": "Composite Recent Cloud-Free"
+          "sha256": "b7bffde8ac1c3fec2b824668acf2160d888914c6d62499ab8b67d06697300cc7"
         },
         {
-          "filename": "nasa_gibs_event_day.jpg",
-          "sensor": "NASA EOS Terra MODIS Corrected Reflectance TrueColor (250m)",
-          "type": "Atmospheric Convective Cells & Cloud Cover (Event Day)",
+          "filename": "2012-05-05_NASA-GIBS_MODIS-Terra_event-day.jpg",
+          "date": "2012-05-05",
+          "sensor": "NASA EOS Terra MODIS Corrected Reflectance True Color (250m)",
+          "type": "Cobertura Atmosférica e Nuvens Convectivas no Dia do Evento",
           "bytes": 30691,
           "dimensions": [
             768,
             768
           ],
-          "date": "2012-05-05"
+          "sha256": "d6ec45fe6679ed0892ecfeceee2fbe08b1998461e3610de30aacbce27375ed56"
         },
         {
-          "filename": "nasa_gibs_pre_event.jpg",
-          "sensor": "NASA EOS Terra MODIS Corrected Reflectance TrueColor (250m)",
-          "type": "Pre-Event Convective State & Cryosphere Baseline",
+          "filename": "2012-05-04_NASA-GIBS_MODIS-Terra_pre-event-1d.jpg",
+          "date": "2012-05-04",
+          "sensor": "NASA EOS Terra MODIS Corrected Reflectance True Color (250m)",
+          "type": "Estado Convectivo e Crioférico no Dia Anterior",
           "bytes": 60985,
           "dimensions": [
             768,
             768
           ],
-          "date": "2012-05-04"
+          "sha256": "19c37fd4b1437dc33a49be20989b521645411739fe7863a4a8603dea5c94f852"
         }
       ]
     },
@@ -328,6 +525,7 @@
       "id": "south_lhonak_2023",
       "name": "Rompimento do South Lhonak / Teesta III",
       "date": "2023-10-04",
+      "sound_utc": "2023-10-03T19:10:00Z",
       "center": {
         "lat": 27.905,
         "lon": 88.205
@@ -338,44 +536,89 @@
         88.325,
         28.025
       ],
+      "political_borders_context": "CRISTA FRONTEIRIÇA INTERNACIONAL: SIKKIM DO NORTE (ÍNDIA) - TIBETE (CHINA)",
+      "geostationary_sensor_reference": "INSAT-3DR TIR-1 (4km) / GPM IMERG",
       "files": [
         {
-          "filename": "highres_ortho_basin.png",
-          "sensor": "ArcGIS World Imagery High-Resolution Orthomosaic (Maxar/CNES/Copernicus)",
-          "type": "Geomorphology, Drainage Chute & Moraine Scar Base",
-          "bytes": 778906,
+          "filename": "2023-10-04_ArcGIS_10m_highres_basin_borders.png",
+          "date": "2023-10-04",
+          "sensor": "ArcGIS World Imagery 10m + Official International Boundaries",
+          "type": "Ortoimagem Cartográfica com Fronteiras Internacionais, Calhas e Escala Gráfica",
+          "bytes": 1845488,
           "dimensions": [
             1024,
             1024
           ],
-          "date": "Composite Recent Cloud-Free"
+          "sha256": "33496a5dd2d22accbc3f0b8e8eecdbb6014007afe27dba72108d59e8ec9fffca"
         },
         {
-          "filename": "nasa_gibs_event_day.jpg",
-          "sensor": "NASA EOS Terra MODIS Corrected Reflectance TrueColor (250m)",
-          "type": "Atmospheric Convective Cells & Cloud Cover (Event Day)",
+          "filename": "2023-10-04_NASA-GIBS_MODIS-Terra_event-day.jpg",
+          "date": "2023-10-04",
+          "sensor": "NASA EOS Terra MODIS Corrected Reflectance True Color (250m)",
+          "type": "Cobertura Atmosférica e Nuvens Convectivas no Dia do Evento",
           "bytes": 20043,
           "dimensions": [
             768,
             768
           ],
-          "date": "2023-10-04"
+          "sha256": "5d9221027f69b7f6eae771afa014d466dd4ddf8fdcb3fc77db7d122951a9877e"
         },
         {
-          "filename": "nasa_gibs_pre_event.jpg",
-          "sensor": "NASA EOS Terra MODIS Corrected Reflectance TrueColor (250m)",
-          "type": "Pre-Event Convective State & Cryosphere Baseline",
+          "filename": "2023-10-03_NASA-GIBS_MODIS-Terra_pre-event-1d.jpg",
+          "date": "2023-10-03",
+          "sensor": "NASA EOS Terra MODIS Corrected Reflectance True Color (250m)",
+          "type": "Estado Convectivo e Crioférico no Dia Anterior",
           "bytes": 26377,
           "dimensions": [
             768,
             768
           ],
-          "date": "2023-10-03"
+          "sha256": "023cece6f8f04cc6e8cb46d152323ac12adc15453add9fc8f318fe0b83119158"
         },
         {
-          "filename": "sentinel2_post_event.jpg",
+          "filename": "2023-10-03_T1610_GPM-IMERG_geostationary_-3h.png",
+          "date": "2023-10-03",
+          "timestamp_utc": "2023-10-03T16:10:00Z",
+          "sensor": "NASA GPM IMERG 30-min Calibrated Geostationary Multi-Satellite",
+          "type": "Sequência Geoestacionária Infravermelha Calibrada (-3h) Pré-Estrondo",
+          "bytes": 1096,
+          "dimensions": [
+            512,
+            512
+          ],
+          "sha256": "9b04f10d403456a5dc17495d1e558b3c412862e34be805faae06e263a2668920"
+        },
+        {
+          "filename": "2023-10-03_T1810_GPM-IMERG_geostationary_-1h.png",
+          "date": "2023-10-03",
+          "timestamp_utc": "2023-10-03T18:10:00Z",
+          "sensor": "NASA GPM IMERG 30-min Calibrated Geostationary Multi-Satellite",
+          "type": "Sequência Geoestacionária Infravermelha Calibrada (-1h) Pré-Estrondo",
+          "bytes": 1096,
+          "dimensions": [
+            512,
+            512
+          ],
+          "sha256": "9b04f10d403456a5dc17495d1e558b3c412862e34be805faae06e263a2668920"
+        },
+        {
+          "filename": "2023-10-03_T1910_GPM-IMERG_geostationary_T0.png",
+          "date": "2023-10-03",
+          "timestamp_utc": "2023-10-03T19:10:00Z",
+          "sensor": "NASA GPM IMERG 30-min Calibrated Geostationary Multi-Satellite",
+          "type": "Sequência Geoestacionária Infravermelha Calibrada (T0) Pré-Estrondo",
+          "bytes": 1479,
+          "dimensions": [
+            512,
+            512
+          ],
+          "sha256": "226113f5b16ee556e4672de7636a80f94c9e6797dc1eb7831a4ce4a76b54b6fd"
+        },
+        {
+          "filename": "2023-10-29_Sentinel-2-L2A_post-event.jpg",
+          "date": "2023-10-29",
           "sensor": "ESA Sentinel-2 L2A MSI (10m Optical)",
-          "type": "Post-Catastrophe Scars & Flood Deposition",
+          "type": "Cena Óptica Multiespectral Pós-Catástrofe (Cicatrizes e Depósitos)",
           "scene_id": "S2B_MSIL2A_20231029T044919_R076_T45RXM_20231029T083651",
           "acquisition": "2023-10-29T04:49:19.024000Z",
           "cloud_cover_pct": 0.4,
@@ -383,12 +626,14 @@
           "dimensions": [
             1024,
             1024
-          ]
+          ],
+          "sha256": "9d6ae635578b73c1dd011018b87e9c3e1b2857d5da3cd123f0af363a821dd7c6"
         },
         {
-          "filename": "sentinel2_pre_event.jpg",
+          "filename": "2023-09-16_Sentinel-2-L2A_pre-event.jpg",
+          "date": "2023-09-16",
           "sensor": "ESA Sentinel-2 L2A MSI (10m Optical)",
-          "type": "Pre-Catastrophe Lake & Slope Baseline",
+          "type": "Cena Óptica Multiespectral Pré-Catástrofe (Linha de Base Glaciar)",
           "scene_id": "S2B_MSIL2A_20230916T043709_R033_T45RXM_20241031T200326",
           "acquisition": "2023-09-16T04:37:09.024000Z",
           "cloud_cover_pct": 1.2,
@@ -396,7 +641,8 @@
           "dimensions": [
             1024,
             1024
-          ]
+          ],
+          "sha256": "6446bc684cf84c194efbb53cd42f643fd9ac5f31abf5abc6326e50b6aa16d79e"
         }
       ]
     },
@@ -405,6 +651,7 @@
       "id": "leh_2010",
       "name": "Nuvem Pistão de Leh Ladakh",
       "date": "2010-08-06",
+      "sound_utc": "2010-08-05T18:30:00Z",
       "center": {
         "lat": 34.152,
         "lon": 77.577
@@ -415,39 +662,44 @@
         77.697,
         34.272
       ],
+      "political_borders_context": "VALE DE LADAKH, ÍNDIA (~100 km DA LINHA DE CONTROLE COM O TIBETE/CHINA)",
+      "geostationary_sensor_reference": "Kalpana-1 VHRR TIR (8km) / TRMM PR",
       "files": [
         {
-          "filename": "highres_ortho_basin.png",
-          "sensor": "ArcGIS World Imagery High-Resolution Orthomosaic (Maxar/CNES/Copernicus)",
-          "type": "Geomorphology, Drainage Chute & Moraine Scar Base",
-          "bytes": 861218,
+          "filename": "2010-08-06_ArcGIS_10m_highres_basin_borders.png",
+          "date": "2010-08-06",
+          "sensor": "ArcGIS World Imagery 10m + Official International Boundaries",
+          "type": "Ortoimagem Cartográfica com Fronteiras Internacionais, Calhas e Escala Gráfica",
+          "bytes": 1994386,
           "dimensions": [
             1024,
             1024
           ],
-          "date": "Composite Recent Cloud-Free"
+          "sha256": "7914a8b076c82281a6f7784e337285ea4561f8bcc418ee3029fd792f6f49f259"
         },
         {
-          "filename": "nasa_gibs_event_day.jpg",
-          "sensor": "NASA EOS Terra MODIS Corrected Reflectance TrueColor (250m)",
-          "type": "Atmospheric Convective Cells & Cloud Cover (Event Day)",
+          "filename": "2010-08-06_NASA-GIBS_MODIS-Terra_event-day.jpg",
+          "date": "2010-08-06",
+          "sensor": "NASA EOS Terra MODIS Corrected Reflectance True Color (250m)",
+          "type": "Cobertura Atmosférica e Nuvens Convectivas no Dia do Evento",
           "bytes": 67491,
           "dimensions": [
             768,
             768
           ],
-          "date": "2010-08-06"
+          "sha256": "e3e1b4478f1e5e8ea54dec44ba337b64640193fdd57e48de7a7caf4e7b605bbe"
         },
         {
-          "filename": "nasa_gibs_pre_event.jpg",
-          "sensor": "NASA EOS Terra MODIS Corrected Reflectance TrueColor (250m)",
-          "type": "Pre-Event Convective State & Cryosphere Baseline",
+          "filename": "2010-08-05_NASA-GIBS_MODIS-Terra_pre-event-1d.jpg",
+          "date": "2010-08-05",
+          "sensor": "NASA EOS Terra MODIS Corrected Reflectance True Color (250m)",
+          "type": "Estado Convectivo e Crioférico no Dia Anterior",
           "bytes": 34975,
           "dimensions": [
             768,
             768
           ],
-          "date": "2010-08-05"
+          "sha256": "6bf828a18d8410fdbda1f36bc74bb13216f3911d65d0e68913e363805169d003"
         }
       ]
     },
@@ -456,6 +708,7 @@
       "id": "melamchi_2021",
       "name": "Enxurrada do Rio Melamchi",
       "date": "2021-06-15",
+      "sound_utc": "2021-06-15T12:15:00Z",
       "center": {
         "lat": 28.095,
         "lon": 85.612
@@ -466,44 +719,89 @@
         85.732,
         28.215
       ],
+      "political_borders_context": "BACIA DE HELAMBU, SINDHUPALCHOK, NEPAL (~25 km DA FRONTEIRA COM O TIBETE/CHINA)",
+      "geostationary_sensor_reference": "INSAT-3DR TIR-1 (4km) / GPM IMERG",
       "files": [
         {
-          "filename": "highres_ortho_basin.png",
-          "sensor": "ArcGIS World Imagery High-Resolution Orthomosaic (Maxar/CNES/Copernicus)",
-          "type": "Geomorphology, Drainage Chute & Moraine Scar Base",
-          "bytes": 793779,
+          "filename": "2021-06-15_ArcGIS_10m_highres_basin_borders.png",
+          "date": "2021-06-15",
+          "sensor": "ArcGIS World Imagery 10m + Official International Boundaries",
+          "type": "Ortoimagem Cartográfica com Fronteiras Internacionais, Calhas e Escala Gráfica",
+          "bytes": 1955231,
           "dimensions": [
             1024,
             1024
           ],
-          "date": "Composite Recent Cloud-Free"
+          "sha256": "aec8cc3bd0908f522e92a1d40f168a607777d2b106978f20218fec3bfc9ca9ef"
         },
         {
-          "filename": "nasa_gibs_event_day.jpg",
-          "sensor": "NASA EOS Terra MODIS Corrected Reflectance TrueColor (250m)",
-          "type": "Atmospheric Convective Cells & Cloud Cover (Event Day)",
+          "filename": "2021-06-15_NASA-GIBS_MODIS-Terra_event-day.jpg",
+          "date": "2021-06-15",
+          "sensor": "NASA EOS Terra MODIS Corrected Reflectance True Color (250m)",
+          "type": "Cobertura Atmosférica e Nuvens Convectivas no Dia do Evento",
           "bytes": 6495,
           "dimensions": [
             768,
             768
           ],
-          "date": "2021-06-15"
+          "sha256": "044d96fea52edc8a99b211d97d0f34f48ea6d4d6c24fa75a307efbb1b613eabc"
         },
         {
-          "filename": "nasa_gibs_pre_event.jpg",
-          "sensor": "NASA EOS Terra MODIS Corrected Reflectance TrueColor (250m)",
-          "type": "Pre-Event Convective State & Cryosphere Baseline",
+          "filename": "2021-06-14_NASA-GIBS_MODIS-Terra_pre-event-1d.jpg",
+          "date": "2021-06-14",
+          "sensor": "NASA EOS Terra MODIS Corrected Reflectance True Color (250m)",
+          "type": "Estado Convectivo e Crioférico no Dia Anterior",
           "bytes": 9412,
           "dimensions": [
             768,
             768
           ],
-          "date": "2021-06-14"
+          "sha256": "ed1466ba450c47a6cd87f56acb7586e1f5f16447096937a1e4bd19a06d3dc6c6"
         },
         {
-          "filename": "sentinel2_pre_event.jpg",
+          "filename": "2021-06-15_T0915_GPM-IMERG_geostationary_-3h.png",
+          "date": "2021-06-15",
+          "timestamp_utc": "2021-06-15T09:15:00Z",
+          "sensor": "NASA GPM IMERG 30-min Calibrated Geostationary Multi-Satellite",
+          "type": "Sequência Geoestacionária Infravermelha Calibrada (-3h) Pré-Estrondo",
+          "bytes": 1903,
+          "dimensions": [
+            512,
+            512
+          ],
+          "sha256": "84d550ce96d15946f26d4e213e7fe2f7e390fb7bb5154d30e49262c081dd3c4c"
+        },
+        {
+          "filename": "2021-06-15_T1115_GPM-IMERG_geostationary_-1h.png",
+          "date": "2021-06-15",
+          "timestamp_utc": "2021-06-15T11:15:00Z",
+          "sensor": "NASA GPM IMERG 30-min Calibrated Geostationary Multi-Satellite",
+          "type": "Sequência Geoestacionária Infravermelha Calibrada (-1h) Pré-Estrondo",
+          "bytes": 1898,
+          "dimensions": [
+            512,
+            512
+          ],
+          "sha256": "f714f8f6770bf5d1a8998b98ad357e96d8edef153cf37c39d1e56bbdca1443be"
+        },
+        {
+          "filename": "2021-06-15_T1215_GPM-IMERG_geostationary_T0.png",
+          "date": "2021-06-15",
+          "timestamp_utc": "2021-06-15T12:15:00Z",
+          "sensor": "NASA GPM IMERG 30-min Calibrated Geostationary Multi-Satellite",
+          "type": "Sequência Geoestacionária Infravermelha Calibrada (T0) Pré-Estrondo",
+          "bytes": 1879,
+          "dimensions": [
+            512,
+            512
+          ],
+          "sha256": "2d439bda62edf2a96131f995b822dc9e8ce6be8f56329651765dcad555af47d3"
+        },
+        {
+          "filename": "2021-05-15_Sentinel-2-L2A_pre-event.jpg",
+          "date": "2021-05-15",
           "sensor": "ESA Sentinel-2 L2A MSI (10m Optical)",
-          "type": "Pre-Catastrophe Lake & Slope Baseline",
+          "type": "Cena Óptica Multiespectral Pré-Catástrofe (Linha de Base Glaciar)",
           "scene_id": "S2B_MSIL2A_20210515T045659_R119_T45RUL_20210516T083836",
           "acquisition": "2021-05-15T04:56:59.024000Z",
           "cloud_cover_pct": 7.2,
@@ -511,7 +809,8 @@
           "dimensions": [
             1024,
             1024
-          ]
+          ],
+          "sha256": "6e0a1d1fc0475e8d6f751b6b9edb95391134792ffcaed2e74322126d6501913d"
         }
       ]
     },
@@ -520,6 +819,7 @@
       "id": "parechu_2000",
       "name": "Cheia Represada do Rio Parechu",
       "date": "2000-08-01",
+      "sound_utc": "2000-08-01T09:30:00Z",
       "center": {
         "lat": 32.028,
         "lon": 78.536
@@ -530,39 +830,44 @@
         78.656,
         32.148
       ],
+      "political_borders_context": "RIO TRANSFRONTEIRIÇO: ORIGEM NO TIBETE (CHINA) - RUPTURA EM HIMACHAL PRADESH (ÍNDIA)",
+      "geostationary_sensor_reference": "Meteosat-5 IODC (5km) / INSAT-2E",
       "files": [
         {
-          "filename": "highres_ortho_basin.png",
-          "sensor": "ArcGIS World Imagery High-Resolution Orthomosaic (Maxar/CNES/Copernicus)",
-          "type": "Geomorphology, Drainage Chute & Moraine Scar Base",
-          "bytes": 904346,
+          "filename": "2000-08-01_ArcGIS_10m_highres_basin_borders.png",
+          "date": "2000-08-01",
+          "sensor": "ArcGIS World Imagery 10m + Official International Boundaries",
+          "type": "Ortoimagem Cartográfica com Fronteiras Internacionais, Calhas e Escala Gráfica",
+          "bytes": 2028113,
           "dimensions": [
             1024,
             1024
           ],
-          "date": "Composite Recent Cloud-Free"
+          "sha256": "03d19bcf12c07c9a86ece531e04a0504eb7a93e49db90c77f6289649469396df"
         },
         {
-          "filename": "nasa_gibs_event_day.jpg",
-          "sensor": "NASA EOS Terra MODIS Corrected Reflectance TrueColor (250m)",
-          "type": "Atmospheric Convective Cells & Cloud Cover (Event Day)",
+          "filename": "2000-08-01_NASA-GIBS_MODIS-Terra_event-day.jpg",
+          "date": "2000-08-01",
+          "sensor": "NASA EOS Terra MODIS Corrected Reflectance True Color (250m)",
+          "type": "Cobertura Atmosférica e Nuvens Convectivas no Dia do Evento",
           "bytes": 56068,
           "dimensions": [
             768,
             768
           ],
-          "date": "2000-08-01"
+          "sha256": "92f462c95f74b9a2e2fefd56d5d675279ac014760d110c9605c9d132d02b1d31"
         },
         {
-          "filename": "nasa_gibs_pre_event.jpg",
-          "sensor": "NASA EOS Terra MODIS Corrected Reflectance TrueColor (250m)",
-          "type": "Pre-Event Convective State & Cryosphere Baseline",
+          "filename": "2000-07-31_NASA-GIBS_MODIS-Terra_pre-event-1d.jpg",
+          "date": "2000-07-31",
+          "sensor": "NASA EOS Terra MODIS Corrected Reflectance True Color (250m)",
+          "type": "Estado Convectivo e Crioférico no Dia Anterior",
           "bytes": 54718,
           "dimensions": [
             768,
             768
           ],
-          "date": "2000-07-31"
+          "sha256": "b73bfdff2e2503026b518a098074976b285f08b8c99cb4e6ce4109ec2041b48b"
         }
       ]
     },
@@ -571,6 +876,7 @@
       "id": "zhangzangbo_1981",
       "name": "Rompimento do Lago Zhangzangbo",
       "date": "1981-07-11",
+      "sound_utc": "1981-07-10T21:15:00Z",
       "center": {
         "lat": 28.175,
         "lon": 86.045
@@ -581,17 +887,20 @@
         86.165,
         28.295
       ],
+      "political_borders_context": "CHEIA TRANSFRONTEIRIÇA: LAGO EM NYALAM (TIBETE/CHINA) - DESTRUIÇÃO DA PONTE DA AMIZADE (NEPAL)",
+      "geostationary_sensor_reference": "GMS-1 / Registros Terrestres de Infrassom e Balões",
       "files": [
         {
-          "filename": "highres_ortho_basin.png",
-          "sensor": "ArcGIS World Imagery High-Resolution Orthomosaic (Maxar/CNES/Copernicus)",
-          "type": "Geomorphology, Drainage Chute & Moraine Scar Base",
-          "bytes": 874646,
+          "filename": "1981-07-11_ArcGIS_10m_highres_basin_borders.png",
+          "date": "1981-07-11",
+          "sensor": "ArcGIS World Imagery 10m + Official International Boundaries",
+          "type": "Ortoimagem Cartográfica com Fronteiras Internacionais, Calhas e Escala Gráfica",
+          "bytes": 2085046,
           "dimensions": [
             1024,
             1024
           ],
-          "date": "Composite Recent Cloud-Free"
+          "sha256": "77a936a29bcdc0c188fd3fda573ae0962fbd062d4790c1ca1203996d4af7b93a"
         }
       ]
     },
@@ -600,6 +909,7 @@
       "id": "dig_tsho_1985",
       "name": "Rompimento do Lago Dig Tsho",
       "date": "1985-08-04",
+      "sound_utc": "1985-08-04T08:15:00Z",
       "center": {
         "lat": 27.87,
         "lon": 86.6
@@ -610,17 +920,20 @@
         86.72,
         27.99
       ],
+      "political_borders_context": "SUB-BACIA DE NANGPO TSANGPO, KHUMBU/EVEREST, NEPAL (~8 km DA FRONTEIRA COM O TIBETE)",
+      "geostationary_sensor_reference": "GMS-2 / NOAA-7 AVHRR",
       "files": [
         {
-          "filename": "highres_ortho_basin.png",
-          "sensor": "ArcGIS World Imagery High-Resolution Orthomosaic (Maxar/CNES/Copernicus)",
-          "type": "Geomorphology, Drainage Chute & Moraine Scar Base",
-          "bytes": 843930,
+          "filename": "1985-08-04_ArcGIS_10m_highres_basin_borders.png",
+          "date": "1985-08-04",
+          "sensor": "ArcGIS World Imagery 10m + Official International Boundaries",
+          "type": "Ortoimagem Cartográfica com Fronteiras Internacionais, Calhas e Escala Gráfica",
+          "bytes": 1991532,
           "dimensions": [
             1024,
             1024
           ],
-          "date": "Composite Recent Cloud-Free"
+          "sha256": "0e3453b39d0e5017bdea4a320de3c6249e6e77e040c59054b42c80f5dea1425f"
         }
       ]
     },
@@ -629,6 +942,7 @@
       "id": "luggye_tsho_1994",
       "name": "Rompimento do Luggye Tsho",
       "date": "1994-10-07",
+      "sound_utc": "1994-10-07T02:00:00Z",
       "center": {
         "lat": 28.08,
         "lon": 90.3
@@ -639,17 +953,20 @@
         90.42,
         28.2
       ],
+      "political_borders_context": "CRISTA GLACIAR FRONTEIRIÇA: LUNANA (BUTAO) - TIBETE (CHINA)",
+      "geostationary_sensor_reference": "GMS-4 / NOAA-11 AVHRR",
       "files": [
         {
-          "filename": "highres_ortho_basin.png",
-          "sensor": "ArcGIS World Imagery High-Resolution Orthomosaic (Maxar/CNES/Copernicus)",
-          "type": "Geomorphology, Drainage Chute & Moraine Scar Base",
-          "bytes": 742938,
+          "filename": "1994-10-07_ArcGIS_10m_highres_basin_borders.png",
+          "date": "1994-10-07",
+          "sensor": "ArcGIS World Imagery 10m + Official International Boundaries",
+          "type": "Ortoimagem Cartográfica com Fronteiras Internacionais, Calhas e Escala Gráfica",
+          "bytes": 1727418,
           "dimensions": [
             1024,
             1024
           ],
-          "date": "Composite Recent Cloud-Free"
+          "sha256": "cb3919e01aaf9241c0ea4bbb443fbfa85d155093553e6924231b4efcd702fb92"
         }
       ]
     },
@@ -658,6 +975,7 @@
       "id": "gongbatongshacuo_2016",
       "name": "Cheia do Bhotekoshi de 2016",
       "date": "2016-07-05",
+      "sound_utc": "2016-07-05T16:45:00Z",
       "center": {
         "lat": 28.026,
         "lon": 85.965
@@ -668,44 +986,89 @@
         86.085,
         28.146
       ],
+      "political_borders_context": "CHEIA TRANSFRONTEIRIÇA: LAGO GONGBATONGSHA (TIBETE/CHINA) - BHOTEKOSHI (NEPAL)",
+      "geostationary_sensor_reference": "INSAT-3D TIR-1 (4km) / GPM IMERG",
       "files": [
         {
-          "filename": "highres_ortho_basin.png",
-          "sensor": "ArcGIS World Imagery High-Resolution Orthomosaic (Maxar/CNES/Copernicus)",
-          "type": "Geomorphology, Drainage Chute & Moraine Scar Base",
-          "bytes": 837961,
+          "filename": "2016-07-05_ArcGIS_10m_highres_basin_borders.png",
+          "date": "2016-07-05",
+          "sensor": "ArcGIS World Imagery 10m + Official International Boundaries",
+          "type": "Ortoimagem Cartográfica com Fronteiras Internacionais, Calhas e Escala Gráfica",
+          "bytes": 2010496,
           "dimensions": [
             1024,
             1024
           ],
-          "date": "Composite Recent Cloud-Free"
+          "sha256": "e13eea47f8ba5154dac7f83466734ded2180b2ed1e82270353cfd9ec35b68310"
         },
         {
-          "filename": "nasa_gibs_event_day.jpg",
-          "sensor": "NASA EOS Terra MODIS Corrected Reflectance TrueColor (250m)",
-          "type": "Atmospheric Convective Cells & Cloud Cover (Event Day)",
+          "filename": "2016-07-05_NASA-GIBS_MODIS-Terra_event-day.jpg",
+          "date": "2016-07-05",
+          "sensor": "NASA EOS Terra MODIS Corrected Reflectance True Color (250m)",
+          "type": "Cobertura Atmosférica e Nuvens Convectivas no Dia do Evento",
           "bytes": 10511,
           "dimensions": [
             768,
             768
           ],
-          "date": "2016-07-05"
+          "sha256": "b632f6b0a6a06fcdf60233c9b74004321b575448d8d674212d81c0e32be4ee73"
         },
         {
-          "filename": "nasa_gibs_pre_event.jpg",
-          "sensor": "NASA EOS Terra MODIS Corrected Reflectance TrueColor (250m)",
-          "type": "Pre-Event Convective State & Cryosphere Baseline",
+          "filename": "2016-07-04_NASA-GIBS_MODIS-Terra_pre-event-1d.jpg",
+          "date": "2016-07-04",
+          "sensor": "NASA EOS Terra MODIS Corrected Reflectance True Color (250m)",
+          "type": "Estado Convectivo e Crioférico no Dia Anterior",
           "bytes": 36032,
           "dimensions": [
             768,
             768
           ],
-          "date": "2016-07-04"
+          "sha256": "34261f98eacf51afd0e700eb7ee2cb672cd111f082274b3aa6cce0bddb244bf8"
         },
         {
-          "filename": "sentinel2_post_event.jpg",
+          "filename": "2016-07-05_T1345_GPM-IMERG_geostationary_-3h.png",
+          "date": "2016-07-05",
+          "timestamp_utc": "2016-07-05T13:45:00Z",
+          "sensor": "NASA GPM IMERG 30-min Calibrated Geostationary Multi-Satellite",
+          "type": "Sequência Geoestacionária Infravermelha Calibrada (-3h) Pré-Estrondo",
+          "bytes": 1861,
+          "dimensions": [
+            512,
+            512
+          ],
+          "sha256": "3fbc5731f59fd633e2ab091b1752f797a90291fc38c76eb80c26d374ebd331cb"
+        },
+        {
+          "filename": "2016-07-05_T1545_GPM-IMERG_geostationary_-1h.png",
+          "date": "2016-07-05",
+          "timestamp_utc": "2016-07-05T15:45:00Z",
+          "sensor": "NASA GPM IMERG 30-min Calibrated Geostationary Multi-Satellite",
+          "type": "Sequência Geoestacionária Infravermelha Calibrada (-1h) Pré-Estrondo",
+          "bytes": 1857,
+          "dimensions": [
+            512,
+            512
+          ],
+          "sha256": "7a259c564e28e869259d683f0b1f6741f3c438d00a378908a6fc33230c4df510"
+        },
+        {
+          "filename": "2016-07-05_T1645_GPM-IMERG_geostationary_T0.png",
+          "date": "2016-07-05",
+          "timestamp_utc": "2016-07-05T16:45:00Z",
+          "sensor": "NASA GPM IMERG 30-min Calibrated Geostationary Multi-Satellite",
+          "type": "Sequência Geoestacionária Infravermelha Calibrada (T0) Pré-Estrondo",
+          "bytes": 1842,
+          "dimensions": [
+            512,
+            512
+          ],
+          "sha256": "9227e65172f7c0891d5eaa8fcb5b53b867b3cdd1c4a30ddf6876ade7cbc5f9ee"
+        },
+        {
+          "filename": "2016-08-04_Sentinel-2-L2A_post-event.jpg",
+          "date": "2016-08-04",
           "sensor": "ESA Sentinel-2 L2A MSI (10m Optical)",
-          "type": "Post-Catastrophe Scars & Flood Deposition",
+          "type": "Cena Óptica Multiespectral Pós-Catástrofe (Cicatrizes e Depósitos)",
           "scene_id": "S2A_MSIL2A_20160804T045702_R119_T45RUL_20210212T105512",
           "acquisition": "2016-08-04T04:57:02.026000Z",
           "cloud_cover_pct": 25.6,
@@ -713,12 +1076,14 @@
           "dimensions": [
             1024,
             1024
-          ]
+          ],
+          "sha256": "717e0144b129b2b9f70b213eb42597d74723a840acaff4dd7ff5bb96b8646217"
         },
         {
-          "filename": "sentinel2_pre_event.jpg",
+          "filename": "2016-06-05_Sentinel-2-L2A_pre-event.jpg",
+          "date": "2016-06-05",
           "sensor": "ESA Sentinel-2 L2A MSI (10m Optical)",
-          "type": "Pre-Catastrophe Lake & Slope Baseline",
+          "type": "Cena Óptica Multiespectral Pré-Catástrofe (Linha de Base Glaciar)",
           "scene_id": "S2A_MSIL2A_20160605T045702_R119_T45RVM_20210211T163708",
           "acquisition": "2016-06-05T04:57:02.027000Z",
           "cloud_cover_pct": 30.0,
@@ -726,7 +1091,8 @@
           "dimensions": [
             1024,
             1024
-          ]
+          ],
+          "sha256": "846a71cd813053fcfa8d09358f0dd72493e54f4bacc331a83d2535ab41b87eea"
         }
       ]
     },
@@ -735,6 +1101,7 @@
       "id": "himachal_2023",
       "name": "Catástrofe de Himachal Pradesh",
       "date": "2023-07-09",
+      "sound_utc": "2023-07-09T06:30:00Z",
       "center": {
         "lat": 31.985,
         "lon": 77.15
@@ -745,44 +1112,89 @@
         77.27,
         32.105
       ],
+      "political_borders_context": "VALE DO RIO BEAS / KULLU, HIMACHAL PRADESH, ÍNDIA",
+      "geostationary_sensor_reference": "INSAT-3DR TIR-1 (4km) / GPM IMERG / Radar IMD Kufri",
       "files": [
         {
-          "filename": "highres_ortho_basin.png",
-          "sensor": "ArcGIS World Imagery High-Resolution Orthomosaic (Maxar/CNES/Copernicus)",
-          "type": "Geomorphology, Drainage Chute & Moraine Scar Base",
-          "bytes": 896036,
+          "filename": "2023-07-09_ArcGIS_10m_highres_basin_borders.png",
+          "date": "2023-07-09",
+          "sensor": "ArcGIS World Imagery 10m + Official International Boundaries",
+          "type": "Ortoimagem Cartográfica com Fronteiras Internacionais, Calhas e Escala Gráfica",
+          "bytes": 1973979,
           "dimensions": [
             1024,
             1024
           ],
-          "date": "Composite Recent Cloud-Free"
+          "sha256": "e9c167e8181e8ac83f9b48b38deb4607b11212dfa2585fb9af2bebf0c6545f36"
         },
         {
-          "filename": "nasa_gibs_event_day.jpg",
-          "sensor": "NASA EOS Terra MODIS Corrected Reflectance TrueColor (250m)",
-          "type": "Atmospheric Convective Cells & Cloud Cover (Event Day)",
+          "filename": "2023-07-09_NASA-GIBS_MODIS-Terra_event-day.jpg",
+          "date": "2023-07-09",
+          "sensor": "NASA EOS Terra MODIS Corrected Reflectance True Color (250m)",
+          "type": "Cobertura Atmosférica e Nuvens Convectivas no Dia do Evento",
           "bytes": 5468,
           "dimensions": [
             768,
             768
           ],
-          "date": "2023-07-09"
+          "sha256": "d5c7d2e79fcd8c00e55021198f9a90815403bf01f1a4283b5d201136ce1cd4fd"
         },
         {
-          "filename": "nasa_gibs_pre_event.jpg",
-          "sensor": "NASA EOS Terra MODIS Corrected Reflectance TrueColor (250m)",
-          "type": "Pre-Event Convective State & Cryosphere Baseline",
+          "filename": "2023-07-08_NASA-GIBS_MODIS-Terra_pre-event-1d.jpg",
+          "date": "2023-07-08",
+          "sensor": "NASA EOS Terra MODIS Corrected Reflectance True Color (250m)",
+          "type": "Estado Convectivo e Crioférico no Dia Anterior",
           "bytes": 4720,
           "dimensions": [
             768,
             768
           ],
-          "date": "2023-07-08"
+          "sha256": "e8b09e9e1e626d5f0aa195be2b6bd0efd9a9ef69d03ecbed160541274c2d1845"
         },
         {
-          "filename": "sentinel2_post_event.jpg",
+          "filename": "2023-07-09_T0330_GPM-IMERG_geostationary_-3h.png",
+          "date": "2023-07-09",
+          "timestamp_utc": "2023-07-09T03:30:00Z",
+          "sensor": "NASA GPM IMERG 30-min Calibrated Geostationary Multi-Satellite",
+          "type": "Sequência Geoestacionária Infravermelha Calibrada (-3h) Pré-Estrondo",
+          "bytes": 1883,
+          "dimensions": [
+            512,
+            512
+          ],
+          "sha256": "7dd0e2e9a868ac5370715fc38b7fc11958927f9e26c87ba5314a4b63f2b67a5b"
+        },
+        {
+          "filename": "2023-07-09_T0530_GPM-IMERG_geostationary_-1h.png",
+          "date": "2023-07-09",
+          "timestamp_utc": "2023-07-09T05:30:00Z",
+          "sensor": "NASA GPM IMERG 30-min Calibrated Geostationary Multi-Satellite",
+          "type": "Sequência Geoestacionária Infravermelha Calibrada (-1h) Pré-Estrondo",
+          "bytes": 1862,
+          "dimensions": [
+            512,
+            512
+          ],
+          "sha256": "d3289be8fe54a04d70d6c7e4faa42a6392da1a2b15268cd7a70a6347def3f458"
+        },
+        {
+          "filename": "2023-07-09_T0630_GPM-IMERG_geostationary_T0.png",
+          "date": "2023-07-09",
+          "timestamp_utc": "2023-07-09T06:30:00Z",
+          "sensor": "NASA GPM IMERG 30-min Calibrated Geostationary Multi-Satellite",
+          "type": "Sequência Geoestacionária Infravermelha Calibrada (T0) Pré-Estrondo",
+          "bytes": 1866,
+          "dimensions": [
+            512,
+            512
+          ],
+          "sha256": "c9096155e49a18fea0d8e9bef9d1c56ca47a2e62b6b7c5f7058bc6bd784d4e05"
+        },
+        {
+          "filename": "2023-08-02_Sentinel-2-L2A_post-event.jpg",
+          "date": "2023-08-02",
           "sensor": "ESA Sentinel-2 L2A MSI (10m Optical)",
-          "type": "Post-Catastrophe Scars & Flood Deposition",
+          "type": "Cena Óptica Multiespectral Pós-Catástrofe (Cicatrizes e Depósitos)",
           "scene_id": "S2B_MSIL2A_20230802T052649_R105_T43SGR_20241027T211114",
           "acquisition": "2023-08-02T05:26:49.024000Z",
           "cloud_cover_pct": 24.6,
@@ -790,12 +1202,14 @@
           "dimensions": [
             1024,
             1024
-          ]
+          ],
+          "sha256": "91f74005d669bf04a813c6ac8c21c9ec6f284b07ac481ee13ac98f3e5a888d56"
         },
         {
-          "filename": "sentinel2_pre_event.jpg",
+          "filename": "2023-06-08_Sentinel-2-L2A_pre-event.jpg",
+          "date": "2023-06-08",
           "sensor": "ESA Sentinel-2 L2A MSI (10m Optical)",
-          "type": "Pre-Catastrophe Lake & Slope Baseline",
+          "type": "Cena Óptica Multiespectral Pré-Catástrofe (Linha de Base Glaciar)",
           "scene_id": "S2A_MSIL2A_20230608T052651_R105_T43SFR_20240911T042714",
           "acquisition": "2023-06-08T05:26:51.024000Z",
           "cloud_cover_pct": 13.3,
@@ -803,7 +1217,8 @@
           "dimensions": [
             1024,
             1024
-          ]
+          ],
+          "sha256": "6d311279084f1e8898dc75dd516cb81330c1e20973881bc19a93c41bf9b0f24f"
         }
       ]
     },
@@ -812,6 +1227,7 @@
       "id": "parechu_2005",
       "name": "Enxurrada do Rio Parechu de 2005",
       "date": "2005-06-26",
+      "sound_utc": "2005-06-26T08:30:00Z",
       "center": {
         "lat": 31.956,
         "lon": 78.558
@@ -822,43 +1238,48 @@
         78.678,
         32.076
       ],
+      "political_borders_context": "SEGUNDA CHEIA TRANSFRONTEIRIÇA DO PARECHU: TIBETE (CHINA) - SUTLEJ (HIMACHAL, ÍNDIA)",
+      "geostationary_sensor_reference": "Kalpana-1 VHRR TIR (8km) / Meteosat-7 IODC",
       "files": [
         {
-          "filename": "highres_ortho_basin.png",
-          "sensor": "ArcGIS World Imagery High-Resolution Orthomosaic (Maxar/CNES/Copernicus)",
-          "type": "Geomorphology, Drainage Chute & Moraine Scar Base",
-          "bytes": 916203,
+          "filename": "2005-06-26_ArcGIS_10m_highres_basin_borders.png",
+          "date": "2005-06-26",
+          "sensor": "ArcGIS World Imagery 10m + Official International Boundaries",
+          "type": "Ortoimagem Cartográfica com Fronteiras Internacionais, Calhas e Escala Gráfica",
+          "bytes": 2102325,
           "dimensions": [
             1024,
             1024
           ],
-          "date": "Composite Recent Cloud-Free"
+          "sha256": "7987de571bc6d29b34d7b49e9d968c62e26862d08d6a49d83ff9682adbf547d5"
         },
         {
-          "filename": "nasa_gibs_event_day.jpg",
-          "sensor": "NASA EOS Terra MODIS Corrected Reflectance TrueColor (250m)",
-          "type": "Atmospheric Convective Cells & Cloud Cover (Event Day)",
+          "filename": "2005-06-26_NASA-GIBS_MODIS-Terra_event-day.jpg",
+          "date": "2005-06-26",
+          "sensor": "NASA EOS Terra MODIS Corrected Reflectance True Color (250m)",
+          "type": "Cobertura Atmosférica e Nuvens Convectivas no Dia do Evento",
           "bytes": 11249,
           "dimensions": [
             768,
             768
           ],
-          "date": "2005-06-26"
+          "sha256": "f84baf34c266db5398e794f8e60b7d518d116a323b6bce7a461bd6d821e94ead"
         },
         {
-          "filename": "nasa_gibs_pre_event.jpg",
-          "sensor": "NASA EOS Terra MODIS Corrected Reflectance TrueColor (250m)",
-          "type": "Pre-Event Convective State & Cryosphere Baseline",
+          "filename": "2005-06-25_NASA-GIBS_MODIS-Terra_pre-event-1d.jpg",
+          "date": "2005-06-25",
+          "sensor": "NASA EOS Terra MODIS Corrected Reflectance True Color (250m)",
+          "type": "Estado Convectivo e Crioférico no Dia Anterior",
           "bytes": 44542,
           "dimensions": [
             768,
             768
           ],
-          "date": "2005-06-25"
+          "sha256": "67b7a5481b677b01f8291d4b9606a8a1a7bb995afceccac8fd1d6ab843722ac4"
         }
       ]
     }
   },
-  "total_images_saved": 51,
-  "total_size_mb": 16.55
+  "total_images_saved": 68,
+  "total_size_mb": 30.5
 }

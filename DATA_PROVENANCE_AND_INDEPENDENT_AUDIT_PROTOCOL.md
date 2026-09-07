@@ -146,50 +146,54 @@ $$\text{Defasagem / Déficit Multiplier} = \frac{P_{\text{req}}}{P_{\text{meas}}
 
 ## 4. Roteiro Passo-a-Passo de Reprodução (Guia do Auditor)
 
-Para auditar e reproduzir 100% dos resultados de forma automatizada no ambiente local:
+Para auditar e reproduzir 100% dos resultados de forma automatizada no ambiente local, consulte adicionalmente a especificação detalhada de ambiente em [`SOFTWARE_AND_ENVIRONMENT_SPECIFICATION.md`](./SOFTWARE_AND_ENVIRONMENT_SPECIFICATION.md).
 
-### Passo 1: Clonar o Repositório e Verificar Dependências
+### Passo 1: Clonar o Repositório e Instalar Dependências Homologadas
 ```bash
 git clone https://github.com/reinaldohaas/Himalaia_2026.git
 cd Himalaia_2026
 
-# O ambiente utiliza exclusivamente a biblioteca padrão do Python 3 (nenhuma dependência externa proprietária é exigida)
-python --version  # Exige Python 3.8 ou superior
+# Instalar dependências declaradas em requirements.txt
+pip install -r requirements.txt
 ```
 
-### Passo 2: Executar a Auditoria Hidráulica e Termodinâmica
+### Passo 2: Executar a Auditoria Criptográfica de Integridade (SHA-256)
+Para garantir que nenhum arquivo foi corrompido, adulterado ou selecionado erroneamente:
+```bash
+python scripts/verify_audit_integrity.py
+```
+* **Saída Verificável:** Validação bit a bit de **111 arquivos de dados** contra o manifesto oficial [`data/CHECKSUMS_SHA256.txt`](./data/CHECKSUMS_SHA256.txt).
+
+### Passo 3: Executar a Auditoria Hidráulica e Termodinâmica
 ```bash
 python scripts/calculate_inverse_hydraulics.py
 ```
 * **Saída Verificável:** Gera `data/catchment_hydraulics/inverse_hydraulics_all_events.json`.
 * **Validação do Auditor:** Inspecione os campos `q_peak_m3_s`, `lake_deficit_ratio`, `frictional_water_pct_of_flood` e `deficit_multiplier` para conferir a consistência matemática direta com a Tabela da Seção 6 do Relatório Técnico.
 
-### Passo 3: Executar a Extração de Clima Espacial e Forçamento Solar
+### Passo 4: Executar a Extração de Clima Espacial e Forçamento Solar
 ```bash
 python scripts/extract_solar_forcing.py
 ```
 * **Saída Verificável:** Gera `data/solar_space_weather/solar_forcing_all_events.json`.
 * **Validação do Auditor:** Confere a datação exata do flare GOES, valor de pico de $J_z$ (em $\text{pA/m}^2$) e intervalo temporal até a quebra mecânica de cada evento.
 
-### Passo 4: Baixar e Auditar o Acervo Completo de Imagens de Satélite Locais
+### Passo 5: Baixar e Auditar o Acervo de Satélite com Datas, Fronteiras e Geoestacionários
 ```bash
-# Geração do índice STAC e planejamento de pares ópticos:
-python scripts/download_sentinel_pairs.py
-
-# Download automatizado de todas as imagens locais (ArcGIS Alta Resolução, NASA GIBS MODIS Terra e Sentinel-2 L2A):
 python scripts/download_all_satellite_images.py
 ```
 * **Saída Verificável:** 
-  * Diretório `data/satellite_imagery/<event_id>/` contendo 51 arquivos de imagens (ortomosaicos de 10m de crista e leito, registros históricos da NASA GIBS no dia do evento e no dia anterior, e cenas Sentinel-2 L2A multiespectrais).
-  * Manifesto de auditoria detalhado `data/satellite_imagery/local_imagery_manifest.json` catalogando metadados de cada arquivo, sensores, resolução e datas.
-* **Validação do Auditor:** Inspecione os arquivos `highres_ortho_basin.png`, `nasa_gibs_event_day.jpg` e `sentinel2_post_event.jpg` para checagem visual das calhas de drenagem e condições atmosféricas.
+  * Diretório `data/satellite_imagery/<event_id>/` contendo **68 imagens padronizadas** com prefixo ISO de data (`YYYY-MM-DD_...`).
+  * Ortoimagens de alta resolução de 10m com fusão de fronteiras internacionais oficiais (Esri World Boundaries), barras de escala métrica e carimbos de cume.
+  * Série temporal geoestacionária rápida (GPM IMERG 30-min calibrado) nos intervalos $T-3\text{h}$, $T-1\text{h}$ e $T_0$ pré-colapso.
+  * Manifesto completo de auditoria `data/satellite_imagery/local_imagery_manifest.json` catalogando SHA-256 de cada imagem.
 
-### Passo 5: Auditar a Aplicação 3D e Integridade de Sintaxe
+### Passo 6: Execução em Comando Único do Protocolo Mestre de Auditoria
+Para validar a integridade de ponta a ponta em uma única instrução:
 ```bash
-# Se Node.js estiver instalado:
-node scratch/verify_js_syntax.js
+python scripts/run_full_independent_audit.py
 ```
-* Abre o arquivo `mapa_ranking_himalaia_1980_2026.html` localmente em qualquer navegador (Chrome, Firefox, Safari) ou acesse via GitHub Pages.
+Retorna certificado de aprovação: `STATUS: 100% REPRODUZÍVEL`.
 
 ---
 
