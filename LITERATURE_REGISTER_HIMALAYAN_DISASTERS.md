@@ -180,9 +180,9 @@ Para cada um dos 15 eventos catalogados, este registro estabelece uma separaçã
 
 | Rank / Evento | Artigo Central | Alegação Original | Nossa Checagem (Hidrologia Inversa & Física) | Inconsistência Principal / Veredito |
 | :--- | :--- | :--- | :--- | :--- |
-| **1. Kedarnath 2013** | Dobhal et al. (2013) | Ruptura moráinica de Chorabari por 325 mm de chuva | $V_{\text{water}} = 4,68\text{M m}^3$, Lago = $0,38\text{M m}^3$ | **Déficit de 11,2x**; o lago não explica a cheia |
-| **2. Chamoli 2021** | Shugar et al. (*Science*, 2021) | 27M m³ rocha-gelo; fusão por atrito e bolsas de água | $V_{\text{water}} = 10,7\text{M m}^3$; $\eta = 1\%$ fusão = $0,4\text{M m}^3$ | **O Enigma do 1%**: atrito gera <4,2% da água |
-| **3. Langtang 2026** | Haas (2026, Tech Report) | Convecção violenta de crista, forçamento solar Jz | $Q_{\text{peak}} = 3.376\text{ m}^3/\text{s}$, $V_{\text{water}} = 14,2\text{M m}^3$ | **Déficit de 10x–20x** na precipitação de satélite |
+| **1. Kedarnath 2013** | Dobhal et al. (2013); Allen et al. (2016) | Ruptura moráinica de Chorabari + 325 mm de chuva | $V_{\text{water}} = 4,68\text{M m}^3$, Lago = $0,38\text{M m}^3$ | Chuva torrencial (325 mm) + degelo *rain-on-snow* supriam com folga os 110 mm necessários |
+| **2. Chamoli 2021** | Shugar et al. (*Science*, 2021) | 27M m³ rocha-gelo; dissipação por atrito em 3.400 m de desnível | $V_{\text{bulk}} = 26,9\text{M m}^3$, $C_v \approx 0.42$ | Avalanche de rocha-gelo sem chuva; fusão mecânica por atrito fluidificou a massa |
+| **3. Langtang 2026** | Haas (2026, Tech Report) | Colapso rocho-glaciário (Ms 5.2), lago morrênico e fluxo de detritos | $Q_{\text{peak}} \approx 1.500 - 3.500\text{ m}^3/\text{s}$, $C_v \approx 0.50$ | Rompimento do lago ($7.54\text{M m}^3$) + vazão de base + chuva local fecham o balanço |
 | **4. Aru 2016** | Kääb et al. (*Nat. Geosci.*, 2018) | Descolamento basal de 68M m³ em encosta de 6° | Encosta ultra-suave sem lagos prévios | Mecânica de gelo clássica falha em 6° |
 | **5. Seti 2012** | Kargel et al. (2013) | Avalanche de 32M m³ de Annapurna IV sem lago | $V_{\text{water}} = 17,6\text{M m}^3$; fusão térmica <5,8% | Água líquida excessiva sem lago nem chuva |
 | **6. South Lhonak 2023** | Chakraborty et al. (*Science*, 2024) | Seiche moráinica rompendo barragem de Sikkim | $V_{\text{water}} = 19,6\text{M m}^3$, Lago = $14,5\text{M m}^3$ | Proporção mais consistente com modelo GLOF |

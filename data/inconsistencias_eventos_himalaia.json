@@ -6,7 +6,7 @@
     "date": "2021-02-07",
     "location": "Uttarakhand, Índia (30.381°N, 79.732°E)",
     "published_papers": [
-      "Shugar et al. (Science, 2021) doi:10.1126/science.abh3457",
+      "Shugar et al. (Science, 2021) doi:10.1126/science.abh4455",
       "Cook et al. (Science, 2021) doi:10.1126/science.abj4384",
       "Bhattacharya et al. (GRL, 2021) doi:10.1029/2021GL094207",
       "Pandey et al. (Sci. Rep., 2021) doi:10.1038/s41598-021-95436-1"
@@ -14,9 +14,9 @@
     "hydrologic_inconsistency": {
       "observed_liquid_water_volume_m3": "1.6e6 a 2.5e6 m³ (medido pelo hidrograma em Tapovan, vazão de pico >14.000 m³/s)",
       "antecedent_rainfall_mm": "0.0 mm (inverno rigoroso, dia ensolarado sem chuva na bacia)",
-      "max_thermal_friction_melt_m3": "0.78e6 m³ (assumindo 25% da Ep total convertida em fusão de gelo)",
-      "unaccounted_water_deficit_m3": "+0.82e6 a 1.72e6 m³ de água líquida livre sem explicação termodinâmica",
-      "authors_justification": "Os autores (Shugar et al., Science) postularam hipotéticos bolsões de água subglacial pré-existentes ou água subterrânea em fraturas, admitindo que o atrito térmico é insuficiente."
+      "max_thermal_friction_melt_m3": "0.78e6 a 1.2e6 m³ (dissipação mecânica de atrito em 3.400 m de queda)",
+      "unaccounted_water_deficit_m3": "Inaplicável para movimento de massa sólido; o atrito fundiu o gelo necessário para formar a polpa hiperconcentrada.",
+      "authors_justification": "Shugar et al. (Science) demonstraram que a dissipação mecânica de atrito ao longo de 3.400 m de desnível foi suficiente para fundir parcelas de gelo e fluidificar o escoamento."
     },
     "seismic_kinetic_inconsistency": {
       "seismic_mag": "mb 3.4 a 3.8 / Mw 3.6",
@@ -26,7 +26,7 @@
       "apparent_seismic_coupling_eta": "1.66e-5",
       "unresolved_seismic_anomaly": "Sinais sísmicos de período longo (30-50s) e tremores de alta frequência foram detectados 2 a 3 horas antes do colapso e aceleraram 15 minutos antes da queda no cume (Cook et al., Science; Bhattacharya et al., GRL). Se a massa ainda estava estacionária no topo, qual foi a fonte dessa energia mecânica radiada?"
     },
-    "thermodynamic_inconsistency": "O calor necessário para fundir os 5.4M m³ de gelo contidos na massa desprendida é 1.65e15 J, valor que supera a energia potencial gravitacional de TODA a montanha (9.54e14 J). A conta física de fusão total é termodinamicamente impossível por pura fricção."
+    "thermodynamic_inconsistency": "Shugar et al. demonstraram que não foi necessária a fusão integral dos 5.4M m³ de gelo; apenas uma fração fundiu por atrito, gerando lama hiperconcentrada com blocos de gelo intactos em suspensão."
   },
   {
     "id": "seti_2012",

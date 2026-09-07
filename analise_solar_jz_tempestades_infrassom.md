@@ -5,12 +5,12 @@
 
 ## 1. Pergunta Científica e Formulação da Hipótese
 
-Uma erupção solar de classe **M7.0** ocorreu na Região Ativa AR 3792 em **25 de agosto de 2026 às 10:02 UTC** (15:47 NPT). Aproximadamente **16 horas e 50 minutos depois**, às **02:52:10 UTC de 26 de agosto de 2026** (08:37:10 NPT), deflagrou-se uma catástrofe transfronteiriça com o desprendimento de $\approx 15\times 10^6\text{ m}^3$ de gelo e rocha no maciço do Mt. Langtang Lirung (5.200 m), gerando sinal sísmico de **4.4 mb**, barramento do rio Lhende Khola (~3.950 m) e uma enxurrada de detritos que devastou 45 km da calha fluvial do Rio Trishuli.
+Uma erupção solar de classe **M6.9** ocorreu na Região Ativa AR 4513 em **25 de agosto de 2026 às 10:02 UTC** (15:47 NPT). Aproximadamente **16 horas e 50 minutos depois**, às **02:52:10 UTC de 26 de agosto de 2026** (08:37:10 NPT), deflagrou-se uma catástrofe transfronteiriça com o desprendimento de $\approx 15\times 10^6\text{ m}^3$ de gelo e rocha no maciço do Mt. Langtang Lirung (5.200 m), gerando sinal sísmico de **Ms 5.2** catalogado pelo USGS NEIC como `landslide` (evento `us7000tbwb`), barramento do rio Lhende Khola (~3.950 m) e uma enxurrada de detritos que devastou 45 km da calha fluvial do Rio Trishuli.
 
 ```
                       CADEIA CAUSAL INVESTIGADA & CLASSIFICAÇÃO METODOLÓGICA
   
-  [Flare Solar M7.0] ──► [Resposta Ionosférica] ──► [Modulação ΔJz?] ──► [Convecção/Toró?] ──► [Infrassom/Chuva?] ──► [Colapso/Ruptura]
+  [Flare Solar M6.9] ──► [Resposta Ionosférica] ──► [Modulação ΔJz?] ──► [Convecção/Toró?] ──► [Infrassom/Chuva?] ──► [Colapso/Ruptura]
      (25/08 10:02)         (25/08 10:10)             (25/08 19:00)         (25/08 23:00)         (26/08 02:20)          (26/08 02:52)
       OBSERVADO              DERIVADO                  HIPÓTESE              DERIVADO             NÃO VERIFICADO          OBSERVADO
 ```
@@ -26,7 +26,7 @@ Uma erupção solar de classe **M7.0** ocorreu na Região Ativa AR 3792 em **25 
 | Data/Hora (UTC) | Data/Hora (NPT) | Categoria | Evento / Parâmetro Registrado | Valor / Magnitude | Status do Dado | Fonte Primária |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **25/08 09:48:00** | 25/08 15:33:00 | Solar | Início do Flare de Raios X | $1.02 \times 10^{-5}\text{ W/m}^2$ | `DADO OBSERVADO` | NOAA SWPC / GOES-16 XRS |
-| **25/08 10:02:00** | 25/08 15:47:00 | Solar | **Pico da Erupção Solar (Classe M7.0)** | $\mathbf{7.00 \times 10^{-5}\text{ W/m}^2}$ | `DADO OBSERVADO` | NOAA SWPC / GOES-16 XRS |
+| **25/08 10:02:00** | 25/08 15:47:00 | Solar | **Pico da Erupção Solar (Classe M6.9, AR 4513)** | $\mathbf{6.90 \times 10^{-5}\text{ W/m}^2}$ | `DADO OBSERVADO` | NOAA SWPC / GOES-16 XRS |
 | **25/08 10:10:00** | 25/08 15:55:00 | Ionosfera | Absorção Súbita da Camada D (SID) | 28.5 dB (Atenuação HF) | `DADO DERIVADO` | NOAA D-RAP Model |
 | **25/08 10:24:00** | 25/08 16:09:00 | Solar | Fim da Fase Eruptiva Principal | $9.50 \times 10^{-6}\text{ W/m}^2$ | `DADO OBSERVADO` | GOES-16 XRS |
 | **25/08 12:00:00** | 25/08 17:45:00 | Clima Espacial | Fluxo de Prótons Solares ($>10\text{ MeV}$) | 0.85 pfu (Sub-S1) | `DADO OBSERVADO` | GOES-16 SEISS |
@@ -35,7 +35,7 @@ Uma erupção solar de classe **M7.0** ocorreu na Região Ativa AR 3792 em **25 
 | **25/08 23:45:00** | 26/08 05:30:00 | Meteorologia | Descargas Atmosféricas (Raios) | 14 $\text{strokes}/100\text{km}^2/\text{h}$ | `ESTIMATIVA` | WWLLN / GLD360 Proxy |
 | **26/08 01:30:00** | 26/08 07:15:00 | Meteorologia | Taxa de Precipitação Convectiva | 18.5 mm/h | `DADO DERIVADO` | NASA GPM IMERG V07 |
 | **26/08 02:20:00** | 26/08 08:05:00 | Infrassom | Onda de Pressão de Convecção | $\approx 0.95\text{ Pa}$ | `NÃO VERIFICADO` | Requer vDEC / CTBTO |
-| **26/08 02:52:10** | 26/08 08:37:10 | Geofísica | **Colapso Glacial / Sinal Sísmico (4.4 mb)** | $\mathbf{M_b = 4.4}\text{ (Prof. 0 km)}$ | `DADO OBSERVADO` | USGS Earthquake Hazards |
+| **26/08 02:52:10** | 26/08 08:37:10 | Geofísica | **Colapso Glacial / Sinal Sísmico (Ms 5.2 Landslide)** | $\mathbf{M_s = 5.2}\text{ (Prof. 0 km, us7000tbwb)}$ | `DADO OBSERVADO` | USGS NEIC (Earthquake Hazards) |
 | **26/08 03:05:00** | 26/08 08:50:00 | Glaciologia | Barramento do Rio Lhende Khola | Volume $\approx 8.5\times 10^6\text{ m}^3$ | `DADO DERIVADO` | PlanetScope / Copernicus |
 | **26/08 03:35:00** | 26/08 09:20:00 | Hidrologia | Rompimento Catastrófico do Barramento | $Q_{\text{max}} \approx 3.450\text{ m}^3/\text{s}$ | `DADO DERIVADO` | Modelo Hidrodinâmico |
 | **26/08 03:55:00** | 26/08 09:40:00 | Impacto | Destruição da Ponte Miteri (Fronteira) | Ponte arrancada | `DADO OBSERVADO` | ICIMOD / DOR Nepal |
