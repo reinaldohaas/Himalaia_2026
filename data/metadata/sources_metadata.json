@@ -1,52 +1,55 @@
-﻿{
+{
   "project": "Himalaia 2026 Solar-Jz-Storm Investigation",
-  "last_updated_utc": "2026-08-27 14:56:28 UTC",
+  "last_updated_utc": "2026-09-07 22:57:57 UTC",
   "coordinate_reference_system": "WGS84 (EPSG:4326)",
   "time_standards": {
     "primary": "UTC",
     "secondary": "NPT (Nepal Time = UTC+5:45)"
   },
   "critical_timestamps": {
-    "solar_flare_m7_peak_utc": "2026-08-25T10:02:00Z",
+    "solar_flare_m69_peak_utc": "2026-08-25T10:02:00Z",
     "disaster_onset_seismic_utc": "2026-08-26T02:52:10Z",
+    "second_landslide_seismic_utc": "2026-08-26T06:00:35Z",
     "delta_time_hours": 16.8361,
     "delta_time_formatted": "16h 50min 10s"
   },
   "data_sources": [
     {
       "name": "NOAA Space Weather Prediction Center (SWPC)",
-      "products": ["GOES X-Ray Flux", "Solar Protons (SEISS)", "DSCOVR Solar Wind"],
+      "products": [
+        "GOES X-Ray Flux (XRS)",
+        "Solar Protons (SEISS)",
+        "DSCOVR Solar Wind"
+      ],
       "url": "https://www.spaceweather.gov/",
       "status": "observed",
-      "access_date": "2026-08-27"
+      "notes": "Arquivos reais mantidos em data/raw/space_weather/; modelos analíticos segregados em data/synthetic/."
     },
     {
       "name": "USGS Earthquake Hazards Program",
-      "products": ["Seismic Event 4.4 mb at 02:52:10 UTC (Langtang Lirung)"],
-      "url": "https://earthquake.usgs.gov/",
+      "products": [
+        "Seismic Event us7000tbwb (Ms 5.2 landslide) e us7000tc90 (Ms 4.2 landslide)"
+      ],
+      "url": "https://earthquake.usgs.gov/fdsnws/event/1/",
       "status": "observed",
-      "access_date": "2026-08-27"
+      "notes": "Classificação oficial USGS: landslide (h = 0 km)."
     },
     {
       "name": "UN OCHA / Humanitarian Data Exchange (HDX)",
-      "products": ["Nepal Flood 2026 Corridor AOI", "ICIMOD Bridge Damage Assessment"],
+      "products": [
+        "Nepal Flood 2026 Corridor AOI",
+        "ICIMOD Bridge Damage Assessment (33 rodoviárias, 68 suspensas)"
+      ],
       "url": "https://data.humdata.org/dataset/hot_flood_npl",
-      "status": "observed",
-      "access_date": "2026-08-27"
+      "status": "observed"
     },
     {
       "name": "OpenStreetMap Foundation (OSM)",
-      "products": ["Relations 21284197 (Bhotekoshi) and 4839538 (Trishuli River)"],
+      "products": [
+        "Relations 21284197 (Bhotekoshi) and 4839538 (Trishuli River)"
+      ],
       "url": "https://www.openstreetmap.org/",
-      "status": "observed",
-      "access_date": "2026-08-27"
-    },
-    {
-      "name": "CTBTO / IMS Infrasound Network",
-      "products": ["Microbarometer arrays I40PK, I31KZ"],
-      "url": "https://www.ctbto.org/specials/vdec/",
-      "status": "unverified",
-      "notes": "Requer requisição formal vDEC para dados primários de forma de onda."
+      "status": "observed"
     }
   ]
 }

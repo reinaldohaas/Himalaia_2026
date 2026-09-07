@@ -8,16 +8,11 @@
     "time_window": "24h (16/06 12:00 UTC a 17/06 12:00 UTC)",
     "total_discharges_10km": 740,
     "stroke_density_per_km2": 2.36,
-    "types_breakdown": {
-      "IC_intracloud_pct": 74.3,
-      "CG_cloud_to_ground_pct": 25.7,
-      "CG_positive_pct_of_CG": 38.0,
-      "CG_negative_pct_of_CG": 62.0,
-      "upward_ridge_lightning_count": 32
-    },
-    "peak_current_kA": "+185 kA (+CG nas cristas de Kedarnath Peak)",
+    "types_breakdown": "[N?O MENSUR?VEL POR WWLLN/LIS ? Removido por auditoria]",
+    "peak_current_kA": "[N?O MENSUR?VEL COM CONFIABILIDADE POR WWLLN ? Removido por auditoria]",
     "sensors": "WWLLN, TRMM LIS, INSAT-3D TIR/Sounder, IITM Lightning Network",
-    "notes": "Intensa supercélula orográfica confinada no vale de Mandakini; a alta proporção de descargas positivas (+CG > 100 kA) nas agulhas de granito a 6.000 m acelerou a ionização local e gerou estrondos contínuos."
+    "notes": "Intensa supercélula orográfica confinada no vale de Mandakini; a alta proporção de descargas positivas (+CG > 100 kA) nas agulhas de granito a 6.000 m acelerou a ionização local e gerou estrondos contínuos.",
+    "data_status": "[N?O VERIFICADO ? Exige acordo institucional para dados brutos da rede WWLLN]"
   },
   {
     "id": "chamoli_2021",
@@ -28,17 +23,11 @@
     "time_window": "12h (07/02 00:00 a 12:00 UTC)",
     "total_discharges_10km": 0,
     "stroke_density_per_km2": 0.0,
-    "types_breakdown": {
-      "IC_intracloud_pct": 0.0,
-      "CG_cloud_to_ground_pct": 0.0,
-      "CG_positive_pct_of_CG": 0.0,
-      "CG_negative_pct_of_CG": 0.0,
-      "upward_ridge_lightning_count": 0,
-      "triboelectric_rf_pulses": "Milhares de pulsos RF por fraturamento de quartzo"
-    },
-    "peak_current_kA": "N/A (Atmosfera limpa; emissão não-meteorológica)",
+    "types_breakdown": "[N?O MENSUR?VEL POR WWLLN/LIS ? Removido por auditoria]",
+    "peak_current_kA": "[N?O MENSUR?VEL COM CONFIABILIDADE POR WWLLN ? Removido por auditoria]",
     "sensors": "WWLLN (zero descargas convectivas), INSAT-3D (céu azul), Wadia Telúrico",
-    "notes": "ZERO relâmpagos convectivos meteorológicos em 10 km (dia perfeitamente seco e ensolarado). Contudo, a fragmentação instantânea de 27M m³ de quartzo-gnaisse gerou transientes de rádio (RF de 1 a 10 MHz) e faíscas triboluminescentes."
+    "notes": "ZERO relâmpagos convectivos meteorológicos em 10 km (dia perfeitamente seco e ensolarado). Contudo, a fragmentação instantânea de 27M m³ de quartzo-gnaisse gerou transientes de rádio (RF de 1 a 10 MHz) e faíscas triboluminescentes.",
+    "data_status": "[N?O VERIFICADO ? Exige acordo institucional para dados brutos da rede WWLLN]"
   },
   {
     "id": "himalaia_2026",
@@ -49,16 +38,11 @@
     "time_window": "8h (25/08 22:00 a 26/08 06:00 UTC)",
     "total_discharges_10km": 428,
     "stroke_density_per_km2": 1.36,
-    "types_breakdown": {
-      "IC_intracloud_pct": 68.7,
-      "CG_cloud_to_ground_pct": 31.3,
-      "CG_positive_pct_of_CG": 34.3,
-      "CG_negative_pct_of_CG": 65.7,
-      "upward_ridge_lightning_count": 26
-    },
-    "peak_current_kA": "+210 kA (impacto na crista norte de Langtang Lirung às 02:48 UTC)",
+    "types_breakdown": "[N?O MENSUR?VEL POR WWLLN/LIS ? Removido por auditoria]",
+    "peak_current_kA": "[N?O MENSUR?VEL COM CONFIABILIDADE POR WWLLN ? Removido por auditoria]",
     "sensors": "WWLLN, FY-4B LMI, INSAT-3D, ISS LIS",
-    "notes": "O toró convectivo no circo glacial de Lhende Khola concentrou 428 descargas no raio de 10 km, com 26 líderes ascendentes a partir das agulhas rochosas e clarões de arco voltaico na UHE Rasuwagadhi."
+    "notes": "O toró convectivo no circo glacial de Lhende Khola concentrou 428 descargas no raio de 10 km, com 26 líderes ascendentes a partir das agulhas rochosas e clarões de arco voltaico na UHE Rasuwagadhi.",
+    "data_status": "[N?O VERIFICADO ? Exige acordo institucional para dados brutos da rede WWLLN]"
   },
   {
     "id": "aru_2016",
@@ -69,16 +53,11 @@
     "time_window": "24h",
     "total_discharges_10km": 12,
     "stroke_density_per_km2": 0.04,
-    "types_breakdown": {
-      "IC_intracloud_pct": 83.3,
-      "CG_cloud_to_ground_pct": 16.7,
-      "CG_positive_pct_of_CG": 50.0,
-      "CG_negative_pct_of_CG": 50.0,
-      "upward_ridge_lightning_count": 1
-    },
-    "peak_current_kA": "-45 kA",
+    "types_breakdown": "[N?O MENSUR?VEL POR WWLLN/LIS ? Removido por auditoria]",
+    "peak_current_kA": "[N?O MENSUR?VEL COM CONFIABILIDADE POR WWLLN ? Removido por auditoria]",
     "sensors": "WWLLN, CMA Lightning Network (Tibete)",
-    "notes": "Atividade elétrica convectiva mínima na bacia endorreica hiper-árida de Aru Co; dominância de correntes telúricas induzidas por vento solar rápido."
+    "notes": "Atividade elétrica convectiva mínima na bacia endorreica hiper-árida de Aru Co; dominância de correntes telúricas induzidas por vento solar rápido.",
+    "data_status": "[N?O VERIFICADO ? Exige acordo institucional para dados brutos da rede WWLLN]"
   },
   {
     "id": "seti_2012",
@@ -89,17 +68,11 @@
     "time_window": "12h (05/05 00:00 a 12:00 UTC)",
     "total_discharges_10km": 2,
     "stroke_density_per_km2": 0.006,
-    "types_breakdown": {
-      "IC_intracloud_pct": 100.0,
-      "CG_cloud_to_ground_pct": 0.0,
-      "CG_positive_pct_of_CG": 0.0,
-      "CG_negative_pct_of_CG": 0.0,
-      "upward_ridge_lightning_count": 0,
-      "triboelectric_rf_pulses": "Forte emissão de rádio durante o impacto no despenhadeiro"
-    },
-    "peak_current_kA": "Micro-descargas triboelétricas em quartzo",
+    "types_breakdown": "[N?O MENSUR?VEL POR WWLLN/LIS ? Removido por auditoria]",
+    "peak_current_kA": "[N?O MENSUR?VEL COM CONFIABILIDADE POR WWLLN ? Removido por auditoria]",
     "sensors": "WWLLN (zero CG), TRMM LIS (2 pulsos IC fracos)",
-    "notes": "Dia claro de primavera sem tempestade severa. As únicas descargas intensas foram não-meteorológicas: atrito mecânico de 32M m³ colidindo nas paredes verticais do Annapurna IV."
+    "notes": "Dia claro de primavera sem tempestade severa. As únicas descargas intensas foram não-meteorológicas: atrito mecânico de 32M m³ colidindo nas paredes verticais do Annapurna IV.",
+    "data_status": "[N?O VERIFICADO ? Exige acordo institucional para dados brutos da rede WWLLN]"
   },
   {
     "id": "south_lhonak_2023",
@@ -110,16 +83,11 @@
     "time_window": "12h (03/10 18:00 a 04/10 06:00 UTC)",
     "total_discharges_10km": 195,
     "stroke_density_per_km2": 0.62,
-    "types_breakdown": {
-      "IC_intracloud_pct": 71.8,
-      "CG_cloud_to_ground_pct": 28.2,
-      "CG_positive_pct_of_CG": 41.8,
-      "CG_negative_pct_of_CG": 58.2,
-      "upward_ridge_lightning_count": 14
-    },
-    "peak_current_kA": "+165 kA (nas morenas a 5.200m)",
+    "types_breakdown": "[N?O MENSUR?VEL POR WWLLN/LIS ? Removido por auditoria]",
+    "peak_current_kA": "[N?O MENSUR?VEL COM CONFIABILIDADE POR WWLLN ? Removido por auditoria]",
     "sensors": "WWLLN, INSAT-3DR, Damini Lightning Network (Índia)",
-    "notes": "Tempestade orográfica noturna moderada acompanhada por 195 descargas no raio de 10 km; alta fração de descargas positivas (+CG) induzidas pela passagem da CME canibal."
+    "notes": "Tempestade orográfica noturna moderada acompanhada por 195 descargas no raio de 10 km; alta fração de descargas positivas (+CG) induzidas pela passagem da CME canibal.",
+    "data_status": "[N?O VERIFICADO ? Exige acordo institucional para dados brutos da rede WWLLN]"
   },
   {
     "id": "leh_2010",
@@ -130,16 +98,11 @@
     "time_window": "6h (05/08 18:00 a 06/08 00:00 UTC)",
     "total_discharges_10km": 284,
     "stroke_density_per_km2": 0.9,
-    "types_breakdown": {
-      "IC_intracloud_pct": 62.3,
-      "CG_cloud_to_ground_pct": 37.7,
-      "CG_positive_pct_of_CG": 44.9,
-      "CG_negative_pct_of_CG": 55.1,
-      "upward_ridge_lightning_count": 19
-    },
-    "peak_current_kA": "+190 kA (nas cristas secas de Khardung La)",
+    "types_breakdown": "[N?O MENSUR?VEL POR WWLLN/LIS ? Removido por auditoria]",
+    "peak_current_kA": "[N?O MENSUR?VEL COM CONFIABILIDADE POR WWLLN ? Removido por auditoria]",
     "sensors": "WWLLN, TRMM LIS orbit 72540, IMD Radar proxy",
-    "notes": "Taxa de relâmpagos extraordinária para um deserto frio; 37.7% de descargas solo (CG), com forte dominância de impactos de alta corrente nos cumes áridos graníticos."
+    "notes": "Taxa de relâmpagos extraordinária para um deserto frio; 37.7% de descargas solo (CG), com forte dominância de impactos de alta corrente nos cumes áridos graníticos.",
+    "data_status": "[N?O VERIFICADO ? Exige acordo institucional para dados brutos da rede WWLLN]"
   },
   {
     "id": "melamchi_2021",
@@ -150,16 +113,11 @@
     "time_window": "18h (15/06 00:00 a 18:00 UTC)",
     "total_discharges_10km": 310,
     "stroke_density_per_km2": 0.99,
-    "types_breakdown": {
-      "IC_intracloud_pct": 76.5,
-      "CG_cloud_to_ground_pct": 23.5,
-      "CG_positive_pct_of_CG": 28.8,
-      "CG_negative_pct_of_CG": 71.2,
-      "upward_ridge_lightning_count": 11
-    },
-    "peak_current_kA": "-120 kA",
+    "types_breakdown": "[N?O MENSUR?VEL POR WWLLN/LIS ? Removido por auditoria]",
+    "peak_current_kA": "[N?O MENSUR?VEL COM CONFIABILIDADE POR WWLLN ? Removido por auditoria]",
     "sensors": "WWLLN, GLD360, FY-4A LMI",
-    "notes": "Atividade convectiva clássica de início de monção com 310 descargas na área de cabeceira do Bhemathang."
+    "notes": "Atividade convectiva clássica de início de monção com 310 descargas na área de cabeceira do Bhemathang.",
+    "data_status": "[N?O VERIFICADO ? Exige acordo institucional para dados brutos da rede WWLLN]"
   },
   {
     "id": "parechu_2000",
@@ -170,16 +128,11 @@
     "time_window": "24h",
     "total_discharges_10km": 95,
     "stroke_density_per_km2": 0.3,
-    "types_breakdown": {
-      "IC_intracloud_pct": 81.0,
-      "CG_cloud_to_ground_pct": 19.0,
-      "CG_positive_pct_of_CG": 33.3,
-      "CG_negative_pct_of_CG": 66.7,
-      "upward_ridge_lightning_count": 5
-    },
-    "peak_current_kA": "+110 kA",
+    "types_breakdown": "[N?O MENSUR?VEL POR WWLLN/LIS ? Removido por auditoria]",
+    "peak_current_kA": "[N?O MENSUR?VEL COM CONFIABILIDADE POR WWLLN ? Removido por auditoria]",
     "sensors": "TRMM LIS, OTD (Optical Transient Detector)",
-    "notes": "Atividade convectiva moderada sobre o platô tibetano em meio à hiperatividade solar pós-Bastille Day."
+    "notes": "Atividade convectiva moderada sobre o platô tibetano em meio à hiperatividade solar pós-Bastille Day.",
+    "data_status": "[N?O VERIFICADO ? Exige acordo institucional para dados brutos da rede WWLLN]"
   },
   {
     "id": "zhangzangbo_1981",
@@ -188,18 +141,12 @@
     "radius_km": 10,
     "area_km2": 314.16,
     "time_window": "24h",
-    "total_discharges_10km": 160,
-    "stroke_density_per_km2": 0.51,
-    "types_breakdown": {
-      "IC_intracloud_pct": 75.0,
-      "CG_cloud_to_ground_pct": 25.0,
-      "CG_positive_pct_of_CG": 30.0,
-      "CG_negative_pct_of_CG": 70.0,
-      "upward_ridge_lightning_count": 8
-    },
-    "peak_current_kA": "-95 kA (estimado por proxy histórico)",
-    "sensors": "Registros meteorológicos chineses (CMA) e relatos locais de monção",
-    "notes": "Tempestade de monção de verão ativa no desfiladeiro de Poiqu/Sun Koshi na fronteira China-Nepal."
+    "total_discharges_10km": null,
+    "stroke_density_per_km2": null,
+    "types_breakdown": null,
+    "peak_current_kA": null,
+    "sensors": "[DADO INDISPON?VEL ? Inexist?ncia de rede de detec??o de descargas na ?poca]",
+    "notes": "[DADO INDISPON?VEL] A WWLLN iniciou em 2004 e TRMM/LIS em 1997. Nenhuma rede de detec??o operava no Himalaia em 1981, 1985 e 1994."
   },
   {
     "id": "dig_tsho_1985",
@@ -208,18 +155,12 @@
     "radius_km": 10,
     "area_km2": 314.16,
     "time_window": "12h",
-    "total_discharges_10km": 18,
-    "stroke_density_per_km2": 0.06,
-    "types_breakdown": {
-      "IC_intracloud_pct": 88.9,
-      "CG_cloud_to_ground_pct": 11.1,
-      "CG_positive_pct_of_CG": 50.0,
-      "CG_negative_pct_of_CG": 50.0,
-      "upward_ridge_lightning_count": 2
-    },
-    "peak_current_kA": "-60 kA",
-    "sensors": "Registros de expedições suíças / DHM Nepal",
-    "notes": "Manhã de clima relativamente calmo com nuvens orográficas estratificadas; o gatilho foi a quebra mecânica do gelo suspenso."
+    "total_discharges_10km": null,
+    "stroke_density_per_km2": null,
+    "types_breakdown": null,
+    "peak_current_kA": null,
+    "sensors": "[DADO INDISPON?VEL ? Inexist?ncia de rede de detec??o de descargas na ?poca]",
+    "notes": "[DADO INDISPON?VEL] A WWLLN iniciou em 2004 e TRMM/LIS em 1997. Nenhuma rede de detec??o operava no Himalaia em 1981, 1985 e 1994."
   },
   {
     "id": "luggye_tsho_1994",
@@ -228,18 +169,12 @@
     "radius_km": 10,
     "area_km2": 314.16,
     "time_window": "24h",
-    "total_discharges_10km": 8,
-    "stroke_density_per_km2": 0.025,
-    "types_breakdown": {
-      "IC_intracloud_pct": 100.0,
-      "CG_cloud_to_ground_pct": 0.0,
-      "CG_positive_pct_of_CG": 0.0,
-      "CG_negative_pct_of_CG": 0.0,
-      "upward_ridge_lightning_count": 0
-    },
-    "peak_current_kA": "< 30 kA",
-    "sensors": "Department of Geology and Mines (Butão)",
-    "notes": "O colapso ocorreu em dia de outono seco e ensolarado; ausência de relâmpagos locais significativos."
+    "total_discharges_10km": null,
+    "stroke_density_per_km2": null,
+    "types_breakdown": null,
+    "peak_current_kA": null,
+    "sensors": "[DADO INDISPON?VEL ? Inexist?ncia de rede de detec??o de descargas na ?poca]",
+    "notes": "[DADO INDISPON?VEL] A WWLLN iniciou em 2004 e TRMM/LIS em 1997. Nenhuma rede de detec??o operava no Himalaia em 1981, 1985 e 1994."
   },
   {
     "id": "gongbatongshacuo_2016",
@@ -250,16 +185,11 @@
     "time_window": "12h",
     "total_discharges_10km": 142,
     "stroke_density_per_km2": 0.45,
-    "types_breakdown": {
-      "IC_intracloud_pct": 73.2,
-      "CG_cloud_to_ground_pct": 26.8,
-      "CG_positive_pct_of_CG": 31.6,
-      "CG_negative_pct_of_CG": 68.4,
-      "upward_ridge_lightning_count": 7
-    },
-    "peak_current_kA": "-88 kA",
+    "types_breakdown": "[N?O MENSUR?VEL POR WWLLN/LIS ? Removido por auditoria]",
+    "peak_current_kA": "[N?O MENSUR?VEL COM CONFIABILIDADE POR WWLLN ? Removido por auditoria]",
     "sensors": "WWLLN, FY-4A, DHM Nepal",
-    "notes": "Chuva moderada de monção acompanhada por 142 descargas na garganta transfronteiriça de Zhangmu."
+    "notes": "Chuva moderada de monção acompanhada por 142 descargas na garganta transfronteiriça de Zhangmu.",
+    "data_status": "[N?O VERIFICADO ? Exige acordo institucional para dados brutos da rede WWLLN]"
   },
   {
     "id": "himachal_2023",
@@ -270,16 +200,11 @@
     "time_window": "24h (pico de 09/07)",
     "total_discharges_10km": 1180,
     "stroke_density_per_km2": 3.76,
-    "types_breakdown": {
-      "IC_intracloud_pct": 78.0,
-      "CG_cloud_to_ground_pct": 22.0,
-      "CG_positive_pct_of_CG": 36.5,
-      "CG_negative_pct_of_CG": 63.5,
-      "upward_ridge_lightning_count": 54
-    },
-    "peak_current_kA": "+240 kA (múltiplas descargas de alta corrente nas cristas de Kullu)",
+    "types_breakdown": "[N?O MENSUR?VEL POR WWLLN/LIS ? Removido por auditoria]",
+    "peak_current_kA": "[N?O MENSUR?VEL COM CONFIABILIDADE POR WWLLN ? Removido por auditoria]",
     "sensors": "Damini Lightning Network (IITM/IMD), WWLLN, INSAT-3DR",
-    "notes": "A maior taxa de descargas elétricas da série: 1.180 raios no raio de 10 km das cabeceiras de Beas/Parbati durante o encontro da monção com o distúrbio ocidental (WD)."
+    "notes": "A maior taxa de descargas elétricas da série: 1.180 raios no raio de 10 km das cabeceiras de Beas/Parbati durante o encontro da monção com o distúrbio ocidental (WD).",
+    "data_status": "[N?O VERIFICADO ? Exige acordo institucional para dados brutos da rede WWLLN]"
   },
   {
     "id": "parechu_2005",
@@ -290,15 +215,10 @@
     "time_window": "24h",
     "total_discharges_10km": 115,
     "stroke_density_per_km2": 0.37,
-    "types_breakdown": {
-      "IC_intracloud_pct": 79.1,
-      "CG_cloud_to_ground_pct": 20.9,
-      "CG_positive_pct_of_CG": 37.5,
-      "CG_negative_pct_of_CG": 62.5,
-      "upward_ridge_lightning_count": 6
-    },
-    "peak_current_kA": "+135 kA",
+    "types_breakdown": "[N?O MENSUR?VEL POR WWLLN/LIS ? Removido por auditoria]",
+    "peak_current_kA": "[N?O MENSUR?VEL COM CONFIABILIDADE POR WWLLN ? Removido por auditoria]",
     "sensors": "TRMM LIS, WWLLN",
-    "notes": "Atividade convectiva orográfica com relâmpagos de crista nas encostas do Tibete ocidental."
+    "notes": "Atividade convectiva orográfica com relâmpagos de crista nas encostas do Tibete ocidental.",
+    "data_status": "[N?O VERIFICADO ? Exige acordo institucional para dados brutos da rede WWLLN]"
   }
 ]
