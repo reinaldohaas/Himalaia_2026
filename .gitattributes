@@ -1,0 +1,11 @@
+﻿# Git attributes for Himalaia_2026 repository
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.kmz binary
+*.h5 binary
+*.hdf5 binary
+*.mseed binary
+*.tif binary
+*.tiff binary

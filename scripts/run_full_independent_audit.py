@@ -1,4 +1,4 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 """
 scripts/run_full_independent_audit.py
 Master End-to-End Scientific Audit Runner:
@@ -37,7 +37,10 @@ def step_checksums():
     cmd = f'"{sys.executable}" scripts/verify_audit_integrity.py'
     res = subprocess.run(cmd, cwd=BASE_DIR, shell=True, capture_output=True, text=True)
     if res.returncode == 0:
-        return True, "111 / 111 arquivos verificados com integridade bit a bit (SHA-256)."
+        for line in res.stdout.splitlines():
+            if "Verified Files:" in line:
+                return True, line.strip()
+        return True, "Todos os arquivos verificados com integridade bit a bit (SHA-256)."
     return False, res.stderr or res.stdout
 
 def step_hydraulics():

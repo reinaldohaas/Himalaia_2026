@@ -104,8 +104,9 @@ def run_inverse_hydrology():
     print("-" * 80)
 
     # Save summary table
-    repo_dir = "C:/Users/haas/github/Himalaia_2026"
+    repo_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     out_csv = os.path.join(repo_dir, "data/processed/hydrology_inverse_balance_summary.csv")
+    os.makedirs(os.path.dirname(out_csv), exist_ok=True)
     pd.DataFrame(results).to_csv(out_csv, index=False)
     print(f"\nSummary table saved to: {out_csv}")
 

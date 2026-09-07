@@ -1,4 +1,4 @@
-﻿# ==============================================================================
+# ==============================================================================
 # PROJETO HIMALAIA 2026: DEPENDÊNCIAS DE SOFTWARE E REPRODUTIBILIDADE CIENTÍFICA
 # Investigação Transdisciplinar de Hidráulica Inversa, Eletrodinâmica e Satélites
 # ==============================================================================
@@ -16,5 +16,7 @@ matplotlib>=3.7.0
 requests>=2.28.0
 urllib3>=2.0.0
 
-# Ferramentas Opcionais de Geoprocessamento (Visualização Avançada)
+# Ferramentas Opcionais de Geoprocessamento (Visualização Avançada) e Dados Científicos
 geojson>=3.0.0
+h5py>=3.8.0
+pyyaml>=6.0.0

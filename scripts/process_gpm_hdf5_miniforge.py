@@ -5,7 +5,7 @@ import os
 import glob
 
 def process_gpm_hdf5():
-    repo_dir = "C:/Users/haas/github/Himalaia_2026"
+    repo_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     meteo_dir = os.path.join(repo_dir, "data/raw/meteorology")
     
     # Encontrar arquivos HDF5

@@ -121,7 +121,7 @@ def build_satellite_search_catalog(events_path, output_path):
     return catalog
 
 if __name__ == "__main__":
-    base_dir = r"C:\Users\haas\github\Himalaia_2026"
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     ev_path = os.path.join(base_dir, "data", "himalayan_events_1980_2026.json")
     out_path = os.path.join(base_dir, "data", "satellite_imagery", "sentinel_pairs_index.json")
     build_satellite_search_catalog(ev_path, out_path)

@@ -30,22 +30,24 @@ def generate_solar_forcing_dataset(events_path, output_path):
             },
             "electrodynamics_coupling": {
                 "ionospheric_potential_vi": ev.get("solar_vi", "N/A"),
-                "jz_peak_density": ev.get("solar_jz_peak", "N/A"),
+                "jz_model_analytical": ev.get("jz_derived_from_vi_constant_Rc", ev.get("solar_jz_peak", "N/A")),
+                "jz_derivation_note": ev.get("jz_derivation_note", "Fórmula analítica Jz = Vi / Rc sem medição direta in-situ."),
                 "atmospheric_physics": ev.get("solar_physics", "N/A")
             },
             "lightning_activity_20km": {
                 "total_count": ev.get("lightning_20km_count", 0),
                 "density_per_km2": ev.get("lightning_20km_density", 0.0),
-                "ic_pct": ev.get("lightning_20km_ic_pct", 0.0),
-                "cg_pct": ev.get("lightning_20km_cg_pct", 0.0),
-                "positive_cg_pct": ev.get("lightning_20km_pos_pct", 0.0),
-                "upward_discharges": ev.get("lightning_20km_upward", 0),
+                "ic_pct": ev.get("lightning_20km_ic_pct", "N/A"),
+                "cg_pct": ev.get("lightning_20km_cg_pct", "N/A"),
+                "positive_cg_pct": ev.get("lightning_20km_pos_pct", "N/A"),
+                "upward_discharges": ev.get("lightning_20km_upward", "N/A"),
                 "peak_current": ev.get("lightning_20km_peak_kA", "N/A"),
                 "time_window": ev.get("lightning_20km_window_desc", "N/A")
             }
         }
         solar_data.append(entry)
 
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
     with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(solar_data, f, ensure_ascii=False, indent=2)
 
@@ -53,7 +55,7 @@ def generate_solar_forcing_dataset(events_path, output_path):
     return solar_data
 
 if __name__ == "__main__":
-    base_dir = r"C:\Users\haas\github\Himalaia_2026"
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     ev_path = os.path.join(base_dir, "data", "himalayan_events_1980_2026.json")
     out_path = os.path.join(base_dir, "data", "solar_space_weather", "solar_forcing_all_events.json")
     generate_solar_forcing_dataset(ev_path, out_path)
