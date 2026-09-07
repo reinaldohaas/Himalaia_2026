@@ -446,18 +446,18 @@
     "date": "2000-08-01",
     "country": "China (Tibete) / Índia",
     "coordinates": {
-      "lat": 31.98,
-      "lon": 78.54
+      "lat": 32.028,
+      "lon": 78.536
     },
     "bounding_box_wsen": [
-      78.39,
-      31.83,
-      78.69,
-      32.13
+      78.386,
+      31.878,
+      78.686,
+      32.178
     ],
     "target_linear_scar": {
-      "origin_ridge": "Crista e arestas de cume a montante de 3.200m",
-      "runout_chute": "Calha de drenagem convergindo para o vale em 31.98, 78.54",
+      "origin_ridge": "Crista e arestas de cume a montante de 3.350m",
+      "runout_chute": "Calha de drenagem convergindo para o vale em 32.028, 78.536",
       "diagnostic_feature": "Faixa linear contínua de decapagem de leito rochoso (bedrock stripping), remoção total de solo e supressão de NDVI",
       "dem_differencing_target": "Perda de volume vertical por comparação geodésica de DEM (SRTM / ALOS vs. Copernicus 30m / ArcticDEM)"
     },
@@ -501,18 +501,18 @@
     "date": "1981-07-26",
     "country": "China (Tibete) / Nepal",
     "coordinates": {
-      "lat": 28.092,
-      "lon": 85.98
+      "lat": 28.175,
+      "lon": 86.045
     },
     "bounding_box_wsen": [
-      85.83,
-      27.942,
-      86.13,
-      28.242
+      85.895,
+      28.025,
+      86.195,
+      28.325
     ],
     "target_linear_scar": {
-      "origin_ridge": "Crista e arestas de cume a montante de 4.200m",
-      "runout_chute": "Calha de drenagem convergindo para o vale em 28.092, 85.98",
+      "origin_ridge": "Crista e arestas de cume a montante de 4.250m",
+      "runout_chute": "Calha de drenagem convergindo para o vale em 28.175, 86.045",
       "diagnostic_feature": "Faixa linear contínua de decapagem de leito rochoso (bedrock stripping), remoção total de solo e supressão de NDVI",
       "dem_differencing_target": "Perda de volume vertical por comparação geodésica de DEM (SRTM / ALOS vs. Copernicus 30m / ArcticDEM)"
     },
@@ -666,18 +666,18 @@
     "date": "2020-01-01",
     "country": "China (Tibete) / Nepal",
     "coordinates": {
-      "lat": 28.092,
-      "lon": 85.98
+      "lat": 28.026,
+      "lon": 85.965
     },
     "bounding_box_wsen": [
-      85.83,
-      27.942,
-      86.13,
-      28.242
+      85.815,
+      27.876,
+      86.115,
+      28.176
     ],
     "target_linear_scar": {
       "origin_ridge": "Crista e arestas de cume a montante de 4.100m",
-      "runout_chute": "Calha de drenagem convergindo para o vale em 28.092, 85.98",
+      "runout_chute": "Calha de drenagem convergindo para o vale em 28.026, 85.965",
       "diagnostic_feature": "Faixa linear contínua de decapagem de leito rochoso (bedrock stripping), remoção total de solo e supressão de NDVI",
       "dem_differencing_target": "Perda de volume vertical por comparação geodésica de DEM (SRTM / ALOS vs. Copernicus 30m / ArcticDEM)"
     },
@@ -776,18 +776,18 @@
     "date": "2005-06-26",
     "country": "China (Tibete) / Índia",
     "coordinates": {
-      "lat": 31.98,
-      "lon": 78.54
+      "lat": 31.956,
+      "lon": 78.558
     },
     "bounding_box_wsen": [
-      78.39,
-      31.83,
-      78.69,
-      32.13
+      78.408,
+      31.806,
+      78.708,
+      32.106
     ],
     "target_linear_scar": {
-      "origin_ridge": "Crista e arestas de cume a montante de 3.200m",
-      "runout_chute": "Calha de drenagem convergindo para o vale em 31.98, 78.54",
+      "origin_ridge": "Crista e arestas de cume a montante de 3.100m",
+      "runout_chute": "Calha de drenagem convergindo para o vale em 31.956, 78.558",
       "diagnostic_feature": "Faixa linear contínua de decapagem de leito rochoso (bedrock stripping), remoção total de solo e supressão de NDVI",
       "dem_differencing_target": "Perda de volume vertical por comparação geodésica de DEM (SRTM / ALOS vs. Copernicus 30m / ArcticDEM)"
     },
