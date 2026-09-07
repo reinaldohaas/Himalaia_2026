@@ -12,8 +12,11 @@ An open-source, reproducible scientific investigation into the catastrophic casc
 
 ---
 
-## 📖 Comprehensive Technical Report
-👉 **Read the full publication-ready technical document:** [`TECHNICAL_REPORT_HIMALAYAN_DISASTER_2026.md`](TECHNICAL_REPORT_HIMALAYAN_DISASTER_2026.md)
+## 📖 Comprehensive Technical Reports & Independent Audit
+👉 **2026 Langtang Disaster Master Report:** [`TECHNICAL_REPORT_HIMALAYAN_DISASTER_2026.md`](TECHNICAL_REPORT_HIMALAYAN_DISASTER_2026.md)  
+👉 **15 Himalayan Catastrophes (1980–2026) Comparative Report:** [`TECHNICAL_REPORT_HIMALAYAN_CATASTROPHES_1980_2026.md`](TECHNICAL_REPORT_HIMALAYAN_CATASTROPHES_1980_2026.md)  
+👉 **Independent Audit Protocol & Data Provenance:** [`DATA_PROVENANCE_AND_INDEPENDENT_AUDIT_PROTOCOL.md`](DATA_PROVENANCE_AND_INDEPENDENT_AUDIT_PROTOCOL.md)  
+👉 **Scientific Literature Register & Critical Audit:** [`LITERATURE_REGISTER_HIMALAYAN_DISASTERS.md`](LITERATURE_REGISTER_HIMALAYAN_DISASTERS.md)
 
 ### Key Pillars of the Investigation:
 1. **Confronting Official Incongruities (The ~10× Water Deficit):**
