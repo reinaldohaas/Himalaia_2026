@@ -171,12 +171,18 @@ python scripts/extract_solar_forcing.py
 * **Saída Verificável:** Gera `data/solar_space_weather/solar_forcing_all_events.json`.
 * **Validação do Auditor:** Confere a datação exata do flare GOES, valor de pico de $J_z$ (em $\text{pA/m}^2$) e intervalo temporal até a quebra mecânica de cada evento.
 
-### Passo 4: Gerar o Catálogo STAC de Imagens de Satélite (Antes/Depois)
+### Passo 4: Baixar e Auditar o Acervo Completo de Imagens de Satélite Locais
 ```bash
+# Geração do índice STAC e planejamento de pares ópticos:
 python scripts/download_sentinel_pairs.py
+
+# Download automatizado de todas as imagens locais (ArcGIS Alta Resolução, NASA GIBS MODIS Terra e Sentinel-2 L2A):
+python scripts/download_all_satellite_images.py
 ```
-* **Saída Verificável:** Gera `data/satellite_imagery/sentinel_pairs_index.json`.
-* **Validação do Auditor:** Fornece as coordenadas das *Bounding Boxes* de cada cicatriz linear de crista, datas das cenas Sentinel-2 L2A com cobertura de nuvens $<25\%$ e especificações de sensores geoestacionários.
+* **Saída Verificável:** 
+  * Diretório `data/satellite_imagery/<event_id>/` contendo 51 arquivos de imagens (ortomosaicos de 10m de crista e leito, registros históricos da NASA GIBS no dia do evento e no dia anterior, e cenas Sentinel-2 L2A multiespectrais).
+  * Manifesto de auditoria detalhado `data/satellite_imagery/local_imagery_manifest.json` catalogando metadados de cada arquivo, sensores, resolução e datas.
+* **Validação do Auditor:** Inspecione os arquivos `highres_ortho_basin.png`, `nasa_gibs_event_day.jpg` e `sentinel2_post_event.jpg` para checagem visual das calhas de drenagem e condições atmosféricas.
 
 ### Passo 5: Auditar a Aplicação 3D e Integridade de Sintaxe
 ```bash

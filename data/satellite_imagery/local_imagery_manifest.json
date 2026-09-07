@@ -1,0 +1,864 @@
+{
+  "generated_at": "2026-09-07T20:21:05.109473Z",
+  "total_events": 15,
+  "imagery_directory": "data/satellite_imagery/",
+  "events": {
+    "kedarnath_2013": {
+      "rank": 1,
+      "id": "kedarnath_2013",
+      "name": "Catástrofe de Kedarnath (Chorabari / Mandakini)",
+      "date": "2013-06-16",
+      "center": {
+        "lat": 30.745,
+        "lon": 79.067
+      },
+      "bbox_wsen": [
+        78.947,
+        30.625,
+        79.187,
+        30.865
+      ],
+      "files": [
+        {
+          "filename": "highres_ortho_basin.png",
+          "sensor": "ArcGIS World Imagery High-Resolution Orthomosaic (Maxar/CNES/Copernicus)",
+          "type": "Geomorphology, Drainage Chute & Moraine Scar Base",
+          "bytes": 809716,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "date": "Composite Recent Cloud-Free"
+        },
+        {
+          "filename": "nasa_gibs_event_day.jpg",
+          "sensor": "NASA EOS Terra MODIS Corrected Reflectance TrueColor (250m)",
+          "type": "Atmospheric Convective Cells & Cloud Cover (Event Day)",
+          "bytes": 4921,
+          "dimensions": [
+            768,
+            768
+          ],
+          "date": "2013-06-16"
+        },
+        {
+          "filename": "nasa_gibs_pre_event.jpg",
+          "sensor": "NASA EOS Terra MODIS Corrected Reflectance TrueColor (250m)",
+          "type": "Pre-Event Convective State & Cryosphere Baseline",
+          "bytes": 15121,
+          "dimensions": [
+            768,
+            768
+          ],
+          "date": "2013-06-15"
+        }
+      ]
+    },
+    "chamoli_2021": {
+      "rank": 2,
+      "id": "chamoli_2021",
+      "name": "Catástrofe de Chamoli (Rishiganga / Dhauliganga)",
+      "date": "2021-02-07",
+      "center": {
+        "lat": 30.378,
+        "lon": 79.732
+      },
+      "bbox_wsen": [
+        79.612,
+        30.258,
+        79.852,
+        30.498
+      ],
+      "files": [
+        {
+          "filename": "highres_ortho_basin.png",
+          "sensor": "ArcGIS World Imagery High-Resolution Orthomosaic (Maxar/CNES/Copernicus)",
+          "type": "Geomorphology, Drainage Chute & Moraine Scar Base",
+          "bytes": 850156,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "date": "Composite Recent Cloud-Free"
+        },
+        {
+          "filename": "nasa_gibs_event_day.jpg",
+          "sensor": "NASA EOS Terra MODIS Corrected Reflectance TrueColor (250m)",
+          "type": "Atmospheric Convective Cells & Cloud Cover (Event Day)",
+          "bytes": 58548,
+          "dimensions": [
+            768,
+            768
+          ],
+          "date": "2021-02-07"
+        },
+        {
+          "filename": "nasa_gibs_pre_event.jpg",
+          "sensor": "NASA EOS Terra MODIS Corrected Reflectance TrueColor (250m)",
+          "type": "Pre-Event Convective State & Cryosphere Baseline",
+          "bytes": 82029,
+          "dimensions": [
+            768,
+            768
+          ],
+          "date": "2021-02-06"
+        },
+        {
+          "filename": "sentinel2_post_event.jpg",
+          "sensor": "ESA Sentinel-2 L2A MSI (10m Optical)",
+          "type": "Post-Catastrophe Scars & Flood Deposition",
+          "scene_id": "S2A_MSIL2A_20210225T051801_R062_T44RLU_20210225T154526",
+          "acquisition": "2021-02-25T05:18:01.024000Z",
+          "cloud_cover_pct": 10.5,
+          "bytes": 412481,
+          "dimensions": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "filename": "sentinel2_pre_event.jpg",
+          "sensor": "ESA Sentinel-2 L2A MSI (10m Optical)",
+          "type": "Pre-Catastrophe Lake & Slope Baseline",
+          "scene_id": "S2B_MSIL2A_20210131T052039_R062_T44RLU_20210202T123030",
+          "acquisition": "2021-01-31T05:20:39.024000Z",
+          "cloud_cover_pct": 17.4,
+          "bytes": 451495,
+          "dimensions": [
+            1024,
+            1024
+          ]
+        }
+      ]
+    },
+    "himalaia_2026": {
+      "rank": 3,
+      "id": "himalaia_2026",
+      "name": "Catástrofe de 2026 (Lhende Khola / Rio Trishuli)",
+      "date": "2024-08-26",
+      "center": {
+        "lat": 28.274,
+        "lon": 85.483
+      },
+      "bbox_wsen": [
+        85.363,
+        28.154,
+        85.603,
+        28.394
+      ],
+      "files": [
+        {
+          "filename": "highres_ortho_basin.png",
+          "sensor": "ArcGIS World Imagery High-Resolution Orthomosaic (Maxar/CNES/Copernicus)",
+          "type": "Geomorphology, Drainage Chute & Moraine Scar Base",
+          "bytes": 835060,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "date": "Composite Recent Cloud-Free"
+        },
+        {
+          "filename": "nasa_gibs_event_day.jpg",
+          "sensor": "NASA EOS Terra MODIS Corrected Reflectance TrueColor (250m)",
+          "type": "Atmospheric Convective Cells & Cloud Cover (Event Day)",
+          "bytes": 50345,
+          "dimensions": [
+            768,
+            768
+          ],
+          "date": "2024-08-26"
+        },
+        {
+          "filename": "nasa_gibs_pre_event.jpg",
+          "sensor": "NASA EOS Terra MODIS Corrected Reflectance TrueColor (250m)",
+          "type": "Pre-Event Convective State & Cryosphere Baseline",
+          "bytes": 58765,
+          "dimensions": [
+            768,
+            768
+          ],
+          "date": "2024-08-25"
+        },
+        {
+          "filename": "sentinel2_pre_event.jpg",
+          "sensor": "ESA Sentinel-2 L2A MSI (10m Optical)",
+          "type": "Pre-Catastrophe Lake & Slope Baseline",
+          "scene_id": "S2A_MSIL2A_20240730T044701_R076_T45RUM_20240730T103447",
+          "acquisition": "2024-07-30T04:47:01.024000Z",
+          "cloud_cover_pct": 39.3,
+          "bytes": 265153,
+          "dimensions": [
+            1024,
+            1024
+          ]
+        }
+      ]
+    },
+    "aru_2016": {
+      "rank": 4,
+      "id": "aru_2016",
+      "name": "Colapso Duplo das Geleiras de Aru",
+      "date": "2016-07-17",
+      "center": {
+        "lat": 34.045,
+        "lon": 82.285
+      },
+      "bbox_wsen": [
+        82.165,
+        33.925,
+        82.405,
+        34.165
+      ],
+      "files": [
+        {
+          "filename": "highres_ortho_basin.png",
+          "sensor": "ArcGIS World Imagery High-Resolution Orthomosaic (Maxar/CNES/Copernicus)",
+          "type": "Geomorphology, Drainage Chute & Moraine Scar Base",
+          "bytes": 718444,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "date": "Composite Recent Cloud-Free"
+        },
+        {
+          "filename": "nasa_gibs_event_day.jpg",
+          "sensor": "NASA EOS Terra MODIS Corrected Reflectance TrueColor (250m)",
+          "type": "Atmospheric Convective Cells & Cloud Cover (Event Day)",
+          "bytes": 10698,
+          "dimensions": [
+            768,
+            768
+          ],
+          "date": "2016-07-17"
+        },
+        {
+          "filename": "nasa_gibs_pre_event.jpg",
+          "sensor": "NASA EOS Terra MODIS Corrected Reflectance TrueColor (250m)",
+          "type": "Pre-Event Convective State & Cryosphere Baseline",
+          "bytes": 36387,
+          "dimensions": [
+            768,
+            768
+          ],
+          "date": "2016-07-16"
+        },
+        {
+          "filename": "sentinel2_post_event.jpg",
+          "sensor": "ESA Sentinel-2 L2A MSI (10m Optical)",
+          "type": "Post-Catastrophe Scars & Flood Deposition",
+          "scene_id": "S2A_MSIL2A_20160721T051652_R062_T44SNC_20210212T063428",
+          "acquisition": "2016-07-21T05:16:52.026000Z",
+          "cloud_cover_pct": 6.8,
+          "bytes": 359066,
+          "dimensions": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "filename": "sentinel2_pre_event.jpg",
+          "sensor": "ESA Sentinel-2 L2A MSI (10m Optical)",
+          "type": "Pre-Catastrophe Lake & Slope Baseline",
+          "scene_id": "S2A_MSIL2A_20160618T050652_R019_T44SPC_20210211T203846",
+          "acquisition": "2016-06-18T05:06:52.027000Z",
+          "cloud_cover_pct": 37.4,
+          "bytes": 407524,
+          "dimensions": [
+            1024,
+            1024
+          ]
+        }
+      ]
+    },
+    "seti_2012": {
+      "rank": 5,
+      "id": "seti_2012",
+      "name": "Enxurrada do Rio Seti (Annapurna IV)",
+      "date": "2012-05-05",
+      "center": {
+        "lat": 28.542,
+        "lon": 84.152
+      },
+      "bbox_wsen": [
+        84.032,
+        28.422,
+        84.272,
+        28.662
+      ],
+      "files": [
+        {
+          "filename": "highres_ortho_basin.png",
+          "sensor": "ArcGIS World Imagery High-Resolution Orthomosaic (Maxar/CNES/Copernicus)",
+          "type": "Geomorphology, Drainage Chute & Moraine Scar Base",
+          "bytes": 785467,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "date": "Composite Recent Cloud-Free"
+        },
+        {
+          "filename": "nasa_gibs_event_day.jpg",
+          "sensor": "NASA EOS Terra MODIS Corrected Reflectance TrueColor (250m)",
+          "type": "Atmospheric Convective Cells & Cloud Cover (Event Day)",
+          "bytes": 30691,
+          "dimensions": [
+            768,
+            768
+          ],
+          "date": "2012-05-05"
+        },
+        {
+          "filename": "nasa_gibs_pre_event.jpg",
+          "sensor": "NASA EOS Terra MODIS Corrected Reflectance TrueColor (250m)",
+          "type": "Pre-Event Convective State & Cryosphere Baseline",
+          "bytes": 60985,
+          "dimensions": [
+            768,
+            768
+          ],
+          "date": "2012-05-04"
+        }
+      ]
+    },
+    "south_lhonak_2023": {
+      "rank": 6,
+      "id": "south_lhonak_2023",
+      "name": "Rompimento do South Lhonak / Teesta III",
+      "date": "2023-10-04",
+      "center": {
+        "lat": 27.905,
+        "lon": 88.205
+      },
+      "bbox_wsen": [
+        88.085,
+        27.785,
+        88.325,
+        28.025
+      ],
+      "files": [
+        {
+          "filename": "highres_ortho_basin.png",
+          "sensor": "ArcGIS World Imagery High-Resolution Orthomosaic (Maxar/CNES/Copernicus)",
+          "type": "Geomorphology, Drainage Chute & Moraine Scar Base",
+          "bytes": 778906,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "date": "Composite Recent Cloud-Free"
+        },
+        {
+          "filename": "nasa_gibs_event_day.jpg",
+          "sensor": "NASA EOS Terra MODIS Corrected Reflectance TrueColor (250m)",
+          "type": "Atmospheric Convective Cells & Cloud Cover (Event Day)",
+          "bytes": 20043,
+          "dimensions": [
+            768,
+            768
+          ],
+          "date": "2023-10-04"
+        },
+        {
+          "filename": "nasa_gibs_pre_event.jpg",
+          "sensor": "NASA EOS Terra MODIS Corrected Reflectance TrueColor (250m)",
+          "type": "Pre-Event Convective State & Cryosphere Baseline",
+          "bytes": 26377,
+          "dimensions": [
+            768,
+            768
+          ],
+          "date": "2023-10-03"
+        },
+        {
+          "filename": "sentinel2_post_event.jpg",
+          "sensor": "ESA Sentinel-2 L2A MSI (10m Optical)",
+          "type": "Post-Catastrophe Scars & Flood Deposition",
+          "scene_id": "S2B_MSIL2A_20231029T044919_R076_T45RXM_20231029T083651",
+          "acquisition": "2023-10-29T04:49:19.024000Z",
+          "cloud_cover_pct": 0.4,
+          "bytes": 198224,
+          "dimensions": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "filename": "sentinel2_pre_event.jpg",
+          "sensor": "ESA Sentinel-2 L2A MSI (10m Optical)",
+          "type": "Pre-Catastrophe Lake & Slope Baseline",
+          "scene_id": "S2B_MSIL2A_20230916T043709_R033_T45RXM_20241031T200326",
+          "acquisition": "2023-09-16T04:37:09.024000Z",
+          "cloud_cover_pct": 1.2,
+          "bytes": 457422,
+          "dimensions": [
+            1024,
+            1024
+          ]
+        }
+      ]
+    },
+    "leh_2010": {
+      "rank": 7,
+      "id": "leh_2010",
+      "name": "Nuvem Pistão de Leh Ladakh",
+      "date": "2010-08-06",
+      "center": {
+        "lat": 34.152,
+        "lon": 77.577
+      },
+      "bbox_wsen": [
+        77.457,
+        34.032,
+        77.697,
+        34.272
+      ],
+      "files": [
+        {
+          "filename": "highres_ortho_basin.png",
+          "sensor": "ArcGIS World Imagery High-Resolution Orthomosaic (Maxar/CNES/Copernicus)",
+          "type": "Geomorphology, Drainage Chute & Moraine Scar Base",
+          "bytes": 861218,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "date": "Composite Recent Cloud-Free"
+        },
+        {
+          "filename": "nasa_gibs_event_day.jpg",
+          "sensor": "NASA EOS Terra MODIS Corrected Reflectance TrueColor (250m)",
+          "type": "Atmospheric Convective Cells & Cloud Cover (Event Day)",
+          "bytes": 67491,
+          "dimensions": [
+            768,
+            768
+          ],
+          "date": "2010-08-06"
+        },
+        {
+          "filename": "nasa_gibs_pre_event.jpg",
+          "sensor": "NASA EOS Terra MODIS Corrected Reflectance TrueColor (250m)",
+          "type": "Pre-Event Convective State & Cryosphere Baseline",
+          "bytes": 34975,
+          "dimensions": [
+            768,
+            768
+          ],
+          "date": "2010-08-05"
+        }
+      ]
+    },
+    "melamchi_2021": {
+      "rank": 8,
+      "id": "melamchi_2021",
+      "name": "Enxurrada do Rio Melamchi",
+      "date": "2021-06-15",
+      "center": {
+        "lat": 28.095,
+        "lon": 85.612
+      },
+      "bbox_wsen": [
+        85.492,
+        27.975,
+        85.732,
+        28.215
+      ],
+      "files": [
+        {
+          "filename": "highres_ortho_basin.png",
+          "sensor": "ArcGIS World Imagery High-Resolution Orthomosaic (Maxar/CNES/Copernicus)",
+          "type": "Geomorphology, Drainage Chute & Moraine Scar Base",
+          "bytes": 793779,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "date": "Composite Recent Cloud-Free"
+        },
+        {
+          "filename": "nasa_gibs_event_day.jpg",
+          "sensor": "NASA EOS Terra MODIS Corrected Reflectance TrueColor (250m)",
+          "type": "Atmospheric Convective Cells & Cloud Cover (Event Day)",
+          "bytes": 6495,
+          "dimensions": [
+            768,
+            768
+          ],
+          "date": "2021-06-15"
+        },
+        {
+          "filename": "nasa_gibs_pre_event.jpg",
+          "sensor": "NASA EOS Terra MODIS Corrected Reflectance TrueColor (250m)",
+          "type": "Pre-Event Convective State & Cryosphere Baseline",
+          "bytes": 9412,
+          "dimensions": [
+            768,
+            768
+          ],
+          "date": "2021-06-14"
+        },
+        {
+          "filename": "sentinel2_pre_event.jpg",
+          "sensor": "ESA Sentinel-2 L2A MSI (10m Optical)",
+          "type": "Pre-Catastrophe Lake & Slope Baseline",
+          "scene_id": "S2B_MSIL2A_20210515T045659_R119_T45RUL_20210516T083836",
+          "acquisition": "2021-05-15T04:56:59.024000Z",
+          "cloud_cover_pct": 7.2,
+          "bytes": 285702,
+          "dimensions": [
+            1024,
+            1024
+          ]
+        }
+      ]
+    },
+    "parechu_2000": {
+      "rank": 9,
+      "id": "parechu_2000",
+      "name": "Cheia Represada do Rio Parechu",
+      "date": "2000-08-01",
+      "center": {
+        "lat": 32.028,
+        "lon": 78.536
+      },
+      "bbox_wsen": [
+        78.416,
+        31.908,
+        78.656,
+        32.148
+      ],
+      "files": [
+        {
+          "filename": "highres_ortho_basin.png",
+          "sensor": "ArcGIS World Imagery High-Resolution Orthomosaic (Maxar/CNES/Copernicus)",
+          "type": "Geomorphology, Drainage Chute & Moraine Scar Base",
+          "bytes": 904346,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "date": "Composite Recent Cloud-Free"
+        },
+        {
+          "filename": "nasa_gibs_event_day.jpg",
+          "sensor": "NASA EOS Terra MODIS Corrected Reflectance TrueColor (250m)",
+          "type": "Atmospheric Convective Cells & Cloud Cover (Event Day)",
+          "bytes": 56068,
+          "dimensions": [
+            768,
+            768
+          ],
+          "date": "2000-08-01"
+        },
+        {
+          "filename": "nasa_gibs_pre_event.jpg",
+          "sensor": "NASA EOS Terra MODIS Corrected Reflectance TrueColor (250m)",
+          "type": "Pre-Event Convective State & Cryosphere Baseline",
+          "bytes": 54718,
+          "dimensions": [
+            768,
+            768
+          ],
+          "date": "2000-07-31"
+        }
+      ]
+    },
+    "zhangzangbo_1981": {
+      "rank": 10,
+      "id": "zhangzangbo_1981",
+      "name": "Rompimento do Lago Zhangzangbo",
+      "date": "1981-07-11",
+      "center": {
+        "lat": 28.175,
+        "lon": 86.045
+      },
+      "bbox_wsen": [
+        85.925,
+        28.055,
+        86.165,
+        28.295
+      ],
+      "files": [
+        {
+          "filename": "highres_ortho_basin.png",
+          "sensor": "ArcGIS World Imagery High-Resolution Orthomosaic (Maxar/CNES/Copernicus)",
+          "type": "Geomorphology, Drainage Chute & Moraine Scar Base",
+          "bytes": 874646,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "date": "Composite Recent Cloud-Free"
+        }
+      ]
+    },
+    "dig_tsho_1985": {
+      "rank": 11,
+      "id": "dig_tsho_1985",
+      "name": "Rompimento do Lago Dig Tsho",
+      "date": "1985-08-04",
+      "center": {
+        "lat": 27.87,
+        "lon": 86.6
+      },
+      "bbox_wsen": [
+        86.48,
+        27.75,
+        86.72,
+        27.99
+      ],
+      "files": [
+        {
+          "filename": "highres_ortho_basin.png",
+          "sensor": "ArcGIS World Imagery High-Resolution Orthomosaic (Maxar/CNES/Copernicus)",
+          "type": "Geomorphology, Drainage Chute & Moraine Scar Base",
+          "bytes": 843930,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "date": "Composite Recent Cloud-Free"
+        }
+      ]
+    },
+    "luggye_tsho_1994": {
+      "rank": 12,
+      "id": "luggye_tsho_1994",
+      "name": "Rompimento do Luggye Tsho",
+      "date": "1994-10-07",
+      "center": {
+        "lat": 28.08,
+        "lon": 90.3
+      },
+      "bbox_wsen": [
+        90.18,
+        27.96,
+        90.42,
+        28.2
+      ],
+      "files": [
+        {
+          "filename": "highres_ortho_basin.png",
+          "sensor": "ArcGIS World Imagery High-Resolution Orthomosaic (Maxar/CNES/Copernicus)",
+          "type": "Geomorphology, Drainage Chute & Moraine Scar Base",
+          "bytes": 742938,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "date": "Composite Recent Cloud-Free"
+        }
+      ]
+    },
+    "gongbatongshacuo_2016": {
+      "rank": 13,
+      "id": "gongbatongshacuo_2016",
+      "name": "Cheia do Bhotekoshi de 2016",
+      "date": "2016-07-05",
+      "center": {
+        "lat": 28.026,
+        "lon": 85.965
+      },
+      "bbox_wsen": [
+        85.845,
+        27.906,
+        86.085,
+        28.146
+      ],
+      "files": [
+        {
+          "filename": "highres_ortho_basin.png",
+          "sensor": "ArcGIS World Imagery High-Resolution Orthomosaic (Maxar/CNES/Copernicus)",
+          "type": "Geomorphology, Drainage Chute & Moraine Scar Base",
+          "bytes": 837961,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "date": "Composite Recent Cloud-Free"
+        },
+        {
+          "filename": "nasa_gibs_event_day.jpg",
+          "sensor": "NASA EOS Terra MODIS Corrected Reflectance TrueColor (250m)",
+          "type": "Atmospheric Convective Cells & Cloud Cover (Event Day)",
+          "bytes": 10511,
+          "dimensions": [
+            768,
+            768
+          ],
+          "date": "2016-07-05"
+        },
+        {
+          "filename": "nasa_gibs_pre_event.jpg",
+          "sensor": "NASA EOS Terra MODIS Corrected Reflectance TrueColor (250m)",
+          "type": "Pre-Event Convective State & Cryosphere Baseline",
+          "bytes": 36032,
+          "dimensions": [
+            768,
+            768
+          ],
+          "date": "2016-07-04"
+        },
+        {
+          "filename": "sentinel2_post_event.jpg",
+          "sensor": "ESA Sentinel-2 L2A MSI (10m Optical)",
+          "type": "Post-Catastrophe Scars & Flood Deposition",
+          "scene_id": "S2A_MSIL2A_20160804T045702_R119_T45RUL_20210212T105512",
+          "acquisition": "2016-08-04T04:57:02.026000Z",
+          "cloud_cover_pct": 25.6,
+          "bytes": 322425,
+          "dimensions": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "filename": "sentinel2_pre_event.jpg",
+          "sensor": "ESA Sentinel-2 L2A MSI (10m Optical)",
+          "type": "Pre-Catastrophe Lake & Slope Baseline",
+          "scene_id": "S2A_MSIL2A_20160605T045702_R119_T45RVM_20210211T163708",
+          "acquisition": "2016-06-05T04:57:02.027000Z",
+          "cloud_cover_pct": 30.0,
+          "bytes": 27036,
+          "dimensions": [
+            1024,
+            1024
+          ]
+        }
+      ]
+    },
+    "himachal_2023": {
+      "rank": 14,
+      "id": "himachal_2023",
+      "name": "Catástrofe de Himachal Pradesh",
+      "date": "2023-07-09",
+      "center": {
+        "lat": 31.985,
+        "lon": 77.15
+      },
+      "bbox_wsen": [
+        77.03,
+        31.865,
+        77.27,
+        32.105
+      ],
+      "files": [
+        {
+          "filename": "highres_ortho_basin.png",
+          "sensor": "ArcGIS World Imagery High-Resolution Orthomosaic (Maxar/CNES/Copernicus)",
+          "type": "Geomorphology, Drainage Chute & Moraine Scar Base",
+          "bytes": 896036,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "date": "Composite Recent Cloud-Free"
+        },
+        {
+          "filename": "nasa_gibs_event_day.jpg",
+          "sensor": "NASA EOS Terra MODIS Corrected Reflectance TrueColor (250m)",
+          "type": "Atmospheric Convective Cells & Cloud Cover (Event Day)",
+          "bytes": 5468,
+          "dimensions": [
+            768,
+            768
+          ],
+          "date": "2023-07-09"
+        },
+        {
+          "filename": "nasa_gibs_pre_event.jpg",
+          "sensor": "NASA EOS Terra MODIS Corrected Reflectance TrueColor (250m)",
+          "type": "Pre-Event Convective State & Cryosphere Baseline",
+          "bytes": 4720,
+          "dimensions": [
+            768,
+            768
+          ],
+          "date": "2023-07-08"
+        },
+        {
+          "filename": "sentinel2_post_event.jpg",
+          "sensor": "ESA Sentinel-2 L2A MSI (10m Optical)",
+          "type": "Post-Catastrophe Scars & Flood Deposition",
+          "scene_id": "S2B_MSIL2A_20230802T052649_R105_T43SGR_20241027T211114",
+          "acquisition": "2023-08-02T05:26:49.024000Z",
+          "cloud_cover_pct": 24.6,
+          "bytes": 544570,
+          "dimensions": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "filename": "sentinel2_pre_event.jpg",
+          "sensor": "ESA Sentinel-2 L2A MSI (10m Optical)",
+          "type": "Pre-Catastrophe Lake & Slope Baseline",
+          "scene_id": "S2A_MSIL2A_20230608T052651_R105_T43SFR_20240911T042714",
+          "acquisition": "2023-06-08T05:26:51.024000Z",
+          "cloud_cover_pct": 13.3,
+          "bytes": 376390,
+          "dimensions": [
+            1024,
+            1024
+          ]
+        }
+      ]
+    },
+    "parechu_2005": {
+      "rank": 15,
+      "id": "parechu_2005",
+      "name": "Enxurrada do Rio Parechu de 2005",
+      "date": "2005-06-26",
+      "center": {
+        "lat": 31.956,
+        "lon": 78.558
+      },
+      "bbox_wsen": [
+        78.438,
+        31.836,
+        78.678,
+        32.076
+      ],
+      "files": [
+        {
+          "filename": "highres_ortho_basin.png",
+          "sensor": "ArcGIS World Imagery High-Resolution Orthomosaic (Maxar/CNES/Copernicus)",
+          "type": "Geomorphology, Drainage Chute & Moraine Scar Base",
+          "bytes": 916203,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "date": "Composite Recent Cloud-Free"
+        },
+        {
+          "filename": "nasa_gibs_event_day.jpg",
+          "sensor": "NASA EOS Terra MODIS Corrected Reflectance TrueColor (250m)",
+          "type": "Atmospheric Convective Cells & Cloud Cover (Event Day)",
+          "bytes": 11249,
+          "dimensions": [
+            768,
+            768
+          ],
+          "date": "2005-06-26"
+        },
+        {
+          "filename": "nasa_gibs_pre_event.jpg",
+          "sensor": "NASA EOS Terra MODIS Corrected Reflectance TrueColor (250m)",
+          "type": "Pre-Event Convective State & Cryosphere Baseline",
+          "bytes": 44542,
+          "dimensions": [
+            768,
+            768
+          ],
+          "date": "2005-06-25"
+        }
+      ]
+    }
+  },
+  "total_images_saved": 51,
+  "total_size_mb": 16.55
+}
