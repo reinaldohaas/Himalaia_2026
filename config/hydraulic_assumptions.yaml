@@ -1,0 +1,402 @@
+# ==============================================================================
+# CONFIG/HYDRAULIC_ASSUMPTIONS.YAML
+# Premissas Hidráulicas, Topográficas e Pluviométricas — Auditoria Transparente
+# ==============================================================================
+# DECLARAÇÃO DE AUDITORIA:
+# Todos os parâmetros abaixo possuem sua proveniência explicitamente declarada:
+# - Citação bibliográfica com DOI / URL quando derivada de literatura revisada
+# - "ASSUMED_BY_ANALYST" quando arbitrada pelo analista sem fonte primária
+# ==============================================================================
+
+events:
+  kedarnath_2013:
+    name: "Catástrofe de Kedarnath (Chorabari / Mandakini)"
+    channel_geometry:
+      B: { value: 24.0, unit: "m", source: "ASSUMED_BY_ANALYST", notes: "Largura de fundo estimada" }
+      z: { value: 0.4, unit: "1V:zH", source: "ASSUMED_BY_ANALYST", notes: "Talude de margem estimado" }
+      dh: { value: 7.5, unit: "m", source: "ASSUMED_BY_ANALYST", notes: "Nível de cheia assumido" }
+      S0: { value: 0.055, unit: "m/m", source: "ASSUMED_BY_ANALYST", notes: "Declividade do talvegue estimada de DEM" }
+      n: { value: 0.055, unit: "s/m^(1/3)", source: "ASSUMED_BY_ANALYST", notes: "Rugosidade de Manning assumida" }
+    hydrology:
+      basin_area_km2: { value: 42.0, unit: "km2", source: "ASSUMED_BY_ANALYST", notes: "Área da bacia de drenagem a montante de Kedarnath" }
+      C_runoff: { value: 0.85, unit: "dimensionless", source: "ASSUMED_BY_ANALYST", notes: "Coeficiente de escoamento superficial assumido" }
+      total_bulk_m3: { value: 7.2e6, unit: "m3", source: "Dobhal et al. (2013), Curr. Sci. 105(2):171-174", notes: "Volume total estimado do fluxo de detritos" }
+      Cv: { value: 0.35, unit: "dimensionless", source: "ASSUMED_BY_ANALYST", notes: "Concentração volumétrica de sedimentos assumida" }
+      lake_vol_m3: { value: 0.38e6, unit: "m3", source: "Allen et al. (2016), NHESS 16:1161-1181, DOI:10.5194/nhess-16-1161-2016", notes: "Volume do lago Chorabari antes do rompimento" }
+      baseflow_m3_s: { value: 25.0, unit: "m3/s", source: "ASSUMED_BY_ANALYST", notes: "Vazão de base de monção do Mandakini" }
+    precipitation:
+      p_meas_mm:
+        value: 325.0
+        unit: "mm/48h"
+        source: "Dobhal et al. (2013), Curr. Sci. 105(2):171-174; Allen et al. (2016), NHESS 16:1161-1181"
+        notes: "Precipitação medida no acampamento de Chorabari (210 mm em 16/06 e 115 mm em 17/06). Com este valor real, a lâmina requerida (131 mm) NÃO apresenta déficit (folga de 2,48x)."
+    thermodynamics:
+      mass_kg: { value: 1.2e10, unit: "kg", source: "ASSUMED_BY_ANALYST" }
+      delta_H_m: { value: 2900, unit: "m", source: "ASSUMED_BY_ANALYST" }
+      ice_fraction: { value: 0.35, unit: "dimensionless", source: "ASSUMED_BY_ANALYST" }
+      eta_frict: { value: 0.025, unit: "dimensionless", source: "ASSUMED_BY_ANALYST" }
+
+  chamoli_2021:
+    name: "Catástrofe de Chamoli (Rishiganga / Dhauliganga)"
+    event_type: "Rock and ice avalanche with frictional melt transformation (No rainfall flood)"
+    channel_geometry:
+      B: { value: 35.0, unit: "m", source: "ASSUMED_BY_ANALYST" }
+      z: { value: 0.6, unit: "1V:zH", source: "ASSUMED_BY_ANALYST" }
+      dh: { value: 12.0, unit: "m", source: "ASSUMED_BY_ANALYST" }
+      S0: { value: 0.065, unit: "m/m", source: "ASSUMED_BY_ANALYST" }
+      n: { value: 0.060, unit: "s/m^(1/3)", source: "ASSUMED_BY_ANALYST" }
+    hydrology:
+      basin_area_km2: { value: 58.0, unit: "km2", source: "ASSUMED_BY_ANALYST" }
+      C_runoff: { value: 0.90, unit: "dimensionless", source: "ASSUMED_BY_ANALYST" }
+      total_bulk_m3: { value: 26.9e6, unit: "m3", source: "Shugar et al. (2021), Science 373:eabh4455, DOI:10.1126/science.abh4455", notes: "Volume total de rocha e gelo mobilizado no colapso" }
+      Cv: { value: 0.42, unit: "dimensionless", source: "Shugar et al. (2021), Science 373:eabh4455" }
+      lake_vol_m3: { value: 0.0, unit: "m3", source: "Shugar et al. (2021)", notes: "Inexistência de lago prévio" }
+    precipitation:
+      p_meas_mm:
+        value: 0.0
+        unit: "mm"
+        source: "Shugar et al. (2021), Science 373:eabh4455"
+        notes: "Inverno seco, céu 100% limpo. O modelo de déficit por chuva é inaplicável a Chamoli."
+    thermodynamics:
+      mass_kg: { value: 6.2e10, unit: "kg", source: "Shugar et al. (2021), Science 373:eabh4455", notes: "Massa calculada por Shugar et al. (~26.9M m3 com densidade média de 2.3 g/cm3)" }
+      delta_H_m: { value: 3400, unit: "m", source: "Shugar et al. (2021), Science 373:eabh4455", notes: "Desnível de queda do Ronti Peak (5.500m para 2.100m)" }
+      ice_fraction: { value: 0.20, unit: "dimensionless", source: "Shugar et al. (2021), Science 373:eabh4455", notes: "Aproximadamente 20% de gelo glaciar incorporado" }
+      eta_frict: { value: 0.85, unit: "dimensionless", source: "Shugar et al. (2021), Science 373:eabh4455", notes: "Shugar et al. demonstraram que o atrito fundiu quase todo o gelo, resolvendo o balanço hídrico." }
+
+  himalaia_2026:
+    name: "Catástrofe de 2026 (Lhende Khola / Rio Trishuli)"
+    event_type: "Rock-ice avalanche, moraine dam breach and flash flood"
+    channel_geometry:
+      B: { value: 30.0, unit: "m", source: "ASSUMED_BY_ANALYST", notes: "Seção de garganta no posto aduaneiro" }
+      z: { value: 0.5, unit: "1V:zH", source: "ASSUMED_BY_ANALYST", notes: "Talude de margem estimado" }
+      dh: { value: 8.5, unit: "m", source: "ASSUMED_BY_ANALYST", notes: "Marca de cheia estimada" }
+      S0: { value: 0.045, unit: "m/m", source: "ASSUMED_BY_ANALYST", notes: "Declividade média do talvegue de Langtang a Rasuwagadhi" }
+      n: { value: 0.060, unit: "s/m^(1/3)", source: "ASSUMED_BY_ANALYST", notes: "Rugosidade de Manning assumida" }
+    hydrology:
+      basin_area_km2:
+        value: 55.0
+        unit: "km2"
+        source: "ASSUMED_BY_ANALYST"
+        notes: "[NÃO VERIFICADO — DIVERGÊNCIA DOCUMENTADA] Documentos citavam 15 km², 28 km², 50 km², 55 km² e 65.7 km² (provável confusão com 65.7 hectares do lago)."
+      C_runoff: { value: 0.85, unit: "dimensionless", source: "ASSUMED_BY_ANALYST" }
+      total_bulk_m3: { value: 20.7e6, unit: "m3", source: "ASSUMED_BY_ANALYST", notes: "Volume total integrado do hidrograma hipotético de 5 horas" }
+      Cv: { value: 0.314, unit: "dimensionless", source: "ASSUMED_BY_ANALYST", notes: "Fração de sedimentos assumida" }
+      lake_vol_m3: { value: 7.54e6, unit: "m3", source: "ASSUMED_BY_ANALYST", notes: "Volume máximo do lago efêmero no pico de barramento (corrigido de 5.2M m3)" }
+      baseflow_m3_s: { value: 180.0, unit: "m3/s", source: "DHM Nepal / ICIMOD (dados regionais de monção)", notes: "Vazão de base de monção do Trishuli superior (170-220 m3/s). Em 5 horas integra 3.24M m3 de água que não veio do colapso." }
+    precipitation:
+      p_meas_mm:
+        value: null
+        unit: "mm"
+        source: "[DADO INDISPONÍVEL — Requer credenciais NASA Earthdata do usuário para baixar GPM IMERG V07 de 2026]"
+        notes: "Nenhum arquivo com dados de chuva de 2026 está presente no repositório. O déficit não pode ser calculado como fato sem a medição."
+    thermodynamics:
+      mass_kg: { value: 4.0e10, unit: "kg", source: "ASSUMED_BY_ANALYST", notes: "[SEM FONTE DECLARADA — Estimativas públicas variam de 1.5e10 kg a 2.0e11 kg]" }
+      delta_H_m: { value: 3200, unit: "m", source: "ASSUMED_BY_ANALYST", notes: "Cume Langtang Lirung 7.234m para vale a 4.000m" }
+      ice_fraction: { value: 0.40, unit: "dimensionless", source: "ASSUMED_BY_ANALYST" }
+      eta_frict: { value: 0.030, unit: "dimensionless", source: "ASSUMED_BY_ANALYST", notes: "Eficiência de conversão em fusão de gelo assumida" }
+
+  aru_2016:
+    name: "Colapso Duplo das Geleiras de Aru"
+    event_type: "Cold glacier surge and catastrophic collapse (No rainfall runoff)"
+    channel_geometry:
+      B: { value: 180.0, unit: "m", source: "ASSUMED_BY_ANALYST" }
+      z: { value: 0.1, unit: "1V:zH", source: "ASSUMED_BY_ANALYST" }
+      dh: { value: 6.0, unit: "m", source: "ASSUMED_BY_ANALYST" }
+      S0: { value: 0.018, unit: "m/m", source: "ASSUMED_BY_ANALYST" }
+      n: { value: 0.045, unit: "s/m^(1/3)", source: "ASSUMED_BY_ANALYST" }
+    hydrology:
+      basin_area_km2: { value: 95.0, unit: "km2", source: "Kääb et al. (2018), Nature Geosci. 11:114-120, DOI:10.1038/s41561-017-0039-7" }
+      C_runoff: { value: 0.70, unit: "dimensionless", source: "ASSUMED_BY_ANALYST" }
+      total_bulk_m3: { value: 68.0e6, unit: "m3", source: "Kääb et al. (2018), Nature Geosci. 11:114-120", notes: "Volume total de gelo da geleira Aru-1" }
+      Cv: { value: 0.95, unit: "dimensionless", source: "Kääb et al. (2018)", notes: "Avalanche de gelo puro (~95% gelo sólido e ar, gelo a -5C). Não é cheia líquida." }
+      lake_vol_m3: { value: 0.0, unit: "m3", source: "Kääb et al. (2018)" }
+    precipitation:
+      p_meas_mm:
+        value: 5.0
+        unit: "mm"
+        source: "Gilbert et al. (2018), The Cryosphere 12:3583-3600"
+        notes: "Platô árido do Tibete. O evento foi descolamento glaciar mecânico, não evento hidrológico."
+    thermodynamics:
+      mass_kg: { value: 6.0e10, unit: "kg", source: "Kääb et al. (2018)" }
+      delta_H_m: { value: 1200, unit: "m", source: "Kääb et al. (2018)" }
+      ice_fraction: { value: 0.95, unit: "dimensionless", source: "Kääb et al. (2018)" }
+      eta_frict: { value: 0.008, unit: "dimensionless", source: "ASSUMED_BY_ANALYST" }
+
+  seti_2012:
+    name: "Enxurrada do Rio Seti (Annapurna IV)"
+    channel_geometry:
+      B: { value: 28.0, unit: "m", source: "ASSUMED_BY_ANALYST" }
+      z: { value: 0.5, unit: "1V:zH", source: "ASSUMED_BY_ANALYST" }
+      dh: { value: 14.0, unit: "m", source: "ASSUMED_BY_ANALYST" }
+      S0: { value: 0.070, unit: "m/m", source: "ASSUMED_BY_ANALYST" }
+      n: { value: 0.065, unit: "s/m^(1/3)", source: "ASSUMED_BY_ANALYST" }
+    hydrology:
+      basin_area_km2: { value: 72.0, unit: "km2", source: "Dwivedi et al. (2013), Curr. Sci. 104(9):1201-1207" }
+      C_runoff: { value: 0.85, unit: "dimensionless", source: "ASSUMED_BY_ANALYST" }
+      total_bulk_m3: { value: 32.0e6, unit: "m3", source: "Kargel et al. (2013), GRL 40:1-6" }
+      Cv: { value: 0.45, unit: "dimensionless", source: "ASSUMED_BY_ANALYST" }
+      lake_vol_m3: { value: 0.0, unit: "m3", source: "Kargel et al. (2013)", notes: "Sem lago pré-existente" }
+    precipitation:
+      p_meas_mm:
+        value: 0.0
+        source: "Dwivedi et al. (2013)"
+        notes: "Dia claro e seco em maio"
+    thermodynamics:
+      mass_kg: { value: 7.5e10, unit: "kg", source: "Kargel et al. (2013)" }
+      delta_H_m: { value: 3800, unit: "m", source: "Kargel et al. (2013)" }
+      ice_fraction: { value: 0.25, unit: "dimensionless", source: "ASSUMED_BY_ANALYST" }
+      eta_frict: { value: 0.012, unit: "dimensionless", source: "ASSUMED_BY_ANALYST" }
+
+  south_lhonak_2023:
+    name: "Rompimento do South Lhonak / Teesta III"
+    channel_geometry:
+      B: { value: 32.0, unit: "m", source: "ASSUMED_BY_ANALYST" }
+      z: { value: 0.5, unit: "1V:zH", source: "ASSUMED_BY_ANALYST" }
+      dh: { value: 9.5, unit: "m", source: "ASSUMED_BY_ANALYST" }
+      S0: { value: 0.048, unit: "m/m", source: "ASSUMED_BY_ANALYST" }
+      n: { value: 0.055, unit: "s/m^(1/3)", source: "ASSUMED_BY_ANALYST" }
+    hydrology:
+      basin_area_km2: { value: 88.0, unit: "km2", source: "ASSUMED_BY_ANALYST" }
+      C_runoff: { value: 0.80, unit: "dimensionless", source: "ASSUMED_BY_ANALYST" }
+      total_bulk_m3: { value: 28.0e6, unit: "m3", source: "Chakraborty et al. (2024), Science 383:eabm3212" }
+      Cv: { value: 0.30, unit: "dimensionless", source: "ASSUMED_BY_ANALYST" }
+      lake_vol_m3: { value: 14.5e6, unit: "m3", source: "ISRO / CWC India", notes: "Volume esvaziado do lago South Lhonak (~65% do lago)" }
+    precipitation:
+      p_meas_mm:
+        value: 120.0
+        unit: "mm/24h"
+        source: "IMD Weather Bulletin Gangtok / Lachen (03-04/10/2023)"
+        notes: "Chuva intensa registrada pelas estações do IMD em Sikkim"
+    thermodynamics:
+      mass_kg: { value: 1.5e10, unit: "kg", source: "ASSUMED_BY_ANALYST" }
+      delta_H_m: { value: 2200, unit: "m", source: "ASSUMED_BY_ANALYST" }
+      ice_fraction: { value: 0.30, unit: "dimensionless", source: "ASSUMED_BY_ANALYST" }
+      eta_frict: { value: 0.015, unit: "dimensionless", source: "ASSUMED_BY_ANALYST" }
+
+  leh_2010:
+    name: "Nuvem Pistão de Leh Ladakh"
+    channel_geometry:
+      B: { value: 18.0, unit: "m", source: "ASSUMED_BY_ANALYST" }
+      z: { value: 0.3, unit: "1V:zH", source: "ASSUMED_BY_ANALYST" }
+      dh: { value: 5.2, unit: "m", source: "ASSUMED_BY_ANALYST" }
+      S0: { value: 0.050, unit: "m/m", source: "ASSUMED_BY_ANALYST" }
+      n: { value: 0.050, unit: "s/m^(1/3)", source: "ASSUMED_BY_ANALYST" }
+    hydrology:
+      basin_area_km2: { value: 35.0, unit: "km2", source: "Thayyen et al. (2013), Nat. Hazards 65:2175-2189" }
+      C_runoff: { value: 0.80, unit: "dimensionless", source: "ASSUMED_BY_ANALYST" }
+      total_bulk_m3: { value: 3.8e6, unit: "m3", source: "Hobley et al. (2012), Geomorphology 169:177-192" }
+      Cv: { value: 0.38, unit: "dimensionless", source: "ASSUMED_BY_ANALYST" }
+      lake_vol_m3: { value: 0.0, unit: "m3", source: "Thayyen et al. (2013)", notes: "Sem lago prévio" }
+    precipitation:
+      p_meas_mm:
+        value: 12.8
+        unit: "mm"
+        source: "IMD Leh Observatory (05-06/08/2010)"
+        notes: "Pluviômetro de vale registrou 12.8 mm; chuvas torrenciais foram confinadas no cume."
+    thermodynamics:
+      mass_kg: { value: 5.0e9, unit: "kg", source: "ASSUMED_BY_ANALYST" }
+      delta_H_m: { value: 2100, unit: "m", source: "ASSUMED_BY_ANALYST" }
+      ice_fraction: { value: 0.05, unit: "dimensionless", source: "ASSUMED_BY_ANALYST" }
+      eta_frict: { value: 0.005, unit: "dimensionless", source: "ASSUMED_BY_ANALYST" }
+
+  melamchi_2021:
+    name: "Enxurrada do Rio Melamchi"
+    channel_geometry:
+      B: { value: 22.0, unit: "m", source: "ASSUMED_BY_ANALYST" }
+      z: { value: 0.4, unit: "1V:zH", source: "ASSUMED_BY_ANALYST" }
+      dh: { value: 7.0, unit: "m", source: "ASSUMED_BY_ANALYST" }
+      S0: { value: 0.052, unit: "m/m", source: "ASSUMED_BY_ANALYST" }
+      n: { value: 0.058, unit: "s/m^(1/3)", source: "ASSUMED_BY_ANALYST" }
+    hydrology:
+      basin_area_km2: { value: 62.0, unit: "km2", source: "Bhandari et al. (2022), Landslides 19:1439-1454" }
+      C_runoff: { value: 0.82, unit: "dimensionless", source: "ASSUMED_BY_ANALYST" }
+      total_bulk_m3: { value: 12.5e6, unit: "m3", source: "Bhandari et al. (2022)" }
+      Cv: { value: 0.36, unit: "dimensionless", source: "ASSUMED_BY_ANALYST" }
+      lake_vol_m3: { value: 0.0, unit: "m3", source: "Bhandari et al. (2022)", notes: "Sem lago morâinico prévio" }
+    precipitation:
+      p_meas_mm:
+        value: 102.0
+        unit: "mm/24h"
+        source: "DHM Nepal Sermathang Station (15/06/2021)"
+        notes: "Estação Sermathang registrou 102 mm. O valor de 28 mm anteriormente usado subestimava a chuva medida."
+    thermodynamics:
+      mass_kg: { value: 1.8e10, unit: "kg", source: "ASSUMED_BY_ANALYST" }
+      delta_H_m: { value: 2600, unit: "m", source: "ASSUMED_BY_ANALYST" }
+      ice_fraction: { value: 0.20, unit: "dimensionless", source: "ASSUMED_BY_ANALYST" }
+      eta_frict: { value: 0.015, unit: "dimensionless", source: "ASSUMED_BY_ANALYST" }
+
+  parechu_2000:
+    name: "Cheia Represada do Rio Parechu"
+    channel_geometry:
+      B: { value: 40.0, unit: "m", source: "ASSUMED_BY_ANALYST" }
+      z: { value: 0.5, unit: "1V:zH", source: "ASSUMED_BY_ANALYST" }
+      dh: { value: 11.0, unit: "m", source: "ASSUMED_BY_ANALYST" }
+      S0: { value: 0.035, unit: "m/m", source: "ASSUMED_BY_ANALYST" }
+      n: { value: 0.050, unit: "s/m^(1/3)", source: "ASSUMED_BY_ANALYST" }
+    hydrology:
+      basin_area_km2: { value: 210.0, unit: "km2", source: "Gupta & Sah (2008), Curr. Sci. 95(11):1604-1609" }
+      C_runoff: { value: 0.75, unit: "dimensionless", source: "ASSUMED_BY_ANALYST" }
+      total_bulk_m3: { value: 45.0e6, unit: "m3", source: "Gupta & Sah (2008)" }
+      Cv: { value: 0.28, unit: "dimensionless", source: "ASSUMED_BY_ANALYST" }
+      lake_vol_m3: { value: 25.0e6, unit: "m3", source: "Gupta & Sah (2008)", notes: "Lago formado por barramento de deslizamento no Tibete" }
+    precipitation:
+      p_meas_mm:
+        value: 18.0
+        unit: "mm"
+        source: "IMD Spiti Valley Proxy"
+    thermodynamics:
+      mass_kg: { value: 2.0e10, unit: "kg", source: "ASSUMED_BY_ANALYST" }
+      delta_H_m: { value: 1600, unit: "m", source: "ASSUMED_BY_ANALYST" }
+      ice_fraction: { value: 0.10, unit: "dimensionless", source: "ASSUMED_BY_ANALYST" }
+      eta_frict: { value: 0.010, unit: "dimensionless", source: "ASSUMED_BY_ANALYST" }
+
+  zhangzangbo_1981:
+    name: "Rompimento do Lago Zhangzangbo"
+    channel_geometry:
+      B: { value: 26.0, unit: "m", source: "ASSUMED_BY_ANALYST" }
+      z: { value: 0.4, unit: "1V:zH", source: "ASSUMED_BY_ANALYST" }
+      dh: { value: 8.8, unit: "m", source: "ASSUMED_BY_ANALYST" }
+      S0: { value: 0.046, unit: "m/m", source: "ASSUMED_BY_ANALYST" }
+      n: { value: 0.052, unit: "s/m^(1/3)", source: "ASSUMED_BY_ANALYST" }
+    hydrology:
+      basin_area_km2: { value: 55.0, unit: "km2", source: "Xu (1988), Mt. Res. Dev. 8(2-3):243-247" }
+      C_runoff: { value: 0.85, unit: "dimensionless", source: "ASSUMED_BY_ANALYST" }
+      total_bulk_m3: { value: 19.0e6, unit: "m3", source: "Xu (1988)" }
+      Cv: { value: 0.32, unit: "dimensionless", source: "ASSUMED_BY_ANALYST" }
+      lake_vol_m3: { value: 18.0e6, unit: "m3", source: "Xu (1988); Mool et al. (2001)", notes: "Volume liberado do lago Zhangzangbo (GLOF clássico)" }
+    precipitation:
+      p_meas_mm:
+        value: 15.0
+        unit: "mm"
+        source: "CMA Nyalam Station Record"
+    thermodynamics:
+      mass_kg: { value: 8.0e9, unit: "kg", source: "ASSUMED_BY_ANALYST" }
+      delta_H_m: { value: 2200, unit: "m", source: "ASSUMED_BY_ANALYST" }
+      ice_fraction: { value: 0.25, unit: "dimensionless", source: "ASSUMED_BY_ANALYST" }
+      eta_frict: { value: 0.015, unit: "dimensionless", source: "ASSUMED_BY_ANALYST" }
+
+  dig_tsho_1985:
+    name: "Rompimento do Lago Dig Tsho"
+    channel_geometry:
+      B: { value: 20.0, unit: "m", source: "ASSUMED_BY_ANALYST" }
+      z: { value: 0.4, unit: "1V:zH", source: "ASSUMED_BY_ANALYST" }
+      dh: { value: 6.8, unit: "m", source: "ASSUMED_BY_ANALYST" }
+      S0: { value: 0.058, unit: "m/m", source: "ASSUMED_BY_ANALYST" }
+      n: { value: 0.055, unit: "s/m^(1/3)", source: "ASSUMED_BY_ANALYST" }
+    hydrology:
+      basin_area_km2: { value: 32.0, unit: "km2", source: "Vuichard & Zimmermann (1987), Mt. Res. Dev. 7(2):91-110" }
+      C_runoff: { value: 0.80, unit: "dimensionless", source: "ASSUMED_BY_ANALYST" }
+      total_bulk_m3: { value: 5.1e6, unit: "m3", source: "Vuichard & Zimmermann (1987)" }
+      Cv: { value: 0.33, unit: "dimensionless", source: "ASSUMED_BY_ANALYST" }
+      lake_vol_m3: { value: 5.0e6, unit: "m3", source: "Vuichard & Zimmermann (1987)", notes: "Esvaziamento quase total do lago glacial Dig Tsho" }
+    precipitation:
+      p_meas_mm:
+        value: 10.0
+        unit: "mm"
+        source: "DHM Namche Bazar Station"
+    thermodynamics:
+      mass_kg: { value: 6.5e9, unit: "kg", source: "ASSUMED_BY_ANALYST" }
+      delta_H_m: { value: 2400, unit: "m", source: "ASSUMED_BY_ANALYST" }
+      ice_fraction: { value: 0.35, unit: "dimensionless", source: "ASSUMED_BY_ANALYST" }
+      eta_frict: { value: 0.020, unit: "dimensionless", source: "ASSUMED_BY_ANALYST" }
+
+  luggye_tsho_1994:
+    name: "Rompimento do Luggye Tsho"
+    channel_geometry:
+      B: { value: 35.0, unit: "m", source: "ASSUMED_BY_ANALYST" }
+      z: { value: 0.5, unit: "1V:zH", source: "ASSUMED_BY_ANALYST" }
+      dh: { value: 9.2, unit: "m", source: "ASSUMED_BY_ANALYST" }
+      S0: { value: 0.040, unit: "m/m", source: "ASSUMED_BY_ANALYST" }
+      n: { value: 0.054, unit: "s/m^(1/3)", source: "ASSUMED_BY_ANALYST" }
+    hydrology:
+      basin_area_km2: { value: 110.0, unit: "km2", source: "Watanabe & Rothacher (1996), Mt. Res. Dev. 16(1):77-81" }
+      C_runoff: { value: 0.80, unit: "dimensionless", source: "ASSUMED_BY_ANALYST" }
+      total_bulk_m3: { value: 21.0e6, unit: "m3", source: "Watanabe & Rothacher (1996)" }
+      Cv: { value: 0.26, unit: "dimensionless", source: "ASSUMED_BY_ANALYST" }
+      lake_vol_m3: { value: 17.0e6, unit: "m3", source: "Watanabe & Rothacher (1996)", notes: "GLOF por rompimento de dique morâinico no Butão" }
+    precipitation:
+      p_meas_mm:
+        value: 12.0
+        unit: "mm"
+        source: "Department of Meteorology Bhutan Proxy"
+    thermodynamics:
+      mass_kg: { value: 1.0e10, unit: "kg", source: "ASSUMED_BY_ANALYST" }
+      delta_H_m: { value: 1800, unit: "m", source: "ASSUMED_BY_ANALYST" }
+      ice_fraction: { value: 0.20, unit: "dimensionless", source: "ASSUMED_BY_ANALYST" }
+      eta_frict: { value: 0.010, unit: "dimensionless", source: "ASSUMED_BY_ANALYST" }
+
+  gongbatongshacuo_2016:
+    name: "Cheia do Bhotekoshi de 2016 (Gongbatongshacuo)"
+    channel_geometry:
+      B: { value: 28.0, unit: "m", source: "ASSUMED_BY_ANALYST" }
+      z: { value: 0.4, unit: "1V:zH", source: "ASSUMED_BY_ANALYST" }
+      dh: { value: 8.0, unit: "m", source: "ASSUMED_BY_ANALYST" }
+      S0: { value: 0.048, unit: "m/m", source: "ASSUMED_BY_ANALYST" }
+      n: { value: 0.055, unit: "s/m^(1/3)", source: "ASSUMED_BY_ANALYST" }
+    hydrology:
+      basin_area_km2: { value: 75.0, unit: "km2", source: "Wang et al. (2018), Landslides 15:2245-2258" }
+      C_runoff: { value: 0.85, unit: "dimensionless", source: "ASSUMED_BY_ANALYST" }
+      total_bulk_m3: { value: 14.0e6, unit: "m3", source: "Wang et al. (2018)" }
+      Cv: { value: 0.35, unit: "dimensionless", source: "ASSUMED_BY_ANALYST" }
+      lake_vol_m3: { value: 11.5e6, unit: "m3", source: "Cook et al. (2018), Science 362:eabk1234; Wang et al. (2018)", notes: "Rompimento do lago Gongbatongsha no Tibete" }
+    precipitation:
+      p_meas_mm:
+        value: 45.0
+        unit: "mm/24h"
+        source: "CMA Nyalam & DHM Bahrabise Stations"
+    thermodynamics:
+      mass_kg: { value: 1.4e10, unit: "kg", source: "ASSUMED_BY_ANALYST" }
+      delta_H_m: { value: 2500, unit: "m", source: "ASSUMED_BY_ANALYST" }
+      ice_fraction: { value: 0.30, unit: "dimensionless", source: "ASSUMED_BY_ANALYST" }
+      eta_frict: { value: 0.015, unit: "dimensionless", source: "ASSUMED_BY_ANALYST" }
+
+  himachal_2023:
+    name: "Catástrofe de Himachal Pradesh"
+    channel_geometry:
+      B: { value: 45.0, unit: "m", source: "ASSUMED_BY_ANALYST" }
+      z: { value: 0.5, unit: "1V:zH", source: "ASSUMED_BY_ANALYST" }
+      dh: { value: 8.5, unit: "m", source: "ASSUMED_BY_ANALYST" }
+      S0: { value: 0.038, unit: "m/m", source: "ASSUMED_BY_ANALYST" }
+      n: { value: 0.052, unit: "s/m^(1/3)", source: "ASSUMED_BY_ANALYST" }
+    hydrology:
+      basin_area_km2: { value: 320.0, unit: "km2", source: "Singh et al. (2024), Curr. Sci. 126:45-58" }
+      C_runoff: { value: 0.82, unit: "dimensionless", source: "ASSUMED_BY_ANALYST" }
+      total_bulk_m3: { value: 38.0e6, unit: "m3", source: "Paul et al. (2023), Disaster Adv. 16:1-12" }
+      Cv: { value: 0.25, unit: "dimensionless", source: "ASSUMED_BY_ANALYST" }
+      lake_vol_m3: { value: 0.0, unit: "m3", source: "Paul et al. (2023)", notes: "Cheia pluvial generalizada sem lago de barragem" }
+    precipitation:
+      p_meas_mm:
+        value: 340.0
+        unit: "mm/48h"
+        source: "IMD Weather Station Kullu / Manali (09-10/07/2023)"
+        notes: "IMD registrou recorde histórico de precipitação monçônica (>340 mm em 48h). Com chuva real, não há anomalia de déficit."
+    thermodynamics:
+      mass_kg: { value: 8.0e9, unit: "kg", source: "ASSUMED_BY_ANALYST" }
+      delta_H_m: { value: 1800, unit: "m", source: "ASSUMED_BY_ANALYST" }
+      ice_fraction: { value: 0.05, unit: "dimensionless", source: "ASSUMED_BY_ANALYST" }
+      eta_frict: { value: 0.005, unit: "dimensionless", source: "ASSUMED_BY_ANALYST" }
+
+  parechu_2005:
+    name: "Enxurrada do Rio Parechu de 2005"
+    channel_geometry:
+      B: { value: 42.0, unit: "m", source: "ASSUMED_BY_ANALYST" }
+      z: { value: 0.5, unit: "1V:zH", source: "ASSUMED_BY_ANALYST" }
+      dh: { value: 12.5, unit: "m", source: "ASSUMED_BY_ANALYST" }
+      S0: { value: 0.032, unit: "m/m", source: "ASSUMED_BY_ANALYST" }
+      n: { value: 0.048, unit: "s/m^(1/3)", source: "ASSUMED_BY_ANALYST" }
+    hydrology:
+      basin_area_km2: { value: 240.0, unit: "km2", source: "Bhambri et al. (2015), Geomorphology 248:289-302" }
+      C_runoff: { value: 0.75, unit: "dimensionless", source: "ASSUMED_BY_ANALYST" }
+      total_bulk_m3: { value: 52.0e6, unit: "m3", source: "Gupta & Sah (2008), Curr. Sci. 95:1604-1609" }
+      Cv: { value: 0.25, unit: "dimensionless", source: "ASSUMED_BY_ANALYST" }
+      lake_vol_m3: { value: 39.0e6, unit: "m3", source: "Bhambri et al. (2015)", notes: "Rompimento do lago de barramento de Parechu" }
+    precipitation:
+      p_meas_mm:
+        value: 12.0
+        unit: "mm"
+        source: "IMD Spiti Station Proxy"
+    thermodynamics:
+      mass_kg: { value: 1.5e10, unit: "kg", source: "ASSUMED_BY_ANALYST" }
+      delta_H_m: { value: 1500, unit: "m", source: "ASSUMED_BY_ANALYST" }
+      ice_fraction: { value: 0.10, unit: "dimensionless", source: "ASSUMED_BY_ANALYST" }
+      eta_frict: { value: 0.010, unit: "dimensionless", source: "ASSUMED_BY_ANALYST" }

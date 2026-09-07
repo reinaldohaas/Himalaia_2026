@@ -1,0 +1,561 @@
+event_id,event_name,v_bulk_factor,v_bulk_m3,v_water_gross_m3,v_runoff_req_m3,basin_area_km2,c_runoff,p_req_mm,p_meas_tested_mm,deficit_multiplier,deficit_status
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,15.0,0.85,0.0,20.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,15.0,0.85,0.0,40.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,15.0,0.85,0.0,60.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,15.0,0.85,0.0,87.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,15.0,0.85,0.0,110.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,15.0,0.85,0.0,150.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,15.0,0.85,0.0,200.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,15.0,0.85,0.0,325.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,28.0,0.85,0.0,20.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,28.0,0.85,0.0,40.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,28.0,0.85,0.0,60.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,28.0,0.85,0.0,87.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,28.0,0.85,0.0,110.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,28.0,0.85,0.0,150.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,28.0,0.85,0.0,200.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,28.0,0.85,0.0,325.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,42.0,0.85,0.0,20.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,42.0,0.85,0.0,40.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,42.0,0.85,0.0,60.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,42.0,0.85,0.0,87.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,42.0,0.85,0.0,110.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,42.0,0.85,0.0,150.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,42.0,0.85,0.0,200.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,42.0,0.85,0.0,325.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,55.0,0.85,0.0,20.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,55.0,0.85,0.0,40.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,55.0,0.85,0.0,60.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,55.0,0.85,0.0,87.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,55.0,0.85,0.0,110.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,55.0,0.85,0.0,150.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,55.0,0.85,0.0,200.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,55.0,0.85,0.0,325.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,65.7,0.85,0.0,20.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,65.7,0.85,0.0,40.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,65.7,0.85,0.0,60.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,65.7,0.85,0.0,87.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,65.7,0.85,0.0,110.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,65.7,0.85,0.0,150.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,65.7,0.85,0.0,200.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,65.7,0.85,0.0,325.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,85.0,0.85,0.0,20.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,85.0,0.85,0.0,40.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,85.0,0.85,0.0,60.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,85.0,0.85,0.0,87.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,85.0,0.85,0.0,110.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,85.0,0.85,0.0,150.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,85.0,0.85,0.0,200.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,85.0,0.85,0.0,325.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,100.0,0.85,0.0,20.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,100.0,0.85,0.0,40.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,100.0,0.85,0.0,60.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,100.0,0.85,0.0,87.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,100.0,0.85,0.0,110.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,100.0,0.85,0.0,150.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,100.0,0.85,0.0,200.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.7,14490000.0,9940140.0,0.0,100.0,0.85,0.0,325.0,0.0,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,15.0,0.85,152.0,20.0,7.6,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,15.0,0.85,152.0,40.0,3.8,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,15.0,0.85,152.0,60.0,2.53,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,15.0,0.85,152.0,87.0,1.75,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,15.0,0.85,152.0,110.0,1.38,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,15.0,0.85,152.0,150.0,1.01,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,15.0,0.85,152.0,200.0,0.76,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,15.0,0.85,152.0,325.0,0.47,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,28.0,0.85,81.4,20.0,4.07,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,28.0,0.85,81.4,40.0,2.04,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,28.0,0.85,81.4,60.0,1.36,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,28.0,0.85,81.4,87.0,0.94,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,28.0,0.85,81.4,110.0,0.74,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,28.0,0.85,81.4,150.0,0.54,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,28.0,0.85,81.4,200.0,0.41,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,28.0,0.85,81.4,325.0,0.25,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,42.0,0.85,54.3,20.0,2.71,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,42.0,0.85,54.3,40.0,1.36,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,42.0,0.85,54.3,60.0,0.9,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,42.0,0.85,54.3,87.0,0.62,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,42.0,0.85,54.3,110.0,0.49,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,42.0,0.85,54.3,150.0,0.36,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,42.0,0.85,54.3,200.0,0.27,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,42.0,0.85,54.3,325.0,0.17,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,55.0,0.85,41.5,20.0,2.07,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,55.0,0.85,41.5,40.0,1.04,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,55.0,0.85,41.5,60.0,0.69,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,55.0,0.85,41.5,87.0,0.48,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,55.0,0.85,41.5,110.0,0.38,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,55.0,0.85,41.5,150.0,0.28,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,55.0,0.85,41.5,200.0,0.21,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,55.0,0.85,41.5,325.0,0.13,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,65.7,0.85,34.7,20.0,1.74,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,65.7,0.85,34.7,40.0,0.87,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,65.7,0.85,34.7,60.0,0.58,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,65.7,0.85,34.7,87.0,0.4,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,65.7,0.85,34.7,110.0,0.32,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,65.7,0.85,34.7,150.0,0.23,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,65.7,0.85,34.7,200.0,0.17,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,65.7,0.85,34.7,325.0,0.11,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,85.0,0.85,26.8,20.0,1.34,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,85.0,0.85,26.8,40.0,0.67,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,85.0,0.85,26.8,60.0,0.45,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,85.0,0.85,26.8,87.0,0.31,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,85.0,0.85,26.8,110.0,0.24,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,85.0,0.85,26.8,150.0,0.18,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,85.0,0.85,26.8,200.0,0.13,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,85.0,0.85,26.8,325.0,0.08,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,100.0,0.85,22.8,20.0,1.14,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,100.0,0.85,22.8,40.0,0.57,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,100.0,0.85,22.8,60.0,0.38,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,100.0,0.85,22.8,87.0,0.26,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,100.0,0.85,22.8,110.0,0.21,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,100.0,0.85,22.8,150.0,0.15,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,100.0,0.85,22.8,200.0,0.11,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),0.85,17595000.0,12070170.0,1938170.0,100.0,0.85,22.8,325.0,0.07,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,15.0,0.85,319.1,20.0,15.95,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,15.0,0.85,319.1,40.0,7.98,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,15.0,0.85,319.1,60.0,5.32,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,15.0,0.85,319.1,87.0,3.67,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,15.0,0.85,319.1,110.0,2.9,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,15.0,0.85,319.1,150.0,2.13,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,15.0,0.85,319.1,200.0,1.6,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,15.0,0.85,319.1,325.0,0.98,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,28.0,0.85,170.9,20.0,8.55,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,28.0,0.85,170.9,40.0,4.27,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,28.0,0.85,170.9,60.0,2.85,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,28.0,0.85,170.9,87.0,1.96,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,28.0,0.85,170.9,110.0,1.55,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,28.0,0.85,170.9,150.0,1.14,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,28.0,0.85,170.9,200.0,0.85,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,28.0,0.85,170.9,325.0,0.53,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,42.0,0.85,114.0,20.0,5.7,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,42.0,0.85,114.0,40.0,2.85,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,42.0,0.85,114.0,60.0,1.9,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,42.0,0.85,114.0,87.0,1.31,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,42.0,0.85,114.0,110.0,1.04,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,42.0,0.85,114.0,150.0,0.76,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,42.0,0.85,114.0,200.0,0.57,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,42.0,0.85,114.0,325.0,0.35,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,55.0,0.85,87.0,20.0,4.35,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,55.0,0.85,87.0,40.0,2.18,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,55.0,0.85,87.0,60.0,1.45,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,55.0,0.85,87.0,87.0,1.0,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,55.0,0.85,87.0,110.0,0.79,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,55.0,0.85,87.0,150.0,0.58,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,55.0,0.85,87.0,200.0,0.44,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,55.0,0.85,87.0,325.0,0.27,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,65.7,0.85,72.8,20.0,3.64,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,65.7,0.85,72.8,40.0,1.82,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,65.7,0.85,72.8,60.0,1.21,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,65.7,0.85,72.8,87.0,0.84,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,65.7,0.85,72.8,110.0,0.66,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,65.7,0.85,72.8,150.0,0.49,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,65.7,0.85,72.8,200.0,0.36,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,65.7,0.85,72.8,325.0,0.22,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,85.0,0.85,56.3,20.0,2.82,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,85.0,0.85,56.3,40.0,1.41,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,85.0,0.85,56.3,60.0,0.94,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,85.0,0.85,56.3,87.0,0.65,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,85.0,0.85,56.3,110.0,0.51,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,85.0,0.85,56.3,150.0,0.38,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,85.0,0.85,56.3,200.0,0.28,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,85.0,0.85,56.3,325.0,0.17,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,100.0,0.85,47.9,20.0,2.39,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,100.0,0.85,47.9,40.0,1.2,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,100.0,0.85,47.9,60.0,0.8,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,100.0,0.85,47.9,87.0,0.55,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,100.0,0.85,47.9,110.0,0.44,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,100.0,0.85,47.9,150.0,0.32,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,100.0,0.85,47.9,200.0,0.24,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.0,20700000.0,14200200.0,4068200.0,100.0,0.85,47.9,325.0,0.15,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,15.0,0.85,486.1,20.0,24.31,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,15.0,0.85,486.1,40.0,12.15,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,15.0,0.85,486.1,60.0,8.1,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,15.0,0.85,486.1,87.0,5.59,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,15.0,0.85,486.1,110.0,4.42,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,15.0,0.85,486.1,150.0,3.24,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,15.0,0.85,486.1,200.0,2.43,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,15.0,0.85,486.1,325.0,1.5,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,28.0,0.85,260.4,20.0,13.02,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,28.0,0.85,260.4,40.0,6.51,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,28.0,0.85,260.4,60.0,4.34,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,28.0,0.85,260.4,87.0,2.99,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,28.0,0.85,260.4,110.0,2.37,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,28.0,0.85,260.4,150.0,1.74,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,28.0,0.85,260.4,200.0,1.3,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,28.0,0.85,260.4,325.0,0.8,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,42.0,0.85,173.6,20.0,8.68,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,42.0,0.85,173.6,40.0,4.34,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,42.0,0.85,173.6,60.0,2.89,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,42.0,0.85,173.6,87.0,2.0,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,42.0,0.85,173.6,110.0,1.58,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,42.0,0.85,173.6,150.0,1.16,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,42.0,0.85,173.6,200.0,0.87,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,42.0,0.85,173.6,325.0,0.53,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,55.0,0.85,132.6,20.0,6.63,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,55.0,0.85,132.6,40.0,3.31,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,55.0,0.85,132.6,60.0,2.21,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,55.0,0.85,132.6,87.0,1.52,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,55.0,0.85,132.6,110.0,1.21,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,55.0,0.85,132.6,150.0,0.88,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,55.0,0.85,132.6,200.0,0.66,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,55.0,0.85,132.6,325.0,0.41,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,65.7,0.85,111.0,20.0,5.55,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,65.7,0.85,111.0,40.0,2.77,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,65.7,0.85,111.0,60.0,1.85,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,65.7,0.85,111.0,87.0,1.28,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,65.7,0.85,111.0,110.0,1.01,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,65.7,0.85,111.0,150.0,0.74,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,65.7,0.85,111.0,200.0,0.55,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,65.7,0.85,111.0,325.0,0.34,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,85.0,0.85,85.8,20.0,4.29,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,85.0,0.85,85.8,40.0,2.14,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,85.0,0.85,85.8,60.0,1.43,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,85.0,0.85,85.8,87.0,0.99,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,85.0,0.85,85.8,110.0,0.78,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,85.0,0.85,85.8,150.0,0.57,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,85.0,0.85,85.8,200.0,0.43,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,85.0,0.85,85.8,325.0,0.26,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,100.0,0.85,72.9,20.0,3.65,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,100.0,0.85,72.9,40.0,1.82,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,100.0,0.85,72.9,60.0,1.22,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,100.0,0.85,72.9,87.0,0.84,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,100.0,0.85,72.9,110.0,0.66,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,100.0,0.85,72.9,150.0,0.49,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,100.0,0.85,72.9,200.0,0.36,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.15,23805000.0,16330230.0,6198230.0,100.0,0.85,72.9,325.0,0.22,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,15.0,0.85,653.2,20.0,32.66,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,15.0,0.85,653.2,40.0,16.33,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,15.0,0.85,653.2,60.0,10.89,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,15.0,0.85,653.2,87.0,7.51,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,15.0,0.85,653.2,110.0,5.94,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,15.0,0.85,653.2,150.0,4.35,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,15.0,0.85,653.2,200.0,3.27,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,15.0,0.85,653.2,325.0,2.01,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,28.0,0.85,349.9,20.0,17.5,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,28.0,0.85,349.9,40.0,8.75,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,28.0,0.85,349.9,60.0,5.83,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,28.0,0.85,349.9,87.0,4.02,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,28.0,0.85,349.9,110.0,3.18,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,28.0,0.85,349.9,150.0,2.33,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,28.0,0.85,349.9,200.0,1.75,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,28.0,0.85,349.9,325.0,1.08,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,42.0,0.85,233.3,20.0,11.66,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,42.0,0.85,233.3,40.0,5.83,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,42.0,0.85,233.3,60.0,3.89,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,42.0,0.85,233.3,87.0,2.68,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,42.0,0.85,233.3,110.0,2.12,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,42.0,0.85,233.3,150.0,1.56,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,42.0,0.85,233.3,200.0,1.17,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,42.0,0.85,233.3,325.0,0.72,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,55.0,0.85,178.1,20.0,8.91,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,55.0,0.85,178.1,40.0,4.45,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,55.0,0.85,178.1,60.0,2.97,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,55.0,0.85,178.1,87.0,2.05,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,55.0,0.85,178.1,110.0,1.62,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,55.0,0.85,178.1,150.0,1.19,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,55.0,0.85,178.1,200.0,0.89,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,55.0,0.85,178.1,325.0,0.55,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,65.7,0.85,149.1,20.0,7.46,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,65.7,0.85,149.1,40.0,3.73,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,65.7,0.85,149.1,60.0,2.49,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,65.7,0.85,149.1,87.0,1.71,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,65.7,0.85,149.1,110.0,1.36,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,65.7,0.85,149.1,150.0,0.99,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,65.7,0.85,149.1,200.0,0.75,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,65.7,0.85,149.1,325.0,0.46,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,85.0,0.85,115.3,20.0,5.76,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,85.0,0.85,115.3,40.0,2.88,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,85.0,0.85,115.3,60.0,1.92,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,85.0,0.85,115.3,87.0,1.32,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,85.0,0.85,115.3,110.0,1.05,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,85.0,0.85,115.3,150.0,0.77,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,85.0,0.85,115.3,200.0,0.58,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,85.0,0.85,115.3,325.0,0.35,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,100.0,0.85,98.0,20.0,4.9,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,100.0,0.85,98.0,40.0,2.45,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,100.0,0.85,98.0,60.0,1.63,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,100.0,0.85,98.0,87.0,1.13,DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,100.0,0.85,98.0,110.0,0.89,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,100.0,0.85,98.0,150.0,0.65,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,100.0,0.85,98.0,200.0,0.49,SEM_DEFICIT
+himalaia_2026,Catástrofe de 2026 (Lhende Khola / Rio Trishuli),1.3,26910000.0,18460260.0,8328260.0,100.0,0.85,98.0,325.0,0.3,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,15.0,0.85,198.9,20.0,9.95,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,15.0,0.85,198.9,40.0,4.97,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,15.0,0.85,198.9,60.0,3.32,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,15.0,0.85,198.9,87.0,2.29,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,15.0,0.85,198.9,110.0,1.81,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,15.0,0.85,198.9,150.0,1.33,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,15.0,0.85,198.9,200.0,0.99,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,15.0,0.85,198.9,325.0,0.61,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,28.0,0.85,106.6,20.0,5.33,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,28.0,0.85,106.6,40.0,2.66,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,28.0,0.85,106.6,60.0,1.78,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,28.0,0.85,106.6,87.0,1.22,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,28.0,0.85,106.6,110.0,0.97,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,28.0,0.85,106.6,150.0,0.71,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,28.0,0.85,106.6,200.0,0.53,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,28.0,0.85,106.6,325.0,0.33,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,42.0,0.85,71.0,20.0,3.55,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,42.0,0.85,71.0,40.0,1.78,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,42.0,0.85,71.0,60.0,1.18,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,42.0,0.85,71.0,87.0,0.82,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,42.0,0.85,71.0,110.0,0.65,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,42.0,0.85,71.0,150.0,0.47,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,42.0,0.85,71.0,200.0,0.36,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,42.0,0.85,71.0,325.0,0.22,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,55.0,0.85,54.2,20.0,2.71,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,55.0,0.85,54.2,40.0,1.36,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,55.0,0.85,54.2,60.0,0.9,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,55.0,0.85,54.2,87.0,0.62,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,55.0,0.85,54.2,110.0,0.49,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,55.0,0.85,54.2,150.0,0.36,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,55.0,0.85,54.2,200.0,0.27,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,55.0,0.85,54.2,325.0,0.17,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,65.7,0.85,45.4,20.0,2.27,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,65.7,0.85,45.4,40.0,1.14,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,65.7,0.85,45.4,60.0,0.76,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,65.7,0.85,45.4,87.0,0.52,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,65.7,0.85,45.4,110.0,0.41,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,65.7,0.85,45.4,150.0,0.3,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,65.7,0.85,45.4,200.0,0.23,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,65.7,0.85,45.4,325.0,0.14,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,85.0,0.85,35.1,20.0,1.76,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,85.0,0.85,35.1,40.0,0.88,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,85.0,0.85,35.1,60.0,0.59,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,85.0,0.85,35.1,87.0,0.4,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,85.0,0.85,35.1,110.0,0.32,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,85.0,0.85,35.1,150.0,0.23,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,85.0,0.85,35.1,200.0,0.18,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,85.0,0.85,35.1,325.0,0.11,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,100.0,0.85,29.8,20.0,1.49,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,100.0,0.85,29.8,40.0,0.75,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,100.0,0.85,29.8,60.0,0.5,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,100.0,0.85,29.8,87.0,0.34,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,100.0,0.85,29.8,110.0,0.27,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,100.0,0.85,29.8,150.0,0.2,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,100.0,0.85,29.8,200.0,0.15,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.7,5040000.0,3276000.0,2536000.0,100.0,0.85,29.8,325.0,0.09,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,15.0,0.85,254.0,20.0,12.7,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,15.0,0.85,254.0,40.0,6.35,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,15.0,0.85,254.0,60.0,4.23,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,15.0,0.85,254.0,87.0,2.92,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,15.0,0.85,254.0,110.0,2.31,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,15.0,0.85,254.0,150.0,1.69,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,15.0,0.85,254.0,200.0,1.27,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,15.0,0.85,254.0,325.0,0.78,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,28.0,0.85,136.1,20.0,6.8,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,28.0,0.85,136.1,40.0,3.4,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,28.0,0.85,136.1,60.0,2.27,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,28.0,0.85,136.1,87.0,1.56,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,28.0,0.85,136.1,110.0,1.24,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,28.0,0.85,136.1,150.0,0.91,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,28.0,0.85,136.1,200.0,0.68,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,28.0,0.85,136.1,325.0,0.42,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,42.0,0.85,90.7,20.0,4.54,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,42.0,0.85,90.7,40.0,2.27,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,42.0,0.85,90.7,60.0,1.51,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,42.0,0.85,90.7,87.0,1.04,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,42.0,0.85,90.7,110.0,0.82,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,42.0,0.85,90.7,150.0,0.6,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,42.0,0.85,90.7,200.0,0.45,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,42.0,0.85,90.7,325.0,0.28,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,55.0,0.85,69.3,20.0,3.46,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,55.0,0.85,69.3,40.0,1.73,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,55.0,0.85,69.3,60.0,1.15,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,55.0,0.85,69.3,87.0,0.8,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,55.0,0.85,69.3,110.0,0.63,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,55.0,0.85,69.3,150.0,0.46,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,55.0,0.85,69.3,200.0,0.35,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,55.0,0.85,69.3,325.0,0.21,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,65.7,0.85,58.0,20.0,2.9,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,65.7,0.85,58.0,40.0,1.45,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,65.7,0.85,58.0,60.0,0.97,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,65.7,0.85,58.0,87.0,0.67,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,65.7,0.85,58.0,110.0,0.53,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,65.7,0.85,58.0,150.0,0.39,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,65.7,0.85,58.0,200.0,0.29,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,65.7,0.85,58.0,325.0,0.18,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,85.0,0.85,44.8,20.0,2.24,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,85.0,0.85,44.8,40.0,1.12,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,85.0,0.85,44.8,60.0,0.75,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,85.0,0.85,44.8,87.0,0.52,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,85.0,0.85,44.8,110.0,0.41,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,85.0,0.85,44.8,150.0,0.3,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,85.0,0.85,44.8,200.0,0.22,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,85.0,0.85,44.8,325.0,0.14,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,100.0,0.85,38.1,20.0,1.9,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,100.0,0.85,38.1,40.0,0.95,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,100.0,0.85,38.1,60.0,0.63,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,100.0,0.85,38.1,87.0,0.44,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,100.0,0.85,38.1,110.0,0.35,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,100.0,0.85,38.1,150.0,0.25,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,100.0,0.85,38.1,200.0,0.19,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),0.85,6120000.0,3978000.0,3238000.0,100.0,0.85,38.1,325.0,0.12,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,15.0,0.85,309.0,20.0,15.45,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,15.0,0.85,309.0,40.0,7.73,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,15.0,0.85,309.0,60.0,5.15,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,15.0,0.85,309.0,87.0,3.55,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,15.0,0.85,309.0,110.0,2.81,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,15.0,0.85,309.0,150.0,2.06,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,15.0,0.85,309.0,200.0,1.55,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,15.0,0.85,309.0,325.0,0.95,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,28.0,0.85,165.5,20.0,8.28,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,28.0,0.85,165.5,40.0,4.14,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,28.0,0.85,165.5,60.0,2.76,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,28.0,0.85,165.5,87.0,1.9,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,28.0,0.85,165.5,110.0,1.5,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,28.0,0.85,165.5,150.0,1.1,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,28.0,0.85,165.5,200.0,0.83,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,28.0,0.85,165.5,325.0,0.51,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,42.0,0.85,110.4,20.0,5.52,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,42.0,0.85,110.4,40.0,2.76,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,42.0,0.85,110.4,60.0,1.84,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,42.0,0.85,110.4,87.0,1.27,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,42.0,0.85,110.4,110.0,1.0,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,42.0,0.85,110.4,150.0,0.74,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,42.0,0.85,110.4,200.0,0.55,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,42.0,0.85,110.4,325.0,0.34,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,55.0,0.85,84.3,20.0,4.21,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,55.0,0.85,84.3,40.0,2.11,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,55.0,0.85,84.3,60.0,1.4,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,55.0,0.85,84.3,87.0,0.97,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,55.0,0.85,84.3,110.0,0.77,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,55.0,0.85,84.3,150.0,0.56,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,55.0,0.85,84.3,200.0,0.42,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,55.0,0.85,84.3,325.0,0.26,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,65.7,0.85,70.6,20.0,3.53,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,65.7,0.85,70.6,40.0,1.76,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,65.7,0.85,70.6,60.0,1.18,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,65.7,0.85,70.6,87.0,0.81,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,65.7,0.85,70.6,110.0,0.64,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,65.7,0.85,70.6,150.0,0.47,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,65.7,0.85,70.6,200.0,0.35,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,65.7,0.85,70.6,325.0,0.22,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,85.0,0.85,54.5,20.0,2.73,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,85.0,0.85,54.5,40.0,1.36,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,85.0,0.85,54.5,60.0,0.91,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,85.0,0.85,54.5,87.0,0.63,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,85.0,0.85,54.5,110.0,0.5,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,85.0,0.85,54.5,150.0,0.36,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,85.0,0.85,54.5,200.0,0.27,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,85.0,0.85,54.5,325.0,0.17,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,100.0,0.85,46.4,20.0,2.32,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,100.0,0.85,46.4,40.0,1.16,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,100.0,0.85,46.4,60.0,0.77,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,100.0,0.85,46.4,87.0,0.53,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,100.0,0.85,46.4,110.0,0.42,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,100.0,0.85,46.4,150.0,0.31,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,100.0,0.85,46.4,200.0,0.23,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.0,7200000.0,4680000.0,3940000.0,100.0,0.85,46.4,325.0,0.14,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,15.0,0.85,364.1,20.0,18.2,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,15.0,0.85,364.1,40.0,9.1,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,15.0,0.85,364.1,60.0,6.07,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,15.0,0.85,364.1,87.0,4.18,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,15.0,0.85,364.1,110.0,3.31,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,15.0,0.85,364.1,150.0,2.43,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,15.0,0.85,364.1,200.0,1.82,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,15.0,0.85,364.1,325.0,1.12,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,28.0,0.85,195.0,20.0,9.75,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,28.0,0.85,195.0,40.0,4.88,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,28.0,0.85,195.0,60.0,3.25,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,28.0,0.85,195.0,87.0,2.24,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,28.0,0.85,195.0,110.0,1.77,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,28.0,0.85,195.0,150.0,1.3,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,28.0,0.85,195.0,200.0,0.98,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,28.0,0.85,195.0,325.0,0.6,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,42.0,0.85,130.0,20.0,6.5,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,42.0,0.85,130.0,40.0,3.25,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,42.0,0.85,130.0,60.0,2.17,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,42.0,0.85,130.0,87.0,1.49,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,42.0,0.85,130.0,110.0,1.18,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,42.0,0.85,130.0,150.0,0.87,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,42.0,0.85,130.0,200.0,0.65,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,42.0,0.85,130.0,325.0,0.4,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,55.0,0.85,99.3,20.0,4.96,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,55.0,0.85,99.3,40.0,2.48,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,55.0,0.85,99.3,60.0,1.65,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,55.0,0.85,99.3,87.0,1.14,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,55.0,0.85,99.3,110.0,0.9,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,55.0,0.85,99.3,150.0,0.66,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,55.0,0.85,99.3,200.0,0.5,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,55.0,0.85,99.3,325.0,0.31,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,65.7,0.85,83.1,20.0,4.16,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,65.7,0.85,83.1,40.0,2.08,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,65.7,0.85,83.1,60.0,1.39,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,65.7,0.85,83.1,87.0,0.96,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,65.7,0.85,83.1,110.0,0.76,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,65.7,0.85,83.1,150.0,0.55,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,65.7,0.85,83.1,200.0,0.42,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,65.7,0.85,83.1,325.0,0.26,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,85.0,0.85,64.2,20.0,3.21,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,85.0,0.85,64.2,40.0,1.61,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,85.0,0.85,64.2,60.0,1.07,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,85.0,0.85,64.2,87.0,0.74,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,85.0,0.85,64.2,110.0,0.58,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,85.0,0.85,64.2,150.0,0.43,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,85.0,0.85,64.2,200.0,0.32,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,85.0,0.85,64.2,325.0,0.2,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,100.0,0.85,54.6,20.0,2.73,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,100.0,0.85,54.6,40.0,1.37,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,100.0,0.85,54.6,60.0,0.91,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,100.0,0.85,54.6,87.0,0.63,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,100.0,0.85,54.6,110.0,0.5,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,100.0,0.85,54.6,150.0,0.36,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,100.0,0.85,54.6,200.0,0.27,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.15,8280000.0,5382000.0,4642000.0,100.0,0.85,54.6,325.0,0.17,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,15.0,0.85,419.1,20.0,20.96,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,15.0,0.85,419.1,40.0,10.48,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,15.0,0.85,419.1,60.0,6.99,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,15.0,0.85,419.1,87.0,4.82,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,15.0,0.85,419.1,110.0,3.81,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,15.0,0.85,419.1,150.0,2.79,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,15.0,0.85,419.1,200.0,2.1,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,15.0,0.85,419.1,325.0,1.29,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,28.0,0.85,224.5,20.0,11.23,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,28.0,0.85,224.5,40.0,5.61,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,28.0,0.85,224.5,60.0,3.74,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,28.0,0.85,224.5,87.0,2.58,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,28.0,0.85,224.5,110.0,2.04,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,28.0,0.85,224.5,150.0,1.5,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,28.0,0.85,224.5,200.0,1.12,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,28.0,0.85,224.5,325.0,0.69,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,42.0,0.85,149.7,20.0,7.48,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,42.0,0.85,149.7,40.0,3.74,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,42.0,0.85,149.7,60.0,2.49,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,42.0,0.85,149.7,87.0,1.72,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,42.0,0.85,149.7,110.0,1.36,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,42.0,0.85,149.7,150.0,1.0,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,42.0,0.85,149.7,200.0,0.75,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,42.0,0.85,149.7,325.0,0.46,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,55.0,0.85,114.3,20.0,5.72,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,55.0,0.85,114.3,40.0,2.86,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,55.0,0.85,114.3,60.0,1.91,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,55.0,0.85,114.3,87.0,1.31,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,55.0,0.85,114.3,110.0,1.04,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,55.0,0.85,114.3,150.0,0.76,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,55.0,0.85,114.3,200.0,0.57,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,55.0,0.85,114.3,325.0,0.35,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,65.7,0.85,95.7,20.0,4.78,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,65.7,0.85,95.7,40.0,2.39,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,65.7,0.85,95.7,60.0,1.59,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,65.7,0.85,95.7,87.0,1.1,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,65.7,0.85,95.7,110.0,0.87,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,65.7,0.85,95.7,150.0,0.64,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,65.7,0.85,95.7,200.0,0.48,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,65.7,0.85,95.7,325.0,0.29,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,85.0,0.85,74.0,20.0,3.7,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,85.0,0.85,74.0,40.0,1.85,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,85.0,0.85,74.0,60.0,1.23,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,85.0,0.85,74.0,87.0,0.85,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,85.0,0.85,74.0,110.0,0.67,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,85.0,0.85,74.0,150.0,0.49,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,85.0,0.85,74.0,200.0,0.37,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,85.0,0.85,74.0,325.0,0.23,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,100.0,0.85,62.9,20.0,3.14,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,100.0,0.85,62.9,40.0,1.57,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,100.0,0.85,62.9,60.0,1.05,DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,100.0,0.85,62.9,87.0,0.72,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,100.0,0.85,62.9,110.0,0.57,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,100.0,0.85,62.9,150.0,0.42,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,100.0,0.85,62.9,200.0,0.31,SEM_DEFICIT
+kedarnath_2013,Catástrofe de Kedarnath (Chorabari / Mandakini),1.3,9360000.0,6084000.0,5344000.0,100.0,0.85,62.9,325.0,0.19,SEM_DEFICIT
