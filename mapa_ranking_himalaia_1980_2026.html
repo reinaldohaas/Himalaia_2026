@@ -11,10 +11,15 @@
     <!-- MapLibre GL JS 3D Engine -->
     <script src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js"></script>
     <link href="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css" rel="stylesheet" />
+    <!-- React 18, ReactDOM & Babel Standalone para Interface Reativa Organizada -->
+    <script src="https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@babel/standalone@7.23.8/babel.min.js"></script>
+
     <style>
         :root {
             --bg-main: #06090e;
-            --panel-bg: rgba(11, 17, 30, 0.96);
+            --panel-bg: rgba(10, 16, 28, 0.96);
             --card-bg: #101726;
             --border-color: #1e293b;
             --cyan: #06b6d4;
@@ -45,192 +50,195 @@
             width: 100%;
             height: calc(100vh - 56px);
         }
-        /* Painel Lateral Esquerdo: Local Único de Todas as Informações e Textos */
-        .presentation-card {
+
+        /* Janela Retrátil Flutuante (Caixa de Explicação dos 15 Episódios) */
+        .retractable-window {
             position: absolute;
-            top: 70px;
-            left: 20px;
+            top: 68px;
+            left: 18px;
             z-index: 100;
-            width: 520px;
-            max-width: calc(100vw - 40px);
-            max-height: calc(100vh - 90px);
-            overflow-y: auto;
+            width: 530px;
+            max-width: calc(100vw - 36px);
+            max-height: calc(100vh - 86px);
             background: var(--panel-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 16px;
-            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.85);
-            backdrop-filter: blur(14px);
-            transition: all 0.3s ease;
-        }
-        .filter-bar {
-            position: absolute;
-            top: 70px;
-            right: 60px;
-            z-index: 100;
-            background: var(--panel-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 6px 10px;
-            backdrop-filter: blur(10px);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+            border-radius: 14px;
+            box-shadow: 0 14px 45px rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(16px);
             display: flex;
-            gap: 5px;
-            flex-wrap: wrap;
-            max-width: 720px;
-            justify-content: flex-end;
+            flex-direction: column;
+            transition: transform 0.38s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
         }
-        /* Marcadores 3D Limpos (Sem Letras ou Banners no Terreno do Mapa) */
-        .marker-badge {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            border: 2px solid #ffffff;
+        .retractable-window.collapsed {
+            transform: translateX(-580px);
+            opacity: 0;
+            pointer-events: none;
+        }
+        .window-header {
+            padding: 10px 14px;
+            background: rgba(15, 23, 42, 0.95);
+            border-bottom: 1px solid var(--border-color);
+            border-top-left-radius: 14px;
+            border-top-right-radius: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .window-body {
+            padding: 12px 14px;
+            overflow-y: auto;
+            flex-grow: 1;
+        }
+
+        /* Botão Flutuante de Reabrir Painel (quando a janela está recolhida) */
+        .floating-drawer-toggle {
+            position: absolute;
+            top: 68px;
+            left: 18px;
+            z-index: 105;
+            background: rgba(11, 17, 30, 0.94);
+            border: 1.5px solid var(--cyan);
+            border-radius: 30px;
+            padding: 8px 16px;
             color: #ffffff;
-            font-weight: 800;
-            font-size: 13px;
+            font-size: 0.80rem;
+            font-weight: 700;
+            box-shadow: 0 6px 25px rgba(6, 182, 212, 0.45);
+            backdrop-filter: blur(14px);
+            cursor: pointer;
+            transition: all 0.25s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            animation: pulseGlow 2.5s infinite alternate;
+        }
+        @keyframes pulseGlow {
+            0% { box-shadow: 0 0 10px rgba(6, 182, 212, 0.4); }
+            100% { box-shadow: 0 0 22px rgba(6, 182, 212, 0.85); }
+        }
+        .floating-drawer-toggle:hover {
+            background: rgba(6, 182, 212, 0.25);
+            border-color: #38bdf8;
+            transform: scale(1.04);
+        }
+
+        /* Caixas Retráteis Internas (Accordions de Conteúdo) */
+        .accordion-box {
+            background: rgba(15, 23, 42, 0.75);
+            border: 1px solid #1e293b;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            overflow: hidden;
+            transition: all 0.2s;
+        }
+        .accordion-box.active {
+            border-color: rgba(56, 189, 248, 0.4);
+        }
+        .accordion-box-header {
+            padding: 8px 12px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+            background: rgba(20, 29, 48, 0.85);
+            font-size: 0.74rem;
+            font-weight: 700;
+        }
+        .accordion-box-header:hover {
+            background: rgba(30, 41, 59, 0.95);
+        }
+        .accordion-box-content {
+            padding: 10px 12px;
+            border-top: 1px solid #1e293b;
+            font-size: 0.72rem;
+            line-height: 1.45;
+            background: rgba(11, 17, 30, 0.85);
+        }
+
+        /* Badges de Categoria */
+        .marker-badge {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
+            font-weight: 800;
+            font-size: 0.75rem;
+            color: #fff;
+            box-shadow: 0 0 12px rgba(0,0,0,0.8);
+            border: 2px solid #fff;
             cursor: pointer;
-            box-shadow: 0 0 12px rgba(0,0,0,0.85);
-            transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: transform 0.2s;
         }
         .marker-badge:hover {
-            transform: scale(1.4) translateY(-4px);
-            z-index: 1000;
+            transform: scale(1.35);
+            z-index: 100;
         }
         .marker-2026 {
-            width: 42px;
-            height: 42px;
+            width: 36px;
+            height: 36px;
             border-radius: 50%;
-            border: 3px solid #facc15 !important;
-            background: radial-gradient(circle, #ea580c 0%, #b91c1c 100%);
-            color: #fef08a;
-            font-weight: 900;
-            font-size: 15px;
+            background: radial-gradient(circle, #facc15 0%, #b45309 70%, #78350f 100%);
+            border: 2.5px solid #ffffff;
+            box-shadow: 0 0 20px #facc15;
             display: flex;
             align-items: center;
             justify-content: center;
+            color: #020617;
+            font-size: 1.05rem;
+            font-weight: 900;
             cursor: pointer;
-            box-shadow: 0 0 25px rgba(250, 204, 21, 0.9), 0 0 10px rgba(239, 68, 68, 0.8);
-            animation: pulse-gold 2s infinite;
-        }
-        .marker-2026:hover {
-            transform: scale(1.45) translateY(-5px);
-            z-index: 1000;
+            animation: pulse-gold 1.8s infinite;
         }
         @keyframes pulse-gold {
-            0% { box-shadow: 0 0 0 0 rgba(250, 204, 21, 0.8); }
-            70% { box-shadow: 0 0 0 15px rgba(250, 204, 21, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(250, 204, 21, 0); }
+            0% { transform: scale(1); box-shadow: 0 0 10px #facc15; }
+            50% { transform: scale(1.15); box-shadow: 0 0 25px #facc15; }
+            100% { transform: scale(1); box-shadow: 0 0 10px #facc15; }
         }
-
-        /* Marcador Limpo do Epicentro Sísmico (Apenas Ícone com Pulso, Sem Letras no Mapa) */
         .seismic-pin {
-            width: 32px;
-            height: 32px;
+            width: 22px;
+            height: 22px;
             border-radius: 50%;
-            background: radial-gradient(circle, #ef4444 0%, #7f1d1d 100%);
-            border: 2px solid #fef08a;
-            color: #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 13px;
-            box-shadow: 0 0 15px rgba(239, 68, 68, 0.9);
-            animation: pulse-seismic 1.6s infinite;
-            cursor: pointer;
-        }
-        @keyframes pulse-seismic {
-            0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.9); }
-            70% { box-shadow: 0 0 0 14px rgba(239, 68, 68, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
-        }
-
-        /* Marcador Limpo do Super-Raio I_max (Apenas Ícone Dourado, Sem Letras no Mapa) */
-        .imax-beacon {
-            width: 34px;
-            height: 34px;
-            border-radius: 50%;
-            background: radial-gradient(circle, #facc15 0%, #ea580c 100%);
+            background: #ef4444;
             border: 2px solid #ffffff;
-            color: #1e1b4b;
+            box-shadow: 0 0 12px #ef4444;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 14px;
-            box-shadow: 0 0 20px rgba(250, 204, 21, 1);
-            animation: pulse-gold 1.4s infinite;
+            color: #ffffff;
+            font-size: 0.70rem;
             cursor: pointer;
+            animation: pulse-red 1.5s infinite;
         }
+        @keyframes pulse-red {
+            0% { transform: scale(0.95); opacity: 0.85; }
+            50% { transform: scale(1.2); opacity: 1; }
+            100% { transform: scale(0.95); opacity: 0.85; }
+        }
+        .cat-a { background: #ef4444; }
+        .cat-b { background: #f59e0b; color: #000; }
+        .cat-c { background: #3b82f6; }
+        .cat-d { background: #a855f7; }
+        .cat-e { background: #10b981; }
 
-        .cat-a { background-color: #ef4444; }
-        .cat-b { background-color: #ea580c; }
-        .cat-c { background-color: #0284c7; }
-        .cat-d { background-color: #10b981; }
-        
-        .badge-seismic {
-            background-color: #991b1b;
-            color: #fecaca;
-            font-size: 0.70rem;
-            font-weight: 700;
-            border: 1px solid #ef4444;
-        }
-        .badge-sound {
-            background-color: #9a3412;
-            color: #fed7aa;
-            font-size: 0.70rem;
-            font-weight: 700;
-            border: 1px solid #f97316;
-        }
-        .badge-electric {
-            background-color: #581c87;
-            color: #e9d5ff;
-            font-size: 0.70rem;
-            font-weight: 700;
-            border: 1px solid #a855f7;
-        }
-        .badge-gases {
-            background-color: #065f46;
-            color: #a7f3d0;
-            font-size: 0.70rem;
-            font-weight: 700;
-            border: 1px solid #10b981;
-        }
-        .badge-fire {
-            background-color: #7c2d12;
-            color: #fed7aa;
-            font-size: 0.70rem;
-            font-weight: 700;
-            border: 1px solid #ea580c;
-        }
-        .badge-optical {
-            background-color: #312e81;
-            color: #c7d2fe;
-            font-size: 0.70rem;
-            font-weight: 700;
-            border: 1px solid #6366f1;
-        }
-        .badge-dry {
-            background-color: #854d0e;
-            color: #fef08a;
-            font-size: 0.70rem;
-            font-weight: 700;
-            border: 1px solid #eab308;
-        }
-        .badge-solar {
-            background-color: #3b0764;
-            color: #f5d0fe;
-            font-size: 0.70rem;
-            font-weight: 700;
-            border: 1px solid #d946ef;
-        }
-        .custom-scroll::-webkit-scrollbar {
-            width: 5px;
-        }
-        .custom-scroll::-webkit-scrollbar-thumb {
-            background: rgba(148, 163, 184, 0.3);
-            border-radius: 4px;
+        /* Barra de Filtros Flutuante */
+        .filter-bar {
+            position: absolute;
+            bottom: 24px;
+            left: 20px;
+            z-index: 90;
+            background: rgba(11, 17, 30, 0.94);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 6px 12px;
+            display: flex;
+            gap: 6px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+            backdrop-filter: blur(8px);
+            max-width: calc(100vw - 280px);
+            overflow-x: auto;
         }
         .nav-btn {
             background: #1e293b;
@@ -241,22 +249,18 @@
             font-size: 0.72rem;
             font-weight: 600;
             transition: all 0.2s;
+            white-space: nowrap;
         }
-        .nav-btn:hover {
-            background: #0284c7;
-            color: #ffffff;
-            border-color: #38bdf8;
-        }
-        .nav-btn.active {
+        .nav-btn:hover, .nav-btn.active {
             background: #0284c7;
             color: #ffffff;
             border-color: #38bdf8;
         }
 
-        /* Legenda Minimalista e Discreta no Canto Inferior Direito */
+        /* Legenda Minimalista no Canto Inferior Direito */
         .lightning-legend {
             position: absolute;
-            bottom: 25px;
+            bottom: 24px;
             right: 20px;
             z-index: 90;
             background: rgba(11, 17, 30, 0.94);
@@ -267,6 +271,14 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.7);
             backdrop-filter: blur(10px);
         }
+
+        .custom-scroll::-webkit-scrollbar {
+            width: 5px;
+        }
+        .custom-scroll::-webkit-scrollbar-thumb {
+            background: rgba(148, 163, 184, 0.35);
+            border-radius: 4px;
+        }
     </style>
 </head>
 <body>
@@ -275,7 +287,7 @@
     <nav class="navbar navbar-dark bg-dark px-3 py-2 border-bottom border-secondary d-flex justify-content-between align-items-center" style="height: 56px;">
         <div class="d-flex align-items-center gap-2">
             <span class="badge bg-danger fw-bold">1980–2026</span>
-            <span class="navbar-brand text-cyan mb-0" style="font-size: 1.00rem;">
+            <span class="navbar-brand text-cyan mb-0" style="font-size: 0.98rem;">
                 <i class="fa-solid fa-mountain-sun me-1"></i> 15 CATÁSTROFES DO HIMALAIA: MAPA 3D FORENSE
             </span>
             <span class="badge bg-secondary d-none d-xl-inline">Sismos, Raios 20 km & Áudio Forense</span>
@@ -283,7 +295,7 @@
         
         <div class="d-flex align-items-center gap-2">
             <!-- Botão de Início do Tour Cinematográfico Dinâmico -->
-            <button onclick="toggleAutoTour()" id="navBtnTour" class="btn btn-sm btn-warning text-dark fw-bold shadow-sm" title="Iniciar Tour Cinematográfico Dinâmico: Mapa Geral seguido de Mergulho no Epicentro">
+            <button onclick="toggleAutoTour()" id="navBtnTour" class="btn btn-sm btn-warning text-dark fw-bold shadow-sm" title="Iniciar Tour Cinematográfico Dinâmico (recolhe a janela para expandir o mapa 3D)">
                 <i class="fa-solid fa-play me-1"></i> Iniciar Tour 360°
             </button>
             <!-- Botão de Áudio com Atalho (Tecla M) -->
@@ -292,29 +304,24 @@
             </button>
             <!-- Salto para 2026 -->
             <button onclick="jumpTo2026()" class="btn btn-sm btn-warning text-dark fw-bold shadow-sm" title="Pular diretamente para o Evento de 26 de Agosto de 2026">
-                <i class="fa-solid fa-star text-danger me-1"></i> Catástrofe de 2026
+                <i class="fa-solid fa-star text-danger me-1"></i> 2026
             </button>
+            <a href="TECHNICAL_REPORT_HIMALAYAN_CATASTROPHES_1980_2026.md" target="_blank" class="btn btn-sm btn-outline-info fw-bold" title="Relatório Técnico Master Forense (1980-2026)">
+                <i class="fa-solid fa-file-lines me-1"></i> Relatório 1980–2026
+            </a>
+            <a href="LITERATURE_REGISTER_HIMALAYAN_DISASTERS.md" target="_blank" class="btn btn-sm btn-outline-light fw-bold" title="Registro de Literatura Científica e Achados">
+                <i class="fa-solid fa-graduation-cap me-1"></i> Artigos
+            </a>
             <a href="viewer_4d.html" class="btn btn-sm btn-outline-info">
                 <i class="fa-solid fa-circle-left me-1"></i> Painel 2026
             </a>
             <a href="catastrofe_himalaia_1980_2026_ranking.kmz" download="catastrofe_himalaia_1980_2026_ranking.kmz" class="btn btn-sm btn-success text-white fw-bold">
                 <i class="fa-solid fa-download me-1"></i> KMZ
             </a>
-            <a href="TECHNICAL_REPORT_HIMALAYAN_CATASTROPHES_1980_2026.md" target="_blank" class="btn btn-sm btn-outline-info fw-bold" title="Relatório Técnico Master Forense (1980-2026)">
-                <i class="fa-solid fa-file-lines me-1"></i> Relatório 1980–2026
-            </a>
-            <a href="LITERATURE_REGISTER_HIMALAYAN_DISASTERS.md" target="_blank" class="btn btn-sm btn-outline-light fw-bold" title="Registro de Literatura Científica e Achados">
-                <i class="fa-solid fa-graduation-cap me-1"></i> Literatura & Artigos
-            </a>
-            <a href="REVISAO_BIBLIOGRAFICA_INCONSISTENCIAS_HIMALAIA.md" target="_blank" class="btn btn-sm btn-warning text-dark fw-bold"><i class="fa-solid fa-scale-balanced me-1"></i> Inconsistências</a>
-            <a href="LEVANTAMENTO_RAIOS_20KM_JANELA_JZ_HIMALAIA.md" target="_blank" class="btn btn-sm btn-outline-warning text-warning fw-bold"><i class="fa-solid fa-bolt-lightning me-1"></i> Raios 20 km</a>
-            <a href="REFERENCIAS_CIENTIFICAS_E_RELATOS_TESTEMUNHAIS_HIMALAIA.md" target="_blank" class="btn btn-sm btn-outline-warning">
-                <i class="fa-solid fa-book-bookmark me-1"></i> Fontes
-            </a>
         </div>
     </nav>
 
-    <!-- Mapa 3D Nativamente WebGL (LIMPO, SEM LETRAS OU BANNERS NO MEIO) -->
+    <!-- Canvas do Mapa 3D Nativamente WebGL (Expande para 100% da tela durante o Tour) -->
     <div id="map"></div>
 
     <!-- Indicador Discreto do Tour (Apenas Barra Mínima Central de Status) -->
@@ -327,8 +334,8 @@
         </button>
     </div>
 
-    <!-- Closed Caption: APENAS A FRASE ATUAL SENDO FALADA (SUBTÍTULO ULTRA-DISCRETO E COMPACTO) -->
-    <div id="narrationCcBox" class="position-absolute d-none justify-content-center" style="bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 105; width: auto; max-width: 820px; pointer-events: none;">
+    <!-- Closed Caption: APENAS A FRASE ATUAL SENDO FALADA (SUBTÍTULO DISCRETO E COMPACTO) -->
+    <div id="narrationCcBox" class="position-absolute d-none justify-content-center" style="bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 105; width: auto; max-width: 840px; pointer-events: none;">
         <div class="px-3.5 py-1.5 rounded-pill shadow-lg border text-center" style="background: rgba(6, 10, 20, 0.92); border-color: rgba(6, 182, 212, 0.65); backdrop-filter: blur(12px);">
             <p id="narrationCcText" class="mb-0 text-cyan fw-semibold" style="font-size: 0.86rem; letter-spacing: 0.2px; line-height: 1.35;"></p>
         </div>
@@ -361,241 +368,9 @@
     </div>
 
     <!-- =========================================================================
-         PAINEL LATERAL ESQUERDO: CENTRALIZAÇÃO DE TODOS OS DADOS E TEXTOS
+         CONTAINER RAIZ PARA A INTERFACE REACT (JANELA RETRÁTIL & ACCORDIONS)
          ========================================================================= -->
-    <div class="presentation-card custom-scroll" id="presentationCard">
-        
-        <!-- Menu Seletor Direto de Eventos -->
-        <div class="mb-2">
-            <div class="d-flex justify-content-between align-items-center mb-1">
-                <span class="text-muted small fw-bold" style="font-size: 0.68rem; letter-spacing: 0.5px;">SELECIONAR EVENTO DO RANKING:</span>
-                <span class="text-cyan small font-monospace" id="cardCounter" style="font-size: 0.72rem;">1 / 15</span>
-            </div>
-            <select id="eventSelector" class="form-select form-select-sm bg-dark text-cyan border-secondary" style="font-size: 0.78rem; font-weight: 600;" onchange="showEvent(parseInt(this.value))">
-            </select>
-        </div>
-
-        <!-- Controles de Slide Anterior / Próximo / Tour -->
-        <div class="d-flex justify-content-between align-items-center mb-2 pb-2 border-bottom border-secondary">
-            <div>
-                <span class="badge bg-danger fw-bold me-1" id="cardRank">RANK 1º</span>
-                <span class="badge bg-secondary" id="cardCategory">Cat B</span>
-            </div>
-            <div class="d-flex gap-1 align-items-center">
-                <button onclick="prevEvent()" class="btn btn-xs btn-outline-secondary py-0 px-2 text-light" title="Evento Anterior">
-                    <i class="fa-solid fa-chevron-left"></i>
-                </button>
-                <button onclick="nextEvent()" class="btn btn-xs btn-outline-secondary py-0 px-2 text-light" title="Próximo Evento">
-                    <i class="fa-solid fa-chevron-right"></i>
-                </button>
-                <button onclick="toggleAutoTour()" id="btnAutoTour" class="btn btn-xs btn-warning text-dark fw-bold py-0 px-2 ms-1 shadow-sm" style="font-size: 0.70rem;" title="Iniciar Tour: Visão Geral seguida de Mergulho Cinematográfico no Epicentro">
-                    <i class="fa-solid fa-play me-1"></i> Tour 360°
-                </button>
-            </div>
-        </div>
-
-        <!-- Banner Exclusivo 2026 -->
-        <div id="banner2026" class="alert alert-warning py-1.5 px-2 mb-2 small fw-bold text-dark d-none align-items-center justify-content-between" style="border: 1px solid #eab308; background: #fef08a;">
-            <div class="d-flex align-items-center gap-1.5">
-                <i class="fa-solid fa-star text-danger fs-6"></i>
-                <span style="font-size: 0.74rem;">ESTUDO DE CASO MESTRE: 26 DE AGOSTO DE 2026</span>
-            </div>
-            <a href="viewer_4d.html" class="badge bg-dark text-warning text-decoration-none py-1 px-2" style="font-size: 0.68rem;">
-                Abrir 4D <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i>
-            </a>
-        </div>
-
-        <!-- Título e Subtítulo Detalhados (Com Data, País e Região) -->
-        <h5 class="fw-bold text-light mb-1" id="cardTitle" style="font-size: 1.05rem;">Carregando...</h5>
-        <div class="text-info small mb-1 fw-bold" id="cardDateCountry" style="font-size: 0.80rem;">Data, País e Região</div>
-        
-        <!-- Vítimas Fatais e Destruição em Destaque -->
-        <div class="p-2 rounded mb-2 bg-dark border border-danger-subtle" style="border-left: 3px solid #ef4444 !important;">
-            <span class="text-danger small fw-bold d-block" style="font-size: 0.70rem;"><i class="fa-solid fa-skull-crossbones me-1"></i> VÍTIMAS FATAIS & DESTRUIÇÃO:</span>
-            <span class="text-light small fw-bold" id="cardDamage" style="font-size: 0.78rem;"></span>
-        </div>
-
-        <!-- Métricas Rápidas -->
-        <div class="row g-2 mb-2">
-            <div class="col-6">
-                <div class="p-2 rounded bg-dark border border-secondary">
-                    <span class="text-muted d-block" style="font-size: 0.65rem;">VOLUME MOBILIZADO</span>
-                    <strong class="text-cyan" id="cardVolume" style="font-size: 0.88rem;">-</strong>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="p-2 rounded bg-dark border border-secondary">
-                    <span class="text-muted d-block" style="font-size: 0.65rem;">VAZÃO DE PICO</span>
-                    <strong class="text-warning" id="cardDischarge" style="font-size: 0.88rem;">-</strong>
-                </div>
-            </div>
-        </div>
-
-        <!-- BLOCO 1: DADOS SÍSMICOS SUPERFICIAIS -->
-        <div class="p-2.5 rounded mb-2 border border-danger-subtle" style="background: rgba(35, 10, 10, 0.75);">
-            <div class="d-flex justify-content-between align-items-center mb-1">
-                <span class="badge badge-seismic"><i class="fa-solid fa-bullseye me-1"></i> SISMOS & EPICENTRO SUPERFICIAL (h ≈ 0 km)</span>
-                <button onclick="flyToEpicenter()" class="btn btn-xs btn-outline-danger py-0 px-1" style="font-size: 0.68rem;" title="Focar no Epicentro Sísmico">
-                    <i class="fa-solid fa-crosshairs me-1"></i> Ver Epicentro
-                </button>
-            </div>
-            <div class="row g-1 mb-1.5 small text-light" style="font-size: 0.72rem;">
-                <div class="col-6"><b class="text-cyan">Magnitude:</b> <span id="cardEpicenterMag" class="fw-bold text-danger"></span></div>
-                <div class="col-6"><b class="text-cyan">Intensidade:</b> <span id="cardEpicenterMmi" class="fw-bold text-warning"></span></div>
-                <div class="col-12"><b class="text-warning">Profundidade:</b> <span id="cardEpicenterDepth" class="text-slate-200"></span></div>
-                <div class="col-12"><b class="text-warning">Epicentro:</b> <span id="cardEpicenterCoords" class="font-monospace text-info"></span></div>
-            </div>
-            <p class="small text-light mb-0" id="cardSeismicDesc" style="font-size: 0.73rem; line-height: 1.35;"></p>
-        </div>
-
-        <!-- BLOCO 2: SONS HORRÍVEIS & CHEIROS/GASES ANÔMALOS -->
-        <div class="p-2.5 rounded mb-2 border border-warning-subtle" style="background: rgba(40, 20, 10, 0.85); border-left: 3px solid #f97316 !important;">
-            <div class="d-flex justify-content-between align-items-center mb-1.5">
-                <span class="badge bg-warning text-dark fw-bold"><i class="fa-solid fa-ear-listen me-1"></i> SONS HORRÍVEIS & CHEIROS/GASES ANÔMALOS</span>
-            </div>
-            <div class="p-2 rounded bg-dark border border-secondary mb-1.5 small text-light" style="font-size: 0.73rem;">
-                <b class="text-warning d-block mb-1"><i class="fa-solid fa-volume-high text-warning me-1"></i> Som Terrível Pré-Impacto (5 a 20 min antes):</b>
-                <span id="cardSoundDesc" class="text-slate-200"></span>
-            </div>
-            <div class="p-2 rounded bg-dark border border-secondary mb-1.5 small text-light" style="font-size: 0.73rem;">
-                <b class="text-success d-block mb-1"><i class="fa-solid fa-flask-vial text-success me-1"></i> Cheiros & Gases Anômalos:</b>
-                <span id="cardGasesDesc" class="text-slate-200"></span>
-            </div>
-            <div class="row g-1 small text-light" style="font-size: 0.70rem;">
-                <div class="col-6"><span class="badge badge-fire me-1">🔥 Fricção:</span> <span id="cardFireDesc"></span></div>
-                <div class="col-6"><span class="badge badge-optical me-1">🌈 Óptica:</span> <span id="cardOpticalDesc"></span></div>
-            </div>
-        </div>
-
-        <!-- BLOCO 3: CORRELAÇÃO SOLAR & CORRENTE Jz DE PICO -->
-        <div class="p-2.5 rounded mb-2 border border-purple-subtle" style="background: rgba(30, 10, 40, 0.75); border-left: 3px solid #d946ef !important;">
-            <div class="d-flex justify-content-between align-items-center mb-1">
-                <span class="badge badge-solar"><i class="fa-solid fa-sun me-1"></i> CLIMA ESPACIAL & CORRENTE Jz DE PICO</span>
-                <a href="ESTUDO_CORRELACAO_SOLAR_RAIOS_X_JZ_HIMALAIA.md" target="_blank" class="btn btn-xs btn-outline-light py-0 px-1" style="font-size: 0.68rem;">
-                    <i class="fa-solid fa-chart-line me-1"></i> Dados
-                </a>
-            </div>
-            <div class="row g-1 mb-1.5 small text-light" style="font-size: 0.72rem;">
-                <div class="col-6"><b class="text-warning">Flare Solar:</b> <span id="cardSolarFlare" class="fw-bold text-warning"></span></div>
-                <div class="col-6"><b class="text-cyan">Pico Jz Est.:</b> <span id="cardSolarJz" class="fw-bold text-danger"></span></div>
-                <div class="col-6"><b class="text-info">Delay Flare->Colapso:</b> <span id="cardSolarDelay" class="fw-bold text-cyan"></span></div>
-                <div class="col-6"><b class="text-secondary">Índice Kp:</b> <span id="cardSolarKp" class="fw-bold text-warning"></span></div>
-                <div class="col-6"><b class="text-muted">Fluxo Raios-X:</b> <span id="cardSolarFlux"></span></div>
-                <div class="col-6"><b class="text-muted">Potencial VI:</b> <span id="cardSolarVi"></span></div>
-            </div>
-            <p class="small text-light mb-0" id="cardSolarDesc" style="font-size: 0.73rem; line-height: 1.35;"></p>
-        </div>
-
-        <!-- BLOCO 4: RELÂMPAGOS & DESCARGAS EM RAIO DE 20 KM -->
-        <div class="p-2.5 rounded mb-2 border border-purple-subtle" style="background: rgba(40, 10, 55, 0.85);">
-            <div class="d-flex justify-content-between align-items-center mb-1.5">
-                <span class="badge badge-electric"><i class="fa-solid fa-bolt-lightning me-1"></i> RAIOS EM 20 KM (JANELA PICO Jz → COLAPSO)</span>
-                <a href="LEVANTAMENTO_RAIOS_20KM_JANELA_JZ_HIMALAIA.md" target="_blank" class="btn btn-xs btn-outline-warning py-0 px-1" style="font-size: 0.68rem;">
-                    <i class="fa-solid fa-book-open me-1"></i> Relatório 20 km
-                </a>
-            </div>
-            <div class="p-1.5 rounded mb-1.5 bg-dark border border-secondary small text-light" style="font-size: 0.70rem;">
-                <b class="text-warning"><i class="fa-solid fa-stopwatch me-1"></i> Janela Temporal Jz:</b> <span id="cardLightningWindow" class="text-slate-200"></span>
-            </div>
-            <div class="row g-1 mb-1.5 small text-light" style="font-size: 0.72rem;">
-                <div class="col-6"><b class="text-cyan">Descargas (20 km):</b> <span id="cardLightning20kmCount" class="fw-bold text-cyan"></span></div>
-                <div class="col-6"><b class="text-cyan">Densidade:</b> <span id="cardLightning20kmDensity"></span></div>
-                <div class="col-6"><b class="text-warning">Tipologia IC/CG:</b> <span id="cardLightningTypes" class="text-slate-200"></span></div>
-                <div class="col-6"><b class="text-warning">Ascendentes (Upward):</b> <span id="cardLightningUpward" class="fw-bold text-info"></span></div>
-                <div class="col-12"><b class="text-danger">Corrente Máx (Ipico):</b> <span id="cardLightningPeak" class="fw-bold text-danger"></span></div>
-            </div>
-            <p class="small text-light mb-0" id="cardElectricDesc" style="font-size: 0.74rem; line-height: 1.35;"></p>
-        </div>
-
-        <!-- BLOCO 5: CONTRADIÇÕES FÍSICAS VS EXPLICAÇÃO CONVENCIONAL ("COISAS RUINS") -->
-        <div class="p-2.5 rounded mb-2 border border-warning" style="background: rgba(35, 25, 5, 0.85);">
-            <div class="d-flex justify-content-between align-items-center mb-1">
-                <span class="badge bg-warning text-dark fw-bold"><i class="fa-solid fa-scale-balanced me-1"></i> CONTRADIÇÕES VS. FÍSICA CLÁSSICA ("COISAS RUINS")</span>
-                <a href="REVISAO_BIBLIOGRAFICA_INCONSISTENCIAS_HIMALAIA.md" target="_blank" class="btn btn-xs btn-outline-warning py-0 px-1" style="font-size: 0.68rem;">
-                    <i class="fa-solid fa-book-open me-1"></i> Revisão
-                </a>
-            </div>
-            <div class="mb-1 text-light small" style="font-size: 0.72rem;">
-                <b class="text-warning"><i class="fa-solid fa-circle-check text-success me-1"></i> Déficit Hídrico:</b> <span id="cardInconsistencyWater" class="text-slate-200"></span>
-            </div>
-            <div class="mb-1 text-light small" style="font-size: 0.72rem;">
-                <b class="text-danger"><i class="fa-solid fa-circle-check text-success me-1"></i> Anomalia Sísmica:</b> <span id="cardInconsistencySeismic" class="text-slate-200"></span>
-            </div>
-            <div class="mb-1.5 text-light small" style="font-size: 0.72rem;">
-                <b class="text-info"><i class="fa-solid fa-circle-check text-success me-1"></i> Termodinâmica:</b> <span id="cardInconsistencyThermal" class="text-slate-200"></span>
-            </div>
-            <!-- Ponto Crítico Convencional ("Coisas Ruins") -->
-            <div class="p-1.5 rounded bg-dark border border-danger-subtle small text-light" style="font-size: 0.71rem; border-left: 3px solid #ef4444 !important;">
-                <b class="text-danger d-block mb-1"><i class="fa-solid fa-triangle-exclamation text-danger me-1"></i> Explicação Convencional Concorrente ("Coisas Ruins"):</b>
-                <span id="cardConventionalCritique" class="text-slate-200"></span>
-            </div>
-        </div>
-
-        <!-- BLOCO 6: 🛰️ AVALIAÇÃO DE SATÉLITE & CICATRIZES LINEARES DE CRISTA -->
-        <div class="p-2.5 rounded mb-2 border border-info-subtle bg-dark" style="border-left: 3px solid #06b6d4 !important;">
-            <div class="d-flex justify-content-between align-items-center mb-1">
-                <span class="text-cyan small fw-bold" style="font-size: 0.72rem;"><i class="fa-solid fa-satellite me-1 text-info"></i> SENSORIAMENTO ORBITAL & CICATRIZES DE TOPO:</span>
-                <span class="badge bg-secondary font-monospace" id="cardSatelliteBadge" style="font-size: 0.65rem;">Óptica & Radar</span>
-            </div>
-            <div class="mb-1.5">
-                <span class="badge bg-info text-dark fw-bold d-block text-start p-1.5 mb-1" id="cardSatelliteVerdict" style="font-size: 0.74rem;"></span>
-                <span class="text-light small d-block" style="font-size: 0.71rem;"><b>Sensor Orbital:</b> <span id="cardSatelliteSensor" class="text-slate-300"></span></span>
-            </div>
-            <p class="small text-slate-300 mb-1.5" id="cardSatelliteDetails" style="font-size: 0.72rem; line-height: 1.35;"></p>
-            <div class="p-1.5 rounded bg-black border border-secondary small text-light" style="font-size: 0.71rem;">
-                <b class="text-warning d-block mb-1"><i class="fa-solid fa-mountain me-1 text-warning"></i> Cicatrizes Lineares de Cume (Assinatura do Toró):</b>
-                <span id="cardLinearScars" class="text-slate-200"></span>
-            </div>
-        </div>
-
-        <!-- BLOCO 7: PUBLICAÇÕES CIENTÍFICAS E AVALIAÇÃO PARA O NOSSO ARTIGO -->
-        <div class="p-2.5 rounded mb-2 border border-primary-subtle" style="background: rgba(12, 20, 45, 0.85);">
-            <div class="d-flex justify-content-between align-items-center mb-1">
-                <span class="badge bg-primary text-white fw-bold"><i class="fa-solid fa-graduation-cap me-1"></i> LITERATURA & UTILIDADE PARA O ARTIGO</span>
-            </div>
-            <div class="mb-1 text-light small" style="font-size: 0.72rem;">
-                <b class="text-info">Artigos Publicados:</b> <span id="cardPublishedPapers" class="text-slate-200"></span>
-            </div>
-            <div class="p-1.5 rounded bg-dark border border-secondary small text-light" style="font-size: 0.72rem;">
-                <b class="text-cyan d-block"><i class="fa-solid fa-pen-nib me-1 text-warning"></i> Vantagens / Aplicação no Nosso Artigo:</b>
-                <span id="cardPaperUtility" class="text-slate-200"></span>
-            </div>
-        </div>
-
-        <!-- Destaque: Condição de Chuva no Vale -->
-        <div class="p-2 rounded mb-2 border" id="cardRainBox" style="background: rgba(30, 41, 59, 0.6); border-color: var(--border-color);">
-            <div class="d-flex align-items-center gap-1.5 mb-1">
-                <span class="badge badge-dry" id="cardRainBadge">🌧️ CONDIÇÃO DE CHUVA</span>
-                <span class="text-light fw-bold small" style="font-size: 0.72rem;">Precipitação no Fundo do Vale:</span>
-            </div>
-            <p class="small text-light mb-0" id="cardRainDesc" style="font-size: 0.73rem; line-height: 1.35;"></p>
-        </div>
-
-        <!-- Botões de Ação Inferiores -->
-        <div class="d-flex gap-2">
-            <button onclick="flyToCurrentEvent()" class="btn btn-sm btn-outline-info flex-grow-1" style="font-size: 0.74rem;">
-                <i class="fa-solid fa-video me-1"></i> Vista 3D Detalhada
-            </button>
-            <a id="btnEarthWeb" href="#" target="_blank" class="btn btn-sm btn-outline-warning" style="font-size: 0.74rem;">
-                <i class="fa-solid fa-earth-americas me-1"></i> Earth Web
-            </a>
-        </div>
-        <div class="d-flex flex-column gap-1 mt-2 border-top border-secondary pt-1.5" style="font-size: 0.68rem;">
-            <div class="d-flex justify-content-between">
-                <a href="TECHNICAL_REPORT_HIMALAYAN_CATASTROPHES_1980_2026.md" target="_blank" class="text-cyan text-decoration-none">
-                    <i class="fa-solid fa-file-shield me-1"></i> Relatório Técnico 1980–2026
-                </a>
-                <a href="LITERATURE_REGISTER_HIMALAYAN_DISASTERS.md" target="_blank" class="text-warning text-decoration-none">
-                    <i class="fa-solid fa-book-open-reader me-1"></i> Catálogo de Artigos
-                </a>
-            </div>
-            <div class="text-end">
-                <a href="REFERENCIAS_CIENTIFICAS_E_RELATOS_TESTEMUNHAIS_HIMALAIA.md" target="_blank" class="text-muted text-decoration-underline">
-                    <i class="fa-solid fa-book-bookmark me-1"></i> Ver Fontes Científicas e Citações
-                </a>
-            </div>
-        </div>
-    </div>
+    <div id="react-ui-root"></div>
 
     <!-- Script JavaScript Principal da Apresentação em Mapas -->
     <script>
@@ -649,271 +424,237 @@
                 "utility": "VANTAGEM CONCEITUAL: Caso clássico pioneiro de onda gerada por avalanche rompendo morena no vale do Everest, validando a vulnerabilidade moráinica sem chuva prévia."
             },
             "luggye_tsho_1994": {
-                "papers": "Watanabe & Rothacher (1996); Karma et al. (2003)",
-                "utility": "VANTAGEM REGIONAL: Contextualiza a extensão do risco no Himalaia Oriental (Butão) e os efeitos da desestabilização de permafrost."
+                "papers": "Watanabe & Rothacher (Mt. Res. Dev., 1996); Karma et al. (2003)",
+                "utility": "VANTAGEM REGIONAL: Caso de referência do Butão, validando piping subglacial espontâneo e calibrando nossa metodologia em relevo do Himalaia Oriental."
             },
-            "gongbatongshacuo_2016": {
-                "papers": "Wang et al. (Remote Sensing, 2018); ICIMOD (2016)",
-                "utility": "VANTAGEM DE ZONA DE FALHA: Ocorrido na mesma comarca fronteiriça de Gyirong/Rasuwa do evento de 2026, corroborando reativações recorrentes na mesma zona estrutural."
+            "bhotekoshi_2016": {
+                "papers": "Cook et al. (Earth Surf. Process. Landf., 2018); ICIMOD (2016)",
+                "utility": "VANTAGEM DE CORREDOR: Mesmo vale e fenda transfronteiriça Nepal-Tibete ao lado do vale do Trishuli, mostrando a vulnerabilidade hidrelétrica na mesma bacia tectônica."
             },
             "himachal_2023": {
-                "papers": "Paul et al. (Geomatics, 2023); NDMA India Technical Report (2023)",
-                "utility": "VANTAGEM ELETRODINÂMICA EXCEPCIONAL: 3.850 descargas elétricas em 72h com 165 ascendentes de crista e super-raios de +240 kA, provando a ligação direta entre densidade de raios e cheias extremas."
+                "papers": "Roy et al. (Nat. Hazards, 2024); IMD Special Report (2023)",
+                "utility": "VANTAGEM MODERNA: Prova de chuvas de crista extremas com interação de depressão de monção e onda de oeste gerando dezenas de calhas lineares de decapagem."
             },
             "parechu_2005": {
-                "papers": "Bhambri et al. (Geomorphology, 2015); Gupta et al. (2006)",
-                "utility": "VANTAGEM DE RECORRÊNCIA: Demonstra que barragens naturais instáveis reagem com alta sensibilidade a novos pulsos eletrodinâmicos solares (flare M5.4)."
+                "papers": "Gupta & Sah (Curr. Sci., 2008); Jain et al. (2012)",
+                "utility": "VANTAGEM COMPARATIVA: Comprova que bloqueios e rompimentos no platô tibetano se repetem ciclicamente na mesma garganta estreita."
             }
         };
 
+        let map;
         let currentIndex = 0;
         let activeFilter = 'all';
         let markers = [];
         let epicenterMarkers = [];
-        let imaxMarkers = [];
-
-        // Controle do Tour e Áudio
         let isTourRunning = false;
-        let isAudioEnabled = true;
         let tourRafId = null;
+        let isAudioEnabled = true;
         let currentUtterance = null;
         let audioCompleted = false;
 
-        function getCircleCoordinates(lon, lat, radiusKm = 20, points = 72) {
-            const coords = [];
-            const distanceX = radiusKm / (111.320 * Math.cos(lat * Math.PI / 180));
-            const distanceY = radiusKm / 110.574;
-            for (let i = 0; i <= points; i++) {
+        // Inicialização do MapLibre GL com Relevo 3D
+        document.addEventListener('DOMContentLoaded', () => {
+            map = new maplibregl.Map({
+                container: 'map',
+                style: {
+                    version: 8,
+                    sources: {
+                        'osm': {
+                            type: 'raster',
+                            tiles: [
+                                'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
+                            ],
+                            tileSize: 256,
+                            attribution: '© Esri, Maxar, Earthstar Geographics'
+                        },
+                        'terrainSource': {
+                            type: 'raster-dem',
+                            tiles: [
+                                'https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png'
+                            ],
+                            encoding: 'terrarium',
+                            tileSize: 256,
+                            maxzoom: 15
+                        }
+                    },
+                    layers: [
+                        {
+                            id: 'satellite-tiles',
+                            type: 'raster',
+                            source: 'osm',
+                            minzoom: 0,
+                            maxzoom: 19
+                        }
+                    ],
+                    terrain: {
+                        source: 'terrainSource',
+                        exaggeration: 1.85
+                    }
+                },
+                center: [85.483, 28.274],
+                zoom: 12.0,
+                pitch: 62,
+                bearing: 30,
+                maxPitch: 82
+            });
+
+            map.addControl(new maplibregl.NavigationControl(), 'top-right');
+            map.addControl(new maplibregl.ScaleControl(), 'bottom-left');
+
+            map.on('load', () => {
+                // Círculo Bacia 20 km
+                map.addSource('basin-circle-20km', {
+                    type: 'geojson',
+                    data: createGeoJSONCircle([eventsData[0].lon, eventsData[0].lat], 20)
+                });
+
+                map.addLayer({
+                    id: 'basin-circle-fill',
+                    type: 'fill',
+                    source: 'basin-circle-20km',
+                    paint: {
+                        'fill-color': '#06b6d4',
+                        'fill-opacity': 0.08
+                    }
+                });
+
+                map.addLayer({
+                    id: 'basin-circle-line',
+                    type: 'line',
+                    source: 'basin-circle-20km',
+                    paint: {
+                        'line-color': '#facc15',
+                        'line-width': 2.4,
+                        'line-dasharray': [3, 2],
+                        'line-opacity': 0.9
+                    }
+                });
+
+                // Camada de Raios 20 km
+                map.addSource('basin-lightning-points', {
+                    type: 'geojson',
+                    data: lightningPointsData[eventsData[0].id] || { type: 'FeatureCollection', features: [] }
+                });
+
+                // Brilho difuso da descarga
+                map.addLayer({
+                    id: 'lightning-aura',
+                    type: 'circle',
+                    source: 'basin-lightning-points',
+                    paint: {
+                        'circle-radius': [
+                            'case',
+                            ['boolean', ['get', 'is_imax'], false], 24,
+                            11
+                        ],
+                        'circle-color': [
+                            'case',
+                            ['boolean', ['get', 'is_imax'], false], '#facc15',
+                            ['match', ['get', 'type_name'],
+                                '+CG (Nuvem-Solo Positivo)', '#ef4444',
+                                '-CG (Nuvem-Solo Negativo)', '#f59e0b',
+                                'IC (Intra-Nuvem)', '#a855f7',
+                                'Upward (Ascendente de Crista)', '#06b6d4',
+                                '#38bdf8'
+                            ]
+                        ],
+                        'circle-opacity': 0.75,
+                        'circle-blur': 0.4
+                    }
+                });
+
+                // Ponto central sólido brilhante
+                map.addLayer({
+                    id: 'lightning-dots',
+                    type: 'circle',
+                    source: 'basin-lightning-points',
+                    paint: {
+                        'circle-radius': [
+                            'case',
+                            ['boolean', ['get', 'is_imax'], false], 7.5,
+                            4.0
+                        ],
+                        'circle-color': [
+                            'case',
+                            ['boolean', ['get', 'is_imax'], false], '#ffffff',
+                            ['match', ['get', 'type_name'],
+                                '+CG (Nuvem-Solo Positivo)', '#fee2e2',
+                                '-CG (Nuvem-Solo Negativo)', '#fef08a',
+                                'IC (Intra-Nuvem)', '#f3e8ff',
+                                'Upward (Ascendente de Crista)', '#cffafe',
+                                '#ffffff'
+                            ]
+                        ],
+                        'circle-stroke-width': 1.6,
+                        'circle-stroke-color': '#020617'
+                    }
+                });
+
+                // Popup ao clicar em um ponto de raio
+                map.on('click', 'lightning-dots', (e) => {
+                    if (!e.features || !e.features[0]) return;
+                    const props = e.features[0].properties;
+                    const coords = e.features[0].geometry.coordinates.slice();
+
+                    new maplibregl.Popup({ offset: 12 })
+                        .setLngLat(coords)
+                        .setHTML(`
+                            <div style="font-size: 0.80rem; line-height: 1.4; color: #0f172a; padding: 4px;">
+                                <strong style="color: #b91c1c; font-size: 0.85rem;"><i class="fa-solid fa-bolt me-1"></i> ${props.type_name}</strong><br/>
+                                <b>Corrente de Pico:</b> <span style="color: #ef4444; font-weight: 800;">${props.current_kA}</span><br/>
+                                <b>Distância do Cume:</b> ${props.distance_km} km<br/>
+                                <span style="font-size: 0.72rem; color: #475569;">${props.desc}</span>
+                            </div>
+                        `)
+                        .addTo(map);
+                });
+
+                map.on('mouseenter', 'lightning-dots', () => { map.getCanvas().style.cursor = 'pointer'; });
+                map.on('mouseleave', 'lightning-dots', () => { map.getCanvas().style.cursor = ''; });
+
+                renderMarkers();
+                showEvent(0);
+
+                map.on('dragstart', () => {
+                    if (isTourRunning) stopAutoTour();
+                });
+            });
+        });
+
+        function createGeoJSONCircle(center, radiusInKm, points = 64) {
+            const coords = { latitude: center[1], longitude: center[0] };
+            const km = radiusInKm;
+            const ret = [];
+            const distanceX = km / (111.320 * Math.cos((coords.latitude * Math.PI) / 180));
+            const distanceY = km / 110.574;
+
+            for (let i = 0; i < points; i++) {
                 const theta = (i / points) * (2 * Math.PI);
                 const x = distanceX * Math.cos(theta);
                 const y = distanceY * Math.sin(theta);
-                coords.push([lon + x, lat + y]);
+                ret.push([coords.longitude + x, coords.latitude + y]);
             }
-            return [coords];
+            ret.push(ret[0]);
+            return {
+                type: 'FeatureCollection',
+                features: [{
+                    type: 'Feature',
+                    geometry: { type: 'Polygon', coordinates: [ret] },
+                    properties: {}
+                }]
+            };
         }
 
-        function updateBasinCircle(lon, lat, eventName) {
-            const circleData = {
-                type: 'Feature',
-                geometry: {
-                    type: 'Polygon',
-                    coordinates: getCircleCoordinates(lon, lat, 20)
-                },
-                properties: { name: 'Bacia 20 km - ' + eventName }
-            };
-            if (map && map.getSource('basin-circle-20km')) {
-                map.getSource('basin-circle-20km').setData(circleData);
-            }
+        function updateBasinCircle(lon, lat, name) {
+            if (!map || !map.getSource('basin-circle-20km')) return;
+            map.getSource('basin-circle-20km').setData(createGeoJSONCircle([lon, lat], 20));
         }
 
         function updateLightningLayers(eventId) {
-            const geojsonData = lightningPointsData[eventId] || { type: 'FeatureCollection', features: [] };
-            if (map && map.getSource('basin-lightning-points')) {
-                map.getSource('basin-lightning-points').setData(geojsonData);
-            }
-
-            // Limpa marcador anterior de I_max
-            imaxMarkers.forEach(m => m.remove());
-            imaxMarkers = [];
-
-            // Adiciona marcador limpo (apenas ícone sem etiquetas de texto no mapa) para o I_max
-            const imaxFeature = (geojsonData.features || []).find(f => f.properties && f.properties.is_imax);
-            if (imaxFeature && imaxFeature.geometry && imaxFeature.geometry.coordinates) {
-                const el = document.createElement('div');
-                el.className = 'imax-beacon';
-                el.innerHTML = '<i class="fa-solid fa-bolt"></i>';
-                el.title = `⚡ Super-Raio Extremo (${imaxFeature.properties.current_kA}): ${imaxFeature.properties.desc}`;
-                const m = new maplibregl.Marker({ element: el })
-                    .setLngLat(imaxFeature.geometry.coordinates)
-                    .addTo(map);
-                imaxMarkers.push(m);
-            }
+            if (!map || !map.getSource('basin-lightning-points')) return;
+            const fc = lightningPointsData[eventId] || { type: 'FeatureCollection', features: [] };
+            map.getSource('basin-lightning-points').setData(fc);
         }
-
-        // Inicialização do Mapa
-        const map = new maplibregl.Map({
-            container: 'map',
-            center: [82.0, 30.0],
-            zoom: 5.8,
-            pitch: 45,
-            bearing: 15,
-            style: {
-                version: 8,
-                sources: {
-                    'google-hybrid': {
-                        type: 'raster',
-                        tiles: ['https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}'],
-                        tileSize: 256
-                    },
-                    'terrain-dem': {
-                        type: 'raster-dem',
-                        tiles: ['https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png'],
-                        encoding: 'terrarium',
-                        tileSize: 256,
-                        maxzoom: 15
-                    }
-                },
-                layers: [
-                    {
-                        id: 'satellite-layer',
-                        type: 'raster',
-                        source: 'google-hybrid'
-                    }
-                ],
-                terrain: {
-                    source: 'terrain-dem',
-                    exaggeration: 1.5
-                },
-                sky: {}
-            }
-        });
-
-        map.addControl(new maplibregl.NavigationControl({
-            visualizePitch: true,
-            showZoom: true,
-            showCompass: true
-        }), 'top-right');
-
-        function initEventSelector() {
-            const selectEl = document.getElementById('eventSelector');
-            selectEl.innerHTML = '';
-            eventsData.forEach((ev, idx) => {
-                const opt = document.createElement('option');
-                opt.value = idx;
-                let prefix = ev.rank < 10 ? '0' + ev.rank : ev.rank;
-                let star = ev.id === 'himalaia_2026' ? '⭐ ' : '';
-                opt.innerText = `${star}${prefix}º - ${ev.name} (${ev.country})`;
-                selectEl.appendChild(opt);
-            });
-        }
-
-        map.on('load', () => {
-            initEventSelector();
-
-            // Camada da Bacia 20 km
-            map.addSource('basin-circle-20km', {
-                type: 'geojson',
-                data: {
-                    type: 'Feature',
-                    geometry: {
-                        type: 'Polygon',
-                        coordinates: getCircleCoordinates(eventsData[0].lon, eventsData[0].lat, 20)
-                    },
-                    properties: { name: 'Bacia 20 km' }
-                }
-            });
-
-            map.addLayer({
-                id: 'basin-circle-20km-fill',
-                type: 'fill',
-                source: 'basin-circle-20km',
-                paint: {
-                    'fill-color': '#f59e0b',
-                    'fill-opacity': 0.08
-                }
-            });
-
-            map.addLayer({
-                id: 'basin-circle-20km-line',
-                type: 'line',
-                source: 'basin-circle-20km',
-                paint: {
-                    'line-color': '#facc15',
-                    'line-width': 2.4,
-                    'line-dasharray': [3, 2],
-                    'line-opacity': 0.9
-                }
-            });
-
-            // Camada de Raios 20 km
-            map.addSource('basin-lightning-points', {
-                type: 'geojson',
-                data: lightningPointsData[eventsData[0].id] || { type: 'FeatureCollection', features: [] }
-            });
-
-            // Brilho difuso da descarga
-            map.addLayer({
-                id: 'lightning-aura',
-                type: 'circle',
-                source: 'basin-lightning-points',
-                paint: {
-                    'circle-radius': [
-                        'case',
-                        ['boolean', ['get', 'is_imax'], false], 24,
-                        11
-                    ],
-                    'circle-color': [
-                        'case',
-                        ['boolean', ['get', 'is_imax'], false], '#facc15',
-                        ['match', ['get', 'type_name'],
-                            '+CG (Nuvem-Solo Positivo)', '#ef4444',
-                            '-CG (Nuvem-Solo Negativo)', '#f59e0b',
-                            'IC (Intra-Nuvem)', '#a855f7',
-                            'Upward (Ascendente de Crista)', '#06b6d4',
-                            '#38bdf8'
-                        ]
-                    ],
-                    'circle-opacity': 0.75,
-                    'circle-blur': 0.4
-                }
-            });
-
-            // Ponto central sólido brilhante
-            map.addLayer({
-                id: 'lightning-dots',
-                type: 'circle',
-                source: 'basin-lightning-points',
-                paint: {
-                    'circle-radius': [
-                        'case',
-                        ['boolean', ['get', 'is_imax'], false], 7.5,
-                        4.0
-                    ],
-                    'circle-color': [
-                        'case',
-                        ['boolean', ['get', 'is_imax'], false], '#ffffff',
-                        ['match', ['get', 'type_name'],
-                            '+CG (Nuvem-Solo Positivo)', '#fee2e2',
-                            '-CG (Nuvem-Solo Negativo)', '#fef08a',
-                            'IC (Intra-Nuvem)', '#f3e8ff',
-                            'Upward (Ascendente de Crista)', '#cffafe',
-                            '#ffffff'
-                        ]
-                    ],
-                    'circle-stroke-width': 1.6,
-                    'circle-stroke-color': '#020617'
-                }
-            });
-
-            // Popup ao clicar em um ponto de raio
-            map.on('click', 'lightning-dots', (e) => {
-                if (!e.features || !e.features[0]) return;
-                const props = e.features[0].properties;
-                const coords = e.features[0].geometry.coordinates.slice();
-
-                new maplibregl.Popup({ offset: 12 })
-                    .setLngLat(coords)
-                    .setHTML(`
-                        <div style="font-size: 0.80rem; line-height: 1.4; color: #0f172a; padding: 4px;">
-                            <strong style="color: #b91c1c; font-size: 0.85rem;"><i class="fa-solid fa-bolt me-1"></i> ${props.type_name}</strong><br/>
-                            <b>Corrente de Pico:</b> <span style="color: #ef4444; font-weight: 800;">${props.current_kA}</span><br/>
-                            <b>Distância do Cume:</b> ${props.distance_km} km<br/>
-                            <span style="font-size: 0.72rem; color: #475569;">${props.desc}</span>
-                        </div>
-                    `)
-                    .addTo(map);
-            });
-
-            map.on('mouseenter', 'lightning-dots', () => { map.getCanvas().style.cursor = 'pointer'; });
-            map.on('mouseleave', 'lightning-dots', () => { map.getCanvas().style.cursor = ''; });
-
-            renderMarkers();
-            showEvent(0);
-
-            map.on('dragstart', () => {
-                if (isTourRunning) stopAutoTour();
-            });
-        });
 
         function renderMarkers() {
             markers.forEach(m => m.remove());
@@ -934,7 +675,7 @@
 
                 if (!visible) return;
 
-                // Marcador Principal do Evento (Limpo, apenas número)
+                // Marcador Principal do Evento
                 const el = document.createElement('div');
                 if (ev.id === 'himalaia_2026') {
                     el.className = 'marker-2026';
@@ -957,12 +698,12 @@
 
                 markers.push(m);
 
-                // Marcador Limpo do Epicentro Sísmico (Sem Letras, Apenas Ícone Pulsante)
+                // Marcador Limpo do Epicentro Sísmico Superficial
                 if (ev.seismic_center) {
                     const epEl = document.createElement('div');
                     epEl.className = 'seismic-pin';
                     epEl.innerHTML = '<i class="fa-solid fa-bullseye"></i>';
-                    epEl.title = `🎯 Epicentro Sísmico Superficial (h ≈ 0 km, ${ev.seismic_mag}): ${ev.name}`;
+                    epEl.title = `🎯 Epicentro Sísmico Superficial (h ≈ 0-1 km, ${ev.seismic_mag}): ${ev.name}`;
 
                     epEl.addEventListener('click', (e) => {
                         e.stopPropagation();
@@ -979,118 +720,14 @@
             });
         }
 
-        // Atualizar Conteúdo Completo no Painel Esquerdo
-        function updateEventCardContent(idx) {
-            currentIndex = idx;
-            const ev = eventsData[idx];
-            const pInfo = papersAndUtility[ev.id] || { "papers": "Literatura científica regional", "utility": "Estudo comparativo" };
-
-            const selectEl = document.getElementById('eventSelector');
-            if (selectEl) selectEl.value = idx;
-
-            const b2026 = document.getElementById('banner2026');
-            if (ev.id === 'himalaia_2026') {
-                b2026.classList.remove('d-none');
-                b2026.classList.add('d-flex');
-            } else {
-                b2026.classList.remove('d-flex');
-                b2026.classList.add('d-none');
-            }
-
-            document.getElementById('cardRank').innerText = 'RANK ' + ev.rank + 'º';
-            document.getElementById('cardCategory').innerText = 'Cat ' + ev.category + ' (' + ev.category_name + ')';
-            document.getElementById('cardCategory').className = 'badge cat-' + ev.category.toLowerCase();
-            document.getElementById('cardCounter').innerText = (idx + 1) + ' / ' + eventsData.length;
-
-            document.getElementById('cardTitle').innerText = ev.name;
-            document.getElementById('cardDateCountry').innerHTML = `
-                <i class="fa-solid fa-calendar-day me-1 text-warning"></i> ${ev.date} &nbsp;•&nbsp; 
-                <i class="fa-solid fa-earth-asia me-1 text-info"></i> ${ev.country} (${ev.region})
-            `;
-            document.getElementById('cardDamage').innerText = ev.damage || 'Destruição severa registrada.';
-
-            document.getElementById('cardVolume').innerText = ev.volume;
-            document.getElementById('cardDischarge').innerText = ev.peak_discharge;
-
-            // Dados Sísmicos e Som Horrível
-            document.getElementById('cardEpicenterMag').innerText = ev.seismic_mag || 'Sinal Mecânico';
-            document.getElementById('cardEpicenterMmi').innerText = ev.seismic_intensity || 'MMI IV - V';
-            document.getElementById('cardEpicenterDepth').innerText = ev.seismic_depth || 'Superficial (h ≈ 0 km)';
-            document.getElementById('cardEpicenterCoords').innerText = `${ev.seismic_center[1]}°N, ${ev.seismic_center[0]}°E (${ev.seismic_center[2]}m)`;
-            document.getElementById('cardSoundDesc').innerText = ev.sound_desc || 'Estrondo ensurdecedor reportado minutos antes.';
-            document.getElementById('cardSeismicDesc').innerText = ev.seismic_desc || 'Tremores mecânicos superficiais registrados.';
-
-            // Gases e Fricção
-            document.getElementById('cardGasesDesc').innerText = ev.smell_and_gases || 'Sem registros de odores.';
-            document.getElementById('cardFireDesc').innerText = ev.fire_and_sparks || 'Sem registros de chamas.';
-            document.getElementById('cardOpticalDesc').innerText = ev.optical_clouds || 'Sem registros ópticos.';
-
-            // Inconsistências Físicas e Crítica Convencional ("Coisas Ruins")
-            document.getElementById('cardInconsistencyWater').innerText = ev.inconsistency_water || 'Déficit hídrico verificado.';
-            document.getElementById('cardInconsistencySeismic').innerText = ev.inconsistency_seismic || 'Anomalia sísmica superficial registrada.';
-            document.getElementById('cardInconsistencyThermal').innerText = ev.inconsistency_thermal || 'Inconsistência de calor latente.';
-            document.getElementById('cardConventionalCritique').innerText = ev.conventional_critique || 'Explicação convencional em avaliação geotécnica.';
-
-            // BLOCO 6: Avaliação de Satélite e Cicatrizes de Crista
-            if (ev.satellite_eval) {
-                const s = ev.satellite_eval;
-                const vBadge = document.getElementById('cardSatelliteVerdict');
-                vBadge.innerText = s.verdict;
-                if (s.verdict.includes('CONFIRMADO')) {
-                    vBadge.className = 'badge bg-success text-white fw-bold d-block text-start p-1.5 mb-1';
-                } else if (s.verdict.includes('DESCARTADO')) {
-                    vBadge.className = 'badge bg-danger text-white fw-bold d-block text-start p-1.5 mb-1';
-                } else {
-                    vBadge.className = 'badge bg-warning text-dark fw-bold d-block text-start p-1.5 mb-1';
-                }
-                document.getElementById('cardSatelliteSensor').innerText = s.sensor;
-                document.getElementById('cardSatelliteDetails').innerText = s.details;
-                document.getElementById('cardLinearScars').innerText = s.linear_scars;
-            }
-
-            // Literatura e Vantagens para o Artigo
-            document.getElementById('cardPublishedPapers').innerText = pInfo.papers;
-            document.getElementById('cardPaperUtility').innerText = pInfo.utility;
-
-            // Descargas Elétricas a 20 km
-            let l20Count = ev.lightning_20km_count !== undefined ? ev.lightning_20km_count + ' flashes (20 km)' : 'N/A';
-            let l20Density = ev.lightning_20km_density !== undefined ? ev.lightning_20km_density + ' /km²' : 'N/A';
-            let lTypes = (ev.lightning_20km_ic_pct !== undefined && ev.lightning_20km_count > 0) ? ev.lightning_20km_ic_pct + '% IC / ' + ev.lightning_20km_cg_pct + '% CG (' + ev.lightning_20km_pos_pct + '% +CG)' : 'Sem descargas convectivas';
-            let lUpward = (ev.lightning_20km_upward !== undefined && ev.lightning_20km_upward > 0) ? ev.lightning_20km_upward + ' descargas de crista' : '0';
-            let lPeak = ev.lightning_20km_peak_kA || 'N/A';
-            let lWindow = ev.lightning_20km_window_desc || (ev.lightning_20km_window_hours ? ev.lightning_20km_window_hours + 'h' : 'Janela do evento');
-
-            document.getElementById('cardLightning20kmCount').innerText = l20Count;
-            document.getElementById('cardLightning20kmDensity').innerText = l20Density;
-            document.getElementById('cardLightningTypes').innerText = lTypes;
-            document.getElementById('cardLightningUpward').innerText = lUpward;
-            document.getElementById('cardLightningPeak').innerText = lPeak;
-            document.getElementById('cardLightningWindow').innerText = lWindow;
-            document.getElementById('cardElectricDesc').innerText = ev.electric_desc || 'Perturbações eletrodinâmicas associadas.';
-
-            // Solar e Jz
-            document.getElementById('cardSolarFlare').innerText = ev.solar_flare_class || 'N/A';
-            document.getElementById('cardSolarFlux').innerText = ev.solar_xray_flux || 'N/A';
-            document.getElementById('cardSolarDelay').innerText = ev.solar_delay || 'N/A';
-            document.getElementById('cardSolarKp').innerText = ev.solar_kp || 'N/A';
-            document.getElementById('cardSolarJz').innerText = ev.solar_jz_peak || 'N/A';
-            document.getElementById('cardSolarVi').innerText = ev.solar_vi || 'N/A';
-            document.getElementById('cardSolarDesc').innerText = ev.solar_desc;
-
-            document.getElementById('cardRainDesc').innerText = ev.rain_desc;
-
-            const earthUrl = 'https://earth.google.com/web/@' + ev.lat + ',' + ev.lon + ',3000a,25000d,35y,' + ev.camera.bearing + 'h,' + ev.camera.pitch + 't,0r';
-            document.getElementById('btnEarthWeb').href = earthUrl;
-
-            // Atualiza camadas
-            updateBasinCircle(ev.lon, ev.lat, ev.name);
-            updateLightningLayers(ev.id);
-        }
-
         function showEvent(idx) {
             stopAutoTour();
-            updateEventCardContent(idx);
+            currentIndex = idx;
+            if (window.reactSetEventIndex) window.reactSetEventIndex(idx);
             flyToCurrentEvent();
+            const ev = eventsData[idx];
+            updateBasinCircle(ev.lon, ev.lat, ev.name);
+            updateLightningLayers(ev.id);
         }
 
         function flyToCurrentEvent() {
@@ -1126,18 +763,15 @@
             }
         }
 
-        function nextEvent() {
-            let nextIdx = (currentIndex + 1) % eventsData.length;
-            showEvent(nextIdx);
-        }
-
-        function prevEvent() {
-            let prevIdx = (currentIndex - 1 + eventsData.length) % eventsData.length;
-            showEvent(prevIdx);
+        function applyFilter(filterType, btnEl) {
+            activeFilter = filterType;
+            document.querySelectorAll('.filter-bar .nav-btn').forEach(b => b.classList.remove('active'));
+            if (btnEl) btnEl.classList.add('active');
+            renderMarkers();
         }
 
         // =========================================================================
-        // MOTOR DE ÁUDIO FORENSE: SUBTÍTULOS FRASE-A-FRASE (SEM POLUIÇÃO NA TELA)
+        // MOTOR DE ÁUDIO FORENSE: SUBTÍTULOS FRASE-A-FRASE (SEM DELAY E SEM TRUNCAMENTO)
         // =========================================================================
         function toggleAudioNarration() {
             isAudioEnabled = !isAudioEnabled;
@@ -1162,13 +796,13 @@
             let s = t.replace(/(\d+)\.(\d+)/g, "$1_PONTO_$2");
             s = s.replace(/(\d+),(\d+)/g, "$1_VIRGULA_$2");
             // Protege abreviações científicas e convenções
-            s = s.replace(/et al\./gi, "et al_PONTO_");
-            s = s.replace(/ex\./gi, "ex_PONTO_");
-            s = s.replace(/Dr\./gi, "Dr_PONTO_");
-            s = s.replace(/km\./gi, "km_PONTO_");
-            s = s.replace(/vol\./gi, "vol_PONTO_");
-            s = s.replace(/no\./gi, "no_PONTO_");
-            s = s.replace(/h\./gi, "h_PONTO_");
+            s = s.replace(/\bet al\./gi, "et al_PONTO_");
+            s = s.replace(/\bex\./gi, "ex_PONTO_");
+            s = s.replace(/\bDr\./gi, "Dr_PONTO_");
+            s = s.replace(/\bkm\./gi, "km_PONTO_");
+            s = s.replace(/\bvol\./gi, "vol_PONTO_");
+            s = s.replace(/\bno\./gi, "no_PONTO_");
+            s = s.replace(/\bh\./gi, "h_PONTO_");
             
             // Divide exclusivamente por [.!?] seguido de espaço
             const parts = s.split(/(?<=[.!?])\s+/);
@@ -1273,20 +907,15 @@
         }
 
         // =========================================================================
-        // MECANISMO DE EXPLORAÇÃO CINEMÁTICA NÃO-LINEAR E DINÂMICA (SEM GIROS MONÓTONOS)
+        // MECANISMO DE EXPLORAÇÃO CINEMÁTICA NÃO-LINEAR E DINÂMICA
         // =========================================================================
         function updateTourUI(running, stageText = '', eventRank = 1, eventName = '') {
-            const btn = document.getElementById('btnAutoTour');
             const navBtn = document.getElementById('navBtnTour');
             const overlay = document.getElementById('tourStatusOverlay');
             const overlayText = document.getElementById('tourStatusText');
             const overlayStage = document.getElementById('tourStageBadge');
 
             if (running) {
-                if (btn) {
-                    btn.innerHTML = '<i class="fa-solid fa-pause me-1"></i> Pausa 360°';
-                    btn.className = 'btn btn-xs btn-danger text-white fw-bold py-0 px-2 ms-1 shadow-sm';
-                }
                 if (navBtn) {
                     navBtn.innerHTML = '<i class="fa-solid fa-pause me-1"></i> Pausar Tour';
                     navBtn.className = 'btn btn-sm btn-danger text-white fw-bold shadow-sm';
@@ -1298,10 +927,6 @@
                 if (overlayStage) overlayStage.innerText = stageText.toUpperCase();
                 if (overlayText) overlayText.innerText = `[${eventRank}/15] ${eventName}`;
             } else {
-                if (btn) {
-                    btn.innerHTML = '<i class="fa-solid fa-play me-1"></i> Tour 360°';
-                    btn.className = 'btn btn-xs btn-warning text-dark fw-bold py-0 px-2 ms-1 shadow-sm';
-                }
                 if (navBtn) {
                     navBtn.innerHTML = '<i class="fa-solid fa-play me-1"></i> Iniciar Tour 360°';
                     navBtn.className = 'btn btn-sm btn-warning text-dark fw-bold shadow-sm';
@@ -1329,6 +954,9 @@
             }
             map.stop();
             updateTourUI(false);
+            if (window.reactSetTourRunning) window.reactSetTourRunning(false);
+            // Restaura a janela de explicação quando o tour é interrompido
+            if (window.reactSetCollapsed) window.reactSetCollapsed(false);
             const ccBox = document.getElementById('narrationCcBox');
             if (ccBox) { ccBox.classList.remove('d-flex'); ccBox.classList.add('d-none'); }
         }
@@ -1344,6 +972,9 @@
         function startAutoTour() {
             stopAutoTour();
             isTourRunning = true;
+            if (window.reactSetTourRunning) window.reactSetTourRunning(true);
+            // RECOLHE AUTOMATICAMENTE A JANELA DE EXPLICAÇÃO PARA QUE O MAPA FIQUE GIGANTE E PANORÂMICO
+            if (window.reactSetCollapsed) window.reactSetCollapsed(true);
             runExplorationTourCycle(currentIndex);
         }
 
@@ -1354,7 +985,10 @@
             currentIndex = idx;
             const ev = eventsData[idx];
 
-            updateEventCardContent(idx);
+            if (window.reactSetEventIndex) window.reactSetEventIndex(idx);
+            updateBasinCircle(ev.lon, ev.lat, ev.name);
+            updateLightningLayers(ev.id);
+
             updateTourUI(true, '1. Mapa Geral (Bacia 20 km & Raios)', ev.rank, ev.name);
 
             const closeZoom = ev.camera.zoom || 13.5;
@@ -1385,89 +1019,533 @@
 
                 function continuousExplorationFrame(now) {
                     if (!isTourRunning) return;
-
                     const elapsed = now - startTime;
                     let progress = elapsed / baseDurationMs;
 
-                    if (progress >= 0.95 && !speechEnded) {
-                        progress = 0.95;
+                    if (progress >= 1.0) {
+                        if (!speechEnded && isAudioEnabled) {
+                            progress = 0.99;
+                        } else {
+                            cancelAnimationFrame(tourRafId);
+                            tourRafId = null;
+                            const nextIdx = (idx + 1) % eventsData.length;
+                            setTimeout(() => {
+                                if (isTourRunning) runExplorationTourCycle(nextIdx);
+                            }, 1200);
+                            return;
+                        }
                     }
 
-                    let currentZoom = regionalZoom;
-                    let currentPitch = 38;
-                    let currentBearing = startBearing;
+                    // COREOGRAFIA DINÂMICA NÃO-LINEAR EM 3 FASES:
+                    let curZoom, curPitch, curBearing, curCenter;
 
-                    if (progress < 0.32) {
-                        // FASE 1: VISÃO GERAL REGIONAL OBLÍQUA COM VARREDURA DINÂMICA
-                        const p = progress / 0.32;
-                        // Variação angular não-linear de -20° a +25° com leve ganho de pitch
-                        currentZoom = regionalZoom + Math.sin(p * Math.PI) * 0.3;
-                        currentPitch = 38 + p * 8; // 38° -> 46°
-                        currentBearing = (startBearing - 20 + p * 45 + 360) % 360;
-                        updateTourUI(true, '1. Mapa Geral (Bacia 20 km & Raios)', ev.rank, ev.name);
+                    if (progress < 0.28) {
+                        // FASE 1: VISÃO GERAL PANORÂMICA E ANÁLISE DOS RAIOS NA BACIA
+                        const p1 = progress / 0.28;
+                        const smoothP1 = Math.sin((p1 * Math.PI) / 2);
+                        curZoom = regionalZoom + (0.6 * smoothP1);
+                        curPitch = 38 + (10 * smoothP1);
+                        curBearing = (startBearing - 20 + (35 * smoothP1)) % 360;
+                        curCenter = [ev.lon, ev.lat];
+                        updateTourUI(true, '1. Bacia 20 km & Descargas', ev.rank, ev.name);
                     } else if (progress < 0.65) {
-                        // FASE 2: MERGULHO CINEMÁTICO CURVO (SWOOP DESCENDENTE NO EPICENTRO & CRISTA)
-                        const p = (progress - 0.32) / 0.33;
-                        // Easing cúbico acentuado (acelera no meio, desacelera na chegada)
-                        const easeP = p < 0.5 ? 4 * p * p * p : 1 - Math.pow(-2 * p + 2, 3) / 2;
-                        currentZoom = regionalZoom + easeP * (closeZoom - regionalZoom);
-                        currentPitch = 46 + easeP * (72 - 46); // 46° -> 72°
-                        currentBearing = (startBearing + 25 + easeP * 80 + 360) % 360; // banking curve de 80°
-                        updateTourUI(true, '2. Mergulho na Crista & Epicentro', ev.rank, ev.name);
+                        // FASE 2: MERGULHO CURVO (SWOOP) EM DIREÇÃO AO CUME
+                        const p2 = (progress - 0.28) / (0.65 - 0.28);
+                        const cubicP2 = p2 < 0.5 ? 4 * p2 * p2 * p2 : 1 - Math.pow(-2 * p2 + 2, 3) / 2;
+                        curZoom = (regionalZoom + 0.6) + ((closeZoom - (regionalZoom + 0.6)) * cubicP2);
+                        curPitch = 48 + ((72 - 48) * cubicP2);
+                        curBearing = (startBearing + 15 + (45 * cubicP2)) % 360;
+                        if (ev.seismic_center) {
+                            const tLon = ev.lon + (ev.seismic_center[0] - ev.lon) * (cubicP2 * 0.7);
+                            const tLat = ev.lat + (ev.seismic_center[1] - ev.lat) * (cubicP2 * 0.7);
+                            curCenter = [tLon, tLat];
+                        } else {
+                            curCenter = [ev.lon, ev.lat];
+                        }
+                        updateTourUI(true, '2. Mergulho no Vale & Calhas', ev.rank, ev.name);
                     } else {
-                        // FASE 3: RASANTE OBLÍQUO DA CICATRIZ LINEAR DE CUME & SOBREVOO DO CÂNION
-                        const p = (progress - 0.65) / 0.35;
-                        // Suave ondulação na aproximação para destacar a verticalidade
-                        currentZoom = closeZoom + Math.sin(p * Math.PI * 2) * 0.3;
-                        currentPitch = 70 + Math.sin(p * Math.PI) * 4; // oscilação suave de 70° a 74°
-                        currentBearing = (startBearing + 105 + p * 90 + 360) % 360;
-                        updateTourUI(true, '3. Inspeção da Crista & Cânion', ev.rank, ev.name);
+                        // FASE 3: RASANTE OBLÍQUO NA CRISTA E NO EPICENTRO SÍSMICO
+                        const p3 = (progress - 0.65) / (1.0 - 0.65);
+                        const cosP3 = (1 - Math.cos(p3 * Math.PI)) / 2;
+                        curZoom = closeZoom + (0.45 * Math.sin(p3 * Math.PI));
+                        curPitch = 72 - (8 * Math.sin(p3 * Math.PI));
+                        curBearing = (startBearing + 60 + (50 * p3)) % 360;
+                        if (ev.seismic_center) {
+                            const cLon = ev.seismic_center[0] + (0.008 * Math.cos(p3 * Math.PI * 1.5));
+                            const cLat = ev.seismic_center[1] + (0.006 * Math.sin(p3 * Math.PI * 1.5));
+                            curCenter = [cLon, cLat];
+                        } else {
+                            const cLon = ev.lon + (0.006 * Math.cos(p3 * Math.PI));
+                            const cLat = ev.lat + (0.005 * Math.sin(p3 * Math.PI));
+                            curCenter = [cLon, cLat];
+                        }
+                        updateTourUI(true, '3. Rasante no Epicentro Superficial', ev.rank, ev.name);
                     }
 
                     map.jumpTo({
-                        center: [ev.lon, ev.lat],
-                        zoom: currentZoom,
-                        pitch: currentPitch,
-                        bearing: currentBearing
+                        center: curCenter,
+                        zoom: curZoom,
+                        pitch: curPitch,
+                        bearing: curBearing
                     });
 
-                    if (progress < 1.0 || !speechEnded) {
-                        tourRafId = requestAnimationFrame(continuousExplorationFrame);
-                    } else {
-                        tourRafId = null;
-                        setTimeout(() => {
-                            if (!isTourRunning) return;
-                            let nextIdx = (currentIndex + 1) % eventsData.length;
-                            runExplorationTourCycle(nextIdx);
-                        }, 4000);
-                    }
+                    tourRafId = requestAnimationFrame(continuousExplorationFrame);
                 }
 
                 tourRafId = requestAnimationFrame(continuousExplorationFrame);
-
-            }, 2700);
+            }, 2600);
         }
 
-        function applyFilter(filterType, btnEl) {
-            activeFilter = filterType;
-            document.querySelectorAll('.filter-bar .nav-btn').forEach(b => b.classList.remove('active'));
-            if (btnEl) btnEl.classList.add('active');
-            renderMarkers();
-        }
-
-        // Atalhos de teclado: Espaço para Tour, M para Áudio, Setas para navegação
+        // Atalhos de Teclado
         window.addEventListener('keydown', (e) => {
-            if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT' || e.target.tagName === 'TEXTAREA') return;
-            if (e.key === 'ArrowRight') nextEvent();
-            if (e.key === 'ArrowLeft') prevEvent();
-            if (e.code === 'Space') {
+            if (e.key === ' ' || e.code === 'Space') {
                 e.preventDefault();
                 toggleAutoTour();
             }
             if (e.key === 'm' || e.key === 'M') {
                 toggleAudioNarration();
             }
+            if (e.key === 'd' || e.key === 'D') {
+                // Tecla D: Recolher / Expandir Painel de Detalhes
+                if (window.reactToggleCollapsed) window.reactToggleCollapsed();
+            }
+            if (e.key === 'ArrowRight') {
+                let nextIdx = (currentIndex + 1) % eventsData.length;
+                showEvent(nextIdx);
+            }
+            if (e.key === 'ArrowLeft') {
+                let prevIdx = (currentIndex - 1 + eventsData.length) % eventsData.length;
+                showEvent(prevIdx);
+            }
         });
+    </script>
+
+    <!-- =========================================================================
+         COMPONENTE REACT: JANELA RETRÁTIL & ACCORDIONS DE CONTEÚDO DOS 15 EPISÓDIOS
+         ========================================================================= -->
+    <script type="text/babel">
+        const { useState, useEffect } = React;
+
+        function HimalayanApp() {
+            const [currentIdx, setCurrentIdx] = useState(0);
+            const [isCollapsed, setIsCollapsed] = useState(false);
+            const [isTourActive, setIsTourActive] = useState(false);
+            const [openSections, setOpenSections] = useState({
+                id: true,
+                sismo: true,
+                sons: false,
+                solar: false,
+                inconsist: true,
+                satelite: true,
+                lit: false
+            });
+
+            // Registra funções globais de ponte entre o MapLibre e o React
+            useEffect(() => {
+                window.reactSetEventIndex = (idx) => {
+                    setCurrentIdx(idx);
+                };
+                window.reactSetTourRunning = (running) => {
+                    setIsTourActive(running);
+                };
+                window.reactSetCollapsed = (collapsed) => {
+                    setIsCollapsed(collapsed);
+                };
+                window.reactToggleCollapsed = () => {
+                    setIsCollapsed(prev => !prev);
+                };
+            }, []);
+
+            const ev = eventsData[currentIdx] || eventsData[0];
+            const pInfo = papersAndUtility[ev.id] || {
+                papers: "Literatura científica regional",
+                utility: "Estudo comparativo"
+            };
+
+            const toggleSection = (key) => {
+                setOpenSections(prev => ({ ...prev, [key]: !prev[key] }));
+            };
+
+            const expandAll = () => {
+                setOpenSections({
+                    id: true, sismo: true, sons: true, solar: true, inconsist: true, satelite: true, lit: true
+                });
+            };
+
+            const collapseAll = () => {
+                setOpenSections({
+                    id: false, sismo: false, sons: false, solar: false, inconsist: false, satelite: false, lit: false
+                });
+            };
+
+            const handleSelectChange = (e) => {
+                const newIdx = parseInt(e.target.value, 10);
+                showEvent(newIdx);
+            };
+
+            const earthUrl = `https://earth.google.com/web/@${ev.lat},${ev.lon},3000a,25000d,35y,${ev.camera.bearing}h,${ev.camera.pitch}t,0r`;
+
+            return (
+                <React.Fragment>
+                    {/* BOTÃO FLUTUANTE DE REABRIR A JANELA (EXIBIDO QUANDO RECOLHIDA) */}
+                    {isCollapsed && (
+                        <button
+                            className="floating-drawer-toggle"
+                            onClick={() => setIsCollapsed(false)}
+                            title="Clique para abrir a Janela de Explicação dos 15 Episódios (Tecla D)"
+                        >
+                            <i className="fa-solid fa-angles-right text-cyan"></i>
+                            <span className="badge bg-danger text-white">Rank {ev.rank}º</span>
+                            <span className="text-light text-truncate" style={{ maxWidth: '210px' }}>
+                                {ev.name}
+                            </span>
+                            <span className="badge bg-info text-dark ms-1">
+                                <i className="fa-solid fa-folder-open me-1"></i> Abrir Painel
+                            </span>
+                        </button>
+                    )}
+
+                    {/* JANELA RETRÁTIL PRINCIPAL (A CAIXA DE EXPLICAÇÃO DOS 15 EPISÓDIOS) */}
+                    <div className={`retractable-window custom-scroll ${isCollapsed ? 'collapsed' : ''}`}>
+                        
+                        {/* CABEÇALHO DA JANELA COM BOTÃO DE MINIMIZAR / RECOLHER */}
+                        <div className="window-header">
+                            <div className="d-flex align-items-center gap-2">
+                                <span className="badge bg-info text-dark fw-bold" style={{ fontSize: '0.72rem' }}>
+                                    EPISÓDIO {ev.rank}/15
+                                </span>
+                                <strong className="text-cyan text-truncate" style={{ fontSize: '0.84rem', maxWidth: '280px' }}>
+                                    {ev.name}
+                                </strong>
+                            </div>
+                            <div className="d-flex align-items-center gap-1">
+                                <button
+                                    onClick={() => setIsCollapsed(true)}
+                                    className="btn btn-xs btn-outline-info py-0 px-2 rounded-pill fw-bold"
+                                    style={{ fontSize: '0.70rem' }}
+                                    title="Recolher Janela para Expandir o Mapa 3D (Tecla D)"
+                                >
+                                    <i className="fa-solid fa-chevron-left me-1"></i> Recolher
+                                </button>
+                            </div>
+                        </div>
+
+                        {/* CORPO COM BARRA SELETORA E ACCORDIONS REORGANIZADOS */}
+                        <div className="window-body custom-scroll">
+
+                            {/* MENU SELETOR DIRETO DE EVENTOS & NAVEGAÇÃO RÁPIDA */}
+                            <div className="mb-2 p-1.5 rounded bg-black border border-secondary">
+                                <div className="d-flex justify-content-between align-items-center mb-1">
+                                    <label className="small text-muted fw-bold" style={{ fontSize: '0.68rem' }}>
+                                        <i className="fa-solid fa-list-ol me-1 text-cyan"></i> SELECIONAR CATÁSTROFE:
+                                    </label>
+                                    <div className="d-flex gap-1">
+                                        <button onClick={() => showEvent((currentIdx - 1 + eventsData.length) % eventsData.length)} className="btn btn-xs btn-outline-secondary py-0 px-1.5 text-light" style={{ fontSize: '0.68rem' }}>
+                                            <i className="fa-solid fa-arrow-left"></i>
+                                        </button>
+                                        <button onClick={() => showEvent((currentIdx + 1) % eventsData.length)} className="btn btn-xs btn-outline-secondary py-0 px-1.5 text-light" style={{ fontSize: '0.68rem' }}>
+                                            <i className="fa-solid fa-arrow-right"></i>
+                                        </button>
+                                        <button onClick={expandAll} className="btn btn-xs btn-outline-secondary py-0 px-1.5 text-muted" style={{ fontSize: '0.65rem' }} title="Expandir Todas as Caixas">
+                                            + Todos
+                                        </button>
+                                        <button onClick={collapseAll} className="btn btn-xs btn-outline-secondary py-0 px-1.5 text-muted" style={{ fontSize: '0.65rem' }} title="Recolher Todas as Caixas">
+                                            - Todos
+                                        </button>
+                                    </div>
+                                </div>
+                                <select
+                                    value={currentIdx}
+                                    onChange={handleSelectChange}
+                                    className="form-select form-select-sm bg-dark text-light border-secondary"
+                                    style={{ fontSize: '0.74rem' }}
+                                >
+                                    {eventsData.map((e, idx) => (
+                                        <option key={e.id} value={idx}>
+                                            Rank {e.rank}º: {e.name} ({e.date}) - {e.country}
+                                        </option>
+                                    ))}
+                                </select>
+                            </div>
+
+                            {/* BANNER ESPECIAL DESTAQUE: CATÁSTROFE DE 2026 */}
+                            {ev.id === 'himalaia_2026' && (
+                                <div className="p-2 rounded mb-2 border border-warning shadow-sm d-flex justify-content-between align-items-center" style={{ background: 'linear-gradient(90deg, #451a03 0%, #1e1b4b 100%)' }}>
+                                    <div>
+                                        <strong className="text-warning d-block" style={{ fontSize: '0.76rem' }}>
+                                            <i className="fa-solid fa-star me-1 text-warning"></i> ESTUDO DE CASO MESTRE: 2026
+                                        </strong>
+                                        <span className="text-slate-200 small" style={{ fontSize: '0.68rem' }}>
+                                            Lhende Khola / Rio Trishuli (Nepal–Tibete)
+                                        </span>
+                                    </div>
+                                    <a href="viewer_4d.html" className="btn btn-xs btn-warning text-dark fw-bold py-1 px-2" style={{ fontSize: '0.70rem' }}>
+                                        <i className="fa-solid fa-cube me-1"></i> Painel 4D
+                                    </a>
+                                </div>
+                            )}
+
+                            {/* ACCORDION 1: 📌 IDENTIFICAÇÃO GERAL & IMPACTO HUMANO */}
+                            <div className={`accordion-box ${openSections.id ? 'active' : ''}`}>
+                                <div className="accordion-box-header" onClick={() => toggleSection('id')}>
+                                    <span><i className="fa-solid fa-mountain me-1.5 text-cyan"></i> 1. Identificação Geral & Impacto</span>
+                                    <div className="d-flex align-items-center gap-1.5">
+                                        <span className="badge bg-secondary" style={{ fontSize: '0.65rem' }}>{ev.country}</span>
+                                        <i className={`fa-solid ${openSections.id ? 'fa-chevron-up' : 'fa-chevron-down'} text-muted`}></i>
+                                    </div>
+                                </div>
+                                {openSections.id && (
+                                    <div className="accordion-box-content">
+                                        <div className="row g-1 mb-1.5 text-light" style={{ fontSize: '0.72rem' }}>
+                                            <div className="col-6"><b>Data:</b> <span className="text-slate-200">{ev.date}</span></div>
+                                            <div className="col-6"><b>Região:</b> <span className="text-slate-200">{ev.region}</span></div>
+                                            <div className="col-6"><b>Elevação:</b> <span className="text-cyan">{ev.elevation}</span></div>
+                                            <div className="col-6"><b>Vazão de Pico:</b> <span className="text-warning fw-bold">{ev.peak_discharge}</span></div>
+                                            <div className="col-12"><b>Volume Estimado:</b> <span className="text-danger fw-bold">{ev.volume}</span></div>
+                                        </div>
+                                        <div className="p-1.5 rounded bg-black border border-danger-subtle small text-light">
+                                            <b className="text-danger d-block"><i className="fa-solid fa-skull me-1"></i> Danos & Vítimas:</b>
+                                            <span className="text-slate-300">{ev.damage}</span>
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
+
+                            {/* ACCORDION 2: 🌋 SISMO SUPERFICIAL & EPICENTRO */}
+                            <div className={`accordion-box ${openSections.sismo ? 'active' : ''}`}>
+                                <div className="accordion-box-header" onClick={() => toggleSection('sismo')}>
+                                    <span><i className="fa-solid fa-volcano me-1.5 text-danger"></i> 2. Sismo Superficial (h ≈ 0-1 km)</span>
+                                    <div className="d-flex align-items-center gap-1.5">
+                                        <span className="badge bg-danger text-white" style={{ fontSize: '0.65rem' }}>{ev.seismic_mag || 'Sismo de Colapso'}</span>
+                                        <i className={`fa-solid ${openSections.sismo ? 'fa-chevron-up' : 'fa-chevron-down'} text-muted`}></i>
+                                    </div>
+                                </div>
+                                {openSections.sismo && (
+                                    <div className="accordion-box-content">
+                                        <div className="mb-1.5">
+                                            <span className="badge bg-danger text-white fw-bold me-1.5" style={{ fontSize: '0.72rem' }}>
+                                                {ev.seismic_mag}
+                                            </span>
+                                            <span className="badge bg-dark border border-secondary text-light me-1" style={{ fontSize: '0.70rem' }}>
+                                                Profundidade: {ev.seismic_depth}
+                                            </span>
+                                            <span className="badge bg-dark border border-secondary text-warning" style={{ fontSize: '0.70rem' }}>
+                                                {ev.seismic_intensity}
+                                            </span>
+                                        </div>
+                                        <p className="small text-slate-300 mb-1.5" style={{ fontSize: '0.72rem', lineHeight: '1.35' }}>
+                                            {ev.seismic_desc}
+                                        </p>
+                                        {ev.seismic_center && (
+                                            <div className="d-flex justify-content-between align-items-center p-1.5 rounded bg-black border border-secondary">
+                                                <span className="small text-slate-400" style={{ fontSize: '0.70rem' }}>
+                                                    <i className="fa-solid fa-bullseye me-1 text-danger"></i> Epicentro: [{ev.seismic_center[0].toFixed(3)}°E, {ev.seismic_center[1].toFixed(3)}°N]
+                                                </span>
+                                                <button onClick={flyToEpicenter} className="btn btn-xs btn-outline-danger py-0 px-2 fw-bold" style={{ fontSize: '0.68rem' }}>
+                                                    <i className="fa-solid fa-crosshairs me-1"></i> Focar Cume 3D
+                                                </button>
+                                            </div>
+                                        )}
+                                    </div>
+                                )}
+                            </div>
+
+                            {/* ACCORDION 3: 😱 SONS HORRÍVEIS, GASES & FAÍSCAS */}
+                            <div className={`accordion-box ${openSections.sons ? 'active' : ''}`}>
+                                <div className="accordion-box-header" onClick={() => toggleSection('sons')}>
+                                    <span><i className="fa-solid fa-ear-listen me-1.5 text-warning"></i> 3. Sons Horríveis, Gases & Faíscas</span>
+                                    <i className={`fa-solid ${openSections.sons ? 'fa-chevron-up' : 'fa-chevron-down'} text-muted`}></i>
+                                </div>
+                                {openSections.sons && (
+                                    <div className="accordion-box-content">
+                                        {ev.sound_desc && (
+                                            <div className="p-1.5 rounded bg-black border border-secondary small text-light mb-1.5">
+                                                <b className="text-warning d-block mb-1"><i className="fa-solid fa-volume-high me-1 text-danger"></i> Relatos do Som Horrível & Infrassom:</b>
+                                                <span className="text-slate-300">{ev.sound_desc}</span>
+                                            </div>
+                                        )}
+                                        {ev.smell_and_gases && (
+                                            <div className="p-1.5 rounded bg-dark border border-secondary small text-light mb-1.5">
+                                                <b className="text-success d-block mb-1"><i className="fa-solid fa-vial me-1 text-success"></i> Cheiros & Gases Notificados:</b>
+                                                <span className="text-slate-300">{ev.smell_and_gases}</span>
+                                            </div>
+                                        )}
+                                        {ev.fire_and_sparks && (
+                                            <div className="p-1.5 rounded bg-black border border-secondary small text-light mb-1.5">
+                                                <b className="text-warning d-block mb-1"><i className="fa-solid fa-fire me-1 text-warning"></i> Faíscas & Fricção Piezoelétrica:</b>
+                                                <span className="text-slate-300">{ev.fire_and_sparks}</span>
+                                            </div>
+                                        )}
+                                        {ev.optical_clouds && (
+                                            <div className="p-1.5 rounded bg-dark border border-secondary small text-light">
+                                                <b className="text-info d-block mb-1"><i className="fa-solid fa-rainbow me-1 text-info"></i> Fenômenos Ópticos e Nuvens:</b>
+                                                <span className="text-slate-300">{ev.optical_clouds}</span>
+                                            </div>
+                                        )}
+                                    </div>
+                                )}
+                            </div>
+
+                            {/* ACCORDION 4: ☀️ CLIMA ESPACIAL & RAIOS 20 KM */}
+                            <div className={`accordion-box ${openSections.solar ? 'active' : ''}`}>
+                                <div className="accordion-box-header" onClick={() => toggleSection('solar')}>
+                                    <span><i className="fa-solid fa-sun me-1.5 text-warning"></i> 4. Clima Espacial & Raios 20 km</span>
+                                    <div className="d-flex align-items-center gap-1.5">
+                                        <span className="badge bg-warning text-dark" style={{ fontSize: '0.65rem' }}>{ev.solar_status.toUpperCase()}</span>
+                                        <i className={`fa-solid ${openSections.solar ? 'fa-chevron-up' : 'fa-chevron-down'} text-muted`}></i>
+                                    </div>
+                                </div>
+                                {openSections.solar && (
+                                    <div className="accordion-box-content">
+                                        <div className="mb-1.5">
+                                            <span className="badge bg-warning text-dark fw-bold me-1.5" style={{ fontSize: '0.72rem' }}>
+                                                {ev.solar_flare_class || 'Atividade Solar'}
+                                            </span>
+                                            <span className="badge bg-dark border border-secondary text-cyan me-1" style={{ fontSize: '0.70rem' }}>
+                                                Jz = {ev.solar_jz_peak || 'N/A'}
+                                            </span>
+                                            <span className="badge bg-dark border border-secondary text-light" style={{ fontSize: '0.70rem' }}>
+                                                {ev.solar_kp || 'Kp N/A'}
+                                            </span>
+                                        </div>
+                                        <p className="small text-slate-300 mb-1.5" style={{ fontSize: '0.72rem', lineHeight: '1.35' }}>
+                                            {ev.solar_physics || ev.solar_desc}
+                                        </p>
+                                        {ev.lightning_20km_count !== undefined && (
+                                            <div className="p-1.5 rounded bg-black border border-secondary small text-light">
+                                                <b className="text-cyan d-block mb-1"><i className="fa-solid fa-bolt me-1 text-warning"></i> Descargas na Bacia (Raio de 20 km):</b>
+                                                <div className="row g-1 text-slate-300" style={{ fontSize: '0.70rem' }}>
+                                                    <div className="col-6">Total: <b className="text-warning">{ev.lightning_20km_count} flashes</b></div>
+                                                    <div className="col-6">Ascendentes: <b className="text-cyan">{ev.lightning_20km_upward || 0} upward</b></div>
+                                                    <div className="col-6">IC / CG: <b>{ev.lightning_20km_ic_pct}% / {ev.lightning_20km_cg_pct}%</b></div>
+                                                    <div className="col-6">Pico: <b className="text-danger">{ev.lightning_20km_peak_kA || 'N/A'}</b></div>
+                                                </div>
+                                            </div>
+                                        )}
+                                    </div>
+                                )}
+                            </div>
+
+                            {/* ACCORDION 5: ⚠️ INCONSISTÊNCIA FÍSICA & DÉFICIT HÍDRICO */}
+                            <div className={`accordion-box ${openSections.inconsist ? 'active' : ''}`}>
+                                <div className="accordion-box-header" onClick={() => toggleSection('inconsist')}>
+                                    <span><i className="fa-solid fa-scale-unbalanced me-1.5 text-danger"></i> 5. Inconsistência Física & Déficit</span>
+                                    <span className="badge bg-danger text-white" style={{ fontSize: '0.65rem' }}>Anomalia</span>
+                                </div>
+                                {openSections.inconsist && (
+                                    <div className="accordion-box-content">
+                                        <div className="p-1.5 rounded bg-black border border-danger-subtle small text-light mb-1.5">
+                                            <b className="text-warning d-block mb-1"><i className="fa-solid fa-droplet-slash me-1 text-danger"></i> Déficit de Água Líquida:</b>
+                                            <span className="text-slate-300">{ev.inconsistency_water}</span>
+                                        </div>
+                                        {ev.rain_desc && (
+                                            <div className="p-1.5 rounded bg-dark border border-secondary small text-light">
+                                                <b className="text-info d-block mb-1"><i className="fa-solid fa-cloud-rain me-1"></i> Chuva no Vale:</b>
+                                                <span className="text-slate-300">{ev.rain_desc}</span>
+                                            </div>
+                                        )}
+                                    </div>
+                                )}
+                            </div>
+
+                            {/* ACCORDION 6: 🛰️ AVALIAÇÃO DE SATÉLITE & CICATRIZES LINEARES */}
+                            <div className={`accordion-box ${openSections.satelite ? 'active' : ''}`}>
+                                <div className="accordion-box-header" onClick={() => toggleSection('satelite')}>
+                                    <span><i className="fa-solid fa-satellite me-1.5 text-info"></i> 6. Satélite & Cicatrizes de Crista</span>
+                                    <div className="d-flex align-items-center gap-1.5">
+                                        <span className="badge bg-info text-dark fw-bold" style={{ fontSize: '0.65rem' }}>
+                                            {ev.satellite_eval ? ev.satellite_eval.verdict.split(' ')[0] : 'Orbital'}
+                                        </span>
+                                        <i className={`fa-solid ${openSections.satelite ? 'fa-chevron-up' : 'fa-chevron-down'} text-muted`}></i>
+                                    </div>
+                                </div>
+                                {openSections.satelite && (
+                                    <div className="accordion-box-content">
+                                        {ev.satellite_eval && (
+                                            <React.Fragment>
+                                                <div className="mb-1.5">
+                                                    <span className="badge bg-info text-dark fw-bold d-block text-start p-1.5 mb-1" style={{ fontSize: '0.72rem' }}>
+                                                        {ev.satellite_eval.verdict}
+                                                    </span>
+                                                    <span className="text-light small d-block" style={{ fontSize: '0.70rem' }}>
+                                                        <b>Sensores Orbitais:</b> <span className="text-slate-300">{ev.satellite_eval.sensor}</span>
+                                                    </span>
+                                                </div>
+                                                <p className="small text-slate-300 mb-1.5" style={{ fontSize: '0.72rem', lineHeight: '1.35' }}>
+                                                    {ev.satellite_eval.details}
+                                                </p>
+                                                <div className="p-1.5 rounded bg-black border border-secondary small text-light">
+                                                    <b className="text-warning d-block mb-1">
+                                                        <i className="fa-solid fa-mountain me-1 text-warning"></i> Cicatrizes Lineares de Cume (Assinatura do Toró):
+                                                    </b>
+                                                    <span className="text-slate-200">{ev.satellite_eval.linear_scars}</span>
+                                                </div>
+                                            </React.Fragment>
+                                        )}
+                                    </div>
+                                )}
+                            </div>
+
+                            {/* ACCORDION 7: 🎓 LITERATURA & UTILIDADE PARA O ARTIGO */}
+                            <div className={`accordion-box ${openSections.lit ? 'active' : ''}`}>
+                                <div className="accordion-box-header" onClick={() => toggleSection('lit')}>
+                                    <span><i className="fa-solid fa-graduation-cap me-1.5 text-primary"></i> 7. Literatura & Artigo Científico</span>
+                                    <i className={`fa-solid ${openSections.lit ? 'fa-chevron-up' : 'fa-chevron-down'} text-muted`}></i>
+                                </div>
+                                {openSections.lit && (
+                                    <div className="accordion-box-content">
+                                        <div className="mb-1.5 text-light small" style={{ fontSize: '0.71rem' }}>
+                                            <b className="text-info">Artigos Publicados:</b> <span className="text-slate-200">{pInfo.papers}</span>
+                                        </div>
+                                        <div className="p-1.5 rounded bg-dark border border-secondary small text-light mb-1.5">
+                                            <b className="text-cyan d-block mb-1"><i className="fa-solid fa-pen-nib me-1 text-warning"></i> Vantagens / Aplicação no Artigo:</b>
+                                            <span className="text-slate-200">{pInfo.utility}</span>
+                                        </div>
+                                        {ev.conventional_critique && (
+                                            <div className="p-1.5 rounded bg-black border border-danger-subtle small text-light">
+                                                <b className="text-danger d-block mb-1"><i className="fa-solid fa-shield-halved me-1"></i> Contraponto / Ponto Desfavorável:</b>
+                                                <span className="text-slate-300">{ev.conventional_critique}</span>
+                                            </div>
+                                        )}
+                                    </div>
+                                )}
+                            </div>
+
+                            {/* BOTÕES DE AÇÃO INFERIORES */}
+                            <div className="d-flex gap-2 mt-2">
+                                <button onClick={flyToCurrentEvent} className="btn btn-sm btn-outline-info flex-grow-1" style={{ fontSize: '0.74rem' }}>
+                                    <i className="fa-solid fa-video me-1"></i> Vista 3D Detalhada
+                                </button>
+                                <a href={earthUrl} target="_blank" className="btn btn-sm btn-outline-warning" style={{ fontSize: '0.74rem' }}>
+                                    <i className="fa-solid fa-earth-americas me-1"></i> Earth Web
+                                </a>
+                            </div>
+
+                            {/* LINKS PARA OS DOCUMENTOS FORENSES MASTER */}
+                            <div className="d-flex flex-column gap-1 mt-2 border-top border-secondary pt-1.5" style={{ fontSize: '0.68rem' }}>
+                                <div className="d-flex justify-content-between">
+                                    <a href="TECHNICAL_REPORT_HIMALAYAN_CATASTROPHES_1980_2026.md" target="_blank" className="text-cyan text-decoration-none">
+                                        <i className="fa-solid fa-file-shield me-1"></i> Relatório Técnico 1980–2026
+                                    </a>
+                                    <a href="LITERATURE_REGISTER_HIMALAYAN_DISASTERS.md" target="_blank" className="text-warning text-decoration-none">
+                                        <i className="fa-solid fa-book-open-reader me-1"></i> Catálogo de Artigos
+                                    </a>
+                                </div>
+                                <div className="text-end">
+                                    <a href="REFERENCIAS_CIENTIFICAS_E_RELATOS_TESTEMUNHAIS_HIMALAIA.md" target="_blank" className="text-muted text-decoration-underline">
+                                        <i className="fa-solid fa-book-bookmark me-1"></i> Ver Fontes Científicas e Citações
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </React.Fragment>
+            );
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById('react-ui-root'));
+        root.render(<HimalayanApp />);
     </script>
 </body>
 </html>
