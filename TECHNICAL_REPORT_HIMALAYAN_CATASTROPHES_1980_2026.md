@@ -17,42 +17,39 @@ Extreme high-mountain catastrophes in the Himalayas have long challenged standar
 * Frictional melting of ice during a rock avalanche;
 * A typical seasonal monsoon cloudburst recorded by coarse-resolution regional stations.
 
-However, when subjected to **rigorous mass and energy balances**, several of the most destructive events in the last four decades reveal severe physical contradictions:
-1. **The Frictional Melt Limit (The 1% Problem):** In dry rock-ice avalanches with zero pre-existing lakes (most notably **Chamoli 2021**, featured on the cover of *Science*), frictional heating can melt at most ~1% of the potential energy equivalent in ice—leaving millions of cubic meters of liquid water unexplained.
-2. **The 10x–20x Volumetric Inconsistency:** In events like **Kedarnath (2013)** and **Langtang (2026)**, the liquid water volume discharged downstream exceeds the static storage capacity of the collapsed lake by **10 to 11 times**, while coarse satellite precipitation grids (GPM IMERG, ERA5) show deficits of **10 to 20 times** relative to the water volume mobilized in the valley.
-3. **Mountain-Top Linear Scouring Scars:** High-resolution optical satellite pairs (Sentinel-2 10m, PlanetScope 3m) reveal continuous bedrock-stripping chutes originating precisely on razor-thin ridge crests ($>5,000\text{ to }7,000\text{ m}$), demonstrating that extreme mechanical stripping begins at the mountain summits rather than at the valley bottom.
+Following an uncompromising scientific audit of all 15 events, this report strictly separates measured observational telemetry from parametric assumptions, correcting earlier false attributions:
+1. **The Frictional Melting Regime in Avalanches:** In dry rock-ice avalanches with zero pre-existing lakes (such as **Chamoli 2021**), the primary driving mechanism is solid mass gravitational collapse where frictional dissipation melts entrained glacier ice into slurry (Shugar et al., *Science*, 2021). Applying liquid rainfall-runoff models to dry winter avalanches is a physical category error.
+2. **Pluviometric and Lacustrine Mass Balance:** In events like **Kedarnath (2013)**, while the static capacity of Chorabari lake ($0.38\times 10^6\text{ m}^3$) was small compared to the total flow, in-situ rain gauges (Dobhal et al., 2013) recorded **325 mm of rainfall in 48 hours**. This observed precipitation easily covers the ~110 mm runoff depth required to sustain the downstream flood volume, completely resolving the apparent deficit.
+3. **Mountain-Top Linear Scouring Scars:** High-resolution optical satellite pairs (Sentinel-2 10m, PlanetScope 3m) reveal continuous bedrock-stripping chutes originating on steep ridge crests ($>5,000\text{ to }7,000\text{ m}$), indicating intense summit-level geomorphic initiation.
 
-To address these contradictions across the entire Himalayan arc, this report establishes a **single, unified physical protocol** applied to all 15 major events from 1980 to 2026.
+To provide a transparent, audit-compliant assessment across the entire Himalayan arc, this report establishes a unified physical protocol applied to all 15 major events from 1980 to 2026, reading open parameters from `config/hydraulic_assumptions.yaml`.
 
 ---
 
-## 2. Audit of Published Literature & Key Physical Anomalies
+## 2. Audit of Published Literature & Key Physical Distinctions
 
-### 2.1 The "1% Thermodynamic Problem" in Chamoli 2021 (*Science* Cover Paper)
+### 2.1 The Physical Dynamics of Chamoli 2021 (*Science*, Shugar et al., 2021)
 In the Chamoli catastrophe of February 7, 2021, a massive rock-ice wedge (~27 million m³, ~80% rock, ~20% glacier ice) collapsed from the north face of Ronti Peak (descent from 5,600 m to 2,200 m).
 * **Observed Facts (*Science*, Shugar et al., 2021):**
-  * **Zero pre-existing lake:** The lake volume was $V_{\text{lake}} = 0\text{ m}^3$.
+  * **Zero pre-existing lake:** Lake volume was $V_{\text{lake}} = 0\text{ m}^3$.
   * **Dry winter morning:** Zero precipitation in the valley or on the mountain.
-  * **Massive liquid flood:** A slurry with peak discharge $Q_{\text{peak}} \approx 5,200\text{ m}^3/\text{s}$ traveling at up to $60\text{ m/s}$ devastated the Tapovan Vishnugad hydroelectric project.
-* **The Thermodynamic Friction Calculation:**
-  $$\Delta E_p = m \cdot g \cdot \Delta H = (6.7 \times 10^{10}\text{ kg}) \times (9.81\text{ m/s}^2) \times (3,400\text{ m}) \approx 2.23 \times 10^{15}\text{ J} = 2,230\text{ TJ}$$
-  The latent heat of fusion of ice is $L_f = 3.34 \times 10^5\text{ J/kg}$.
-  Even assuming that **100% of all potential energy** was perfectly converted into melting ice (which is physically impossible, as kinetic energy, rock comminution, acoustic radiation, and seismic waves dissipate most of the energy), the absolute upper bound of melted ice would be:
-  $$m_{\text{melt, theoretical max}} = \frac{2.23 \times 10^{15}\text{ J}}{3.34 \times 10^5\text{ J/kg}} \approx 6.68 \times 10^9\text{ kg} \approx 6.68 \times 10^6\text{ m}^3$$
-  However, extensive physical modeling and field calorimetry in *Science* (Shugar et al., 2021) demonstrated that **at most $\eta \approx 0.8\%\text{ to }1.0\%$ of the potential energy is actually converted into frictional ice melt**:
-  $$V_{\text{frictional melt}} \le \frac{0.01 \times 2.23 \times 10^{15}}{3.34 \times 10^5 \times 1,000} \approx \mathbf{0.45 \times 10^6\text{ m}^3}$$
-* **The Scientific Enigma:** Frictional melting accounts for **less than 4.2% of the ~10.7 million m³ of liquid water** observed in the Tapovan flood hydrograph. The authors in *Science* had to propose secondary hypotheses (undrained loading liquefaction of valley floor alluvium or trapped subglacial water pockets). Chamoli became a milestone because it proved that high-mountain avalanches can generate hyper-mobile liquid surges without lakes and without rain.
+  * **Massive liquid/slurry flood:** Peak discharge reached $Q_{\text{peak}} \approx 8,635\text{ m}^3/\text{s}$ (Manning cross-section reconstruction).
+* **Thermodynamics and Slurry Mobilization:**
+  * Shugar et al. (2021) demonstrated that frictional heating during the 3,400 m vertical descent melted significant portions of the entrained glacier ice, transforming the dry rock avalanche into a devastating, fast-moving debris slurry.
+  * **Audit Clarification:** Shugar et al. did **not** state a universal 1% thermodynamic ceiling to argue for an unexplained liquid water deficit. Evaluating Chamoli against rainfall formulas is physically inappropriate because the event was purely an avalanche-driven mass movement without atmospheric precipitation involvement.
 
-### 2.2 The 10x–20x Volumetric Discrepancy (Kedarnath 2013 & Langtang 2026)
+### 2.2 Volumetric Balances: Kedarnath (2013) and Langtang (2026)
 * **Kedarnath 2013:**
   * Chorabari Lake static capacity: $V_{\text{lake}} = 0.38 \times 10^6\text{ m}^3$ (Dobhal et al., 2013; Allen et al., 2016).
-  * Downstream flood hydrograph: $V_{\text{water}} = 4.68 \times 10^6\text{ m}^3$ ($Q_{\text{peak}} \approx 5,000\text{ m}^3/\text{s}$).
-  * **Lake Deficit Ratio:** $4.68 / 0.38 = \mathbf{12.3\times}$. The lake held less than 9% of the water that destroyed Kedarnath.
+  * Downstream flood hydrograph: $V_{\text{bulk}} = 7.2 \times 10^6\text{ m}^3$, $V_{\text{water, gross}} = 4.68 \times 10^6\text{ m}^3$.
+  * In-situ measured precipitation: **325 mm** (Chorabari camp AWS: 210 mm on 16/06 and 115 mm on 17/06).
+  * **Audit Resolution:** The required runoff depth over the 42 km² basin is **110.4 mm**. Because 325 mm was directly measured, **no water deficit exists in Kedarnath** (the observed rain covers the requirement with a 2.94× margin).
 * **Langtang 2026:**
-  * Lhende Khola lake volume: $V_{\text{lake}} = 5.2 \times 10^6\text{ m}^3$.
-  * Downstream flood hydrograph: $V_{\text{water}} = 14.2 \times 10^6\text{ m}^3$ ($Q_{\text{peak}} \approx 3,376\text{ m}^3/\text{s}$).
-  * GPM IMERG satellite precipitation: 22 mm (~0.84M m³ in the basin).
-  * **Precipitation Deficit Ratio:** The required local convective core depth was **254 mm**, an **11.5-fold deficit** relative to satellite rain grids.
+  * Pre-breach lake and debris blockage retention: up to $V_{\text{lake}} = 7.54 \times 10^6\text{ m}^3$.
+  * River baseflow contribution: ~180 m³/s over 4 hours accounts for $2.59 \times 10^6\text{ m}^3$.
+  * Net runoff required from rainfall: $V_{\text{runoff, req}} = 4.07 \times 10^6\text{ m}^3$.
+  * Over a 55–65 km² headwater catchment, the required rainfall depth is **73 to 87 mm**.
+  * **Audit Resolution:** No in-situ rain gauges or GPM IMERG 2026 files exist in the repository (`[DATA UNAVAILABLE]`). Therefore, the existence of an anomalous deficit cannot be asserted as an observed fact.
 
 ---
 
@@ -81,79 +78,68 @@ In the 15 to 180 minutes preceding the reported acoustic blasts ("cannon roar / 
 
 ---
 
-## 5. Solar Electrodynamic Forcing & Vertical Current Density ($J_z$)
+### 5. Solar Electrodynamic Hypothesis & Vertical Current Density ($J_z$)
 
-Atmospheric electricity and the Global Electrical Circuit (GEC) provide a physical coupling mechanism between solar activity and high-altitude cloud microphysics:
-* **Solar Flare & Ionospheric Potential:** Energetic X-ray flares (classes M1.0 to X) and solar wind compressions modulate the ionospheric potential:
-  $$V_I = 250\text{ to }360\text{ kV}$$
-* **Vertical Current Density ($J_z$):** Over high-altitude, pristine alpine summits ($>5,000\text{ m}$), where boundary-layer aerosol concentrations are minimal and electrical column resistance is low, vertical current density surges:
-  $$J_z \approx \frac{V_I}{R_{\text{column}}} \approx 2.5\text{ to }5.0\text{ pA/m}^2$$
-* **Electro-Antiscavenging (Tinsley et al.):** Space charge accumulation at cloud boundaries delays initial droplet coalescence, maintaining an ultra-uniform population of supercooled water droplets until sudden secondary ice production triggers an explosive convective dump.
-
----
-
-## 6. Comprehensive Comparative Matrix of the 15 Catastrophes
-
-The table below synthesizes the results of our **unified inverse open-channel hydraulics (Manning)**, **mass balance**, **thermodynamic melt limits**, and **pre-event satellite diagnostics** across all 15 events:
-
-| Rank / ID | Event Name & Date | Peak Elevation (m) | $Q_{\text{peak}}$ Manning ($\text{m}^3/\text{s}$) | Total Bulk Flow ($10^6\text{ m}^3$) | Net Liquid Water ($10^6\text{ m}^3$) | Lake Vol ($10^6\text{ m}^3$) | Lake Deficit Ratio | Frictional Melt Max ($10^6\text{ m}^3$) | % Water from Melt | Required Precip $P_{\text{req}}$ (mm) | Measured Rain (mm) | Precip Deficit Multiplier |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **1** | Kedarnath (2013) | 6,940 | **5,411** | 7.20 | **4.68** | 0.38 | **12.3x** | 0.25 | **5.3%** | **131.1** | 35.0 | **3.7x** |
-| **2** | Chamoli (2021) | 7,816 | **8,754** | 18.50 | **10.73** | 0.00 | **NO LAKE** | 0.45 | **4.2%** | **205.6** | 0.0 | **DRY SKY** |
-| **3** | Himalaia (2026) | 7,234 | **3,376** | 20.70 | **14.20** | 5.20 | **2.7x** | 0.46 | **3.2%** | **254.3** | 22.0 | **11.6x** |
-| **4** | Aru (2016) | 6,200 | **13,296** | 68.00 | **54.40** | 0.00 | **NO LAKE** | 0.17 | **0.3%** | **818.0** | 5.0 | **163.6x** |
-| **5** | Seti (2012) | 7,525 | **8,879** | 32.00 | **17.60** | 0.00 | **NO LAKE** | 1.02 | **5.8%** | **287.6** | 0.0 | **DRY SKY** |
-| **6** | South Lhonak (2023) | 6,710 | **5,960** | 28.00 | **19.60** | 14.50 | **1.35x** | 0.15 | **0.8%** | **278.4** | 18.0 | **15.5x** |
-| **7** | Leh (2010) | 5,600 | **1,940** | 3.80 | **2.36** | 0.00 | **NO LAKE** | 0.02 | **0.7%** | **84.1** | 12.0 | **7.0x** |
-| **8** | Melamchi (2021) | 5,800 | **3,391** | 12.50 | **8.00** | 0.00 | **NO LAKE** | 0.21 | **2.6%** | **157.4** | 28.0 | **5.6x** |
-| **9** | Parechu (2000) | 5,200 | **13,767** | 45.00 | **32.40** | 25.00 | **1.30x** | 0.09 | **0.3%** | **205.7** | 8.0 | **25.7x** |
-| **10** | Zhangzangbo (1981) | 8,027 | **6,076** | 19.00 | **12.92** | 18.00 | **0.72x** | 0.08 | **0.6%** | **276.4** | 15.0 | **18.4x** |
-| **11** | Dig Tsho (1985) | 6,530 | **3,892** | 5.10 | **3.42** | 5.00 | **0.68x** | 0.09 | **2.7%** | **133.5** | 10.0 | **13.3x** |
-| **12** | Luggye Tsho (1994) | 7,204 | **7,844** | 21.00 | **15.54** | 17.00 | **0.91x** | 0.10 | **0.6%** | **176.6** | 16.0 | **11.0x** |
-| **13** | Bhotekoshi (2016) | 6,100 | **4,737** | 8.20 | **5.41** | 4.50 | **1.20x** | 0.10 | **1.8%** | **137.5** | 20.0 | **6.9x** |
-| **14** | Himachal (2023) | 4,800 | **8,359** | 35.00 | **26.25** | 0.00 | **NO LAKE** | 0.05 | **0.2%** | **171.6** | 45.0 | **3.8x** |
-| **15** | Parechu (2005) | 5,200 | **13,722** | 38.00 | **27.36** | 20.00 | **1.37x** | 0.09 | **0.3%** | **173.7** | 10.0 | **17.4x** |
+Atmospheric electricity and the Global Electrical Circuit (GEC) have been proposed as a potential coupling mechanism between space weather and high-altitude cloud microphysics (Tinsley, 2008):
+* **Analytical Parametric Model:** In this repository, vertical current density $J_z$ is modeled analytically using the classical Carnegie GEC curve coupled with ionospheric potential $V_I$ and an assumed column resistance $R_c = 0.78 \times 10^{17}\,\Omega\cdot\text{m}^2$. **Audit Clarification:** No raw magnetometer telemetry was used to invert $J_z$.
+* **Critical Physical Limitations:**
+  1. *Cutoff Rigidity:* The Himalayan arc is located at low geomagnetic latitudes with high vertical cutoff rigidity (~13–14 GV). Solar protons from ordinary solar energetic particle (SEP) events cannot penetrate the Earth's magnetic field to reach tropospheric altitudes in this region.
+  2. *Selection Bias:* Associating disaster dates with preceding solar flares without evaluating a non-event control group cannot establish statistical causality. Solar-terrestrial triggering remains an unverified hypothesis.
 
 ---
 
-## 7. Conventional Geotechnical Counter-Arguments ("Coisas Ruins")
+## 6. Comprehensive Comparative Matrix of the 15 Catastrophes (Audited)
 
-To maintain scientific objectivity and prepare the strongest possible manuscript for peer review, we explicitly address the counter-arguments raised by traditional geotechnical and glaciological science:
+The table below synthesizes the results of our **unified inverse open-channel hydraulics (Manning)**, **mass balance**, and **precipitation requirements** across all 15 events, generated directly from `config/hydraulic_assumptions.yaml`:
 
-1. **Moraine Friability and Retrogressive Erosion:**
-   * *The Conventional Claim:* Loose, non-consolidated terminal moraines damming glacial lakes fail catastrophically through piping and self-accelerating retrogressive trenching, which can rapidly evacuate deep lake storage.
-   * *Our Assessment:* Valid for canonical GLOF events where $V_{\text{lake}} \ge V_{\text{flood}}$ (e.g., Zhangzangbo 1981, Dig Tsho 1985, Luggye Tsho 1994). However, it completely fails for events where $V_{\text{lake}} = 0$ (Chamoli, Seti, Aru) or where the lake volume accounts for less than 10% of the flood (Kedarnath).
-2. **Undrained Loading & Alluvial Liquefaction:**
-   * *The Conventional Claim:* An avalanche of rock and ice falling onto saturated valley sediments generates instant pore-water overpressure, liquefying hundreds of thousands of cubic meters of saturated valley alluvium.
-   * *Our Assessment:* While undrained loading contributes to sediment entrainment, geotechnical borehole tests in alpine valleys show that the total gravelly-alluvial pore volume is insufficient to generate tens of millions of cubic meters of surplus liquid water.
-3. **Seiche Waves Induced by Rock Avalanches:**
-   * *The Conventional Claim:* High-velocity rockfalls plunging into proglacial lakes generate seiche displacement waves (tsunamis) that overtop and breach moraine dams.
-   * *Our Assessment:* Highly plausible for South Lhonak 2023 and Dig Tsho 1985; but cannot explain why the surrounding slopes exhibit vertical scouring scars extending upwards to the mountain crests.
-
----
-
-## 8. Academic Publication Strategy: Ranking the Evidentiary Value of Events
-
-For maximum impact in peer-reviewed journals (*Science*, *Nature Geoscience*, *Journal of Geophysical Research*), we categorize the 15 events into three tiers of scientific evidence:
-
-* **Tier 1: Indisputable Anchor Events (Unassailable Physical Contradictions):**
-  1. **Chamoli 2021:** Zero lake, dry sunny day, $E_p$ friction melt physically limited to $\le 1\%$, verified by seismic tracking in *Science*.
-  2. **Kedarnath 2013:** 12-fold deficit between lake volume ($0.38\text{M m}^3$) and flood volume ($4.68\text{M m}^3$); Kalpana-1 thermal IR confirms $-68^\circ\text{C}$ overshooting convective core.
-  3. **Langtang 2026:** Comprehensive high-resolution multi-station dataset demonstrating a 10-fold satellite rain deficit and solar $J_z$ coupling.
-* **Tier 2: Extreme High-Energy Non-Lacustrine Collapses:**
-  4. **Aru 2016:** Twin glacier collapses on a 6° slope in arid western Tibet; conventional ice mechanics cannot explain spontaneous dual mobilization.
-  5. **Seti 2012:** 32M m³ dry avalanche generating a massive slurry flood without prior lake storage.
-  6. **Leh 2010:** Localized cloudburst in a 50 mm/year desert; radar beam blockage masked convective core.
-* **Tier 3: Canonical GLOF and Landslide Dam Events (Conventional Controls):**
-  7. **South Lhonak 2023, Zhangzangbo 1981, Dig Tsho 1985, Luggye Tsho 1994, Parechu 2000/2005, Bhotekoshi 2016:** These events serve as benchmark control cases where lake or landslide damming accounted for a substantial fraction of the volume.
+| Rank / ID | Event Name & Date | Peak Elev (m) | $Q_{\text{peak}}$ Manning ($\text{m}^3/\text{s}$) | Total Bulk ($10^6\text{ m}^3$) | Net Liquid ($10^6\text{ m}^3$) | Lake Vol ($10^6\text{ m}^3$) | Net Runoff Req ($10^6\text{ m}^3$) | Required Rain $P_{\text{req}}$ (mm) | Measured Rain (mm) | Deficit Multiplier / Status |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **1** | Kedarnath (2013) | 6,940 | **2,539.2** | 7.20 | 4.68 | 0.38 | **3.94** | 110.4 | 325.0 (AWS) | **0.34x (SEM DÉFICIT — Folga de 2.94x)** |
+| **2** | Chamoli (2021) | 7,816 | **8,635.5** | 26.90 | 15.60 | 0.00 | **15.60** | 298.9 | 0.0 (Winter) | **NOT APPLICABLE (Solid rock-ice avalanche)** |
+| **3** | Himalaia (2026) | 7,234 | **3,376.1** | 20.70 | 14.20 | 7.54 | **4.07** | 87.0 | null | **[DADO INDISPONÍVEL — Requer dados reais]** |
+| **4** | Aru (2016) | 6,200 | **10,240.0** | 68.00 | 54.40 | 0.00 | **54.40** | 818.0 | 5.0 | **NOT APPLICABLE (Cold glacier collapse)** |
+| **5** | Seti (2012) | 7,525 | **8,879.0** | 32.00 | 17.60 | 0.00 | **17.60** | 287.6 | 0.0 | **NOT APPLICABLE (Rock-ice avalanche)** |
+| **6** | South Lhonak (2023) | 6,710 | **5,960.0** | 28.00 | 19.60 | 14.50 | **5.10** | 72.4 | 18.0 | **4.02x (Déficit aparente vs pluviômetro local)** |
+| **7** | Leh (2010) | 5,600 | **1,940.0** | 3.80 | 2.36 | 0.00 | **2.36** | 84.1 | 12.0 | **7.01x (Déficit aparente vs pluviômetro do vale)** |
+| **8** | Melamchi (2021) | 5,800 | **3,391.0** | 12.50 | 8.00 | 0.00 | **8.00** | 157.4 | 28.0 | **5.62x (Déficit aparente vs pluviômetro de vale)** |
+| **9** | Parechu (2000) | 5,200 | **13,767.0** | 45.00 | 32.40 | 25.00 | **7.40** | 47.0 | 8.0 | **5.87x (GLOF com contribuição de chuva)** |
+| **10** | Zhangzangbo (1981) | 8,027 | **6,076.0** | 19.00 | 12.92 | 18.00 | **0.00** | 0.0 | 15.0 | **0.00x (SEM DÉFICIT — Lago cobriu 100% da água)** |
+| **11** | Dig Tsho (1985) | 6,530 | **3,892.0** | 5.10 | 3.42 | 5.00 | **0.00** | 0.0 | 10.0 | **0.00x (SEM DÉFICIT — Lago cobriu 100% da água)** |
+| **12** | Luggye Tsho (1994) | 7,204 | **7,844.0** | 21.00 | 15.54 | 17.00 | **0.00** | 0.0 | 16.0 | **0.00x (SEM DÉFICIT — Lago cobriu 100% da água)** |
+| **13** | Bhotekoshi (2016) | 6,100 | **4,737.0** | 8.20 | 5.41 | 4.50 | **0.91** | 23.1 | 20.0 | **1.16x (Lago cobriu 83% do volume total)** |
+| **14** | Himachal (2023) | 4,800 | **8,359.0** | 35.00 | 26.25 | 0.00 | **26.25** | 171.6 | 45.0 | **3.81x (Cheia regional monçônica multi-bacia)** |
+| **15** | Parechu (2005) | 5,200 | **13,722.0** | 38.00 | 27.36 | 20.00 | **7.36** | 46.7 | 10.0 | **4.67x (GLOF recorrente de barramento natural)** |
 
 ---
 
-## 9. Conclusion & Roadmap for Field and Satellite Verification
+## 7. Conventional Geotechnical Processes & Geomorphic Context
 
-This report provides the first unified physical framework spanning 46 years of Himalayan disasters. By standardizing open-channel hydraulics, mass balances, frictional thermodynamics, and satellite search protocols, we demonstrate that:
-1. Conventional lake outburst models cannot explain the vast majority of extreme surge volumes observed in high-altitude catchments.
-2. The 1% frictional melt limit in Chamoli (*Science*) confirms that mechanical energy dissipation alone is thermodynamically incapable of producing hyper-concentrated floods from dry ice-rock collapses.
-3. Satellite antes/depois pairs confirm that mechanical scouring scars begin on razor-thin ridge crests ($>5,000\text{ to }7,000\text{ m}$), demonstrating high-altitude convective and electrodynamic forcing.
+To maintain scientific objectivity, we evaluate the conventional mechanisms documented in published literature:
+1. **Classical Moraine Dam Breaches (Canonical GLOFs):** In events like Zhangzangbo 1981, Dig Tsho 1985, and Luggye Tsho 1994, moraine dam failure through progressive trenching completely accounts for the flood volume ($V_{\text{lake}} \ge V_{\text{flood}}$) without requiring extreme precipitation.
+2. **Rock-Ice Avalanches & Frictional Liquefaction:** In Chamoli 2021 and Seti 2012, massive rock-ice collapses mobilize without pre-existing lakes or rain. Frictional heat dissipation melts entrained glacier ice into slurry.
+3. **Monsoon Cloudbursts & Orographic Convection:** In Kedarnath 2013 and Himachal 2023, extreme orographic monsoon precipitation is the verified driver. In Kedarnath, direct rain gauge data (325 mm) demonstrates that rainfall runoff fully supplied the water volume.
 
-The scripts, STAC search catalog, and hydraulic datasets generated in this study are permanently archived in the repository for international scientific reproduction.
+---
+
+## 8. Evidentiary Categorization of Events Following Independent Audit
+
+* **Category A: Rainfall-Driven Floods with Documented Precipitation:**
+  * **Kedarnath 2013:** 325 mm rainfall directly measured in-situ; no water deficit exists.
+  * **Himachal 2023:** Regional multi-day monsoon downpours across Himachal Pradesh.
+* **Category B: Solid Mass Collapses (Avalanches & Glacier Surges):**
+  * **Chamoli 2021:** 27M m³ rock-ice avalanche with frictional melt; rainfall models inapplicable.
+  * **Aru 2016:** Twin cold glacier surges and collapses in western Tibet.
+  * **Seti 2012:** 32M m³ rock-ice fall from Annapurna IV into gorge.
+* **Category C: Canonical Glacial Lake Outburst Floods (GLOFs):**
+  * **Zhangzangbo 1981, Dig Tsho 1985, Luggye Tsho 1994, South Lhonak 2023, Parechu 2000/2005, Bhotekoshi 2016:** Dam breach accounts for the dominant portion or entirety of the liquid flood volume.
+* **Category D: Multi-Hazard Event with Inconclusive Rainfall Data:**
+  * **Langtang 2026:** Multi-stage collapse and temporary landslide dam breach. Net runoff required is ~4.07M m³ (requiring 73–87 mm over 55–65 km²). Due to absence of in-situ rain gauges or 2026 satellite granules in the repo, the deficit is classified as **inconclusive / data unavailable**.
+
+---
+
+## 9. Conclusion & Post-Audit Scientific Assessment
+
+This unified physical audit demonstrates that:
+1. **The claim of an unexplained 10x–20x water deficit across all Himalayan disasters does not withstand empirical scrutiny.** In Kedarnath, real rainfall records show no deficit. In Chamoli and Aru, events were solid mass avalanches where rain-deficit formulas are physically invalid. In 2026, rainfall remains unobserved.
+2. **Solar-terrestrial electrodynamic triggering ($J_z$) is an exploratory hypothesis**, not an established finding. The values in this repository are derived from analytical GEC formulas, not raw magnetometer measurements. High geomagnetic cutoff rigidity (~13–14 GV) and the absence of a control group remain critical scientific obstacles.
+3. High-resolution satellite imagery confirms prominent bedrock-stripping chutes in steep terrain, highlighting the need for coupled geotechnical-meteorological monitoring in high-mountain basins.

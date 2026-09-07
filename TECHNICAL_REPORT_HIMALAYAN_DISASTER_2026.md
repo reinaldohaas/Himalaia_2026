@@ -4,9 +4,11 @@
 **Affiliation:** Departamento de Física, Universidade Federal de Santa Catarina (UFSC), Florianópolis, SC, Brazil  
 **Event Location:** Langtang Lirung Massif / Lhende Khola Basin / Trishuli River Gorge (Tibet, China – Nepal Border)  
 **Coordinates:** $28.274^\circ\text{ N}, 85.483^\circ\text{ E}$ (Elevation: $1,400\text{ m}$ to $7,234\text{ m}$)  
+**Human Toll (Official Estimates):** 1,000 to 1,400 confirmed fatalities, 4,000 to 5,500 missing persons across the Nepal–Tibet trans-border corridor  
+**Infrastructure Damage:** 33 road bridges and 68 suspension bridges destroyed/severely damaged; 13 hydropower projects affected (including total shutdown at Rasuwagadhi 111 MW)  
 **Repository & Open Code:** [https://github.com/reinaldohaas/Himalaia_2026](https://github.com/reinaldohaas/Himalaia_2026)  
 **Live 4D Visualizer (GitHub Pages):** [https://reinaldohaas.github.io/Himalaia_2026/viewer_4d.html](https://reinaldohaas.github.io/Himalaia_2026/viewer_4d.html)  
-**Status:** Open Call for International Scientific Collaboration *(China, Nepal & Global Working Groups)*  
+**Status:** Post-Audit Scientific Report (Separating Measured Data from Parametric Hypotheses)  
 
 ---
 
@@ -14,7 +16,7 @@
 
 Science advances not by forcing extraordinary physical anomalies into comfortable, routine bureaucratic narratives, but by confronting empirical contradictions where established paradigms fail. In the immediate aftermath of extreme high-mountain catastrophes, institutional assessments frequently gravitate toward off-the-shelf, routine explanations—attributing massive surges to a typical seasonal rain, an isolated small glacial lake drainage (GLOF), or an ordinary rockfall.
 
-While our working hypotheses are **heterodox and challenge standard conventions**, our methodology is committed to **cutting-edge, data-driven, and physically consistent science**. We present a quantitative, first-principles investigation demonstrating that the **August 25–26, 2026** disaster was triggered by a high-energy, unclassified atmospheric-geomorphic coupling ("Toró" phenomenon; Haas, 2026) modulated by solar-terrestrial electrodynamics ($J_z$) and preserved in the ancient geomythological memory of the Tibetan Plateau.
+While our working hypotheses are **heterodox and challenge standard conventions**, our methodology is committed to **cutting-edge, data-driven, and physically consistent science**. Following independent audit, all synthetic parametric models have been strictly segregated from raw observational telemetry. We present a quantitative, first-principles investigation of the **August 25–26, 2026** disaster, evaluating the coupling between an extreme orographic convective event ("Toró"; Haas, 2026), landslide dam breaching, and proposed solar-terrestrial electrodynamic forcing as an untested exploratory hypothesis.
 
 ---
 
@@ -24,67 +26,72 @@ From the very beginning, official and routine post-disaster explanations fail wh
 
 ```
 +---------------------------------------------------------------------------------------------------+
-| SUCCESSIVE COLLAPSE OF CONVENTIONAL/OFFICIAL EXPLANATIONS                                         |
+| AUDITED EVALUATION OF CONVENTIONAL AND HETERODOX HYPOTHESES                                       |
 +---------------------------------------------------------------------------------------------------+
-| 1. The GLOF Incongruity (Glacial Lake Storage vs. Downstream Flood):                              |
-|    - Official reports initially suggested a routine Glacial Lake Outburst Flood (GLOF).          |
-|    - Pre-event Sentinel-2 multispectral imagery mapped the Lhende Khola lake at 65.7 hectares,    |
-|      with a total static volume of ~5.2 Million m³.                                               |
-|    - Reconstructed flood hydrographs reveal a total bulk flow of 20.7 Million m³ and a net       |
-|      liquid water volume of 14.2 Million m³.                                                      |
-|    - Fact: The lake accounts for less than 35% of the mobilized water.                            |
+| 1. The Glacial Lake and Moraine Damming Contribution:                                             |
+|    - Initial assessments suggested a pure GLOF, while subsequent models posited a landslide-dam.  |
+|    - Post-event analysis indicates temporary moraine/debris blockage created up to 7.54M m³ of   |
+|      water storage at 3,950 m. Combined with ~2.59M m³ of Trishuli baseflow (180 m³/s over 4h),   |
+|      pre-stored water and baseflow account for ~10.1M m³ of the 14.2M m³ total liquid phase.       |
+|    - Net additional runoff volume required from catchment: ~4.07 Million m³.                      |
 +---------------------------------------------------------------------------------------------------+
-| 2. The Frictional Melt Incongruity (Avalanche Kinetic-Thermal Conversion):                        |
-|    - Hypotheses attributing excess water to frictional melting during the 15M m³ rock-ice fall     |
-|      defy thermodynamics: with potential energy Ep = m*g*h ≈ 388 TJ and latent heat of fusion     |
-|      Lf = 334 kJ/kg, at most ≤3.5% of the ice mass melts (<0.45M m³ of water).                   |
-|    - Fact: Frictional melting provides less than 3% of the required water volume.                 |
+| 2. Frictional Melting of the Rock-Ice Avalanche:                                                  |
+|    - Mass failure estimates range between 15M m³ (sub-crest detachment) and 200M m³ (total        |
+|      destabilized permafrost mass). Friction dissipates energy into heat, melting entrained ice.  |
+|    - Frictional melt provides valuable slurry lubrication, but cannot single-handedly supply the  |
+|      entire liquid volume (~0.1M to 0.5M m³ melted under realistic thermal efficiencies).          |
 +---------------------------------------------------------------------------------------------------+
-| 3. The 10x Coarse Satellite Rainfall Deficit:                                                     |
-|    - Coarse 10 km GPM IMERG grids recorded only 15–30 mm of nominal rainfall (~0.84M m³ in basin).|
-|    - River cross-section hydraulics (8.5 m stage rise, Q_peak ≈ 3,376 m³/s) require >14.2M m³     |
-|      of liquid water—revealing a ~10-FOLD DEFICIT between standard satellite rain and river flow.  |
-|    - Required localized convective core rainfall: >500 to 950 mm in <2 hours.                     |
+| 3. Precipitation Status & Sensitivity of Apparent Deficit:                                        |
+|    - In-situ rain gauges in the high Gyirong/Lhende gorge are absent; GPM IMERG V07 satellite     |
+|      granules for August 2026 were not available in the repository [DATA UNAVAILABLE].            |
+|    - The previously claimed 10x deficit was an artifact of assuming an arbitrary 22 mm rainfall.  |
+|    - Sensitivity analysis demonstrates that for the 55–65 km² upper catchment, a localized       |
+|      orographic cloudburst delivering 72–87 mm fully explains the remaining liquid volume without  |
+|      any anomalous deficit. Without direct rain telemetry, the deficit remains unproven.          |
 +---------------------------------------------------------------------------------------------------+
-| 4. Sismo-Acoustic and Electrical Incongruities:                                                   |
-|    - Precursor high-frequency hissing and cannon-like cracking sounds preceding the 4.4 mb tremor.|
-|    - Infrasound shockwave of 104.1 dB SPL (3.2 Pa at 14 km) indicating violent air displacement.   |
-|    - Optical quartz piezo-flashes and immediate 132/220 kV transmission line flashovers.          |
+| 4. Seismo-Acoustic Signatures:                                                                    |
+|    - The USGS National Earthquake Information Center (NEIC) formally registered the main collapse |
+|      as event us7000tbwb at 02:52:10 UTC: Magnitude Ms 5.2 (magType: ms_vx, depth: 0.0 km),      |
+|      officially classified as 'landslide'. A secondary collapse occurred at 06:00:35 UTC (Ms 4.2). |
+|    - Infrasound and seismic shockwaves confirmed catastrophic ground impact and air blast.        |
 +---------------------------------------------------------------------------------------------------+
 ```
 
 ---
 
-## 3. The Physical Framework: High-Altitude Microphysics & Solar Electrodynamic Forcing
+## 3. The Physical Framework: High-Altitude Microphysics & Solar Electrodynamic Hypothesis
 
-To explain the sudden delivery of over **14 million cubic meters of liquid water** without a broad synoptic low-pressure system, we apply the physical framework of the **Toró** (Extreme Orographic Convective Event; Haas, 2026) coupled with atmospheric electricity:
+To explore whether solar-terrestrial coupling could influence extreme orographic precipitation ("Toró"; Haas, 2026), we examine the electrodynamics of the Global Electric Circuit (GEC). **Note of Scientific Transparency:** Solar-terrestrial triggering is treated here as an exploratory hypothesis requiring rigorous testing, not an established law:
 
 ```
-                  SOLAR-TERRESTRIAL & MICROPHYSICAL COUPLING
+                  SOLAR-TERRESTRIAL & MICROPHYSICAL HYPOTHESIS
 +-----------------------------------------------------------------------------------+
 | 1. Solar Forcing (NOAA GOES-18 / 25 Aug 10:02 UTC):                               |
-|    - Class M7.0 Solar Flare (7.0e-5 W/m²) & Solar Energetic Particle ion jump.    |
-|    - Ionospheric Potential surges to VI ≈ 356.4 kV.                               |
-|    - Inverted via 14-station Trans-Himalayan Network (LZA, XAN, CDT, KKN, TIR):   |
-|      Vertical current density surges to Jz ≈ 4.57 to 5.03 pA/m² at high elevation.|
+|    - Class M6.9 Solar Flare (6.98e-5 W/m² peak flux) in Active Region AR 4513.    |
+|    - Ionospheric Potential VI modeled analytically (baseline ~240 kV + flare jump)|
+|    - Parametric Carnegie GEC Model: Jz modeled at 3.85–4.57 pA/m² at high altitude|
+|      (Analytical model with fixed Rc; no in-situ magnetometer telemetry in repo). |
 +-----------------------------------------------------------------------------------+
-| 2. Electro-Antiscavenging & Droplet Uniformity (Tinsley, 1991, 2008):             |
-|    - In pristine alpine air with low background CCN, space charge accumulation at  |
-|      cloud boundaries modulates droplet collision efficiency (electro-scavenging).|
-|    - Early drizzle is suppressed, maintaining an ultra-uniform, monodisperse      |
-|      supercooled liquid droplet population in the -3°C to -8°C layer.             |
+| 2. High-Altitude Cutoff Rigidity & Statistical Limitations:                       |
+|    - Critical Constraint: The Himalayan region possesses a high geomagnetic       |
+|      cutoff rigidity of ~13–14 GV. Solar proton events below ~13 GeV cannot       |
+|      penetrate the geomagnetic field to reach the troposphere at these latitudes. |
+|    - Statistical Selection Bias: Correlating 15 disaster dates with solar flares  |
+|      without evaluating a negative control group (days with M-class flares and no |
+|      disasters, or disaster days with quiet Sun) cannot prove causation.          |
 +-----------------------------------------------------------------------------------+
-| 3. Secondary Ice Production (SIP) & Convective "Piston" Collapse:                 |
-|    - Violent orographic updraft (15-30 m/s) triggers runaway rime-splintering     |
-|      (Hallett-Mossop process) and droplet shattering above 5,200 m.               |
-|    - Sudden loss of colloidal stability causes an explosive convective dump       |
-|      ("hydraulic piston" release of >500–950 mm over <15 km²).                    |
+| 3. Secondary Ice Production (SIP) & Convective Pluviometry:                       |
+|    - Violent orographic updraft (15-30 m/s) in steep glacial cirques triggers     |
+|      runaway rime-splintering (Hallett-Mossop) and droplet shattering.            |
+|    - Sudden loss of colloidal stability can release intense localized downpours   |
+|      (70–120 mm in 1–2 hours over 50 km²).                                        |
 +-----------------------------------------------------------------------------------+
-| 4. Two-Stage Permafrost Failure & Outburst Flood:                                 |
-|    - Stage 1 (01:45 UTC): Ridge detachment (1.8M m³ at 6,200m) + piezo-flashes.   |
-|    - Stage 2 (02:52 UTC): 15M m³ permafrost collapse (USGS 4.4 mb / 104.1 dB SPL).|
-|    - Stage 3 (03:35 UTC): Dam overtopping and hyperconcentrated debris surge      |
-|      (Q_peak = 3,376 m³/s, v = 11.6 m/s, 25 bridges destroyed).                   |
+| 4. Multi-Stage Collapse & Outburst Flood Dynamics:                                |
+|    - Stage 1 (01:45 UTC): High crest destabilization and rock-ice fall.           |
+|    - Stage 2 (02:52 UTC): Massive 15M–25M m³ collapse (USGS Ms 5.2 landslide).    |
+|    - Stage 3 (03:35 UTC): Moraine dam overtopping and breach, driving peak surge  |
+|      (Manning Q_peak = 3,376 m³/s, mean velocity 11.6 m/s; supercritical Fr ~ 1.35|
+|      Eyewitness accounts of ~50 m/s reflect initial avalanche headwall free-fall).|
 +-----------------------------------------------------------------------------------+
 ```
 
@@ -116,29 +123,36 @@ Integrating the 5-hour hydrograph ($t = 0\text{ to }300\text{ min}$) and separat
 
 ### 5.3 Required Localized Cloudburst Precipitation Matrix
 
-$$\text{Equivalent Precipitation Depth } (P) = \frac{V_{\text{water}}}{A_{\text{basin}} \times C_{\text{runoff}}}$$
+Accounting for the temporary moraine/lake storage ($V_{\text{lake}} = 7.54\times 10^6\text{ m}^3$) and seasonal baseflow ($V_{\text{baseflow}} \approx 2.59\times 10^6\text{ m}^3$), the net runoff water required from cloudburst precipitation is:
 
-| Catchment Domain Scenario | Area ($A$) | Net Rainfall ($100\%$ Runoff) | Net Rainfall ($C_{\text{runoff}} = 0.85$) |
+$$V_{\text{runoff, req}} = \max(0, V_{\text{water}} - V_{\text{lake}} - V_{\text{baseflow}}) = 14.20\times 10^6 - 7.54\times 10^6 - 2.59\times 10^6 = \mathbf{4.07 \times 10^6\text{ m}^3}$$
+
+$$\text{Equivalent Precipitation Depth } (P_{\text{req}}) = \frac{V_{\text{runoff, req}}}{A_{\text{basin}} \times C_{\text{runoff}}}$$
+
+| Catchment Domain Scenario | Area ($A$) | Net Required Rain ($100\%$ Runoff) | Net Required Rain ($C_{\text{runoff}} = 0.85$) |
 | :--- | :---: | :---: | :---: |
-| **A. Ultra-Confined Convective Core** | $\mathbf{15.0\text{ km}^2}$ | $\mathbf{946.8\text{ mm}}$ | $\mathbf{1,113.9\text{ mm}}$ |
-| **B. Lhende Khola Headwater Basin** | $\mathbf{28.0\text{ km}^2}$ | $\mathbf{507.2\text{ mm}}$ | $\mathbf{596.7\text{ mm}}$ |
-| **C. Upper Trishuli Sub-Basin** | $\mathbf{50.0\text{ km}^2}$ | $\mathbf{284.0\text{ mm}}$ | $\mathbf{334.2\text{ mm}}$ |
-| **D. Regional Mountain Catchment** | $\mathbf{100.0\text{ km}^2}$ | $\mathbf{142.0\text{ mm}}$ | $\mathbf{167.1\text{ mm}}$ |
+| **A. Ultra-Confined Convective Core** | $\mathbf{15.0\text{ km}^2}$ | $\mathbf{271.3\text{ mm}}$ | $\mathbf{319.1\text{ mm}}$ |
+| **B. Lhende Khola Headwater Basin** | $\mathbf{28.0\text{ km}^2}$ | $\mathbf{145.3\text{ mm}}$ | $\mathbf{170.9\text{ mm}}$ |
+| **C. Upper Trishuli Sub-Basin** | $\mathbf{55.0\text{ km}^2}$ | $\mathbf{74.0\text{ mm}}$ | $\mathbf{87.0\text{ mm}}$ |
+| **D. Gyirong Regional Catchment** | $\mathbf{65.7\text{ km}^2}$ | $\mathbf{61.9\text{ mm}}$ | $\mathbf{72.8\text{ mm}}$ |
+| **E. Broad Mountain Basin** | $\mathbf{100.0\text{ km}^2}$ | $\mathbf{40.7\text{ mm}}$ | $\mathbf{47.9\text{ mm}}$ |
+
+*Audited Finding:* In the realistic headwater sub-basin ($55-65\text{ km}^2$), an intense convective cloudburst of $73-87\text{ mm}$ fully satisfies the required water volume without any deficit.
 
 ---
 
-## 6. High-Resolution Event Timeline: Two-Stage Failure & Downstream Impact
+## 6. High-Resolution Event Timeline: Multi-Stage Failure & Downstream Impact
 
 | Step | UTC Time | NPT (Nepal) | CST (China) | Physical Phenomenon & Signatures | Observation Type |
 | :---: | :---: | :---: | :---: | :--- | :---: |
-| **1** | **25 Aug 10:02** | 25 Aug 15:47 | 25 Aug 18:02 | **Solar Flare M7.0:** GOES-18 X-ray peak ($7.0\times 10^{-5}\text{ W/m}^2$), $V_I = 356.4\text{ kV}$, $J_z = 4.57\text{ pA/m}^2$. | `[DIRECT - NOAA GOES-18]` |
-| **2** | **26 Aug 00:00** | 26 Aug 05:45 | 26 Aug 08:00 | **Convective Onset & Lake Filling:** Moderate rain ($12\text{ mm/h}$), lake rises from $5.20$ to $5.62\text{ M m}^3$ (+8%). | `[MODEL - GPM/ERA5]` |
-| **3** | **26 Aug 01:30** | 26 Aug 07:15 | 26 Aug 09:30 | **Lightning Peak & Convective Core:** Flash rate peaks at $38-42\text{ strokes/h}$, rain rate $26-32.5\text{ mm/h}$ ($48\text{ dBZ}$). Lake reaches $6.45\text{ M m}^3$ (+24%). | `[MODEL - WWLLN/RADAR]` |
-| **4** | **26 Aug 01:45** | 26 Aug 07:30 | 26 Aug 09:45 | **STAGE 1 (Precursor Crest Detachment):** High-altitude rock/ice failure ($1.8\text{ M m}^3$ at $6,200\rightarrow 5,200\text{ m}$). Sharp hissing sounds, quartz piezoelectric flashes. | `[FIELD REPORT / MODEL]` |
-| **5** | **26 Aug 02:52** | 26 Aug 08:37 | 26 Aug 10:52 | **STAGE 2 (Main Rock-Ice Collapse):** $15\times 10^6\text{ m}^3$ permafrost collapse at $5,200\rightarrow 3,950\text{ m}$. **Magnitude 4.4 mb** seismic signal, explosive shock ($104.1\text{ dB SPL}$). | `[DIRECT - USGS SEISMIC]` |
-| **6** | **26 Aug 03:00** | 26 Aug 08:45 | 26 Aug 11:00 | **Temporary Landslide Damming:** Debris blocks gorge, water retention peaks at $7.54\text{ M m}^3$ (+45%). | `[GEOMORPHIC MODEL]` |
-| **7** | **26 Aug 03:35** | 26 Aug 09:20 | 26 Aug 11:35 | **Catastrophic Moraine Breach & Debris Flow:** Sudden overtopping and liquefaction, generating peak surge $Q = 3,376\text{ m}^3/\text{s}$ at $11.6\text{ m/s}$ ($41.7\text{ km/h}$). | `[HYDRAULIC MODEL]` |
-| **8** | **26 Aug 04:00** | 26 Aug 09:45 | 26 Aug 12:00 | **Downstream Impact:** Submersion and flashovers at Rasuwagadhi 111 MW HEP (132/220 kV lines), **25 bridges destroyed** along 45 km to Syabrubesi. | `[DIRECT - ICIMOD/UN OCHA]` |
+| **1** | **25 Aug 10:02** | 25 Aug 15:47 | 25 Aug 18:02 | **Solar Flare M6.9:** GOES-18 X-ray peak ($6.98\times 10^{-5}\text{ W/m}^2$) in Active Region AR 4513. Analytical Carnegie GEC model indicates $J_z \approx 3.85-4.57\text{ pA/m}^2$. | `[OBSERVED FLARE / PARAMETRIC GEC MODEL]` |
+| **2** | **26 Aug 00:00** | 26 Aug 05:45 | 26 Aug 08:00 | **Convective Onset & Valley Inflow:** Cloud-top cooling over Langtang/Gyirong. GPM IMERG 2026 satellite data unavailable in repository. | `[DADO INDISPONÍVEL — Requer credenciais Earthdata]` |
+| **3** | **26 Aug 01:30** | 26 Aug 07:15 | 26 Aug 09:30 | **Convective Core Development:** Lightning strokes estimated parametrically via regional proxy. | `[PARAMETRIC PROXY / UNVERIFIED]` |
+| **4** | **26 Aug 01:45** | 26 Aug 07:30 | 26 Aug 09:45 | **STAGE 1 (Precursor Crest Detachment):** High-altitude rock/ice failure ($1.8\text{ M m}^3$ at $6,200\rightarrow 5,200\text{ m}$). Eyewitness reports of acoustic hissing and quartz luminescence. | `[FIELD REPORT / GEOMORPHIC MODEL]` |
+| **5** | **26 Aug 02:52** | 26 Aug 08:37 | 26 Aug 10:52 | **STAGE 2 (Main Rock-Ice Collapse):** $15\times 10^6\text{ m}^3$ permafrost collapse. **USGS NEIC event us7000tbwb: Magnitude Ms 5.2** (magType: ms_vx, depth: 0 km, 'landslide'). Second collapse at 06:00:35 UTC (Ms 4.2). | `[DIRECT - USGS NEIC]` |
+| **6** | **26 Aug 03:00** | 26 Aug 08:45 | 26 Aug 11:00 | **Temporary Landslide Damming:** Debris blocks gorge, water retention peaks at $7.54\text{ M m}^3$. | `[GEOMORPHIC MODEL]` |
+| **7** | **26 Aug 03:35** | 26 Aug 09:20 | 26 Aug 11:35 | **Moraine/Dam Overtopping & Debris Surge:** Surge discharge $Q_{\text{peak}} = 3,376\text{ m}^3/\text{s}$ at mean velocity $11.6\text{ m/s}$ ($41.7\text{ km/h}$; Froude Fr ~ 1.35). | `[HYDRAULIC MODEL]` |
+| **8** | **26 Aug 04:00+**| 26 Aug 09:45+| 26 Aug 12:00+| **Downstream Catastrophe:** 1,000–1,400 dead, 4,000–5,500 missing; **33 road bridges and 68 suspension bridges** destroyed/damaged; Rasuwagadhi 111 MW plant inundated. | `[DIRECT - ICIMOD / UN OCHA / NEA]` |
 
 ---
 
@@ -167,13 +181,13 @@ We warmly invite colleagues from **China** (CAS, ITPCAS, CEA, CMA) and **Nepal**
 3. **Tinsley, B. A. (2000).** *Influence of solar wind on the global electric circuit, and inferred effects on cloud microphysics, temperature, and dynamics in the troposphere*. **Space Science Reviews**, 94(1), 231–258. [DOI: 10.1023/A:1026775408875](https://doi.org/10.1023/A:1026775408875).
 4. **Tinsley, B. A. (2008).** *The global atmospheric electric circuit and its effects on cloud microphysics*. **Reports on Progress in Physics**, 71(6), 066801. [DOI: 10.1088/0034-4885/71/6/066801](https://doi.org/10.1088/0034-4885/71/6/066801).
 5. **Harrison, R. G. & Carslaw, K. S. (2003).** *Ion-aerosol-cloud processes in the lower atmosphere*. **Reviews of Geophysics**, 41(3), 1012. [DOI: 10.1029/2002RG000114](https://doi.org/10.1029/2002RG000114).
-6. **Shugar, D. H. et al. (2021).** *A huge rock and ice avalanche caused the 2021 Chamoli disaster, Uttarakhand, India*. **Science**, 373(6552), 300–306. [DOI: 10.1126/science.abg6027](https://doi.org/10.1126/science.abg6027).
+6. **Shugar, D. H. et al. (2021).** *A huge rock and ice avalanche caused the 2021 Chamoli disaster, Uttarakhand, India*. **Science**, 373(6552), 300–306. [DOI: 10.1126/science.abh4455](https://doi.org/10.1126/science.abh4455).
 7. **Hallett, J. & Mossop, S. C. (1974).** *Production of secondary ice particles during the riming process*. **Nature**, 249(5452), 26–28. [DOI: 10.1038/249026a0](https://doi.org/10.1038/249026a0).
 8. **Mayor, A. (2000).** *The First Fossil Hunters: Paleontology in Greek and Roman Times*. Princeton University Press.
 9. **Piccardi, L., & Masse, W. B. (2007).** *Myth and Geology*. Geological Society, London, Special Publications, 273(1), 1–7. [DOI: 10.1144/GSL.SP.2007.273.01.01](https://doi.org/10.1144/GSL.SP.2007.273.01.01).
 10. **NOAA SWPC:** GOES-18 Solar X-Ray Sensor (0.1–0.8 nm) & Planetary $Kp$ index ([services.swpc.noaa.gov](https://services.swpc.noaa.gov/)).
-11. **NASA GES DISC:** GPM IMERG V07 Half-Hourly satellite precipitation collection ([cmr.earthdata.nasa.gov](https://cmr.earthdata.nasa.gov/)).
-12. **USGS Earthquake Hazards Program:** Event 4.4 mb origin time & focal depth ([earthquake.usgs.gov](https://earthquake.usgs.gov/)).
-13. **UN OCHA / ICIMOD (HDX):** Official damage assessment census of 33 bridges in Rasuwa District ([data.humdata.org](https://data.humdata.org/)).
-14. **OpenStreetMap (OSM):** Official Trishuli / Bhote Koshi thalweg vector geometry (Relations `21284197` and `4839538`).
-15. **INTERMAGNET:** Observatories Lhasa (`LZA`), Sabhawala (`SAB`), Beijing (`BJI`) ([intermagnet.org](https://intermagnet.org/)).
+11. **NASA GES DISC:** GPM IMERG V07 satellite precipitation collection [DATA UNAVAILABLE FOR 2026 IN REPO].
+12. **USGS Earthquake Hazards Program:** Events `us7000tbwb` (Ms 5.2 landslide) & `us7000tc90` (Ms 4.2 landslide), origin time & coordinates ([earthquake.usgs.gov](https://earthquake.usgs.gov/earthquakes/eventpage/us7000tbwb)).
+13. **UN OCHA / ICIMOD (HDX):** Official damage assessment census of bridges in Rasuwa District ([data.humdata.org](https://data.humdata.org/)).
+14. **OpenStreetMap (OSM):** Trishuli / Bhote Koshi thalweg vector geometry (Relations `21284197` and `4839538`).
+15. **INTERMAGNET:** Global geomagnetic observatories (Lhasa `LZA`, Sabhawala `SAB`, Beijing `BJI`) listed as candidate reference stations for future in-situ validation ([intermagnet.org](https://intermagnet.org/)).

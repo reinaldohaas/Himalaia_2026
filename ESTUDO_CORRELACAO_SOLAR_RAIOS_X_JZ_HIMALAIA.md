@@ -72,43 +72,37 @@ A tabela abaixo compila os registros orbitais oficiais (satélites NOAA GOES, SO
 | **6º South Lhonak (2023)** | 03–04/10/2023 22:42 UTC | Ciclo 25 (Atividade Intensa) | **Flare M1.4** + Ejeção de Massa Coronal (CME Canibal)<br>02/10/2023 18:30 UTC | $\mathbf{1.4 \times 10^{-5}\text{ W/m}^2}$ | **28 horas** | $\mathbf{Kp = 5.7}$ (G2)<br>$Dst = -65\text{ nT}$ | $\mathbf{4.42\text{ pA/m}^2}$ | Impacto de CME Canibal gerou tempestade moderada G2 em 03/10, antecedendo o estouro do lago em Sikkim. |
 | **7º Leh Cloudburst (2010)** | 05–06/08/2010 18:30 UTC | Ciclo 24 (Início) | **Erupção Global de 01/08/2010** (C3 flare + CME complexa)<br>01/08/2010 08:50 UTC | $3.2 \times 10^{-6}\text{ W/m}^2$ | **Impacto CME 36h antes** | $\mathbf{Kp = 6.0}$ (G2)<br>$Dst = -70\text{ nT}$ | $\mathbf{4.61\text{ pA/m}^2}$ | A famosa erupção solar global de 1º de agosto atingiu a Terra em 3–4 de agosto; Leh explodiu em 5–6 de agosto. |
 | **8º Melamchi (2021)** | 15/06/2021 11:30 UTC | Ciclo 25 (Ascensão) | **Flare C4.5** (AR 2832)<br>13/06/2021 11:20 UTC | $4.5 \times 10^{-6}\text{ W/m}^2$ | **48 horas** | $Kp = 3.3$<br>$Dst = -18\text{ nT}$ | **$3.46\text{ pA/m}^2$** | Perturbações eletrostáticas sobre o platô fóssil de Bhemathang no início das chuvas de monção. |
-| **9º Parechu (2000)** | 01/08/2000 | Ciclo 23 (Pico Histórico) | **Pós-Bastille Day (X5.7)** + Série de Flares M contínuos<br>28 a 31/07/2000 | $\mathbf{2.5 \times 10^{-5}\text{ W/m}^2}$ | **24 a 48 horas** | $\mathbf{Kp = 6.3}$ (G3)<br>$Dst = -115\text{ nT}$ | $\mathbf{4.87\text{ pA/m}^2}$ | Julho de 2000 foi um dos meses mais extremos do século XX; tempestade severa sobre o planalto tibetano. |
-| **10º Zhangzangbo (1981)** | 11/07/1981 18:00 UTC | Ciclo 21 (Máximo) | **Flare M3.2** (SOLRAD / GOES-2)<br>09/07/1981 14:10 UTC | $\mathbf{3.2 \times 10^{-5}\text{ W/m}^2}$ | **40 horas** | $\mathbf{Kp = 5.0}$ (G1)<br>$Dst = -55\text{ nT}$ | $\mathbf{4.16\text{ pA/m}^2}$ | Pico do ciclo 21 com alta taxa de ionização e ruptura da morena que destruiu a Ponte da Amizade. |
+| **9º Parechu (2000)** | 01/08/2000 | Ciclo 23 (Pico Histórico) | **Pós-Bastille Day (X5.7)** + Série de Flares M contínuos<br>28 a 31/07/2000 | $\mathbf{2.5 \times 10^{-5}\text{ W/m}^2}$ | **24 a 48 horas** | $\mathbf{Kp = 6.3}$ (G3)<br>$Dst = -115\text{ nT}$ | $\mathbf{4.87\text{ pA/m}^2$ | Julho de 2000 foi um dos meses mais extremos do século XX; tempestade severa sobre o planalto tibetano. |
+| **10º Zhangzangbo (1981)** | 11/07/1981 18:00 UTC | Ciclo 21 (Máximo) | **Flare M3.2** (SOLRAD / GOES-2)<br>09/07/1981 14:10 UTC | $\mathbf{3.2 \times 10^{-5}\text{ W/m}^2}$ | **40 horas** | $\mathbf{Kp = 5.0}$ (G1)<br>$Dst = -55\text{ nT}$ | $\mathbf{4.16\text{ pA/m}^2$ | Pico do ciclo 21 com alta taxa de ionização e ruptura da morena que destruiu a Ponte da Amizade. |
 | **11º Dig Tsho (1985)** | 04/08/1985 | Ciclo 21 (Mínimo) | **Flare C1.2** + Passagem de Fronteira Setorial (IMF)<br>02/08/1985 06:15 UTC | $1.2 \times 10^{-6}\text{ W/m}^2$ | **52 horas** | $Kp = 2.7$<br>$Dst = -12\text{ nT}$ | **$3.14\text{ pA/m}^2$** | Condições solares predominantemente calmas; gatilho mecânico por avalanche de gelo suspensa. |
 | **12º Luggye Tsho (1994)** | 07/10/1994 | Ciclo 22 (Declínio) | **Flare C2.8** + Choque de Vento Solar<br>05/10/1994 19:40 UTC | $2.8 \times 10^{-6}\text{ W/m}^2$ | **36 horas** | $Kp = 4.3$<br>$Dst = -35\text{ nT}$ | **$3.58\text{ pA/m}^2$** | Rompimento em dia de clima estável e sem chuva após flutuações de vento solar sobre o Butão. |
 | **13º Gongbatongshacuo (2016)** | 05/07/2016 | Ciclo 24 (Declínio) | **Flare C1.8** (AR 2562)<br>03/07/2016 16:50 UTC | $1.8 \times 10^{-6}\text{ W/m}^2$ | **40 horas** | $Kp = 3.3$<br>$Dst = -19\text{ nT}$ | **$3.33\text{ pA/m}^2$** | Instabilidade moderada de plasma coronal antes do transbordo do Bhotekoshi. |
-| **14º Himachal Pradesh (2023)** | 09–11/07/2023 | Ciclo 25 (Pico Máximo) | **Série de 12 Flares M + Flare X1.1 (02/07)**<br>06 a 09/07/2023 | $\mathbf{4.2 \times 10^{-5}\text{ W/m}^2}$ | **12 a 36 horas** | $\mathbf{Kp = 4.7}$<br>$Dst = -42\text{ nT}$ | $\mathbf{4.48\text{ pA/m}^2}$ | Julho de 2023 foi o mês de maior atividade solar do Ciclo 25; convecção severa repetida em Beas e Parbati. |
-| **15º Parechu (2005)** | 26/06/2005 | Ciclo 23 (Declínio Ativo) | **Flare M5.4** (AR 10775) + Flares M múltiplos<br>23/06/2005 14:25 UTC | $\mathbf{5.4 \times 10^{-5}\text{ W/m}^2}$ | **48 horas** | $\mathbf{Kp = 5.0}$ (G1)<br>$Dst = -52\text{ nT}$ | $\mathbf{4.35\text{ pA/m}^2}$ | A AR 10775 gerou uma sequência de ejeções de plasma dirigidas à Terra dias antes do rompimento. |
+| **14º Himachal Pradesh (2023)** | 09–11/07/2023 | Ciclo 25 (Pico Máximo) | **Série de 12 Flares M + Flare X1.1 (02/07)**<br>06 a 09/07/2023 | $\mathbf{4.2 \times 10^{-5}\text{ W/m}^2}$ | **12 a 36 horas** | $\mathbf{Kp = 4.7}$<br>$Dst = -42\text{ nT}$ | $\mathbf{4.48\text{ pA/m}^2$ | Julho de 2023 foi o mês de maior atividade solar do Ciclo 25; convecção severa repetida em Beas e Parbati. |
+| **15º Parechu (2005)** | 26/06/2005 | Ciclo 23 (Declínio Ativo) | **Flare M5.4** (AR 10775) + Flares M múltiplos<br>23/06/2005 14:25 UTC | $\mathbf{5.4 \times 10^{-5}\text{ W/m}^2}$ | **48 horas** | $\mathbf{Kp = 5.0}$ (G1)<br>$Dst = -52\text{ nT}$ | $\mathbf{4.35\text{ pA/m}^2$ | A AR 10775 gerou uma sequência de ejeções de plasma dirigidas à Terra dias antes do rompimento. |
 
 ---
 
-## 3. Análise Estatística e Descobertas Notáveis
+## 3. Análise Estatística, Limitações Críticas e Descobertas
 
 ### Estatística Descritiva da Amostra (N = 15 Eventos):
 1. **Ocorrência de Flares Classe M ou X:**
-   * **9 dos 15 eventos (60.0%)** foram precedidos por erupções solares de **Classe M ou X** ($F_X \ge 1.0\times 10^{-5}\text{ W/m}^2$) em uma janela temporal de 3 a 48 horas!
+   * **9 dos 15 eventos (60.0%)** foram precedidos por erupções solares de **Classe M ou X** ($F_X \ge 1.0\times 10^{-5}\text{ W/m}^2$) em uma janela temporal de 3 a 48 horas.
 2. **Ocorrência de Tempestades Geomagnéticas ($Kp \ge 4.5$ / G1–G3):**
-   * **8 dos 15 eventos (53.3%)** ocorreram sob condições de tempestade geomagnética moderada a forte ($Kp = 4.7\text{ a }6.3$).
+   * **8 dos 15 eventos (53.3%)** ocorreram sob condições de atividade geomagnética moderada a forte ($Kp = 4.7\text{ a }6.3$).
 3. **Pico de Corrente $J_z$ Estimado no Cume:**
-   * **$100\%$ dos eventos com paradóxos hídricos severos** (Kedarnath, Seti, Leh, South Lhonak, Himachal, Parechu, 2026) apresentaram $J_z$ calculado superior a **$3.90\text{ pA/m}^2$**, comparado à média global de tempo bom de $1.5\text{ a }2.0\text{ pA/m}^2$.
+   * Os valores de $J_z$ tabulados foram calculados via fórmula analítica $J_z = V_I / R_c$ (com $R_c = 0.78\times 10^{17}\,\Omega\cdot\text{m}^2$) e não derivam de medições instrumentais de campo.
 
-### Os Quatro Casos de Coincidência Temporal Mais Críticos:
+### Limitações Científicas e Físicas Incontornáveis (Auditoria Independente):
 
-1. **Seti River (5 de Maio de 2012):**
-   * Às **00:23 UTC** de 5 de maio de 2012, o satélite GOES registrou um **Flare M1.3** na AR 1476.
-   * Apenas **3 a 5 horas depois** (às 03:30–04:00 UTC / 09:15 local), a montanha desabou e a enxurrada de lama atingiu Pokhara! Uma correlação quase instantânea em dia seco de céu azul.
-
-2. **South Lhonak / Chungthang (3–4 de Outubro de 2023):**
-   * Em 2 de outubro às 18:30 UTC, ocorreu um **Flare M1.4**. No dia 3 de outubro, uma **CME Canibal** atingiu a magnetosfera terrestre, gerando tempestade $Kp = 5.7$.
-   * Menos de 24 horas após o impacto do choque de plasma solar, o lago de Sikkim rompeu sua morena às 22:42 UTC de 3 de outubro.
-
-3. **Leh Cloudburst (5–6 de Agosto de 2010):**
-   * A famosa **Erupção Solar Global de 1º de Agosto de 2010** disparou uma gigantesca CME que alcançou a Terra nos dias 3–4 de agosto ($Kp = 6.0$).
-   * A supercélula isolada descarregou sua carga sobre o deserto frio de Leh exatamente na noite de 5 para 6 de agosto.
-
-4. **Catástrofe de 2026 (26 de Agosto de 2026):**
-   * O **Flare M7.0** ocorreu em 25 de agosto às 10:02 UTC.
-   * O descolamento de $15\times 10^6\text{ m}^3$ no Langtang Lirung ocorreu em 26 de agosto às 02:52 UTC (**defasagem de 16 horas e 50 minutos**), tempo correspondente à advecção e condensação de células convectivas de crista.
+> [!CAUTION]
+> **1. Rigidez Geomagnética de Corte (Cutoff Rigidity):**
+> O arco do Himalaia situa-se em latitude geomagnética baixa a intermediária (~18° a 24°N magnético), onde a rigidez de corte vertical atinge **~13 a 14 GV**. Prótons solares de eventos SEP típicos (de dezenas a poucas centenas de MeV) são inteiramente defletidos pelo campo magnético terrestre e incapazes de atingir a troposfera ou alterar a ionização local abaixo de 15 km de altitude. Apenas raios cósmicos galácticos ultra-energéticos (>13 GeV) penetram o topo da atmosfera na região.
+>
+> **2. Viés de Seleção Amostral (Falta de Grupo de Controle):**
+> Correlacionar 15 desastres com erupções solares prévias sem avaliar um grupo de controle negativo (dias com erupções M/X sem desastres montanhosos, ou desastres ocorridos em períodos de Sol calmo) constitui viés de confirmação. Durante o máximo do Ciclo Solar 25, flares de classe M ocorrem quase diariamente.
+>
+> **3. Classificação Epistemológica:**
+> O acoplamento heliofísico-eletrodinâmico não está demonstrado empiricamente e deve ser tratado rigorosamente como uma **hipótese exploratória de pesquisa**, e não como fato estabelecido.
 
 ---
 

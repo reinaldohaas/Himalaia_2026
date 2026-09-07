@@ -100,9 +100,11 @@ $$P_{\text{lâmina}} = \frac{V_{\text{chuva}}}{A_{\text{bacia}} \times C_{\text{
 
 ---
 
-## 5. Conclusão da Verificação Numérica
+## 5. Avaliação Crítica Pós-Auditoria Científica
 
-$$\text{A CONTA FECHA COM PRECISÃO FÍSICA!}$$
-
-1. **A física do toró é a única explicação hidrodinâmica viável** para o enchimento ultrarrápido do lago de $8.5\times 10^6\text{ m}^3$ em apenas **42 minutos e 50 segundos**.
-2. A taxa de precipitação de **164.6 mm** acumulada nas encostas íngremes de alta montanha concentra **16.5 toneladas de água a cada 100 metros quadrados**, gerando uma onda de escoamento superficial instantânea com vazão de pico superior a **$3.300\text{ m}^3/\text{s}$**, que superou a capacidade da barreira de detritos, deflagrando o galgamento (*overtopping*) e o colapso catastrófico.
+> [!WARNING]
+> **Declaração de Proveniência e Auditoria:**
+> Os cálculos apresentados neste documento representam um **exercício paramétrico de balanço inverso**, baseado em estimativas visuais de DEM e hipóteses de trabalho do analista.
+> * **Ausência de Telemetria Pluviométrica:** Não há dados pluviométricos in-situ na garganta do Lhende Khola nem arquivos do sensor GPM IMERG para 26/08/2026 arquivados no repositório (`[DADO INDISPONÍVEL]`).
+> * **Pluralidade de Cenários Físicos:** A lâmina de 164.6 mm demonstra que um evento convectivo orográfico concentrado ("Toró") é matematicamente capaz de fornecer o volume estimado; contudo, ela **não é a única explicação física viável**. Cenários alternativos envolvendo armazenamento prévio em lago morâinico, desconfinamento de lençol subglacial/periglacial ou tempo de pré-enchimento mais dilatado antes do colapso sísmico também podem explicar o balanço hídrico.
+> * **Status Científico:** O modelo permanece uma hipótese exploratória não verificada por instrumentação meteorológica direta.

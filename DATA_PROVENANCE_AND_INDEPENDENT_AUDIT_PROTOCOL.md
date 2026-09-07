@@ -126,7 +126,8 @@ $$\text{Contribuição Percentual} = \frac{V_{\text{melt, max}}}{V_{\text{water}
   * $\Delta H$: Desnível vertical total percorrido pelo centro de massa ($\text{m}$);
   * $L_f = 3.34 \times 10^5\text{ J/kg}$ (calor latente de fusão do gelo a $0^\circ\text{C}$);
   * $\rho_{\text{water}} = 1.000\text{ kg/m}^3$;
-  * $\eta$: Eficiência térmica de conversão de energia potencial em fusão de gelo. **Shugar et al. (Science, 2021) demonstraram empiricamente que $\eta \le 0.010$ (1.0%)** devido à dissipação dominante em ondas sísmicas, fragmentação de rocha e turbulência aérea.
+  * $\eta$: Eficiência térmica de conversão de energia potencial em fusão de gelo.
+  * **Nota Crítica de Auditoria sobre Shugar et al. (Science, 2021):** Shugar et al. demonstraram que o desastre de Chamoli foi causado por uma avalanche maciça de rocha e gelo (~27 milhões de m³, com ~20% de gelo) originada no pico Ronti, na qual a dissipação por atrito ao longo de 3.400 m de desnível fundiu frações volumosas de gelo, transformando o fluxo em lama hiperconcentrada sem qualquer necessidade de chuva líquida. O artigo **não** estabeleceu um teto de 1% para alegar anomalias hídricas; aplicar fórmulas de déficit pluviométrico a avalanches secas de rocha-gelo de inverno é um erro físico de categoria.
 
 ---
 
@@ -175,8 +176,7 @@ python scripts/calculate_inverse_hydraulics.py
 ```bash
 python scripts/extract_solar_forcing.py
 ```
-* **Saída Verificável:** Gera `data/solar_space_weather/solar_forcing_all_events.json`.
-* **Validação do Auditor:** Confere a datação exata do flare GOES, valor de pico de $J_z$ (em $\text{pA/m}^2$) e intervalo temporal até a quebra mecânica de cada evento.
+* **Validação do Auditor:** Confere a datação do flare solar GOES, o valor de $J_z$ do modelo analítico paramétrico (baseado na curva de Carnegie e potencial ionosférico com $R_c$ fixo, sem telemetria de magnetômetros in-situ) e o intervalo temporal até o desastre.
 
 ### Passo 5: Baixar e Auditar o Acervo de Satélite com Datas, Fronteiras e Geoestacionários
 ```bash
@@ -197,24 +197,36 @@ Retorna certificado de aprovação: `STATUS: 100% REPRODUZÍVEL`.
 
 ---
 
-## 5. Análise de Incerteza e Propagação de Erros (Error Budget)
+## 5. Análise de Sensibilidade Paramétrica e Incerteza (Error Budget)
 
-Para garantir que as conclusões não sejam artefatos de premissas paramétricas, foi conduzida uma análise de sensibilidade em três variáveis-chave:
+A alegação anterior de que os desastres apresentavam déficits pluviométricos de 10× a 20× demonstrados "fora de qualquer margem de erro" foi submetida à auditoria independente e refutada como conclusão irrefutável. A existência ou o desaparecimento de déficit é estritamente condicionada aos parâmetros de entrada e às fontes observacionais utilizadas:
 
+### 5.1 Execução da Análise de Sensibilidade
+O script reprodutível [`scripts/sensitivity_analysis_hydraulics.py`](./scripts/sensitivity_analysis_hydraulics.py) avalia 560 combinações paramétricas variando o volume total de detritos $V_{\text{bulk}}$ (±30%), a área efetiva da bacia $A_{\text{basin}}$ (15 a 100 km²) e a precipitação de referência:
+
+```bash
+python scripts/sensitivity_analysis_hydraulics.py
 ```
-+---------------------------------------------------------------------------------------------------------+
-| ANÁLISE DE SENSIBILIDADE PARAMÉTRICA (EXEMPLO: KEDARNATH 2013 & CHAMOLI 2021)                          |
-+---------------------------------------------------------------------------------------------------------+
-| Parâmetro Variado          | Intervalo Testado    | Impacto na Vazão Q_peak  | Impacto no Déficit Hídrico |
-+---------------------------------------------------------------------------------------------------------+
-| Rugosidade de Manning (n)  | 0.040 a 0.075 (±35%) | 4.100 a 6.800 m³/s       | Déficit hídrico > 8× a 15× |
-| Coeficiente Runoff (C)     | 0.70 a 0.95 (±15%)   | Invariante               | Chuva req. P_req > 115 mm  |
-| Eficiência Fusão Atrito(η) | 0.005 a 0.035 (350%) | Invariante               | Fusão explica no máx. 5.3% |
-+---------------------------------------------------------------------------------------------------------+
-```
+A tabela completa de sensibilidade é gerada em [`data/processed/sensitivity_analysis_hydraulics.csv`](./data/processed/sensitivity_analysis_hydraulics.csv).
 
-* **Conclusão da Análise de Erro:**
-  Mesmo adotando a hipótese mais extrema em favor da hidrologia convencional (menor rugosidade possível, maior retenção de água e máxima eficiência de fusão por atrito já registrada em laboratório), **o lago Chorabari em Kedarnath não consegue explicar mais de 12% da cheia líquida**, e **a fusão por atrito em Chamoli não ultrapassa 5.3% da água necessária**. As anomalias de 10x–20x permanecem fisicamente comprovadas fora de qualquer margem de erro instrumental.
+### 5.2 Resultados Críticos e Cenários Onde o Déficit Desaparece
+
+#### Caso 1: Catástrofe de Kedarnath (2013)
+* **Premissa anterior:** O código utilizava $P_{\text{meas}} = 35.0\text{ mm}$ arbitrado manualmente, gerando um déficit artificial de ~3.15× a 4.73×.
+* **Dado Observacional Real:** Dobhal et al. (2013) e Allen et al. (2016) publicaram a medição direta da estação de Chorabari: **325 mm acumulados em 48h** (210 mm em 16/06 e 115 mm em 17/06).
+* **Resultado Físico:** A lâmina de escoamento necessária ($P_{\text{req}}$) para drenar a bacia de 42 km² é de **110.4 mm**. Com a chuva real de 325 mm, **o déficit hídrico desaparece completamente** (folga de 2.94× a favor da precipitação observada).
+
+#### Caso 2: Catástrofe de Chamoli (2021)
+* **Premissa anterior:** Calculava-se $P_{\text{req}} = 298.9\text{ mm}$ e comparava-se com $P_{\text{meas}} = 0\text{ mm}$ de um dia de inverno seco, alegando "infinito déficit pluviométrico".
+* **Realidade Física:** Trata-se de um erro de categoria. Shugar et al. (2021) demonstraram que Chamoli foi uma avalanche seca de rocha e gelo. Não houve chuva e a dinâmica não depende de precipitação orográfica.
+
+#### Caso 3: Catástrofe de 2026 (Lhende Khola / Trishuli)
+* Com a incorporação do volume do lago rompido ($7.54\times 10^6\text{ m}^3$) e a vazão de base monçônica do rio Trishuli (~$180\text{ m}^3/\text{s}$ durante 4h $\approx 2.59\times 10^6\text{ m}^3$), o volume líquido excedente a ser explicado por escoamento superficial cai de $14.20\times 10^6\text{ m}^3$ para **$4.07\times 10^6\text{ m}^3$**.
+* A chuva requerida varia drasticamente conforme a delimitação espacial da bacia:
+  * Em sub-bacia regional de $100\text{ km}^2$: $P_{\text{req}} = 47.9\text{ mm}$ (qualquer chuva de monção moderada supre integralmente o evento).
+  * Na bacia de Gyirong/Lhende de $55\text{ km}^2$: $P_{\text{req}} = 87.0\text{ mm}$.
+  * No núcleo estrito de montante ($28\text{ km}^2$): $P_{\text{req}} = 170.9\text{ mm}$.
+* **Conclusão:** Sem dados pluviométricos reais in-situ ou telemetria GPM validada para 26/08/2026 no repositório, **não é possível provar cientificamente a existência de um déficit anômalo**. O déficit permanece uma hipótese não testada por falta de observação direta.
 
 ---
 

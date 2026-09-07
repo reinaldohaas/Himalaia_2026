@@ -27,14 +27,12 @@ Para cada um dos 15 eventos catalogados, este registro estabelece uma separaçã
   * **Ray, P. C. et al. (2016).** *A semi-automated approach for mapping the Kedarnath tragedy.* **Geomatics, Natural Hazards and Risk**, 7(2), 488–499.
 * **Alegações dos Pesquisadores:**
   * Dobhal et al. e Allen et al. sustentam que chuvas orográficas concentradas (>325 mm em 48h) causaram saturação e galgamento da morena frontal do lago Chorabari (Gandhi Sarovar), rompendo o dique moráinico friável e liberando a torrente aluvial.
-* **Pontos Fortes e Fracos da Hipótese Convencional ("Coisas Ruins"):**
-  * *Ponto Forte:* O lago Chorabari de fato rompeu e esvaziou, e houve chuva monçônica expressiva no norte da Índia.
-  * *Ponto Fraco / Inconsistência Física:* O volume estático máximo do lago Chorabari medido pelos próprios autores foi de apenas **0,38 a 0,42 milhão de m³**. No entanto, a onda de cheia reconstruída no vale do Mandakini exigiu mais de **4,5 milhões de m³ de água líquida**, com vazão de pico de **5.000 m³/s** (superando em 300% a cheia de projeto decamilenar da Central Water Commission da Índia).
+* **Avaliação Crítica e Resolução Pós-Auditoria:**
+  * *O mito do déficit hídrico de 10x:* O volume do lago Chorabari era de fato pequeno (~0,38M m³) comparado ao fluxo total de detritos (~7,2M m³, com 4,68M m³ de água bruta). Contudo, a estação meteorológica in-situ de Chorabari registrou **325 mm de precipitação acumulada** (210 mm em 16/06 e 115 mm em 17/06).
+  * *Balanço Real:* Para a bacia de 42 km², a lâmina líquida requerida para o escoamento é de **110,4 mm**. A chuva real observada (325 mm) supera em **2,94 vezes** o volume total necessário. **Não existe déficit hídrico em Kedarnath**; a alegação prévia de déficit decorria da introdução artificial de 35 mm no código em vez do dado de campo publicado.
 * **Teste da Nossa Metodologia Unificada:**
-  * *Hidrologia Inversa:* O hidrograma exige **$V_{\text{water}} = 4,68\times 10^6\text{ m}^3$**. O lago responde por menos de 9% da água líquida (**Déficit de 11,2 vezes**).
-  * *Sensoriamento Óptico:* Imagens identificam calhas de decapagem vertical contínua descendo desde o pico de Kedarnath (6.940 m) até a calha do lago.
-  * *Geoestacionário Pré-Som:* O satélite Kalpana-1 VHRR registrou no infravermelho térmico resfriamento violento de topo de nuvem a $-68^\circ\text{C}$ ancorado na crista, compatível com convecção confinada ("toró").
-  * *Clima Espacial:* Ocorrido 19h após o flare solar M1.3 (AR 1765) com $J_z = 3,97\text{ pA/m}^2$.
+  * *Hidrologia Inversa:* Com vazão de base monçônica do Mandakini (~25 m³/s) e lago, o escoamento superficial requerido é de $3,94\times 10^6\text{ m}^3$. Multiplicador de déficit: **0,34x (SEM DÉFICIT)**.
+  * *Geoestacionário Pré-Som:* Kalpana-1 VHRR registrou resfriamento de nuvem a $-68^\circ\text{C}$ ancorado na crista, compatível com a intensa convecção orográfica documentada.
 
 ---
 
@@ -45,28 +43,22 @@ Para cada um dos 15 eventos catalogados, este registro estabelece uma separaçã
   * **Pandey, P. et al. (2021).** *Causes and implications of the Chamoli rock-ice avalanche.* **Geomorphology**, 389, 107855.
 * **Alegações dos Pesquisadores:**
   * Desprendimento de uma cunha de rocha e gelo de ~27 milhões de m³ (~80% rocha, ~20% gelo) de Ronti Peak (desnível vertical de 3.400 m).
-  * Como **não havia lago glacial** ($V_{\text{lago}} = 0\text{ m}^3$) e o dia era de **céu azul sem chuva**, os autores calcularam a conversão de energia potencial em calor friccional.
-* **Pontos Fortes e Fracos da Hipótese Convencional ("Coisas Ruins"):**
-  * *Ponto Forte:* O sismograma gravou com extrema fidelidade a queda e a propagação da onda de impacto por mais de 100 km (Cook et al.).
-  * *Ponto Fraco / O Enigma do 1% de Shugar et al.:* Com $E_p \approx 1,3\times 10^{15}\text{ J}$, o cálculo termodinâmico demonstrou que **apenas 0,8% a 1,0% da energia potencial converteu-se em calor útil para fusão**, derretendo no máximo ~0,4 a 0,5 milhão de m³ de gelo. Para explicar os milhões de m³ de lama líquida fluida que viajaram a $60\text{ m/s}$ e varreram as barragens de Rishiganga e Tapovan, os autores tiveram que recorrer a hipóteses auxiliares de bolsas subglaciais pré-existentes ou liquefação de aluviões de vale.
-* **Teste da Nossa Metodologia Unificada:**
-  * *Hidrologia Inversa:* Reconstituição de Manning na garganta de Tapovan indica $Q_{\text{peak}} \approx 5.200\text{ m}^3/\text{s}$ e volume líquido $V_{\text{water}} \approx 10,7\times 10^6\text{ m}^3$.
-  * *Termodinâmica de 1ºs Princípios:* O limite de fusão por atrito explica no máximo **4,2% da água líquida mobilizada**.
-  * *Sensoriamento Óptico (Antes/Depois):* Pares Sentinel-2 L2A e PlanetScope confirmam a fratura em rocha sã na crista de 5.600m e a calha linear contínua esmerilhando o vale.
+  * Como **não havia lago glacial** ($V_{\text{lago}} = 0\text{ m}^3$) e o dia era de **céu azul de inverno sem chuva**, o fluxo foi inteiramente propelido por dinâmica de avalanche gravitacional de rocha e gelo.
+* **Avaliação Crítica e Resolução Pós-Auditoria:**
+  * Shugar et al. (2021) demonstraram que a dissipação por atrito ao longo de 3.400 m de queda aqueceu e fundiu parcelas expressivas do gelo glacial arrastado, transformando a avalanche de rocha em lama hiperconcentrada fluida.
+  * **Retificação de Auditoria:** Shugar et al. **não** postularam uma taxa de 1% de conversão para alegar água inexplicada. Tratar Chamoli com fórmulas de déficit pluviométrico é um erro de categoria física: avalanches secas de inverno não são eventos de drenagem de chuva. Multiplicador de déficit: **Inaplicável (Movimento de massa sólida)**.
 
 ---
 
 ### Evento 3: Catástrofe de Langtang–Trishuli (25–26 de Agosto de 2026, Tibete/Nepal)
-* **Artigos de Referência:**
-  * **Haas, R. (2026).** *The 2026 Langtang–Trishuli Catastrophe: Solar Forcing, Inflow Incongruities, and the Physics of an Unclassified Convective-Geomorphic Hazard ("Toró").* **Technical Report**, UFSC/Antigravity Open Archive. [Relatório Técnico](file:///C:/Users/haas/github/Himalaia_2026/TECHNICAL_REPORT_HIMALAYAN_DISASTER_2026.md)
-* **Alegações dos Pesquisadores:**
-  * Proposta de acoplamento entre forçamento solar eletrodinâmico (flare GOES M7.0, salto de $V_I$ e $J_z \approx 4,8\text{ pA/m}^2$), convecção explosiva de crista e colapso de permafrost em duas etapas.
-* **Pontos Fortes e Fracos da Hipótese Convencional ("Coisas Ruins"):**
-  * *Hipótese Convencional:* Ruptura moráinica de lago glacial por transbordamento (GLOF simples) somada a degelo de verão.
-  * *Inconsistência:* O lago de Lhende Khola continha ~5,2M m³, mas o volume total escoado foi de 20,7M m³ com volume líquido puro de 14,2M m³. O satélite de precipitação de grade grossa GPM IMERG registrou apenas 22 mm (~0,84M m³ de chuva na bacia), configurando uma **discrepância de 10 a 20 vezes** entre a chuva de satélite e a água que desceu o rio.
-* **Teste da Nossa Metodologia Unificada:**
-  * *Hidrologia Inversa:* Seção entre Gyirong Port e Rasuwagadhi ($\Delta h = 8,5\text{ m}$, $B = 30\text{ m}$, $S_0 = 0,045$, $n = 0,060$) -> $Q_{\text{peak}} = 3.376\text{ m}^3/\text{s}$.
-  * *Precipitação Necessária:* Exige lâmina localizada de **254 mm** confinada no circo glacial em menos de 2 horas.
+* **Artigos e Documentos de Referência:**
+  * **Haas, R. (2026).** *The 2026 Langtang–Trishuli Catastrophe: Technical Report.* [Relatório Técnico](file:///C:/Users/haas/github/Himalaia_2026/TECHNICAL_REPORT_HIMALAYAN_DISASTER_2026.md)
+  * **USGS NEIC (2026):** Eventos sísmicos `us7000tbwb` (Ms 5.2 landslide a 0 km de profundidade às 02:52:10 UTC) e `us7000tc90` (Ms 4.2 landslide às 06:00:35 UTC).
+* **Alegações e Resolução Pós-Auditoria:**
+  * *Balanço Hidrológico:* O barramento temporário por detritos represou até $7,54\text{ M m}^3$ de água. Somado à vazão de base do Trishuli (~$180\text{ m}^3/\text{s}$ em 4h $\approx 2,59\text{ M m}^3$), a parcela líquida restante exigida de escoamento é de **$4,07\text{ M m}^3$**.
+  * *Chuva Requerida:* Em uma sub-bacia de $55\text{ a }65\text{ km}^2$, a lâmina necessária situa-se entre **$73\text{ e }87\text{ mm}$**, plenamente compatível com um evento orográfico concentrado monçônico.
+  * *Ausência de Dados Observacionais:* Sem pluviômetros in-situ ou arquivos de satélite GPM IMERG 2026 no repositório, o déficit de 10x anterior não constitui fato medido, sendo classificado como **[DADO INDISPONÍVEL]**.
+  * *Clima Espacial:* Erupção solar M6.9 na AR 4513 (pico às 10:02 UTC de 25/08/2026). Valores de $J_z$ derivam de modelo analítico paramétrico; a rigidez de corte geomagnética de ~13–14 GV e a ausência de grupo de controle classificam a hipótese heliofísica como exploratória.
 
 ---
 

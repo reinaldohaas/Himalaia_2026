@@ -15,23 +15,26 @@ An open-source, reproducible scientific investigation into the catastrophic casc
 ## 📖 Comprehensive Technical Reports & Independent Audit
 👉 **2026 Langtang Disaster Master Report:** [`TECHNICAL_REPORT_HIMALAYAN_DISASTER_2026.md`](TECHNICAL_REPORT_HIMALAYAN_DISASTER_2026.md)  
 👉 **15 Himalayan Catastrophes (1980–2026) Comparative Report:** [`TECHNICAL_REPORT_HIMALAYAN_CATASTROPHES_1980_2026.md`](TECHNICAL_REPORT_HIMALAYAN_CATASTROPHES_1980_2026.md)  
+👉 **Relatório de Correção Pós-Auditoria (Defeitos P0–P3):** [`RELATORIO_DE_CORRECAO.md`](RELATORIO_DE_CORRECAO.md)  
+👉 **Limitações e Dados Indisponíveis (Declaração de Integridade):** [`LIMITACOES_E_DADOS_INDISPONIVEIS.md`](LIMITACOES_E_DADOS_INDISPONIVEIS.md)  
 👉 **Independent Audit Protocol & Data Provenance:** [`DATA_PROVENANCE_AND_INDEPENDENT_AUDIT_PROTOCOL.md`](DATA_PROVENANCE_AND_INDEPENDENT_AUDIT_PROTOCOL.md)  
 👉 **Scientific Literature Register & Critical Audit:** [`LITERATURE_REGISTER_HIMALAYAN_DISASTERS.md`](LITERATURE_REGISTER_HIMALAYAN_DISASTERS.md)
 
-### Key Pillars of the Investigation:
-1. **Confronting Official Incongruities (The ~10× Water Deficit):**
-   * Pre-event lake volume ($5.2\text{ M m}^3$) accounts for $<35\%$ of the surge.
-   * Frictional ice-melt ($388\text{ TJ}$) yields $<0.45\text{ M m}^3$ ($<3\%$).
-   * Coarse GPM satellite rain ($15-30\text{ mm}$) yields only $\sim 0.84\text{ M m}^3$.
-   * Channel hydraulic reconstruction ($8.5\text{ m}$ stage rise, $Q_{\text{peak}} \approx 3,376\text{ m}^3/\text{s}$) demands **$14.20\text{ Million m}^3$** of net liquid water, revealing a **$\sim 10$-fold deficit** in standard explanations.
-2. **Solar-Atmospheric Electrodynamic Forcing ($J_z$):**
-   * Real-time telemetry from NOAA GOES-18 (Class M7.0 solar flare on Aug 25, 10:02 UTC) driving an ionospheric jump ($V_I = 356.4\text{ kV}$, $J_z \approx 4.57\text{ pA/m}^2$) inverted across a 14-station Trans-Himalayan magnetometer network (China + South Asia).
-3. **The "Toró" Physical Framework (Haas, 2026; Tinsley, 1991, 2008):**
-   * Electro-antiscavenging preserving uniform supercooled droplet spectra, followed by runaway secondary ice production (SIP / Hallett-Mossop) and an explosive "hydraulic piston" convective dump (>500–950 mm in <2 h over $<15\text{ km}^2$).
-4. **Geomythology & Shifting Environmental Baselines:**
-   * Tibetan oral lore of the *Druk* (Thunder Dragon) as an indigenous physical memory of infrasound acoustic shocks, quartz piezoelectric luminescence, and destructive high-velocity debris flows.
-5. **Cutting-Edge Science with Heterodox Hypotheses:**
-   * Grounded in first-principles physics, mass conservation, numerical hydrograph integration, and open reproducible code.
+### Key Pillars of the Investigation (Post-Audit Status):
+1. **Hydraulic and Geomorphic Balances (Audit Evaluation):**
+   * Incorporating temporary moraine damming (up to $7.54\text{ M m}^3$) and Trishuli baseflow ($2.59\text{ M m}^3$ in 4h) reduces the net required runoff from $14.2\text{ M m}^3$ to **$4.07\text{ Million m}^3$**.
+   * In a realistic $55-65\text{ km}^2$ headwater catchment, an intense orographic cloudburst of $73-87\text{ mm}$ fully satisfies the flood volume without deficit.
+   * Without in-situ rain gauges or validated GPM 2026 data in the repository, the previously claimed 10x deficit is not an established fact.
+2. **Solar-Atmospheric Electrodynamic Hypothesis ($J_z$):**
+   * Evaluates Class M6.9 solar flare (GOES-18, AR 4513, Aug 25 10:02 UTC).
+   * Vertical current density $J_z$ is modeled using an **analytical parametric Carnegie GEC model** ($J_z = V_I / R_c$). Synthetic model data is strictly segregated under `data/synthetic/`.
+   * High geomagnetic cutoff rigidity (~13–14 GV) and selection bias (lack of negative control days) are critical physical constraints; electrodynamic triggering is an exploratory hypothesis.
+3. **The "Toró" Physical Framework (Haas, 2026):**
+   * Investigates orographic secondary ice production (SIP) and high-elevation convective dumping.
+4. **Geomythology & Oral Traditions:**
+   * Tibetan oral lore of the *Druk* (Thunder Dragon) reflecting ancestral memory of mountain soundscapes, luminescence, and flash flooding.
+5. **Rigorous Scientific Integrity:**
+   * Fully reproducible open-source pipeline; parameters documented in `config/hydraulic_assumptions.yaml`; zero synthetic files labeled as telemetry.
 
 ---
 
