@@ -1,0 +1,827 @@
+[
+  {
+    "rank": 1,
+    "id": "kedarnath_2013",
+    "name": "Catástrofe de Kedarnath (Chorabari / Mandakini)",
+    "date": "2013-06-16",
+    "country": "Índia",
+    "coordinates": {
+      "lat": 30.745,
+      "lon": 79.067
+    },
+    "bounding_box_wsen": [
+      78.917,
+      30.595,
+      79.217,
+      30.895
+    ],
+    "target_linear_scar": {
+      "origin_ridge": "Crista e arestas de cume a montante de 3.900m",
+      "runout_chute": "Calha de drenagem convergindo para o vale em 30.745, 79.067",
+      "diagnostic_feature": "Faixa linear contínua de decapagem de leito rochoso (bedrock stripping), remoção total de solo e supressão de NDVI",
+      "dem_differencing_target": "Perda de volume vertical por comparação geodésica de DEM (SRTM / ALOS vs. Copernicus 30m / ArcticDEM)"
+    },
+    "satellite_pairs_pipeline": {
+      "optical_mission": "Landsat-8 OLI (15m/30m) & EO-1 ALI",
+      "stac_collection": "landsat-c2-l2",
+      "pre_event_window": [
+        "2013-05-17",
+        "2013-06-15"
+      ],
+      "post_event_window": [
+        "2013-06-17",
+        "2013-07-21"
+      ],
+      "cloud_filter": "< 25% cloud cover",
+      "bands_required": [
+        "Red (B04)",
+        "Green (B03)",
+        "Blue (B02)",
+        "NIR (B08)",
+        "SWIR-1 (B11)",
+        "SWIR-2 (B12)"
+      ],
+      "derived_indices": [
+        "NDVI (Vegetation Stripping)",
+        "NDWI (Flood Slurry)",
+        "SWIR Composite (Bedrock Exposure)"
+      ]
+    },
+    "pre_blast_geostationary_and_radar": {
+      "geostationary_satellite": "Kalpana-1 (MetSat-1) VHRR Thermal IR (8km, 30 min cadence)",
+      "pre_sound_window_utc": "2013-06-16 T-03:00 to T-00:15 UTC",
+      "key_observable": "Taxa de decréscimo de Brightness Temperature (T_bb < -60°C) indicando núcleo convectivo penetrante de crista",
+      "doppler_radar_station": "IMD Mukteshwar / Srinagar / Kufri (com mapeamento de beam blockage orográfico)"
+    }
+  },
+  {
+    "rank": 2,
+    "id": "chamoli_2021",
+    "name": "Catástrofe de Chamoli (Rishiganga / Dhauliganga)",
+    "date": "2021-02-07",
+    "country": "Índia",
+    "coordinates": {
+      "lat": 30.378,
+      "lon": 79.732
+    },
+    "bounding_box_wsen": [
+      79.582,
+      30.228,
+      79.882,
+      30.528
+    ],
+    "target_linear_scar": {
+      "origin_ridge": "Crista e arestas de cume a montante de 5.600m",
+      "runout_chute": "Calha de drenagem convergindo para o vale em 30.378, 79.732",
+      "diagnostic_feature": "Faixa linear contínua de decapagem de leito rochoso (bedrock stripping), remoção total de solo e supressão de NDVI",
+      "dem_differencing_target": "Perda de volume vertical por comparação geodésica de DEM (SRTM / ALOS vs. Copernicus 30m / ArcticDEM)"
+    },
+    "satellite_pairs_pipeline": {
+      "optical_mission": "Sentinel-2 L2A (10m Multispectral) & PlanetScope (3m)",
+      "stac_collection": "sentinel-2-l2a",
+      "pre_event_window": [
+        "2021-01-08",
+        "2021-02-06"
+      ],
+      "post_event_window": [
+        "2021-02-08",
+        "2021-03-14"
+      ],
+      "cloud_filter": "< 25% cloud cover",
+      "bands_required": [
+        "Red (B04)",
+        "Green (B03)",
+        "Blue (B02)",
+        "NIR (B08)",
+        "SWIR-1 (B11)",
+        "SWIR-2 (B12)"
+      ],
+      "derived_indices": [
+        "NDVI (Vegetation Stripping)",
+        "NDWI (Flood Slurry)",
+        "SWIR Composite (Bedrock Exposure)"
+      ]
+    },
+    "pre_blast_geostationary_and_radar": {
+      "geostationary_satellite": "INSAT-3D / INSAT-3DR TIR (10.8µm) & Sounder (4km, 15-30 min cadence)",
+      "pre_sound_window_utc": "2021-02-07 T-03:00 to T-00:15 UTC",
+      "key_observable": "Taxa de decréscimo de Brightness Temperature (T_bb < -60°C) indicando núcleo convectivo penetrante de crista",
+      "doppler_radar_station": "IMD Mukteshwar / Srinagar / Kufri (com mapeamento de beam blockage orográfico)"
+    }
+  },
+  {
+    "rank": 3,
+    "id": "himalaia_2026",
+    "name": "Catástrofe de 2026 (Lhende Khola / Rio Trishuli)",
+    "date": "2026-08-26",
+    "country": "Nepal / Tibete",
+    "coordinates": {
+      "lat": 28.274,
+      "lon": 85.483
+    },
+    "bounding_box_wsen": [
+      85.333,
+      28.124,
+      85.633,
+      28.424
+    ],
+    "target_linear_scar": {
+      "origin_ridge": "Crista e arestas de cume a montante de 5.200m",
+      "runout_chute": "Calha de drenagem convergindo para o vale em 28.274, 85.483",
+      "diagnostic_feature": "Faixa linear contínua de decapagem de leito rochoso (bedrock stripping), remoção total de solo e supressão de NDVI",
+      "dem_differencing_target": "Perda de volume vertical por comparação geodésica de DEM (SRTM / ALOS vs. Copernicus 30m / ArcticDEM)"
+    },
+    "satellite_pairs_pipeline": {
+      "optical_mission": "Sentinel-2 L2A (10m Multispectral) & PlanetScope (3m)",
+      "stac_collection": "sentinel-2-l2a",
+      "pre_event_window": [
+        "2026-07-27",
+        "2026-08-25"
+      ],
+      "post_event_window": [
+        "2026-08-27",
+        "2026-09-30"
+      ],
+      "cloud_filter": "< 25% cloud cover",
+      "bands_required": [
+        "Red (B04)",
+        "Green (B03)",
+        "Blue (B02)",
+        "NIR (B08)",
+        "SWIR-1 (B11)",
+        "SWIR-2 (B12)"
+      ],
+      "derived_indices": [
+        "NDVI (Vegetation Stripping)",
+        "NDWI (Flood Slurry)",
+        "SWIR Composite (Bedrock Exposure)"
+      ]
+    },
+    "pre_blast_geostationary_and_radar": {
+      "geostationary_satellite": "INSAT-3D / INSAT-3DR TIR (10.8µm) & Sounder (4km, 15-30 min cadence)",
+      "pre_sound_window_utc": "2026-08-26 T-03:00 to T-00:15 UTC",
+      "key_observable": "Taxa de decréscimo de Brightness Temperature (T_bb < -60°C) indicando núcleo convectivo penetrante de crista",
+      "doppler_radar_station": "IMD Mukteshwar / Srinagar / Kufri (com mapeamento de beam blockage orográfico)"
+    }
+  },
+  {
+    "rank": 4,
+    "id": "aru_2016",
+    "name": "Colapso Duplo das Geleiras de Aru",
+    "date": "2016-07-17",
+    "country": "China (Tibete)",
+    "coordinates": {
+      "lat": 34.045,
+      "lon": 82.285
+    },
+    "bounding_box_wsen": [
+      82.135,
+      33.895,
+      82.435,
+      34.195
+    ],
+    "target_linear_scar": {
+      "origin_ridge": "Crista e arestas de cume a montante de 5.800m",
+      "runout_chute": "Calha de drenagem convergindo para o vale em 34.045, 82.285",
+      "diagnostic_feature": "Faixa linear contínua de decapagem de leito rochoso (bedrock stripping), remoção total de solo e supressão de NDVI",
+      "dem_differencing_target": "Perda de volume vertical por comparação geodésica de DEM (SRTM / ALOS vs. Copernicus 30m / ArcticDEM)"
+    },
+    "satellite_pairs_pipeline": {
+      "optical_mission": "Sentinel-2 L2A (10m Multispectral) & PlanetScope (3m)",
+      "stac_collection": "sentinel-2-l2a",
+      "pre_event_window": [
+        "2016-06-17",
+        "2016-07-16"
+      ],
+      "post_event_window": [
+        "2016-07-18",
+        "2016-08-21"
+      ],
+      "cloud_filter": "< 25% cloud cover",
+      "bands_required": [
+        "Red (B04)",
+        "Green (B03)",
+        "Blue (B02)",
+        "NIR (B08)",
+        "SWIR-1 (B11)",
+        "SWIR-2 (B12)"
+      ],
+      "derived_indices": [
+        "NDVI (Vegetation Stripping)",
+        "NDWI (Flood Slurry)",
+        "SWIR Composite (Bedrock Exposure)"
+      ]
+    },
+    "pre_blast_geostationary_and_radar": {
+      "geostationary_satellite": "INSAT-3D / INSAT-3DR TIR (10.8µm) & Sounder (4km, 15-30 min cadence)",
+      "pre_sound_window_utc": "2016-07-17 T-03:00 to T-00:15 UTC",
+      "key_observable": "Taxa de decréscimo de Brightness Temperature (T_bb < -60°C) indicando núcleo convectivo penetrante de crista",
+      "doppler_radar_station": "IMD Mukteshwar / Srinagar / Kufri (com mapeamento de beam blockage orográfico)"
+    }
+  },
+  {
+    "rank": 5,
+    "id": "seti_2012",
+    "name": "Enxurrada do Rio Seti (Annapurna IV)",
+    "date": "2012-05-05",
+    "country": "Nepal",
+    "coordinates": {
+      "lat": 28.542,
+      "lon": 84.152
+    },
+    "bounding_box_wsen": [
+      84.002,
+      28.392,
+      84.302,
+      28.692
+    ],
+    "target_linear_scar": {
+      "origin_ridge": "Crista e arestas de cume a montante de 7.100m",
+      "runout_chute": "Calha de drenagem convergindo para o vale em 28.542, 84.152",
+      "diagnostic_feature": "Faixa linear contínua de decapagem de leito rochoso (bedrock stripping), remoção total de solo e supressão de NDVI",
+      "dem_differencing_target": "Perda de volume vertical por comparação geodésica de DEM (SRTM / ALOS vs. Copernicus 30m / ArcticDEM)"
+    },
+    "satellite_pairs_pipeline": {
+      "optical_mission": "Landsat-7 ETM+ & ASTER (15m VNIR)",
+      "stac_collection": "landsat-c2-l2",
+      "pre_event_window": [
+        "2012-04-05",
+        "2012-05-04"
+      ],
+      "post_event_window": [
+        "2012-05-06",
+        "2012-06-09"
+      ],
+      "cloud_filter": "< 25% cloud cover",
+      "bands_required": [
+        "Red (B04)",
+        "Green (B03)",
+        "Blue (B02)",
+        "NIR (B08)",
+        "SWIR-1 (B11)",
+        "SWIR-2 (B12)"
+      ],
+      "derived_indices": [
+        "NDVI (Vegetation Stripping)",
+        "NDWI (Flood Slurry)",
+        "SWIR Composite (Bedrock Exposure)"
+      ]
+    },
+    "pre_blast_geostationary_and_radar": {
+      "geostationary_satellite": "Kalpana-1 (MetSat-1) VHRR Thermal IR (8km, 30 min cadence)",
+      "pre_sound_window_utc": "2012-05-05 T-03:00 to T-00:15 UTC",
+      "key_observable": "Taxa de decréscimo de Brightness Temperature (T_bb < -60°C) indicando núcleo convectivo penetrante de crista",
+      "doppler_radar_station": "IMD Mukteshwar / Srinagar / Kufri (com mapeamento de beam blockage orográfico)"
+    }
+  },
+  {
+    "rank": 6,
+    "id": "south_lhonak_2023",
+    "name": "Rompimento do South Lhonak / Teesta III",
+    "date": "2023-10-04",
+    "country": "Índia",
+    "coordinates": {
+      "lat": 27.905,
+      "lon": 88.205
+    },
+    "bounding_box_wsen": [
+      88.055,
+      27.755,
+      88.355,
+      28.055
+    ],
+    "target_linear_scar": {
+      "origin_ridge": "Crista e arestas de cume a montante de 5.200m",
+      "runout_chute": "Calha de drenagem convergindo para o vale em 27.905, 88.205",
+      "diagnostic_feature": "Faixa linear contínua de decapagem de leito rochoso (bedrock stripping), remoção total de solo e supressão de NDVI",
+      "dem_differencing_target": "Perda de volume vertical por comparação geodésica de DEM (SRTM / ALOS vs. Copernicus 30m / ArcticDEM)"
+    },
+    "satellite_pairs_pipeline": {
+      "optical_mission": "Sentinel-2 L2A (10m Multispectral) & PlanetScope (3m)",
+      "stac_collection": "sentinel-2-l2a",
+      "pre_event_window": [
+        "2023-09-04",
+        "2023-10-03"
+      ],
+      "post_event_window": [
+        "2023-10-05",
+        "2023-11-08"
+      ],
+      "cloud_filter": "< 25% cloud cover",
+      "bands_required": [
+        "Red (B04)",
+        "Green (B03)",
+        "Blue (B02)",
+        "NIR (B08)",
+        "SWIR-1 (B11)",
+        "SWIR-2 (B12)"
+      ],
+      "derived_indices": [
+        "NDVI (Vegetation Stripping)",
+        "NDWI (Flood Slurry)",
+        "SWIR Composite (Bedrock Exposure)"
+      ]
+    },
+    "pre_blast_geostationary_and_radar": {
+      "geostationary_satellite": "INSAT-3D / INSAT-3DR TIR (10.8µm) & Sounder (4km, 15-30 min cadence)",
+      "pre_sound_window_utc": "2023-10-04 T-03:00 to T-00:15 UTC",
+      "key_observable": "Taxa de decréscimo de Brightness Temperature (T_bb < -60°C) indicando núcleo convectivo penetrante de crista",
+      "doppler_radar_station": "IMD Mukteshwar / Srinagar / Kufri (com mapeamento de beam blockage orográfico)"
+    }
+  },
+  {
+    "rank": 7,
+    "id": "leh_2010",
+    "name": "Nuvem Pistão de Leh Ladakh",
+    "date": "2010-08-06",
+    "country": "Índia",
+    "coordinates": {
+      "lat": 34.152,
+      "lon": 77.577
+    },
+    "bounding_box_wsen": [
+      77.427,
+      34.002,
+      77.727,
+      34.302
+    ],
+    "target_linear_scar": {
+      "origin_ridge": "Crista e arestas de cume a montante de 3.500m",
+      "runout_chute": "Calha de drenagem convergindo para o vale em 34.152, 77.577",
+      "diagnostic_feature": "Faixa linear contínua de decapagem de leito rochoso (bedrock stripping), remoção total de solo e supressão de NDVI",
+      "dem_differencing_target": "Perda de volume vertical por comparação geodésica de DEM (SRTM / ALOS vs. Copernicus 30m / ArcticDEM)"
+    },
+    "satellite_pairs_pipeline": {
+      "optical_mission": "Landsat-7 ETM+ & ASTER (15m VNIR)",
+      "stac_collection": "landsat-c2-l2",
+      "pre_event_window": [
+        "2010-07-07",
+        "2010-08-05"
+      ],
+      "post_event_window": [
+        "2010-08-07",
+        "2010-09-10"
+      ],
+      "cloud_filter": "< 25% cloud cover",
+      "bands_required": [
+        "Red (B04)",
+        "Green (B03)",
+        "Blue (B02)",
+        "NIR (B08)",
+        "SWIR-1 (B11)",
+        "SWIR-2 (B12)"
+      ],
+      "derived_indices": [
+        "NDVI (Vegetation Stripping)",
+        "NDWI (Flood Slurry)",
+        "SWIR Composite (Bedrock Exposure)"
+      ]
+    },
+    "pre_blast_geostationary_and_radar": {
+      "geostationary_satellite": "Kalpana-1 (MetSat-1) VHRR Thermal IR (8km, 30 min cadence)",
+      "pre_sound_window_utc": "2010-08-06 T-03:00 to T-00:15 UTC",
+      "key_observable": "Taxa de decréscimo de Brightness Temperature (T_bb < -60°C) indicando núcleo convectivo penetrante de crista",
+      "doppler_radar_station": "IMD Mukteshwar / Srinagar / Kufri (com mapeamento de beam blockage orográfico)"
+    }
+  },
+  {
+    "rank": 8,
+    "id": "melamchi_2021",
+    "name": "Enxurrada do Rio Melamchi",
+    "date": "2021-06-15",
+    "country": "Nepal",
+    "coordinates": {
+      "lat": 28.095,
+      "lon": 85.612
+    },
+    "bounding_box_wsen": [
+      85.462,
+      27.945,
+      85.762,
+      28.245
+    ],
+    "target_linear_scar": {
+      "origin_ridge": "Crista e arestas de cume a montante de 3.650m",
+      "runout_chute": "Calha de drenagem convergindo para o vale em 28.095, 85.612",
+      "diagnostic_feature": "Faixa linear contínua de decapagem de leito rochoso (bedrock stripping), remoção total de solo e supressão de NDVI",
+      "dem_differencing_target": "Perda de volume vertical por comparação geodésica de DEM (SRTM / ALOS vs. Copernicus 30m / ArcticDEM)"
+    },
+    "satellite_pairs_pipeline": {
+      "optical_mission": "Sentinel-2 L2A (10m Multispectral) & PlanetScope (3m)",
+      "stac_collection": "sentinel-2-l2a",
+      "pre_event_window": [
+        "2021-05-16",
+        "2021-06-14"
+      ],
+      "post_event_window": [
+        "2021-06-16",
+        "2021-07-20"
+      ],
+      "cloud_filter": "< 25% cloud cover",
+      "bands_required": [
+        "Red (B04)",
+        "Green (B03)",
+        "Blue (B02)",
+        "NIR (B08)",
+        "SWIR-1 (B11)",
+        "SWIR-2 (B12)"
+      ],
+      "derived_indices": [
+        "NDVI (Vegetation Stripping)",
+        "NDWI (Flood Slurry)",
+        "SWIR Composite (Bedrock Exposure)"
+      ]
+    },
+    "pre_blast_geostationary_and_radar": {
+      "geostationary_satellite": "INSAT-3D / INSAT-3DR TIR (10.8µm) & Sounder (4km, 15-30 min cadence)",
+      "pre_sound_window_utc": "2021-06-15 T-03:00 to T-00:15 UTC",
+      "key_observable": "Taxa de decréscimo de Brightness Temperature (T_bb < -60°C) indicando núcleo convectivo penetrante de crista",
+      "doppler_radar_station": "IMD Mukteshwar / Srinagar / Kufri (com mapeamento de beam blockage orográfico)"
+    }
+  },
+  {
+    "rank": 9,
+    "id": "parechu_2000",
+    "name": "Cheia Represada do Rio Parechu",
+    "date": "2000-08-01",
+    "country": "China (Tibete) / Índia",
+    "coordinates": {
+      "lat": 31.98,
+      "lon": 78.54
+    },
+    "bounding_box_wsen": [
+      78.39,
+      31.83,
+      78.69,
+      32.13
+    ],
+    "target_linear_scar": {
+      "origin_ridge": "Crista e arestas de cume a montante de 3.200m",
+      "runout_chute": "Calha de drenagem convergindo para o vale em 31.98, 78.54",
+      "diagnostic_feature": "Faixa linear contínua de decapagem de leito rochoso (bedrock stripping), remoção total de solo e supressão de NDVI",
+      "dem_differencing_target": "Perda de volume vertical por comparação geodésica de DEM (SRTM / ALOS vs. Copernicus 30m / ArcticDEM)"
+    },
+    "satellite_pairs_pipeline": {
+      "optical_mission": "Landsat-7 ETM+ & ASTER (15m VNIR)",
+      "stac_collection": "landsat-c2-l2",
+      "pre_event_window": [
+        "2000-07-02",
+        "2000-07-31"
+      ],
+      "post_event_window": [
+        "2000-08-02",
+        "2000-09-05"
+      ],
+      "cloud_filter": "< 25% cloud cover",
+      "bands_required": [
+        "Red (B04)",
+        "Green (B03)",
+        "Blue (B02)",
+        "NIR (B08)",
+        "SWIR-1 (B11)",
+        "SWIR-2 (B12)"
+      ],
+      "derived_indices": [
+        "NDVI (Vegetation Stripping)",
+        "NDWI (Flood Slurry)",
+        "SWIR Composite (Bedrock Exposure)"
+      ]
+    },
+    "pre_blast_geostationary_and_radar": {
+      "geostationary_satellite": "Meteosat-5/7 IODC (Indian Ocean Data Coverage, 5km)",
+      "pre_sound_window_utc": "2000-08-01 T-03:00 to T-00:15 UTC",
+      "key_observable": "Taxa de decréscimo de Brightness Temperature (T_bb < -60°C) indicando núcleo convectivo penetrante de crista",
+      "doppler_radar_station": "IMD Mukteshwar / Srinagar / Kufri (com mapeamento de beam blockage orográfico)"
+    }
+  },
+  {
+    "rank": 10,
+    "id": "zhangzangbo_1981",
+    "name": "Rompimento do Lago Zhangzangbo",
+    "date": "1981-07-26",
+    "country": "China (Tibete) / Nepal",
+    "coordinates": {
+      "lat": 28.092,
+      "lon": 85.98
+    },
+    "bounding_box_wsen": [
+      85.83,
+      27.942,
+      86.13,
+      28.242
+    ],
+    "target_linear_scar": {
+      "origin_ridge": "Crista e arestas de cume a montante de 4.200m",
+      "runout_chute": "Calha de drenagem convergindo para o vale em 28.092, 85.98",
+      "diagnostic_feature": "Faixa linear contínua de decapagem de leito rochoso (bedrock stripping), remoção total de solo e supressão de NDVI",
+      "dem_differencing_target": "Perda de volume vertical por comparação geodésica de DEM (SRTM / ALOS vs. Copernicus 30m / ArcticDEM)"
+    },
+    "satellite_pairs_pipeline": {
+      "optical_mission": "Landsat-4/5 TM & Corona Declassified Reconnaissance",
+      "stac_collection": "landsat-c2-l1",
+      "pre_event_window": [
+        "1981-06-26",
+        "1981-07-25"
+      ],
+      "post_event_window": [
+        "1981-07-27",
+        "1981-08-30"
+      ],
+      "cloud_filter": "< 25% cloud cover",
+      "bands_required": [
+        "Red (B04)",
+        "Green (B03)",
+        "Blue (B02)",
+        "NIR (B08)",
+        "SWIR-1 (B11)",
+        "SWIR-2 (B12)"
+      ],
+      "derived_indices": [
+        "NDVI (Vegetation Stripping)",
+        "NDWI (Flood Slurry)",
+        "SWIR Composite (Bedrock Exposure)"
+      ]
+    },
+    "pre_blast_geostationary_and_radar": {
+      "geostationary_satellite": "Meteosat-5/7 IODC (Indian Ocean Data Coverage, 5km)",
+      "pre_sound_window_utc": "1981-07-26 T-03:00 to T-00:15 UTC",
+      "key_observable": "Taxa de decréscimo de Brightness Temperature (T_bb < -60°C) indicando núcleo convectivo penetrante de crista",
+      "doppler_radar_station": "IMD Mukteshwar / Srinagar / Kufri (com mapeamento de beam blockage orográfico)"
+    }
+  },
+  {
+    "rank": 11,
+    "id": "dig_tsho_1985",
+    "name": "Rompimento do Lago Dig Tsho",
+    "date": "1985-08-04",
+    "country": "Nepal",
+    "coordinates": {
+      "lat": 27.87,
+      "lon": 86.6
+    },
+    "bounding_box_wsen": [
+      86.45,
+      27.72,
+      86.75,
+      28.02
+    ],
+    "target_linear_scar": {
+      "origin_ridge": "Crista e arestas de cume a montante de 4.365m",
+      "runout_chute": "Calha de drenagem convergindo para o vale em 27.87, 86.6",
+      "diagnostic_feature": "Faixa linear contínua de decapagem de leito rochoso (bedrock stripping), remoção total de solo e supressão de NDVI",
+      "dem_differencing_target": "Perda de volume vertical por comparação geodésica de DEM (SRTM / ALOS vs. Copernicus 30m / ArcticDEM)"
+    },
+    "satellite_pairs_pipeline": {
+      "optical_mission": "Landsat-4/5 TM & Corona Declassified Reconnaissance",
+      "stac_collection": "landsat-c2-l1",
+      "pre_event_window": [
+        "1985-07-05",
+        "1985-08-03"
+      ],
+      "post_event_window": [
+        "1985-08-05",
+        "1985-09-08"
+      ],
+      "cloud_filter": "< 25% cloud cover",
+      "bands_required": [
+        "Red (B04)",
+        "Green (B03)",
+        "Blue (B02)",
+        "NIR (B08)",
+        "SWIR-1 (B11)",
+        "SWIR-2 (B12)"
+      ],
+      "derived_indices": [
+        "NDVI (Vegetation Stripping)",
+        "NDWI (Flood Slurry)",
+        "SWIR Composite (Bedrock Exposure)"
+      ]
+    },
+    "pre_blast_geostationary_and_radar": {
+      "geostationary_satellite": "Meteosat-5/7 IODC (Indian Ocean Data Coverage, 5km)",
+      "pre_sound_window_utc": "1985-08-04 T-03:00 to T-00:15 UTC",
+      "key_observable": "Taxa de decréscimo de Brightness Temperature (T_bb < -60°C) indicando núcleo convectivo penetrante de crista",
+      "doppler_radar_station": "IMD Mukteshwar / Srinagar / Kufri (com mapeamento de beam blockage orográfico)"
+    }
+  },
+  {
+    "rank": 12,
+    "id": "luggye_tsho_1994",
+    "name": "Rompimento do Luggye Tsho",
+    "date": "1994-10-07",
+    "country": "Butão",
+    "coordinates": {
+      "lat": 28.08,
+      "lon": 90.3
+    },
+    "bounding_box_wsen": [
+      90.15,
+      27.93,
+      90.45,
+      28.23
+    ],
+    "target_linear_scar": {
+      "origin_ridge": "Crista e arestas de cume a montante de 4.500m",
+      "runout_chute": "Calha de drenagem convergindo para o vale em 28.08, 90.3",
+      "diagnostic_feature": "Faixa linear contínua de decapagem de leito rochoso (bedrock stripping), remoção total de solo e supressão de NDVI",
+      "dem_differencing_target": "Perda de volume vertical por comparação geodésica de DEM (SRTM / ALOS vs. Copernicus 30m / ArcticDEM)"
+    },
+    "satellite_pairs_pipeline": {
+      "optical_mission": "Landsat-4/5 TM & Corona Declassified Reconnaissance",
+      "stac_collection": "landsat-c2-l1",
+      "pre_event_window": [
+        "1994-09-07",
+        "1994-10-06"
+      ],
+      "post_event_window": [
+        "1994-10-08",
+        "1994-11-11"
+      ],
+      "cloud_filter": "< 25% cloud cover",
+      "bands_required": [
+        "Red (B04)",
+        "Green (B03)",
+        "Blue (B02)",
+        "NIR (B08)",
+        "SWIR-1 (B11)",
+        "SWIR-2 (B12)"
+      ],
+      "derived_indices": [
+        "NDVI (Vegetation Stripping)",
+        "NDWI (Flood Slurry)",
+        "SWIR Composite (Bedrock Exposure)"
+      ]
+    },
+    "pre_blast_geostationary_and_radar": {
+      "geostationary_satellite": "Meteosat-5/7 IODC (Indian Ocean Data Coverage, 5km)",
+      "pre_sound_window_utc": "1994-10-07 T-03:00 to T-00:15 UTC",
+      "key_observable": "Taxa de decréscimo de Brightness Temperature (T_bb < -60°C) indicando núcleo convectivo penetrante de crista",
+      "doppler_radar_station": "IMD Mukteshwar / Srinagar / Kufri (com mapeamento de beam blockage orográfico)"
+    }
+  },
+  {
+    "rank": 13,
+    "id": "gongbatongshacuo_2016",
+    "name": "Cheia do Bhotekoshi de 2016",
+    "date": "2020-01-01",
+    "country": "China (Tibete) / Nepal",
+    "coordinates": {
+      "lat": 28.092,
+      "lon": 85.98
+    },
+    "bounding_box_wsen": [
+      85.83,
+      27.942,
+      86.13,
+      28.242
+    ],
+    "target_linear_scar": {
+      "origin_ridge": "Crista e arestas de cume a montante de 4.100m",
+      "runout_chute": "Calha de drenagem convergindo para o vale em 28.092, 85.98",
+      "diagnostic_feature": "Faixa linear contínua de decapagem de leito rochoso (bedrock stripping), remoção total de solo e supressão de NDVI",
+      "dem_differencing_target": "Perda de volume vertical por comparação geodésica de DEM (SRTM / ALOS vs. Copernicus 30m / ArcticDEM)"
+    },
+    "satellite_pairs_pipeline": {
+      "optical_mission": "Sentinel-2 L2A (10m Multispectral) & PlanetScope (3m)",
+      "stac_collection": "sentinel-2-l2a",
+      "pre_event_window": [
+        "2019-12-02",
+        "2019-12-31"
+      ],
+      "post_event_window": [
+        "2020-01-02",
+        "2020-02-05"
+      ],
+      "cloud_filter": "< 25% cloud cover",
+      "bands_required": [
+        "Red (B04)",
+        "Green (B03)",
+        "Blue (B02)",
+        "NIR (B08)",
+        "SWIR-1 (B11)",
+        "SWIR-2 (B12)"
+      ],
+      "derived_indices": [
+        "NDVI (Vegetation Stripping)",
+        "NDWI (Flood Slurry)",
+        "SWIR Composite (Bedrock Exposure)"
+      ]
+    },
+    "pre_blast_geostationary_and_radar": {
+      "geostationary_satellite": "INSAT-3D / INSAT-3DR TIR (10.8µm) & Sounder (4km, 15-30 min cadence)",
+      "pre_sound_window_utc": "2020-01-01 T-03:00 to T-00:15 UTC",
+      "key_observable": "Taxa de decréscimo de Brightness Temperature (T_bb < -60°C) indicando núcleo convectivo penetrante de crista",
+      "doppler_radar_station": "IMD Mukteshwar / Srinagar / Kufri (com mapeamento de beam blockage orográfico)"
+    }
+  },
+  {
+    "rank": 14,
+    "id": "himachal_2023",
+    "name": "Catástrofe de Himachal Pradesh",
+    "date": "2023-07-09",
+    "country": "Índia",
+    "coordinates": {
+      "lat": 31.985,
+      "lon": 77.15
+    },
+    "bounding_box_wsen": [
+      77.0,
+      31.835,
+      77.3,
+      32.135
+    ],
+    "target_linear_scar": {
+      "origin_ridge": "Crista e arestas de cume a montante de 2.500m",
+      "runout_chute": "Calha de drenagem convergindo para o vale em 31.985, 77.15",
+      "diagnostic_feature": "Faixa linear contínua de decapagem de leito rochoso (bedrock stripping), remoção total de solo e supressão de NDVI",
+      "dem_differencing_target": "Perda de volume vertical por comparação geodésica de DEM (SRTM / ALOS vs. Copernicus 30m / ArcticDEM)"
+    },
+    "satellite_pairs_pipeline": {
+      "optical_mission": "Sentinel-2 L2A (10m Multispectral) & PlanetScope (3m)",
+      "stac_collection": "sentinel-2-l2a",
+      "pre_event_window": [
+        "2023-06-09",
+        "2023-07-08"
+      ],
+      "post_event_window": [
+        "2023-07-10",
+        "2023-08-13"
+      ],
+      "cloud_filter": "< 25% cloud cover",
+      "bands_required": [
+        "Red (B04)",
+        "Green (B03)",
+        "Blue (B02)",
+        "NIR (B08)",
+        "SWIR-1 (B11)",
+        "SWIR-2 (B12)"
+      ],
+      "derived_indices": [
+        "NDVI (Vegetation Stripping)",
+        "NDWI (Flood Slurry)",
+        "SWIR Composite (Bedrock Exposure)"
+      ]
+    },
+    "pre_blast_geostationary_and_radar": {
+      "geostationary_satellite": "INSAT-3D / INSAT-3DR TIR (10.8µm) & Sounder (4km, 15-30 min cadence)",
+      "pre_sound_window_utc": "2023-07-09 T-03:00 to T-00:15 UTC",
+      "key_observable": "Taxa de decréscimo de Brightness Temperature (T_bb < -60°C) indicando núcleo convectivo penetrante de crista",
+      "doppler_radar_station": "IMD Mukteshwar / Srinagar / Kufri (com mapeamento de beam blockage orográfico)"
+    }
+  },
+  {
+    "rank": 15,
+    "id": "parechu_2005",
+    "name": "Enxurrada do Rio Parechu de 2005",
+    "date": "2005-06-26",
+    "country": "China (Tibete) / Índia",
+    "coordinates": {
+      "lat": 31.98,
+      "lon": 78.54
+    },
+    "bounding_box_wsen": [
+      78.39,
+      31.83,
+      78.69,
+      32.13
+    ],
+    "target_linear_scar": {
+      "origin_ridge": "Crista e arestas de cume a montante de 3.200m",
+      "runout_chute": "Calha de drenagem convergindo para o vale em 31.98, 78.54",
+      "diagnostic_feature": "Faixa linear contínua de decapagem de leito rochoso (bedrock stripping), remoção total de solo e supressão de NDVI",
+      "dem_differencing_target": "Perda de volume vertical por comparação geodésica de DEM (SRTM / ALOS vs. Copernicus 30m / ArcticDEM)"
+    },
+    "satellite_pairs_pipeline": {
+      "optical_mission": "Landsat-7 ETM+ & ASTER (15m VNIR)",
+      "stac_collection": "landsat-c2-l2",
+      "pre_event_window": [
+        "2005-05-27",
+        "2005-06-25"
+      ],
+      "post_event_window": [
+        "2005-06-27",
+        "2005-07-31"
+      ],
+      "cloud_filter": "< 25% cloud cover",
+      "bands_required": [
+        "Red (B04)",
+        "Green (B03)",
+        "Blue (B02)",
+        "NIR (B08)",
+        "SWIR-1 (B11)",
+        "SWIR-2 (B12)"
+      ],
+      "derived_indices": [
+        "NDVI (Vegetation Stripping)",
+        "NDWI (Flood Slurry)",
+        "SWIR Composite (Bedrock Exposure)"
+      ]
+    },
+    "pre_blast_geostationary_and_radar": {
+      "geostationary_satellite": "Kalpana-1 (MetSat-1) VHRR Thermal IR (8km, 30 min cadence)",
+      "pre_sound_window_utc": "2005-06-26 T-03:00 to T-00:15 UTC",
+      "key_observable": "Taxa de decréscimo de Brightness Temperature (T_bb < -60°C) indicando núcleo convectivo penetrante de crista",
+      "doppler_radar_station": "IMD Mukteshwar / Srinagar / Kufri (com mapeamento de beam blockage orográfico)"
+    }
+  }
+]
