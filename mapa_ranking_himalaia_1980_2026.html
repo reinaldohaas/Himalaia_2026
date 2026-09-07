@@ -805,6 +805,55 @@
             setPanelCollapsed(!isPanelCollapsed);
         }
 
+        // Elevações Máximas dos Cumes das Montanhas Circundantes (m) para Envelope Anti-Colisão
+        const mountainPeakElevations = {
+            "kedarnath_2013": 6940,     // Mt. Kedarnath Peak (6.940m) / Kedarnath Dome (6.831m)
+            "chamoli_2021": 7816,       // Nanda Devi (7.816m) / Ronti Peak (6.063m)
+            "himalaia_2026": 7234,      // Mt. Langtang Lirung (7.234m)
+            "aru_2016": 6200,           // Cumes da Cordilheira de Aru (6.200m)
+            "seti_2012": 7525,          // Annapurna IV (7.525m) / Maciço Annapurna
+            "south_lhonak_2023": 6710,  // Cume Lhonak (6.710m) / Maciço Kangchenjunga
+            "leh_2010": 5600,           // Cristas da Cordilheira de Ladakh (5.600m)
+            "melamchi_2021": 5800,      // Picos do Circo de Helambu (5.800m)
+            "parechu_2000": 5200,       // Bordas do Cânion de Parechu / Spiti (5.200m)
+            "zhangzangbo_1981": 8027,   // Maciço Shishapangma (8.027m)
+            "dig_tsho_1985": 6530,      // Pico Langmoche / Kongde Ri (6.530m)
+            "luggye_tsho_1994": 7204,   // Kangphu Kang / Table Mountain (7.204m)
+            "bhotekoshi_2016": 6100,    // Crista Gongbatongsha (6.100m)
+            "himachal_2023": 4800,      // Cristas do Pir Panjal (4.800m)
+            "parechu_2005": 5200        // Bordas do Cânion de Parechu (5.200m)
+        };
+
+        // Função de Cálculo de Altitude e Ângulo Seguros (Anti-Colisão com a Montanha)
+        function getSafeCameraParams(ev) {
+            const peak = mountainPeakElevations[ev.id] || 6000;
+            // Envelope de Voo Livre de Colisão:
+            // Cumes gigantes (>7.000m) exigem afastamento zenital seguro e pitch <= 46 graus
+            // para nunca cruzar o mesh tridimensional da montanha nem fatiar paredões de rocha.
+            if (peak >= 7000) {
+                return {
+                    closeZoom: 11.6,
+                    regionalZoom: 9.2,
+                    maxPitch: 46,
+                    peakElevation: peak
+                };
+            } else if (peak >= 6000) {
+                return {
+                    closeZoom: 12.0,
+                    regionalZoom: 9.5,
+                    maxPitch: 48,
+                    peakElevation: peak
+                };
+            } else {
+                return {
+                    closeZoom: 12.4,
+                    regionalZoom: 9.8,
+                    maxPitch: 50,
+                    peakElevation: peak
+                };
+            }
+        }
+
         // Inicialização do MapLibre GL
         document.addEventListener('DOMContentLoaded', () => {
             // Preenche o Select de Eventos
@@ -853,14 +902,14 @@
                     ],
                     terrain: {
                         source: 'terrainSource',
-                        exaggeration: 1.85
+                        exaggeration: 1.15
                     }
                 },
                 center: [85.483, 28.274],
-                zoom: 12.0,
-                pitch: 62,
+                zoom: 11.6,
+                pitch: 45,
                 bearing: 30,
-                maxPitch: 82
+                maxPitch: 60
             });
 
             map.addControl(new maplibregl.NavigationControl(), 'top-right');
@@ -1201,11 +1250,12 @@
 
         function flyToCurrentEvent() {
             const ev = eventsData[currentIndex];
+            const safe = getSafeCameraParams(ev);
             map.flyTo({
                 center: [ev.lon, ev.lat],
-                zoom: ev.camera.zoom,
-                pitch: ev.camera.pitch,
-                bearing: ev.camera.bearing,
+                zoom: safe.closeZoom,
+                pitch: Math.min(ev.camera.pitch || safe.maxPitch, safe.maxPitch),
+                bearing: ev.camera.bearing !== undefined ? ev.camera.bearing : 25,
                 duration: 2500,
                 essential: true
             });
@@ -1213,11 +1263,12 @@
 
         function flyToEpicenter() {
             const ev = eventsData[currentIndex];
+            const safe = getSafeCameraParams(ev);
             if (ev.seismic_center) {
                 map.flyTo({
                     center: [ev.seismic_center[0], ev.seismic_center[1]],
-                    zoom: 14.5,
-                    pitch: 72,
+                    zoom: safe.closeZoom + 0.3,
+                    pitch: safe.maxPitch,
                     bearing: (ev.camera.bearing + 20) % 360,
                     duration: 2200,
                     essential: true
@@ -1454,25 +1505,27 @@
             if (!isTourRunning) return;
             currentIndex = idx;
             const ev = eventsData[idx];
+            const safe = getSafeCameraParams(ev);
 
             updateEventCardContent(idx);
-            updateTourUI(true, '1. Mapa Geral (Bacia 20 km & Raios)', ev.rank, ev.name);
+            updateTourUI(true, `1. Visão Regional (Cume: ${safe.peakElevation}m)`, ev.rank, ev.name);
 
-            const closeZoom = ev.camera.zoom || 13.5;
-            const regionalZoom = Math.max(9.5, closeZoom - 3.8);
+            const closeZoom = safe.closeZoom;
+            const regionalZoom = safe.regionalZoom;
+            const maxSafePitch = safe.maxPitch;
             const startBearing = ev.camera.bearing !== undefined ? ev.camera.bearing : 25;
 
-            // 1. Voo inicial dinâmico para o Mapa Geral Regional
+            // 1. Voo inicial dinâmico para o Mapa Geral Regional (altitude segura de cruzeiro)
             map.flyTo({
                 center: [ev.lon, ev.lat],
                 zoom: regionalZoom,
-                pitch: 38,
+                pitch: 35,
                 bearing: (startBearing - 20 + 360) % 360,
                 duration: 2500,
                 essential: true
             });
 
-            // 2. Dispara Narração e Animação Cinemática
+            // 2. Dispara Narração e Animação Cinemática Livre de Colisão
             setTimeout(() => {
                 if (!isTourRunning) return;
 
@@ -1506,18 +1559,20 @@
                     let curZoom, curPitch, curBearing, curCenter;
 
                     if (progress < 0.28) {
+                        // Fase 1: Visão Geral e Contexto Regional da Bacia (altitude ampla)
                         const p1 = progress / 0.28;
                         const smoothP1 = Math.sin((p1 * Math.PI) / 2);
-                        curZoom = regionalZoom + (0.6 * smoothP1);
-                        curPitch = 38 + (10 * smoothP1);
+                        curZoom = regionalZoom + (0.4 * smoothP1);
+                        curPitch = 35 + (5 * smoothP1);
                         curBearing = (startBearing - 20 + (35 * smoothP1)) % 360;
                         curCenter = [ev.lon, ev.lat];
-                        updateTourUI(true, '1. Bacia 20 km & Descargas', ev.rank, ev.name);
+                        updateTourUI(true, `1. Bacia 20 km & Descargas (${safe.peakElevation}m)`, ev.rank, ev.name);
                     } else if (progress < 0.65) {
+                        // Fase 2: Transição Suave até o Ângulo Máximo Seguro (nunca penetra o relevo)
                         const p2 = (progress - 0.28) / (0.65 - 0.28);
                         const cubicP2 = p2 < 0.5 ? 4 * p2 * p2 * p2 : 1 - Math.pow(-2 * p2 + 2, 3) / 2;
-                        curZoom = (regionalZoom + 0.6) + ((closeZoom - (regionalZoom + 0.6)) * cubicP2);
-                        curPitch = 48 + ((72 - 48) * cubicP2);
+                        curZoom = (regionalZoom + 0.4) + ((closeZoom - (regionalZoom + 0.4)) * cubicP2);
+                        curPitch = 40 + ((maxSafePitch - 40) * cubicP2);
                         curBearing = (startBearing + 15 + (45 * cubicP2)) % 360;
                         if (ev.seismic_center) {
                             const tLon = ev.lon + (ev.seismic_center[0] - ev.lon) * (cubicP2 * 0.7);
@@ -1526,22 +1581,23 @@
                         } else {
                             curCenter = [ev.lon, ev.lat];
                         }
-                        updateTourUI(true, '2. Mergulho no Vale & Calhas', ev.rank, ev.name);
+                        updateTourUI(true, `2. Sobrevoo de Crista & Calhas (Cume: ${safe.peakElevation}m)`, ev.rank, ev.name);
                     } else {
+                        // Fase 3: Giro Obíquo Seguro sem Descer nas Paredes da Montanha
                         const p3 = (progress - 0.65) / (1.0 - 0.65);
-                        curZoom = closeZoom + (0.45 * Math.sin(p3 * Math.PI));
-                        curPitch = 72 - (8 * Math.sin(p3 * Math.PI));
+                        curZoom = closeZoom + (0.2 * Math.sin(p3 * Math.PI));
+                        curPitch = maxSafePitch - (4 * Math.sin(p3 * Math.PI));
                         curBearing = (startBearing + 60 + (50 * p3)) % 360;
                         if (ev.seismic_center) {
-                            const cLon = ev.seismic_center[0] + (0.008 * Math.cos(p3 * Math.PI * 1.5));
-                            const cLat = ev.seismic_center[1] + (0.006 * Math.sin(p3 * Math.PI * 1.5));
+                            const cLon = ev.seismic_center[0] + (0.005 * Math.cos(p3 * Math.PI * 1.5));
+                            const cLat = ev.seismic_center[1] + (0.003 * Math.sin(p3 * Math.PI * 1.5));
                             curCenter = [cLon, cLat];
                         } else {
-                            const cLon = ev.lon + (0.006 * Math.cos(p3 * Math.PI));
-                            const cLat = ev.lat + (0.005 * Math.sin(p3 * Math.PI));
+                            const cLon = ev.lon + (0.004 * Math.cos(p3 * Math.PI));
+                            const cLat = ev.lat + (0.003 * Math.sin(p3 * Math.PI));
                             curCenter = [cLon, cLat];
                         }
-                        updateTourUI(true, '3. Rasante no Epicentro Superficial', ev.rank, ev.name);
+                        updateTourUI(true, `3. Órbita Anti-Colisão sobre Epicentro (${safe.peakElevation}m)`, ev.rank, ev.name);
                     }
 
                     map.jumpTo({
