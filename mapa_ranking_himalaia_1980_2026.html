@@ -1140,6 +1140,25 @@
             }
         }
 
+        function splitIntoSentences(t) {
+            if (!t) return [];
+            // Protege números decimais (ex: 4.4, 1.0, 3.376, 5.000) e decimais com vírgula
+            let s = t.replace(/(\d+)\.(\d+)/g, "$1_PONTO_$2");
+            s = s.replace(/(\d+),(\d+)/g, "$1_VIRGULA_$2");
+            // Protege abreviações científicas e convenções
+            s = s.replace(/et al\./gi, "et al_PONTO_");
+            s = s.replace(/ex\./gi, "ex_PONTO_");
+            s = s.replace(/Dr\./gi, "Dr_PONTO_");
+            s = s.replace(/km\./gi, "km_PONTO_");
+            s = s.replace(/vol\./gi, "vol_PONTO_");
+            s = s.replace(/no\./gi, "no_PONTO_");
+            s = s.replace(/h\./gi, "h_PONTO_");
+            
+            // Divide exclusivamente por [.!?] seguido de espaço
+            const parts = s.split(/(?<=[.!?])\s+/);
+            return parts.map(p => p.replace(/_PONTO_/g, ".").replace(/_VIRGULA_/g, ",").trim()).filter(p => p.length > 0);
+        }
+
         function startAudioNarration(ev, onEndCallback) {
             audioCompleted = false;
             const ccBox = document.getElementById('narrationCcBox');
@@ -1147,8 +1166,9 @@
 
             const fullText = ev.audio_narration || `${ev.name}. Evento analisado do ponto de vista de suas contradições físicas.`;
             
-            // Divide o texto em frases individuais para exibir APENAS a frase atual sendo falada
-            const sentences = fullText.match(/[^.!?]+[.!?]+/g) || [fullText];
+            // Divide o texto em frases completas e contínuas (protegendo decimais)
+            const sentences = splitIntoSentences(fullText);
+            if (sentences.length === 0) sentences.push(fullText);
             let sentenceIndex = 0;
 
             if (!isAudioEnabled || !('speechSynthesis' in window)) {
@@ -1169,13 +1189,21 @@
 
             function speakNextSentence() {
                 if (!isTourRunning && !isAudioEnabled) {
-                    if (ccBox) { ccBox.classList.remove('d-flex'); ccBox.classList.add('d-none'); }
+                    if (ccBox) { 
+                        ccBox.classList.remove('d-flex'); 
+                        ccBox.classList.add('d-none'); 
+                        if (ccText) ccText.innerText = '';
+                    }
                     return;
                 }
 
                 if (sentenceIndex >= sentences.length) {
                     audioCompleted = true;
-                    if (ccBox) { ccBox.classList.remove('d-flex'); ccBox.classList.add('d-none'); }
+                    if (ccBox) { 
+                        ccBox.classList.remove('d-flex'); 
+                        ccBox.classList.add('d-none'); 
+                        if (ccText) ccText.innerText = '';
+                    }
                     if (onEndCallback) onEndCallback();
                     return;
                 }
@@ -1188,7 +1216,7 @@
                     return;
                 }
 
-                // Atualiza a tela com APENAS A FRASE ATUAL SENDO FALADA
+                // Atualiza o subtítulo instantaneamente exibindo EXCLUSIVAMENTE a frase falada no momento
                 if (ccBox && ccText) {
                     ccBox.classList.remove('d-none');
                     ccBox.classList.add('d-flex');
@@ -1197,21 +1225,31 @@
 
                 currentUtterance = new SpeechSynthesisUtterance(currentSentence);
                 currentUtterance.lang = 'pt-BR';
-                currentUtterance.rate = 0.95;
+                currentUtterance.rate = 1.0;
                 currentUtterance.pitch = 1.0;
 
                 const voices = window.speechSynthesis.getVoices();
                 const ptVoice = voices.find(v => v.lang === 'pt-BR' || v.lang.startsWith('pt'));
                 if (ptVoice) currentUtterance.voice = ptVoice;
 
+                currentUtterance.onstart = () => {
+                    if (ccBox && ccText) {
+                        ccBox.classList.remove('d-none');
+                        ccBox.classList.add('d-flex');
+                        ccText.innerText = currentSentence;
+                    }
+                };
+
                 currentUtterance.onend = () => {
                     speakNextSentence();
                 };
 
-                currentUtterance.onerror = () => {
+                currentUtterance.onerror = (e) => {
+                    console.warn("Speech synthesis erro ou cancelado:", e);
                     speakNextSentence();
                 };
 
+                window.speechSynthesis.resume();
                 window.speechSynthesis.speak(currentUtterance);
             }
 
