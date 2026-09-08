@@ -124,9 +124,9 @@ Este documento fornece as **fontes primárias, artigos científicos revisados po
 * **Base Empírica Utilizada no Projeto:**
   * Imagens orbitais multiespectrais **Copernicus Sentinel-2** e **PlanetScope** de 20 e 24 de agosto de 2026 (comprovando inexistência prévia de lago glacial volumétrico $>10\text{M m}^3$ no Lhende Khola);
   * Radar orbital de precipitação **NASA/JAXA GPM IMERG V07** (registrando apenas $15\text{–}30\text{ mm}$ de chuva no vale);
-  * Sinal sísmico de **$4.4\text{ mb}$** às **02:52:10 UTC de 26/08/2026** catalogado pela rede de sismógrafos do Nepal (DMG/USGS);
-  * Erupção solar de classe **M7.0** em 25/08 às 10:02 UTC (15:47 NPT) registrada pelo satélite **NOAA GOES-16/18 X-Ray Sensor**;
-  * Relatos da imprensa nepalesa e operários da UHE Rasuwagadhi sobre o estrondo de terra sendo rasgada audível de **8 a 12 minutos antes** da onda de lama de 15 metros atingir a usina.
+  * Sinal sísmico de **$M_s\text{ 5,2}$** (`landslide`, evento USGS NEIC `us7000tbwb`) às **02:52:10 UTC de 26/08/2026**;
+  * Erupção solar de classe **M6.9 (AR 4513)** em 25/08 às 10:02 UTC (15:47 NPT) registrada pelo satélite **NOAA GOES-18 X-Ray Sensor**;
+  * Relatos da imprensa nepalesa (*The Kathmandu Post*) e de operários da UHE Rasuwagadhi sobre o estrondo que precedeu a cheia e o saldo catastrófico de 1.000–1.400 mortos, 4.000–5.500 desaparecidos e 101 pontes destruídas ao longo de 45 km do talvegue.
 
 ---
 

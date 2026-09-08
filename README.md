@@ -7,6 +7,12 @@
 
 An open-source, reproducible scientific investigation into the catastrophic cascading disaster of **August 25–26, 2026**, in the transboundary Langtang Lirung / Gyirong Port / Trishuli River basin (Tibet, China – Nepal border).
 
+> [!IMPORTANT]
+> **Humanitarian Toll and Physical Impact:**
+> The August 26, 2026 catastrophe caused catastrophic human and infrastructure losses across Rasuwa and Nuwakot districts:
+> * **Casualties:** Between **1,000 and 1,400 confirmed deaths** and **4,000 to 5,500 people missing** (including riverside villagers in Timure, Rasuwagadhi, Tatopani, and Betrawati, hydropower construction workers, border personnel, and pilgrims/tourists).
+> * **Infrastructure:** Total destruction of **101 bridges** (33 roadway bridges and 68 pedestrian suspension bridges), severe damage to **13 hydropower stations** (including the total flooding of the 111 MW Rasuwagadhi HPP), and the complete destruction of the international customs terminal and Miteri Friendship Bridge along 45 km of the Pasang Lhamu Highway corridor.
+
 **Principal Investigator:** Prof. Reinaldo Haas ([reinaldo.haas@ufsc.br](mailto:reinaldo.haas@ufsc.br))  
 **Affiliation:** Departamento de Física, Universidade Federal de Santa Catarina (UFSC), Florianópolis, SC, Brazil  
 

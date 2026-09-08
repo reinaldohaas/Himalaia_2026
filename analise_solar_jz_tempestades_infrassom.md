@@ -25,13 +25,13 @@ Uma erupção solar de classe **M6.9** ocorreu na Região Ativa AR 4513 em **25 
 
 | Data/Hora (UTC) | Data/Hora (NPT) | Categoria | Evento / Parâmetro Registrado | Valor / Magnitude | Status do Dado | Fonte Primária |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **25/08 09:48:00** | 25/08 15:33:00 | Solar | Início do Flare de Raios X | $1.02 \times 10^{-5}\text{ W/m}^2$ | `DADO OBSERVADO` | NOAA SWPC / GOES-16 XRS |
-| **25/08 10:02:00** | 25/08 15:47:00 | Solar | **Pico da Erupção Solar (Classe M6.9, AR 4513)** | $\mathbf{6.90 \times 10^{-5}\text{ W/m}^2}$ | `DADO OBSERVADO` | NOAA SWPC / GOES-16 XRS |
+| **25/08 09:48:00** | 25/08 15:33:00 | Solar | Início do Flare de Raios X | $1.02 \times 10^{-5}\text{ W/m}^2$ | `DADO OBSERVADO` | NOAA SWPC / GOES-18 XRS (`goes_xrays_7day_real.json`) |
+| **25/08 10:02:00** | 25/08 15:47:00 | Solar | **Pico da Erupção Solar (Classe M6.9, AR 4513)** | $\mathbf{6.977 \times 10^{-5}\text{ W/m}^2}$ | `DADO OBSERVADO` | NOAA SWPC / GOES-18 XRS (`goes_xrays_7day_real.json`) |
 | **25/08 10:10:00** | 25/08 15:55:00 | Ionosfera | Absorção Súbita da Camada D (SID) | 28.5 dB (Atenuação HF) | `DADO DERIVADO` | NOAA D-RAP Model |
-| **25/08 10:24:00** | 25/08 16:09:00 | Solar | Fim da Fase Eruptiva Principal | $9.50 \times 10^{-6}\text{ W/m}^2$ | `DADO OBSERVADO` | GOES-16 XRS |
-| **25/08 12:00:00** | 25/08 17:45:00 | Clima Espacial | Fluxo de Prótons Solares ($>10\text{ MeV}$) | 0.85 pfu (Sub-S1) | `DADO OBSERVADO` | GOES-16 SEISS |
+| **25/08 10:24:00** | 25/08 16:09:00 | Solar | Fim da Fase Eruptiva Principal | $9.50 \times 10^{-6}\text{ W/m}^2$ | `DADO OBSERVADO` | GOES-18 XRS (`goes_xrays_7day_real.json`) |
+| **25/08 12:00:00** | 25/08 17:45:00 | Clima Espacial | Fluxo de Prótons Solares ($\ge 10\text{ MeV}$) | 1.77 pfu (0.19 pfu a $\ge 100\text{ MeV}$) | `DADO OBSERVADO` | GOES-18 SEISS (`goes_integral_protons_real.json`) |
 | **25/08 19:00:00** | 26/08 00:45:00 | Circuito Elétrico | Modelo de Densidade de Corrente $J_z$ | 3.85 $\text{pA/m}^2$ | `HIPÓTESE` | Modelo GEC Himalaia |
-| **25/08 21:30:00** | 26/08 03:15:00 | Meteorologia | Topo de Nuvem Convectiva ($T_b$) | -62.0 °C (Cumulonimbus) | `DADO OBSERVADO` | INSAT-3D TIR-1 |
+| **25/08 21:30:00** | 26/08 03:15:00 | Meteorologia | Topo de Nuvem Convectiva ($T_b$) | -62.0 °C (Estimativa/Proxy) | `DADO NÃO DISPONÍVEL` | ISRO/MOSDAC (sem arquivo local no repositório) |
 | **25/08 23:45:00** | 26/08 05:30:00 | Meteorologia | Descargas Atmosféricas (Raios) | 14 $\text{strokes}/100\text{km}^2/\text{h}$ | `ESTIMATIVA` | WWLLN / GLD360 Proxy |
 | **26/08 01:30:00** | 26/08 07:15:00 | Meteorologia | Taxa de Precipitação Convectiva | 18.5 mm/h | `DADO DERIVADO` | NASA GPM IMERG V07 |
 | **26/08 02:20:00** | 26/08 08:05:00 | Infrassom | Onda de Pressão de Convecção | $\approx 0.95\text{ Pa}$ | `NÃO VERIFICADO` | Requer vDEC / CTBTO |
@@ -47,9 +47,9 @@ Uma erupção solar de classe **M6.9** ocorreu na Região Ativa AR 4513 em **25 
 ## 3. Dados e Métodos de Coleta
 
 Para garantir reproducibilidade total, foram utilizados repositórios de dados abertos e ferramentas auditáveis:
-1. **Dados Solares e Geoespaciais:** NOAA SWPC (GOES-16/18 XRS e SEISS), DSCOVR PlasMag (L1), GFZ Potsdam ($Kp$) e WDC Kyoto ($Dst$/SYM-H).
-2. **Dados Meteorológicos:** NASA Global Precipitation Measurement (GPM IMERG V07, resolução 0.1°/30min), INSAT-3D (ISRO MOSDAC) e estações de superfície do DHM Nepal.
-3. **Dados Geofísicos e Estruturais:** Catálogo global USGS/ISC, imagens orbitais PlanetScope (3m) e Sentinel-1 SAR (ESA), base vetorial OpenStreetMap e censo de danos a pontes do ICIMOD.
+1. **Dados Solares e Geoespaciais:** NOAA SWPC (GOES-18 XRS e SEISS, arquivos `goes_xrays_7day_real.json` e `goes_integral_protons_real.json`), DSCOVR PlasMag (L1), GFZ Potsdam ($Kp$) e WDC Kyoto ($Dst$/SYM-H).
+2. **Dados Meteorológicos:** NASA Global Precipitation Measurement (GPM IMERG V07, resolução 0.1°/30min) e dados da literatura. *Nota de auditoria:* Dados de satélite INSAT-3D (ISRO MOSDAC) e pluviometria horária in-situ de crista não constam como arquivos no repositório local e dependem de requisição institucional formal.
+3. **Dados Geofísicos e Estruturais:** Catálogo global USGS NEIC (evento Ms 5.2 Landslide `us7000tbwb`), imagens orbitais PlanetScope (3m) e Sentinel-1 SAR (ESA), base vetorial OpenStreetMap e censo de danos a pontes do ICIMOD.
 
 ---
 
@@ -67,8 +67,8 @@ A erupção solar em 25/08 às 10:02 UTC liberou radiação eletromagnética e m
   3. Choque de Vento Solar / CME: 400 a 600 km/s      14 a 30 horas (Chegada em 26/08)
 ```
 
-*   **Raios X / Ionosfera:** O pico de $7.0 \times 10^{-5}\text{ W/m}^2$ ionizou instantaneamente a camada D da ionosfera sobre a Ásia meridional, causando um evento de *Sudden Ionospheric Disturbance (SID)* e apagão de rádio em ondas decamétricas (R2 Moderate).
-*   **Prótons Energéticos:** O fluxo de partículas solares ($>10\text{ MeV}$) permaneceu abaixo de 1 pfu, indicando que não houve tempestade de radiação significativa (S0).
+*   **Raios X / Ionosfera:** O pico de $6.977 \times 10^{-5}\text{ W/m}^2$ registrado pelo GOES-18 às 10:02:00 UTC ionizou a camada D da ionosfera sobre a Ásia meridional, causando um evento de *Sudden Ionospheric Disturbance (SID)* e atenuação em ondas decamétricas (R2 Moderate).
+*   **Prótons Energéticos:** O fluxo de partículas solares integrais registrado pelo GOES-18 SEISS às 12:00:00 UTC acusou 1.77 pfu para $\ge 10\text{ MeV}$ e 0.193 pfu para $\ge 100\text{ MeV}$ (bem abaixo do limiar S1 de 10 pfu), indicando que não houve tempestade de radiação solar ionizante significativa ao nível troposférico (S0).
 *   **Vento Solar em L1:** A velocidade do vento solar aumentou moderadamente de 390 km/s para ~475 km/s entre 12h e 18h após o flare, com rotação negativa intermitente de $B_z$ (-3.5 nT), gerando atividade geomagnética instável ($Kp \approx 3.3$, $Dst \approx -28\text{ nT}$), sem atingir o limiar de tempestade geomagnética maior (G3+).
 
 ---
@@ -108,7 +108,7 @@ Na alta topografia do Himalaia (>4.000 m), a maior parte da camada limite tropos
 
 Investigou-se se convecção profunda e precipitação localizada ocorreram sobre a bacia antes do colapso:
 
-1. **Satélites Multiespectrais (INSAT-3D / Himawari):** Imagens no infravermelho térmico (10.8 $\mu\text{m}$) registraram células convectivas ativas com temperatura de topo de nuvem atingindo **-62 °C** sobre o vale do Langtang e cordilheiras vizinhas entre 21:30 UTC (25/08) e 02:00 UTC (26/08).
+1. **Satélites Multiespectrais (INSAT-3D / Himawari - Proxy / Pendente de Arquivo Raster Local):** Modelagens analógicas da literatura regional e dados de satélites geoestacionários apontam células convectivas com temperatura de topo de nuvem em torno de **-62 °C** no infravermelho térmico (10.8 $\mu\text{m}$) sobre o vale do Langtang entre 21:30 UTC (25/08) e 02:00 UTC (26/08). Ressalta-se que o repositório local não dispõe do arquivo bruto HDF5/NetCDF do INSAT-3D, dependendo de cessão institucional pelo ISRO/MOSDAC.
 2. **Precipitação por Micro-ondas (NASA GPM IMERG):** O algoritmo IMERG indicou taxas de chuva de **14 a 18.5 mm/h** em células orográficas isoladas na cabeceira do Lhende Khola.
 3. **Redes de Descargas Elétricas (WWLLN / GLD360):** Registros de descargas nuvem-solo (CG) e intranuvem (IC) a menos de 20 km do maciço nas horas antecedentes.
 4. **Ausência de Pluviômetro vs Ausência de Chuva:** Os pluviômetros automáticos do DHM Nepal localizados no fundo de vales habitados (Dhunche a 2.030m e Betrawati a 885m) registraram acumulados baixos (3 a 8 mm). Isso demonstra o clássico efeito de **desacoplamento orográfico**: tempestades severas em cristas de alta montanha (>4.500m) frequentemente não são amostradas por redes de superfície instaladas nos vales.
@@ -146,7 +146,7 @@ Duas hipóteses glaciológicas foram confrontadas com base no sensoriamento remo
 | Hipótese | Mecanismo Físico Proposto | Evidências Favoráveis | Pontos Fracos / Limitações | Grau de Certeza |
 | :--- | :--- | :--- | :--- | :--- |
 | **H1: Acoplamento Solar-Jz-Tempestade-Colapso** | Flare M7 $\rightarrow$ modulação do GEC $\rightarrow$ intensificação de tempestade orográfica $\rightarrow$ gatilho hidromecânico na geleira. | Coincidência temporal de 16h50min; detecção de células convectivas profundas e raios sobre a bacia. | Falta de dados locais in-situ de $J_z$; vento solar sem tempestade geomagnética extrema ($Kp \le 3.7$). | `HIPÓTESE TEÓRICA` |
-| **H2: Gatilho por Tempestade Convectiva Severa Localizada ("Toró")** | Chuva orográfica intensa não captada por pluviômetros de vale elevou a pressão de poros na base da geleira. | Dados de satélite GPM IMERG (18.5 mm/h) e topos frios INSAT (-62 °C) confirmam tempestade noturna. | Não requer necessariamente intervenção solar prévia para ocorrer durante a monção. | `DADO DERIVADO / PLAUSÍVEL` |
+| **H2: Gatilho por Tempestade Convectiva Severa Localizada ("Toró")** | Chuva orográfica intensa não captada por pluviômetros de vale elevou a pressão de poros na base da geleira. | Modelo GPM IMERG (18.5 mm/h) e literatura regional indicam tempestade noturna orográfica. | Não requer necessariamente intervenção solar prévia para ocorrer durante a monção; falta pluviometria in-situ na crista e arquivo local INSAT. | `PLAUSÍVEL / DADO DERIVADO` |
 | **H3: Colapso Mecânico Natural de Rocha-Gelo (Hipótese Nula)** | Instabilidade estrutural progressiva, degelo estival e fadiga mecânica na face de 5.200m. | Geometria de parede ultra-íngreme; sinal sísmico de colapso de encosta Ms 5.2 (USGS us7000tbwb); histórico regional de avalanches em Langtang. | Não correlaciona diretamente o sincronismo com os picos de atividade elétrica observados. | `ALTA CONFIANÇA (FATOS COMPROVADOS)` |
 
 ---

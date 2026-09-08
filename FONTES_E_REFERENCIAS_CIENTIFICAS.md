@@ -21,8 +21,8 @@
 ## 2. Referências Científicas com Revisão por Pares (Peer-Reviewed Literature)
 
 ### A. Dinâmica de Avalanches Glaciais e Rupturas de Lagos (GLOFs) no Himalaia:
-1. **Shugar, D. H. et al. (2021)**. *A huge rock and ice avalanche caused the 2021 Chamoli disaster, Uttarakhand, India*. **Science**, 373(6552), 300-306.  
-   * **DOI:** [10.1126/science.abg6027](https://doi.org/10.1126/science.abg6027)  
+1. **Shugar, D. H. et al. (2021)**. *A massive rock and ice avalanche caused the 2021 disaster at Chamoli, Indian Himalaya*. **Science**, 373(6552), 300-306.  
+   * **DOI:** [10.1126/science.abh4455](https://doi.org/10.1126/science.abh4455)  
    * *Contribuição:* Demonstração física da conversão de energia potencial em calor por atrito, dinâmica de avalanches de rocha/gelo no Himalaia e assinatura acústica/infrassônica de colapsos maciços.
 2. **Huggel, C. et al. (2002)**. *Assessment of glacial hazards in high mountain regions: an approach using remote sensing and GIS*. **Natural Hazards and Earth System Sciences**, 2(3/4), 147-159.  
    * **DOI:** [10.5194/nhess-2-147-2002](https://doi.org/10.5194/nhess-2-147-2002)  
