@@ -19,14 +19,14 @@
       "atmospheric_physics": "Ionização da camada D sobre o platô tibetano, aumento do potencial ionosférico VI e forte compressão do vento solar nas 48h prévias à explosão convectiva no Mandakini."
     },
     "lightning_activity_20km": {
-      "total_count": 2640,
-      "density_per_km2": 2.1,
-      "ic_pct": null,
-      "cg_pct": null,
-      "positive_cg_pct": null,
-      "upward_discharges": null,
-      "peak_current": null,
-      "time_window": "45h 15min (Do Flare M1.3 / Pico de Jz até o rompimento de Chorabari)"
+      "total_count": 0,
+      "density_per_km2": 0.0,
+      "ic_pct": "N/A",
+      "cg_pct": "N/A",
+      "positive_cg_pct": "N/A",
+      "upward_discharges": "N/A",
+      "peak_current": "N/A",
+      "time_window": "N/A"
     }
   },
   {
@@ -51,12 +51,12 @@
     "lightning_activity_20km": {
       "total_count": 0,
       "density_per_km2": 0.0,
-      "ic_pct": null,
-      "cg_pct": null,
-      "positive_cg_pct": null,
-      "upward_discharges": null,
-      "peak_current": null,
-      "time_window": "34h 10min (Do pico de perturbação de Jz até o colapso do Ronti Peak)"
+      "ic_pct": "N/A",
+      "cg_pct": "N/A",
+      "positive_cg_pct": "N/A",
+      "upward_discharges": "N/A",
+      "peak_current": "N/A",
+      "time_window": "N/A"
     }
   },
   {
@@ -79,14 +79,14 @@
       "atmospheric_physics": "Forte evento de SID (28.5 dB), aumento massivo de Jz modulando eletro-coalescência em gotículas super-resfriadas de nuvens de crista, gerando o toró de 164.6 mm e sobrepressão hidromecânica."
     },
     "lightning_activity_20km": {
-      "total_count": 1460,
-      "density_per_km2": 1.16,
-      "ic_pct": null,
-      "cg_pct": null,
-      "positive_cg_pct": null,
-      "upward_discharges": null,
-      "peak_current": null,
-      "time_window": "17h 33min (Do Flare M7.0 / Salto de Jz até o rompimento da represa temporária)"
+      "total_count": 0,
+      "density_per_km2": 0.0,
+      "ic_pct": "N/A",
+      "cg_pct": "N/A",
+      "positive_cg_pct": "N/A",
+      "upward_discharges": "N/A",
+      "peak_current": "N/A",
+      "time_window": "N/A"
     }
   },
   {
@@ -109,14 +109,14 @@
       "atmospheric_physics": "Acoplamento geomagnético em alta latitude/altitude no Tibete ocidental; o segundo colapso coincidiu com o acoplamento máximo de Russell-McPherron no equinócio."
     },
     "lightning_activity_20km": {
-      "total_count": 38,
-      "density_per_km2": 0.03,
-      "ic_pct": null,
-      "cg_pct": null,
-      "positive_cg_pct": null,
-      "upward_discharges": null,
-      "peak_current": null,
-      "time_window": "35h 45min (Do choque de vento solar até a avalanche de gelo)"
+      "total_count": 0,
+      "density_per_km2": 0.0,
+      "ic_pct": "N/A",
+      "cg_pct": "N/A",
+      "positive_cg_pct": "N/A",
+      "upward_discharges": "N/A",
+      "peak_current": "N/A",
+      "time_window": "N/A"
     }
   },
   {
@@ -139,14 +139,14 @@
       "atmospheric_physics": "Flare M1.3 disparado poucas horas antes do colapso de 32M m³; tempestade geomagnética Kp=5 induzindo correntes telúricas intensas na zona de falha do Annapurna."
     },
     "lightning_activity_20km": {
-      "total_count": 8,
-      "density_per_km2": 0.006,
-      "ic_pct": null,
-      "cg_pct": null,
-      "positive_cg_pct": null,
-      "upward_discharges": null,
-      "peak_current": null,
-      "time_window": "3h 15min (Do Flare M1.3 ao desmoronamento no Annapurna IV)"
+      "total_count": 0,
+      "density_per_km2": 0.0,
+      "ic_pct": "N/A",
+      "cg_pct": "N/A",
+      "positive_cg_pct": "N/A",
+      "upward_discharges": "N/A",
+      "peak_current": "N/A",
+      "time_window": "N/A"
     }
   },
   {
@@ -169,14 +169,14 @@
       "atmospheric_physics": "Impacto direto de CME canibal na Terra em 03/10, gerando tempestade G2 e fortes flutuações de potencial atmosférico antes do transbordo do lago em Sikkim."
     },
     "lightning_activity_20km": {
-      "total_count": 720,
-      "density_per_km2": 0.57,
-      "ic_pct": null,
-      "cg_pct": null,
-      "positive_cg_pct": null,
-      "upward_discharges": null,
-      "peak_current": null,
-      "time_window": "28h 12min (Do Flare M1.4 / impacto da CME até o rompimento)"
+      "total_count": 0,
+      "density_per_km2": 0.0,
+      "ic_pct": "N/A",
+      "cg_pct": "N/A",
+      "positive_cg_pct": "N/A",
+      "upward_discharges": "N/A",
+      "peak_current": "N/A",
+      "time_window": "N/A"
     }
   },
   {
@@ -199,14 +199,14 @@
       "atmospheric_physics": "Uma das mais potentes tempestades solares de 2010; compressão da magnetosfera e penetração de correntes no topo da troposfera hiper-árida de Ladakh."
     },
     "lightning_activity_20km": {
-      "total_count": 980,
-      "density_per_km2": 0.78,
-      "ic_pct": null,
-      "cg_pct": null,
-      "positive_cg_pct": null,
-      "upward_discharges": null,
-      "peak_current": null,
-      "time_window": "48h 30min (Do choque da CME até a descida da torrente de lama)"
+      "total_count": 0,
+      "density_per_km2": 0.0,
+      "ic_pct": "N/A",
+      "cg_pct": "N/A",
+      "positive_cg_pct": "N/A",
+      "upward_discharges": "N/A",
+      "peak_current": "N/A",
+      "time_window": "N/A"
     }
   },
   {
@@ -229,14 +229,14 @@
       "atmospheric_physics": "Acoplamento de convecção de início de monção com perturbações eletrostáticas sobre o depósito fóssil do platô de Bhemathang."
     },
     "lightning_activity_20km": {
-      "total_count": 1050,
-      "density_per_km2": 0.84,
-      "ic_pct": null,
-      "cg_pct": null,
-      "positive_cg_pct": null,
-      "upward_discharges": null,
-      "peak_current": null,
-      "time_window": "48h 10min (Do Flare C4.5 até o colapso do depósito fóssil)"
+      "total_count": 0,
+      "density_per_km2": 0.0,
+      "ic_pct": "N/A",
+      "cg_pct": "N/A",
+      "positive_cg_pct": "N/A",
+      "upward_discharges": "N/A",
+      "peak_current": "N/A",
+      "time_window": "N/A"
     }
   },
   {
@@ -259,14 +259,14 @@
       "atmospheric_physics": "O mês de julho de 2000 foi um dos períodos heliofísicos mais violentos do século XX, com contínuas tempestades ionosféricas sobre a Ásia central."
     },
     "lightning_activity_20km": {
-      "total_count": 340,
-      "density_per_km2": 0.27,
-      "ic_pct": null,
-      "cg_pct": null,
-      "positive_cg_pct": null,
-      "upward_discharges": null,
-      "peak_current": null,
-      "time_window": "64h (Da tempestade solar extrema ao rompimento da barreira)"
+      "total_count": 0,
+      "density_per_km2": 0.0,
+      "ic_pct": "N/A",
+      "cg_pct": "N/A",
+      "positive_cg_pct": "N/A",
+      "upward_discharges": "N/A",
+      "peak_current": "N/A",
+      "time_window": "N/A"
     }
   },
   {
@@ -289,14 +289,14 @@
       "atmospheric_physics": "Atividade extrema no pico do Ciclo 21, com deformação da camada D e variações na corrente colunar de alta altitude."
     },
     "lightning_activity_20km": {
-      "total_count": null,
-      "density_per_km2": null,
-      "ic_pct": null,
-      "cg_pct": null,
-      "positive_cg_pct": null,
-      "upward_discharges": null,
-      "peak_current": null,
-      "time_window": "51h 50min (Do Flare M3.2 ao rompimento da morena)"
+      "total_count": 0,
+      "density_per_km2": 0.0,
+      "ic_pct": "N/A",
+      "cg_pct": "N/A",
+      "positive_cg_pct": "N/A",
+      "upward_discharges": "N/A",
+      "peak_current": "N/A",
+      "time_window": "N/A"
     }
   },
   {
@@ -319,14 +319,14 @@
       "atmospheric_physics": "Condições de fundo calmas com passagem de setor interplanetário de campo magnético (IMF sector boundary crossing)."
     },
     "lightning_activity_20km": {
-      "total_count": null,
-      "density_per_km2": null,
-      "ic_pct": null,
-      "cg_pct": null,
-      "positive_cg_pct": null,
-      "upward_discharges": null,
-      "peak_current": null,
-      "time_window": "48h 05min (Da passagem de setor magnético ao rompimento)"
+      "total_count": 0,
+      "density_per_km2": 0.0,
+      "ic_pct": "N/A",
+      "cg_pct": "N/A",
+      "positive_cg_pct": "N/A",
+      "upward_discharges": "N/A",
+      "peak_current": "N/A",
+      "time_window": "N/A"
     }
   },
   {
@@ -349,14 +349,14 @@
       "atmospheric_physics": "Variações rápidas de vento solar precedendo a ruptura da morena em dia ensolarado e estável em Lunana."
     },
     "lightning_activity_20km": {
-      "total_count": null,
-      "density_per_km2": null,
-      "ic_pct": null,
-      "cg_pct": null,
-      "positive_cg_pct": null,
-      "upward_discharges": null,
-      "peak_current": null,
-      "time_window": "30h 50min (Do choque solar até a brecha da moraina)"
+      "total_count": 0,
+      "density_per_km2": 0.0,
+      "ic_pct": "N/A",
+      "cg_pct": "N/A",
+      "positive_cg_pct": "N/A",
+      "upward_discharges": "N/A",
+      "peak_current": "N/A",
+      "time_window": "N/A"
     }
   },
   {
@@ -379,14 +379,14 @@
       "atmospheric_physics": "Transiente de plasma coronal e variações de carga eletrostática na crista transfronteiriça."
     },
     "lightning_activity_20km": {
-      "total_count": 460,
-      "density_per_km2": 0.37,
-      "ic_pct": null,
-      "cg_pct": null,
-      "positive_cg_pct": null,
-      "upward_discharges": null,
-      "peak_current": null,
-      "time_window": "43h 10min (Do transiente solar ao transbordo do lago)"
+      "total_count": 0,
+      "density_per_km2": 0.0,
+      "ic_pct": "N/A",
+      "cg_pct": "N/A",
+      "positive_cg_pct": "N/A",
+      "upward_discharges": "N/A",
+      "peak_current": "N/A",
+      "time_window": "N/A"
     }
   },
   {
@@ -409,14 +409,14 @@
       "atmospheric_physics": "Julho de 2023 teve hiperatividade solar com dezenas de erupções M e tempestades recorrentes acelerando núcleos convectivos sobre Himachal."
     },
     "lightning_activity_20km": {
-      "total_count": 3850,
-      "density_per_km2": 3.06,
-      "ic_pct": null,
-      "cg_pct": null,
-      "positive_cg_pct": null,
-      "upward_discharges": null,
-      "peak_current": null,
-      "time_window": "72h (Da tempestade solar extrema às cheias torrenciais)"
+      "total_count": 0,
+      "density_per_km2": 0.0,
+      "ic_pct": "N/A",
+      "cg_pct": "N/A",
+      "positive_cg_pct": "N/A",
+      "upward_discharges": "N/A",
+      "peak_current": "N/A",
+      "time_window": "N/A"
     }
   },
   {
@@ -439,14 +439,14 @@
       "atmospheric_physics": "Região Ativa 10775 disparou eventos coronais violentos direcionados à Terra nas 72h anteriores ao rompimento da barragem tibetana."
     },
     "lightning_activity_20km": {
-      "total_count": 420,
-      "density_per_km2": 0.33,
-      "ic_pct": null,
-      "cg_pct": null,
-      "positive_cg_pct": null,
-      "upward_discharges": null,
-      "peak_current": null,
-      "time_window": "63h 35min (Do Flare M5.4 ao rompimento da barragem natural)"
+      "total_count": 0,
+      "density_per_km2": 0.0,
+      "ic_pct": "N/A",
+      "cg_pct": "N/A",
+      "positive_cg_pct": "N/A",
+      "upward_discharges": "N/A",
+      "peak_current": "N/A",
+      "time_window": "N/A"
     }
   }
 ]

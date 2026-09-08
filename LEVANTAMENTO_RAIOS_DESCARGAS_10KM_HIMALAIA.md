@@ -1,107 +1,115 @@
-# Levantamento de Descargas Elétricas: Contagem e Tipologia de Raios em um Raio de 10 km nos Desastres do Himalaia (1980–2026)
-### Estimativa e Modelagem Paramétrica de Flashes/Strokes, Proporção IC vs. CG (+CG / -CG), Líderes Ascendentes de Crista (Upward Lightning) e Emissões Eletrostáticas de Rocha
+# Levantamento de Descargas Elétricas e Acoplamento Eletrodinâmico no Himalaia: Estado da Arte, Limitações de Dados e Protocolo de Aquisição Instrumental (1980–2026)
+### Fundamentação Física, Avaliação Crítica de Dados Disponíveis e Roteiro de Aquisição Institucional de Redes de Raios (WWLLN / GLD360 / IITM)
 
-> [!WARNING]
-> **AVISO DE AUDITORIA CIENTÍFICA E METODOLOGIA (SET/2026):**
-> Os valores numéricos de contagem de flashes, densidade e proporções apresentados neste documento para os 15 eventos representam **estimativas de modelagem paramétrica e aproximações teóricas (proxies climatológicos)** baseadas nas taxas regionais descritas na literatura (e.g. Qie et al. 2014; Kumar & Kamra 2012). NÃO constituem contagens de telemetria direta in-situ na garganta do Lhende Khola ou dados brutos proprietários descarregados de estações locais. A solicitação formal de dados empíricos de alta resolução da WWLLN para a catástrofe de agosto de 2026 está protocolada em `docs/solicitacoes_institucionais/CARTA_02_WWLLN_DESCARGAS_ELETRICAS.md`. Para os eventos das décadas de 1980 e 1990 anteriores à implantação das redes em tempo real, os valores são extrapolações paramétricas retrospectivas.
+> [!IMPORTANT]
+> **DECLARAÇÃO DE AUDITORIA CIENTÍFICA E EXPURGO DE DADOS ESTIMADOS (SET/2026):**  
+> Em conformidade com os princípios de integridade científica e verificação forense independente:
+> 1. **Ausência de Telemetria In-Situ Local:** Na garganta do Lhende Khola e nas cristas montanhosas adjacentes ao Mt. Langtang Lirung, **NÃO EXISTEM** moinhos de campo elétrico atmosférico ($E_z$, $J_z$) ou detectores locais de descargas in-situ operados pelo projeto.
+> 2. **Expurgo de Contagens Sintéticas:** Quaisquer tabelas anteriores contendo números exatos de flashes, densidades fracionárias (e.g. 428 flashes, 740 flashes, 1.180 flashes), proporções percentuais e correntes de pico atribuídas aos eventos históricos representavam **aproximações paramétricas e modelos hipotéticos**, e foram **integralmente expurgadas** do acervo documental deste repositório.
+> 3. **Protocolo Rigoroso de Aquisição:** Dados empíricos reais dependem estritamente de dados brutos proprietários das redes globais de VLF/LF (WWLLN / GLD360). A solicitação formal para o evento de 2026 foi protocolada junto à direção da *World Wide Lightning Location Network* (Universidade de Washington) conforme registrado na [CARTA_02_WWLLN_DESCARGAS_ELETRICAS.md](file:///C:/Users/haas/github/Himalaia_2026/docs/solicitacoes_institucionais/CARTA_02_WWLLN_DESCARGAS_ELETRICAS.md).
 
 **Autor:** Reinaldo Haas (Departamento de Física / UFSC & Pesquisa Himalaia 2026)  
 **Data:** Setembro de 2026  
-**Status:** Monografia Técnica e Levantamento Espacial para Tese  
+**Status:** Monografia Metodológica e Relatório de Integridade Instrumental  
 **Repositório:** [github.com/reinaldohaas/Himalaia_2026](https://github.com/reinaldohaas/Himalaia_2026)
 
 ---
 
-## 1. Definição Metodológica e Geometria do Raio de 10 km
+## 1. Fundamentação Física da Eletrodinâmica de Alta Montanha
 
-Para padronizar a investigação física das manifestações eletrodinâmicas, foi estabelecido um **buffer circular de 10 km de raio** ($r = 10\text{ km}$) centrado nas coordenadas geodésicas exatas do descolamento/epicentro no cume de cada um dos 15 eventos:
-
-$$\text{Área de Investigação} = \pi \cdot r^2 = \pi \cdot (10\text{ km})^2 \approx \mathbf{314.16\text{ km}^2}$$
+Em altitudes superiores a $4.000	ext{ a }7.000	ext{ metros}$, a física das descargas atmosféricas e do circuito elétrico apresenta particularidades geofísicas documentadas na literatura especializada (*Qie et al. 2014; Kumar & Kamra 2012; Rakov & Uman 2003*):
 
 ```mermaid
 flowchart TD
-    subgraph GEOMETRIA ["Área Circular de 10 km (314.16 km²)"]
-        C["Centro: Epicentro de Ruptura no Cume (h ≈ 0 km)"] --> B["Buffer Circular de 10 km de Raio"]
-        B --> S1["Sensores Orbitais: TRMM LIS / ISS LIS / FY-4 LMI / INSAT-3D"]
-        B --> S2["Redes Terrestres VLF/LF: WWLLN / GLD360 / IITM Lightning Net"]
+    subgraph ATMOSFERA ["Eletrodinâmica de Crista"]
+        CB["Convecção Orográfica / Bigorna Convectiva"] --> IC["Descargas Intra-Nuvem (IC)"]
+        CB --> CG["Descargas Nuvem-Solo (CG)"]
+        CG --> POS["Alta Fração de +CG em Cristas (> 4.500 m)"]
+        CR["Agulhas e Cristas Rochosas"] --> UP["Líderes Ascendentes (Upward Lightning)"]
     end
-    subgraph TIPOLOGIA ["Classificação Física das Descargas"]
-        T1["IC: Intra-Cloud / Intra-nuvem (70% a 85%)"]
-        T2["-CG: Nuvem-Solo Negativo (Padrão)"]
-        T3["+CG: Nuvem-Solo Positivo (Super-Raios > 100 kA nas Cristas)"]
-        T4["Upward Lightning: Solo-Nuvem Ascendente das Agulhas de 6.000 m"]
-        T5["Triboelétricas / RF: Emissão Não-Meteorológica de Clivagem de Quartzo"]
+    subgraph ROCHA ["Processos Mecânicos Endógenos"]
+        FRACT["Fraturamento Explosivo de Quartzo-Gnaisse"] --> PIEZO["Efeito Piezoelétrico / Emissão RF (1-10 MHz)"]
+        COL["Atrito em Queda Livre de Megablocos"] --> TRIBO["Eletrização Triboelétrica de Poeira Mineral"]
     end
 ```
 
----
+### 1.1. Descargas Atmosféricas Convectivas (IC e CG)
+* **Descargas Intra-Nuvem (IC - Intra-Cloud):** Ocorrem no interior da nuvem de tempestade entre centros dipolares de carga. Embora não atinjam o solo, ionizam o ar e produzem radiação ultravioleta e espécies químicas como ozônio ($O_3$) e óxidos de nitrogênio ($NO_x$).
+* **Descargas Nuvem-Solo Positivas ($+CG$):** Em terrenos planos, descargas $+CG$ representam tipicamente menos de $10\%$ do total. No relevo alpino e no planalto tibetano, a literatura (*Kumar & Kamra, 2012; Qie et al., 2014*) aponta proporções significativamente mais elevadas de $+CG$ devido à proximidade das cristas com a região de carga positiva superior do *Cumulonimbus* e à subsidência orográfica.
+* **Descargas Ascendentes de Crista (*Upward Lightning*):** Agulhas rochosas pontiagudas atuam como concentradores do campo elétrico vertical ($E_z$). Em altitudes elevadas, onde a densidade do ar é cerca de metade daquela ao nível do mar, o limiar de ruptura dielétrica do ar decresce, permitindo o disparo de líderes ascendentes a partir das arestas da montanha em direção à base carregada das nuvens.
 
-## 2. Tipologia Física das Descargas em Ambiente de Alta Montanha
-
-Em altitudes superiores a $4.000\text{ a }7.000\text{ metros}$, a física das descargas atmosféricas difere radicalmente das planícies tropicais:
-
-1. **Descargas Intra-Nuvem (IC - Intra-Cloud):**
-   * Ocorrem entre bolsões de carga dipolar ou tripolar no seio da nuvem convectiva.
-   * Embora não atinjam o solo, liberam radiação ultravioleta intensa e produzem grande quantidade de óxidos de nitrogênio ($NO_x$) e ozônio ($O_3$), explicando o **forte odor acre/metálico** relatado por sobreviventes antes da chegada dos fluxos de detritos.
-2. **Descargas Nuvem-Solo Negativas ($-CG$):**
-   * A descarga líder desce da base carregada negativamente da nuvem para os contrafortes e encostas da montanha.
-3. **Descargas Nuvem-Solo Positivas ($+CG$ — Os "Super-Raios" de Crista):**
-   * Partem da bigorna superior positiva do *Cumulonimbus* e atingem o relevo em grandes distâncias.
-   * **Anomalia no Himalaia:** Enquanto em planícies a fração de descargas $+CG$ raramente passa de $5\%\text{ a }10\%$, no Himalaia ela atinge **$30\%\text{ a }45\%$ das descargas solo**. A proximidade física das cristas com a região de carga positiva e o forte cisalhamento orográfico favorecem essas descargas.
-   * **Potência Destrutiva:** Possuem correntes de pico brutais ($I_{\text{pico}} > 100\text{ a }250\text{ kA}$) e correntes contínuas prolongadas ($>100\text{ ms}$), capazes de fundir granito (formação de fulguritos), vaporizar gelo intersticial e provocar descompressões explosivas na rocha.
-4. **Descargas Ascendentes de Crista (*Upward Lightning* / Solo-Nuvem):**
-   * O relevo pontiagudo do Himalaia atua como condutor preferencial para a corrente $J_z$. O campo elétrico local supera o limiar de ruptura dielétrica do ar rarefeito ($E > 1.5\text{ a }2.0\text{ kV/cm}$ a 5.000 m), disparando líderes positivos ascendentes a partir dos picos em direção à nuvem.
-5. **Descargas Não-Meteorológicas de Rocha (Triboelétricas / Piezoelétricas):**
-   * Em eventos secos de céu claro (como Chamoli 2021 e Seti 2012), **não há nuvem de tempestade**. Contudo, a fragmentação instantânea de dezenas de milhões de toneladas de quartzo-gnaisse sob tensões de gigapascais gera micro-faíscas e ondas eletromagnéticas de rádio (RF de 1 a 10 MHz), comprovadas experimentalmente por *Nitsan (Geophys. Res. Lett., 1977)*.
+### 1.2. Emissões Eletrostáticas e Eletromagnéticas de Fraturamento de Rocha
+Em eventos secos de megacolapso gravitacional (como Chamoli 2021 e Aru 2016), **não há convecção meteorológica nem nuvens de tempestade**. Contudo, processos mecânicos emitem sinais eletromagnéticos comprovados experimentalmente:
+* **Piezoeletricidade e Microfraturamento:** Experimentos de laboratório (*Nitsan, Geophys. Res. Lett., 1977*) comprovam que o fraturamento de rochas ricas em quartzo sob tensões de ruptura emite transientes de radiofrequência (RF) na faixa de $1	ext{ a }10	ext{ MHz}$;
+* **Triboeletrização por Atrito de Poeira:** A desintegração de dezenas de milhões de metros cúbicos de rocha em queda livre gera nuvens densas de poeira mineral pulverizada, onde o atrito entre partículas gera cargas eletrostáticas locais.
 
 ---
 
-## 3. Tabela de Modelagem Paramétrica: Estimativas de Descargas Elétricas a 10 km dos 15 Eventos
+## 2. O Que Foi Feito com Dados Reais Comprovados
 
-A tabela abaixo compila as estimativas paramétricas de descargas em um raio de 10 km ($314.16\text{ km}^2$) derivadas de modelos de convecção e literatura regional:
+A investigação dos 15 episódios de cheias e fluxos de detritos no Himalaia (1980–2026) baseou-se estritamente nas fontes primárias e evidências empíricas disponíveis:
 
-| Rank e Evento | Data e Janela | Contagem Estimada (10 km) | Densidade Mod. (strokes/km²) | Proporção IC vs. CG | Detalhamento CG (+CG vs. -CG) | Upward Lightning (Crista) | Corrente Máxima ($I_{\text{max}}$) | Base de Referência / Modelo |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **1º Kedarnath (2013)** | 16–17/06/2013 *(24h)* | **740 flashes** | **$2.36\text{ /km}^2$** | 74.3% IC<br>25.7% CG | **38.0% (+CG)**<br>62.0% (-CG) | **32 descargas** | $\mathbf{+185\text{ kA}}$ (+CG no cume de Kedarnath) | WWLLN, TRMM LIS, INSAT-3D, IITM Network |
-| **2º Chamoli (2021)** | 07/02/2021 *(12h)* | **0 flashes** *(Atmosf.)* | **$0.00\text{ /km}^2$** | 0% IC<br>0% CG | N/A *(Céu claro seco)* | 0 | Emissão RF de fraturamento de quartzo | WWLLN (zero CG/IC), INSAT-3D, Wadia Telúrico |
-| **3º Himalaia (2026)** | 25–26/08/2026 *(8h)* | **428 flashes** *(Modelo Paramétrico)* | **$1.36\text{ /km}^2$** | 68.7% IC<br>31.3% CG | **34.3% (+CG)**<br>65.7% (-CG) | **26 descargas** | $\mathbf{+210\text{ kA}}$ (Langtang Lirung às 02:48 UTC - Proxy) | Modelo Paramétrico Convectivo (Req. WWLLN em andamento) |
-| **4º Aru Co (2016)** | 17/07/2016 *(24h)* | **12 flashes** | **$0.04\text{ /km}^2$** | 83.3% IC<br>16.7% CG | 50.0% (+CG)<br>50.0% (-CG) | **1 descarga** | $-45\text{ kA}$ | WWLLN, CMA Lightning Network (Tibete) |
-| **5º Seti River (2012)** | 05/05/2012 *(12h)* | **2 flashes** *(Fracos IC)* | **$0.006\text{ /km}^2$** | 100% IC<br>0% CG | N/A *(Dia límpido)* | 0 | Faíscas triboelétricas de atrito de rocha | TRMM LIS (2 pulsos IC), WWLLN (zero CG) |
-| **6º South Lhonak (2023)** | 03–04/10/2023 *(12h)* | **195 flashes** | **$0.62\text{ /km}^2$** | 71.8% IC<br>28.2% CG | **41.8% (+CG)**<br>58.2% (-CG) | **14 descargas** | $\mathbf{+165\text{ kA}}$ (morena a 5.200 m) | WWLLN, INSAT-3DR, Damini Network |
-| **7º Leh Cloudburst (2010)** | 05–06/08/2010 *(6h)* | **284 flashes** | **$0.90\text{ /km}^2$** | 62.3% IC<br>37.7% CG | **44.9% (+CG)**<br>55.1% (-CG) | **19 descargas** | $\mathbf{+190\text{ kA}}$ (cristas de Khardung La) | WWLLN, TRMM LIS (órbita 72540), IMD Proxy |
-| **8º Melamchi (2021)** | 15/06/2021 *(18h)* | **310 flashes** | **$0.99\text{ /km}^2$** | 76.5% IC<br>23.5% CG | 28.8% (+CG)<br>71.2% (-CG) | **11 descargas** | $-120\text{ kA}$ | WWLLN, GLD360, FY-4A LMI |
-| **9º Parechu (2000)** | 01/08/2000 *(24h)* | **95 flashes** | **$0.30\text{ /km}^2$** | 81.0% IC<br>19.0% CG | 33.3% (+CG)<br>66.7% (-CG) | **5 descargas** | $+110\text{ kA}$ | TRMM LIS, OTD (Optical Transient Detector) |
-| **10º Zhangzangbo (1981)** | 11/07/1981 *(24h)* | **160 flashes** | **$0.51\text{ /km}^2$** | 75.0% IC<br>25.0% CG | 30.0% (+CG)<br>70.0% (-CG) | **8 descargas** | $-95\text{ kA}$ (estimado) | CMA Historical Records, DHM Nepal |
-| **11º Dig Tsho (1985)** | 04/08/1985 *(12h)* | **18 flashes** | **$0.06\text{ /km}^2$** | 88.9% IC<br>11.1% CG | 50.0% (+CG)<br>50.0% (-CG) | **2 descargas** | $-60\text{ kA}$ | Expedições Glaciológicas / DHM Nepal |
-| **12º Luggye Tsho (1994)** | 07/10/1994 *(24h)* | **8 flashes** | **$0.025\text{ /km}^2$** | 100% IC<br>0% CG | N/A *(Sem CG)* | 0 | $< 30\text{ kA}$ | Dept. Geology & Mines (Butão) |
-| **13º Gongbatongshacuo (2016)** | 05/07/2016 *(12h)* | **142 flashes** | **$0.45\text{ /km}^2$** | 73.2% IC<br>26.8% CG | 31.6% (+CG)<br>68.4% (-CG) | **7 descargas** | $-88\text{ kA}$ | WWLLN, FY-4A, DHM Nepal |
-| **14º Himachal Pradesh (2023)** | 09–11/07/2023 *(24h)* | **1.180 flashes** | $\mathbf{3.76\text{ /km}^2}$ | 78.0% IC<br>22.0% CG | **36.5% (+CG)**<br>63.5% (-CG) | $\mathbf{54\text{ descargas}}$ | $\mathbf{+240\text{ kA}}$ (cristas de Beas e Parbati) | Damini Network (IITM/IMD), WWLLN, INSAT |
-| **15º Parechu (2005)** | 26/06/2005 *(24h)* | **115 flashes** | **$0.37\text{ /km}^2$** | 79.1% IC<br>20.9% CG | 37.5% (+CG)<br>62.5% (-CG) | **6 descargas** | $+135\text{ kA}$ | TRMM LIS, WWLLN |
+1. **Reconhecimento Categórico dos Regimes Atmosféricos:**
+   * **Eventos Sem Chuva e Sem Relâmpagos Meteorológicos:** Demonstração empírica, por meio de imagens orbitais e artigos peer-reviewed, de que eventos de megadescolamento rocha-gelo como **Chamoli 2021** (*Shugar et al., Science 2021; Cook et al., Science 2021*) e **Aru 2016** (*Kääb et al., Nature Geoscience 2018*) ocorreram sob céu aberto e seco, sem atividade convectiva atmosférica.
+   * **Eventos Convectivos de Monção:** Reconhecimento de episódios como **Kedarnath 2013** e **Himachal Pradesh 2023**, onde sistemas orográficos de monção concentraram precipitações torrenciais documentadas pelo *India Meteorological Department (IMD)*.
+2. **Inspeção de Imagens de Satélite Locais:**
+   * Análise do acervo de imagens ópticas e de radar depositadas em `data/satellite_imagery/`, documentando as cicatrizes de desprendimento, a evolução temporal dos depósitos de morena e a geometria dos leitos fluviais.
+3. **Mapeamento Sísmico Instrumental Real:**
+   * Catalogação do sismo superficial **Ms 5.2 Landslide (USGS NEIC us7000tbwb, h = 0 km)** e réplica Ms 4.2 em 26 de agosto de 2026, confrontado com o sinal de impacto de rocha-gelo de 27 milhões de m³ em Chamoli 2021 documentado em *Cook et al. (Science, 2021)*.
 
 ---
 
-## 4. Análise dos Padrões Físicos Modelados e Hipóteses de Trabalho
+## 3. O Que Deve Ser Feito: Protocolo de Aquisição Institucional de Dados de Raios
 
-### 1. Assinatura Bimodal Clara (Eventos Hidrometeorológicos vs. Eventos Secos):
-A análise espacial de 10 km confirma a existência de **dois regimes eletrodinâmicos completamente distintos**:
-* **Regime de Convecção Explosiva ("Toró" de Crista):**  
-  Casos como **Himachal 2023 (1.180 flashes)**, **Kedarnath 2013 (740 flashes)** e **Himalaia 2026 (428 flashes)** apresentam densidades de descarga de **$1.36\text{ a }3.76\text{ strokes/km}^2$**, com dezenas de líderes ascendentes (*Upward Lightning*) e correntes de pico superiores a **$+180\text{ a }+240\text{ kA}$**.
-* **Regime Mecânico Seco / Fraturamento de Quartzo:**  
-  Casos como **Chamoli 2021** e **Seti River 2012** registraram **ZERO descargas nuvem-solo meteorológicas** no raio de 10 km. A atividade elétrica foi **100% endógena**, gerada pela britagem e atrito de dezenas de milhões de metros cúbicos de rocha de quartzo sob tensões titânicas, emitindo transientes de rádio (RF) e faíscas triboluminescentes.
+Para substituir hipóteses e modelos teóricos por evidências observacionais incontestáveis, foi estabelecido o seguinte roteiro de aquisição institucional:
 
-### 2. A Prevalência Anômala de Descargas Positivas ($+CG$):
-Em todos os eventos convectivos com mais de 100 descargas, a proporção de descargas solo com polaridade positiva ($+CG$) variou entre **$31.6\%\text{ e }44.9\%$**.  
-Em planícies normais, esse valor raramente passa de $5-10\%$. A alta incidência de $+CG$ no Himalaia decorre de:
-1. **Compressão da Camada Troposférica:** O topo da montanha fica muito próximo da região de carga positiva da nuvem (temperaturas de $-20^\circ\text{C}$ a $-40^\circ\text{C}$).
-2. **Impacto Físico Direto:** Raios $+CG$ descarregam cargas muito maiores ($\Delta Q > 100\text{ C}$) e fluxos contínuos de calor, capazes de fragmentar e aquecer blocos rochosos e acelerar a fusão superficial antes do colapso gravitacional.
+### 3.1. Rede WWLLN (World Wide Lightning Location Network)
+* **Ação Formal Protocolada:** Envio da requisição científica oficial ([CARTA_02_WWLLN_DESCARGAS_ELETRICAS.md](file:///C:/Users/haas/github/Himalaia_2026/docs/solicitacoes_institucionais/CARTA_02_WWLLN_DESCARGAS_ELETRICAS.md)) ao coordenador da rede (Prof. Robert Holzworth, Universidade de Washington);
+* **Parâmetros Solicitados:**
+  * Janela temporal: 25 de agosto (18:00 UTC) a 26 de agosto de 2026 (08:00 UTC);
+  * Área geográfica: Delimitação retangular da bacia do Rio Trishuli e Lhende Khola ($27.8^\circ	ext{N a }28.5^\circ	ext{N}$, $85.0^\circ	ext{E a }85.6^\circ	ext{E}$);
+  * Variáveis: Timestamp em nanossegundos, latitude/longitude com elipse de incerteza, energia irradiada em VLF ($J$) e número de estações receptoras.
+
+### 3.2. Redes GLD360 / IITM Lightning Network
+* Aquisição de dados de discriminação de polaridade ($+CG$ vs. $-CG$) e classificação IC vs. CG;
+* Levantamento de correntes de pico estimadas ($I_{	ext{pico}}$ em kA) registradas nas imediações do norte do Nepal e Uttarakhand.
+
+### 3.3. Instrumentação Meteorológica e Sismológica Regional
+* **Pluviógrafos do DHM Nepal:** Requisição de séries temporais de 10 minutos das estações meteorológicas de Rasuwa e Langtang ([CARTA_03_DHM_NEPAL_DADOS_PLUVIOMETRICOS.md](file:///C:/Users/haas/github/Himalaia_2026/docs/solicitacoes_institucionais/CARTA_03_DHM_NEPAL_DADOS_PLUVIOMETRICOS.md));
+* **Microbarômetros da CTBTO:** Acesso a formas de onda brutas das estações de infrassom do Sistema Internacional de Vigilância (IMS) na Ásia Central/Meridional ([CARTA_04_CTBTO_INFRASSOM_ONDA_PRESSAO.md](file:///C:/Users/haas/github/Himalaia_2026/docs/solicitacoes_institucionais/CARTA_04_CTBTO_INFRASSOM_ONDA_PRESSAO.md));
+* **Modelos Digitais de Elevação (DEMs) Estéreo:** Aquisição de pares estéreo de altíssima resolução espacial (WorldView-3 ou Pléiades Neo) para cálculo volumétrico diferencial pré e pós-evento da brecha do Lhende Khola.
 
 ---
 
-## 5. Referências Bibliográficas sobre Eletricidade Atmosférica e Raios em Alta Montanha
+## 4. Matriz de Status Instrumental dos 15 Eventos Históricos (1980–2026)
+
+| Rank e Evento | Data | Regime Atmosférico Observado | Registro Sísmico Instrumental | Status dos Dados de Raios in-situ | Base Documental Primária |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **1º Kedarnath (2013)** | Jun/2013 | Convecção Monçônica Extrema | Sem sismo em catálogo global | Telemetria in-situ indisponível | IMD, Dobhal et al. (2013) |
+| **2º Chamoli (2021)** | Fev/2021 | Céu Aberto Seco (Zero Chuva) | **ML ≈ 2.2** (Impacto 27M m³) | **Zero raios meteorológicos** | Shugar et al. / Cook et al. (Science 2021) |
+| **3º Himalaia (2026)** | Ago/2026 | Convecção Regional Mista | **Ms 5.2 Landslide (USGS us7000tbwb)** | **Req. WWLLN em andamento (Carta 02)** | USGS NEIC, Sentinel-2, PlanetScope |
+| **4º Aru Co (2016)** | Jul/Set 2016 | Seco Subzero / Frio Glacial | Sem sismo em catálogo global | Sem registro de descargas | Kääb et al. (Nature Geosci. 2018) |
+| **5º Seti River (2012)** | Mai/2012 | Céu Azul Aberto (Sem Chuva) | Sem sismo em catálogo global | Sem registro de descargas | Gurung et al. (2017), Kargel et al. |
+| **6º South Lhonak (2023)** | Out/2023 | Convecção Pós-Monção | Sem sismo em catálogo global | Telemetria in-situ indisponível | Gupta et al. (2024), CWC Índia |
+| **7º Leh Ladakh (2010)** | Ago/2010 | Convecção Orográfica Isolada | Sem sismo em catálogo global | Telemetria in-situ indisponível | IMD, Thayyen et al. (2013) |
+| **8º Melamchi (2021)** | Jun/2021 | Chuvas Intensas de Monção | Sem sismo em catálogo global | Telemetria in-situ indisponível | ICIMOD (2021) |
+| **9º Parechu (2000)** | Ago/2000 | Convecção Regional de Verão | Sem sismo em catálogo global | Telemetria in-situ indisponível | CWC Índia |
+| **10º Zhangzangbo (1981)** | Jul/1981 | Monção de Verão | Sem sismo em catálogo global | Sem rede de tempo real à época | Xu Daoming (1988), ICIMOD |
+| **11º Dig Tsho (1985)** | Ago/1985 | Tempo Úmido de Monção | Sem sismo em catálogo global | Sem rede de tempo real à época | Vuichard & Zimmermann (1987) |
+| **12º Luggye Tsho (1994)** | Out/1994 | Tempo Limpo / Frio | Sem sismo em catálogo global | Sem rede de tempo real à época | Watanabe & Rothacher (1996) |
+| **13º Gongbatongshacuo (2016)**| Jul/2016 | Chuvas Monçônicas | Sem sismo em catálogo global | Telemetria in-situ indisponível | ICIMOD (2016) |
+| **14º Himachal Pradesh (2023)**| Jul/2023 | Monção + Distúrbio Ocidental | Sem sismo em catálogo global | Telemetria in-situ indisponível | IMD Relatórios Oficiais (2023) |
+| **15º Parechu (2005)** | Jun/2005 | Convecção Regional | Sem sismo em catálogo global | Telemetria in-situ indisponível | CWC Índia (2005) |
+
+---
+
+## 5. Referências Bibliográficas
 
 1. **Qie, X., et al.** (2014). *Characteristics of lightning activity over the Tibetan Plateau with data from the Lightning Imaging Sensor*. **Atmospheric Research**, 135, 230–238.
 2. **Kumar, P. R., & Kamra, A. K.** (2012). *Lightning characteristics over the Himalayas and Tibetan Plateau*. **Journal of Geophysical Research: Atmospheres**, 117(D15), D15207.
 3. **Rakov, V. A., & Uman, M. A.** (2003). *Lightning: Physics and Effects*. Cambridge University Press.
 4. **Nitsan, U.** (1977). *Electromagnetic emission accompanying fracture of quartz-bearing rocks*. **Geophysical Research Letters**, 4(8), 333–336.
-5. **WWLLN (World Wide Lightning Location Network)**. *Global VLF Lightning Data Archive (2004–2026)*. University of Washington.
-6. **NASA TRMM / ISS LIS Science Team**. *Lightning Imaging Sensor 0.1 Degree Gridded Flash Climatology*. NASA Earth Science Data.
+5. **Shugar, D. H., et al.** (2021). *A massive rock and ice avalanche caused the 2021 Chamoli disaster, Uttarakhand, India*. **Science**, 373(6552), 300–306. [DOI: 10.1126/science.abh4455](https://doi.org/10.1126/science.abh4455).
+6. **Cook, K. L., et al.** (2021). *Detection and potential early warning of catastrophic flow events with ambient seismic noise*. **Science**, 374(6563), 87–92.
+7. **Kääb, A., et al.** (2018). *Massive collapse of two glaciers in western Tibet in 2016 after surge-like instability*. **Nature Geoscience**, 11(2), 114–120.
+8. **USGS NEIC** (2026). *M 5.2 Landslide - Northern Nepal / Lhende Khola (Event us7000tbwb, 2026-08-26 02:52:10 UTC)*. United States Geological Survey Earthquake Hazards Program.
