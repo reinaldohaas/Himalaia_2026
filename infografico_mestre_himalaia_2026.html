@@ -122,7 +122,7 @@
             <div class="d-flex align-items-center gap-2">
                 <span class="badge bg-warning text-dark"><i class="fa-solid fa-volume-high me-1"></i> 4 Fases Sonoras</span>
                 <span class="badge bg-purple text-light" style="background-color: #8b5cf6;"><i class="fa-solid fa-cloud-bolt me-1"></i> Relâmpagos & Infrassom</span>
-                <span class="badge bg-info text-dark"><i class="fa-solid fa-satellite me-1"></i> 8 Magnetômetros</span>
+                <span class="badge bg-info text-dark"><i class="fa-solid fa-satellite me-1"></i> Modelo EMBRACE / INTERMAGNET</span>
             </div>
         </div>
     </nav>
@@ -135,7 +135,7 @@
                 Investigação Integrada: Sons, Infrassom, Descargas Elétricas e Dinâmica do Toró
             </h2>
             <p class="text-light mb-0 mx-auto" style="max-width: 1000px;">
-                Mapeamento analítico conectando os <strong>relatos auditivos de campo</strong> (estrondo de 4.4 mb, rugido de turbina e colisão de rochas), <strong>medições de descargas elétricas e relâmpagos</strong>, <strong>dados reais de 7 dias da NOAA SWPC</strong> e a <strong>rede regional de 8 magnetômetros (modelo EMBRACE/INPE)</strong>.
+                Mapeamento analítico conectando os <strong>relatos auditivos de campo</strong> (estrondo sísmico Ms 5.2, rugido de turbina e colisão de rochas), <strong>taxa de relâmpagos (proxy/modelo paramétrico)</strong>, <strong>dados reais de raios X solares da NOAA GOES</strong> e <strong>modelagem do potencial ionosférico global (GEC)</strong>.
             </p>
         </div>
 
@@ -144,20 +144,20 @@
             <div class="col-md">
                 <div class="stat-box">
                     <div class="stat-label"><i class="fa-solid fa-sun text-warning me-1"></i> Erupção Solar (GOES)</div>
-                    <div class="stat-value text-warning">M7.0</div>
-                    <small class="text-muted">25 Ago 10:02 UTC</small>
+                    <div class="stat-value text-warning">M6.9</div>
+                    <small class="text-muted">AR 4513 (25 Ago 10:02 UTC)</small>
                 </div>
             </div>
             <div class="col-md">
                 <div class="stat-box">
-                    <div class="stat-label"><i class="fa-solid fa-bolt text-info me-1"></i> Corrente Vertical Jz</div>
+                    <div class="stat-label"><i class="fa-solid fa-bolt text-info me-1"></i> Jz [Modelo Paramétrico]</div>
                     <div class="stat-value text-info">5.03 pA/m²</div>
                     <small class="text-muted">Salto no Topo (VI=392 kV)</small>
                 </div>
             </div>
             <div class="col-md">
                 <div class="stat-box">
-                    <div class="stat-label"><i class="fa-solid fa-cloud-bolt text-purple me-1" style="color: #a78bfa;"></i> Taxa de Relâmpagos</div>
+                    <div class="stat-label"><i class="fa-solid fa-cloud-bolt text-purple me-1" style="color: #a78bfa;"></i> Relâmpagos (proxy)</div>
                     <div class="stat-value text-purple" style="color: #a78bfa;">42/hora</div>
                     <small class="text-muted">Pico Convectivo às 02h UTC</small>
                 </div>
@@ -165,8 +165,8 @@
             <div class="col-md">
                 <div class="stat-box">
                     <div class="stat-label"><i class="fa-solid fa-wave-square text-danger me-1"></i> Infrassom & Onda</div>
-                    <div class="stat-value text-danger">3.2 Pa / 4.4 mb</div>
-                    <small class="text-muted">Colapso às 02:52:10 UTC</small>
+                    <div class="stat-value text-danger">3.2 Pa / Ms 5.2</div>
+                    <small class="text-muted">USGS us7000tbwb (02:52:10 UTC)</small>
                 </div>
             </div>
             <div class="col-md">
@@ -186,7 +186,7 @@
                         <span><i class="fa-solid fa-chart-line me-2"></i> Séries Temporais Integradas (21 a 28 de Agosto de 2026 - 169 Horas)</span>
                         <div class="btn-group" role="group">
                             <button type="button" class="btn btn-outline-info btn-time-filter filter-btn-active" onclick="filterChartTime('all', this)">7 Dias Completos</button>
-                            <button type="button" class="btn btn-outline-info btn-time-filter" onclick="filterChartTime('flare', this)">25 Ago (Flare M7)</button>
+                            <button type="button" class="btn btn-outline-info btn-time-filter" onclick="filterChartTime('flare', this)">25 Ago (Flare M6.9)</button>
                             <button type="button" class="btn btn-outline-info btn-time-filter" onclick="filterChartTime('disaster', this)">26 Ago (Catástrofe)</button>
                         </div>
                     </div>
@@ -589,7 +589,7 @@
 
 
         const witnessLocations = {
-            'Ponte da Amizade / Rasuwagadhi': L.marker([28.272, 85.385]).addTo(map).bindPopup('<b>💥 Ponte da Amizade / Rasuwagadhi</b><br>Estrondo explosivo de 4.4 mb às 08h37 NPT.<br>Arcos voltaicos na queda das linhas elétricas.'),
+            'Ponte da Amizade / Rasuwagadhi': L.marker([28.272, 85.385]).addTo(map).bindPopup('<b>💥 Ponte da Amizade / Rasuwagadhi</b><br>Estrondo explosivo do colapso sísmico Ms 5.2 às 08h37 NPT.<br>Arcos voltaicos na queda das linhas elétricas.'),
             'Parque Nacional de Langtang': L.marker([28.220, 85.450]).addTo(map).bindPopup('<b>💨 Parque Nacional de Langtang</b><br>Sensação de pressão no ouvido (infrassom) e onda de vento frio de 40 km/h descendo a garganta.'),
             'UHE Rasuwagadhi (111 MW)': L.marker([28.258, 85.378]).addTo(map).bindPopup('<b>⚡ UHE Rasuwagadhi (111 MW)</b><br>Som ensurdecedor de britador gigante.<br>Flashovers de alta tensão e queda do sistema elétrico.'),
             'Gyirong / Kyirong (Tibete)': L.marker([28.390, 85.330]).addTo(map).bindPopup('<b>⚡ Gyirong / Kyirong (Tibete)</b><br>Trovões contínuos na cordilheira e clarões de piezoeletricidade na crista rochosa.')
@@ -610,7 +610,7 @@
         stations.forEach(st => {
             L.circleMarker([st.lat, st.lon], {
                 radius: 5, fillColor: '#f59e0b', color: '#ffffff', weight: 1, fillOpacity: 0.8
-            }).addTo(map).bindPopup(<b></b> (Magnetômetro Regional));
+            }).addTo(map).bindPopup('<b>' + st.name + '</b> (Estação INTERMAGNET / Rede Regional)');
         });
 
         function flyToLocation(lat, lng, name) {
