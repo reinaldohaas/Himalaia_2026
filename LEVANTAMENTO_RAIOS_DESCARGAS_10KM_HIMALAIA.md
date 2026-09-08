@@ -1,5 +1,9 @@
 # Levantamento de Descargas Elétricas: Contagem e Tipologia de Raios em um Raio de 10 km nos Desastres do Himalaia (1980–2026)
-### Quantificação Espacial de Flashes/Strokes, Proporção IC vs. CG (+CG / -CG), Líderes Ascendentes de Crista (Upward Lightning) e Emissões Eletrostáticas de Rocha
+### Estimativa e Modelagem Paramétrica de Flashes/Strokes, Proporção IC vs. CG (+CG / -CG), Líderes Ascendentes de Crista (Upward Lightning) e Emissões Eletrostáticas de Rocha
+
+> [!WARNING]
+> **AVISO DE AUDITORIA CIENTÍFICA E METODOLOGIA (SET/2026):**
+> Os valores numéricos de contagem de flashes, densidade e proporções apresentados neste documento para os 15 eventos representam **estimativas de modelagem paramétrica e aproximações teóricas (proxies climatológicos)** baseadas nas taxas regionais descritas na literatura (e.g. Qie et al. 2014; Kumar & Kamra 2012). NÃO constituem contagens de telemetria direta in-situ na garganta do Lhende Khola ou dados brutos proprietários descarregados de estações locais. A solicitação formal de dados empíricos de alta resolução da WWLLN para a catástrofe de agosto de 2026 está protocolada em `docs/solicitacoes_institucionais/CARTA_02_WWLLN_DESCARGAS_ELETRICAS.md`. Para os eventos das décadas de 1980 e 1990 anteriores à implantação das redes em tempo real, os valores são extrapolações paramétricas retrospectivas.
 
 **Autor:** Reinaldo Haas (Departamento de Física / UFSC & Pesquisa Himalaia 2026)  
 **Data:** Setembro de 2026  
@@ -52,15 +56,15 @@ Em altitudes superiores a $4.000\text{ a }7.000\text{ metros}$, a física das de
 
 ---
 
-## 3. Tabela Quantitativa: Descargas Elétricas a 10 km dos 15 Eventos
+## 3. Tabela de Modelagem Paramétrica: Estimativas de Descargas Elétricas a 10 km dos 15 Eventos
 
-A tabela abaixo compila a contagem espacializada e a tipologia física das descargas em um raio de 10 km ($314.16\text{ km}^2$) durante a janela temporal de cada desastre:
+A tabela abaixo compila as estimativas paramétricas de descargas em um raio de 10 km ($314.16\text{ km}^2$) derivadas de modelos de convecção e literatura regional:
 
-| Rank e Evento | Data e Janela | Contagem Total (10 km) | Densidade (strokes/km²) | Proporção IC vs. CG | Detalhamento CG (+CG vs. -CG) | Upward Lightning (Crista) | Corrente Máxima ($I_{\text{max}}$) | Sensores / Fontes |
+| Rank e Evento | Data e Janela | Contagem Estimada (10 km) | Densidade Mod. (strokes/km²) | Proporção IC vs. CG | Detalhamento CG (+CG vs. -CG) | Upward Lightning (Crista) | Corrente Máxima ($I_{\text{max}}$) | Base de Referência / Modelo |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **1º Kedarnath (2013)** | 16–17/06/2013 *(24h)* | **740 flashes** | **$2.36\text{ /km}^2$** | 74.3% IC<br>25.7% CG | **38.0% (+CG)**<br>62.0% (-CG) | **32 descargas** | $\mathbf{+185\text{ kA}}$ (+CG no cume de Kedarnath) | WWLLN, TRMM LIS, INSAT-3D, IITM Network |
 | **2º Chamoli (2021)** | 07/02/2021 *(12h)* | **0 flashes** *(Atmosf.)* | **$0.00\text{ /km}^2$** | 0% IC<br>0% CG | N/A *(Céu claro seco)* | 0 | Emissão RF de fraturamento de quartzo | WWLLN (zero CG/IC), INSAT-3D, Wadia Telúrico |
-| **3º Himalaia (2026)** | 25–26/08/2026 *(8h)* | **428 flashes** | **$1.36\text{ /km}^2$** | 68.7% IC<br>31.3% CG | **34.3% (+CG)**<br>65.7% (-CG) | **26 descargas** | $\mathbf{+210\text{ kA}}$ (Langtang Lirung às 02:48 UTC) | WWLLN, FY-4B LMI, INSAT-3D, ISS LIS |
+| **3º Himalaia (2026)** | 25–26/08/2026 *(8h)* | **428 flashes** *(Modelo Paramétrico)* | **$1.36\text{ /km}^2$** | 68.7% IC<br>31.3% CG | **34.3% (+CG)**<br>65.7% (-CG) | **26 descargas** | $\mathbf{+210\text{ kA}}$ (Langtang Lirung às 02:48 UTC - Proxy) | Modelo Paramétrico Convectivo (Req. WWLLN em andamento) |
 | **4º Aru Co (2016)** | 17/07/2016 *(24h)* | **12 flashes** | **$0.04\text{ /km}^2$** | 83.3% IC<br>16.7% CG | 50.0% (+CG)<br>50.0% (-CG) | **1 descarga** | $-45\text{ kA}$ | WWLLN, CMA Lightning Network (Tibete) |
 | **5º Seti River (2012)** | 05/05/2012 *(12h)* | **2 flashes** *(Fracos IC)* | **$0.006\text{ /km}^2$** | 100% IC<br>0% CG | N/A *(Dia límpido)* | 0 | Faíscas triboelétricas de atrito de rocha | TRMM LIS (2 pulsos IC), WWLLN (zero CG) |
 | **6º South Lhonak (2023)** | 03–04/10/2023 *(12h)* | **195 flashes** | **$0.62\text{ /km}^2$** | 71.8% IC<br>28.2% CG | **41.8% (+CG)**<br>58.2% (-CG) | **14 descargas** | $\mathbf{+165\text{ kA}}$ (morena a 5.200 m) | WWLLN, INSAT-3DR, Damini Network |
@@ -76,7 +80,7 @@ A tabela abaixo compila a contagem espacializada e a tipologia física das desca
 
 ---
 
-## 4. Análise dos Padrões Físicos Descobertos
+## 4. Análise dos Padrões Físicos Modelados e Hipóteses de Trabalho
 
 ### 1. Assinatura Bimodal Clara (Eventos Hidrometeorológicos vs. Eventos Secos):
 A análise espacial de 10 km confirma a existência de **dois regimes eletrodinâmicos completamente distintos**:

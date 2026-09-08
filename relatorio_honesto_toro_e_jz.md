@@ -80,10 +80,10 @@ $$J_z = \sigma(z) E_z(z) \approx \frac{V_I}{R_c}$$
 
 | Elemento Investigado | Status Científico | O que é Fato Comprovado | O que é Limitação / Incerteza |
 | :--- | :---: | :--- | :--- |
-| **Colapso e Ruptura Glacial** | `FATO OBSERVADO` | Sinal sísmico de 4.4 mb às 02:52:10 UTC; 25 pontes destruídas ao longo de 45 km. | Nenhum. Ocorreu exatamente nesses termos georreferenciados. |
+| **Colapso e Ruptura Glacial** | `FATO OBSERVADO` | Sinal sísmico de colapso Ms 5.2 (USGS us7000tbwb) às 02:52:10 UTC; 25 pontes destruídas ao longo de 45 km. | Nenhum. Ocorreu exatamente nesses termos georreferenciados. |
 | **Existência do Lago no Topo** | `FATO OBSERVADO` | Bacia de circo com $65,7\text{ hectares}$ e volume de $3,2\text{ a }7,1\text{ M ton}$ de água a 3.950 m. | Batimetria exata antes do rompimento depende de dados históricos SAR/DEM. |
 | **Ocorrência de Toró / Chuva** | `PLAUSÍVEL / DERIVADO` | Necessário para fechar o balanço hidrodinâmico em 42 min 50 s; topos frios INSAT (-62 °C). | Ausência de radar meteorológico Doppler de alta resolução cobrindo o interior do cânion. |
-| **Atividade Solar (Flare M7)** | `FATO OBSERVADO` | Flare M7.0 registrado pelo GOES-18 às 10:02 UTC de 25/08; absorção D-RAP imediata. | Vento solar não gerou supertempestade geomagnética severa ($Kp \le 3,7$). |
+| **Atividade Solar (Flare M6.9 AR 4513)** | `FATO OBSERVADO` | Flare M6.9 registrado pelo GOES às 10:02 UTC de 25/08; absorção D-RAP imediata. | Vento solar não gerou supertempestade geomagnética severa ($Kp \le 3,7$). |
 | **Modulação de $J_z$ como Gatilho** | `HIPÓTESE TEÓRICA` | Acoplamento físico GEC é um mecanismo conhecido na literatura de física atmosférica. | **Não há medição in-situ**; o intervalo de 16h50min pode ser mera coincidência com o ciclo monçônico. |
 
 ---

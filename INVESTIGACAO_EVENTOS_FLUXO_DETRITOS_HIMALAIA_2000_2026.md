@@ -55,7 +55,7 @@ Para testar a universalidade dessa metodologia, este programa cataloga os **10 m
   * *Fato Comprovado por Satélite (Sentinel-2 / PlanetScope):* Não existia lago volumétrico prévio (>10M m³). Havia apenas depressão moráinica rasa com capacidade de 1 a 5M m³. O volume escoado de $20,7\text{ M m}^3$ com $14,2\text{ M m}^3$ de água líquida demandou precipitação ultra-concentrada de $>500\text{ mm}$ no circo, enquanto os vales e radares GPM registraram apenas $15\text{–}30\text{ mm}$ (déficit de $17\times$).
 * **Fenomenologia Investigada (Inversão Forense Completa):**
   * **Hidráulica de Manning:** $Q_{\text{pico}} = 3.376\text{ m}^3/\text{s}$, velocidade de $12,4\text{ m/s}$ e tempo de ascensão de 42 minutos e 50 segundos.
-  * **Acoplamento Espacial:** Flare solar de classe M7.0 em 25/08 às 15:47 NPT defasado em 16h50min; pulso ionosférico $V_I = 356,4\text{ kV}$; anomalia vertical $J_z = 4,57\text{ pA/m}^2$.
+  * **Acoplamento Espacial:** Flare solar de classe M6.9 (AR 4513) em 25/08 às 15:47 NPT defasado em 16h50min; pulso ionosférico $V_I = 356,4\text{ kV}$; anomalia vertical $J_z = 4,57\text{ pA/m}^2$ [Modelo Paramétrico GEC].
   * **Assinatura Sísmica e Acústica:** Sinal de $4.4\text{ mb}$ às 02:52:10 UTC correspondente ao colapso do bloco glacial a $5.200\text{ m}$, seguido de estrondo sônico prévio de 8 a 12 minutos ouvido pela população antes do impacto do fluxo de lama.
   * **Danos:** Destruição de 25 pontes, soterramento da UHE Rasuwagadhi ($111\text{ MW}$) e corte da Rodovia da Amizade internacional.
 

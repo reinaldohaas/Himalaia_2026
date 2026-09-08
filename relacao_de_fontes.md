@@ -49,7 +49,7 @@ Este documento reúne a catalogação detalhada de todas as fontes de dados prim
 
 ### ⚡ Redes Sismográficas e Autoridades de Recursos Hídricos
 * **USGS (United States Geological Survey) - Earthquake Hazards Program:**
-  * Registro sísmico do evento de **magnitude 4.4 mb** às 08:37:14 (Hora do Nepal) em `28.2765° N, 85.5194° E`.
+  * Registro sísmico do evento de **magnitude Ms 5.2 Landslide (us7000tbwb)** às 08:37:10 NPT (02:52:10 UTC) em `28.261° N, 85.388° E`.
   * Análise de profundidade zero (0 km) e modelo ShakeMap de Aceleração de Pico no Solo (PGA).
   * **URL:** [https://earthquake.usgs.gov/](https://earthquake.usgs.gov/)
 * **ISC (International Seismological Centre) & EMSC (Euro-Mediterranean Seismological Centre):**

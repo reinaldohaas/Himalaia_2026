@@ -10,15 +10,15 @@ A análise física decompõe a catástrofe em pares de eventos interconectados:
 ```
                             LINHA DO TEMPO DOS INTERVALOS CALCULADOS
   
-  [Flare Solar M7.0] ──( 11h 28min )──► [Início da Tempestade] ──( 1h 22min )──► [Colapso Glacial] ──( 42min 50s )──► [Ruptura do Barramento]
+  [Flare Solar M6.9 AR 4513] ──( 11h 28min )──► [Início da Tempestade] ──( 1h 22min )──► [Colapso Glacial] ──( 42min 50s )──► [Ruptura do Barramento]
     (25/08 10:02:00)                      (25/08 21:30:00)                          (26/08 02:52:10)                     (26/08 03:35:00)
            │                                                                               ▲
            └─────────────────────────── Δt = 16h 50min 10s ────────────────────────────────┘
 ```
 
-### Par A: Erupção Solar M7.0 $\rightarrow$ Colapso Mecânico no Langtang Lirung
+### Par A: Erupção Solar M6.9 (AR 4513) $\rightarrow$ Colapso Mecânico no Langtang Lirung
 *   **Evento 1 (Pico do Flare M7):** $t_0 =$ **25 de Agosto de 2026 às 10:02:00 UTC** (15:47:00 NPT).
-*   **Evento 2 (Colapso / Sinal Sísmico 4.4 mb):** $t_{\text{colapso}} =$ **26 de Agosto de 2026 às 02:52:10 UTC** (08:37:10 NPT).
+*   **Evento 2 (Colapso / Sinal Sísmico Ms 5.2 Landslide us7000tbwb):** $t_{\text{colapso}} =$ **26 de Agosto de 2026 às 02:52:10 UTC** (08:37:10 NPT).
 
 $$\Delta t_{\text{solar-colapso}} = t_{\text{colapso}} - t_0$$
 
@@ -56,7 +56,7 @@ flowchart TD
     A["Flare Solar M7 (10:02 UTC)\n+ Absorção Ionosférica (SID)"] -->|11h 28min de defasagem GEC| B["Desenvolvimento Convectivo\n(Topos a -62°C às 21:30 UTC)"]
     B -->|Descargas elétricas e chuva| C["Pico de Precipitação (01:30 UTC)\n18.5 mm/h sobre a cabeceira"]
     C -->|82 minutos de infiltração| D["Gatilho Hidromecânico\nElevação da pressão de poros no gelo"]
-    D -->|02:52:10 UTC| E["Colapso Glacial a 5.200m (4.4 mb)\nBarramento do Lhende Khola"]
+    D -->|02:52:10 UTC| E["Colapso Glacial a 5.200m (Ms 5.2 Landslide)\nBarramento do Lhende Khola"]
     C -.->|Aporte de água de chuva| F["Enchimento Rápido do Lago\n(42 min e 50 seg)"]
     E --> F
     F -->|03:35:00 UTC| G["Ruptura Catastrófica\nEnxurrada de 3.450 m³/s no Trishuli"]
@@ -80,6 +80,6 @@ flowchart TD
 
 | Intervalo Temporal | Eventos Extremos Conectados | Duração Exata | Papel da Tempestade |
 | :--- | :--- | :---: | :--- |
-| **Tempo Solar $\rightarrow$ Desastre** | Flare M7.0 $\rightarrow$ Colapso Glacial | **16h 50min 10s** | Janela de incubação eletrodinâmica e termodinâmica da convecção noturna. |
+| **Tempo Solar $\rightarrow$ Desastre** | Flare M6.9 $\rightarrow$ Colapso Glacial | **16h 50min 10s** | Janela de incubação eletrodinâmica e termodinâmica da convecção noturna. |
 | **Tempo Tempestade $\rightarrow$ Colapso** | Pico da Chuva $\rightarrow$ Impacto Sísmico | **01h 22min 10s** | Tempo de percolação de água líquida e quebra de adesão basal na geleira. |
 | **Tempo Barramento $\rightarrow$ Ruptura** | Queda da Massa $\rightarrow$ Enxurrada Fluvial | **42min 50s** | Aporte torrencial de água que encheu e rompeu a represa efêmera de detritos. |

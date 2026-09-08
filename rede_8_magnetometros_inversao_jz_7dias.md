@@ -76,7 +76,7 @@ $$J_z(t) = \frac{V_I(t)}{R_c(\text{Himalaia})} \times 10^{-2}\quad [\text{pA/m}^
 
 ## 3. Resultados da Série Temporal de 7 Dias (21 a 28 de Agosto de 2026 - 169 Horas)
 
-A série temporal completa hora a hora foi processada e salva em [`data/processed/space_weather/jz_7day_magnetometer_inversion.csv`](file:///C:/Users/haas/github/Himalaia_2026/data/processed/space_weather/jz_7day_magnetometer_inversion.csv).
+A série temporal hora a hora foi modelada pelo Circuito Elétrico Global (GEC) e salva em [`data/synthetic/jz_8station_PARAMETRIC_MODEL.csv`](file:///C:/Users/haas/github/Himalaia_2026/data/synthetic/jz_8station_PARAMETRIC_MODEL.csv).
 
 ### Estatísticas Globais dos 7 Dias:
 * **Densidade de Corrente $J_z$ (Himalaia a 4.000 m):**
@@ -102,7 +102,7 @@ A série temporal completa hora a hora foi processada e salva em [`data/processe
 
 ## 5. Interpretação Física dos 7 Dias
 
-1. **O Salto Eletrodinâmico do Flare M7 (25/08 10:00 UTC):**
+1. **O Salto Eletrodinâmico do Flare M6.9 AR 4513 (25/08 10:00 UTC):**
    * No instante do flare, a ionização na Camada D/E elevou a corrente do Eletrojato ($\Delta H_{\text{EEJ}} = 66,4\text{ nT}$) e gerou um pico de campo elétrico ionosférico de **$0,781\text{ mV/m}$**.
    * O potencial $V_I$ subiu para **$392,4\text{ kV}$**, aumentando a densidade de corrente $J_z$ no topo do Himalaia para **$5,03\text{ pA/m}^2$** (+53% acima da média basal).
 2. **O Retorno Gradual na Madrugada do Desastre (26/08 02:00 UTC):**
@@ -113,7 +113,7 @@ A série temporal completa hora a hora foi processada e salva em [`data/processe
 
 ### 📂 Arquivos Gerados e Sincronizados
 
-* **Série Temporal Completa (169 Horas em CSV):** [`data/processed/space_weather/jz_7day_magnetometer_inversion.csv`](file:///C:/Users/haas/github/Himalaia_2026/data/processed/space_weather/jz_7day_magnetometer_inversion.csv)
+* **Série Temporal Completa (169 Horas em CSV):** [`data/synthetic/jz_8station_PARAMETRIC_MODEL.csv`](file:///C:/Users/haas/github/Himalaia_2026/data/synthetic/jz_8station_PARAMETRIC_MODEL.csv)
 * **Script Reproduzível em Python:** [`scripts/process_7day_magnetometers_jz.py`](file:///C:/Users/haas/github/Himalaia_2026/scripts/process_7day_magnetometers_jz.py)
 * **Relatório Técnico:** [rede_8_magnetometros_inversao_jz_7dias.md](file:///C:/Users/haas/github/Himalaia_2026/rede_8_magnetometros_inversao_jz_7dias.md)
 * **GitHub Online:** [https://github.com/reinaldohaas/Himalaia_2026](https://github.com/reinaldohaas/Himalaia_2026)

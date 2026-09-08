@@ -147,7 +147,7 @@ Duas hipóteses glaciológicas foram confrontadas com base no sensoriamento remo
 | :--- | :--- | :--- | :--- | :--- |
 | **H1: Acoplamento Solar-Jz-Tempestade-Colapso** | Flare M7 $\rightarrow$ modulação do GEC $\rightarrow$ intensificação de tempestade orográfica $\rightarrow$ gatilho hidromecânico na geleira. | Coincidência temporal de 16h50min; detecção de células convectivas profundas e raios sobre a bacia. | Falta de dados locais in-situ de $J_z$; vento solar sem tempestade geomagnética extrema ($Kp \le 3.7$). | `HIPÓTESE TEÓRICA` |
 | **H2: Gatilho por Tempestade Convectiva Severa Localizada ("Toró")** | Chuva orográfica intensa não captada por pluviômetros de vale elevou a pressão de poros na base da geleira. | Dados de satélite GPM IMERG (18.5 mm/h) e topos frios INSAT (-62 °C) confirmam tempestade noturna. | Não requer necessariamente intervenção solar prévia para ocorrer durante a monção. | `DADO DERIVADO / PLAUSÍVEL` |
-| **H3: Colapso Mecânico Natural de Rocha-Gelo (Hipótese Nula)** | Instabilidade estrutural progressiva, degelo estival e fadiga mecânica na face de 5.200m. | Geometria de parede ultra-íngreme; sinal sísmico clássico de 4.4 mb; histórico regional de avalanches em Langtang. | Não correlaciona diretamente o sincronismo com os picos de atividade elétrica observados. | `ALTA CONFIANÇA (FATOS COMPROVADOS)` |
+| **H3: Colapso Mecânico Natural de Rocha-Gelo (Hipótese Nula)** | Instabilidade estrutural progressiva, degelo estival e fadiga mecânica na face de 5.200m. | Geometria de parede ultra-íngreme; sinal sísmico de colapso de encosta Ms 5.2 (USGS us7000tbwb); histórico regional de avalanches em Langtang. | Não correlaciona diretamente o sincronismo com os picos de atividade elétrica observados. | `ALTA CONFIANÇA (FATOS COMPROVADOS)` |
 
 ---
 
@@ -163,9 +163,9 @@ Duas hipóteses glaciológicas foram confrontadas com base no sensoriamento remo
 
 > [!NOTE]
 > **Conclusão:**
-> A erupção solar de classe M7.0 em 25 de agosto de 2026 antecedeu o desastre de avalanche e inundação em aproximadamente **16 horas e 50 minutos**. A cronologia temporal é compatível com modelos teóricos de defasagem eletrodinâmica do Circuito Elétrico Global e com o desenvolvimento de células convectivas noturnas registradas por satélite sobre a bacia do Lhende Khola.
+> A erupção solar de classe M6.9 (AR 4513) em 25 de agosto de 2026 antecedeu o desastre de avalanche e inundação em aproximadamente **16 horas e 50 minutos**. A cronologia temporal é compatível com modelos teóricos de defasagem eletrodinâmica do Circuito Elétrico Global e com o desenvolvimento de células convectivas noturnas registradas por satélite sobre a bacia do Lhende Khola.
 > Contudo, a **existência, magnitude e sinal de uma alteração efetiva de $J_z$ sobre o relevo do Langtang permanecem como hipótese não comprovada**, carecendo de medições diretas de campo elétrico atmosférico.
-> Do ponto de vista geomecânico, o desprendimento massivo de gelo e rocha a 5.200 m (4.4 mb) e o subsequente rompimento do lago de barramento constituem a **causa mecânica direta e suficiente** da catástrofe. O papel das tempestades e do infrassom como gatilhos secundários depende da comprovação formal de que sinais acústicos precursores antecederam o instante do colapso (02:52:10 UTC).
+> Do ponto de vista geomecânico, o desprendimento massivo de gelo e rocha a 5.200 m (Ms 5.2 Landslide us7000tbwb) e o subsequente rompimento do lago de barramento constituem a **causa mecânica direta e suficiente** da catástrofe. O papel das tempestades e do infrassom como gatilhos secundários depende da comprovação formal de que sinais acústicos precursores antecederam o instante do colapso (02:52:10 UTC).
 
 ---
 

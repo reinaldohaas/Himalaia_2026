@@ -11,7 +11,7 @@ Durante a madrugada e primeiras horas da manhã de **26 de agosto de 2026** (ent
                              CRONOLOGIA DOS RELATOS LOCAIS (NPT)
   
   [07:15 - 08:15 NPT] ──► Céu escuro, trovões abafados e relâmpagos frequentes nas cristas (>4.500m)
-  [08:37:10 NPT]     ──► ESTRONDO EXPLOSIVO + Vibração nas paredes das casas (Colapso de 4.4 mb)
+  [08:37:10 NPT]     ──► ESTRONDO EXPLOSIVO + Vibração nas paredes das casas (Colapso Ms 5.2)
   [08:45 - 09:10 NPT] ──► "Zumbido e Rugido de Turbina" no vale estreito + Onda de vento descendo o cânion
   [09:20:00 NPT]     ──► Rompimento da barragem temporária: Som ensurdecedor de pedras colidindo
   [09:25 - 09:35 NPT] ──► Impacto na UHE Rasuwagadhi: Clarões azuis de curto-circuito e destruição de pontes
@@ -40,7 +40,7 @@ Os testemunhos acústicos colhidos na região dividem-se em **quatro fases sonor
 ### B. O Estrondo Explosivo Inicial (08:37:10 NPT / 02:52:10 UTC)
 * **Relato de Trabalhadores do Posto Aduaneiro de Rasuwagadhi / Ponte da Amizade:**  
   *"Às 08h37 ouvimos um estrondo gigantesco, como se uma pedreira inteira tivesse explodido com dinamite no alto do vale de Lhende Khola. O chão tremeu sob nossos pés por quase dois minutos antes de vermos qualquer gota de água a mais no rio."*
-* **Registro Instrumental:** Corresponde ao sinal sísmico de **4.4 mb** e ao sinal de **infrassom de 1.8 a 3.2 Pa** gerado pela desaceleração e impacto de $\approx 15\times 10^6\text{ m}^3$ de rocha e gelo despencando 1.200 m de desnível.
+* **Registro Instrumental:** Corresponde ao sinal sísmico de **Ms 5.2 (USGS us7000tbwb)** e ao sinal de **infrassom de 1.8 a 3.2 Pa** gerado pela desaceleração e impacto de $\approx 15\times 10^6\text{ m}^3$ de rocha e gelo despencando 1.200 m de desnível.
 
 ### C. A "Onda de Vento" e o Rugido de Baixa Frequência (Infrassom Audível)
 * **Relato de Guardas Florestais do Parque Nacional de Langtang:**  

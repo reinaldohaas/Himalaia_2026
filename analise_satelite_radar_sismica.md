@@ -14,7 +14,7 @@ O desastre de 26 de agosto de 2026 na fronteira Nepal-Tibete foi amplamente docu
 | **Copernicus EMSR927** | Mapeamento de Emergência | Agência Espacial Europeia (ESA) / UE | Delimitação de manchas de inundação e graduação de danos em pontes e prédios. |
 | **Sentinel-2 (MSI)** | Multiespectral (10m) | ESA / Copernicus | Índices NDWI (água/lama), sedimentação em reservatórios e corte de vegetação. |
 | **Sentinel-1 (C-SAR)** | Radar de Abertura Sintética | ESA / Copernicus | Coerência interferométrica (InSAR), detecção de deformação e subsidência. |
-| **USGS ShakeMap / GCMT** | Rede Sismográfica Global | USGS / ISC / EMSC | Assinatura sísmica (4.4 mb), profundidade zero e sismograma de força de massa. |
+| **USGS ShakeMap / GCMT** | Rede Sismográfica Global | USGS / ISC / EMSC | Assinatura sísmica Ms 5.2 Landslide (us7000tbwb), profundidade 0 km e força de massa. |
 
 ---
 
@@ -59,7 +59,7 @@ Inicialmente reportado como um sismo tectônico comum, a análise conjunta do **
 ```
 • Data / Hora: 26 de Agosto de 2026 às 02:52:14 UTC (08:37:14 Hora Local do Nepal)
 • Epicentro: 28.2765° N, 85.5194° E (Face Norte do Langtang Lirung)
-• Magnitude: 4.4 mb (Magnitude de Corpo) / Mw ~ 4.2
+• Magnitude: Ms 5.2 (USGS NEIC id us7000tbwb, landslide) / Réplica Ms 4.2 (us7000tc90)
 • Profundidade Focal: 0.0 km (Evento Estritamente Superficial)
 • Tipo de Fonte Sísmica: Força Única Descendente (Single-Force Loading / Unloading)
 • Réplicas Tectônicas (Aftershocks): NENHUMA registrada (Consistente com deslizamento gravitacional)

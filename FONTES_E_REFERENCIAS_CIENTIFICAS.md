@@ -13,7 +13,7 @@
 | **Precipitação de Satélite (GPM IMERG V07)** | **NASA GES DISC / CMR** *(Goddard Space Flight Center)* | Collection `GPM_3IMERGHH_07` / `https://cmr.earthdata.nasa.gov/` | **Catálogo de Granules Real + Amostra HDF5 (8,07 MB)** baixados via Bearer Token em `data/raw/meteorology/` |
 | **Censo de Danos das 33 Pontes** | **UN OCHA / ICIMOD / HDX** *(Humanitarian Data Exchange)* | Dataset: `https://data.humdata.org/dataset/hot_flood_npl` | **GeoJSON Real** em `data/hot_flood_npl_bridges_damage_icimod.geojson` |
 | **Vetor do Talvegue Fluvial (2.979 nós)** | **OpenStreetMap (OSM) / Overpass Turbo** | Relação OSM `21284197` (Bhote Koshi) e `4839538` (Trishuli) | **GeoJSON Real** em `data/rio_trishuli_thalweg_oficial_osm.geojson` |
-| **Catálogo Sísmico (Evento 4.4 mb)** | **USGS** *(United States Geological Survey)* | `https://earthquake.usgs.gov/fdsnws/event/1/` | Coordenadas e magnitude registradas no Himalaia. |
+| **Catálogo Sísmico (Evento Ms 5.2 Landslide)** | **USGS NEIC** *(United States Geological Survey)* | `https://earthquake.usgs.gov/fdsnws/event/1/` | Evento us7000tbwb (Ms 5.2, 02:52:10 UTC) e réplica us7000tc90 (Ms 4.2). |
 | **Rede Mundial de Magnetômetros** | **INTERMAGNET** *(International Real-time Magnetic Observatory Network)* | Observatórios `LZA` (Lhasa) e `SAB` (Sabhawala) / `https://intermagnet.org/` | Parâmetros de calibração magnética em 1 Hz e 1 min. |
 
 ---

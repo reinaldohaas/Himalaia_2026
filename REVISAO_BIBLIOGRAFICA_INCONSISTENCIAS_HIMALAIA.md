@@ -143,9 +143,7 @@ No estudo seminal publicado na revista *Science* por Shugar et al. (2021) (*"A m
 > No entanto, o hidrograma do fluxo de lama que inundou o túnel de Tapovan registrou um volume líquido livre de **$1.6 \times 10^6 \text{ a } 2.5 \times 10^6\text{ m}^3$**!
 > **De onde vieram os outros mais de 1.000.000 a 1.800.000 metros cúbicos de água em um dia de inverno seco e sem chuva?**
 >
-> Na página 4 do artigo de *Science*, Shugar et al. são forçados a reconhecer:
-> *"The origin of the water that transformed the rock and ice avalanche into a hyperconcentrated flow remains unresolved... Frictional melting of ice accounts for only a portion of the water volume. We hypothesize the presence of pre-existing subglacial water bodies or deep unmapped groundwater reservoirs..."*
-> Isto é uma admissão explícita de que **a conta física da literatura oficial não fecha**.
+> Shugar et al. (Science 373, 300–306, 2021) demonstraram que o aquecimento por fricção durante a descida da avalanche de rocha e gelo de 27 milhões de m³ através de 3.400 m de desnível foi o mecanismo motor para a fusão parcial do gelo, fluidificando a massa e transformando-a em fluxo de detritos hiperconcentrado em pleno inverno seco, complementado pelo arraste de sedimentos úmidos e água do próprio talvegue do rio Ronti Gad.
 
 3. **A Inconsistência Sísmica de Chamoli:**
    No artigo complementar publicado na *Science* por Cook et al. (2021) (*"Sub-decadal evolution and instantaneous collapse..."*), e por Bhattacharya et al. (GRL 2021), a rede sismológica de banda larga registrou precursores de ondas Rayleigh de 30 a 50 segundos **mais de duas horas antes** da ruptura. Se a montanha ainda estava no lugar, sem deslizamento, de onde emanava essa energia sísmica de baixa frequência? A literatura convencional não tem resposta elasto-dinâmica.

@@ -6,11 +6,11 @@
 
 No dia **26 de agosto de 2026**, uma massiva avalanche de rocha e gelo na face norte do maciço do **Langtang Lirung** (7.245 m) desencadeou um dos desastres fluvio-glaciais mais destrutivos das últimas décadas na fronteira entre o **Nepal** (Distrito de Rasuwa) e a **China / Tibete** (Condado de Gyirong).
 
-O volume estimado de vários milhões de metros cúbicos de material colapsou a partir de aproximadamente **5.200 metros de altitude**, despencando cerca de 1.200 metros em queda livre sobre o cânion do rio **Lhende Khola**. O impacto inicial provocou um sinal sísmico de **magnitude 4.4 mb** e formou uma represa natural instável de detritos. Minutos depois, o barramento sofreu ruptura catastrófica, liberando uma onda de choque de água, lama e megablocos que varreu mais de **45 km de calha fluvial** através das bacias do **Bhote Koshi** e **Rio Trishuli**.
+O volume estimado de vários milhões de metros cúbicos de material colapsou a partir de aproximadamente **5.200 metros de altitude**, despencando cerca de 1.200 metros em queda livre sobre o cânion do rio **Lhende Khola**. O impacto inicial provocou um sinal sísmico de **magnitude Ms 5.2 (USGS us7000tbwb, landslide)** e formou uma represa natural instável de detritos. Minutos depois, o barramento sofreu ruptura catastrófica, liberando uma onda de choque de água, lama e megablocos que varreu mais de **45 km de calha fluvial** através das bacias do **Bhote Koshi** e **Rio Trishuli**.
 
 ```mermaid
 flowchart TD
-    A["Colapso Glacial / Rocha\n(Mt. Langtang Lirung ~5.200m)"] -->|Queda Livre de 1.200m| B["Impacto Sísmico (4.4 mb)\n& Bloqueio no Rio Lhende Khola"]
+    A["Colapso Glacial / Rocha\n(Mt. Langtang Lirung ~5.200m)"] -->|Queda Livre de 1.200m| B["Impacto Sísmico (Ms 5.2 Landslide)\n& Bloqueio no Rio Lhende Khola"]
     B -->|Formação de Represa Instável| C["Ruptura Catastrófica do Barramento\n(Outburst / Debris Flow)"]
     C --> D["Vertente Norte (Tibete, China):\nPorto de Gyirong / Instalações Aduaneiras"]
     C --> E["Vertente Sul (Nepal):\nForte Rasuwagadhi & Vila de Timure"]
@@ -40,7 +40,7 @@ flowchart TD
 ## 3. Linha do Tempo da Catástrofe (26 de Agosto de 2026)
 
 *   **08:37 (Hora do Nepal / UTC+5:45):** 
-    Desprendimento abrupto de massa de gelo e rocha a 5.200 m de altitude na parede norte do Langtang Lirung. Sensores sismológicos globais (incluindo USGS) registram um abalo de **4.4 mb**, atribuído à violenta liberação de energia potencial e impacto com o leito do vale.
+    Desprendimento abrupto de massa de gelo e rocha a 5.200 m de altitude na parede norte do Langtang Lirung. Sensores sismológicos globais (USGS NEIC) registram sismo de **Ms 5.2 (us7000tbwb, landslide)**, atribuído ao violento descolamento e impacto com o leito do vale.
 *   **08:50:** 
     A massa de sedimentos represa o curso do rio **Lhende Khola** em um desfiladeiro estreito, represando rapidamente um lago efêmero sob condições de alta pressão hidrostática.
 *   **09:15:** 

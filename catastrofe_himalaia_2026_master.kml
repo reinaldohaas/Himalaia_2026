@@ -3143,7 +3143,7 @@
         <description><![CDATA[
           <b>Local:</b> Maciço do Langtang Lirung (7.245 m)<br>
           <b>Altitude:</b> ~5.200 m<br>
-          <b>Evento:</b> Desprendimento de bloco maciço de gelo e permafrost rochoso gerando o sinal sísmico de 4.4 mb.
+          <b>Evento:</b> Desprendimento de bloco maciço de gelo e permafrost rochoso gerando o sinal sísmico de Ms 5.2 Landslide (us7000tbwb).
         ]]></description>
         <styleUrl>#styleGlacier</styleUrl>
         <Polygon>
@@ -3581,11 +3581,11 @@
     </Folder>
 
   
-    <!-- 7. REDE GEOMAGNÉTICA DE INVERSÃO DE Jz (14 MAGNETÔMETROS) -->
+    <!-- 7. REDE GEOMAGNÉTICA REGIONAL E MODELAGEM GEC DE Jz -->
     <Folder>
-      <name>7. Rede Geomagnética de Inversão de Jz (14 Estações)</name>
+      <name>7. Rede Geomagnética Regional e Modelagem GEC de Jz</name>
       <open>0</open>
-      <description>Rede internacional de magnetômetros de variação que registrou o salto de potencial ionosférico (VI = 356,4 kV) e o pico de Jz (4,57 pA/m²) após o flare solar M7.0.</description>
+      <description>Observatórios geomagnéticos de referência regional e parametrização do Circuito Elétrico Global (GEC; Rycroft et al., 2000) calculados após o flare solar M6.9 AR 4513 (NOAA GOES).</description>
       
       <Placemark>
         <name>LZA - Lhasa (Tibete, 3.650m)</name>
@@ -3609,7 +3609,7 @@
       </Placemark>
       <Placemark>
         <name>KKN - Kakani (Nepal, 2.050m)</name>
-        <description><![CDATA[<b>Estação KKN (Nepal):</b> A 56 km ao sul do vale do Trishuli. Registrou a assinatura do pulso de Jz e o sismo de 4.4 mb às 08:37 NPT.]]></description>
+        <description><![CDATA[<b>Estação KKN (Nepal):</b> A 56 km ao sul do vale do Trishuli. Estação sísmica/geomagnética de referência regional para registro do colapso sísmico Ms 5.2 Landslide (us7000tbwb).]]></description>
         <Point><coordinates>85.280,27.801,2050</coordinates></Point>
       </Placemark>
       <Placemark>
@@ -3630,8 +3630,8 @@
       <open>1</open>
       
       <Placemark>
-        <name>1. 25/08 15:47 NPT - Flare Solar M7.0 (GOES-18)</name>
-        <description><![CDATA[Erupção solar de raios X incidindo na atmosfera asiática diurna. Registrado simultaneamente por 14 magnetômetros.]]></description>
+        <name>1. 25/08 15:47 NPT - Flare Solar M6.9 AR 4513 (GOES-18)</name>
+        <description><![CDATA[Erupção solar de raios X incidindo na atmosfera asiática diurna. Perturbação ionosférica regional modelada via circuito elétrico global (GEC).]]></description>
         <Point><coordinates>85.483,28.274,5200</coordinates></Point>
       </Placemark>
       <Placemark>
@@ -3645,7 +3645,7 @@
         <Point><coordinates>85.500,28.288,6200</coordinates></Point>
       </Placemark>
       <Placemark>
-        <name>4. 26/08 08:37 NPT - Terremoto 4.4 mb e Infrassom 104.1 dB</name>
+        <name>4. 26/08 08:37 NPT - Colapso Sísmico Ms 5.2 Landslide (us7000tbwb)</name>
         <description><![CDATA[Colapso sísmico de 15M m³ de permafrost. Estrondo sismo-acústico ecoa no cânion ("som de vulcão em erupção").]]></description>
         <Point><coordinates>85.483,28.274,5200</coordinates></Point>
       </Placemark>

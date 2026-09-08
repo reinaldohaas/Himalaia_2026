@@ -1,5 +1,9 @@
 # Levantamento Eletrodinâmico Ampliado: Descargas Elétricas em Raio de 20 km na Janela Temporal do Pico de $J_z$ até o Colapso (Himalaia 1980–2026)
-### Integração Espaço-Temporal Completa: Área de 1.256,6 km², Contagem de Flashes, Proporção IC vs. CG (+CG / -CG), Líderes Ascendentes (Upward Lightning) e Emissões de Quartzo
+### Integração Espaço-Temporal Completa: Área de 1.256,6 km², Estimativa de Flashes, Proporção IC vs. CG (+CG / -CG), Líderes Ascendentes (Upward Lightning) e Emissões de Quartzo
+
+> [!WARNING]
+> **AVISO DE AUDITORIA CIENTÍFICA E METODOLOGIA (SET/2026):**
+> Os dados de descargas elétricas em raio de 20 km compilados nesta monografia constituem **estimativas de modelagem paramétrica baseadas no acoplamento GEC e climatologia convectiva**, e NÃO registros de sensores empíricos instalados in-situ. O flare solar de 25/08/2026 é classificado oficialmente pela NOAA como **M6.9 (Região Ativa AR 4513)**. Os dados brutos da WWLLN estão sob requisição formal (`docs/solicitacoes_institucionais/CARTA_02_WWLLN_DESCARGAS_ELETRICAS.md`).
 
 **Autor:** Reinaldo Haas (Departamento de Física / UFSC & Pesquisa Himalaia 2026)  
 **Data:** Setembro de 2026  
@@ -39,7 +43,7 @@ Abaixo estão os dados consolidados das redes orbitais (**TRMM LIS, ISS LIS, FY-
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **1º Kedarnath (2013)** | 15/06/2013 04:30 UTC *(Flare M1.3)* | 17/06/2013 01:45 UTC *(07:30 IST)* | **45h 15min** | **2.640 flashes** | **$2.10\text{ /km}^2$** | 76.2% IC<br>23.8% CG | **39.2% (+CG)**<br>60.8% (-CG) | **88 descargas** | $\mathbf{+185\text{ kA}}$ (+CG no Kedarnath Peak) |
 | **2º Chamoli (2021)** | 05/02/2021 18:40 UTC *(CH HSS/C3.8)* | 07/02/2021 04:51 UTC *(10:21 IST)* | **34h 10min** | **0 flashes** *(Atmosf.)* | **$0.00\text{ /km}^2$** | 0% IC<br>0% CG | N/A *(Céu claro de inverno)* | 0 | Emissão RF de fraturamento de quartzo |
-| **3º Himalaia (2026)** | 25/08/2026 10:02 UTC *(Flare M7.0)* | 26/08/2026 03:35 UTC *(09:20 NPT)* | **17h 33min** | **1.460 flashes** | **$1.16\text{ /km}^2$** | 70.8% IC<br>29.2% CG | **35.8% (+CG)**<br>64.2% (-CG) | **64 descargas** | $\mathbf{+210\text{ kA}}$ (Langtang Lirung às 02:48 UTC) |
+| **3º Himalaia (2026)** | 25/08/2026 10:02 UTC *(Flare M6.9 AR 4513)* | 26/08/2026 03:35 UTC *(09:20 NPT)* | **17h 33min** | **1.460 flashes** *(Mod. Paramétrico)* | **$1.16\text{ /km}^2$** | 70.8% IC<br>29.2% CG | **35.8% (+CG)**<br>64.2% (-CG) | **64 descargas** | $\mathbf{+210\text{ kA}}$ (Langtang Lirung - Proxy) |
 | **4º Aru Co (2016)** | 15/07/2016 22:15 UTC *(Vento rápido)* | 17/07/2016 10:00 UTC *(Aru-1)* | **35h 45min** | **38 flashes** | **$0.03\text{ /km}^2$** | 84.2% IC<br>15.8% CG | 50.0% (+CG)<br>50.0% (-CG) | **3 descargas** | $-45\text{ kA}$ |
 | **5º Seti River (2012)** | 05/05/2012 00:23 UTC *(Flare M1.3)* | 05/05/2012 03:38 UTC *(09:23 NPT)* | **3h 15min** | **8 flashes** *(IC periférico)* | **$0.006\text{ /km}^2$** | 100% IC<br>0% CG | N/A *(Dia seco)* | 0 | Faíscas triboelétricas em quartzo |
 | **6º South Lhonak (2023)** | 02/10/2023 18:30 UTC *(Flare M1.4/CME)* | 03/10/2023 22:42 UTC *(04:12 IST)* | **28h 12min** | **720 flashes** | **$0.57\text{ /km}^2$** | 73.6% IC<br>26.4% CG | **42.1% (+CG)**<br>57.9% (-CG) | **38 descargas** | $\mathbf{+165\text{ kA}}$ (Morenas a 5.200 m) |
@@ -55,13 +59,13 @@ Abaixo estão os dados consolidados das redes orbitais (**TRMM LIS, ISS LIS, FY-
 
 ---
 
-## 3. Descobertas Científicas da Ampliação Espaço-Temporal
+## 3. Análise dos Padrões Físicos Modelados da Ampliação Espaço-Temporal
 
 ### 1. Volume Total de Energia Eletrostática Descarregada nos Eventos de Toró:
 Ao expandir a análise para a bacia completa de 20 km ($1.256,6\text{ km}^2$) desde o início do pulso de $J_z$:
 * **Himachal 2023:** Acumulou impressionantes **3.850 descargas elétricas** em 72 horas, com 165 descargas ascendentes de crista (*Upward Lightning*) e correntes de pico de $+240\text{ kA}$.
 * **Kedarnath 2013:** Concentrou **2.640 descargas** em 45 horas em toda a bacia de Mandakini, provando que o vale inteiro foi submetido a um campo eletrodinâmico extremo antes da quebra da represa do Chorabari.
-* **Himalaia 2026:** Em apenas 17h33min entre o flare M7.0 e a quebra da represa, registraram-se **1.460 flashes**, revelando uma taxa horária de $\sim 83\text{ descargas/hora}$ no raio de 20 km, suficiente para manter a ionização de gotículas super-resfriadas no circo glacial.
+* **Himalaia 2026:** Na janela de 17h33min entre o flare M6.9 (AR 4513) e a ruptura do barramento, o modelo paramétrico estimou **1.460 flashes** (taxa simulada de $\sim 83\text{ descargas/hora}$ no raio de 20 km), formulada como hipótese de suporte à manutenção de cargas em gotículas super-resfriadas no circo glacial.
 
 ### 2. A Invariância da Ausência Meteorológica nos Eventos Secos (Chamoli e Seti):
 * Mesmo ampliando a área em 4 vezes ($1.256,6\text{ km}^2$) e estendendo a janela temporal para mais de 34 horas após a perturbação de vento solar, **Chamoli permaneceu com ZERO descargas atmosféricas convectivas**.

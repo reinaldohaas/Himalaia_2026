@@ -30,7 +30,7 @@ A tabela abaixo detalha o status de verificação de cada métrica citada:
 
 | Parâmetro / Dado | Valor / Afirmação | Classificação Metodológica | Status de Verificação Primária | Fonte / Justificativa |
 | :--- | :--- | :--- | :--- | :--- |
-| **Sinal Sísmico do Impacto** | Magnitude **4.4 mb**, 02:52:10 UTC (26/08/2026) | `DADO OBSERVADO` | **CONFIRMADO** (USGS / ISC) | USGS Earthquake Hazards Program. Profundidade estimada em 0 km. |
+| **Sinal Sísmico do Impacto** | Magnitude **Ms 5.2 (Landslide us7000tbwb)**, 02:52:10 UTC (26/08/2026) | `DADO OBSERVADO` | **CONFIRMADO** (USGS NEIC) | USGS Earthquake Hazards Program. Profundidade de 0 km, réplica Ms 4.2. |
 | **Estação KKN (Kakani, Nepal)** | Estação sismográfica de banda larga | `DADO OBSERVADO` | **CONFIRMADO** | Estação da rede sismológica nacional do Nepal / GEOFON / IRIS. **Nota: KKN é estação sísmica, não microbarômetro**. |
 | **Faixa de Frequência do Infrassom** | **0.3 Hz a 2.5 Hz** | `ESTIMATIVA TEÓRICA / ANALÓGICA` | **NÃO VERIFICADO COM DADOS PRIMÁRIOS PÚBLICOS** | Valor baseado na assinatura acústica documentada da avalanche de Chamoli (2021) e desprendimentos de blocos rochosos. |
 | **Pressão Acústica de Pico ($\Delta P$)** | $\sim 1.8\text{ a } 3.2\text{ Pa}$ | `ESTIMATIVA TEÓRICA` | **NÃO VERIFICADO COM DADOS PRIMÁRIOS PÚBLICOS** | Estimativa calculada por modelos de pistão dipolar para volume de $\approx 15\times 10^6\text{ m}^3$ em queda de 1.200 m. |
