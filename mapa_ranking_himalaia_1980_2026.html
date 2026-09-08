@@ -657,10 +657,17 @@
         let markers = [];
         let epicenterMarkers = [];
         let isTourRunning = false;
-        let tourRafId = null;
+                let tourRafId = null;
         let isAudioEnabled = true;
         let currentUtterance = null;
+        let activeUtterances = []; // Previne bug de garbage collection no Chromium
         let audioCompleted = false;
+        let hasUserInteracted = false;
+
+        // Registra primeira interação do usuário para permitir áudio com segurança
+        window.addEventListener('click', () => { hasUserInteracted = true; }, { once: true });
+        window.addEventListener('keydown', () => { hasUserInteracted = true; }, { once: true });
+        window.addEventListener('touchstart', () => { hasUserInteracted = true; }, { once: true });
         let isPanelCollapsed = false;
 
         // Estado das Caixas Retráteis (Accordions)
@@ -1098,9 +1105,9 @@
                 earthBtn.href = `https://earth.google.com/web/@${ev.lat},${ev.lon},${ev.elevation.replace(' m', '')}a,10000d,35y,0h,45t,0r`;
             }
 
-            // Se o áudio estiver ligado, fala a narração sóbria
-            if (isAudioEnabled && ev.audio_narration) {
-                speakAudioSentences(ev.audio_narration);
+            // Se o áudio estiver ativo, o usuário já interagiu e não estiver no tour automático:
+            if (isAudioEnabled && !isTourRunning && hasUserInteracted && ev.audio_narration) {
+                startAudioNarration(ev);
             }
         }
 
@@ -1166,17 +1173,22 @@
         // MOTOR DE ÁUDIO FORENSE: SUBTÍTULOS FRASE-A-FRASE (SEM DELAY E SEM TRUNCAMENTO)
         // =========================================================================
         function toggleAudioNarration() {
+            hasUserInteracted = true;
             isAudioEnabled = !isAudioEnabled;
             const btn = document.getElementById('navBtnAudio');
             if (isAudioEnabled) {
                 btn.innerHTML = '<i class="fa-solid fa-volume-high me-1"></i> Áudio: Ativo';
                 btn.className = 'btn btn-sm btn-outline-info text-info fw-bold';
+                if (!isTourRunning && eventsData[currentIndex]) {
+                    startAudioNarration(eventsData[currentIndex]);
+                }
             } else {
                 btn.innerHTML = '<i class="fa-solid fa-volume-xmark me-1"></i> Áudio: Mudo';
                 btn.className = 'btn btn-sm btn-outline-secondary text-muted';
                 if ('speechSynthesis' in window) {
                     window.speechSynthesis.cancel();
                 }
+                activeUtterances = [];
                 const ccBox = document.getElementById('narrationCcBox');
                 if (ccBox) { ccBox.classList.remove('d-flex'); ccBox.classList.add('d-none'); }
             }
@@ -1184,8 +1196,8 @@
 
         function splitIntoSentences(t) {
             if (!t) return [];
-            let s = t.replace(/(\d+)\.(\d+)/g, "$1_PONTO_$2");
-            s = s.replace(/(\d+),(\d+)/g, "$1_VIRGULA_$2");
+            let s = t.replace(/(\d+)\.(\d+)/g, (m, p1, p2) => p1 + "_PONTO_" + p2);
+            s = s.replace(/(\d+),(\d+)/g, (m, p1, p2) => p1 + "_VIRGULA_" + p2);
             s = s.replace(/\bet al\./gi, "et al_PONTO_");
             s = s.replace(/\bex\./gi, "ex_PONTO_");
             s = s.replace(/\bDr\./gi, "Dr_PONTO_");
@@ -1203,14 +1215,18 @@
             const ccBox = document.getElementById('narrationCcBox');
             const ccText = document.getElementById('narrationCcText');
 
-            const fullText = ev.audio_narration || `${ev.name}. Evento analisado do ponto de vista de suas contradições físicas.`;
-            
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+            }
+            activeUtterances = [];
+
+            const fullText = (ev && ev.audio_narration) ? ev.audio_narration : `${ev ? ev.name : ''}. Catástrofe analisada pelo balanço de dados reais.`;
             const sentences = splitIntoSentences(fullText);
-            if (sentences.length === 0) sentences.push(fullText);
+            if (sentences.length === 0 && fullText) sentences.push(fullText);
             let sentenceIndex = 0;
 
             if (!isAudioEnabled || !('speechSynthesis' in window)) {
-                if (ccBox && ccText) {
+                if (ccBox && ccText && sentences.length > 0) {
                     ccBox.classList.remove('d-none');
                     ccBox.classList.add('d-flex');
                     ccText.innerText = sentences[0] || fullText;
@@ -1219,11 +1235,15 @@
                     audioCompleted = true;
                     if (ccBox) { ccBox.classList.remove('d-flex'); ccBox.classList.add('d-none'); }
                     if (onEndCallback) onEndCallback();
-                }, 42000);
+                }, Math.min(30000, Math.max(12000, sentences.length * 6000)));
                 return;
             }
 
-            window.speechSynthesis.cancel();
+            function getPtVoice() {
+                const voices = window.speechSynthesis.getVoices();
+                return voices.find(v => v.lang === 'pt-BR' || v.lang === 'pt_BR') ||
+                       voices.find(v => v.lang && v.lang.startsWith('pt')) || null;
+            }
 
             function speakNextSentence() {
                 if (!isTourRunning && !isAudioEnabled) {
@@ -1260,37 +1280,50 @@
                     ccText.innerText = currentSentence;
                 }
 
-                currentUtterance = new SpeechSynthesisUtterance(currentSentence);
-                currentUtterance.lang = 'pt-BR';
-                currentUtterance.rate = 1.0;
-                currentUtterance.pitch = 1.0;
+                try {
+                    currentUtterance = new SpeechSynthesisUtterance(currentSentence);
+                    currentUtterance.lang = 'pt-BR';
+                    currentUtterance.rate = 1.02;
+                    currentUtterance.pitch = 1.0;
 
-                const voices = window.speechSynthesis.getVoices();
-                const ptVoice = voices.find(v => v.lang === 'pt-BR' || v.lang.startsWith('pt'));
-                if (ptVoice) currentUtterance.voice = ptVoice;
+                    const voice = getPtVoice();
+                    if (voice) currentUtterance.voice = voice;
 
-                currentUtterance.onstart = () => {
-                    if (ccBox && ccText) {
-                        ccBox.classList.remove('d-none');
-                        ccBox.classList.add('d-flex');
-                        ccText.innerText = currentSentence;
-                    }
-                };
+                    currentUtterance.onstart = () => {
+                        if (ccBox && ccText) {
+                            ccBox.classList.remove('d-none');
+                            ccBox.classList.add('d-flex');
+                            ccText.innerText = currentSentence;
+                        }
+                    };
 
-                currentUtterance.onend = () => {
+                    currentUtterance.onend = () => {
+                        speakNextSentence();
+                    };
+
+                    currentUtterance.onerror = (e) => {
+                        console.warn("Speech synthesis aviso:", e);
+                        speakNextSentence();
+                    };
+
+                    activeUtterances.push(currentUtterance);
+                    window.speechSynthesis.resume();
+                    window.speechSynthesis.speak(currentUtterance);
+                } catch(err) {
+                    console.error("SpeechSynthesis erro:", err);
                     speakNextSentence();
-                };
-
-                currentUtterance.onerror = (e) => {
-                    console.warn("Speech synthesis erro ou cancelado:", e);
-                    speakNextSentence();
-                };
-
-                window.speechSynthesis.resume();
-                window.speechSynthesis.speak(currentUtterance);
+                }
             }
 
-            speakNextSentence();
+            // Garante que vozes foram carregadas antes de iniciar a fala
+            if (window.speechSynthesis.getVoices().length === 0) {
+                window.speechSynthesis.onvoiceschanged = () => {
+                    window.speechSynthesis.onvoiceschanged = null;
+                    speakNextSentence();
+                };
+            } else {
+                speakNextSentence();
+            }
         }
 
         // =========================================================================
@@ -1356,6 +1389,7 @@
         }
 
         function startAutoTour() {
+            hasUserInteracted = true;
             stopAutoTour();
             isTourRunning = true;
             // RECOLHE AUTOMATICAMENTE O PAINEL DE EXPLICAÇÃO PARA QUE O MAPA FIQUE GIGANTE
@@ -1404,8 +1438,11 @@
                     const elapsed = now - startTime;
                     let progress = elapsed / baseDurationMs;
 
-                    if (progress >= 1.0) {
-                        if (!speechEnded && isAudioEnabled) {
+                    const minProgressThreshold = 0.65;
+                    const canAdvanceAfterSpeech = speechEnded && (progress >= minProgressThreshold);
+
+                    if (progress >= 1.0 || canAdvanceAfterSpeech) {
+                        if (!speechEnded && isAudioEnabled && progress >= 1.0) {
                             progress = 0.99;
                         } else {
                             cancelAnimationFrame(tourRafId);
@@ -1413,7 +1450,7 @@
                             const nextIdx = (idx + 1) % eventsData.length;
                             setTimeout(() => {
                                 if (isTourRunning) runExplorationTourCycle(nextIdx);
-                            }, 1200);
+                            }, 1400);
                             return;
                         }
                     }
@@ -1428,7 +1465,7 @@
                         curPitch = 35 + (5 * smoothP1);
                         curBearing = (startBearing - 20 + (35 * smoothP1)) % 360;
                         curCenter = [ev.lon, ev.lat];
-                        updateTourUI(true, `1. Bacia 20 km & Descargas (${safe.peakElevation}m)`, ev.rank, ev.name);
+                        updateTourUI(true, `1. Visão Regional da Bacia (${safe.peakElevation}m)`, ev.rank, ev.name);
                     } else if (progress < 0.65) {
                         // Fase 2: Transição Suave até o Ângulo Máximo Seguro (nunca penetra o relevo)
                         const p2 = (progress - 0.28) / (0.65 - 0.28);
@@ -1459,7 +1496,7 @@
                             const cLat = ev.lat + (0.003 * Math.sin(p3 * Math.PI));
                             curCenter = [cLon, cLat];
                         }
-                        updateTourUI(true, `3. Órbita Anti-Colisão sobre Epicentro (${safe.peakElevation}m)`, ev.rank, ev.name);
+                        updateTourUI(true, ev.has_instrumental_seismic ? `3. Órbita 3D sobre Sismo Instrumental (${safe.peakElevation}m)` : `3. Órbita 3D sobre Cume & Bacia (${safe.peakElevation}m)`, ev.rank, ev.name);
                     }
 
                     map.jumpTo({
