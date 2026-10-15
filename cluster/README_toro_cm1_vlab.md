@@ -15,7 +15,7 @@
 | `rodar_caso.sh` | roda um caso num diretório próprio (`execucoes/<caso>`) |
 | `submeter.sh` / `job_cm1.sbatch` | submetem um job Slurm por caso |
 | `coletar.sh` | empacota as saídas concluídas (`--leve`: só figuras, JSON, estatísticas e logs), com SHA-256 |
-| `gdrive.sh` | cache no Google Drive via rclone: `instalar`, `configurar`, `estado`, `baixar`, `enviar [--completo]` |
+| `gdrive.sh` | cache no Google Drive via rclone: `instalar`, `configurar`, `importar`, `estado`, `baixar`, `enviar [--completo]` |
 | `devolver_github.sh` | alternativa: sobe os pacotes para um GitHub Release (via `gh`; o login é seu; público) |
 | `toro_cm1_vlab.ipynb` | notebook com todas as etapas, para o Jupyter do vlab |
 | `pos/` | scripts de análise e figuras (python3 + numpy + matplotlib) e o terreno do modelo |
@@ -40,7 +40,7 @@ O `jupyter.vlab.ufsc.br` não oferece scp nem rsync. O fluxo usa um **cache no G
 | Lado | Onde |
 | :--- | :--- |
 | seu computador | `G:\Meu Drive\vlab_cache\` (Google Drive para desktop, já sincronizando): `entrada\` → vlab, `saida\` ← vlab |
-| vlab | `rclone` com o remoto `gdrive:` (`bash gdrive.sh instalar`, depois `rclone config` — ver `bash gdrive.sh configurar`) |
+| vlab | `rclone` com o remoto `gdrive:`. O login é feito **no Windows** (`rclone config create gdrive drive scope=drive`); o `rclone.conf` sobe pelo Jupyter para `privado/` e `bash gdrive.sh importar` o instala (ver `bash gdrive.sh configurar`) |
 
 Na **primeira vez** o pacote vem do GitHub (público), porque o `gdrive.sh` ainda não está no vlab. Depois: ponha versões novas em `G:\Meu Drive\vlab_cache\entrada\` e rode `bash gdrive.sh baixar` no vlab; para devolver, `bash gdrive.sh enviar`.
 

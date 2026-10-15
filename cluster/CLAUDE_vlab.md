@@ -11,6 +11,7 @@ Você está no contêiner do **vlab/UFSC** (JupyterHub), rodando o pacote `toro_
   * `<caso|grupo>`, para rodar em segundo plano;
   * `estado` e `parar`.
 * O CM1 roda em segundo plano dentro do servidor do Jupyter. Se o servidor for desligado, a rodada morre. Encerrar a sua sessão do Claude **não** a interrompe.
+* **Drive:** o login do Google é feito pelo pesquisador **no Windows**; ele sobe o `rclone.conf` para `privado/` e você roda `bash gdrive.sh importar` (que move o arquivo sem lê-lo). Não tente autenticar daqui.
 * Transferência com o computador do pesquisador:
   * **Google Drive** via `gdrive.sh`: remoto `gdrive:`, pasta `vlab_cache/{entrada,saida}`;
   * **GitHub** para baixar o pacote (o repositório é **público**).

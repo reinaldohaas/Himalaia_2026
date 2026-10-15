@@ -8,7 +8,8 @@
 #
 # Uso (no vlab):
 #   bash gdrive.sh instalar          # instala o rclone no ambiente conda "cm1pos" (se nao houver)
-#   bash gdrive.sh configurar        # mostra como criar o remoto "gdrive" (o login e SEU)
+#   bash gdrive.sh configurar        # mostra como criar o remoto "gdrive" no Windows (o login e SEU)
+#   bash gdrive.sh importar [arq]    # instala o rclone.conf que voce subiu para privado/ e testa
 #   bash gdrive.sh estado            # lista o que ha em entrada/ e saida/
 #   bash gdrive.sh baixar [arquivo]  # entrada/ -> ~/mesoescala-montanhas/  (confere sha256)
 #   bash gdrive.sh enviar [--completo]
@@ -37,34 +38,35 @@ case "$CMD" in
   instalar)
     ativar_rclone; rclone version | head -1 ;;
   configurar)
-    ativar_rclone
     cat <<TXT
-Configuracao do remoto "$REMOTO" (uma vez). No terminal do Jupyter do vlab:
+Configuracao do remoto "$REMOTO" (uma vez). O login do Google precisa de navegador, entao e feito
+NO SEU WINDOWS; para o vlab vai so o arquivo pronto.
 
-  export RCLONE_CONFIG=$RCLONE_CONFIG     (persistente; sem isso o rclone grava em /root)
-  rclone config
-    n                      (novo remoto)
-    name>  $REMOTO
-    Storage> drive         (Google Drive)
-    client_id / client_secret: <Enter> <Enter>
-    scope> 1               (acesso completo: precisa ver o que o Drive para desktop sincroniza;
-                            o escopo "drive.file" so enxerga arquivos criados pelo proprio rclone)
-    service_account_file: <Enter>   Edit advanced config? n
-    Use web browser to automatically authenticate? n      (o vlab nao tem navegador)
+  1) No Windows (PowerShell):
+       winget install Rclone.Rclone                 (uma vez; feche e reabra o PowerShell)
+       rclone config create $REMOTO drive scope=drive   (abre o navegador: entre na conta Google e autorize)
+       rclone lsd $REMOTO:$CACHE                        (deve listar entrada e saida)
+       rclone config file                           (mostra onde esta o rclone.conf)
 
-  O rclone mostra um comando  rclone authorize "drive" "..."  para rodar numa maquina COM navegador.
-  No seu computador Windows (PowerShell):
-      winget install Rclone.Rclone          (uma vez)
-      rclone authorize "drive" "...cole o que o vlab mostrou..."
-  Faca o login do Google no navegador; o Windows imprime um bloco "config_token".
-  Cole esse bloco no prompt do vlab.  Configure as a Shared Drive? n  ->  y (Keep)  ->  q
+  2) No Jupyter do vlab: painel de arquivos > pasta  privado/  > botao Upload > escolha o rclone.conf
 
-A configuracao (com o token) fica em: $RCLONE_CONFIG  -- persistente, fora de /root.
-Se voce rodar "rclone config" num terminal, exporte antes:  export RCLONE_CONFIG=$RCLONE_CONFIG
+  3) No vlab:
+       bash gdrive.sh importar                      (move privado/rclone.conf para $RCLONE_CONFIG e testa)
 
-Teste:  rclone lsd $REMOTO:   e   bash gdrive.sh estado
+O rclone.conf contem o token do seu Drive: nao cole o conteudo em lugar nenhum, so mova o arquivo.
+Revogar: myaccount.google.com > Seguranca > Apps de terceiros > rclone.
 TXT
     ;;
+  importar)
+    ativar_rclone
+    ORIG=${1:-$PERSIST/rclone.conf}
+    [ -f "$ORIG" ] || { echo "ERRO: nao achei $ORIG. Suba o rclone.conf pelo Jupyter para $PERSIST/ (ver: bash gdrive.sh configurar)" >&2; exit 1; }
+    mkdir -p "$(dirname "$RCLONE_CONFIG")"
+    if [ -f "$RCLONE_CONFIG" ]; then mv "$RCLONE_CONFIG" "$RCLONE_CONFIG.anterior"; echo "(config anterior guardada em $RCLONE_CONFIG.anterior)"; fi
+    mv "$ORIG" "$RCLONE_CONFIG"; chmod 600 "$RCLONE_CONFIG"
+    echo "config instalada em $RCLONE_CONFIG (permissao 600)"
+    checar_remoto
+    rclone lsd "$REMOTO:$CACHE" && echo "OK: o vlab enxerga $REMOTO:$CACHE" ;;
   estado)
     ativar_rclone; checar_remoto
     rclone mkdir "$REMOTO:$CACHE/entrada"; rclone mkdir "$REMOTO:$CACHE/saida"
