@@ -15,25 +15,19 @@
 #                                    # pacote leve mais recente (e, com --completo, o completo) -> saida/<projeto>/<data>/
 #
 # Variaveis: REMOTO (padrao gdrive), CACHE (padrao vlab_cache), PROJETO (padrao toro_cm1_lhende),
-#            DESTINO (padrao ~/mesoescala-montanhas)
-# Este script nunca le, grava nem imprime token; o token fica no rclone.conf do proprio rclone.
+#            DESTINO (padrao $PERSIST/mesoescala-montanhas); RCLONE_CONFIG em $PERSIST (ver ambiente.sh)
+# Este script nunca le, grava nem imprime token; o token fica no rclone.conf ($RCLONE_CONFIG).
 set -euo pipefail
 AQUI=$(cd "$(dirname "$0")" && pwd)
+source "$AQUI/ambiente.sh"          # PERSIST, ENVDIR, RCLONE_CONFIG (persistentes)
 REMOTO=${REMOTO:-gdrive}; CACHE=${CACHE:-vlab_cache}; PROJETO=${PROJETO:-toro_cm1_lhende}
-DESTINO=${DESTINO:-$HOME/mesoescala-montanhas}
+DESTINO=${DESTINO:-$PERSIST/mesoescala-montanhas}
 CMD=${1:-ajuda}; shift || true
 
 ativar_rclone() {
   command -v rclone >/dev/null 2>&1 && return 0
-  export PATH=$HOME/miniforge3/bin:$PATH
-  local MAMBA; MAMBA=$(command -v mamba || command -v conda || true)
-  [ -n "$MAMBA" ] || { echo "ERRO: sem rclone e sem conda (instale o Miniforge, ver README)" >&2; exit 1; }
-  source "$(dirname "$MAMBA")/../etc/profile.d/conda.sh"
-  if ! $MAMBA env list | grep -q '^cm1pos '; then
-    $MAMBA create -y -n cm1pos -c conda-forge python=3.11 numpy matplotlib rclone
-  fi
-  conda activate cm1pos
-  command -v rclone >/dev/null 2>&1 || { $MAMBA install -y -n cm1pos -c conda-forge rclone; conda activate cm1pos; }
+  usar_env cm1pos python=3.11 numpy matplotlib rclone
+  garantir cm1pos rclone rclone
 }
 checar_remoto() {
   rclone listremotes | grep -qx "$REMOTO:" || { echo "Remoto '$REMOTO:' nao configurado. Rode: bash gdrive.sh configurar" >&2; exit 1; }
@@ -47,6 +41,7 @@ case "$CMD" in
     cat <<TXT
 Configuracao do remoto "$REMOTO" (uma vez). No terminal do Jupyter do vlab:
 
+  export RCLONE_CONFIG=$RCLONE_CONFIG     (persistente; sem isso o rclone grava em /root)
   rclone config
     n                      (novo remoto)
     name>  $REMOTO
@@ -63,6 +58,9 @@ Configuracao do remoto "$REMOTO" (uma vez). No terminal do Jupyter do vlab:
       rclone authorize "drive" "...cole o que o vlab mostrou..."
   Faca o login do Google no navegador; o Windows imprime um bloco "config_token".
   Cole esse bloco no prompt do vlab.  Configure as a Shared Drive? n  ->  y (Keep)  ->  q
+
+A configuracao (com o token) fica em: $RCLONE_CONFIG  -- persistente, fora de /root.
+Se voce rodar "rclone config" num terminal, exporte antes:  export RCLONE_CONFIG=$RCLONE_CONFIG
 
 Teste:  rclone lsd $REMOTO:   e   bash gdrive.sh estado
 TXT

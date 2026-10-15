@@ -20,6 +20,19 @@
 | `toro_cm1_vlab.ipynb` | notebook com todas as etapas, para o Jupyter do vlab |
 | `pos/` | scripts de análise e figuras (python3 + numpy + matplotlib) e o terreno do modelo |
 
+## Onde guardar
+
+O vlab é um contêiner rodando como `root`, com `HOME=/root`, e **`/root` pode ser apagado quando o servidor reinicia**. Os scripts carregam o `ambiente.sh`, que põe o que precisa sobreviver em **`/home/jovyan/privado`**:
+
+| O quê | Onde |
+| :--- | :--- |
+| pacote, execuções, resultados | `/home/jovyan/privado/mesoescala-montanhas/toro_cm1_lhende/` |
+| ambientes conda (gfortran `cm1`, python/rclone `cm1pos`) | `/home/jovyan/privado/conda_envs/` |
+| configuração do rclone (com o token do Drive) | `/home/jovyan/privado/.config/rclone/rclone.conf` |
+| login do `gh` (alternativa GitHub) | `/home/jovyan/privado/.config/gh/` |
+
+Para usar outro lugar: `export PERSIST=/outro/caminho` antes dos scripts. Se o gfortran veio do conda, o `cm1.exe` depende das bibliotecas de `conda_envs/cm1` (registrado em `cm1/run/cm1.env`); o `rodar_caso.sh` as carrega e avisa se sumirem.
+
 ## Passo a passo (Jupyter do vlab, sem scp/rsync)
 
 O `jupyter.vlab.ufsc.br` não oferece scp nem rsync. O fluxo usa um **cache no Google Drive**:
@@ -36,7 +49,7 @@ Na **primeira vez** o pacote vem do GitHub (público), porque o `gdrive.sh` aind
 **Opção B — terminal do Jupyter** (*File → New → Terminal*):
 
 ```bash
-mkdir -p ~/mesoescala-montanhas && cd ~/mesoescala-montanhas
+mkdir -p /home/jovyan/privado/mesoescala-montanhas && cd /home/jovyan/privado/mesoescala-montanhas
 URL=https://raw.githubusercontent.com/reinaldohaas/Himalaia_2026/refs/heads/claude/himalaia-enchentes-auditoria-fcfdb5/cluster/toro_cm1_lhende_vlab.tar.gz
 wget -O toro_cm1_lhende_vlab.tar.gz "$URL" && wget -O toro_cm1_lhende_vlab.tar.gz.sha256 "$URL.sha256"
 sha256sum -c toro_cm1_lhende_vlab.tar.gz.sha256
