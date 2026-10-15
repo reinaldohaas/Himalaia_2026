@@ -16,6 +16,7 @@ import json
 import os
 import sys
 import numpy as np
+_trapz = getattr(np, "trapezoid", None) or np.trapz   # numpy < 2.0 nao tem trapezoid
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import grads
 
@@ -54,8 +55,8 @@ def um(run):
     dep = slw[:, 0] * vh0 * tana * DX * DX                      # kg/s por celula (E=1)
     dep_anf = np.nansum(np.where(anf, dep, 0), axis=(1, 2))      # kg/s no anfiteatro
     # integracao trapezoidal no tempo -> m3 de agua
-    dep_anf_m3 = float(np.trapezoid(dep_anf, t * 60) / 1000.0) if nt > 1 else 0.0
-    dep_dom_m3 = float(np.trapezoid(np.nansum(dep, axis=(1, 2)), t * 60) / 1000.0) if nt > 1 else 0.0
+    dep_anf_m3 = float(_trapz(dep_anf, t * 60) / 1000.0) if nt > 1 else 0.0
+    dep_dom_m3 = float(_trapz(np.nansum(dep, axis=(1, 2)), t * 60) / 1000.0) if nt > 1 else 0.0
     w = s["winterp"]
     w_anf = np.nanmax(np.where(anf[None, None], w, -99), axis=(1, 2, 3))
     rain = s["rain"][:, 0] * 10.0                                # mm

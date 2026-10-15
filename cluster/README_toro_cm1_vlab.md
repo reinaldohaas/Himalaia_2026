@@ -14,47 +14,64 @@
 | `compilar.sh` | compila com gfortran + OpenMP (gfortran do sistema, módulo `gcc`, ou ambiente conda `cm1`) |
 | `rodar_caso.sh` | roda um caso num diretório próprio (`execucoes/<caso>`) |
 | `submeter.sh` / `job_cm1.sbatch` | submetem um job Slurm por caso |
-| `coletar.sh` | empacota as saídas concluídas, com SHA-256 |
+| `coletar.sh` | empacota as saídas concluídas (`--leve`: só figuras, JSON, estatísticas e logs), com SHA-256 |
+| `gdrive.sh` | cache no Google Drive via rclone: `instalar`, `configurar`, `estado`, `baixar`, `enviar [--completo]` |
+| `devolver_github.sh` | alternativa: sobe os pacotes para um GitHub Release (via `gh`; o login é seu; público) |
+| `toro_cm1_vlab.ipynb` | notebook com todas as etapas, para o Jupyter do vlab |
 | `pos/` | scripts de análise e figuras (python3 + numpy + matplotlib) e o terreno do modelo |
 
-## Passo a passo
+## Passo a passo (Jupyter do vlab, sem scp/rsync)
 
-No seu computador:
+O `jupyter.vlab.ufsc.br` não oferece scp nem rsync. O fluxo usa um **cache no Google Drive**:
+
+| Lado | Onde |
+| :--- | :--- |
+| seu computador | `G:\Meu Drive\vlab_cache\` (Google Drive para desktop, já sincronizando): `entrada\` → vlab, `saida\` ← vlab |
+| vlab | `rclone` com o remoto `gdrive:` (`bash gdrive.sh instalar`, depois `rclone config` — ver `bash gdrive.sh configurar`) |
+
+Na **primeira vez** o pacote vem do GitHub (público), porque o `gdrive.sh` ainda não está no vlab. Depois: ponha versões novas em `G:\Meu Drive\vlab_cache\entrada\` e rode `bash gdrive.sh baixar` no vlab; para devolver, `bash gdrive.sh enviar`.
+
+**Opção A — notebook:** baixe `toro_cm1_vlab.ipynb` (está em `cluster/` no repositório e dentro deste pacote), suba-o pelo botão *Upload* do Jupyter e rode as células em ordem.
+
+**Opção B — terminal do Jupyter** (*File → New → Terminal*):
 
 ```bash
-scp toro_cm1_lhende_vlab.tar.gz vlab:~/mesoescala-montanhas/
-```
-
-No vlab:
-
-```bash
-ssh vlab
-cd ~/mesoescala-montanhas && tar xzf toro_cm1_lhende_vlab.tar.gz && cd toro_cm1_lhende
-sha256sum -c MANIFESTO.sha256          # confere o pacote
-sinfo                                   # veja o nome da particao de CPU
-bash compilar.sh                        # ~2-5 min; gera cm1/run/cm1.exe
-bash submeter.sh -n todos               # mostra os sbatch, sem submeter
-bash submeter.sh -t -p <particao> rad_12utc    # teste de 120 s de modelo (confere radiacao + terreno + superficie)
-bash submeter.sh -p <particao> rad      # as duas rodadas com radiacao
-bash submeter.sh -p <particao> todos    # ou tudo
+mkdir -p ~/mesoescala-montanhas && cd ~/mesoescala-montanhas
+URL=https://raw.githubusercontent.com/reinaldohaas/Himalaia_2026/refs/heads/claude/himalaia-enchentes-auditoria-fcfdb5/cluster/toro_cm1_lhende_vlab.tar.gz
+wget -O toro_cm1_lhende_vlab.tar.gz "$URL" && wget -O toro_cm1_lhende_vlab.tar.gz.sha256 "$URL.sha256"
+sha256sum -c toro_cm1_lhende_vlab.tar.gz.sha256
+tar xzf toro_cm1_lhende_vlab.tar.gz && cd toro_cm1_lhende
+sha256sum -c --quiet MANIFESTO.sha256
+sinfo -s                                       # nome da particao de CPU
+bash compilar.sh                               # gera cm1/run/cm1.exe
+bash submeter.sh -t -p <particao> rad_12utc    # teste de 120 s de modelo
+bash submeter.sh -p <particao> rad             # rad_06utc e rad_12utc (ou: todos)
 squeue -u $USER
-tail -f logs/cm1_rad_06utc-*.out
 ```
 
-Se o vlab tiver disco de *scratch*, rode lá: `bash submeter.sh -e /scratch/$USER/toro_cm1 -p <particao> rad`. O `coletar.sh` e o `pos/analisar.sh` aceitam o mesmo diretório (`EXEC=...`).
+Se o branch for incorporado ao `main`, troque `refs/heads/claude/himalaia-enchentes-auditoria-fcfdb5` por `refs/heads/main` na URL.
 
 Ao terminar:
 
 ```bash
-bash coletar.sh                          # gera resultados_cm1_<data>.tar.gz + .sha256
-bash pos/analisar.sh                     # tabelas, JSON e figuras em pos/ (opcional, no cluster)
+bash pos/analisar.sh          # figuras e JSON em pos/ (cria o ambiente conda cm1pos se faltar numpy/matplotlib)
+bash coletar.sh --leve        # resultados_cm1_leve_<data>.tar.gz, poucos MB
+bash gdrive.sh enviar         # -> G:\Meu Drive\vlab_cache\saida\toro_cm1_lhende\<data>\  no seu computador
+# alternativa sem Drive:  gh auth login && bash devolver_github.sh   (GitHub Release, publico)
 ```
 
-E de volta no seu computador:
+O pacote leve também pode ser baixado direto pelo navegador: no painel de arquivos do Jupyter, botão direito → *Download*.
+
+Para devolver as saídas 3D completas (~11 GB): `bash coletar.sh` e `bash gdrive.sh enviar --completo` (consome cota do Drive). Pelo GitHub Release, `bash devolver_github.sh --completo` divide em partes de 1,9 GB (limite de 2 GB por arquivo); para remontar:
 
 ```bash
-rsync -avP vlab:~/mesoescala-montanhas/toro_cm1_lhende/resultados_cm1_*.tar.gz* ./
+gh release download <tag> --repo reinaldohaas/Himalaia_2026
+cat resultados_cm1_*.tar.gz.parte* > resultados_cm1.tar.gz
 ```
+
+O Release herda a visibilidade do repositório: **é público**.
+
+Se o vlab tiver disco de *scratch*, rode lá: `bash submeter.sh -e /scratch/$USER/toro_cm1 ...`, e use `EXEC=/scratch/$USER/toro_cm1` no `coletar.sh` e `bash pos/analisar.sh /scratch/$USER/toro_cm1`.
 
 ## Os casos
 
@@ -68,7 +85,7 @@ rsync -avP vlab:~/mesoescala-montanhas/toro_cm1_lhende/resultados_cm1_*.tar.gz* 
 
 ## Espaço em disco
 
-Saídas completas, estimadas a partir das rodadas locais: `rad_06utc` ~4 GB, `rad_12utc` ~2,8 GB, cada `ter_*` ~1 GB, cada `run_*` ~90 MB. **Total de ~11 GB** sem compressão. O `coletar.sh` comprime (GrADS binário comprime ~2–3×). Se a cota da `$HOME` for pequena, use o *scratch* com `-e`.
+Saídas completas, estimadas a partir das rodadas locais: `rad_06utc` ~4 GB, `rad_12utc` ~2,8 GB, cada `ter_*` ~1 GB, cada `run_*` ~90 MB. **Total de ~11 GB** sem compressão. O `coletar.sh` comprime (GrADS binário comprime ~2–3×). Se a cota da `$HOME` for pequena, use o *scratch* com `-e`. Pelo navegador, traga só o pacote `--leve`.
 
 ## Testado
 
@@ -77,7 +94,7 @@ O pacote foi testado de ponta a ponta numa cópia limpa em Linux (Ubuntu 24.04, 
 * `submeter.sh -n todos`: os 13 comandos `sbatch` gerados;
 * `rodar_caso.sh` em modo teste, nos casos `run_pre_nssl` e `rad_12utc` (este lendo `sfc_init.dat` com `initsfc=5`);
 * `job_cm1.sbatch` com as variáveis do Slurm simuladas, no caso `ter_pico_nssl`;
-* `coletar.sh`.
+* `coletar.sh` (normal e `--leve`).
 
 Todos terminaram com `Program terminated normally`. **Não foi testado num nó do vlab:** nome da partição, módulos e limites de fila são desconhecidos aqui. Por isso, rode primeiro o teste `-t`.
 

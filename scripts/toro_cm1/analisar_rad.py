@@ -2,6 +2,7 @@
 """Analise das rodadas com radiacao e fluxos (rad_06utc, rad_12utc). Saida a cada 30 min; eixo em hora UTC de 25/08."""
 import json, os, sys
 import numpy as np
+_trapz = getattr(np, "trapezoid", None) or np.trapz   # numpy < 2.0 nao tem trapezoid
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import grads
 
@@ -54,8 +55,8 @@ def um(run, h0):
         ztop_max=np.nanmax(ztop, axis=(1, 2)).tolist(),
         area_nuvem_km2=(cond.any(axis=1).sum(axis=(1, 2)) * 0.25).tolist(),
         dep_anf_kg_s=dep_anf.tolist(),
-        dep_anf_m3=float(np.trapezoid(dep_anf, hh * 3600) / 1000.0) if nt > 1 else 0.0,
-        dep_dom_m3=float(np.trapezoid(np.nansum(dep, axis=(1, 2)), hh * 3600) / 1000.0) if nt > 1 else 0.0,
+        dep_anf_m3=float(_trapz(dep_anf, hh * 3600) / 1000.0) if nt > 1 else 0.0,
+        dep_dom_m3=float(_trapz(np.nansum(dep, axis=(1, 2)), hh * 3600) / 1000.0) if nt > 1 else 0.0,
     )
     for nome, a in [("slw_col", slw_col), ("liq_col", liq_col), ("gelo_col", gelo_col), ("rain", s["rain"][:, 0] * 10)]:
         np.save(os.path.join(d, "campo_%s.npy" % nome), a.astype(np.float32))
