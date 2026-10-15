@@ -1,0 +1,56 @@
+--- C:/Users/haas/github/CM1/src/init_surface.F	2026-06-12 16:06:02.785658000 -0300
++++ cm1_build/src/init_surface.F	2026-10-13 22:31:56.815212500 -0300
+@@ -33,6 +33,7 @@
+ 
+       integer :: i,j,k,l
+       real :: x1,x2,xcoast
++      real, allocatable, dimension(:,:) :: sfc5
+ 
+ !-----------------------------------------------------------------------
+ !  BEGIN user settings
+@@ -125,6 +126,45 @@
+         enddo
+ 
+ !----------
++!  initsfc = 5 : le tsk, tmn, lu_index e xland de 'sfc_init.dat'
++!  (acesso direto, 4 registros de nx*ny reais de 4 bytes, x mais rapido)
++!  acrescentado para o teste do Lhende Khola (terreno GLO-30, temperatura
++!  de superficie dependente da cota e uso do solo ESA WorldCover)
++
++      ELSEIF( initsfc.eq.5 ) THEN
++
++        allocate( sfc5(nx,ny) )
++        open(unit=74,file='sfc_init.dat',status='old',form='unformatted',   &
++             access='direct',recl=4*nx*ny)
++        read(74,rec=1) ((sfc5(i,j),i=1,nx),j=1,ny)
++        do j=jb,je
++        do i=ib,ie
++          tsk(i,j) = sfc5( min(max(i+myi1-1,1),nx), min(max(j+myj1-1,1),ny) )
++        enddo
++        enddo
++        read(74,rec=2) ((sfc5(i,j),i=1,nx),j=1,ny)
++        do j=jbl,jel
++        do i=ibl,iel
++          tmn(i,j) = sfc5( min(max(i+myi1-1,1),nx), min(max(j+myj1-1,1),ny) )
++        enddo
++        enddo
++        read(74,rec=3) ((sfc5(i,j),i=1,nx),j=1,ny)
++        do j=jbl,jel
++        do i=ibl,iel
++          lu_index(i,j) = nint( sfc5( min(max(i+myi1-1,1),nx), min(max(j+myj1-1,1),ny) ) )
++        enddo
++        enddo
++        read(74,rec=4) ((sfc5(i,j),i=1,nx),j=1,ny)
++        do j=jb,je
++        do i=ib,ie
++          xland(i,j) = sfc5( min(max(i+myi1-1,1),nx), min(max(j+myj1-1,1),ny) )
++        enddo
++        enddo
++        close(unit=74)
++        deallocate( sfc5 )
++        if( myid.eq.0 ) print *,'  initsfc=5: tsk,tmn,lu_index,xland lidos de sfc_init.dat'
++
++!----------
+ !  if initsfc is not 1,2:
+ 
+       ELSEIF( initsfc.ne.1 .and. initsfc.ne.2 )THEN
