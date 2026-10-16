@@ -15,6 +15,8 @@
 | `rodar_caso.sh` | roda um caso num diretório próprio (`execucoes/<caso>`) |
 | `submeter.sh` / `job_cm1.sbatch` | submetem um job Slurm por caso |
 | `coletar.sh` | empacota as saídas concluídas (`--leve`: só figuras, JSON, estatísticas e logs), com SHA-256 |
+| `restaurar.sh` | depois de um reinício do servidor: `source restaurar.sh` no terminal (exporta `RCLONE_CONFIG`, PATH, refaz links do Claude Code, verifica Drive, `cm1.exe` e fila) |
+| `relatorio.sh` | `bash relatorio.sh [--enviar]`: gera `relatorio_vlab.txt` (estado das execuções, para verificação) e o manda ao Drive |
 | `gdrive.sh` | cache no Google Drive via rclone: `instalar`, `configurar`, `importar`, `estado`, `baixar`, `enviar [--completo]` |
 | `devolver_github.sh` | alternativa: sobe os pacotes para um GitHub Release (via `gh`; o login é seu; público) |
 | `toro_cm1_vlab.ipynb` | notebook com todas as etapas, para o Jupyter do vlab |

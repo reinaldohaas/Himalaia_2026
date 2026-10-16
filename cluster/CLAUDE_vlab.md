@@ -19,6 +19,8 @@ Você está no contêiner do **vlab/UFSC** (JupyterHub), rodando o pacote `toro_
 
 ## Fluxo
 
+Ao começar uma sessão (sobretudo depois de um reinício): `source restaurar.sh`. Isso exporta o `RCLONE_CONFIG` persistente; sem ele, o `rclone` lê um arquivo antigo em `/root` e pede senha. Para o pesquisador verificar o seu trabalho: `bash relatorio.sh --enviar`.
+
 ```bash
 cd /home/jovyan/privado/mesoescala-montanhas/toro_cm1_lhende
 bash compilar.sh                 # se cm1/run/cm1.exe nao existir ou o ambiente mudou
