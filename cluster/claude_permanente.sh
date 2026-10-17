@@ -168,6 +168,10 @@ while true; do
   { echo "estado_vlab  \$(date -u +%FT%TZ)  host=\$(hostname)  (sentinela a cada $INTERVALO s)"
     echo "== Claude (tmux '$SESSAO')"; bash claude_permanente.sh estado 2>&1
     echo; echo "== CM1 (rodar_direto.sh estado)"; bash rodar_direto.sh estado 2>&1
+    echo; echo "== SHA-256 das estatisticas e campos 3D de cada execucao (concluidas)"
+    for d in execucoes/*/; do grep -qs "Program terminated normally" "\$d/cm1.print.out" || continue
+      [ "\$d/sha256.txt" -nt "\$d/cm1out_s.dat" ] || sha256sum "\$d"cm1out_stats.dat "\$d"cm1out_s.dat > "\$d/sha256.txt" 2>/dev/null   # calcula 1 vez
+      cat "\$d/sha256.txt"; done
   } > "\$O" 2>&1
   rclone copyto "\$O" gdrive:vlab_cache/Himalaia_2026/saida/toro_cm1_lhende/ao_vivo/estado_vlab.txt 2>&1 | grep -v client_id >> "$AQUI/logs/sentinela.log"
   sleep $INTERVALO
