@@ -141,7 +141,15 @@ LACO
   mandar)
     shift; MSG="$*"; [ -n "$MSG" ] || { echo "uso: bash claude_permanente.sh mandar \"texto\"" >&2; exit 1; }
     ativar_tmux && tmux has-session -t "$SESSAO" 2>/dev/null || { echo "sessao '$SESSAO' nao existe" >&2; exit 1; }
-    tmux send-keys -t "$SESSAO" -l "$MSG"; sleep 0.5; tmux send-keys -t "$SESSAO" Enter
+    tmux send-keys -t "$SESSAO" -l "$MSG"; sleep 1.5; tmux send-keys -t "$SESSAO" Enter
+    # texto longo chega como "colagem" e o Enter pode se perder: se o inicio da mensagem ainda estiver na
+    # caixa de entrada (linha "❯ ..."), aperta Enter de novo (ate 3 vezes)
+    INI="${MSG:0:30}"
+    for k in 1 2 3; do
+      sleep 2
+      tmux capture-pane -p -t "$SESSAO" | grep -v '^[[:space:]]*$' | tail -4 | grep -F "❯ $INI" >/dev/null || break
+      tmux send-keys -t "$SESSAO" Enter; echo "(Enter repetido: $k)"
+    done
     echo "enviado. Veja a resposta em alguns segundos: bash claude_permanente.sh tela"
     ;;
   reparar)

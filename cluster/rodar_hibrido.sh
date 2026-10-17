@@ -37,6 +37,9 @@ K="$AQUI/kit_mpi"
 [ -d "$AQUI/casos/rad_06utc_2h" ] || { cp -r "$AQUI/casos/rad_06utc" "$AQUI/casos/rad_06utc_2h"
   sed -i -E 's/^( timax +=).*/\1 7200.0,/' "$AQUI/casos/rad_06utc_2h/namelist.input"; }
 grep -q "timax *= *7200.0" "$AQUI/casos/rad_06utc_2h/namelist.input" || { echo "ERRO: casos/rad_06utc_2h sem timax 7200" >&2; exit 1; }
+# o rodar_direto.sh so aceita casos do casos.txt; grupo proprio ("teste") para nao entrar no grupo "rad"
+grep -q "^rad_06utc_2h " "$AQUI/casos.txt" || \
+  printf '%-27s %-8s %4s  %-11s  %-4s %s\n' rad_06utc_2h teste 16 04:00:00 8G "teste hibrido: rad_06utc so 2 h (rodar_hibrido.sh)" >> "$AQUI/casos.txt"
 
 mkdir -p "$AQUI/logs"
 NC=$(nproc)
