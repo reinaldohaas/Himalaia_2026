@@ -1,0 +1,84 @@
+relatorio_vlab  2026-10-17T03:03:37Z  host=b7f5e037882e
+== pacote: b88b1288cc6cdc9b  manifesto:
+   (linhas acima = arquivos do pacote alterados; vazio = entradas intactas)
+== recursos
+host: b7f5e037882e
+nproc: 224   nucleos efetivos (cgroup): 224
+               total        used        free      shared  buff/cache   available
+Mem:            2015        1337         289          18         388         639
+limite de memoria (/sys/fs/cgroup/memory.max): max
+datastore/usuarios   26T   19T  7.2T  73% /home/jovyan/privado
+sbatch: NAO disponivel nesta sessao -> use rodar_direto.sh
+== cm1.exe
+db1835ed2731539755b45fce93a4bf2913443082a08c2013f8778dae898663ab  cm1/run/cm1.exe
+ENV_PREFIX=/home/jovyan/privado/conda_envs/cm1
+== fila
+nenhuma fila rodando
+== /home/jovyan/privado/mesoescala-montanhas/toro_cm1_lhende/logs/direto_20261016_211453.log
+ timax = 54000.0,
+ tapfrq = 1800.0,
+ ptype = 27,
+ radopt = 2,
+ initsfc = 5,
+fim=2026-10-17T00:58:18Z  rc=0  parede=4699s  ultima_linha= Program terminated normally
+[2026-10-17T00:58:18Z] fim rad_12utc rc=0
+[2026-10-17T00:58:18Z] fila concluida
+  rad_06utc                    concluido
+      modelo: 75600 s de 75600 (100.0%) = 21.00 h de 21.00 h  | relogio 5.81 h | ritmo 3.61 s modelo/s
+  rad_12utc                    concluido
+      modelo: 54000 s de 54000 (100.0%) = 15.00 h de 15.00 h  | relogio 3.39 h | ritmo 4.42 s modelo/s
+  rad_12utc_teste              concluido
+      modelo: 120 s de 120 (100.0%) = 0.03 h de 0.03 h  | relogio 23.23 h | ritmo 0.00 s modelo/s
+== execucoes/rad_06utc/
+caso=rad_06utc  dir=/home/jovyan/privado/mesoescala-montanhas/toro_cm1_lhende/execucoes/rad_06utc  host=b7f5e037882e  threads=16  inicio=2026-10-16T21:14:53Z
+exe sha256=db1835ed2731539755b45fce93a4bf2913443082a08c2013f8778dae898663ab
+ nx = 80,
+ ny = 80,
+ nz = 64,
+ terrain_flag = .true.,
+ timax = 75600.0,
+ tapfrq = 1800.0,
+ ptype = 27,
+ radopt = 2,
+ initsfc = 5,
+fim=2026-10-16T23:39:59Z  rc=0  parede=8706s  ultima_linha= Program terminated normally
+
+ Program terminated normally
+    2404147200 execucoes/rad_06utc//cm1out_s.dat
+    514488 execucoes/rad_06utc//cm1out_stats.dat
+== execucoes/rad_12utc/
+caso=rad_12utc  dir=/home/jovyan/privado/mesoescala-montanhas/toro_cm1_lhende/execucoes/rad_12utc  host=b7f5e037882e  threads=16  inicio=2026-10-16T23:39:59Z
+exe sha256=db1835ed2731539755b45fce93a4bf2913443082a08c2013f8778dae898663ab
+ nx = 80,
+ ny = 80,
+ nz = 64,
+ terrain_flag = .true.,
+ timax = 54000.0,
+ tapfrq = 1800.0,
+ ptype = 27,
+ radopt = 2,
+ initsfc = 5,
+fim=2026-10-17T00:58:18Z  rc=0  parede=4699s  ultima_linha= Program terminated normally
+
+ Program terminated normally
+    1733222400 execucoes/rad_12utc//cm1out_s.dat
+    367608 execucoes/rad_12utc//cm1out_stats.dat
+== execucoes/rad_12utc_teste/
+caso=rad_12utc  dir=/home/jovyan/privado/mesoescala-montanhas/toro_cm1_lhende/execucoes/rad_12utc_teste  host=b7f5e037882e  threads=16  inicio=2026-10-16T03:49:39Z
+exe sha256=db1835ed2731539755b45fce93a4bf2913443082a08c2013f8778dae898663ab
+ nx = 80,
+ ny = 80,
+ nz = 64,
+ terrain_flag = .true.,
+ timax = 120.0,
+ tapfrq = 60.0,
+ ptype = 27,
+ radopt = 2,
+ initsfc = 5,
+fim=2026-10-16T03:50:05Z  rc=0  parede=26s  ultima_linha= Program terminated normally
+
+ Program terminated normally
+    167731200 execucoes/rad_12utc_teste//cm1out_s.dat
+    1224 execucoes/rad_12utc_teste//cm1out_stats.dat
+== MUDANCAS.md
+(nao existe)
