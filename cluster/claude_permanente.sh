@@ -128,7 +128,10 @@ LACO
       echo "---- tela (ultimas 25 linhas) ----"
       TELA=$(tmux capture-pane -p -t "$SESSAO" 2>/dev/null | grep -v '^[[:space:]]*$' | tail -n 25 || true)
       [ -n "$TELA" ] && echo "$TELA" || echo "(tela vazia: o Claude pode estar abrindo; ou use: tmux attach -t $SESSAO)"
-    else echo "sessao '$SESSAO': NAO existe (rode: bash claude_permanente.sh iniciar)"; fi
+    else echo "sessao '$SESSAO': NAO existe (rode: bash claude_permanente.sh iniciar)"
+      echo "  ultimos eventos do laco:"; tail -n 4 "$AQUI/logs/claude_permanente.log" 2>/dev/null | sed 's/^/    /' || echo "    (sem log: nunca foi iniciada aqui)"
+      tail -n 2 "$AQUI/logs/claude_parar.log" 2>/dev/null | sed 's/^/    /' || true
+    fi
     exit 0 ;;
   tela)
     ativar_tmux || { echo "sem tmux"; exit 0; }
@@ -176,6 +179,7 @@ SENT
   parar_sentinela)
     ativar_tmux && tmux kill-session -t sentinela 2>/dev/null && echo "sentinela encerrada" || echo "nao havia sentinela" ;;
   parar)
+    mkdir -p "$AQUI/logs"; echo "[$(date -u +%FT%TZ)] parar pedido (por: ${SUDO_USER:-$USER}, terminal: $(tty 2>/dev/null || echo notebook))" >> "$AQUI/logs/claude_parar.log"
     ativar_tmux && tmux kill-session -t "$SESSAO" 2>/dev/null && echo "sessao '$SESSAO' encerrada" || echo "nao havia sessao '$SESSAO'" ;;
   *) sed -n '2,17p' "$0" ;;
 esac
