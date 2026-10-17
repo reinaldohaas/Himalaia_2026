@@ -1,0 +1,29 @@
+cm1out_s:
+  t=0: IDENTICO   [ignorados: z0t(6305 pts, max|d|=0.0001), z0q(775 pts, max|d|=3.6)]
+  t=1: IDENTICO   [ignorados: z0t(6305 pts, max|d|=9.01e-05), z0q(775 pts, max|d|=3.6)]
+  t=2: IDENTICO   [ignorados: z0t(6305 pts, max|d|=6.37e-05), z0q(775 pts, max|d|=3.6)]
+  t=3: IDENTICO   [ignorados: z0t(6305 pts, max|d|=6.5e-05), z0q(775 pts, max|d|=3.6)]
+  t=4: IDENTICO   [ignorados: z0t(6305 pts, max|d|=5.13e-05), z0q(775 pts, max|d|=3.6)]
+  -> 5 saidas comparadas: IDENTICAS
+cm1out_u:
+  t=0: IDENTICO
+  t=1: IDENTICO
+  t=2: IDENTICO
+  t=3: IDENTICO
+  t=4: IDENTICO
+  -> 5 saidas comparadas: IDENTICAS
+cm1out_v:
+  t=0: IDENTICO
+  t=1: IDENTICO
+  t=2: IDENTICO
+  t=3: IDENTICO
+  t=4: IDENTICO
+  -> 5 saidas comparadas: IDENTICAS
+cm1out_w:
+  t=0: IDENTICO
+  t=1: IDENTICO
+  t=2: IDENTICO
+  t=3: IDENTICO
+  t=4: IDENTICO
+  -> 5 saidas comparadas: IDENTICAS
+RESULTADO: BIT A BIT IDENTICO (exceto diagnosticos z0t/z0q)

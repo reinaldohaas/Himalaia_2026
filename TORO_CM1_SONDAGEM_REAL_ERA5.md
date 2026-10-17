@@ -354,3 +354,40 @@ Consequências:
 2. **A divergência da §9.2 vinha do executável:** o gfortran do conda no vlab, as bibliotecas e, possivelmente, as 16 threads. Não era física. O processador está descartado como causa.
 3. **O vlab fica validado** para as próximas rodadas, por exemplo com resolução maior, desde que usem o mesmo executável e o mesmo kit de bibliotecas, e um número de threads fixado e registrado. Ainda não foi testado se mudar só o número de threads altera os bits; até isso ser testado, comparações bit a bit exigem as mesmas threads.
 4. Fica de pé a observação da §9.6: nesta configuração, diferenças de último bit crescem até fatores de 2–5 em poucas horas. A reprodutibilidade garante que uma rodada pode ser refeita, mas **não** dispensa um conjunto de rodadas com perturbações para estimar a incerteza dos números.
+
+### 9.8 Teste híbrido MPI 16 × OpenMP 7 no vlab (17/10/2026)
+
+**Objetivo:** saber se o CM1 com MPI dá os mesmos campos que as rodadas em que confiamos. A 100 m, o OpenMP sozinho não basta, e só vale aumentar a resolução se a paralelização não mudar a física.
+
+**Kit `kit_mpi_hibrido.tar.gz`** (`cluster/montar_kit_mpi.sh`, `mpi_kit.sh`, `rodar_hibrido.sh`, `comparar_bits.py`, `ORDEM_hibrido_16x7.md`):
+* **Executável híbrido** `37f99192…`, compilado com `mpif90` + OpenMP (gfortran 13.3), do mesmo código e com as mesmas opções da referência.
+* **Bibliotecas:** OpenMPI 4.1.6, PMIx 5.0.1, hwloc, libevent e a glibc 2.39 da máquina de referência.
+* **Execução:** o `orterun` e cada rank sobem pelo carregador do kit, então nada do sistema do vlab entra. Verificado com `LD_DEBUG`, o kit não carrega nenhuma biblioteca do sistema.
+* **Ajustes para que o kit fique isolado:**
+  * o hwloc roda sem plugins;
+  * o caminho dos plugins do PMIx, compilado na biblioteca, foi trocado por outro de mesmo tamanho na cópia do kit;
+  * o lançador de máquina única (`plm isolated`) substitui o `rsh`, porque o contêiner não tem `ssh` nem `rsh`.
+
+**Resultado, `rad_06utc` nas 2 primeiras horas** (saídas de 0, 30, 60, 90 e 120 min), comparada variável a variável e bit a bit com a `rad_06utc_repro` (§9.7):
+
+| | Reprodução no vlab (`rad_06utc_repro`) | Híbrido no vlab (`rad_06utc_2h_hib16x7`) |
+| :--- | :--- | :--- |
+| Executável | `3a53a5d8…` (só OpenMP) | `37f99192…` (MPI + OpenMP) |
+| Paralelização | 8 threads | 16 ranks (subdomínios 4 × 4) × 7 threads = 112 núcleos |
+| `cm1out_s` (θ, pressão, água, gelo, chuva, …) | — | **idêntico** nas 5 saídas |
+| `cm1out_u`, `cm1out_v`, `cm1out_w` | — | **idênticos** nas 5 saídas |
+| Ritmo | 13,5 s de modelo / s | **54,6 s de modelo / s (~4×)**; 2 h de modelo em 132 s |
+
+**`RESULTADO: BIT A BIT IDENTICO (exceto diagnosticos z0t/z0q)`**
+
+* **`z0t` e `z0q`** (comprimentos de rugosidade para calor e umidade) diferem em todas as comparações, inclusive em t = 0. Eles são diagnósticos de saída com memória não inicializada em parte da grade: NaN numa rodada, lixo desnormalizado noutra. A diferença fica constante de t = 0 a t = 4 enquanto todos os outros campos continuam idênticos, o que mostra que não realimentam o modelo. O `comparar_bits.py` os lista à parte.
+* **`cm1out_stats.dat` não serve para comparar MPI com OpenMP.** As médias do domínio são somadas por rank, em outra ordem de soma.
+* **Teste prévio, incompleto, no computador de referência:** 16 ranks × 1 thread também deram campos idênticos à referência local nas duas primeiras saídas (0 e 30 min), com a mesma exceção de `z0t`/`z0q`. Esse teste foi interrompido.
+
+**Consequências:**
+1. Com o mesmo código e o mesmo conjunto de bibliotecas, **nem a decomposição MPI nem o número de threads mudam os bits**: 8 threads e 16 × 7 dão o mesmo resultado. Isso responde ao item 3 da §9.7.
+2. O vlab pode rodar o CM1 com MPI, a uma velocidade cerca de 4 vezes maior, usando metade dos 224 núcleos, **sem mudar a física** em relação à rodada local de referência. Esse é o caminho para a resolução de 100 m.
+3. Ressalvas:
+   * a identidade foi verificada em 2 h de modelo, não nas 21 h;
+   * um executável compilado de outro jeito (outro compilador, outras opções, outras bibliotecas) volta a exigir esse teste;
+   * a 100 m, a grade e o passo de tempo mudam, e a rodada será outra simulação. O teste garante a ferramenta, não o resultado físico em outra resolução.

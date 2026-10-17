@@ -1,0 +1,11 @@
+hibrido  2026-10-17T22:55:42Z  host=b7f5e037882e  NP=16  T=7  BIND=core  nucleos=224  teste=1
+exe: 37f9919253a2b25546a892cb9302fb1cac36cdddb6e5178dcfdcc060d6ee4469  /home/jovyan/privado/Himalaia_2026/toro_cm1_lhende/kit_mpi/cm1.exe
+kit_mpi montado 2026-10-17T21:21:19Z em Note-Dell
+exe: 37f9919253a2b25546a892cb9302fb1cac36cdddb6e5178dcfdcc060d6ee4469
+glibc: ldd (Ubuntu GLIBC 2.39-0ubuntu8.9) 2.39
+OpenMPI: 4.1.6-7ubuntu2  PMIx: 5.0.1-4.1build1
+bibliotecas: 42  plugins MCA: 121
+Model name:                              Intel(R) Xeon(R) Platinum 8480C
+Thread(s) per core:                      2
+Core(s) per socket:                      56
+Socket(s):                               2

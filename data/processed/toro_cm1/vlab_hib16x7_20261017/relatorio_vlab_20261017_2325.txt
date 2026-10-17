@@ -1,0 +1,168 @@
+relatorio_vlab  2026-10-17T23:25:52Z  host=b7f5e037882e
+== pacote: 15c3026ab2e802ba  manifesto:
+./casos.txt: FAILED
+./claude_permanente.sh: FAILED
+sha256sum: WARNING: 2 computed checksums did NOT match
+   (linhas acima = arquivos do pacote alterados; vazio = entradas intactas)
+== recursos
+host: b7f5e037882e
+nproc: 224   nucleos efetivos (cgroup): 224
+               total        used        free      shared  buff/cache   available
+Mem:            2015        1249         314           1         451         743
+limite de memoria (/sys/fs/cgroup/memory.max): max
+datastore/usuarios   26T   19T  7.2T  73% /home/jovyan/privado
+sbatch: NAO disponivel nesta sessao -> use rodar_direto.sh
+== cm1.exe
+db1835ed2731539755b45fce93a4bf2913443082a08c2013f8778dae898663ab  cm1/run/cm1.exe
+ENV_PREFIX=/home/jovyan/privado/conda_envs/cm1
+== fila
+nenhuma fila rodando
+== /home/jovyan/privado/Himalaia_2026/toro_cm1_lhende/logs/direto_20261017_232241.log
+ timax = 7200.0,
+ tapfrq = 1800.0,
+ ptype = 27,
+ radopt = 2,
+ initsfc = 5,
+fim=2026-10-17T23:24:53Z  rc=0  parede=132s  ultima_linha=Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+[2026-10-17T23:24:53Z] fim rad_06utc_2h rc=0
+[2026-10-17T23:24:53Z] fila concluida
+  rad_06utc                    concluido
+      modelo: 75600 s de 75600 (100.0%) = 21.00 h de 21.00 h  | relogio 2.42 h | ritmo 8.68 s modelo/s
+  rad_06utc_2h_hib16x7         concluido
+      modelo: 7200 s de 7200 (100.0%) = 2.00 h de 2.00 h  | relogio 0.04 h | ritmo 54.55 s modelo/s
+  rad_06utc_2h_hib16x7_teste   concluido
+      modelo: 120 s de 120 (100.0%) = 0.03 h de 0.03 h  | relogio 0.00 h | ritmo 20.00 s modelo/s
+  rad_06utc_repro              concluido
+      modelo: 75600 s de 75600 (100.0%) = 21.00 h de 21.00 h  | relogio 1.56 h | ritmo 13.47 s modelo/s
+  rad_06utc_repro_teste        concluido
+      modelo: 120 s de 120 (100.0%) = 0.03 h de 0.03 h  | relogio 0.00 h | ritmo 12.00 s modelo/s
+  rad_12utc                    concluido
+      modelo: 54000 s de 54000 (100.0%) = 15.00 h de 15.00 h  | relogio 1.31 h | ritmo 11.49 s modelo/s
+  rad_12utc_teste              concluido
+      modelo: 120 s de 120 (100.0%) = 0.03 h de 0.03 h  | relogio 0.01 h | ritmo 4.62 s modelo/s
+== execucoes/rad_06utc/
+caso=rad_06utc  dir=/home/jovyan/privado/mesoescala-montanhas/toro_cm1_lhende/execucoes/rad_06utc  host=b7f5e037882e  threads=16  inicio=2026-10-16T21:14:53Z
+exe sha256=db1835ed2731539755b45fce93a4bf2913443082a08c2013f8778dae898663ab
+ nx = 80,
+ ny = 80,
+ nz = 64,
+ terrain_flag = .true.,
+ timax = 75600.0,
+ tapfrq = 1800.0,
+ ptype = 27,
+ radopt = 2,
+ initsfc = 5,
+fim=2026-10-16T23:39:59Z  rc=0  parede=8706s  ultima_linha= Program terminated normally
+
+ Program terminated normally
+    2404147200 execucoes/rad_06utc//cm1out_s.dat
+    514488 execucoes/rad_06utc//cm1out_stats.dat
+== execucoes/rad_06utc_2h_hib16x7/
+caso=rad_06utc_2h  dir=/home/jovyan/privado/Himalaia_2026/toro_cm1_lhende/execucoes/rad_06utc_2h_hib16x7  host=b7f5e037882e  threads=7  inicio=2026-10-17T23:22:41Z
+exe sha256=37f9919253a2b25546a892cb9302fb1cac36cdddb6e5178dcfdcc060d6ee4469  runner=bash /home/jovyan/privado/Himalaia_2026/toro_cm1_lhende/mpi_kit.sh
+ nx = 80,
+ ny = 80,
+ nz = 64,
+ terrain_flag = .true.,
+ timax = 7200.0,
+ tapfrq = 1800.0,
+ ptype = 27,
+ radopt = 2,
+ initsfc = 5,
+fim=2026-10-17T23:24:53Z  rc=0  parede=132s  ultima_linha=Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+    279552000 execucoes/rad_06utc_2h_hib16x7//cm1out_s.dat
+    49368 execucoes/rad_06utc_2h_hib16x7//cm1out_stats.dat
+== execucoes/rad_06utc_2h_hib16x7_teste/
+caso=rad_06utc_2h  dir=/home/jovyan/privado/Himalaia_2026/toro_cm1_lhende/execucoes/rad_06utc_2h_hib16x7_teste  host=b7f5e037882e  threads=7  inicio=2026-10-17T23:21:38Z
+exe sha256=37f9919253a2b25546a892cb9302fb1cac36cdddb6e5178dcfdcc060d6ee4469  runner=bash /home/jovyan/privado/Himalaia_2026/toro_cm1_lhende/mpi_kit.sh
+ nx = 80,
+ ny = 80,
+ nz = 64,
+ terrain_flag = .true.,
+ timax = 120.0,
+ tapfrq = 60.0,
+ ptype = 27,
+ radopt = 2,
+ initsfc = 5,
+fim=2026-10-17T23:21:44Z  rc=0  parede=6s  ultima_linha=Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+    167731200 execucoes/rad_06utc_2h_hib16x7_teste//cm1out_s.dat
+    1224 execucoes/rad_06utc_2h_hib16x7_teste//cm1out_stats.dat
+== execucoes/rad_06utc_repro/
+caso=rad_06utc  dir=/home/jovyan/privado/mesoescala-montanhas/toro_cm1_lhende/execucoes/rad_06utc_repro  host=b7f5e037882e  threads=8  inicio=2026-10-17T18:27:58Z
+exe sha256=3a53a5d89e83ab52a26b3863f129ce045cb70c235f7c49e4acbee89174c432a6  runner=/home/jovyan/privado/mesoescala-montanhas/toro_cm1_lhende/reproducao/lib/ld-linux-x86-64.so.2 --library-path /home/jovyan/privado/mesoescala-montanhas/toro_cm1_lhende/reproducao/lib
+ nx = 80,
+ ny = 80,
+ nz = 64,
+ terrain_flag = .true.,
+ timax = 75600.0,
+ tapfrq = 1800.0,
+ ptype = 27,
+ radopt = 2,
+ initsfc = 5,
+fim=2026-10-17T20:01:29Z  rc=0  parede=5611s  ultima_linha= Program terminated normally
+
+ Program terminated normally
+    2404147200 execucoes/rad_06utc_repro//cm1out_s.dat
+    514488 execucoes/rad_06utc_repro//cm1out_stats.dat
+== execucoes/rad_06utc_repro_teste/
+caso=rad_06utc  dir=/home/jovyan/privado/mesoescala-montanhas/toro_cm1_lhende/execucoes/rad_06utc_repro_teste  host=b7f5e037882e  threads=8  inicio=2026-10-17T18:27:25Z
+exe sha256=3a53a5d89e83ab52a26b3863f129ce045cb70c235f7c49e4acbee89174c432a6  runner=/home/jovyan/privado/mesoescala-montanhas/toro_cm1_lhende/reproducao/lib/ld-linux-x86-64.so.2 --library-path /home/jovyan/privado/mesoescala-montanhas/toro_cm1_lhende/reproducao/lib
+ nx = 80,
+ ny = 80,
+ nz = 64,
+ terrain_flag = .true.,
+ timax = 120.0,
+ tapfrq = 60.0,
+ ptype = 27,
+ radopt = 2,
+ initsfc = 5,
+fim=2026-10-17T18:27:35Z  rc=0  parede=10s  ultima_linha= Program terminated normally
+
+ Program terminated normally
+    167731200 execucoes/rad_06utc_repro_teste//cm1out_s.dat
+    1224 execucoes/rad_06utc_repro_teste//cm1out_stats.dat
+== execucoes/rad_12utc/
+caso=rad_12utc  dir=/home/jovyan/privado/mesoescala-montanhas/toro_cm1_lhende/execucoes/rad_12utc  host=b7f5e037882e  threads=16  inicio=2026-10-16T23:39:59Z
+exe sha256=db1835ed2731539755b45fce93a4bf2913443082a08c2013f8778dae898663ab
+ nx = 80,
+ ny = 80,
+ nz = 64,
+ terrain_flag = .true.,
+ timax = 54000.0,
+ tapfrq = 1800.0,
+ ptype = 27,
+ radopt = 2,
+ initsfc = 5,
+fim=2026-10-17T00:58:18Z  rc=0  parede=4699s  ultima_linha= Program terminated normally
+
+ Program terminated normally
+    1733222400 execucoes/rad_12utc//cm1out_s.dat
+    367608 execucoes/rad_12utc//cm1out_stats.dat
+== execucoes/rad_12utc_teste/
+caso=rad_12utc  dir=/home/jovyan/privado/mesoescala-montanhas/toro_cm1_lhende/execucoes/rad_12utc_teste  host=b7f5e037882e  threads=16  inicio=2026-10-16T03:49:39Z
+exe sha256=db1835ed2731539755b45fce93a4bf2913443082a08c2013f8778dae898663ab
+ nx = 80,
+ ny = 80,
+ nz = 64,
+ terrain_flag = .true.,
+ timax = 120.0,
+ tapfrq = 60.0,
+ ptype = 27,
+ radopt = 2,
+ initsfc = 5,
+fim=2026-10-16T03:50:05Z  rc=0  parede=26s  ultima_linha= Program terminated normally
+
+ Program terminated normally
+    167731200 execucoes/rad_12utc_teste//cm1out_s.dat
+    1224 execucoes/rad_12utc_teste//cm1out_stats.dat
+== MUDANCAS.md
+# MUDANCAS.md — mudancas aceitas pelo pesquisador neste pacote (vlab)
+
+## 2026-10-17 — casos.txt: caso rad_06utc_2h (grupo teste)
+* **Pedido:** autorizado pelo pesquisador na conversa.
+* **Motivo:** `rodar_hibrido.sh` cria `casos/rad_06utc_2h/` (copia de rad_06utc com timax=7200), mas `rodar_direto.sh` so aceita casos listados em `casos.txt` ("ERRO: nenhum caso corresponde a: rad_06utc_2h").
+* **Efeito:** uma linha nova em `casos.txt`, grupo `teste` (fora de `rad` e `todos` nao o seleciona por grupo). Nenhuma namelist, sondagem, perts.dat ou sfc_init.dat alterada.
