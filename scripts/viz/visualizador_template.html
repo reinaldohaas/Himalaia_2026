@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lhende Khola 2026 — CM1 e observações</title>
+<style>
+:root{--bg:#f6f5f2;--fg:#1d1f22;--mut:#5d6470;--card:#ffffff;--lin:#d9d6cf;--ac:#1f5fa8;--mod:#1f5fa8;--obs:#b5420f;--ag:#6b4fa3;--vl:#2b8a6e}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#15171a;--fg:#e8e6e1;--mut:#9aa1ab;--card:#1e2125;--lin:#33373d;--ac:#6ea8ff;--mod:#6ea8ff;--obs:#ff8a50;--ag:#b79cf0;--vl:#5fd3ad}}
+:root[data-theme="dark"]{--bg:#15171a;--fg:#e8e6e1;--mut:#9aa1ab;--card:#1e2125;--lin:#33373d;--ac:#6ea8ff;--mod:#6ea8ff;--obs:#ff8a50;--ag:#b79cf0;--vl:#5fd3ad}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+header{padding:14px 18px 6px}
+h1{font-size:19px;margin:0 0 2px}
+.sub{color:var(--mut);font-size:13px}
+main{display:grid;grid-template-columns:minmax(320px,680px) minmax(300px,1fr);gap:14px;padding:8px 18px 18px}
+@media (max-width:980px){main{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--lin);border-radius:10px;padding:12px}
+.ctl{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;margin-bottom:8px}
+.ctl label{font-size:13px;color:var(--mut)}
+select,button,input[type=range]{font:inherit}
+select,button{background:var(--bg);color:var(--fg);border:1px solid var(--lin);border-radius:6px;padding:3px 7px}
+button{cursor:pointer}
+#mapa{width:100%;aspect-ratio:1/1;display:block;border-radius:6px;background:#0d0f12;touch-action:none}
+#hora{font-variant-numeric:tabular-nums;font-weight:600;min-width:150px;display:inline-block}
+#tempo{flex:1;min-width:160px}
+#leitura{font-variant-numeric:tabular-nums;font-size:12.5px;color:var(--mut);min-height:1.4em;margin-top:6px}
+.leg{display:flex;align-items:center;gap:8px;margin-top:6px;font-size:12px;color:var(--mut)}
+.leg canvas{height:12px;width:220px;border-radius:3px}
+.tag{display:inline-block;font-size:11px;padding:1px 6px;border-radius:9px;border:1px solid currentColor;margin-left:4px;vertical-align:1px}
+.t-mod{color:var(--mod)}.t-obs{color:var(--obs)}.t-ag{color:var(--ag)}.t-vl{color:var(--vl)}
+.graf{width:100%;height:170px;display:block}
+.gt{font-size:13px;font-weight:600;margin:10px 0 2px}
+.gt small{font-weight:400;color:var(--mut)}
+details{margin-top:10px}summary{cursor:pointer;color:var(--mut)}
+ul.notas{margin:6px 0 0 18px;padding:0;color:var(--mut);font-size:12.5px}
+.ovl{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:13px}
+</style>
+</head>
+<body>
+<header>
+  <h1>Lhende Khola, 25–26/08/2026 — CM1 e observações</h1>
+  <div class="sub">Domínio de 40 × 40 km centrado no ponto do colapso (85,515 E; 28,271 N), Δx = 500 m. Colapso às 02:52 UTC de 26/08.
+    <span class="tag t-mod">modelo</span><span class="tag t-vl">modelo, 2ª realização</span><span class="tag t-obs">observado</span><span class="tag t-ag">antigravity, reprocessado</span></div>
+</header>
+<main>
+<section class="card">
+  <div class="ctl">
+    <label>Rodada <select id="cenario"></select></label>
+    <label>Campo <select id="campo">
+      <option value="rain">chuva acumulada (mm)</option>
+      <option value="slw">água líquida T&lt;0 °C na coluna (g/m²)</option>
+      <option value="gelo">gelo na coluna (g/m²)</option>
+      <option value="tb">topo de nuvem equivalente IR (K)</option>
+      <option value="nenhum">— nenhum —</option>
+    </select></label>
+    <label>Opacidade <input id="opac" type="range" min="0" max="1" step="0.05" value="0.8"></label>
+  </div>
+  <div class="ctl">
+    <button id="play" aria-label="animar">▶</button>
+    <input id="tempo" type="range" min="0" max="0" step="1" value="0" aria-label="tempo">
+    <span id="hora"></span>
+  </div>
+  <canvas id="mapa" width="680" height="680"></canvas>
+  <div id="leitura">Passe o cursor sobre o mapa.</div>
+  <div class="leg"><span id="legmin"></span><canvas id="legcv" width="220" height="12"></canvas><span id="legmax"></span><span id="legnome"></span></div>
+  <div class="gt">Camadas de fundo e sobreposições</div>
+  <div class="ovl">
+    <label><input type="radio" name="fundo" value="relevo" checked> relevo do modelo <span class="tag t-mod">GLO-30 suavizado</span></label>
+    <label><input type="radio" name="fundo" value="s2pre"> Sentinel-2 12/08 <span class="tag t-ag">falsa cor</span></label>
+    <label><input type="radio" name="fundo" value="s2pos"> Sentinel-2 16/09 <span class="tag t-ag">falsa cor</span></label>
+  </div>
+  <div class="ovl" style="margin-top:4px">
+    <label><input type="checkbox" id="o_neve"> neve (NDSI &gt; 0,4; amarelo) da imagem de fundo <span class="tag t-ag">S2</span></label>
+    <label><input type="checkbox" id="o_curvas" checked> curvas de nível (500 m)</label>
+    <label><input type="checkbox" id="o_anf" checked> janela do anfiteatro (3 × 3 km)</label>
+    <label><input type="checkbox" id="o_bacia" checked> bacia do antigravity <span class="tag t-ag">GLO-30</span></label>
+    <label><input type="checkbox" id="o_pts" checked> pontos</label>
+  </div>
+  <details><summary>Notas de leitura</summary>
+    <ul class="notas">
+      <li>O CM1 roda num domínio de 40 km com <b>sondagem única</b> da ERA5 e sem forçamento nas bordas; não representa o sistema de mesoescala que o Himawari mostrou chegando.</li>
+      <li><b>Realizações:</b> a "referência" (WSL) e a rodada do vlab foram reproduzidas byte a byte. A "2ª realização" é a primeira rodada do vlab, com outro executável; ela diverge depois de ~1 h e mostra a incerteza de uma rodada única (fatores de 2–5).</li>
+      <li><b>Topo equivalente IR:</b> temperatura do nível em que o condensado acumulado de cima para baixo atinge 15 g/m²; sem nuvem, a temperatura da superfície. É uma aproximação, sem transferência radiativa.</li>
+      <li>Ascendências de 50–67 m/s a menos de 1 km do solo, sobre encostas íngremes, são artefato numérico; elas inflam a chuva e a deposição sobre o anfiteatro em alguns instantes.</li>
+      <li><b>Antigravity:</b> só os dados brutos foram usados, com as correções da verificação (offset −0,1 do Sentinel-2; acumulados da ERA5-Land pelo último passo do dia). As tabelas dele e a "cicatriz" foram descartadas.</li>
+      <li>O ponto do evento no JSON do antigravity fica ~3 km a oeste do ponto do colapso delineado no GLO-30; a bacia dele é a montante desse ponto (0,69 km²).</li>
+    </ul>
+  </details>
+</section>
+<section class="card">
+  <div class="gt">Água líquida T&lt;0 °C sobre o anfiteatro <small>(t; janela de 3 × 3 km)</small></div>
+  <canvas class="graf" id="g_slw"></canvas>
+  <div class="gt">Chuva acumulada <small>(mm) — anfiteatro e domínio, contra o IMERG na célula de 0,1°</small></div>
+  <canvas class="graf" id="g_chuva"></canvas>
+  <div class="gt">Topo sobre o sítio <small>(K) — modelo (equivalente IR) contra o Himawari-9 B13</small></div>
+  <canvas class="graf" id="g_tb"></canvas>
+  <div class="gt">ERA5-Land, agosto de 2026 <small>(célula <span id="celula"></span>) — neve caída e derretimento (mm/dia), espessura de neve (m)</small></div>
+  <canvas class="graf" id="g_era5"></canvas>
+  <div class="sub" id="fontes" style="margin-top:6px"></div>
+</section>
+</main>
+<script id="dados_rad06" type="application/json">/*DADOS_RAD06*/</script>
+<script id="dados_rad12" type="application/json">/*DADOS_RAD12*/</script>
+<script id="dados_obs" type="application/json">/*DADOS_OBS*/</script>
+<script>
+"use strict";
+const $=id=>document.getElementById(id);
+const J=id=>JSON.parse($(id).textContent);
+const CEN={rad06:J("dados_rad06"),rad12:J("dados_rad12")};
+const OBS=J("dados_obs");
+const css=v=>getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const b64u8=s=>Uint8Array.from(atob(s),c=>c.charCodeAt(0));
+for(const c of Object.values(CEN)){
+  const z=b64u8(c.zs_m); c.zs=new Uint16Array(z.buffer);
+  c.q={}; for(const k in c.campos) c.q[k]=c.campos[k].map(b64u8);
+}
+const NOMES={rad06:"início 06 UTC (meio-dia local)",rad12:"início 12 UTC (pôr do sol)"};
+for(const k in CEN){const o=document.createElement("option");o.value=k;o.textContent=NOMES[k];$("cenario").appendChild(o)}
+const val=(c,campo,t,i)=>{const [tipo,lo,hi]=c.escala[campo];let x=c.q[campo][t][i]/255;if(tipo==="sqrt")x=x*x;return lo+(hi-lo)*x};
+const PAL={
+ rain:[[0,[255,255,255,0]],[0.02,[198,219,239,160]],[0.25,[107,174,214,220]],[0.55,[33,113,181,240]],[1,[84,39,143,255]]],
+ slw:[[0,[0,0,0,0]],[0.02,[180,240,255,140]],[0.3,[60,200,255,220]],[0.7,[20,110,230,245]],[1,[10,30,140,255]]],
+ gelo:[[0,[0,0,0,0]],[0.02,[240,240,240,110]],[0.4,[200,200,210,200]],[1,[120,120,140,240]]],
+ tb:[[0,[250,250,255,255]],[0.18,[200,120,220,250]],[0.35,[40,60,200,240]],[0.55,[0,170,220,200]],[0.75,[255,200,60,120]],[1,[160,40,0,90]]]};
+function cor(p,x){x=Math.max(0,Math.min(1,x));for(let i=1;i<p.length;i++){if(x<=p[i][0]){const [a,ca]=p[i-1],[b,cb]=p[i];const f=(x-a)/((b-a)||1);return ca.map((v,j)=>v+(cb[j]-v)*f)}}return p[p.length-1][1]}
+const IMG={};
+function carrega(chave,b64,tinta){return new Promise(r=>{const im=new Image();im.onload=()=>{if(!tinta){IMG[chave]=im;return r()}
+ const c=document.createElement("canvas");c.width=im.width;c.height=im.height;const g=c.getContext("2d");g.drawImage(im,0,0);const d=g.getImageData(0,0,c.width,c.height);
+ for(let k=0;k<d.data.length;k+=4)if(d.data[k+3]){d.data[k]=tinta[0];d.data[k+1]=tinta[1];d.data[k+2]=tinta[2];d.data[k+3]=tinta[3]}g.putImageData(d,0,0);IMG[chave]=c;r()};im.src="data:image/png;base64,"+b64})}
+const S2=OBS.s2;
+Promise.all([carrega("s2pre",S2[0].falsa_cor),carrega("s2pos",S2[1].falsa_cor),carrega("nevepre",S2[0].neve,[255,225,0,210]),carrega("nevepos",S2[1].neve,[255,225,0,210])]).then(desenha);
+const cv=$("mapa"),ctx=cv.getContext("2d"),L=20;
+const px=x=>(x+L)/(2*L)*cv.width, py=y=>(L-y)/(2*L)*cv.height;
+let cen="rad06",campo="rain",t=0;
+function relevo(c){const n=c.nx,img=ctx.createImageData(n,n);let lo=1e9,hi=-1e9;for(const z of c.zs){lo=Math.min(lo,z);hi=Math.max(hi,z)}
+ for(let j=0;j<n;j++)for(let i=0;i<n;i++){const z=c.zs[j*n+i],gx=(c.zs[j*n+Math.min(i+1,n-1)]-c.zs[j*n+Math.max(i-1,0)]),gy=(c.zs[Math.min(j+1,n-1)*n+i]-c.zs[Math.max(j-1,0)*n+i]);
+  const sh=Math.max(0,Math.min(1,0.65+(-gx+gy)/1400)),base=40+170*(z-lo)/(hi-lo),v=base*sh,k=((n-1-j)*n+i)*4;img.data[k]=v*0.95;img.data[k+1]=v;img.data[k+2]=v*1.05;img.data[k+3]=255}
+ return img}
+function campoImg(c){const n=c.nx,img=ctx.createImageData(n,n),[tipo,lo,hi]=c.escala[campo],p=PAL[campo];
+ for(let j=0;j<n;j++)for(let i=0;i<n;i++){let x=c.q[campo][t][j*n+i]/255;if(tipo==="sqrt")x=x*x;
+  let u=x; if(campo==="tb"){const v=lo+(hi-lo)*x;u=(v-185)/(310-185)}
+  const cc=cor(p,u),k=((n-1-j)*n+i)*4;img.data[k]=cc[0];img.data[k+1]=cc[1];img.data[k+2]=cc[2];img.data[k+3]=cc[3]}
+ return img}
+const off=document.createElement("canvas");
+function blit(img,ext,alpha){off.width=img.width;off.height=img.height;off.getContext("2d").putImageData(img,0,0);
+ ctx.save();ctx.globalAlpha=alpha;ctx.imageSmoothingEnabled=false;ctx.drawImage(off,px(ext[0]),py(ext[3]),px(ext[1])-px(ext[0]),py(ext[2])-py(ext[3]));ctx.restore()}
+function curvas(c){const n=c.nx,d=c.dx_km,x0=c.x0_km,Z=(i,j)=>c.zs[j*n+i];ctx.save();ctx.strokeStyle="rgba(255,255,255,.4)";ctx.lineWidth=0.8;ctx.beginPath();
+ for(let z0=3500;z0<=7000;z0+=500)for(let j=0;j<n-1;j++)for(let i=0;i<n-1;i++){
+  const v=[Z(i,j),Z(i+1,j),Z(i+1,j+1),Z(i,j+1)],q=[[0,0],[1,0],[1,1],[0,1]],pts=[];
+  for(let e=0;e<4;e++){const a=v[e],b=v[(e+1)%4];if((a-z0)*(b-z0)<0){const f=(z0-a)/(b-a),A=q[e],B=q[(e+1)%4];pts.push([x0+d*(i+A[0]+f*(B[0]-A[0])),x0+d*(j+A[1]+f*(B[1]-A[1]))])}}
+  for(let k=0;k+1<pts.length;k+=2){ctx.moveTo(px(pts[k][0]),py(pts[k][1]));ctx.lineTo(px(pts[k+1][0]),py(pts[k+1][1]))}}
+ ctx.stroke();ctx.restore()}
+function desenha(){const c=CEN[cen],n=c.nx,ext=[c.x0_km-c.dx_km/2,c.x0_km+c.dx_km*(n-0.5),c.x0_km-c.dx_km/2,c.x0_km+c.dx_km*(n-0.5)];
+ ctx.fillStyle="#0d0f12";ctx.fillRect(0,0,cv.width,cv.height);
+ const fundo=document.querySelector("input[name=fundo]:checked").value;
+ if(fundo==="relevo")blit(relevo(c),ext,1);
+ else{const s=fundo==="s2pre"?S2[0]:S2[1],e=s.ext_km;ctx.drawImage(IMG[fundo],px(e[0]),py(e[3]),px(e[1])-px(e[0]),py(e[2])-py(e[3]));
+  if($("o_neve").checked){const m=IMG[fundo==="s2pre"?"nevepre":"nevepos"];ctx.drawImage(m,px(e[0]),py(e[3]),px(e[1])-px(e[0]),py(e[2])-py(e[3]))}
+  ctx.strokeStyle=css("--ag");ctx.setLineDash([4,3]);ctx.strokeRect(px(e[0]),py(e[3]),px(e[1])-px(e[0]),py(e[2])-py(e[3]));ctx.setLineDash([])}
+ if(campo!=="nenhum")blit(campoImg(c),ext,+$("opac").value);
+ if($("o_curvas").checked)curvas(c);
+ if($("o_bacia").checked){const p=OBS.poligonos.bacia_antigravity;ctx.beginPath();p.forEach((q,i)=>i?ctx.lineTo(px(q[0]),py(q[1])):ctx.moveTo(px(q[0]),py(q[1])));ctx.closePath();ctx.strokeStyle=css("--ag");ctx.lineWidth=1.6;ctx.stroke()}
+ if($("o_anf").checked){ctx.strokeStyle="#ff4d4d";ctx.lineWidth=1.6;ctx.strokeRect(px(-1.5),py(1.5),px(1.5)-px(-1.5),py(-1.5)-py(1.5))}
+ if($("o_pts").checked){ponto(0,0,"#ff4d4d","colapso");const q=OBS.pontos.evento_json_antigravity;ponto(q[0],q[1],css("--ag"),"evento (antigravity)",true)}
+ const h=c.horas_utc[t];$("hora").textContent=fmtH(h);legenda();marcaGraficos(h)}
+function ponto(x,y,col,txt,esq){ctx.beginPath();ctx.arc(px(x),py(y),5,0,7);ctx.fillStyle=col;ctx.fill();ctx.strokeStyle="#fff";ctx.lineWidth=1.2;ctx.stroke();
+ ctx.font="12px system-ui";ctx.fillStyle="#fff";ctx.shadowColor="#000";ctx.shadowBlur=3;ctx.textAlign=esq?"right":"left";ctx.fillText(txt,px(x)+(esq?-8:8),esq?py(y)+16:py(y)-6);ctx.textAlign="left";ctx.shadowBlur=0}
+const fmtH=h=>{const d=h>=24?26:25,hh=Math.floor(h%24),mm=Math.round((h%1)*60);return `${String(d).padStart(2,"0")}/08 ${String(hh).padStart(2,"0")}:${String(mm).padStart(2,"0")} UTC`};
+function legenda(){const lc=$("legcv"),g=lc.getContext("2d");g.clearRect(0,0,220,12);if(campo==="nenhum"){$("legmin").textContent=$("legmax").textContent=$("legnome").textContent="";return}
+ const [tipo,lo,hi]=CEN[cen].escala[campo];for(let i=0;i<220;i++){const x=i/219;let u=campo==="tb"?((lo+(hi-lo)*x)-185)/125:x;const cc=cor(PAL[campo],u);g.fillStyle=`rgba(${cc[0]|0},${cc[1]|0},${cc[2]|0},${Math.max(cc[3],60)/255})`;g.fillRect(i,0,1,12)}
+ $("legmin").textContent=campo==="tb"?lo+" K":"0";$("legmax").textContent=campo==="tb"?hi+" K":(hi+(tipo==="sqrt"?" (escala √)":""));$("legnome").textContent=$("campo").selectedOptions[0].textContent}
+cv.addEventListener("mousemove",ev=>{const r=cv.getBoundingClientRect(),x=(ev.clientX-r.left)/r.width*40-20,y=20-(ev.clientY-r.top)/r.height*40,c=CEN[cen],n=c.nx;
+ const i=Math.floor((x+20)/40*n),j=Math.floor((y+20)/40*n);if(i<0||j<0||i>=n||j>=n)return;const k=j*n+i;
+ const f=v=>v.toFixed(v<10?2:0);
+ $("leitura").textContent=`x ${x.toFixed(1)} km, y ${y.toFixed(1)} km | relevo ${c.zs[k]} m | chuva ${f(val(c,"rain",t,k))} mm | água T<0 °C ${f(val(c,"slw",t,k))} g/m² | gelo ${f(val(c,"gelo",t,k))} g/m² | topo ${val(c,"tb",t,k).toFixed(0)} K`});
+// ---------- graficos ----------
+const G={};
+function eixo(id,x0,x1,y0,y1,opt={}){const c=$(id),r=c.getBoundingClientRect(),dpr=window.devicePixelRatio||1;c.width=r.width*dpr;c.height=r.height*dpr;const g=c.getContext("2d");g.setTransform(dpr,0,0,dpr,0,0);
+ const W=r.width,H=r.height,m={l:46,r:10,t:8,b:22};const X=v=>m.l+(v-x0)/(x1-x0)*(W-m.l-m.r),Y=v=>H-m.b-(v-y0)/(y1-y0)*(H-m.t-m.b);
+ g.font="11px system-ui";g.fillStyle=css("--mut");g.strokeStyle=css("--lin");g.lineWidth=1;
+ const yt=opt.yticks||[y0,(y0+y1)/2,y1];yt.forEach(v=>{g.beginPath();g.moveTo(m.l,Y(v));g.lineTo(W-m.r,Y(v));g.stroke();g.fillText(opt.fy?opt.fy(v):v,4,Y(v)+4)});
+ (opt.xticks||[]).forEach(([v,l])=>{g.fillText(l,X(v)-12,H-6)});
+ return {g,X,Y,W,H,m,x0,x1,id}}
+const XT=[[6,"06"],[9,"09"],[12,"12"],[15,"15"],[18,"18"],[21,"21"],[24,"00"],[27,"03"]];
+function linha(A,xs,ys,col,larg=1.8,tracej){const g=A.g;g.save();g.strokeStyle=col;g.lineWidth=larg;if(tracej)g.setLineDash(tracej);g.beginPath();let on=false;
+ xs.forEach((x,i)=>{const y=ys[i];if(y==null||isNaN(y)||x<A.x0||x>A.x1){on=false;return}on?g.lineTo(A.X(x),A.Y(y)):g.moveTo(A.X(x),A.Y(y));on=true});g.stroke();g.restore()}
+function pontos(A,xs,ys,col){A.g.fillStyle=col;xs.forEach((x,i)=>{if(x<A.x0||x>A.x1)return;A.g.beginPath();A.g.arc(A.X(x),A.Y(ys[i]),3.2,0,7);A.g.fill()})}
+function rotulos(A,itens){let x=A.m.l+6,y=A.m.t+8;A.g.font="11px system-ui";itens.forEach(([txt,col])=>{const w=A.g.measureText(txt).width+28;if(x+w>A.W-4&&x>A.m.l+6){x=A.m.l+6;y+=13}A.g.fillStyle=col;A.g.fillRect(x,y-5,10,3);A.g.fillStyle=css("--fg");A.g.fillText(txt,x+14,y);x+=w})}
+function colapso(A){A.g.save();A.g.strokeStyle="#ff4d4d";A.g.setLineDash([3,3]);A.g.beginPath();A.g.moveTo(A.X(26.87),A.m.t);A.g.lineTo(A.X(26.87),A.H-A.m.b);A.g.stroke();A.g.restore()}
+const SER=OBS.series;
+function sitio(c){const n=c.nx,i=Math.floor(n/2)-1,k=i*n+i;return c.horas_utc.map((_,tt)=>val(c,"tb",tt,k))}
+function anfMedia(c,f){const n=c.nx,ks=[];for(let j=0;j<n;j++)for(let i=0;i<n;i++){const x=c.x0_km+c.dx_km*i,y=c.x0_km+c.dx_km*j;if(Math.abs(x)<=1.5&&Math.abs(y)<=1.5)ks.push(j*n+i)}
+ return c.horas_utc.map((_,tt)=>ks.reduce((s,k)=>s+val(c,f,tt,k),0)/ks.length)}
+function graficos(){const ref=SER[cen+"_ref"],vl=SER[cen+"_vlab"],c=CEN[cen];
+ let mx=Math.max(...ref.slw_anf_t,...vl.slw_anf_t,10);let A=eixo("g_slw",6,27.2,0,mx*1.08,{xticks:XT,fy:v=>v>=1000?(v/1000).toFixed(1)+" mil":v.toFixed(0)});
+ linha(A,ref.hora_utc,ref.slw_anf_t,css("--mod"));linha(A,vl.hora_utc,vl.slw_anf_t,css("--vl"),1.4,[4,3]);colapso(A);rotulos(A,[["referência",css("--mod")],["2ª realização",css("--vl")]]);G.g_slw=A;
+ const im=OBS.imerg;mx=Math.max(...ref.rain_anf,...vl.rain_anf,...im.map(r=>r[3]),2);A=eixo("g_chuva",6,27.2,0,mx*1.08,{xticks:XT,fy:v=>v.toFixed(0)});
+ linha(A,ref.hora_utc,ref.rain_anf,css("--mod"));linha(A,ref.hora_utc,ref.rain_media,css("--mod"),1.2,[2,2]);linha(A,vl.hora_utc,vl.rain_anf,css("--vl"),1.4,[4,3]);
+ linha(A,im.map(r=>r[0]),im.map(r=>r[3]),css("--obs"),2.2);colapso(A);rotulos(A,[["anfiteatro",css("--mod")],["domínio (pontilhado)",css("--mod")],["2ª realização",css("--vl")],["IMERG",css("--obs")]]);G.g_chuva=A;
+ A=eixo("g_tb",6,27.2,190,310,{xticks:XT,yticks:[200,230,260,290],fy:v=>v+" K"});const hs=OBS.himawari;
+ linha(A,c.horas_utc,sitio(c),css("--mod"));pontos(A,hs.map(r=>r[0]),hs.map(r=>r[1]),css("--obs"));colapso(A);rotulos(A,[["modelo, centro do domínio",css("--mod")],["Himawari no sítio",css("--obs")]]);G.g_tb=A;
+ const e=OBS.era5land,nd=e.dias.length;$("celula").textContent=e.celula[0].toFixed(1)+" N, "+e.celula[1].toFixed(1)+" E";
+ const mxE=Math.max(...e.sf.filter(v=>v!=null),...e.smlt.filter(v=>v!=null),1);A=eixo("g_era5",0,nd,0,mxE*1.1,{xticks:[[1,"01"],[8,"08"],[15,"15"],[22,"22"],[26,"26"],[29,"29"]].map(([d,l])=>[d+0.5,l]),fy:v=>v.toFixed(1)});
+ const bw=(A.X(1)-A.X(0))*0.38;e.dias.forEach((d,i)=>{const dia=+d.slice(8,10)+(d.slice(5,7)==="07"?-31:0);const xx=A.X(dia+0.5);
+  if(e.sf[i]!=null){A.g.fillStyle=css("--ag");A.g.fillRect(xx-bw,A.Y(e.sf[i]),bw,A.Y(0)-A.Y(e.sf[i]))}
+  if(e.smlt[i]!=null){A.g.fillStyle=css("--obs");A.g.globalAlpha=.6;A.g.fillRect(xx,A.Y(e.smlt[i]),bw,A.Y(0)-A.Y(e.smlt[i]));A.g.globalAlpha=1}});
+ const sd=e.sde,mxs=Math.max(...sd.filter(v=>v!=null),0.01);linha(A,e.dias.map(d=>+d.slice(8,10)+(d.slice(5,7)==="07"?-31:0)+0.5),sd.map(v=>v==null?null:v/mxs*mxE),css("--fg"),1.4);
+ A.g.save();A.g.strokeStyle="#ff4d4d";A.g.setLineDash([3,3]);A.g.beginPath();A.g.moveTo(A.X(26.1),A.m.t);A.g.lineTo(A.X(26.1),A.H-A.m.b);A.g.stroke();A.g.restore();
+ rotulos(A,[["neve caída",css("--ag")],["derretimento",css("--obs")],[`espessura (máx ${mxs.toFixed(2)} m)`,css("--fg")]]);
+ $("fontes").innerHTML=`Fontes: CM1 r21.1 (este trabalho); Himawari-9 AHI B13 e GPM IMERG V07 Late (processados neste trabalho); ${S2[0].fonte}; ERA5-Land (GRIB baixado pelo antigravity; acumulados recalculados).`;
+ snap()}
+let snaps={};function snap(){for(const k of ["g_slw","g_chuva","g_tb"]){const c=$(k);const s=document.createElement("canvas");s.width=c.width;s.height=c.height;s.getContext("2d").drawImage(c,0,0);snaps[k]=s}}
+function marcaGraficos(h){for(const k of ["g_slw","g_chuva","g_tb"]){const A=G[k];if(!A||!snaps[k])continue;const g=A.g,dpr=window.devicePixelRatio||1;g.save();g.setTransform(1,0,0,1,0,0);g.drawImage(snaps[k],0,0);g.restore();
+ g.save();g.strokeStyle=css("--fg");g.globalAlpha=.5;g.beginPath();g.moveTo(A.X(h),A.m.t);g.lineTo(A.X(h),A.H-A.m.b);g.stroke();g.restore()}}
+// ---------- controles ----------
+function setCen(k){cen=k;const c=CEN[k];$("tempo").max=c.horas_utc.length-1;t=Math.min(t,c.horas_utc.length-1);graficos();desenha()}
+$("cenario").onchange=e=>setCen(e.target.value);$("campo").onchange=e=>{campo=e.target.value;desenha()};$("opac").oninput=desenha;
+$("tempo").oninput=e=>{t=+e.target.value;desenha()};
+document.querySelectorAll("input[name=fundo],#o_neve,#o_curvas,#o_anf,#o_bacia,#o_pts").forEach(el=>el.onchange=desenha);
+let anim=null;$("play").onclick=()=>{if(anim){clearInterval(anim);anim=null;$("play").textContent="▶";return}$("play").textContent="❚❚";
+ anim=setInterval(()=>{t=(t+1)%CEN[cen].horas_utc.length;$("tempo").value=t;desenha()},450)};
+window.addEventListener("resize",()=>{graficos();desenha()});
+setCen("rad06");
+</script>
+</body>
+</html>
