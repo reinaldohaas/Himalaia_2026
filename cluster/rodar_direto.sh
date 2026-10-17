@@ -34,14 +34,17 @@ nucleos() {
 
 # tempo de modelo, %, ritmo e previsao a partir de cm1out_stats (1 registro por statfrq; 1a variavel = mtime)
 progresso() {
-  local d=$1 ctl="$1/cm1out_stats.ctl" dat="$1/cm1out_stats.dat" nv rec n mt tmax ini agora dt fim
+  local d=$1 ctl="$1/cm1out_stats.ctl" dat="$1/cm1out_stats.dat" nv rec n mt tmax ini agora dt fim fimt
   [ -f "$ctl" ] && [ -f "$dat" ] || return 0
   nv=$(sed -n '/^vars/,/^endvars/p' "$ctl" | grep -vcE '^(vars|endvars)')
   rec=$((nv * 4)); n=$(( $(stat -c %s "$dat") / rec )); [ "$n" -ge 1 ] || return 0
   mt=$(od -An -t f4 -j $(( (n - 1) * rec )) -N 4 "$dat" 2>/dev/null | tr -d ' ')
   tmax=$(grep -E '^ *timax' "$d/namelist.input" | head -1 | tr -dc '0-9.,' | cut -d, -f1)
   ini=$(grep -oE 'inicio=[0-9T:-]+Z' "$d/execucao.info" 2>/dev/null | cut -d= -f2)
-  agora=$(date -u +%s); dt=0; [ -n "$ini" ] && dt=$(( agora - $(date -u -d "$ini" +%s) ))
+  agora=$(date -u +%s)
+  fimt=$(grep -oE 'fim=[0-9T:-]+Z' "$d/execucao.info" 2>/dev/null | cut -d= -f2)
+  [ -n "$fimt" ] && agora=$(date -u -d "$fimt" +%s)          # concluida: mede ate o fim, nao ate agora
+  dt=0; [ -n "$ini" ] && dt=$(( agora - $(date -u -d "$ini" +%s) ))
   fim=$(grep -c 'Program terminated normally' "$d/cm1.print.out" 2>/dev/null || true)
   awk -v mt="$mt" -v tm="$tmax" -v dt="$dt" -v fim="${fim:-0}" -f "$AQUI/progresso.awk"
 }
