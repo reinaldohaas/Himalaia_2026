@@ -1,0 +1,12 @@
+caso=rad_06utc  dir=/home/haas/toro_ref/toro_cm1_lhende/execucoes/rad_06utc  host=Note-Dell  threads=8  inicio=2026-10-17T03:42:55Z
+exe sha256=3a53a5d89e83ab52a26b3863f129ce045cb70c235f7c49e4acbee89174c432a6
+ nx = 80,
+ ny = 80,
+ nz = 64,
+ terrain_flag = .true.,
+ timax = 75600.0,
+ tapfrq = 1800.0,
+ ptype = 27,
+ radopt = 2,
+ initsfc = 5,
+fim=2026-10-17T06:36:31Z  rc=0  parede=10416s  ultima_linha= Program terminated normally
