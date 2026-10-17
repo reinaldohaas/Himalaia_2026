@@ -28,7 +28,7 @@ O vlab é um contêiner rodando como `root`, com `HOME=/root`, e **`/root` pode 
 
 | O quê | Onde |
 | :--- | :--- |
-| pacote, execuções, resultados | `/home/jovyan/privado/mesoescala-montanhas/toro_cm1_lhende/` |
+| pacote, execuções, resultados | `/home/jovyan/privado/Himalaia_2026/toro_cm1_lhende/` |
 | ambientes conda (gfortran `cm1`, python/rclone `cm1pos`) | `/home/jovyan/privado/conda_envs/` |
 | configuração do rclone (com o token do Drive) | `/home/jovyan/privado/.config/rclone/rclone.conf` |
 | login do `gh` (alternativa GitHub) | `/home/jovyan/privado/.config/gh/` |
@@ -41,17 +41,17 @@ O `jupyter.vlab.ufsc.br` não oferece scp nem rsync. O fluxo usa um **cache no G
 
 | Lado | Onde |
 | :--- | :--- |
-| seu computador | `G:\Meu Drive\vlab_cache\` (Google Drive para desktop, já sincronizando): `entrada\` → vlab, `saida\` ← vlab |
+| seu computador | `G:\Meu Drive\vlab_cache\Himalaia_2026\` (Google Drive para desktop, já sincronizando): `entrada\` → vlab, `saida\` ← vlab |
 | vlab | `rclone` com o remoto `gdrive:`. O login é feito **no Windows** (`rclone config create gdrive drive scope=drive`); o `rclone.conf` sobe pelo Jupyter para `privado/` e `bash gdrive.sh importar` o instala (ver `bash gdrive.sh configurar`) |
 
-Na **primeira vez** o pacote vem do GitHub (público), porque o `gdrive.sh` ainda não está no vlab. Depois: ponha versões novas em `G:\Meu Drive\vlab_cache\entrada\` e rode `bash gdrive.sh baixar` no vlab; para devolver, `bash gdrive.sh enviar`.
+Na **primeira vez** o pacote vem do GitHub (público), porque o `gdrive.sh` ainda não está no vlab. Depois: ponha versões novas em `G:\Meu Drive\vlab_cache\Himalaia_2026\entrada\` e rode `bash gdrive.sh baixar` no vlab; para devolver, `bash gdrive.sh enviar`.
 
 **Opção A — notebook:** baixe `toro_cm1_vlab.ipynb` (está em `cluster/` no repositório e dentro deste pacote), suba-o pelo botão *Upload* do Jupyter e rode as células em ordem.
 
 **Opção B — terminal do Jupyter** (*File → New → Terminal*):
 
 ```bash
-mkdir -p /home/jovyan/privado/mesoescala-montanhas && cd /home/jovyan/privado/mesoescala-montanhas
+mkdir -p /home/jovyan/privado/Himalaia_2026 && cd /home/jovyan/privado/Himalaia_2026
 URL=https://raw.githubusercontent.com/reinaldohaas/Himalaia_2026/refs/heads/claude/himalaia-enchentes-auditoria-fcfdb5/cluster/toro_cm1_lhende_vlab.tar.gz
 wget -O toro_cm1_lhende_vlab.tar.gz "$URL" && wget -O toro_cm1_lhende_vlab.tar.gz.sha256 "$URL.sha256"
 sha256sum -c toro_cm1_lhende_vlab.tar.gz.sha256
@@ -71,7 +71,7 @@ Ao terminar:
 ```bash
 bash pos/analisar.sh          # figuras e JSON em pos/ (cria o ambiente conda cm1pos se faltar numpy/matplotlib)
 bash coletar.sh --leve        # resultados_cm1_leve_<data>.tar.gz, poucos MB
-bash gdrive.sh enviar         # -> G:\Meu Drive\vlab_cache\saida\toro_cm1_lhende\<data>\  no seu computador
+bash gdrive.sh enviar         # -> G:\Meu Drive\vlab_cache\Himalaia_2026\saida\toro_cm1_lhende\<data>\  no seu computador
 # alternativa sem Drive:  gh auth login && bash devolver_github.sh   (GitHub Release, publico)
 ```
 

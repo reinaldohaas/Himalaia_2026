@@ -36,8 +36,8 @@ if [ -f "$RCLONE_CONFIG" ]; then
   if ! command -v rclone >/dev/null 2>&1 && [ -d "$ENVDIR/cm1pos/bin" ]; then export PATH="$ENVDIR/cm1pos/bin:$PATH"; fi
   if command -v rclone >/dev/null 2>&1; then
     if rclone listremotes 2>/dev/null | grep -qx "gdrive:"; then
-      if rclone lsd gdrive:vlab_cache >/dev/null 2>&1; then echo "== Drive: gdrive:vlab_cache acessivel"
-      else echo "== Drive: remoto existe, mas gdrive:vlab_cache nao respondeu (token vencido ou client_id retirado?)"; fi
+      if rclone lsd gdrive:vlab_cache/Himalaia_2026 >/dev/null 2>&1; then echo "== Drive: gdrive:vlab_cache/Himalaia_2026 acessivel"
+      else echo "== Drive: remoto existe, mas gdrive:vlab_cache/Himalaia_2026 nao respondeu (token vencido ou client_id retirado?)"; fi
     else echo "== Drive: $RCLONE_CONFIG nao tem o remoto gdrive (ver: bash gdrive.sh configurar)"; fi
   else echo "== Drive: rclone nao encontrado (bash gdrive.sh instalar)"; fi
 else echo "== Drive: sem $RCLONE_CONFIG (primeira vez: bash gdrive.sh configurar, depois importar)"; fi

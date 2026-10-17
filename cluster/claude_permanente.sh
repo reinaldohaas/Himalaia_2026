@@ -154,7 +154,7 @@ LACO
     fi
     exit 0 ;;
   sentinela)
-    # a cada INTERVALO s grava o estado (Claude + fila do CM1) em gdrive:vlab_cache/saida/toro_cm1_lhende/ao_vivo/
+    # a cada INTERVALO s grava o estado (Claude + fila do CM1) em gdrive:vlab_cache/Himalaia_2026/saida/toro_cm1_lhende/ao_vivo/
     ativar_tmux || { echo "ERRO: sem tmux (rode instalar)" >&2; exit 1; }
     if tmux has-session -t sentinela 2>/dev/null; then echo "sentinela ja esta rodando"; exit 0; fi
     INTERVALO=${INTERVALO:-600}
@@ -169,12 +169,12 @@ while true; do
     echo "== Claude (tmux '$SESSAO')"; bash claude_permanente.sh estado 2>&1
     echo; echo "== CM1 (rodar_direto.sh estado)"; bash rodar_direto.sh estado 2>&1
   } > "\$O" 2>&1
-  rclone copyto "\$O" gdrive:vlab_cache/saida/toro_cm1_lhende/ao_vivo/estado_vlab.txt 2>&1 | grep -v client_id >> "$AQUI/logs/sentinela.log"
+  rclone copyto "\$O" gdrive:vlab_cache/Himalaia_2026/saida/toro_cm1_lhende/ao_vivo/estado_vlab.txt 2>&1 | grep -v client_id >> "$AQUI/logs/sentinela.log"
   sleep $INTERVALO
 done
 SENT
     tmux new-session -d -s sentinela -c "$AQUI" "bash $S"
-    sleep 1; tmux has-session -t sentinela 2>/dev/null && echo "sentinela iniciada: a cada $INTERVALO s -> gdrive:vlab_cache/saida/toro_cm1_lhende/ao_vivo/estado_vlab.txt"       || { echo "ERRO: a sentinela nao subiu" >&2; exit 1; }
+    sleep 1; tmux has-session -t sentinela 2>/dev/null && echo "sentinela iniciada: a cada $INTERVALO s -> gdrive:vlab_cache/Himalaia_2026/saida/toro_cm1_lhende/ao_vivo/estado_vlab.txt"       || { echo "ERRO: a sentinela nao subiu" >&2; exit 1; }
     ;;
   parar_sentinela)
     ativar_tmux && tmux kill-session -t sentinela 2>/dev/null && echo "sentinela encerrada" || echo "nao havia sentinela" ;;

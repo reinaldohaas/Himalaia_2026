@@ -1,7 +1,7 @@
 #!/bin/bash
 # Cache no Google Drive entre o seu computador e o vlab (via rclone).
 #
-#   No seu computador (Google Drive para desktop): a pasta  G:\Meu Drive\vlab_cache\
+#   No seu computador (Google Drive para desktop): a pasta  G:\Meu Drive\vlab_cache\Himalaia_2026\
 #       entrada\   o que vai PARA o vlab   (pacotes .tar.gz + .sha256)
 #       saida\     o que volta DO vlab     (saida\<projeto>\<data>\...)
 #   No vlab: o remoto rclone "gdrive:" aponta para o mesmo Drive.
@@ -11,18 +11,18 @@
 #   bash gdrive.sh configurar        # mostra como criar o remoto "gdrive" no Windows (o login e SEU)
 #   bash gdrive.sh importar [arq]    # instala o rclone.conf que voce subiu para privado/ e testa
 #   bash gdrive.sh estado            # lista o que ha em entrada/ e saida/
-#   bash gdrive.sh baixar [arquivo]  # entrada/ -> ~/mesoescala-montanhas/  (confere sha256)
+#   bash gdrive.sh baixar [arquivo]  # entrada/ -> ~/Himalaia_2026/  (confere sha256)
 #   bash gdrive.sh enviar [--completo]
 #                                    # pacote leve mais recente (e, com --completo, o completo) -> saida/<projeto>/<data>/
 #
-# Variaveis: REMOTO (padrao gdrive), CACHE (padrao vlab_cache), PROJETO (padrao toro_cm1_lhende),
-#            DESTINO (padrao $PERSIST/mesoescala-montanhas); RCLONE_CONFIG em $PERSIST (ver ambiente.sh)
+# Variaveis: REMOTO (padrao gdrive), CACHE (padrao vlab_cache/Himalaia_2026), PROJETO (padrao toro_cm1_lhende),
+#            DESTINO (padrao $PERSIST/Himalaia_2026); RCLONE_CONFIG em $PERSIST (ver ambiente.sh)
 # Este script nunca le, grava nem imprime token; o token fica no rclone.conf ($RCLONE_CONFIG).
 set -euo pipefail
 AQUI=$(cd "$(dirname "$0")" && pwd)
 source "$AQUI/ambiente.sh"          # PERSIST, ENVDIR, RCLONE_CONFIG (persistentes)
-REMOTO=${REMOTO:-gdrive}; CACHE=${CACHE:-vlab_cache}; PROJETO=${PROJETO:-toro_cm1_lhende}
-DESTINO=${DESTINO:-$PERSIST/mesoescala-montanhas}
+REMOTO=${REMOTO:-gdrive}; CACHE=${CACHE:-vlab_cache/Himalaia_2026}; PROJETO=${PROJETO:-toro_cm1_lhende}
+DESTINO=${DESTINO:-$PERSIST/Himalaia_2026}
 CMD=${1:-ajuda}; shift || true
 
 ativar_rclone() {

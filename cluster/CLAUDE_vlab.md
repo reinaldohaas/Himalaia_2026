@@ -13,7 +13,7 @@ Você está no contêiner do **vlab/UFSC** (JupyterHub), rodando o pacote `toro_
 * O CM1 roda em segundo plano dentro do servidor do Jupyter. Se o servidor for desligado, a rodada morre. Encerrar a sua sessão do Claude **não** a interrompe.
 * **Drive:** o login do Google é feito pelo pesquisador **no Windows**; ele sobe o `rclone.conf` para `privado/` e você roda `bash gdrive.sh importar` (que move o arquivo sem lê-lo). Não tente autenticar daqui.
 * Transferência com o computador do pesquisador:
-  * **Google Drive** via `gdrive.sh`: remoto `gdrive:`, pasta `vlab_cache/{entrada,saida}`;
+  * **Google Drive** via `gdrive.sh`: remoto `gdrive:`, pasta `vlab_cache/Himalaia_2026/{entrada,saida}`;
   * **GitHub** para baixar o pacote (o repositório é **público**).
   * Não há scp nem rsync.
 
@@ -24,7 +24,7 @@ Você está no contêiner do **vlab/UFSC** (JupyterHub), rodando o pacote `toro_
 Ao começar uma sessão (sobretudo depois de um reinício): `source restaurar.sh`. Isso exporta o `RCLONE_CONFIG` persistente; sem ele, o `rclone` lê um arquivo antigo em `/root` e pede senha. Para o pesquisador verificar o seu trabalho: `bash relatorio.sh --enviar`.
 
 ```bash
-cd /home/jovyan/privado/mesoescala-montanhas/toro_cm1_lhende
+cd /home/jovyan/privado/Himalaia_2026/toro_cm1_lhende
 bash compilar.sh                 # se cm1/run/cm1.exe nao existir ou o ambiente mudou
 bash rodar_direto.sh recursos
 bash rodar_direto.sh -t rad_12utc && bash rodar_direto.sh estado
