@@ -334,4 +334,23 @@ O pesquisador pediu que a rodada de referência fosse a local e que o vlab tenta
 * **Não robusto:** uma diferença no último bit no passo 1 vira, depois de algumas horas, fatores de **2 a 5** em gelo, chuva e deposição. Nesta configuração, uma rodada única só informa o qualitativo; números exigem um conjunto de rodadas com perturbações.
 * **Correção da §9.5, item 3:** a maior cota superior de deposição é **1,54 × 10⁶ m³**, na referência local, e não ~0,6 × 10⁶. Isso fica **~9× abaixo** dos 14,2 × 10⁶ m³, e não "20–30×". Esse valor está **inflado por artefato:** entre 20:30 e 21 UTC, quando a deposição da referência mais cresce, há ascendências de 27–28 m/s a ~100 m do solo, em encostas de 32–35°, coladas ao anfiteatro (x = −0,8, y = −2,2 km).
 
-**Reprodução no vlab, pendente:** `kit_reproducao_ref_wsl.tar.gz` leva o executável da referência e toda a glibc e as bibliotecas do compilador da máquina de referência, e roda pelo carregador do kit. Testado aqui, o kit dá resultados idênticos byte a byte aos do sistema. Se a `rad_06utc_repro` do vlab sair idêntica à referência, a divergência da §9.2 era só de compilador e bibliotecas. Se divergir, sobra o processador.
+### 9.7 Reprodução bit a bit no vlab (17/10/2026)
+
+O kit `kit_reproducao_ref_wsl.tar.gz` leva o executável da referência e toda a glibc e as bibliotecas do compilador da máquina de referência (Ubuntu 24.04), e roda pelo carregador do kit. Testado aqui, ele dá resultados idênticos byte a byte aos do sistema.
+
+| | Referência local | Reprodução no vlab (`rad_06utc_repro`) |
+| :--- | :--- | :--- |
+| Processador | Intel i7-12700H (AVX2, FMA) | Intel Xeon Platinum 8480C (AVX2, AVX-512, FMA) |
+| glibc usada | 2.39 (sistema) | 2.39 (do kit; a do sistema é 2.35) |
+| Executável | `3a53a5d8…` | `3a53a5d8…` |
+| Threads | 8 | 8 |
+| Término | 2,89 h, `Program terminated normally` | 1,56 h, `rc=0`, `Program terminated normally` |
+| **SHA-256 de `cm1out_stats.dat`** (514.488 bytes, 1.261 registros) | **`50b79fb3d7091be874a6fe33960ba5a9d49030b17eab38b3e493fc8225b1477a`** | **`50b79fb3d7091be874a6fe33960ba5a9d49030b17eab38b3e493fc8225b1477a`** |
+
+**A reprodução é idêntica byte a byte nas 21 h,** apesar de o processador ser diferente.
+
+Consequências:
+1. Com executável, bibliotecas e threads fixos, o CM1 é **determinístico e portátil entre máquinas**. Não há defeito no modelo nem condição de corrida no OpenMP.
+2. **A divergência da §9.2 vinha do executável:** o gfortran do conda no vlab, as bibliotecas e, possivelmente, as 16 threads. Não era física. O processador está descartado como causa.
+3. **O vlab fica validado** para as próximas rodadas, por exemplo com resolução maior, desde que usem o mesmo executável e o mesmo kit de bibliotecas, e um número de threads fixado e registrado. Ainda não foi testado se mudar só o número de threads altera os bits; até isso ser testado, comparações bit a bit exigem as mesmas threads.
+4. Fica de pé a observação da §9.6: nesta configuração, diferenças de último bit crescem até fatores de 2–5 em poucas horas. A reprodutibilidade garante que uma rodada pode ser refeita, mas **não** dispensa um conjunto de rodadas com perturbações para estimar a incerteza dos números.

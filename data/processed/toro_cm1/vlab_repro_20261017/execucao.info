@@ -1,0 +1,12 @@
+caso=rad_06utc  dir=/home/jovyan/privado/mesoescala-montanhas/toro_cm1_lhende/execucoes/rad_06utc_repro  host=b7f5e037882e  threads=8  inicio=2026-10-17T18:27:58Z
+exe sha256=3a53a5d89e83ab52a26b3863f129ce045cb70c235f7c49e4acbee89174c432a6  runner=/home/jovyan/privado/mesoescala-montanhas/toro_cm1_lhende/reproducao/lib/ld-linux-x86-64.so.2 --library-path /home/jovyan/privado/mesoescala-montanhas/toro_cm1_lhende/reproducao/lib
+ nx = 80,
+ ny = 80,
+ nz = 64,
+ terrain_flag = .true.,
+ timax = 75600.0,
+ tapfrq = 1800.0,
+ ptype = 27,
+ radopt = 2,
+ initsfc = 5,
+fim=2026-10-17T20:01:29Z  rc=0  parede=5611s  ultima_linha= Program terminated normally
