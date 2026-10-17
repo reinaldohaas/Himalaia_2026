@@ -8,6 +8,8 @@
 #   bash claude_permanente.sh mandar "texto"   # digita o texto no Claude e aperta Enter
 #   bash claude_permanente.sh tela [N]     # ultimas N linhas da tela (padrao 60)
 #   bash claude_permanente.sh reparar      # conserta ~/.claude.json invalido e tira o Claude da tela de erro
+#   bash claude_permanente.sh sentinela    # a cada 10 min grava o estado no Drive (saida/.../ao_vivo/estado_vlab.txt)
+#   bash claude_permanente.sh parar_sentinela
 #   bash claude_permanente.sh parar        # encerra a sessao tmux (e o laco de reinicio)
 #
 # Para usar o Claude interativamente: Terminal do Jupyter ->  tmux attach -t claude
@@ -148,6 +150,31 @@ LACO
       fi
     fi
     exit 0 ;;
+  sentinela)
+    # a cada INTERVALO s grava o estado (Claude + fila do CM1) em gdrive:vlab_cache/saida/toro_cm1_lhende/ao_vivo/
+    ativar_tmux || { echo "ERRO: sem tmux (rode instalar)" >&2; exit 1; }
+    if tmux has-session -t sentinela 2>/dev/null; then echo "sentinela ja esta rodando"; exit 0; fi
+    INTERVALO=${INTERVALO:-600}
+    mkdir -p "$AQUI/logs"; S="$AQUI/logs/sentinela.sh"
+    cat > "$S" <<SENT
+#!/bin/bash
+cd "$AQUI"; source restaurar.sh >/dev/null 2>&1
+command -v rclone >/dev/null 2>&1 || export PATH="$ENVDIR/cm1pos/bin:\$PATH"
+while true; do
+  O="$AQUI/logs/estado_vlab.txt"
+  { echo "estado_vlab  \$(date -u +%FT%TZ)  host=\$(hostname)  (sentinela a cada $INTERVALO s)"
+    echo "== Claude (tmux '$SESSAO')"; bash claude_permanente.sh estado 2>&1
+    echo; echo "== CM1 (rodar_direto.sh estado)"; bash rodar_direto.sh estado 2>&1
+  } > "\$O" 2>&1
+  rclone copyto "\$O" gdrive:vlab_cache/saida/toro_cm1_lhende/ao_vivo/estado_vlab.txt 2>&1 | grep -v client_id >> "$AQUI/logs/sentinela.log"
+  sleep $INTERVALO
+done
+SENT
+    tmux new-session -d -s sentinela -c "$AQUI" "bash $S"
+    sleep 1; tmux has-session -t sentinela 2>/dev/null && echo "sentinela iniciada: a cada $INTERVALO s -> gdrive:vlab_cache/saida/toro_cm1_lhende/ao_vivo/estado_vlab.txt"       || { echo "ERRO: a sentinela nao subiu" >&2; exit 1; }
+    ;;
+  parar_sentinela)
+    ativar_tmux && tmux kill-session -t sentinela 2>/dev/null && echo "sentinela encerrada" || echo "nao havia sentinela" ;;
   parar)
     ativar_tmux && tmux kill-session -t "$SESSAO" 2>/dev/null && echo "sessao '$SESSAO' encerrada" || echo "nao havia sessao '$SESSAO'" ;;
   *) sed -n '2,17p' "$0" ;;
