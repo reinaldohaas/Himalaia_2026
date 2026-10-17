@@ -19,7 +19,7 @@ echo "   RCLONE_CONFIG=$RCLONE_CONFIG"
 
 # Claude Code: login e configuracao persistentes
 _R_P="$PERSIST/.claude_persist"
-mkdir -p "$_R_P/.claude"; [ -e "$_R_P/.claude.json" ] || echo '{}' > "$_R_P/.claude.json"
+mkdir -p "$_R_P/.claude"; [ -s "$_R_P/.claude.json" ] || echo '{}' > "$_R_P/.claude.json"   # vazio nao e JSON valido
 for _r_n in .claude .claude.json; do
   if [ -L "$HOME/$_r_n" ]; then :;
   elif [ -e "$HOME/$_r_n" ]; then echo "   AVISO: $HOME/$_r_n existe e nao e link (nao mexi); mova para $_R_P/ se quiser persistir"
