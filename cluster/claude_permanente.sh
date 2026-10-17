@@ -104,12 +104,17 @@ LACO
     ativar_tmux || { echo "sem tmux (rode instalar)"; exit 0; }
     if tmux has-session -t "$SESSAO" 2>/dev/null; then
       echo "sessao '$SESSAO': ATIVA"; tmux list-panes -t "$SESSAO" -F '  processo: #{pane_current_command}  pid #{pane_pid}'
-      tail -n 3 "$AQUI/logs/claude_permanente.log" 2>/dev/null | sed 's/^/  /'
-      echo "---- tela (ultimas 25 linhas) ----"; tmux capture-pane -p -t "$SESSAO" | grep -v '^\s*$' | tail -n 25
+      tail -n 3 "$AQUI/logs/claude_permanente.log" 2>/dev/null | sed 's/^/  /' || true
+      echo "---- tela (ultimas 25 linhas) ----"
+      TELA=$(tmux capture-pane -p -t "$SESSAO" 2>/dev/null | grep -v '^[[:space:]]*$' | tail -n 25 || true)
+      [ -n "$TELA" ] && echo "$TELA" || echo "(tela vazia: o Claude pode estar abrindo; ou use: tmux attach -t $SESSAO)"
     else echo "sessao '$SESSAO': NAO existe (rode: bash claude_permanente.sh iniciar)"; fi
-    ;;
+    exit 0 ;;
   tela)
-    ativar_tmux && tmux capture-pane -p -S -500 -t "$SESSAO" | grep -v '^\s*$' | tail -n "${2:-60}" ;;
+    ativar_tmux || { echo "sem tmux"; exit 0; }
+    tmux has-session -t "$SESSAO" 2>/dev/null || { echo "sessao '$SESSAO' nao existe"; exit 0; }
+    tmux capture-pane -p -S -500 -t "$SESSAO" 2>/dev/null | grep -v '^[[:space:]]*$' | tail -n "${2:-60}" || true
+    exit 0 ;;
   mandar)
     shift; MSG="$*"; [ -n "$MSG" ] || { echo "uso: bash claude_permanente.sh mandar \"texto\"" >&2; exit 1; }
     ativar_tmux && tmux has-session -t "$SESSAO" 2>/dev/null || { echo "sessao '$SESSAO' nao existe" >&2; exit 1; }
