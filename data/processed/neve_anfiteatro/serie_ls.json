@@ -1,0 +1,3304 @@
+[
+{
+"fonte": "ls",
+"id": "LC08_L2SP_141040_20260701_02_T1",
+"datetime": "2026-07-01T04:47:19.468297Z",
+"nuvem_cena_pct": 39.64,
+"plataforma": "landsat-8",
+"wrs": "141/040",
+"regioes": {
+"anfiteatro": {
+"area_total_ha": 340.56,
+"estrita": {
+"frac_obs": 0.005,
+"ndsi_mediana": 0.959,
+"frac_ndsi_gt1": 0.0526,
+"frac_swir_neg": 0.0526,
+"neve_ha_30": 1.71,
+"frac_neve_30": 1.0,
+"neve_ha_42": 1.71,
+"frac_neve_42": 1.0,
+"neve_ha_50": 1.71,
+"frac_neve_50": 1.0
+},
+"branda": {
+"frac_obs": 0.4289,
+"ndsi_mediana": 0.73,
+"frac_ndsi_gt1": 0.0037,
+"frac_swir_neg": 0.0037,
+"neve_ha_30": 141.93,
+"frac_neve_30": 0.9717,
+"neve_ha_42": 141.03,
+"frac_neve_42": 0.9655,
+"neve_ha_50": 137.97,
+"frac_neve_50": 0.9445
+},
+"espectral": {
+"frac_obs": 0.005,
+"ndsi_mediana": 0.959,
+"frac_ndsi_gt1": 0.0526,
+"frac_swir_neg": 0.0526,
+"neve_ha_30": 1.71,
+"frac_neve_30": 1.0,
+"neve_ha_42": 1.71,
+"frac_neve_42": 1.0,
+"neve_ha_50": 1.71,
+"frac_neve_50": 1.0
+}
+},
+"alto_fora": {
+"area_total_ha": 1743.84,
+"estrita": {
+"frac_obs": 0.0631,
+"ndsi_mediana": 0.892,
+"frac_ndsi_gt1": 0.0131,
+"frac_swir_neg": 0.0139,
+"neve_ha_30": 109.89,
+"frac_neve_30": 0.9984,
+"neve_ha_42": 109.89,
+"frac_neve_42": 0.9984,
+"neve_ha_50": 109.89,
+"frac_neve_50": 0.9984
+},
+"branda": {
+"frac_obs": 0.5071,
+"ndsi_mediana": 0.838,
+"frac_ndsi_gt1": 0.0178,
+"frac_swir_neg": 0.0075,
+"neve_ha_30": 847.98,
+"frac_neve_30": 0.959,
+"neve_ha_42": 847.26,
+"frac_neve_42": 0.9582,
+"neve_ha_50": 842.67,
+"frac_neve_50": 0.953
+},
+"espectral": {
+"frac_obs": 0.0631,
+"ndsi_mediana": 0.892,
+"frac_ndsi_gt1": 0.0131,
+"frac_swir_neg": 0.0139,
+"neve_ha_30": 109.89,
+"frac_neve_30": 0.9984,
+"neve_ha_42": 109.89,
+"frac_neve_42": 0.9984,
+"neve_ha_50": 109.89,
+"frac_neve_50": 0.9984
+}
+},
+"cume_fora": {
+"area_total_ha": 78.12,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.4263,
+"ndsi_mediana": 0.785,
+"frac_ndsi_gt1": 0.0,
+"frac_swir_neg": 0.0,
+"neve_ha_30": 33.3,
+"frac_neve_30": 1.0,
+"neve_ha_42": 33.3,
+"frac_neve_42": 1.0,
+"neve_ha_50": 33.3,
+"frac_neve_50": 1.0
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+}
+}
+},
+{
+"fonte": "ls",
+"id": "LC08_L2SP_141041_20260701_02_T1",
+"datetime": "2026-07-01T04:47:43.367810Z",
+"nuvem_cena_pct": 48.57,
+"plataforma": "landsat-8",
+"wrs": "141/041",
+"regioes": {
+"anfiteatro": {
+"area_total_ha": 340.56,
+"estrita": {
+"frac_obs": 0.0077,
+"ndsi_mediana": 0.798,
+"frac_ndsi_gt1": 0.0,
+"frac_swir_neg": 0.0,
+"neve_ha_30": 2.61,
+"frac_neve_30": 1.0,
+"neve_ha_42": 2.61,
+"frac_neve_42": 1.0,
+"neve_ha_50": 2.61,
+"frac_neve_50": 1.0
+},
+"branda": {
+"frac_obs": 0.4273,
+"ndsi_mediana": 0.706,
+"frac_ndsi_gt1": 0.0,
+"frac_swir_neg": 0.0,
+"neve_ha_30": 142.83,
+"frac_neve_30": 0.9814,
+"neve_ha_42": 140.67,
+"frac_neve_42": 0.9666,
+"neve_ha_50": 133.29,
+"frac_neve_50": 0.9159
+},
+"espectral": {
+"frac_obs": 0.0077,
+"ndsi_mediana": 0.798,
+"frac_ndsi_gt1": 0.0,
+"frac_swir_neg": 0.0,
+"neve_ha_30": 2.61,
+"frac_neve_30": 1.0,
+"neve_ha_42": 2.61,
+"frac_neve_42": 1.0,
+"neve_ha_50": 2.61,
+"frac_neve_50": 1.0
+}
+},
+"alto_fora": {
+"area_total_ha": 1743.84,
+"estrita": {
+"frac_obs": 0.0848,
+"ndsi_mediana": 0.869,
+"frac_ndsi_gt1": 0.0073,
+"frac_swir_neg": 0.0006,
+"neve_ha_30": 145.17,
+"frac_neve_30": 0.9817,
+"neve_ha_42": 145.08,
+"frac_neve_42": 0.9811,
+"neve_ha_50": 144.99,
+"frac_neve_50": 0.9805
+},
+"branda": {
+"frac_obs": 0.5014,
+"ndsi_mediana": 0.828,
+"frac_ndsi_gt1": 0.0125,
+"frac_swir_neg": 0.0002,
+"neve_ha_30": 833.49,
+"frac_neve_30": 0.9533,
+"neve_ha_42": 830.61,
+"frac_neve_42": 0.95,
+"neve_ha_50": 823.86,
+"frac_neve_50": 0.9423
+},
+"espectral": {
+"frac_obs": 0.0848,
+"ndsi_mediana": 0.869,
+"frac_ndsi_gt1": 0.0073,
+"frac_swir_neg": 0.0006,
+"neve_ha_30": 145.17,
+"frac_neve_30": 0.9817,
+"neve_ha_42": 145.08,
+"frac_neve_42": 0.9811,
+"neve_ha_50": 144.99,
+"frac_neve_50": 0.9805
+}
+},
+"cume_fora": {
+"area_total_ha": 78.12,
+"estrita": {
+"frac_obs": 0.0196,
+"ndsi_mediana": 0.896,
+"frac_ndsi_gt1": 0.0,
+"frac_swir_neg": 0.0,
+"neve_ha_30": 1.53,
+"frac_neve_30": 1.0,
+"neve_ha_42": 1.53,
+"frac_neve_42": 1.0,
+"neve_ha_50": 1.53,
+"frac_neve_50": 1.0
+},
+"branda": {
+"frac_obs": 0.3859,
+"ndsi_mediana": 0.78,
+"frac_ndsi_gt1": 0.0,
+"frac_swir_neg": 0.0,
+"neve_ha_30": 30.15,
+"frac_neve_30": 1.0,
+"neve_ha_42": 30.15,
+"frac_neve_42": 1.0,
+"neve_ha_50": 30.15,
+"frac_neve_50": 1.0
+},
+"espectral": {
+"frac_obs": 0.0196,
+"ndsi_mediana": 0.896,
+"frac_ndsi_gt1": 0.0,
+"frac_swir_neg": 0.0,
+"neve_ha_30": 1.53,
+"frac_neve_30": 1.0,
+"neve_ha_42": 1.53,
+"frac_neve_42": 1.0,
+"neve_ha_50": 1.53,
+"frac_neve_50": 1.0
+}
+}
+}
+},
+{
+"fonte": "ls",
+"id": "LC09_L2SP_141040_20260709_02_T1",
+"datetime": "2026-07-09T04:47:27.629979Z",
+"nuvem_cena_pct": 73.93,
+"plataforma": "landsat-9",
+"wrs": "141/040",
+"regioes": {
+"anfiteatro": {
+"area_total_ha": 340.56,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+},
+"alto_fora": {
+"area_total_ha": 1743.84,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+},
+"cume_fora": {
+"area_total_ha": 78.12,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+}
+}
+},
+{
+"fonte": "ls",
+"id": "LC09_L2SP_141041_20260709_02_T2",
+"datetime": "2026-07-09T04:47:51.525231Z",
+"nuvem_cena_pct": 95.01,
+"plataforma": "landsat-9",
+"wrs": "141/041",
+"regioes": {
+"anfiteatro": {
+"area_total_ha": 340.56,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+},
+"alto_fora": {
+"area_total_ha": 1743.84,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+},
+"cume_fora": {
+"area_total_ha": 78.12,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+}
+}
+},
+{
+"fonte": "ls",
+"id": "LC08_L2SP_141040_20260717_02_T2",
+"datetime": "2026-07-17T04:47:23.383901Z",
+"nuvem_cena_pct": 85.86,
+"plataforma": "landsat-8",
+"wrs": "141/040",
+"regioes": {
+"anfiteatro": {
+"area_total_ha": 340.56,
+"estrita": {
+"frac_obs": 0.0817,
+"ndsi_mediana": 0.861,
+"frac_ndsi_gt1": 0.0,
+"frac_swir_neg": 0.0,
+"neve_ha_30": 25.56,
+"frac_neve_30": 0.9191,
+"neve_ha_42": 25.38,
+"frac_neve_42": 0.9126,
+"neve_ha_50": 25.38,
+"frac_neve_50": 0.9126
+},
+"branda": {
+"frac_obs": 0.3755,
+"ndsi_mediana": 0.553,
+"frac_ndsi_gt1": 0.0,
+"frac_swir_neg": 0.0,
+"neve_ha_30": 111.33,
+"frac_neve_30": 0.8705,
+"neve_ha_42": 93.06,
+"frac_neve_42": 0.7277,
+"neve_ha_50": 76.14,
+"frac_neve_50": 0.5954
+},
+"espectral": {
+"frac_obs": 0.0817,
+"ndsi_mediana": 0.861,
+"frac_ndsi_gt1": 0.0,
+"frac_swir_neg": 0.0,
+"neve_ha_30": 25.56,
+"frac_neve_30": 0.9191,
+"neve_ha_42": 25.38,
+"frac_neve_42": 0.9126,
+"neve_ha_50": 25.38,
+"frac_neve_50": 0.9126
+}
+},
+"alto_fora": {
+"area_total_ha": 1743.84,
+"estrita": {
+"frac_obs": 0.0556,
+"ndsi_mediana": 0.631,
+"frac_ndsi_gt1": 0.0,
+"frac_swir_neg": 0.0,
+"neve_ha_30": 97.02,
+"frac_neve_30": 1.0,
+"neve_ha_42": 97.02,
+"frac_neve_42": 1.0,
+"neve_ha_50": 89.1,
+"frac_neve_50": 0.9184
+},
+"branda": {
+"frac_obs": 0.5489,
+"ndsi_mediana": 0.54,
+"frac_ndsi_gt1": 0.0,
+"frac_swir_neg": 0.0,
+"neve_ha_30": 955.98,
+"frac_neve_30": 0.9987,
+"neve_ha_42": 947.25,
+"frac_neve_42": 0.9896,
+"neve_ha_50": 716.76,
+"frac_neve_50": 0.7488
+},
+"espectral": {
+"frac_obs": 0.0556,
+"ndsi_mediana": 0.631,
+"frac_ndsi_gt1": 0.0,
+"frac_swir_neg": 0.0,
+"neve_ha_30": 97.02,
+"frac_neve_30": 1.0,
+"neve_ha_42": 97.02,
+"frac_neve_42": 1.0,
+"neve_ha_50": 89.1,
+"frac_neve_50": 0.9184
+}
+},
+"cume_fora": {
+"area_total_ha": 78.12,
+"estrita": {
+"frac_obs": 0.1659,
+"ndsi_mediana": 0.876,
+"frac_ndsi_gt1": 0.0069,
+"frac_swir_neg": 0.0069,
+"neve_ha_30": 12.96,
+"frac_neve_30": 1.0,
+"neve_ha_42": 12.96,
+"frac_neve_42": 1.0,
+"neve_ha_50": 12.96,
+"frac_neve_50": 1.0
+},
+"branda": {
+"frac_obs": 0.9343,
+"ndsi_mediana": 0.745,
+"frac_ndsi_gt1": 0.0025,
+"frac_swir_neg": 0.0025,
+"neve_ha_30": 72.99,
+"frac_neve_30": 1.0,
+"neve_ha_42": 72.99,
+"frac_neve_42": 1.0,
+"neve_ha_50": 72.99,
+"frac_neve_50": 1.0
+},
+"espectral": {
+"frac_obs": 0.1659,
+"ndsi_mediana": 0.876,
+"frac_ndsi_gt1": 0.0069,
+"frac_swir_neg": 0.0069,
+"neve_ha_30": 12.96,
+"frac_neve_30": 1.0,
+"neve_ha_42": 12.96,
+"frac_neve_42": 1.0,
+"neve_ha_50": 12.96,
+"frac_neve_50": 1.0
+}
+}
+}
+},
+{
+"fonte": "ls",
+"id": "LC08_L2SP_141041_20260717_02_T2",
+"datetime": "2026-07-17T04:47:47.279178Z",
+"nuvem_cena_pct": 86.98,
+"plataforma": "landsat-8",
+"wrs": "141/041",
+"regioes": {
+"anfiteatro": {
+"area_total_ha": 340.56,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.0761,
+"ndsi_mediana": 0.875,
+"frac_ndsi_gt1": 0.0,
+"frac_swir_neg": 0.0,
+"neve_ha_30": 25.92,
+"frac_neve_30": 1.0,
+"neve_ha_42": 25.92,
+"frac_neve_42": 1.0,
+"neve_ha_50": 25.92,
+"frac_neve_50": 1.0
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+},
+"alto_fora": {
+"area_total_ha": 1743.84,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.0257,
+"ndsi_mediana": 0.866,
+"frac_ndsi_gt1": 0.0,
+"frac_swir_neg": 0.0,
+"neve_ha_30": 44.73,
+"frac_neve_30": 1.0,
+"neve_ha_42": 44.73,
+"frac_neve_42": 1.0,
+"neve_ha_50": 44.73,
+"frac_neve_50": 1.0
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+},
+"cume_fora": {
+"area_total_ha": 78.12,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.2512,
+"ndsi_mediana": 0.864,
+"frac_ndsi_gt1": 0.0,
+"frac_swir_neg": 0.0,
+"neve_ha_30": 19.62,
+"frac_neve_30": 1.0,
+"neve_ha_42": 19.62,
+"frac_neve_42": 1.0,
+"neve_ha_50": 19.62,
+"frac_neve_50": 1.0
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+}
+}
+},
+{
+"fonte": "ls",
+"id": "LC09_L2SP_141040_20260725_02_T1",
+"datetime": "2026-07-25T04:47:40.987255Z",
+"nuvem_cena_pct": 83.75,
+"plataforma": "landsat-9",
+"wrs": "141/040",
+"regioes": {
+"anfiteatro": {
+"area_total_ha": 340.56,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+},
+"alto_fora": {
+"area_total_ha": 1743.84,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+},
+"cume_fora": {
+"area_total_ha": 78.12,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+}
+}
+},
+{
+"fonte": "ls",
+"id": "LC09_L2SP_141041_20260725_02_T1",
+"datetime": "2026-07-25T04:48:04.882508Z",
+"nuvem_cena_pct": 50.34,
+"plataforma": "landsat-9",
+"wrs": "141/041",
+"regioes": {
+"anfiteatro": {
+"area_total_ha": 340.56,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+},
+"alto_fora": {
+"area_total_ha": 1743.84,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+},
+"cume_fora": {
+"area_total_ha": 78.12,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+}
+}
+},
+{
+"fonte": "ls",
+"id": "LC08_L2SP_141040_20260802_02_T2",
+"datetime": "2026-08-02T04:47:34.569376Z",
+"nuvem_cena_pct": 90.56,
+"plataforma": "landsat-8",
+"wrs": "141/040",
+"regioes": {
+"anfiteatro": {
+"area_total_ha": 340.56,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+},
+"alto_fora": {
+"area_total_ha": 1743.84,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+},
+"cume_fora": {
+"area_total_ha": 78.12,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+}
+}
+},
+{
+"fonte": "ls",
+"id": "LC08_L2SP_141041_20260802_02_T2",
+"datetime": "2026-08-02T04:47:58.468889Z",
+"nuvem_cena_pct": 99.96,
+"plataforma": "landsat-8",
+"wrs": "141/041",
+"regioes": {
+"anfiteatro": {
+"area_total_ha": 340.56,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+},
+"alto_fora": {
+"area_total_ha": 1743.84,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+},
+"cume_fora": {
+"area_total_ha": 78.12,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+}
+}
+},
+{
+"fonte": "ls",
+"id": "LC09_L2SP_141040_20260810_02_T1",
+"datetime": "2026-08-10T04:47:45.817454Z",
+"nuvem_cena_pct": 49.41,
+"plataforma": "landsat-9",
+"wrs": "141/040",
+"regioes": {
+"anfiteatro": {
+"area_total_ha": 340.56,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.004,
+"ndsi_mediana": 0.72,
+"frac_ndsi_gt1": 0.0,
+"frac_swir_neg": 0.0,
+"neve_ha_30": 1.08,
+"frac_neve_30": 0.8,
+"neve_ha_42": 1.08,
+"frac_neve_42": 0.8,
+"neve_ha_50": 1.08,
+"frac_neve_50": 0.8
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+},
+"alto_fora": {
+"area_total_ha": 1743.84,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.1973,
+"ndsi_mediana": 0.762,
+"frac_ndsi_gt1": 0.0136,
+"frac_swir_neg": 0.0128,
+"neve_ha_30": 339.75,
+"frac_neve_30": 0.9874,
+"neve_ha_42": 339.3,
+"frac_neve_42": 0.9861,
+"neve_ha_50": 338.76,
+"frac_neve_50": 0.9846
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+},
+"cume_fora": {
+"area_total_ha": 78.12,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.2857,
+"ndsi_mediana": 0.797,
+"frac_ndsi_gt1": 0.0,
+"frac_swir_neg": 0.0,
+"neve_ha_30": 22.32,
+"frac_neve_30": 1.0,
+"neve_ha_42": 22.32,
+"frac_neve_42": 1.0,
+"neve_ha_50": 22.32,
+"frac_neve_50": 1.0
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+}
+}
+},
+{
+"fonte": "ls",
+"id": "LC09_L2SP_141041_20260810_02_T1",
+"datetime": "2026-08-10T04:48:09.712705Z",
+"nuvem_cena_pct": 76.53,
+"plataforma": "landsat-9",
+"wrs": "141/041",
+"regioes": {
+"anfiteatro": {
+"area_total_ha": 340.56,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.0008,
+"ndsi_mediana": -0.434,
+"frac_ndsi_gt1": 0.0,
+"frac_swir_neg": 0.0,
+"neve_ha_30": 0.0,
+"frac_neve_30": 0.0,
+"neve_ha_42": 0.0,
+"frac_neve_42": 0.0,
+"neve_ha_50": 0.0,
+"frac_neve_50": 0.0
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+},
+"alto_fora": {
+"area_total_ha": 1743.84,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.0728,
+"ndsi_mediana": 0.874,
+"frac_ndsi_gt1": 0.0447,
+"frac_swir_neg": 0.0418,
+"neve_ha_30": 123.39,
+"frac_neve_30": 0.9723,
+"neve_ha_42": 123.39,
+"frac_neve_42": 0.9723,
+"neve_ha_50": 123.39,
+"frac_neve_50": 0.9723
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+},
+"cume_fora": {
+"area_total_ha": 78.12,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.1359,
+"ndsi_mediana": 0.832,
+"frac_ndsi_gt1": 0.0,
+"frac_swir_neg": 0.0,
+"neve_ha_30": 10.62,
+"frac_neve_30": 1.0,
+"neve_ha_42": 10.62,
+"frac_neve_42": 1.0,
+"neve_ha_50": 10.62,
+"frac_neve_50": 1.0
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+}
+}
+},
+{
+"fonte": "ls",
+"id": "LC08_L2SP_141040_20260818_02_T1",
+"datetime": "2026-08-18T04:47:40.796144Z",
+"nuvem_cena_pct": 79.83,
+"plataforma": "landsat-8",
+"wrs": "141/040",
+"regioes": {
+"anfiteatro": {
+"area_total_ha": 340.56,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.2334,
+"ndsi_mediana": 0.528,
+"frac_ndsi_gt1": 0.0,
+"frac_swir_neg": 0.0,
+"neve_ha_30": 59.31,
+"frac_neve_30": 0.7463,
+"neve_ha_42": 54.45,
+"frac_neve_42": 0.6852,
+"neve_ha_50": 45.99,
+"frac_neve_50": 0.5787
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+},
+"alto_fora": {
+"area_total_ha": 1743.84,
+"estrita": {
+"frac_obs": 0.0114,
+"ndsi_mediana": 0.646,
+"frac_ndsi_gt1": 0.0,
+"frac_swir_neg": 0.0,
+"neve_ha_30": 19.89,
+"frac_neve_30": 1.0,
+"neve_ha_42": 19.89,
+"frac_neve_42": 1.0,
+"neve_ha_50": 19.89,
+"frac_neve_50": 1.0
+},
+"branda": {
+"frac_obs": 0.2434,
+"ndsi_mediana": 0.572,
+"frac_ndsi_gt1": 0.0,
+"frac_swir_neg": 0.0,
+"neve_ha_30": 424.44,
+"frac_neve_30": 0.9998,
+"neve_ha_42": 422.73,
+"frac_neve_42": 0.9958,
+"neve_ha_50": 397.89,
+"frac_neve_50": 0.9372
+},
+"espectral": {
+"frac_obs": 0.0114,
+"ndsi_mediana": 0.646,
+"frac_ndsi_gt1": 0.0,
+"frac_swir_neg": 0.0,
+"neve_ha_30": 19.89,
+"frac_neve_30": 1.0,
+"neve_ha_42": 19.89,
+"frac_neve_42": 1.0,
+"neve_ha_50": 19.89,
+"frac_neve_50": 1.0
+}
+},
+"cume_fora": {
+"area_total_ha": 78.12,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.3445,
+"ndsi_mediana": 0.62,
+"frac_ndsi_gt1": 0.0,
+"frac_swir_neg": 0.0,
+"neve_ha_30": 26.91,
+"frac_neve_30": 1.0,
+"neve_ha_42": 26.91,
+"frac_neve_42": 1.0,
+"neve_ha_50": 26.91,
+"frac_neve_50": 1.0
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+}
+}
+},
+{
+"fonte": "ls",
+"id": "LC08_L2SP_141041_20260818_02_T1",
+"datetime": "2026-08-18T04:48:04.695655Z",
+"nuvem_cena_pct": 84.01,
+"plataforma": "landsat-8",
+"wrs": "141/041",
+"regioes": {
+"anfiteatro": {
+"area_total_ha": 340.56,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.0251,
+"ndsi_mediana": 0.913,
+"frac_ndsi_gt1": 0.0421,
+"frac_swir_neg": 0.0421,
+"neve_ha_30": 8.37,
+"frac_neve_30": 0.9789,
+"neve_ha_42": 8.37,
+"frac_neve_42": 0.9789,
+"neve_ha_50": 8.37,
+"frac_neve_50": 0.9789
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+},
+"alto_fora": {
+"area_total_ha": 1743.84,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.0042,
+"ndsi_mediana": 0.789,
+"frac_ndsi_gt1": 0.0,
+"frac_swir_neg": 0.0,
+"neve_ha_30": 7.29,
+"frac_neve_30": 1.0,
+"neve_ha_42": 7.29,
+"frac_neve_42": 1.0,
+"neve_ha_50": 7.29,
+"frac_neve_50": 1.0
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+},
+"cume_fora": {
+"area_total_ha": 78.12,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.03,
+"ndsi_mediana": 0.867,
+"frac_ndsi_gt1": 0.0,
+"frac_swir_neg": 0.0,
+"neve_ha_30": 2.34,
+"frac_neve_30": 1.0,
+"neve_ha_42": 2.34,
+"frac_neve_42": 1.0,
+"neve_ha_50": 2.34,
+"frac_neve_50": 1.0
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+}
+}
+},
+{
+"fonte": "ls",
+"id": "LC09_L2SP_141040_20260826_02_T1",
+"datetime": "2026-08-26T04:47:48.916081Z",
+"nuvem_cena_pct": 47.54,
+"plataforma": "landsat-9",
+"wrs": "141/040",
+"regioes": {
+"anfiteatro": {
+"area_total_ha": 340.56,
+"estrita": {
+"frac_obs": 0.1834,
+"ndsi_mediana": 0.962,
+"frac_ndsi_gt1": 0.2767,
+"frac_swir_neg": 0.281,
+"neve_ha_30": 56.61,
+"frac_neve_30": 0.9063,
+"neve_ha_42": 56.52,
+"frac_neve_42": 0.9049,
+"neve_ha_50": 56.25,
+"frac_neve_50": 0.9006
+},
+"branda": {
+"frac_obs": 0.5098,
+"ndsi_mediana": 0.939,
+"frac_ndsi_gt1": 0.2685,
+"frac_swir_neg": 0.2773,
+"neve_ha_30": 119.16,
+"frac_neve_30": 0.6864,
+"neve_ha_42": 118.08,
+"frac_neve_42": 0.6801,
+"neve_ha_50": 116.55,
+"frac_neve_50": 0.6713
+},
+"espectral": {
+"frac_obs": 0.1834,
+"ndsi_mediana": 0.962,
+"frac_ndsi_gt1": 0.2767,
+"frac_swir_neg": 0.281,
+"neve_ha_30": 56.61,
+"frac_neve_30": 0.9063,
+"neve_ha_42": 56.52,
+"frac_neve_42": 0.9049,
+"neve_ha_50": 56.25,
+"frac_neve_50": 0.9006
+}
+},
+"alto_fora": {
+"area_total_ha": 1743.84,
+"estrita": {
+"frac_obs": 0.0332,
+"ndsi_mediana": 0.974,
+"frac_ndsi_gt1": 0.2037,
+"frac_swir_neg": 0.2022,
+"neve_ha_30": 57.06,
+"frac_neve_30": 0.986,
+"neve_ha_42": 57.06,
+"frac_neve_42": 0.986,
+"neve_ha_50": 56.97,
+"frac_neve_50": 0.9844
+},
+"branda": {
+"frac_obs": 0.542,
+"ndsi_mediana": 0.935,
+"frac_ndsi_gt1": 0.1701,
+"frac_swir_neg": 0.1833,
+"neve_ha_30": 816.75,
+"frac_neve_30": 0.8641,
+"neve_ha_42": 812.88,
+"frac_neve_42": 0.86,
+"neve_ha_50": 802.62,
+"frac_neve_50": 0.8492
+},
+"espectral": {
+"frac_obs": 0.0332,
+"ndsi_mediana": 0.974,
+"frac_ndsi_gt1": 0.2037,
+"frac_swir_neg": 0.2022,
+"neve_ha_30": 57.06,
+"frac_neve_30": 0.986,
+"neve_ha_42": 57.06,
+"frac_neve_42": 0.986,
+"neve_ha_50": 56.97,
+"frac_neve_50": 0.9844
+}
+},
+"cume_fora": {
+"area_total_ha": 78.12,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.9919,
+"ndsi_mediana": 0.96,
+"frac_ndsi_gt1": 0.0859,
+"frac_swir_neg": 0.0859,
+"neve_ha_30": 77.4,
+"frac_neve_30": 0.9988,
+"neve_ha_42": 77.4,
+"frac_neve_42": 0.9988,
+"neve_ha_50": 77.4,
+"frac_neve_50": 0.9988
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+}
+}
+},
+{
+"fonte": "ls",
+"id": "LC09_L2SP_141041_20260826_02_T1",
+"datetime": "2026-08-26T04:48:12.815568Z",
+"nuvem_cena_pct": 67.8,
+"plataforma": "landsat-9",
+"wrs": "141/041",
+"regioes": {
+"anfiteatro": {
+"area_total_ha": 340.56,
+"estrita": {
+"frac_obs": 0.0727,
+"ndsi_mediana": 0.939,
+"frac_ndsi_gt1": 0.0836,
+"frac_swir_neg": 0.0873,
+"neve_ha_30": 21.78,
+"frac_neve_30": 0.88,
+"neve_ha_42": 21.78,
+"frac_neve_42": 0.88,
+"neve_ha_50": 21.78,
+"frac_neve_50": 0.88
+},
+"branda": {
+"frac_obs": 0.4619,
+"ndsi_mediana": 0.936,
+"frac_ndsi_gt1": 0.1928,
+"frac_swir_neg": 0.1991,
+"neve_ha_30": 103.23,
+"frac_neve_30": 0.6562,
+"neve_ha_42": 103.23,
+"frac_neve_42": 0.6562,
+"neve_ha_50": 103.23,
+"frac_neve_50": 0.6562
+},
+"espectral": {
+"frac_obs": 0.0727,
+"ndsi_mediana": 0.939,
+"frac_ndsi_gt1": 0.0836,
+"frac_swir_neg": 0.0873,
+"neve_ha_30": 21.78,
+"frac_neve_30": 0.88,
+"neve_ha_42": 21.78,
+"frac_neve_42": 0.88,
+"neve_ha_50": 21.78,
+"frac_neve_50": 0.88
+}
+},
+"alto_fora": {
+"area_total_ha": 1743.84,
+"estrita": {
+"frac_obs": 0.0067,
+"ndsi_mediana": 0.944,
+"frac_ndsi_gt1": 0.0155,
+"frac_swir_neg": 0.0155,
+"neve_ha_30": 11.52,
+"frac_neve_30": 0.9922,
+"neve_ha_42": 11.52,
+"frac_neve_42": 0.9922,
+"neve_ha_50": 11.52,
+"frac_neve_50": 0.9922
+},
+"branda": {
+"frac_obs": 0.431,
+"ndsi_mediana": 0.929,
+"frac_ndsi_gt1": 0.106,
+"frac_swir_neg": 0.1183,
+"neve_ha_30": 647.64,
+"frac_neve_30": 0.8616,
+"neve_ha_42": 647.19,
+"frac_neve_42": 0.861,
+"neve_ha_50": 647.1,
+"frac_neve_50": 0.8609
+},
+"espectral": {
+"frac_obs": 0.0067,
+"ndsi_mediana": 0.944,
+"frac_ndsi_gt1": 0.0155,
+"frac_swir_neg": 0.0155,
+"neve_ha_30": 11.52,
+"frac_neve_30": 0.9922,
+"neve_ha_42": 11.52,
+"frac_neve_42": 0.9922,
+"neve_ha_50": 11.52,
+"frac_neve_50": 0.9922
+}
+},
+"cume_fora": {
+"area_total_ha": 78.12,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.962,
+"ndsi_mediana": 0.946,
+"frac_ndsi_gt1": 0.0707,
+"frac_swir_neg": 0.0707,
+"neve_ha_30": 75.06,
+"frac_neve_30": 0.9988,
+"neve_ha_42": 75.06,
+"frac_neve_42": 0.9988,
+"neve_ha_50": 75.06,
+"frac_neve_50": 0.9988
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+}
+}
+},
+{
+"fonte": "ls",
+"id": "LC08_L2SP_141040_20260903_02_T1",
+"datetime": "2026-09-03T04:47:46.346114Z",
+"nuvem_cena_pct": 50.58,
+"plataforma": "landsat-8",
+"wrs": "141/040",
+"regioes": {
+"anfiteatro": {
+"area_total_ha": 340.56,
+"estrita": {
+"frac_obs": 0.4099,
+"ndsi_mediana": 0.879,
+"frac_ndsi_gt1": 0.0342,
+"frac_swir_neg": 0.0342,
+"neve_ha_30": 132.3,
+"frac_neve_30": 0.9478,
+"neve_ha_42": 132.21,
+"frac_neve_42": 0.9471,
+"neve_ha_50": 132.12,
+"frac_neve_50": 0.9465
+},
+"branda": {
+"frac_obs": 0.6044,
+"ndsi_mediana": 0.859,
+"frac_ndsi_gt1": 0.0232,
+"frac_swir_neg": 0.0232,
+"neve_ha_30": 166.23,
+"frac_neve_30": 0.8076,
+"neve_ha_42": 163.62,
+"frac_neve_42": 0.7949,
+"neve_ha_50": 155.97,
+"frac_neve_50": 0.7578
+},
+"espectral": {
+"frac_obs": 0.4099,
+"ndsi_mediana": 0.879,
+"frac_ndsi_gt1": 0.0342,
+"frac_swir_neg": 0.0342,
+"neve_ha_30": 132.3,
+"frac_neve_30": 0.9478,
+"neve_ha_42": 132.21,
+"frac_neve_42": 0.9471,
+"neve_ha_50": 132.12,
+"frac_neve_50": 0.9465
+}
+},
+"alto_fora": {
+"area_total_ha": 1743.84,
+"estrita": {
+"frac_obs": 0.1485,
+"ndsi_mediana": 0.871,
+"frac_ndsi_gt1": 0.1018,
+"frac_swir_neg": 0.1025,
+"neve_ha_30": 252.54,
+"frac_neve_30": 0.9753,
+"neve_ha_42": 252.54,
+"frac_neve_42": 0.9753,
+"neve_ha_50": 252.18,
+"frac_neve_50": 0.9739
+},
+"branda": {
+"frac_obs": 0.6728,
+"ndsi_mediana": 0.784,
+"frac_ndsi_gt1": 0.0735,
+"frac_swir_neg": 0.0844,
+"neve_ha_30": 1098.09,
+"frac_neve_30": 0.9359,
+"neve_ha_42": 1094.49,
+"frac_neve_42": 0.9329,
+"neve_ha_50": 1079.28,
+"frac_neve_50": 0.9199
+},
+"espectral": {
+"frac_obs": 0.1485,
+"ndsi_mediana": 0.871,
+"frac_ndsi_gt1": 0.1018,
+"frac_swir_neg": 0.1025,
+"neve_ha_30": 252.54,
+"frac_neve_30": 0.9753,
+"neve_ha_42": 252.54,
+"frac_neve_42": 0.9753,
+"neve_ha_50": 252.18,
+"frac_neve_50": 0.9739
+}
+},
+"cume_fora": {
+"area_total_ha": 78.12,
+"estrita": {
+"frac_obs": 0.5357,
+"ndsi_mediana": 0.861,
+"frac_ndsi_gt1": 0.0796,
+"frac_swir_neg": 0.0796,
+"neve_ha_30": 41.04,
+"frac_neve_30": 0.9806,
+"neve_ha_42": 41.04,
+"frac_neve_42": 0.9806,
+"neve_ha_50": 41.04,
+"frac_neve_50": 0.9806
+},
+"branda": {
+"frac_obs": 1.0,
+"ndsi_mediana": 0.841,
+"frac_ndsi_gt1": 0.0426,
+"frac_swir_neg": 0.0426,
+"neve_ha_30": 77.31,
+"frac_neve_30": 0.9896,
+"neve_ha_42": 77.31,
+"frac_neve_42": 0.9896,
+"neve_ha_50": 77.31,
+"frac_neve_50": 0.9896
+},
+"espectral": {
+"frac_obs": 0.5357,
+"ndsi_mediana": 0.861,
+"frac_ndsi_gt1": 0.0796,
+"frac_swir_neg": 0.0796,
+"neve_ha_30": 41.04,
+"frac_neve_30": 0.9806,
+"neve_ha_42": 41.04,
+"frac_neve_42": 0.9806,
+"neve_ha_50": 41.04,
+"frac_neve_50": 0.9806
+}
+}
+}
+},
+{
+"fonte": "ls",
+"id": "LC08_L2SP_141041_20260903_02_T2",
+"datetime": "2026-09-03T04:48:10.241390Z",
+"nuvem_cena_pct": 82.63,
+"plataforma": "landsat-8",
+"wrs": "141/041",
+"regioes": {
+"anfiteatro": {
+"area_total_ha": 340.56,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.4355,
+"ndsi_mediana": 0.889,
+"frac_ndsi_gt1": 0.0504,
+"frac_swir_neg": 0.0504,
+"neve_ha_30": 135.0,
+"frac_neve_30": 0.9102,
+"neve_ha_42": 135.0,
+"frac_neve_42": 0.9102,
+"neve_ha_50": 135.0,
+"frac_neve_50": 0.9102
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+},
+"alto_fora": {
+"area_total_ha": 1743.84,
+"estrita": {
+"frac_obs": 0.0006,
+"ndsi_mediana": 0.888,
+"frac_ndsi_gt1": 0.0,
+"frac_swir_neg": 0.0,
+"neve_ha_30": 0.99,
+"frac_neve_30": 1.0,
+"neve_ha_42": 0.99,
+"frac_neve_42": 1.0,
+"neve_ha_50": 0.99,
+"frac_neve_50": 1.0
+},
+"branda": {
+"frac_obs": 0.3343,
+"ndsi_mediana": 0.899,
+"frac_ndsi_gt1": 0.1882,
+"frac_swir_neg": 0.2239,
+"neve_ha_30": 513.81,
+"frac_neve_30": 0.8814,
+"neve_ha_42": 513.81,
+"frac_neve_42": 0.8814,
+"neve_ha_50": 513.81,
+"frac_neve_50": 0.8814
+},
+"espectral": {
+"frac_obs": 0.0006,
+"ndsi_mediana": 0.888,
+"frac_ndsi_gt1": 0.0,
+"frac_swir_neg": 0.0,
+"neve_ha_30": 0.99,
+"frac_neve_30": 1.0,
+"neve_ha_42": 0.99,
+"frac_neve_42": 1.0,
+"neve_ha_50": 0.99,
+"frac_neve_50": 1.0
+}
+},
+"cume_fora": {
+"area_total_ha": 78.12,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.5092,
+"ndsi_mediana": 0.878,
+"frac_ndsi_gt1": 0.1109,
+"frac_swir_neg": 0.1109,
+"neve_ha_30": 38.88,
+"frac_neve_30": 0.9774,
+"neve_ha_42": 38.88,
+"frac_neve_42": 0.9774,
+"neve_ha_50": 38.88,
+"frac_neve_50": 0.9774
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+}
+}
+},
+{
+"fonte": "ls",
+"id": "LC09_L2SP_141040_20260911_02_T1",
+"datetime": "2026-09-11T04:47:54.831696Z",
+"nuvem_cena_pct": 63.86,
+"plataforma": "landsat-9",
+"wrs": "141/040",
+"regioes": {
+"anfiteatro": {
+"area_total_ha": 340.56,
+"estrita": {
+"frac_obs": 0.0354,
+"ndsi_mediana": 0.637,
+"frac_ndsi_gt1": 0.0,
+"frac_swir_neg": 0.0,
+"neve_ha_30": 12.06,
+"frac_neve_30": 1.0,
+"neve_ha_42": 12.06,
+"frac_neve_42": 1.0,
+"neve_ha_50": 12.06,
+"frac_neve_50": 1.0
+},
+"branda": {
+"frac_obs": 0.3253,
+"ndsi_mediana": 0.603,
+"frac_ndsi_gt1": 0.0,
+"frac_swir_neg": 0.0,
+"neve_ha_30": 110.79,
+"frac_neve_30": 1.0,
+"neve_ha_42": 110.79,
+"frac_neve_42": 1.0,
+"neve_ha_50": 108.72,
+"frac_neve_50": 0.9813
+},
+"espectral": {
+"frac_obs": 0.0354,
+"ndsi_mediana": 0.637,
+"frac_ndsi_gt1": 0.0,
+"frac_swir_neg": 0.0,
+"neve_ha_30": 12.06,
+"frac_neve_30": 1.0,
+"neve_ha_42": 12.06,
+"frac_neve_42": 1.0,
+"neve_ha_50": 12.06,
+"frac_neve_50": 1.0
+}
+},
+"alto_fora": {
+"area_total_ha": 1743.84,
+"estrita": {
+"frac_obs": 0.0026,
+"ndsi_mediana": 0.599,
+"frac_ndsi_gt1": 0.0,
+"frac_swir_neg": 0.0,
+"neve_ha_30": 4.59,
+"frac_neve_30": 1.0,
+"neve_ha_42": 4.59,
+"frac_neve_42": 1.0,
+"neve_ha_50": 4.59,
+"frac_neve_50": 1.0
+},
+"branda": {
+"frac_obs": 0.2519,
+"ndsi_mediana": 0.594,
+"frac_ndsi_gt1": 0.0,
+"frac_swir_neg": 0.0,
+"neve_ha_30": 439.2,
+"frac_neve_30": 1.0,
+"neve_ha_42": 439.11,
+"frac_neve_42": 0.9998,
+"neve_ha_50": 432.0,
+"frac_neve_50": 0.9836
+},
+"espectral": {
+"frac_obs": 0.0026,
+"ndsi_mediana": 0.599,
+"frac_ndsi_gt1": 0.0,
+"frac_swir_neg": 0.0,
+"neve_ha_30": 4.59,
+"frac_neve_30": 1.0,
+"neve_ha_42": 4.59,
+"frac_neve_42": 1.0,
+"neve_ha_50": 4.59,
+"frac_neve_50": 1.0
+}
+},
+"cume_fora": {
+"area_total_ha": 78.12,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.8318,
+"ndsi_mediana": 0.67,
+"frac_ndsi_gt1": 0.0,
+"frac_swir_neg": 0.0,
+"neve_ha_30": 64.98,
+"frac_neve_30": 1.0,
+"neve_ha_42": 64.98,
+"frac_neve_42": 1.0,
+"neve_ha_50": 64.98,
+"frac_neve_50": 1.0
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+}
+}
+},
+{
+"fonte": "ls",
+"id": "LC09_L2SP_141041_20260911_02_T1",
+"datetime": "2026-09-11T04:48:18.726946Z",
+"nuvem_cena_pct": 77.14,
+"plataforma": "landsat-9",
+"wrs": "141/041",
+"regioes": {
+"anfiteatro": {
+"area_total_ha": 340.56,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+},
+"alto_fora": {
+"area_total_ha": 1743.84,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.0008,
+"ndsi_mediana": 0.794,
+"frac_ndsi_gt1": 0.0,
+"frac_swir_neg": 0.0,
+"neve_ha_30": 1.35,
+"frac_neve_30": 1.0,
+"neve_ha_42": 1.35,
+"frac_neve_42": 1.0,
+"neve_ha_50": 1.35,
+"frac_neve_50": 1.0
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+},
+"cume_fora": {
+"area_total_ha": 78.12,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.0012,
+"ndsi_mediana": 0.775,
+"frac_ndsi_gt1": 0.0,
+"frac_swir_neg": 0.0,
+"neve_ha_30": 0.09,
+"frac_neve_30": 1.0,
+"neve_ha_42": 0.09,
+"frac_neve_42": 1.0,
+"neve_ha_50": 0.09,
+"frac_neve_50": 1.0
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+}
+}
+},
+{
+"fonte": "ls",
+"id": "LC08_L2SP_141040_20260919_02_T1",
+"datetime": "2026-09-19T04:47:52.554266Z",
+"nuvem_cena_pct": 63.99,
+"plataforma": "landsat-8",
+"wrs": "141/040",
+"regioes": {
+"anfiteatro": {
+"area_total_ha": 340.56,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.0063,
+"ndsi_mediana": 0.524,
+"frac_ndsi_gt1": 0.0,
+"frac_swir_neg": 0.0,
+"neve_ha_30": 2.16,
+"frac_neve_30": 1.0,
+"neve_ha_42": 2.16,
+"frac_neve_42": 1.0,
+"neve_ha_50": 2.16,
+"frac_neve_50": 1.0
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+},
+"alto_fora": {
+"area_total_ha": 1743.84,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.0057,
+"ndsi_mediana": 0.632,
+"frac_ndsi_gt1": 0.0,
+"frac_swir_neg": 0.0,
+"neve_ha_30": 9.99,
+"frac_neve_30": 1.0,
+"neve_ha_42": 9.99,
+"frac_neve_42": 1.0,
+"neve_ha_50": 9.81,
+"frac_neve_50": 0.982
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+},
+"cume_fora": {
+"area_total_ha": 78.12,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+}
+}
+},
+{
+"fonte": "ls",
+"id": "LC08_L2SP_141041_20260919_02_T1",
+"datetime": "2026-09-19T04:48:16.453779Z",
+"nuvem_cena_pct": 67.47,
+"plataforma": "landsat-8",
+"wrs": "141/041",
+"regioes": {
+"anfiteatro": {
+"area_total_ha": 340.56,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+},
+"alto_fora": {
+"area_total_ha": 1743.84,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+},
+"cume_fora": {
+"area_total_ha": 78.12,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+}
+}
+},
+{
+"fonte": "ls",
+"id": "LC09_L2SP_141040_20260927_02_T1",
+"datetime": "2026-09-27T04:48:00.984706Z",
+"nuvem_cena_pct": 75.72,
+"plataforma": "landsat-9",
+"wrs": "141/040",
+"regioes": {
+"anfiteatro": {
+"area_total_ha": 340.56,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+},
+"alto_fora": {
+"area_total_ha": 1743.84,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.0353,
+"ndsi_mediana": 0.745,
+"frac_ndsi_gt1": 0.0,
+"frac_swir_neg": 0.0,
+"neve_ha_30": 61.56,
+"frac_neve_30": 1.0,
+"neve_ha_42": 61.56,
+"frac_neve_42": 1.0,
+"neve_ha_50": 61.56,
+"frac_neve_50": 1.0
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+},
+"cume_fora": {
+"area_total_ha": 78.12,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+}
+}
+},
+{
+"fonte": "ls",
+"id": "LC09_L2SP_141041_20260927_02_T2",
+"datetime": "2026-09-27T04:48:24.884192Z",
+"nuvem_cena_pct": 61.57,
+"plataforma": "landsat-9",
+"wrs": "141/041",
+"regioes": {
+"anfiteatro": {
+"area_total_ha": 340.56,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+},
+"alto_fora": {
+"area_total_ha": 1743.84,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.0424,
+"ndsi_mediana": 0.741,
+"frac_ndsi_gt1": 0.0,
+"frac_swir_neg": 0.0,
+"neve_ha_30": 73.98,
+"frac_neve_30": 1.0,
+"neve_ha_42": 73.98,
+"frac_neve_42": 1.0,
+"neve_ha_50": 73.98,
+"frac_neve_50": 1.0
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+},
+"cume_fora": {
+"area_total_ha": 78.12,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+}
+}
+},
+{
+"fonte": "ls",
+"id": "LC08_L2SP_141040_20261005_02_T1",
+"datetime": "2026-10-05T04:47:59.000398Z",
+"nuvem_cena_pct": 8.08,
+"plataforma": "landsat-8",
+"wrs": "141/040",
+"regioes": {
+"anfiteatro": {
+"area_total_ha": 340.56,
+"estrita": {
+"frac_obs": 0.686,
+"ndsi_mediana": 1.536,
+"frac_ndsi_gt1": 0.6926,
+"frac_swir_neg": 0.8078,
+"neve_ha_30": 67.05,
+"frac_neve_30": 0.287,
+"neve_ha_42": 67.05,
+"frac_neve_42": 0.287,
+"neve_ha_50": 66.96,
+"frac_neve_50": 0.2866
+},
+"branda": {
+"frac_obs": 0.981,
+"ndsi_mediana": 1.412,
+"frac_ndsi_gt1": 0.6425,
+"frac_swir_neg": 0.7767,
+"neve_ha_30": 101.79,
+"frac_neve_30": 0.3047,
+"neve_ha_42": 101.79,
+"frac_neve_42": 0.3047,
+"neve_ha_50": 101.7,
+"frac_neve_50": 0.3044
+},
+"espectral": {
+"frac_obs": 0.686,
+"ndsi_mediana": 1.536,
+"frac_ndsi_gt1": 0.6926,
+"frac_swir_neg": 0.8078,
+"neve_ha_30": 67.05,
+"frac_neve_30": 0.287,
+"neve_ha_42": 67.05,
+"frac_neve_42": 0.287,
+"neve_ha_50": 66.96,
+"frac_neve_50": 0.2866
+}
+},
+"alto_fora": {
+"area_total_ha": 1743.84,
+"estrita": {
+"frac_obs": 0.3323,
+"ndsi_mediana": 0.908,
+"frac_ndsi_gt1": 0.2378,
+"frac_swir_neg": 0.3121,
+"neve_ha_30": 448.83,
+"frac_neve_30": 0.7746,
+"neve_ha_42": 448.2,
+"frac_neve_42": 0.7735,
+"neve_ha_50": 444.51,
+"frac_neve_50": 0.7672
+},
+"branda": {
+"frac_obs": 0.6065,
+"ndsi_mediana": 0.88,
+"frac_ndsi_gt1": 0.2205,
+"frac_swir_neg": 0.3259,
+"neve_ha_30": 764.28,
+"frac_neve_30": 0.7226,
+"neve_ha_42": 762.75,
+"frac_neve_42": 0.7212,
+"neve_ha_50": 756.72,
+"frac_neve_50": 0.7155
+},
+"espectral": {
+"frac_obs": 0.3321,
+"ndsi_mediana": 0.908,
+"frac_ndsi_gt1": 0.2379,
+"frac_swir_neg": 0.3122,
+"neve_ha_30": 448.56,
+"frac_neve_30": 0.7745,
+"neve_ha_42": 448.2,
+"frac_neve_42": 0.7739,
+"neve_ha_50": 444.51,
+"frac_neve_50": 0.7675
+}
+},
+"cume_fora": {
+"area_total_ha": 78.12,
+"estrita": {
+"frac_obs": 0.053,
+"ndsi_mediana": 0.865,
+"frac_ndsi_gt1": 0.2391,
+"frac_swir_neg": 0.587,
+"neve_ha_30": 1.8,
+"frac_neve_30": 0.4348,
+"neve_ha_42": 1.8,
+"frac_neve_42": 0.4348,
+"neve_ha_50": 1.8,
+"frac_neve_50": 0.4348
+},
+"branda": {
+"frac_obs": 0.9286,
+"ndsi_mediana": 0.855,
+"frac_ndsi_gt1": 0.0682,
+"frac_swir_neg": 0.1079,
+"neve_ha_30": 64.8,
+"frac_neve_30": 0.8933,
+"neve_ha_42": 64.8,
+"frac_neve_42": 0.8933,
+"neve_ha_50": 64.8,
+"frac_neve_50": 0.8933
+},
+"espectral": {
+"frac_obs": 0.053,
+"ndsi_mediana": 0.865,
+"frac_ndsi_gt1": 0.2391,
+"frac_swir_neg": 0.587,
+"neve_ha_30": 1.8,
+"frac_neve_30": 0.4348,
+"neve_ha_42": 1.8,
+"frac_neve_42": 0.4348,
+"neve_ha_50": 1.8,
+"frac_neve_50": 0.4348
+}
+}
+}
+},
+{
+"fonte": "ls",
+"id": "LC08_L2SP_141041_20261005_02_T1",
+"datetime": "2026-10-05T04:48:22.895674Z",
+"nuvem_cena_pct": 41.48,
+"plataforma": "landsat-8",
+"wrs": "141/041",
+"regioes": {
+"anfiteatro": {
+"area_total_ha": 340.56,
+"estrita": {
+"frac_obs": 0.2392,
+"ndsi_mediana": 0.957,
+"frac_ndsi_gt1": 0.3591,
+"frac_swir_neg": 0.6265,
+"neve_ha_30": 36.36,
+"frac_neve_30": 0.4464,
+"neve_ha_42": 36.36,
+"frac_neve_42": 0.4464,
+"neve_ha_50": 36.36,
+"frac_neve_50": 0.4464
+},
+"branda": {
+"frac_obs": 0.9678,
+"ndsi_mediana": 1.017,
+"frac_ndsi_gt1": 0.5186,
+"frac_swir_neg": 0.7728,
+"neve_ha_30": 96.84,
+"frac_neve_30": 0.2938,
+"neve_ha_42": 96.84,
+"frac_neve_42": 0.2938,
+"neve_ha_50": 96.84,
+"frac_neve_50": 0.2938
+},
+"espectral": {
+"frac_obs": 0.2392,
+"ndsi_mediana": 0.957,
+"frac_ndsi_gt1": 0.3591,
+"frac_swir_neg": 0.6265,
+"neve_ha_30": 36.36,
+"frac_neve_30": 0.4464,
+"neve_ha_42": 36.36,
+"frac_neve_42": 0.4464,
+"neve_ha_50": 36.36,
+"frac_neve_50": 0.4464
+}
+},
+"alto_fora": {
+"area_total_ha": 1743.84,
+"estrita": {
+"frac_obs": 0.1896,
+"ndsi_mediana": 0.906,
+"frac_ndsi_gt1": 0.2001,
+"frac_swir_neg": 0.3169,
+"neve_ha_30": 263.52,
+"frac_neve_30": 0.7972,
+"neve_ha_42": 263.52,
+"frac_neve_42": 0.7972,
+"neve_ha_50": 263.43,
+"frac_neve_50": 0.7969
+},
+"branda": {
+"frac_obs": 0.5512,
+"ndsi_mediana": 0.873,
+"frac_ndsi_gt1": 0.1779,
+"frac_swir_neg": 0.3726,
+"neve_ha_30": 669.15,
+"frac_neve_30": 0.6962,
+"neve_ha_42": 669.15,
+"frac_neve_42": 0.6962,
+"neve_ha_50": 668.97,
+"frac_neve_50": 0.696
+},
+"espectral": {
+"frac_obs": 0.1896,
+"ndsi_mediana": 0.906,
+"frac_ndsi_gt1": 0.2001,
+"frac_swir_neg": 0.3169,
+"neve_ha_30": 263.52,
+"frac_neve_30": 0.7972,
+"neve_ha_42": 263.52,
+"frac_neve_42": 0.7972,
+"neve_ha_50": 263.43,
+"frac_neve_50": 0.7969
+}
+},
+"cume_fora": {
+"area_total_ha": 78.12,
+"estrita": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+},
+"branda": {
+"frac_obs": 0.8422,
+"ndsi_mediana": 0.863,
+"frac_ndsi_gt1": 0.0397,
+"frac_swir_neg": 0.1313,
+"neve_ha_30": 58.05,
+"frac_neve_30": 0.8824,
+"neve_ha_42": 58.05,
+"frac_neve_42": 0.8824,
+"neve_ha_50": 58.05,
+"frac_neve_50": 0.8824
+},
+"espectral": {
+"frac_obs": 0.0,
+"ndsi_mediana": null,
+"frac_ndsi_gt1": null,
+"frac_swir_neg": null,
+"neve_ha_30": 0.0,
+"frac_neve_30": null,
+"neve_ha_42": 0.0,
+"frac_neve_42": null,
+"neve_ha_50": 0.0,
+"frac_neve_50": null
+}
+}
+}
+}
+]

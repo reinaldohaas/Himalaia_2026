@@ -1,0 +1,231 @@
+{
+ "2026-08-12_S2C": {
+  "C 12/08>27/08": {
+   "n_px": 207,
+   "neve": 1.0,
+   "verde_med": 0.866,
+   "swir_med": 0.114
+  },
+  "A 12/08>24/08 (S2A)": {
+   "n_px": 576,
+   "neve": 1.0,
+   "verde_med": 0.692,
+   "swir_med": 0.091
+  },
+  "B 24/08>27/08 mesma orbita": {
+   "n_px": 138,
+   "escuro": 0.007,
+   "mascarado": 0.674,
+   "neve": 0.319,
+   "verde_med": 0.778,
+   "swir_med": 0.075
+  },
+  "Z falsa perda 15 min": {
+   "n_px": 426,
+   "escuro": 0.012,
+   "neve": 0.96,
+   "nuvem": 0.002,
+   "rocha": 0.026,
+   "verde_med": 0.686,
+   "swir_med": 0.091
+  }
+ },
+ "2026-08-24_S2B": {
+  "C 12/08>27/08": {
+   "n_px": 207,
+   "mascarado": 0.164,
+   "neve": 0.56,
+   "nuvem": 0.135,
+   "rocha": 0.14,
+   "verde_med": 1.254,
+   "swir_med": 0.202
+  },
+  "A 12/08>24/08 (S2A)": {
+   "n_px": 576,
+   "mascarado": 0.297,
+   "neve": 0.651,
+   "nuvem": 0.035,
+   "rocha": 0.017,
+   "verde_med": 1.087,
+   "swir_med": 0.084
+  },
+  "B 24/08>27/08 mesma orbita": {
+   "n_px": 138,
+   "mascarado": 0.884,
+   "neve": 0.007,
+   "nuvem": 0.065,
+   "rocha": 0.043,
+   "verde_med": 0.698,
+   "swir_med": 0.486
+  },
+  "Z falsa perda 15 min": {
+   "n_px": 426,
+   "neve": 1.0,
+   "verde_med": 1.165,
+   "swir_med": 0.072
+  }
+ },
+ "2026-08-24_S2A": {
+  "C 12/08>27/08": {
+   "n_px": 207,
+   "mascarado": 0.329,
+   "nuvem": 0.667,
+   "rocha": 0.005,
+   "verde_med": 0.872,
+   "swir_med": 0.63
+  },
+  "A 12/08>24/08 (S2A)": {
+   "n_px": 576,
+   "nuvem": 0.905,
+   "rocha": 0.095,
+   "verde_med": 0.91,
+   "swir_med": 0.54
+  },
+  "B 24/08>27/08 mesma orbita": {
+   "n_px": 138,
+   "neve": 1.0,
+   "verde_med": 0.685,
+   "swir_med": 0.109
+  },
+  "Z falsa perda 15 min": {
+   "n_px": 426,
+   "nuvem": 0.894,
+   "rocha": 0.106,
+   "verde_med": 0.914,
+   "swir_med": 0.56
+  }
+ },
+ "2026-08-27_S2B": {
+  "C 12/08>27/08": {
+   "n_px": 207,
+   "nuvem": 1.0,
+   "verde_med": 1.201,
+   "swir_med": 0.842
+  },
+  "A 12/08>24/08 (S2A)": {
+   "n_px": 576,
+   "neve": 0.726,
+   "nuvem": 0.269,
+   "rocha": 0.005,
+   "verde_med": 0.908,
+   "swir_med": 0.163
+  },
+  "B 24/08>27/08 mesma orbita": {
+   "n_px": 138,
+   "nuvem": 0.833,
+   "rocha": 0.167,
+   "verde_med": 0.676,
+   "swir_med": 0.424
+  },
+  "Z falsa perda 15 min": {
+   "n_px": 426,
+   "neve": 0.749,
+   "nuvem": 0.244,
+   "rocha": 0.007,
+   "verde_med": 0.943,
+   "swir_med": 0.134
+  }
+ },
+ "2026-09-01_S2C": {
+  "C 12/08>27/08": {
+   "n_px": 207,
+   "mascarado": 0.594,
+   "nuvem": 0.406,
+   "verde_med": 0.563,
+   "swir_med": 0.306
+  },
+  "A 12/08>24/08 (S2A)": {
+   "n_px": 576,
+   "mascarado": 0.181,
+   "neve": 0.062,
+   "nuvem": 0.729,
+   "rocha": 0.028,
+   "verde_med": 0.836,
+   "swir_med": 0.429
+  },
+  "B 24/08>27/08 mesma orbita": {
+   "n_px": 138,
+   "escuro": 0.014,
+   "mascarado": 0.203,
+   "neve": 0.674,
+   "rocha": 0.109,
+   "verde_med": 0.353,
+   "swir_med": 0.074
+  },
+  "Z falsa perda 15 min": {
+   "n_px": 426,
+   "mascarado": 0.155,
+   "neve": 0.059,
+   "nuvem": 0.782,
+   "rocha": 0.005,
+   "verde_med": 0.828,
+   "swir_med": 0.467
+  }
+ },
+ "2026-09-21_S2C": {
+  "C 12/08>27/08": {
+   "n_px": 207,
+   "neve": 0.493,
+   "nuvem": 0.507,
+   "verde_med": 1.505,
+   "swir_med": 0.602
+  },
+  "A 12/08>24/08 (S2A)": {
+   "n_px": 576,
+   "mascarado": 0.026,
+   "neve": 0.856,
+   "nuvem": 0.111,
+   "rocha": 0.007,
+   "verde_med": 0.746,
+   "swir_med": 0.157
+  },
+  "B 24/08>27/08 mesma orbita": {
+   "n_px": 138,
+   "mascarado": 0.014,
+   "neve": 0.978,
+   "rocha": 0.007,
+   "verde_med": 0.382,
+   "swir_med": 0.088
+  },
+  "Z falsa perda 15 min": {
+   "n_px": 426,
+   "neve": 0.901,
+   "nuvem": 0.092,
+   "rocha": 0.007,
+   "verde_med": 0.806,
+   "swir_med": 0.177
+  }
+ },
+ "2026-10-18_S2C": {
+  "C 12/08>27/08": {
+   "n_px": 207,
+   "escuro": 0.019,
+   "neve": 0.966,
+   "rocha": 0.014,
+   "verde_med": 0.228,
+   "swir_med": 0.03
+  },
+  "A 12/08>24/08 (S2A)": {
+   "n_px": 576,
+   "escuro": 0.062,
+   "neve": 0.925,
+   "rocha": 0.012,
+   "verde_med": 0.264,
+   "swir_med": 0.03
+  },
+  "B 24/08>27/08 mesma orbita": {
+   "n_px": 138,
+   "neve": 1.0,
+   "verde_med": 0.342,
+   "swir_med": 0.048
+  },
+  "Z falsa perda 15 min": {
+   "n_px": 426,
+   "escuro": 0.077,
+   "neve": 0.908,
+   "rocha": 0.014,
+   "verde_med": 0.259,
+   "swir_med": 0.029
+  }
+ }
+}

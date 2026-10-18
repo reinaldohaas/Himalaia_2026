@@ -1,0 +1,1234 @@
+[
+{
+"fonte": "s1",
+"id": "S1D_IW_GRDH_1SDV_20260702T001034_20260702T001059_003487_0062AB_rtc",
+"datetime": "2026-07-02T00:10:46.978937Z",
+"orbita": "des_121",
+"plataforma": "sentinel-1d",
+"regioes": {
+"anfiteatro": {
+"frac_valida": 1.0,
+"vv_db_mediana": -13.46,
+"vh_db_mediana": -18.2
+},
+"alto_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -11.61,
+"vh_db_mediana": -16.92
+},
+"cume_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -3.73,
+"vh_db_mediana": -11.95
+},
+"corredor_00_05km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -6.92,
+"vh_db_mediana": -14.26
+},
+"corredor_05_10km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -5.23,
+"vh_db_mediana": -11.43
+},
+"corredor_10_15km": {
+"frac_valida": 0.543,
+"vv_db_mediana": -6.1,
+"vh_db_mediana": -11.7
+},
+"corredor_15_25km": {
+"frac_valida": 0.0,
+"vv_db_mediana": null,
+"vh_db_mediana": null
+}
+}
+},
+{
+"fonte": "s1",
+"id": "S1D_IW_GRDH_1SDV_20260707T001841_20260707T001906_003560_006530_rtc",
+"datetime": "2026-07-07T00:18:54.460854Z",
+"orbita": "des_19",
+"plataforma": "sentinel-1d",
+"regioes": {
+"anfiteatro": {
+"frac_valida": 1.0,
+"vv_db_mediana": -12.11,
+"vh_db_mediana": -17.73
+},
+"alto_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -8.89,
+"vh_db_mediana": -16.75
+},
+"cume_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -4.0,
+"vh_db_mediana": -11.11
+},
+"corredor_00_05km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -7.72,
+"vh_db_mediana": -15.27
+},
+"corredor_05_10km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -6.52,
+"vh_db_mediana": -12.96
+},
+"corredor_10_15km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -6.87,
+"vh_db_mediana": -13.0
+},
+"corredor_15_25km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -5.9,
+"vh_db_mediana": -12.64
+}
+}
+},
+{
+"fonte": "s1",
+"id": "S1D_IW_GRDH_1SDV_20260711T122139_20260711T122204_003626_00675A_rtc",
+"datetime": "2026-07-11T12:21:51.656663Z",
+"orbita": "asc_85",
+"plataforma": "sentinel-1d",
+"regioes": {
+"anfiteatro": {
+"frac_valida": 1.0,
+"vv_db_mediana": -12.65,
+"vh_db_mediana": -18.11
+},
+"alto_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -10.85,
+"vh_db_mediana": -18.39
+},
+"cume_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -8.69,
+"vh_db_mediana": -16.75
+},
+"corredor_00_05km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -8.05,
+"vh_db_mediana": -15.48
+},
+"corredor_05_10km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -6.66,
+"vh_db_mediana": -13.08
+},
+"corredor_10_15km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -6.86,
+"vh_db_mediana": -12.95
+},
+"corredor_15_25km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -8.25,
+"vh_db_mediana": -14.21
+}
+}
+},
+{
+"fonte": "s1",
+"id": "S1D_IW_GRDH_1SDV_20260714T001035_20260714T001100_003662_00689F_rtc",
+"datetime": "2026-07-14T00:10:47.765435Z",
+"orbita": "des_121",
+"plataforma": "sentinel-1d",
+"regioes": {
+"anfiteatro": {
+"frac_valida": 1.0,
+"vv_db_mediana": -13.42,
+"vh_db_mediana": -18.51
+},
+"alto_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -12.4,
+"vh_db_mediana": -18.03
+},
+"cume_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -3.87,
+"vh_db_mediana": -12.95
+},
+"corredor_00_05km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -6.57,
+"vh_db_mediana": -13.95
+},
+"corredor_05_10km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -4.85,
+"vh_db_mediana": -11.02
+},
+"corredor_10_15km": {
+"frac_valida": 0.534,
+"vv_db_mediana": -5.46,
+"vh_db_mediana": -10.99
+},
+"corredor_15_25km": {
+"frac_valida": 0.0,
+"vv_db_mediana": null,
+"vh_db_mediana": null
+}
+}
+},
+{
+"fonte": "s1",
+"id": "S1D_IW_GRDH_1SDV_20260719T001842_20260719T001907_003735_006B26_rtc",
+"datetime": "2026-07-19T00:18:55.400207Z",
+"orbita": "des_19",
+"plataforma": "sentinel-1d",
+"regioes": {
+"anfiteatro": {
+"frac_valida": 1.0,
+"vv_db_mediana": -12.0,
+"vh_db_mediana": -17.74
+},
+"alto_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -9.49,
+"vh_db_mediana": -17.61
+},
+"cume_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -5.95,
+"vh_db_mediana": -13.28
+},
+"corredor_00_05km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -7.34,
+"vh_db_mediana": -14.84
+},
+"corredor_05_10km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -6.3,
+"vh_db_mediana": -12.7
+},
+"corredor_10_15km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -6.68,
+"vh_db_mediana": -12.59
+},
+"corredor_15_25km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -5.43,
+"vh_db_mediana": -11.84
+}
+}
+},
+{
+"fonte": "s1",
+"id": "S1D_IW_GRDH_1SDV_20260723T122140_20260723T122205_003801_006D5D_rtc",
+"datetime": "2026-07-23T12:21:52.612691Z",
+"orbita": "asc_85",
+"plataforma": "sentinel-1d",
+"regioes": {
+"anfiteatro": {
+"frac_valida": 1.0,
+"vv_db_mediana": -12.83,
+"vh_db_mediana": -18.18
+},
+"alto_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -11.0,
+"vh_db_mediana": -18.06
+},
+"cume_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -6.18,
+"vh_db_mediana": -11.58
+},
+"corredor_00_05km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -8.17,
+"vh_db_mediana": -15.65
+},
+"corredor_05_10km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -6.81,
+"vh_db_mediana": -13.22
+},
+"corredor_10_15km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -6.56,
+"vh_db_mediana": -12.63
+},
+"corredor_15_25km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -7.95,
+"vh_db_mediana": -13.73
+}
+}
+},
+{
+"fonte": "s1",
+"id": "S1D_IW_GRDH_1SDV_20260726T001036_20260726T001101_003837_006EA0_rtc",
+"datetime": "2026-07-26T00:10:48.609903Z",
+"orbita": "des_121",
+"plataforma": "sentinel-1d",
+"regioes": {
+"anfiteatro": {
+"frac_valida": 1.0,
+"vv_db_mediana": -13.64,
+"vh_db_mediana": -18.63
+},
+"alto_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -12.61,
+"vh_db_mediana": -18.11
+},
+"cume_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -3.97,
+"vh_db_mediana": -13.2
+},
+"corredor_00_05km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -7.11,
+"vh_db_mediana": -14.41
+},
+"corredor_05_10km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -5.54,
+"vh_db_mediana": -11.58
+},
+"corredor_10_15km": {
+"frac_valida": 0.555,
+"vv_db_mediana": -6.31,
+"vh_db_mediana": -11.77
+},
+"corredor_15_25km": {
+"frac_valida": 0.0,
+"vv_db_mediana": null,
+"vh_db_mediana": null
+}
+}
+},
+{
+"fonte": "s1",
+"id": "S1D_IW_GRDH_1SDV_20260731T001843_20260731T001908_003910_007127_rtc",
+"datetime": "2026-07-31T00:18:55.939263Z",
+"orbita": "des_19",
+"plataforma": "sentinel-1d",
+"regioes": {
+"anfiteatro": {
+"frac_valida": 1.0,
+"vv_db_mediana": -11.95,
+"vh_db_mediana": -17.59
+},
+"alto_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -9.86,
+"vh_db_mediana": -17.68
+},
+"cume_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -6.1,
+"vh_db_mediana": -12.72
+},
+"corredor_00_05km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -7.61,
+"vh_db_mediana": -15.01
+},
+"corredor_05_10km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -6.48,
+"vh_db_mediana": -12.92
+},
+"corredor_10_15km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -6.93,
+"vh_db_mediana": -12.9
+},
+"corredor_15_25km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -5.94,
+"vh_db_mediana": -12.46
+}
+}
+},
+{
+"fonte": "s1",
+"id": "S1D_IW_GRDH_1SDV_20260804T122140_20260804T122205_003976_00737A_rtc",
+"datetime": "2026-08-04T12:21:52.992465Z",
+"orbita": "asc_85",
+"plataforma": "sentinel-1d",
+"regioes": {
+"anfiteatro": {
+"frac_valida": 1.0,
+"vv_db_mediana": -12.35,
+"vh_db_mediana": -16.63
+},
+"alto_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -10.65,
+"vh_db_mediana": -17.1
+},
+"cume_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -6.9,
+"vh_db_mediana": -13.47
+},
+"corredor_00_05km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -8.2,
+"vh_db_mediana": -15.11
+},
+"corredor_05_10km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -6.92,
+"vh_db_mediana": -13.31
+},
+"corredor_10_15km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -6.65,
+"vh_db_mediana": -12.84
+},
+"corredor_15_25km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -7.88,
+"vh_db_mediana": -13.26
+}
+}
+},
+{
+"fonte": "s1",
+"id": "S1D_IW_GRDH_1SDV_20260807T001036_20260807T001101_004012_0074B7_rtc",
+"datetime": "2026-08-07T00:10:48.957629Z",
+"orbita": "des_121",
+"plataforma": "sentinel-1d",
+"regioes": {
+"anfiteatro": {
+"frac_valida": 1.0,
+"vv_db_mediana": -13.7,
+"vh_db_mediana": -18.7
+},
+"alto_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -12.86,
+"vh_db_mediana": -18.44
+},
+"cume_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -4.5,
+"vh_db_mediana": -13.19
+},
+"corredor_00_05km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -6.91,
+"vh_db_mediana": -14.3
+},
+"corredor_05_10km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -5.26,
+"vh_db_mediana": -11.46
+},
+"corredor_10_15km": {
+"frac_valida": 0.529,
+"vv_db_mediana": -5.89,
+"vh_db_mediana": -11.57
+},
+"corredor_15_25km": {
+"frac_valida": 0.0,
+"vv_db_mediana": null,
+"vh_db_mediana": null
+}
+}
+},
+{
+"fonte": "s1",
+"id": "S1D_IW_GRDH_1SDV_20260812T001844_20260812T001909_004085_007738_rtc",
+"datetime": "2026-08-12T00:18:56.516306Z",
+"orbita": "des_19",
+"plataforma": "sentinel-1d",
+"regioes": {
+"anfiteatro": {
+"frac_valida": 1.0,
+"vv_db_mediana": -11.81,
+"vh_db_mediana": -17.59
+},
+"alto_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -9.93,
+"vh_db_mediana": -17.77
+},
+"cume_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -5.32,
+"vh_db_mediana": -11.8
+},
+"corredor_00_05km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -7.84,
+"vh_db_mediana": -15.49
+},
+"corredor_05_10km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -6.8,
+"vh_db_mediana": -13.32
+},
+"corredor_10_15km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -7.11,
+"vh_db_mediana": -13.29
+},
+"corredor_15_25km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -6.13,
+"vh_db_mediana": -12.66
+}
+}
+},
+{
+"fonte": "s1",
+"id": "S1D_IW_GRDH_1SDV_20260816T122141_20260816T122206_004151_007980_rtc",
+"datetime": "2026-08-16T12:21:53.557589Z",
+"orbita": "asc_85",
+"plataforma": "sentinel-1d",
+"regioes": {
+"anfiteatro": {
+"frac_valida": 1.0,
+"vv_db_mediana": -12.54,
+"vh_db_mediana": -18.24
+},
+"alto_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -11.03,
+"vh_db_mediana": -18.65
+},
+"cume_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -8.21,
+"vh_db_mediana": -16.15
+},
+"corredor_00_05km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -8.12,
+"vh_db_mediana": -15.7
+},
+"corredor_05_10km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -7.02,
+"vh_db_mediana": -13.66
+},
+"corredor_10_15km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -6.87,
+"vh_db_mediana": -13.18
+},
+"corredor_15_25km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -8.32,
+"vh_db_mediana": -14.24
+}
+}
+},
+{
+"fonte": "s1",
+"id": "S1D_IW_GRDH_1SDV_20260819T001036_20260819T001101_004187_007ABD_rtc",
+"datetime": "2026-08-19T00:10:49.388671Z",
+"orbita": "des_121",
+"plataforma": "sentinel-1d",
+"regioes": {
+"anfiteatro": {
+"frac_valida": 1.0,
+"vv_db_mediana": -13.08,
+"vh_db_mediana": -18.28
+},
+"alto_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -12.66,
+"vh_db_mediana": -18.21
+},
+"cume_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -3.95,
+"vh_db_mediana": -12.67
+},
+"corredor_00_05km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -6.79,
+"vh_db_mediana": -14.2
+},
+"corredor_05_10km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -5.17,
+"vh_db_mediana": -11.31
+},
+"corredor_10_15km": {
+"frac_valida": 0.511,
+"vv_db_mediana": -5.79,
+"vh_db_mediana": -11.4
+},
+"corredor_15_25km": {
+"frac_valida": 0.0,
+"vv_db_mediana": null,
+"vh_db_mediana": null
+}
+}
+},
+{
+"fonte": "s1",
+"id": "S1D_IW_GRDH_1SDV_20260824T001844_20260824T001909_004260_007D5D_rtc",
+"datetime": "2026-08-24T00:18:57.054676Z",
+"orbita": "des_19",
+"plataforma": "sentinel-1d",
+"regioes": {
+"anfiteatro": {
+"frac_valida": 1.0,
+"vv_db_mediana": -11.68,
+"vh_db_mediana": -17.42
+},
+"alto_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -9.87,
+"vh_db_mediana": -17.83
+},
+"cume_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -6.26,
+"vh_db_mediana": -13.29
+},
+"corredor_00_05km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -7.75,
+"vh_db_mediana": -15.1
+},
+"corredor_05_10km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -6.59,
+"vh_db_mediana": -13.08
+},
+"corredor_10_15km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -7.04,
+"vh_db_mediana": -13.04
+},
+"corredor_15_25km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -6.11,
+"vh_db_mediana": -12.57
+}
+}
+},
+{
+"fonte": "s1",
+"id": "S1D_IW_GRDH_1SDV_20260828T122141_20260828T122206_004326_007FA4_rtc",
+"datetime": "2026-08-28T12:21:54.261291Z",
+"orbita": "asc_85",
+"plataforma": "sentinel-1d",
+"regioes": {
+"anfiteatro": {
+"frac_valida": 1.0,
+"vv_db_mediana": -12.04,
+"vh_db_mediana": -17.78
+},
+"alto_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -10.77,
+"vh_db_mediana": -18.45
+},
+"cume_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -8.14,
+"vh_db_mediana": -16.28
+},
+"corredor_00_05km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -5.78,
+"vh_db_mediana": -14.27
+},
+"corredor_05_10km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -6.02,
+"vh_db_mediana": -13.51
+},
+"corredor_10_15km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -6.45,
+"vh_db_mediana": -13.38
+},
+"corredor_15_25km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -8.28,
+"vh_db_mediana": -14.52
+}
+}
+},
+{
+"fonte": "s1",
+"id": "S1D_IW_GRDH_1SDV_20260831T001037_20260831T001102_004362_0080EC_rtc",
+"datetime": "2026-08-31T00:10:50.145681Z",
+"orbita": "des_121",
+"plataforma": "sentinel-1d",
+"regioes": {
+"anfiteatro": {
+"frac_valida": 1.0,
+"vv_db_mediana": -12.95,
+"vh_db_mediana": -17.97
+},
+"alto_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -12.5,
+"vh_db_mediana": -17.89
+},
+"cume_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -4.02,
+"vh_db_mediana": -12.96
+},
+"corredor_00_05km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -6.09,
+"vh_db_mediana": -14.17
+},
+"corredor_05_10km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -4.08,
+"vh_db_mediana": -11.11
+},
+"corredor_10_15km": {
+"frac_valida": 0.532,
+"vv_db_mediana": -4.82,
+"vh_db_mediana": -11.37
+},
+"corredor_15_25km": {
+"frac_valida": 0.0,
+"vv_db_mediana": null,
+"vh_db_mediana": null
+}
+}
+},
+{
+"fonte": "s1",
+"id": "S1D_IW_GRDH_1SDV_20260905T001844_20260905T001909_004435_00837B_rtc",
+"datetime": "2026-09-05T00:18:57.330780Z",
+"orbita": "des_19",
+"plataforma": "sentinel-1d",
+"regioes": {
+"anfiteatro": {
+"frac_valida": 1.0,
+"vv_db_mediana": -11.36,
+"vh_db_mediana": -17.26
+},
+"alto_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -9.94,
+"vh_db_mediana": -17.8
+},
+"cume_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -5.76,
+"vh_db_mediana": -12.74
+},
+"corredor_00_05km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -7.08,
+"vh_db_mediana": -15.15
+},
+"corredor_05_10km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -5.91,
+"vh_db_mediana": -13.15
+},
+"corredor_10_15km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -6.24,
+"vh_db_mediana": -13.2
+},
+"corredor_15_25km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -5.57,
+"vh_db_mediana": -12.55
+}
+}
+},
+{
+"fonte": "s1",
+"id": "S1D_IW_GRDH_1SDV_20260909T122141_20260909T122206_004501_0085C5_rtc",
+"datetime": "2026-09-09T12:21:54.467277Z",
+"orbita": "asc_85",
+"plataforma": "sentinel-1d",
+"regioes": {
+"anfiteatro": {
+"frac_valida": 1.0,
+"vv_db_mediana": -11.79,
+"vh_db_mediana": -17.04
+},
+"alto_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -10.04,
+"vh_db_mediana": -17.37
+},
+"cume_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -6.48,
+"vh_db_mediana": -12.83
+},
+"corredor_00_05km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -6.33,
+"vh_db_mediana": -14.62
+},
+"corredor_05_10km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -6.09,
+"vh_db_mediana": -13.78
+},
+"corredor_10_15km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -6.58,
+"vh_db_mediana": -13.76
+},
+"corredor_15_25km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -8.63,
+"vh_db_mediana": -14.93
+}
+}
+},
+{
+"fonte": "s1",
+"id": "S1D_IW_GRDH_1SDV_20260912T001038_20260912T001103_004537_008704_rtc",
+"datetime": "2026-09-12T00:10:50.578653Z",
+"orbita": "des_121",
+"plataforma": "sentinel-1d",
+"regioes": {
+"anfiteatro": {
+"frac_valida": 1.0,
+"vv_db_mediana": -12.72,
+"vh_db_mediana": -17.74
+},
+"alto_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -12.19,
+"vh_db_mediana": -17.61
+},
+"cume_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -4.08,
+"vh_db_mediana": -12.2
+},
+"corredor_00_05km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -6.57,
+"vh_db_mediana": -14.59
+},
+"corredor_05_10km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -4.64,
+"vh_db_mediana": -11.9
+},
+"corredor_10_15km": {
+"frac_valida": 0.536,
+"vv_db_mediana": -5.31,
+"vh_db_mediana": -11.76
+},
+"corredor_15_25km": {
+"frac_valida": 0.0,
+"vv_db_mediana": null,
+"vh_db_mediana": null
+}
+}
+},
+{
+"fonte": "s1",
+"id": "S1D_IW_GRDH_1SDV_20260917T001845_20260917T001910_004610_008985_rtc",
+"datetime": "2026-09-17T00:18:57.916312Z",
+"orbita": "des_19",
+"plataforma": "sentinel-1d",
+"regioes": {
+"anfiteatro": {
+"frac_valida": 1.0,
+"vv_db_mediana": -10.81,
+"vh_db_mediana": -16.93
+},
+"alto_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -9.01,
+"vh_db_mediana": -16.37
+},
+"cume_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -4.21,
+"vh_db_mediana": -10.39
+},
+"corredor_00_05km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -7.31,
+"vh_db_mediana": -15.44
+},
+"corredor_05_10km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -6.33,
+"vh_db_mediana": -13.71
+},
+"corredor_10_15km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -6.3,
+"vh_db_mediana": -13.36
+},
+"corredor_15_25km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -5.51,
+"vh_db_mediana": -12.64
+}
+}
+},
+{
+"fonte": "s1",
+"id": "S1D_IW_GRDH_1SDV_20260921T122142_20260921T122207_004676_008BC6_rtc",
+"datetime": "2026-09-21T12:21:54.846235Z",
+"orbita": "asc_85",
+"plataforma": "sentinel-1d",
+"regioes": {
+"anfiteatro": {
+"frac_valida": 1.0,
+"vv_db_mediana": -11.91,
+"vh_db_mediana": -17.2
+},
+"alto_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -9.19,
+"vh_db_mediana": -16.13
+},
+"cume_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -5.25,
+"vh_db_mediana": -11.18
+},
+"corredor_00_05km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -7.06,
+"vh_db_mediana": -15.55
+},
+"corredor_05_10km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -6.46,
+"vh_db_mediana": -14.58
+},
+"corredor_10_15km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -6.79,
+"vh_db_mediana": -14.16
+},
+"corredor_15_25km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -9.13,
+"vh_db_mediana": -15.38
+}
+}
+},
+{
+"fonte": "s1",
+"id": "S1D_IW_GRDH_1SDV_20260924T001038_20260924T001103_004712_008D08_rtc",
+"datetime": "2026-09-24T00:10:50.827777Z",
+"orbita": "des_121",
+"plataforma": "sentinel-1d",
+"regioes": {
+"anfiteatro": {
+"frac_valida": 1.0,
+"vv_db_mediana": -12.23,
+"vh_db_mediana": -17.07
+},
+"alto_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -10.91,
+"vh_db_mediana": -15.91
+},
+"cume_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -4.57,
+"vh_db_mediana": -11.38
+},
+"corredor_00_05km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -6.43,
+"vh_db_mediana": -14.62
+},
+"corredor_05_10km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -4.43,
+"vh_db_mediana": -11.76
+},
+"corredor_10_15km": {
+"frac_valida": 0.534,
+"vv_db_mediana": -5.07,
+"vh_db_mediana": -11.82
+},
+"corredor_15_25km": {
+"frac_valida": 0.0,
+"vv_db_mediana": null,
+"vh_db_mediana": null
+}
+}
+},
+{
+"fonte": "s1",
+"id": "S1D_IW_GRDH_1SDV_20260929T001845_20260929T001910_004785_008F91_rtc",
+"datetime": "2026-09-29T00:18:57.930014Z",
+"orbita": "des_19",
+"plataforma": "sentinel-1d",
+"regioes": {
+"anfiteatro": {
+"frac_valida": 1.0,
+"vv_db_mediana": -10.05,
+"vh_db_mediana": -14.91
+},
+"alto_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -7.28,
+"vh_db_mediana": -13.42
+},
+"cume_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -2.83,
+"vh_db_mediana": -8.41
+},
+"corredor_00_05km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -7.82,
+"vh_db_mediana": -15.77
+},
+"corredor_05_10km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -6.93,
+"vh_db_mediana": -14.43
+},
+"corredor_10_15km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -6.98,
+"vh_db_mediana": -13.95
+},
+"corredor_15_25km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -6.15,
+"vh_db_mediana": -13.37
+}
+}
+},
+{
+"fonte": "s1",
+"id": "S1D_IW_GRDH_1SDV_20261003T122142_20261003T122207_004851_0091DF_rtc",
+"datetime": "2026-10-03T12:21:54.888065Z",
+"orbita": "asc_85",
+"plataforma": "sentinel-1d",
+"regioes": {
+"anfiteatro": {
+"frac_valida": 1.0,
+"vv_db_mediana": -10.71,
+"vh_db_mediana": -15.37
+},
+"alto_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -8.81,
+"vh_db_mediana": -14.96
+},
+"cume_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -5.23,
+"vh_db_mediana": -9.83
+},
+"corredor_00_05km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -7.64,
+"vh_db_mediana": -16.0
+},
+"corredor_05_10km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -7.03,
+"vh_db_mediana": -14.77
+},
+"corredor_10_15km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -7.22,
+"vh_db_mediana": -14.48
+},
+"corredor_15_25km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -9.18,
+"vh_db_mediana": -15.48
+}
+}
+},
+{
+"fonte": "s1",
+"id": "S1D_IW_GRDH_1SDV_20261006T001038_20261006T001103_004887_009321_rtc",
+"datetime": "2026-10-06T00:10:50.900761Z",
+"orbita": "des_121",
+"plataforma": "sentinel-1d",
+"regioes": {
+"anfiteatro": {
+"frac_valida": 1.0,
+"vv_db_mediana": -11.2,
+"vh_db_mediana": -15.36
+},
+"alto_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -9.89,
+"vh_db_mediana": -14.46
+},
+"cume_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -3.96,
+"vh_db_mediana": -10.44
+},
+"corredor_00_05km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -7.35,
+"vh_db_mediana": -15.25
+},
+"corredor_05_10km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -5.71,
+"vh_db_mediana": -12.99
+},
+"corredor_10_15km": {
+"frac_valida": 0.526,
+"vv_db_mediana": -6.46,
+"vh_db_mediana": -13.35
+},
+"corredor_15_25km": {
+"frac_valida": 0.0,
+"vv_db_mediana": null,
+"vh_db_mediana": null
+}
+}
+},
+{
+"fonte": "s1",
+"id": "S1D_IW_GRDH_1SDV_20261011T001845_20261011T001910_004960_0095BA_rtc",
+"datetime": "2026-10-11T00:18:58.078995Z",
+"orbita": "des_19",
+"plataforma": "sentinel-1d",
+"regioes": {
+"anfiteatro": {
+"frac_valida": 1.0,
+"vv_db_mediana": -9.42,
+"vh_db_mediana": -14.37
+},
+"alto_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -6.63,
+"vh_db_mediana": -12.46
+},
+"cume_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -2.46,
+"vh_db_mediana": -7.69
+},
+"corredor_00_05km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -7.65,
+"vh_db_mediana": -15.74
+},
+"corredor_05_10km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -7.0,
+"vh_db_mediana": -14.81
+},
+"corredor_10_15km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -7.17,
+"vh_db_mediana": -14.47
+},
+"corredor_15_25km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -6.46,
+"vh_db_mediana": -13.78
+}
+}
+},
+{
+"fonte": "s1",
+"id": "S1D_IW_GRDH_1SDV_20261015T122142_20261015T122207_005026_0097FB_rtc",
+"datetime": "2026-10-15T12:21:54.877034Z",
+"orbita": "asc_85",
+"plataforma": "sentinel-1d",
+"regioes": {
+"anfiteatro": {
+"frac_valida": 1.0,
+"vv_db_mediana": -9.68,
+"vh_db_mediana": -14.26
+},
+"alto_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -7.64,
+"vh_db_mediana": -13.42
+},
+"cume_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -4.69,
+"vh_db_mediana": -9.4
+},
+"corredor_00_05km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -7.74,
+"vh_db_mediana": -16.26
+},
+"corredor_05_10km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -7.31,
+"vh_db_mediana": -15.11
+},
+"corredor_10_15km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -7.58,
+"vh_db_mediana": -14.85
+},
+"corredor_15_25km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -9.46,
+"vh_db_mediana": -15.77
+}
+}
+},
+{
+"fonte": "s1",
+"id": "S1D_IW_GRDH_1SDV_20261018T001038_20261018T001103_005062_009936_rtc",
+"datetime": "2026-10-18T00:10:50.816252Z",
+"orbita": "des_121",
+"plataforma": "sentinel-1d",
+"regioes": {
+"anfiteatro": {
+"frac_valida": 1.0,
+"vv_db_mediana": -10.82,
+"vh_db_mediana": -14.84
+},
+"alto_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -9.07,
+"vh_db_mediana": -13.38
+},
+"cume_fora": {
+"frac_valida": 1.0,
+"vv_db_mediana": -3.46,
+"vh_db_mediana": -9.73
+},
+"corredor_00_05km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -7.16,
+"vh_db_mediana": -15.21
+},
+"corredor_05_10km": {
+"frac_valida": 1.0,
+"vv_db_mediana": -5.8,
+"vh_db_mediana": -13.2
+},
+"corredor_10_15km": {
+"frac_valida": 0.527,
+"vv_db_mediana": -6.62,
+"vh_db_mediana": -13.46
+},
+"corredor_15_25km": {
+"frac_valida": 0.0,
+"vv_db_mediana": null,
+"vh_db_mediana": null
+}
+}
+}
+]

@@ -1,0 +1,5262 @@
+{
+ "fontes": {
+  "s2es": [
+   "2026-07-02_S2A",
+   "2026-07-03_S2C",
+   "2026-07-05_S2B",
+   "2026-07-13_S2C",
+   "2026-07-15_S2A",
+   "2026-07-15_S2B",
+   "2026-07-18_S2B",
+   "2026-07-20_S2C",
+   "2026-07-22_S2A",
+   "2026-07-23_S2C",
+   "2026-07-25_S2B",
+   "2026-07-28_S2B",
+   "2026-08-04_S2A",
+   "2026-08-04_S2B",
+   "2026-08-07_S2B",
+   "2026-08-09_S2C",
+   "2026-08-11_S2A",
+   "2026-08-12_S2C",
+   "2026-08-14_S2B",
+   "2026-08-19_S2C",
+   "2026-08-24_S2A",
+   "2026-08-24_S2B",
+   "2026-08-27_S2B",
+   "2026-08-29_S2C",
+   "2026-08-31_S2A",
+   "2026-09-01_S2C",
+   "2026-09-03_S2B",
+   "2026-09-06_S2B",
+   "2026-09-08_S2C",
+   "2026-09-13_S2A",
+   "2026-09-13_S2B",
+   "2026-09-16_S2B",
+   "2026-09-18_S2C",
+   "2026-09-20_S2A",
+   "2026-09-21_S2C",
+   "2026-09-28_S2C",
+   "2026-10-01_S2C",
+   "2026-10-03_S2A",
+   "2026-10-03_S2B",
+   "2026-10-06_S2B",
+   "2026-10-08_S2C",
+   "2026-10-10_S2A",
+   "2026-10-11_S2C",
+   "2026-10-13_S2B",
+   "2026-10-16_S2B",
+   "2026-10-18_S2C"
+  ],
+  "s2pc": [
+   "2026-07-02_S2A",
+   "2026-07-03_S2C",
+   "2026-07-05_S2B",
+   "2026-07-13_S2C",
+   "2026-07-15_S2A",
+   "2026-07-15_S2B",
+   "2026-07-18_S2B",
+   "2026-07-20_S2C",
+   "2026-07-22_S2A",
+   "2026-07-23_S2C",
+   "2026-07-25_S2B",
+   "2026-07-28_S2B",
+   "2026-08-04_S2A",
+   "2026-08-04_S2B",
+   "2026-08-07_S2B",
+   "2026-08-09_S2C",
+   "2026-08-11_S2A",
+   "2026-08-12_S2C",
+   "2026-08-14_S2B",
+   "2026-08-19_S2C",
+   "2026-08-24_S2A",
+   "2026-08-24_S2B",
+   "2026-08-27_S2B",
+   "2026-08-29_S2C",
+   "2026-08-31_S2A",
+   "2026-09-01_S2C",
+   "2026-09-03_S2B",
+   "2026-09-06_S2B",
+   "2026-09-08_S2C",
+   "2026-09-13_S2A",
+   "2026-09-13_S2B",
+   "2026-09-16_S2B",
+   "2026-09-18_S2C",
+   "2026-09-20_S2A",
+   "2026-09-21_S2C",
+   "2026-09-28_S2C",
+   "2026-10-01_S2C",
+   "2026-10-03_S2A",
+   "2026-10-03_S2B",
+   "2026-10-06_S2B",
+   "2026-10-08_S2C",
+   "2026-10-10_S2A",
+   "2026-10-11_S2C",
+   "2026-10-13_S2B",
+   "2026-10-16_S2B",
+   "2026-10-18_S2C"
+  ],
+  "s2l1c": [
+   "2026-07-02_S2A",
+   "2026-07-03_S2C",
+   "2026-07-05_S2B",
+   "2026-07-13_S2C",
+   "2026-07-15_S2A",
+   "2026-07-15_S2B",
+   "2026-07-18_S2B",
+   "2026-07-20_S2C",
+   "2026-07-22_S2A",
+   "2026-07-23_S2C",
+   "2026-07-25_S2B",
+   "2026-07-28_S2B",
+   "2026-08-04_S2A",
+   "2026-08-04_S2B",
+   "2026-08-07_S2B",
+   "2026-08-09_S2C",
+   "2026-08-11_S2A",
+   "2026-08-12_S2C",
+   "2026-08-14_S2B",
+   "2026-08-19_S2C",
+   "2026-08-24_S2A",
+   "2026-08-24_S2B",
+   "2026-08-27_S2B",
+   "2026-08-29_S2C",
+   "2026-08-31_S2A",
+   "2026-09-01_S2C",
+   "2026-09-03_S2B",
+   "2026-09-06_S2B",
+   "2026-09-08_S2C",
+   "2026-09-13_S2A",
+   "2026-09-13_S2B",
+   "2026-09-16_S2B",
+   "2026-09-18_S2C",
+   "2026-09-20_S2A",
+   "2026-09-21_S2C",
+   "2026-09-28_S2C",
+   "2026-10-01_S2C",
+   "2026-10-03_S2A",
+   "2026-10-03_S2B",
+   "2026-10-06_S2B",
+   "2026-10-08_S2C",
+   "2026-10-10_S2A",
+   "2026-10-11_S2C",
+   "2026-10-13_S2B",
+   "2026-10-16_S2B",
+   "2026-10-18_S2C"
+  ]
+ },
+ "pares_evento": {
+  "A_12ago_24ago": {
+   "s2es|S2C>S2A": {
+    "30": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 248.16,
+      "frac_comum": 0.7295,
+      "neve_a_ha": 182.44,
+      "neve_b_ha": 154.48,
+      "perda_ha": 29.6,
+      "ganho_ha": 1.64,
+      "liquido_ha": -27.96,
+      "liquido_frac_comum": -0.1127
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 982.68,
+      "frac_comum": 0.5616,
+      "neve_a_ha": 913.76,
+      "neve_b_ha": 872.8,
+      "perda_ha": 54.0,
+      "ganho_ha": 13.04,
+      "liquido_ha": -40.96,
+      "liquido_frac_comum": -0.0417
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 71.44,
+      "frac_comum": 0.9312,
+      "neve_a_ha": 71.44,
+      "neve_b_ha": 71.44,
+      "perda_ha": 0.0,
+      "ganho_ha": 0.0,
+      "liquido_ha": 0.0,
+      "liquido_frac_comum": 0.0
+     }
+    },
+    "42": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 248.16,
+      "frac_comum": 0.7295,
+      "neve_a_ha": 175.64,
+      "neve_b_ha": 139.36,
+      "perda_ha": 38.44,
+      "ganho_ha": 2.16,
+      "liquido_ha": -36.28,
+      "liquido_frac_comum": -0.1462
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 982.68,
+      "frac_comum": 0.5616,
+      "neve_a_ha": 887.48,
+      "neve_b_ha": 801.32,
+      "perda_ha": 107.32,
+      "ganho_ha": 21.16,
+      "liquido_ha": -86.16,
+      "liquido_frac_comum": -0.0877
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 71.44,
+      "frac_comum": 0.9312,
+      "neve_a_ha": 71.44,
+      "neve_b_ha": 70.84,
+      "perda_ha": 0.6,
+      "ganho_ha": 0.0,
+      "liquido_ha": -0.6,
+      "liquido_frac_comum": -0.0084
+     }
+    },
+    "50": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 248.16,
+      "frac_comum": 0.7295,
+      "neve_a_ha": 169.64,
+      "neve_b_ha": 130.0,
+      "perda_ha": 41.84,
+      "ganho_ha": 2.2,
+      "liquido_ha": -39.64,
+      "liquido_frac_comum": -0.1597
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 982.68,
+      "frac_comum": 0.5616,
+      "neve_a_ha": 864.56,
+      "neve_b_ha": 736.72,
+      "perda_ha": 156.44,
+      "ganho_ha": 28.6,
+      "liquido_ha": -127.84,
+      "liquido_frac_comum": -0.1301
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 71.44,
+      "frac_comum": 0.9312,
+      "neve_a_ha": 71.44,
+      "neve_b_ha": 68.68,
+      "perda_ha": 2.76,
+      "ganho_ha": 0.0,
+      "liquido_ha": -2.76,
+      "liquido_frac_comum": -0.0386
+     }
+    },
+    "maior_aglomerado_perda": {
+     "n_aglomerados": 75,
+     "maior_ha": 23.04,
+     "j": [
+      108,
+      135
+     ],
+     "i": [
+      198,
+      248
+     ],
+     "dim_m": [
+      560,
+      1020
+     ],
+     "centro_lon": 85.5053,
+     "centro_lat": 28.2664,
+     "dist_colapso_m": 1080
+    }
+   },
+   "s2es|S2C>S2B": {
+    "30": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 212.72,
+      "frac_comum": 0.6254,
+      "neve_a_ha": 148.96,
+      "neve_b_ha": 138.4,
+      "perda_ha": 19.16,
+      "ganho_ha": 8.6,
+      "liquido_ha": -10.56,
+      "liquido_frac_comum": -0.0496
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 1179.28,
+      "frac_comum": 0.6739,
+      "neve_a_ha": 1093.56,
+      "neve_b_ha": 987.72,
+      "perda_ha": 121.4,
+      "ganho_ha": 15.56,
+      "liquido_ha": -105.84,
+      "liquido_frac_comum": -0.0897
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 60.48,
+      "frac_comum": 0.7883,
+      "neve_a_ha": 60.48,
+      "neve_b_ha": 60.48,
+      "perda_ha": 0.0,
+      "ganho_ha": 0.0,
+      "liquido_ha": 0.0,
+      "liquido_frac_comum": 0.0
+     }
+    },
+    "42": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 212.72,
+      "frac_comum": 0.6254,
+      "neve_a_ha": 142.84,
+      "neve_b_ha": 129.12,
+      "perda_ha": 22.12,
+      "ganho_ha": 8.4,
+      "liquido_ha": -13.72,
+      "liquido_frac_comum": -0.0645
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 1179.28,
+      "frac_comum": 0.6739,
+      "neve_a_ha": 1060.56,
+      "neve_b_ha": 903.12,
+      "perda_ha": 178.84,
+      "ganho_ha": 21.4,
+      "liquido_ha": -157.44,
+      "liquido_frac_comum": -0.1335
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 60.48,
+      "frac_comum": 0.7883,
+      "neve_a_ha": 60.48,
+      "neve_b_ha": 60.2,
+      "perda_ha": 0.28,
+      "ganho_ha": 0.0,
+      "liquido_ha": -0.28,
+      "liquido_frac_comum": -0.0046
+     }
+    },
+    "50": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 212.72,
+      "frac_comum": 0.6254,
+      "neve_a_ha": 137.76,
+      "neve_b_ha": 120.68,
+      "perda_ha": 25.44,
+      "ganho_ha": 8.36,
+      "liquido_ha": -17.08,
+      "liquido_frac_comum": -0.0803
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 1179.28,
+      "frac_comum": 0.6739,
+      "neve_a_ha": 1033.8,
+      "neve_b_ha": 841.08,
+      "perda_ha": 218.52,
+      "ganho_ha": 25.8,
+      "liquido_ha": -192.72,
+      "liquido_frac_comum": -0.1634
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 60.48,
+      "frac_comum": 0.7883,
+      "neve_a_ha": 60.48,
+      "neve_b_ha": 59.4,
+      "perda_ha": 1.08,
+      "ganho_ha": 0.0,
+      "liquido_ha": -1.08,
+      "liquido_frac_comum": -0.0179
+     }
+    },
+    "maior_aglomerado_perda": {
+     "n_aglomerados": 67,
+     "maior_ha": 2.72,
+     "j": [
+      19,
+      44
+     ],
+     "i": [
+      259,
+      265
+     ],
+     "dim_m": [
+      520,
+      140
+     ],
+     "centro_lon": 85.513,
+     "centro_lat": 28.2827,
+     "dist_colapso_m": 1320
+    }
+   },
+   "s2pc|S2C>S2A": {
+    "30": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 239.96,
+      "frac_comum": 0.7054,
+      "neve_a_ha": 176.96,
+      "neve_b_ha": 150.36,
+      "perda_ha": 28.52,
+      "ganho_ha": 1.92,
+      "liquido_ha": -26.6,
+      "liquido_frac_comum": -0.1109
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 969.92,
+      "frac_comum": 0.5543,
+      "neve_a_ha": 901.56,
+      "neve_b_ha": 858.36,
+      "perda_ha": 57.2,
+      "ganho_ha": 14.0,
+      "liquido_ha": -43.2,
+      "liquido_frac_comum": -0.0445
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 71.4,
+      "frac_comum": 0.9307,
+      "neve_a_ha": 71.4,
+      "neve_b_ha": 71.4,
+      "perda_ha": 0.0,
+      "ganho_ha": 0.0,
+      "liquido_ha": 0.0,
+      "liquido_frac_comum": 0.0
+     }
+    },
+    "42": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 239.96,
+      "frac_comum": 0.7054,
+      "neve_a_ha": 170.64,
+      "neve_b_ha": 136.76,
+      "perda_ha": 35.76,
+      "ganho_ha": 1.88,
+      "liquido_ha": -33.88,
+      "liquido_frac_comum": -0.1412
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 969.92,
+      "frac_comum": 0.5543,
+      "neve_a_ha": 874.52,
+      "neve_b_ha": 786.64,
+      "perda_ha": 109.64,
+      "ganho_ha": 21.76,
+      "liquido_ha": -87.88,
+      "liquido_frac_comum": -0.0906
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 71.4,
+      "frac_comum": 0.9307,
+      "neve_a_ha": 71.4,
+      "neve_b_ha": 70.68,
+      "perda_ha": 0.72,
+      "ganho_ha": 0.0,
+      "liquido_ha": -0.72,
+      "liquido_frac_comum": -0.0101
+     }
+    },
+    "50": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 239.96,
+      "frac_comum": 0.7054,
+      "neve_a_ha": 163.96,
+      "neve_b_ha": 126.64,
+      "perda_ha": 39.8,
+      "ganho_ha": 2.48,
+      "liquido_ha": -37.32,
+      "liquido_frac_comum": -0.1555
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 969.92,
+      "frac_comum": 0.5543,
+      "neve_a_ha": 848.84,
+      "neve_b_ha": 724.84,
+      "perda_ha": 153.32,
+      "ganho_ha": 29.32,
+      "liquido_ha": -124.0,
+      "liquido_frac_comum": -0.1278
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 71.4,
+      "frac_comum": 0.9307,
+      "neve_a_ha": 71.4,
+      "neve_b_ha": 68.48,
+      "perda_ha": 2.92,
+      "ganho_ha": 0.0,
+      "liquido_ha": -2.92,
+      "liquido_frac_comum": -0.0409
+     }
+    },
+    "maior_aglomerado_perda": {
+     "n_aglomerados": 89,
+     "maior_ha": 21.36,
+     "j": [
+      108,
+      134
+     ],
+     "i": [
+      198,
+      249
+     ],
+     "dim_m": [
+      540,
+      1040
+     ],
+     "centro_lon": 85.5054,
+     "centro_lat": 28.2665,
+     "dist_colapso_m": 1067
+    }
+   },
+   "s2pc|S2C>S2B": {
+    "30": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 205.2,
+      "frac_comum": 0.6032,
+      "neve_a_ha": 144.36,
+      "neve_b_ha": 133.72,
+      "perda_ha": 19.16,
+      "ganho_ha": 8.52,
+      "liquido_ha": -10.64,
+      "liquido_frac_comum": -0.0519
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 1166.12,
+      "frac_comum": 0.6664,
+      "neve_a_ha": 1080.32,
+      "neve_b_ha": 973.88,
+      "perda_ha": 123.12,
+      "ganho_ha": 16.68,
+      "liquido_ha": -106.44,
+      "liquido_frac_comum": -0.0913
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 60.48,
+      "frac_comum": 0.7883,
+      "neve_a_ha": 60.48,
+      "neve_b_ha": 60.48,
+      "perda_ha": 0.0,
+      "ganho_ha": 0.0,
+      "liquido_ha": 0.0,
+      "liquido_frac_comum": 0.0
+     }
+    },
+    "42": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 205.2,
+      "frac_comum": 0.6032,
+      "neve_a_ha": 138.68,
+      "neve_b_ha": 124.48,
+      "perda_ha": 22.64,
+      "ganho_ha": 8.44,
+      "liquido_ha": -14.2,
+      "liquido_frac_comum": -0.0692
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 1166.12,
+      "frac_comum": 0.6664,
+      "neve_a_ha": 1047.68,
+      "neve_b_ha": 893.0,
+      "perda_ha": 177.48,
+      "ganho_ha": 22.8,
+      "liquido_ha": -154.68,
+      "liquido_frac_comum": -0.1326
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 60.48,
+      "frac_comum": 0.7883,
+      "neve_a_ha": 60.48,
+      "neve_b_ha": 60.2,
+      "perda_ha": 0.28,
+      "ganho_ha": 0.0,
+      "liquido_ha": -0.28,
+      "liquido_frac_comum": -0.0046
+     }
+    },
+    "50": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 205.2,
+      "frac_comum": 0.6032,
+      "neve_a_ha": 133.0,
+      "neve_b_ha": 117.44,
+      "perda_ha": 24.92,
+      "ganho_ha": 9.36,
+      "liquido_ha": -15.56,
+      "liquido_frac_comum": -0.0758
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 1166.12,
+      "frac_comum": 0.6664,
+      "neve_a_ha": 1018.24,
+      "neve_b_ha": 832.88,
+      "perda_ha": 212.96,
+      "ganho_ha": 27.6,
+      "liquido_ha": -185.36,
+      "liquido_frac_comum": -0.159
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 60.48,
+      "frac_comum": 0.7883,
+      "neve_a_ha": 60.48,
+      "neve_b_ha": 59.28,
+      "perda_ha": 1.2,
+      "ganho_ha": 0.0,
+      "liquido_ha": -1.2,
+      "liquido_frac_comum": -0.0198
+     }
+    },
+    "maior_aglomerado_perda": {
+     "n_aglomerados": 92,
+     "maior_ha": 2.32,
+     "j": [
+      97,
+      105
+     ],
+     "i": [
+      201,
+      215
+     ],
+     "dim_m": [
+      180,
+      300
+     ],
+     "centro_lon": 85.5022,
+     "centro_lat": 28.2701,
+     "dist_colapso_m": 1261
+    }
+   },
+   "s2l1c|S2C>S2A": {
+    "30": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 216.0,
+      "frac_comum": 0.635,
+      "neve_a_ha": 180.44,
+      "neve_b_ha": 167.04,
+      "perda_ha": 15.16,
+      "ganho_ha": 1.76,
+      "liquido_ha": -13.4,
+      "liquido_frac_comum": -0.062
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 970.08,
+      "frac_comum": 0.5544,
+      "neve_a_ha": 911.44,
+      "neve_b_ha": 885.8,
+      "perda_ha": 38.08,
+      "ganho_ha": 12.44,
+      "liquido_ha": -25.64,
+      "liquido_frac_comum": -0.0264
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 71.44,
+      "frac_comum": 0.9312,
+      "neve_a_ha": 71.44,
+      "neve_b_ha": 71.44,
+      "perda_ha": 0.0,
+      "ganho_ha": 0.0,
+      "liquido_ha": 0.0,
+      "liquido_frac_comum": 0.0
+     }
+    },
+    "42": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 216.0,
+      "frac_comum": 0.635,
+      "neve_a_ha": 175.8,
+      "neve_b_ha": 149.52,
+      "perda_ha": 27.88,
+      "ganho_ha": 1.6,
+      "liquido_ha": -26.28,
+      "liquido_frac_comum": -0.1217
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 970.08,
+      "frac_comum": 0.5544,
+      "neve_a_ha": 887.64,
+      "neve_b_ha": 812.72,
+      "perda_ha": 90.52,
+      "ganho_ha": 15.6,
+      "liquido_ha": -74.92,
+      "liquido_frac_comum": -0.0772
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 71.44,
+      "frac_comum": 0.9312,
+      "neve_a_ha": 71.44,
+      "neve_b_ha": 71.4,
+      "perda_ha": 0.04,
+      "ganho_ha": 0.0,
+      "liquido_ha": -0.04,
+      "liquido_frac_comum": -0.0006
+     }
+    },
+    "50": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 216.0,
+      "frac_comum": 0.635,
+      "neve_a_ha": 171.6,
+      "neve_b_ha": 139.92,
+      "perda_ha": 33.6,
+      "ganho_ha": 1.92,
+      "liquido_ha": -31.68,
+      "liquido_frac_comum": -0.1467
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 970.08,
+      "frac_comum": 0.5544,
+      "neve_a_ha": 869.28,
+      "neve_b_ha": 752.04,
+      "perda_ha": 136.8,
+      "ganho_ha": 19.56,
+      "liquido_ha": -117.24,
+      "liquido_frac_comum": -0.1209
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 71.44,
+      "frac_comum": 0.9312,
+      "neve_a_ha": 71.44,
+      "neve_b_ha": 68.84,
+      "perda_ha": 2.6,
+      "ganho_ha": 0.0,
+      "liquido_ha": -2.6,
+      "liquido_frac_comum": -0.0364
+     }
+    },
+    "maior_aglomerado_perda": {
+     "n_aglomerados": 59,
+     "maior_ha": 19.56,
+     "j": [
+      108,
+      135
+     ],
+     "i": [
+      199,
+      248
+     ],
+     "dim_m": [
+      560,
+      1000
+     ],
+     "centro_lon": 85.5054,
+     "centro_lat": 28.2664,
+     "dist_colapso_m": 1071
+    }
+   },
+   "s2l1c|S2C>S2B": {
+    "30": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 188.56,
+      "frac_comum": 0.5543,
+      "neve_a_ha": 150.08,
+      "neve_b_ha": 138.32,
+      "perda_ha": 16.68,
+      "ganho_ha": 4.92,
+      "liquido_ha": -11.76,
+      "liquido_frac_comum": -0.0624
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 1175.32,
+      "frac_comum": 0.6717,
+      "neve_a_ha": 1102.24,
+      "neve_b_ha": 1018.72,
+      "perda_ha": 96.16,
+      "ganho_ha": 12.64,
+      "liquido_ha": -83.52,
+      "liquido_frac_comum": -0.0711
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 60.48,
+      "frac_comum": 0.7883,
+      "neve_a_ha": 60.48,
+      "neve_b_ha": 60.48,
+      "perda_ha": 0.0,
+      "ganho_ha": 0.0,
+      "liquido_ha": 0.0,
+      "liquido_frac_comum": 0.0
+     }
+    },
+    "42": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 188.56,
+      "frac_comum": 0.5543,
+      "neve_a_ha": 145.44,
+      "neve_b_ha": 131.84,
+      "perda_ha": 18.32,
+      "ganho_ha": 4.72,
+      "liquido_ha": -13.6,
+      "liquido_frac_comum": -0.0721
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 1175.32,
+      "frac_comum": 0.6717,
+      "neve_a_ha": 1067.6,
+      "neve_b_ha": 940.36,
+      "perda_ha": 146.88,
+      "ganho_ha": 19.64,
+      "liquido_ha": -127.24,
+      "liquido_frac_comum": -0.1083
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 60.48,
+      "frac_comum": 0.7883,
+      "neve_a_ha": 60.48,
+      "neve_b_ha": 60.2,
+      "perda_ha": 0.28,
+      "ganho_ha": 0.0,
+      "liquido_ha": -0.28,
+      "liquido_frac_comum": -0.0046
+     }
+    },
+    "50": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 188.56,
+      "frac_comum": 0.5543,
+      "neve_a_ha": 141.6,
+      "neve_b_ha": 127.12,
+      "perda_ha": 19.6,
+      "ganho_ha": 5.12,
+      "liquido_ha": -14.48,
+      "liquido_frac_comum": -0.0768
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 1175.32,
+      "frac_comum": 0.6717,
+      "neve_a_ha": 1044.64,
+      "neve_b_ha": 875.52,
+      "perda_ha": 191.32,
+      "ganho_ha": 22.2,
+      "liquido_ha": -169.12,
+      "liquido_frac_comum": -0.1439
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 60.48,
+      "frac_comum": 0.7883,
+      "neve_a_ha": 60.48,
+      "neve_b_ha": 59.56,
+      "perda_ha": 0.92,
+      "ganho_ha": 0.0,
+      "liquido_ha": -0.92,
+      "liquido_frac_comum": -0.0152
+     }
+    },
+    "maior_aglomerado_perda": {
+     "n_aglomerados": 72,
+     "maior_ha": 2.36,
+     "j": [
+      97,
+      105
+     ],
+     "i": [
+      201,
+      215
+     ],
+     "dim_m": [
+      180,
+      300
+     ],
+     "centro_lon": 85.5022,
+     "centro_lat": 28.2701,
+     "dist_colapso_m": 1261
+    }
+   }
+  },
+  "B_24ago_27ago": {
+   "s2es|S2A>S2B": {
+    "30": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 230.64,
+      "frac_comum": 0.678,
+      "neve_a_ha": 158.56,
+      "neve_b_ha": 173.68,
+      "perda_ha": 8.56,
+      "ganho_ha": 23.68,
+      "liquido_ha": 15.12,
+      "liquido_frac_comum": 0.0656
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 597.2,
+      "frac_comum": 0.3413,
+      "neve_a_ha": 568.64,
+      "neve_b_ha": 547.52,
+      "perda_ha": 36.64,
+      "ganho_ha": 15.52,
+      "liquido_ha": -21.12,
+      "liquido_frac_comum": -0.0354
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 71.44,
+      "frac_comum": 0.9312,
+      "neve_a_ha": 71.44,
+      "neve_b_ha": 71.44,
+      "perda_ha": 0.0,
+      "ganho_ha": 0.0,
+      "liquido_ha": 0.0,
+      "liquido_frac_comum": 0.0
+     }
+    },
+    "42": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 230.64,
+      "frac_comum": 0.678,
+      "neve_a_ha": 144.96,
+      "neve_b_ha": 162.88,
+      "perda_ha": 11.08,
+      "ganho_ha": 29.0,
+      "liquido_ha": 17.92,
+      "liquido_frac_comum": 0.0777
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 597.2,
+      "frac_comum": 0.3413,
+      "neve_a_ha": 541.44,
+      "neve_b_ha": 479.28,
+      "perda_ha": 84.64,
+      "ganho_ha": 22.48,
+      "liquido_ha": -62.16,
+      "liquido_frac_comum": -0.1041
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 71.44,
+      "frac_comum": 0.9312,
+      "neve_a_ha": 70.84,
+      "neve_b_ha": 71.44,
+      "perda_ha": 0.0,
+      "ganho_ha": 0.6,
+      "liquido_ha": 0.6,
+      "liquido_frac_comum": 0.0084
+     }
+    },
+    "50": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 230.64,
+      "frac_comum": 0.678,
+      "neve_a_ha": 136.08,
+      "neve_b_ha": 153.52,
+      "perda_ha": 12.64,
+      "ganho_ha": 30.08,
+      "liquido_ha": 17.44,
+      "liquido_frac_comum": 0.0756
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 597.2,
+      "frac_comum": 0.3413,
+      "neve_a_ha": 510.88,
+      "neve_b_ha": 427.48,
+      "perda_ha": 118.4,
+      "ganho_ha": 35.0,
+      "liquido_ha": -83.4,
+      "liquido_frac_comum": -0.1397
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 71.44,
+      "frac_comum": 0.9312,
+      "neve_a_ha": 68.68,
+      "neve_b_ha": 71.44,
+      "perda_ha": 0.0,
+      "ganho_ha": 2.76,
+      "liquido_ha": 2.76,
+      "liquido_frac_comum": 0.0386
+     }
+    },
+    "maior_aglomerado_perda": {
+     "n_aglomerados": 27,
+     "maior_ha": 5.52,
+     "j": [
+      104,
+      121
+     ],
+     "i": [
+      265,
+      279
+     ],
+     "dim_m": [
+      360,
+      300
+     ],
+     "centro_lon": 85.5153,
+     "centro_lat": 28.2681,
+     "dist_colapso_m": 319
+    }
+   },
+   "s2es|S2B>S2B": {
+    "30": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 186.72,
+      "frac_comum": 0.5489,
+      "neve_a_ha": 131.04,
+      "neve_b_ha": 135.64,
+      "perda_ha": 6.92,
+      "ganho_ha": 11.52,
+      "liquido_ha": 4.6,
+      "liquido_frac_comum": 0.0246
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 636.96,
+      "frac_comum": 0.364,
+      "neve_a_ha": 582.36,
+      "neve_b_ha": 588.96,
+      "perda_ha": 28.24,
+      "ganho_ha": 34.84,
+      "liquido_ha": 6.6,
+      "liquido_frac_comum": 0.0104
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 60.48,
+      "frac_comum": 0.7883,
+      "neve_a_ha": 60.48,
+      "neve_b_ha": 60.48,
+      "perda_ha": 0.0,
+      "ganho_ha": 0.0,
+      "liquido_ha": 0.0,
+      "liquido_frac_comum": 0.0
+     }
+    },
+    "42": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 186.72,
+      "frac_comum": 0.5489,
+      "neve_a_ha": 123.32,
+      "neve_b_ha": 129.36,
+      "perda_ha": 7.32,
+      "ganho_ha": 13.36,
+      "liquido_ha": 6.04,
+      "liquido_frac_comum": 0.0323
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 636.96,
+      "frac_comum": 0.364,
+      "neve_a_ha": 543.76,
+      "neve_b_ha": 515.6,
+      "perda_ha": 72.4,
+      "ganho_ha": 44.24,
+      "liquido_ha": -28.16,
+      "liquido_frac_comum": -0.0442
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 60.48,
+      "frac_comum": 0.7883,
+      "neve_a_ha": 60.2,
+      "neve_b_ha": 60.48,
+      "perda_ha": 0.0,
+      "ganho_ha": 0.28,
+      "liquido_ha": 0.28,
+      "liquido_frac_comum": 0.0046
+     }
+    },
+    "50": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 186.72,
+      "frac_comum": 0.5489,
+      "neve_a_ha": 116.12,
+      "neve_b_ha": 123.56,
+      "perda_ha": 8.76,
+      "ganho_ha": 16.2,
+      "liquido_ha": 7.44,
+      "liquido_frac_comum": 0.0398
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 636.96,
+      "frac_comum": 0.364,
+      "neve_a_ha": 512.04,
+      "neve_b_ha": 457.28,
+      "perda_ha": 112.52,
+      "ganho_ha": 57.76,
+      "liquido_ha": -54.76,
+      "liquido_frac_comum": -0.086
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 60.48,
+      "frac_comum": 0.7883,
+      "neve_a_ha": 59.4,
+      "neve_b_ha": 60.48,
+      "perda_ha": 0.0,
+      "ganho_ha": 1.08,
+      "liquido_ha": 1.08,
+      "liquido_frac_comum": 0.0179
+     }
+    },
+    "maior_aglomerado_perda": {
+     "n_aglomerados": 27,
+     "maior_ha": 4.6,
+     "j": [
+      115,
+      125
+     ],
+     "i": [
+      204,
+      226
+     ],
+     "dim_m": [
+      220,
+      460
+     ],
+     "centro_lon": 85.5037,
+     "centro_lat": 28.2667,
+     "dist_colapso_m": 1212
+    }
+   },
+   "s2pc|S2A>S2B": {
+    "30": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 226.12,
+      "frac_comum": 0.6647,
+      "neve_a_ha": 154.88,
+      "neve_b_ha": 170.8,
+      "perda_ha": 7.84,
+      "ganho_ha": 23.76,
+      "liquido_ha": 15.92,
+      "liquido_frac_comum": 0.0704
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 593.84,
+      "frac_comum": 0.3394,
+      "neve_a_ha": 563.44,
+      "neve_b_ha": 544.6,
+      "perda_ha": 35.16,
+      "ganho_ha": 16.32,
+      "liquido_ha": -18.84,
+      "liquido_frac_comum": -0.0317
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 71.4,
+      "frac_comum": 0.9307,
+      "neve_a_ha": 71.4,
+      "neve_b_ha": 71.4,
+      "perda_ha": 0.0,
+      "ganho_ha": 0.0,
+      "liquido_ha": 0.0,
+      "liquido_frac_comum": 0.0
+     }
+    },
+    "42": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 226.12,
+      "frac_comum": 0.6647,
+      "neve_a_ha": 142.52,
+      "neve_b_ha": 159.4,
+      "perda_ha": 10.4,
+      "ganho_ha": 27.28,
+      "liquido_ha": 16.88,
+      "liquido_frac_comum": 0.0747
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 593.84,
+      "frac_comum": 0.3394,
+      "neve_a_ha": 535.24,
+      "neve_b_ha": 475.92,
+      "perda_ha": 82.76,
+      "ganho_ha": 23.44,
+      "liquido_ha": -59.32,
+      "liquido_frac_comum": -0.0999
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 71.4,
+      "frac_comum": 0.9307,
+      "neve_a_ha": 70.68,
+      "neve_b_ha": 71.4,
+      "perda_ha": 0.0,
+      "ganho_ha": 0.72,
+      "liquido_ha": 0.72,
+      "liquido_frac_comum": 0.0101
+     }
+    },
+    "50": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 226.12,
+      "frac_comum": 0.6647,
+      "neve_a_ha": 133.0,
+      "neve_b_ha": 150.88,
+      "perda_ha": 11.92,
+      "ganho_ha": 29.8,
+      "liquido_ha": 17.88,
+      "liquido_frac_comum": 0.0791
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 593.84,
+      "frac_comum": 0.3394,
+      "neve_a_ha": 504.36,
+      "neve_b_ha": 423.64,
+      "perda_ha": 116.56,
+      "ganho_ha": 35.84,
+      "liquido_ha": -80.72,
+      "liquido_frac_comum": -0.1359
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 71.4,
+      "frac_comum": 0.9307,
+      "neve_a_ha": 68.48,
+      "neve_b_ha": 71.4,
+      "perda_ha": 0.0,
+      "ganho_ha": 2.92,
+      "liquido_ha": 2.92,
+      "liquido_frac_comum": 0.0409
+     }
+    },
+    "maior_aglomerado_perda": {
+     "n_aglomerados": 35,
+     "maior_ha": 4.96,
+     "j": [
+      104,
+      121
+     ],
+     "i": [
+      265,
+      279
+     ],
+     "dim_m": [
+      360,
+      300
+     ],
+     "centro_lon": 85.5153,
+     "centro_lat": 28.2681,
+     "dist_colapso_m": 319
+    }
+   },
+   "s2pc|S2B>S2B": {
+    "30": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 182.92,
+      "frac_comum": 0.5377,
+      "neve_a_ha": 127.96,
+      "neve_b_ha": 132.92,
+      "perda_ha": 7.28,
+      "ganho_ha": 12.24,
+      "liquido_ha": 4.96,
+      "liquido_frac_comum": 0.0271
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 633.48,
+      "frac_comum": 0.362,
+      "neve_a_ha": 578.2,
+      "neve_b_ha": 585.28,
+      "perda_ha": 27.8,
+      "ganho_ha": 34.88,
+      "liquido_ha": 7.08,
+      "liquido_frac_comum": 0.0112
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 60.48,
+      "frac_comum": 0.7883,
+      "neve_a_ha": 60.48,
+      "neve_b_ha": 60.48,
+      "perda_ha": 0.0,
+      "ganho_ha": 0.0,
+      "liquido_ha": 0.0,
+      "liquido_frac_comum": 0.0
+     }
+    },
+    "42": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 182.92,
+      "frac_comum": 0.5377,
+      "neve_a_ha": 119.88,
+      "neve_b_ha": 125.44,
+      "perda_ha": 8.32,
+      "ganho_ha": 13.88,
+      "liquido_ha": 5.56,
+      "liquido_frac_comum": 0.0304
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 633.48,
+      "frac_comum": 0.362,
+      "neve_a_ha": 539.52,
+      "neve_b_ha": 511.64,
+      "perda_ha": 72.96,
+      "ganho_ha": 45.08,
+      "liquido_ha": -27.88,
+      "liquido_frac_comum": -0.044
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 60.48,
+      "frac_comum": 0.7883,
+      "neve_a_ha": 60.2,
+      "neve_b_ha": 60.48,
+      "perda_ha": 0.0,
+      "ganho_ha": 0.28,
+      "liquido_ha": 0.28,
+      "liquido_frac_comum": 0.0046
+     }
+    },
+    "50": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 182.92,
+      "frac_comum": 0.5377,
+      "neve_a_ha": 113.32,
+      "neve_b_ha": 120.08,
+      "perda_ha": 9.76,
+      "ganho_ha": 16.52,
+      "liquido_ha": 6.76,
+      "liquido_frac_comum": 0.037
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 633.48,
+      "frac_comum": 0.362,
+      "neve_a_ha": 509.12,
+      "neve_b_ha": 452.24,
+      "perda_ha": 114.4,
+      "ganho_ha": 57.52,
+      "liquido_ha": -56.88,
+      "liquido_frac_comum": -0.0898
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 60.48,
+      "frac_comum": 0.7883,
+      "neve_a_ha": 59.28,
+      "neve_b_ha": 60.48,
+      "perda_ha": 0.0,
+      "ganho_ha": 1.2,
+      "liquido_ha": 1.2,
+      "liquido_frac_comum": 0.0198
+     }
+    },
+    "maior_aglomerado_perda": {
+     "n_aglomerados": 36,
+     "maior_ha": 4.44,
+     "j": [
+      116,
+      125
+     ],
+     "i": [
+      205,
+      226
+     ],
+     "dim_m": [
+      200,
+      440
+     ],
+     "centro_lon": 85.5038,
+     "centro_lat": 28.2666,
+     "dist_colapso_m": 1207
+    }
+   },
+   "s2l1c|S2A>S2B": {
+    "30": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 207.2,
+      "frac_comum": 0.6091,
+      "neve_a_ha": 169.88,
+      "neve_b_ha": 183.16,
+      "perda_ha": 3.4,
+      "ganho_ha": 16.68,
+      "liquido_ha": 13.28,
+      "liquido_frac_comum": 0.0641
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 593.8,
+      "frac_comum": 0.3393,
+      "neve_a_ha": 575.48,
+      "neve_b_ha": 547.44,
+      "perda_ha": 38.6,
+      "ganho_ha": 10.56,
+      "liquido_ha": -28.04,
+      "liquido_frac_comum": -0.0472
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 71.44,
+      "frac_comum": 0.9312,
+      "neve_a_ha": 71.44,
+      "neve_b_ha": 71.44,
+      "perda_ha": 0.0,
+      "ganho_ha": 0.0,
+      "liquido_ha": 0.0,
+      "liquido_frac_comum": 0.0
+     }
+    },
+    "42": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 207.2,
+      "frac_comum": 0.6091,
+      "neve_a_ha": 154.48,
+      "neve_b_ha": 172.92,
+      "perda_ha": 6.32,
+      "ganho_ha": 24.76,
+      "liquido_ha": 18.44,
+      "liquido_frac_comum": 0.089
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 593.8,
+      "frac_comum": 0.3393,
+      "neve_a_ha": 546.8,
+      "neve_b_ha": 478.28,
+      "perda_ha": 87.04,
+      "ganho_ha": 18.52,
+      "liquido_ha": -68.52,
+      "liquido_frac_comum": -0.1154
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 71.44,
+      "frac_comum": 0.9312,
+      "neve_a_ha": 71.4,
+      "neve_b_ha": 71.44,
+      "perda_ha": 0.0,
+      "ganho_ha": 0.04,
+      "liquido_ha": 0.04,
+      "liquido_frac_comum": 0.0006
+     }
+    },
+    "50": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 207.2,
+      "frac_comum": 0.6091,
+      "neve_a_ha": 146.28,
+      "neve_b_ha": 165.92,
+      "perda_ha": 7.92,
+      "ganho_ha": 27.56,
+      "liquido_ha": 19.64,
+      "liquido_frac_comum": 0.0948
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 593.8,
+      "frac_comum": 0.3393,
+      "neve_a_ha": 518.84,
+      "neve_b_ha": 431.24,
+      "perda_ha": 117.88,
+      "ganho_ha": 30.28,
+      "liquido_ha": -87.6,
+      "liquido_frac_comum": -0.1475
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 71.44,
+      "frac_comum": 0.9312,
+      "neve_a_ha": 68.84,
+      "neve_b_ha": 71.44,
+      "perda_ha": 0.0,
+      "ganho_ha": 2.6,
+      "liquido_ha": 2.6,
+      "liquido_frac_comum": 0.0364
+     }
+    },
+    "maior_aglomerado_perda": {
+     "n_aglomerados": 30,
+     "maior_ha": 2.92,
+     "j": [
+      107,
+      118
+     ],
+     "i": [
+      266,
+      276
+     ],
+     "dim_m": [
+      240,
+      220
+     ],
+     "centro_lon": 85.5151,
+     "centro_lat": 28.2681,
+     "dist_colapso_m": 318
+    }
+   },
+   "s2l1c|S2B>S2B": {
+    "30": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 172.72,
+      "frac_comum": 0.5078,
+      "neve_a_ha": 134.88,
+      "neve_b_ha": 142.36,
+      "perda_ha": 3.36,
+      "ganho_ha": 10.84,
+      "liquido_ha": 7.48,
+      "liquido_frac_comum": 0.0433
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 636.52,
+      "frac_comum": 0.3638,
+      "neve_a_ha": 596.84,
+      "neve_b_ha": 587.76,
+      "perda_ha": 32.4,
+      "ganho_ha": 23.32,
+      "liquido_ha": -9.08,
+      "liquido_frac_comum": -0.0143
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 60.48,
+      "frac_comum": 0.7883,
+      "neve_a_ha": 60.48,
+      "neve_b_ha": 60.48,
+      "perda_ha": 0.0,
+      "ganho_ha": 0.0,
+      "liquido_ha": 0.0,
+      "liquido_frac_comum": 0.0
+     }
+    },
+    "42": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 172.72,
+      "frac_comum": 0.5078,
+      "neve_a_ha": 129.08,
+      "neve_b_ha": 133.96,
+      "perda_ha": 5.56,
+      "ganho_ha": 10.44,
+      "liquido_ha": 4.88,
+      "liquido_frac_comum": 0.0283
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 636.52,
+      "frac_comum": 0.3638,
+      "neve_a_ha": 564.0,
+      "neve_b_ha": 507.44,
+      "perda_ha": 85.4,
+      "ganho_ha": 28.84,
+      "liquido_ha": -56.56,
+      "liquido_frac_comum": -0.0889
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 60.48,
+      "frac_comum": 0.7883,
+      "neve_a_ha": 60.2,
+      "neve_b_ha": 60.48,
+      "perda_ha": 0.0,
+      "ganho_ha": 0.28,
+      "liquido_ha": 0.28,
+      "liquido_frac_comum": 0.0046
+     }
+    },
+    "50": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 172.72,
+      "frac_comum": 0.5078,
+      "neve_a_ha": 124.44,
+      "neve_b_ha": 130.12,
+      "perda_ha": 6.04,
+      "ganho_ha": 11.72,
+      "liquido_ha": 5.68,
+      "liquido_frac_comum": 0.0329
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 636.52,
+      "frac_comum": 0.3638,
+      "neve_a_ha": 532.28,
+      "neve_b_ha": 453.24,
+      "perda_ha": 122.24,
+      "ganho_ha": 43.2,
+      "liquido_ha": -79.04,
+      "liquido_frac_comum": -0.1242
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 60.48,
+      "frac_comum": 0.7883,
+      "neve_a_ha": 59.56,
+      "neve_b_ha": 60.48,
+      "perda_ha": 0.0,
+      "ganho_ha": 0.92,
+      "liquido_ha": 0.92,
+      "liquido_frac_comum": 0.0152
+     }
+    },
+    "maior_aglomerado_perda": {
+     "n_aglomerados": 22,
+     "maior_ha": 3.16,
+     "j": [
+      115,
+      123
+     ],
+     "i": [
+      209,
+      225
+     ],
+     "dim_m": [
+      180,
+      340
+     ],
+     "centro_lon": 85.5041,
+     "centro_lat": 28.2668,
+     "dist_colapso_m": 1168
+    }
+   }
+  },
+  "C_12ago_27ago": {
+   "s2es|S2C>S2B": {
+    "30": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 240.0,
+      "frac_comum": 0.7056,
+      "neve_a_ha": 182.6,
+      "neve_b_ha": 169.4,
+      "perda_ha": 18.28,
+      "ganho_ha": 5.08,
+      "liquido_ha": -13.2,
+      "liquido_frac_comum": -0.055
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 864.48,
+      "frac_comum": 0.494,
+      "neve_a_ha": 833.2,
+      "neve_b_ha": 788.92,
+      "perda_ha": 57.88,
+      "ganho_ha": 13.6,
+      "liquido_ha": -44.28,
+      "liquido_frac_comum": -0.0512
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 76.72,
+      "frac_comum": 1.0,
+      "neve_a_ha": 76.72,
+      "neve_b_ha": 76.72,
+      "perda_ha": 0.0,
+      "ganho_ha": 0.0,
+      "liquido_ha": 0.0,
+      "liquido_frac_comum": 0.0
+     }
+    },
+    "42": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 240.0,
+      "frac_comum": 0.7056,
+      "neve_a_ha": 176.12,
+      "neve_b_ha": 159.08,
+      "perda_ha": 22.48,
+      "ganho_ha": 5.44,
+      "liquido_ha": -17.04,
+      "liquido_frac_comum": -0.071
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 864.48,
+      "frac_comum": 0.494,
+      "neve_a_ha": 818.44,
+      "neve_b_ha": 678.28,
+      "perda_ha": 148.8,
+      "ganho_ha": 8.64,
+      "liquido_ha": -140.16,
+      "liquido_frac_comum": -0.1621
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 76.72,
+      "frac_comum": 1.0,
+      "neve_a_ha": 76.72,
+      "neve_b_ha": 76.04,
+      "perda_ha": 0.68,
+      "ganho_ha": 0.0,
+      "liquido_ha": -0.68,
+      "liquido_frac_comum": -0.0089
+     }
+    },
+    "50": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 240.0,
+      "frac_comum": 0.7056,
+      "neve_a_ha": 170.76,
+      "neve_b_ha": 150.2,
+      "perda_ha": 26.36,
+      "ganho_ha": 5.8,
+      "liquido_ha": -20.56,
+      "liquido_frac_comum": -0.0857
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 864.48,
+      "frac_comum": 0.494,
+      "neve_a_ha": 802.24,
+      "neve_b_ha": 601.68,
+      "perda_ha": 211.16,
+      "ganho_ha": 10.6,
+      "liquido_ha": -200.56,
+      "liquido_frac_comum": -0.232
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 76.72,
+      "frac_comum": 1.0,
+      "neve_a_ha": 76.72,
+      "neve_b_ha": 75.6,
+      "perda_ha": 1.12,
+      "ganho_ha": 0.0,
+      "liquido_ha": -1.12,
+      "liquido_frac_comum": -0.0146
+     }
+    },
+    "maior_aglomerado_perda": {
+     "n_aglomerados": 46,
+     "maior_ha": 8.28,
+     "j": [
+      109,
+      125
+     ],
+     "i": [
+      202,
+      230
+     ],
+     "dim_m": [
+      340,
+      580
+     ],
+     "centro_lon": 85.5039,
+     "centro_lat": 28.2672,
+     "dist_colapso_m": 1172
+    }
+   },
+   "s2pc|S2C>S2B": {
+    "30": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 232.88,
+      "frac_comum": 0.6846,
+      "neve_a_ha": 177.28,
+      "neve_b_ha": 165.84,
+      "perda_ha": 17.28,
+      "ganho_ha": 5.84,
+      "liquido_ha": -11.44,
+      "liquido_frac_comum": -0.0491
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 857.68,
+      "frac_comum": 0.4901,
+      "neve_a_ha": 824.12,
+      "neve_b_ha": 782.6,
+      "perda_ha": 56.68,
+      "ganho_ha": 15.16,
+      "liquido_ha": -41.52,
+      "liquido_frac_comum": -0.0484
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 76.72,
+      "frac_comum": 1.0,
+      "neve_a_ha": 76.72,
+      "neve_b_ha": 76.72,
+      "perda_ha": 0.0,
+      "ganho_ha": 0.0,
+      "liquido_ha": 0.0,
+      "liquido_frac_comum": 0.0
+     }
+    },
+    "42": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 232.88,
+      "frac_comum": 0.6846,
+      "neve_a_ha": 171.24,
+      "neve_b_ha": 154.68,
+      "perda_ha": 21.84,
+      "ganho_ha": 5.28,
+      "liquido_ha": -16.56,
+      "liquido_frac_comum": -0.0711
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 857.68,
+      "frac_comum": 0.4901,
+      "neve_a_ha": 809.0,
+      "neve_b_ha": 672.92,
+      "perda_ha": 146.52,
+      "ganho_ha": 10.44,
+      "liquido_ha": -136.08,
+      "liquido_frac_comum": -0.1587
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 76.72,
+      "frac_comum": 1.0,
+      "neve_a_ha": 76.72,
+      "neve_b_ha": 76.08,
+      "perda_ha": 0.64,
+      "ganho_ha": 0.0,
+      "liquido_ha": -0.64,
+      "liquido_frac_comum": -0.0083
+     }
+    },
+    "50": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 232.88,
+      "frac_comum": 0.6846,
+      "neve_a_ha": 164.84,
+      "neve_b_ha": 146.84,
+      "perda_ha": 24.28,
+      "ganho_ha": 6.28,
+      "liquido_ha": -18.0,
+      "liquido_frac_comum": -0.0773
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 857.68,
+      "frac_comum": 0.4901,
+      "neve_a_ha": 790.72,
+      "neve_b_ha": 596.08,
+      "perda_ha": 207.4,
+      "ganho_ha": 12.76,
+      "liquido_ha": -194.64,
+      "liquido_frac_comum": -0.2269
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 76.72,
+      "frac_comum": 1.0,
+      "neve_a_ha": 76.72,
+      "neve_b_ha": 75.64,
+      "perda_ha": 1.08,
+      "ganho_ha": 0.0,
+      "liquido_ha": -1.08,
+      "liquido_frac_comum": -0.0141
+     }
+    },
+    "maior_aglomerado_perda": {
+     "n_aglomerados": 58,
+     "maior_ha": 7.48,
+     "j": [
+      110,
+      125
+     ],
+     "i": [
+      201,
+      230
+     ],
+     "dim_m": [
+      320,
+      600
+     ],
+     "centro_lon": 85.5037,
+     "centro_lat": 28.2671,
+     "dist_colapso_m": 1184
+    }
+   },
+   "s2l1c|S2C>S2B": {
+    "30": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 208.56,
+      "frac_comum": 0.6131,
+      "neve_a_ha": 181.8,
+      "neve_b_ha": 177.84,
+      "perda_ha": 9.24,
+      "ganho_ha": 5.28,
+      "liquido_ha": -3.96,
+      "liquido_frac_comum": -0.019
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 855.52,
+      "frac_comum": 0.4889,
+      "neve_a_ha": 829.32,
+      "neve_b_ha": 784.68,
+      "perda_ha": 56.4,
+      "ganho_ha": 11.76,
+      "liquido_ha": -44.64,
+      "liquido_frac_comum": -0.0522
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 76.72,
+      "frac_comum": 1.0,
+      "neve_a_ha": 76.72,
+      "neve_b_ha": 76.72,
+      "perda_ha": 0.0,
+      "ganho_ha": 0.0,
+      "liquido_ha": 0.0,
+      "liquido_frac_comum": 0.0
+     }
+    },
+    "42": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 208.56,
+      "frac_comum": 0.6131,
+      "neve_a_ha": 177.16,
+      "neve_b_ha": 166.8,
+      "perda_ha": 15.6,
+      "ganho_ha": 5.24,
+      "liquido_ha": -10.36,
+      "liquido_frac_comum": -0.0497
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 855.52,
+      "frac_comum": 0.4889,
+      "neve_a_ha": 816.72,
+      "neve_b_ha": 669.4,
+      "perda_ha": 152.92,
+      "ganho_ha": 5.6,
+      "liquido_ha": -147.32,
+      "liquido_frac_comum": -0.1722
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 76.72,
+      "frac_comum": 1.0,
+      "neve_a_ha": 76.72,
+      "neve_b_ha": 76.04,
+      "perda_ha": 0.68,
+      "ganho_ha": 0.0,
+      "liquido_ha": -0.68,
+      "liquido_frac_comum": -0.0089
+     }
+    },
+    "50": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 208.56,
+      "frac_comum": 0.6131,
+      "neve_a_ha": 173.4,
+      "neve_b_ha": 159.76,
+      "perda_ha": 19.48,
+      "ganho_ha": 5.84,
+      "liquido_ha": -13.64,
+      "liquido_frac_comum": -0.0654
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 855.52,
+      "frac_comum": 0.4889,
+      "neve_a_ha": 805.2,
+      "neve_b_ha": 597.52,
+      "perda_ha": 213.92,
+      "ganho_ha": 6.24,
+      "liquido_ha": -207.68,
+      "liquido_frac_comum": -0.2428
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 76.72,
+      "frac_comum": 1.0,
+      "neve_a_ha": 76.72,
+      "neve_b_ha": 75.56,
+      "perda_ha": 1.16,
+      "ganho_ha": 0.0,
+      "liquido_ha": -1.16,
+      "liquido_frac_comum": -0.0151
+     }
+    },
+    "maior_aglomerado_perda": {
+     "n_aglomerados": 45,
+     "maior_ha": 5.56,
+     "j": [
+      110,
+      123
+     ],
+     "i": [
+      205,
+      230
+     ],
+     "dim_m": [
+      280,
+      520
+     ],
+     "centro_lon": 85.5042,
+     "centro_lat": 28.2673,
+     "dist_colapso_m": 1140
+    }
+   }
+  },
+  "D_12ago_18out": {
+   "s2es|S2C>S2C": {
+    "30": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 275.68,
+      "frac_comum": 0.8104,
+      "neve_a_ha": 191.44,
+      "neve_b_ha": 271.72,
+      "perda_ha": 1.44,
+      "ganho_ha": 81.72,
+      "liquido_ha": 80.28,
+      "liquido_frac_comum": 0.2912
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 1634.32,
+      "frac_comum": 0.934,
+      "neve_a_ha": 1489.76,
+      "neve_b_ha": 1526.2,
+      "perda_ha": 78.12,
+      "ganho_ha": 114.56,
+      "liquido_ha": 36.44,
+      "liquido_frac_comum": 0.0223
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 74.52,
+      "frac_comum": 0.9713,
+      "neve_a_ha": 74.52,
+      "neve_b_ha": 74.48,
+      "perda_ha": 0.04,
+      "ganho_ha": 0.0,
+      "liquido_ha": -0.04,
+      "liquido_frac_comum": -0.0005
+     }
+    },
+    "42": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 275.68,
+      "frac_comum": 0.8104,
+      "neve_a_ha": 183.28,
+      "neve_b_ha": 269.32,
+      "perda_ha": 2.48,
+      "ganho_ha": 88.52,
+      "liquido_ha": 86.04,
+      "liquido_frac_comum": 0.3121
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 1634.32,
+      "frac_comum": 0.934,
+      "neve_a_ha": 1425.32,
+      "neve_b_ha": 1470.88,
+      "perda_ha": 106.12,
+      "ganho_ha": 151.68,
+      "liquido_ha": 45.56,
+      "liquido_frac_comum": 0.0279
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 74.52,
+      "frac_comum": 0.9713,
+      "neve_a_ha": 74.52,
+      "neve_b_ha": 74.32,
+      "perda_ha": 0.2,
+      "ganho_ha": 0.0,
+      "liquido_ha": -0.2,
+      "liquido_frac_comum": -0.0027
+     }
+    },
+    "50": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 275.68,
+      "frac_comum": 0.8104,
+      "neve_a_ha": 176.48,
+      "neve_b_ha": 266.44,
+      "perda_ha": 3.6,
+      "ganho_ha": 93.56,
+      "liquido_ha": 89.96,
+      "liquido_frac_comum": 0.3263
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 1634.32,
+      "frac_comum": 0.934,
+      "neve_a_ha": 1375.84,
+      "neve_b_ha": 1422.24,
+      "perda_ha": 126.84,
+      "ganho_ha": 173.24,
+      "liquido_ha": 46.4,
+      "liquido_frac_comum": 0.0284
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 74.52,
+      "frac_comum": 0.9713,
+      "neve_a_ha": 74.52,
+      "neve_b_ha": 74.32,
+      "perda_ha": 0.2,
+      "ganho_ha": 0.0,
+      "liquido_ha": -0.2,
+      "liquido_frac_comum": -0.0027
+     }
+    },
+    "maior_aglomerado_perda": {
+     "n_aglomerados": 16,
+     "maior_ha": 0.56,
+     "j": [
+      75,
+      83
+     ],
+     "i": [
+      233,
+      236
+     ],
+     "dim_m": [
+      180,
+      80
+     ],
+     "centro_lon": 85.5075,
+     "centro_lat": 28.2741,
+     "dist_colapso_m": 810
+    }
+   },
+   "s2pc|S2C>S2C": {
+    "30": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 265.52,
+      "frac_comum": 0.7806,
+      "neve_a_ha": 184.92,
+      "neve_b_ha": 262.32,
+      "perda_ha": 1.32,
+      "ganho_ha": 78.72,
+      "liquido_ha": 77.4,
+      "liquido_frac_comum": 0.2915
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 1607.4,
+      "frac_comum": 0.9186,
+      "neve_a_ha": 1462.84,
+      "neve_b_ha": 1495.16,
+      "perda_ha": 79.52,
+      "ganho_ha": 111.84,
+      "liquido_ha": 32.32,
+      "liquido_frac_comum": 0.0201
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 74.12,
+      "frac_comum": 0.9661,
+      "neve_a_ha": 74.12,
+      "neve_b_ha": 74.08,
+      "perda_ha": 0.04,
+      "ganho_ha": 0.0,
+      "liquido_ha": -0.04,
+      "liquido_frac_comum": -0.0005
+     }
+    },
+    "42": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 265.52,
+      "frac_comum": 0.7806,
+      "neve_a_ha": 177.16,
+      "neve_b_ha": 260.12,
+      "perda_ha": 2.56,
+      "ganho_ha": 85.52,
+      "liquido_ha": 82.96,
+      "liquido_frac_comum": 0.3124
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 1607.4,
+      "frac_comum": 0.9186,
+      "neve_a_ha": 1399.08,
+      "neve_b_ha": 1441.76,
+      "perda_ha": 106.0,
+      "ganho_ha": 148.68,
+      "liquido_ha": 42.68,
+      "liquido_frac_comum": 0.0266
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 74.12,
+      "frac_comum": 0.9661,
+      "neve_a_ha": 74.12,
+      "neve_b_ha": 73.96,
+      "perda_ha": 0.16,
+      "ganho_ha": 0.0,
+      "liquido_ha": -0.16,
+      "liquido_frac_comum": -0.0022
+     }
+    },
+    "50": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 265.52,
+      "frac_comum": 0.7806,
+      "neve_a_ha": 169.48,
+      "neve_b_ha": 257.12,
+      "perda_ha": 3.6,
+      "ganho_ha": 91.24,
+      "liquido_ha": 87.64,
+      "liquido_frac_comum": 0.3301
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 1607.4,
+      "frac_comum": 0.9186,
+      "neve_a_ha": 1347.68,
+      "neve_b_ha": 1394.68,
+      "perda_ha": 127.48,
+      "ganho_ha": 174.48,
+      "liquido_ha": 47.0,
+      "liquido_frac_comum": 0.0292
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 74.12,
+      "frac_comum": 0.9661,
+      "neve_a_ha": 74.12,
+      "neve_b_ha": 73.92,
+      "perda_ha": 0.2,
+      "ganho_ha": 0.0,
+      "liquido_ha": -0.2,
+      "liquido_frac_comum": -0.0027
+     }
+    },
+    "maior_aglomerado_perda": {
+     "n_aglomerados": 17,
+     "maior_ha": 0.68,
+     "j": [
+      75,
+      85
+     ],
+     "i": [
+      231,
+      237
+     ],
+     "dim_m": [
+      220,
+      140
+     ],
+     "centro_lon": 85.5074,
+     "centro_lat": 28.2739,
+     "dist_colapso_m": 810
+    }
+   },
+   "s2l1c|S2C>S2C": {
+    "30": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 97.92,
+      "frac_comum": 0.2879,
+      "neve_a_ha": 86.88,
+      "neve_b_ha": 97.0,
+      "perda_ha": 0.32,
+      "ganho_ha": 10.44,
+      "liquido_ha": 10.12,
+      "liquido_frac_comum": 0.1033
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 1522.88,
+      "frac_comum": 0.8703,
+      "neve_a_ha": 1403.56,
+      "neve_b_ha": 1455.24,
+      "perda_ha": 49.32,
+      "ganho_ha": 101.0,
+      "liquido_ha": 51.68,
+      "liquido_frac_comum": 0.0339
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 75.52,
+      "frac_comum": 0.9844,
+      "neve_a_ha": 75.52,
+      "neve_b_ha": 75.52,
+      "perda_ha": 0.0,
+      "ganho_ha": 0.0,
+      "liquido_ha": 0.0,
+      "liquido_frac_comum": 0.0
+     }
+    },
+    "42": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 97.92,
+      "frac_comum": 0.2879,
+      "neve_a_ha": 85.4,
+      "neve_b_ha": 96.36,
+      "perda_ha": 0.44,
+      "ganho_ha": 11.4,
+      "liquido_ha": 10.96,
+      "liquido_frac_comum": 0.1119
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 1522.88,
+      "frac_comum": 0.8703,
+      "neve_a_ha": 1340.96,
+      "neve_b_ha": 1406.36,
+      "perda_ha": 76.4,
+      "ganho_ha": 141.8,
+      "liquido_ha": 65.4,
+      "liquido_frac_comum": 0.0429
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 75.52,
+      "frac_comum": 0.9844,
+      "neve_a_ha": 75.52,
+      "neve_b_ha": 75.44,
+      "perda_ha": 0.08,
+      "ganho_ha": 0.0,
+      "liquido_ha": -0.08,
+      "liquido_frac_comum": -0.0011
+     }
+    },
+    "50": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 97.92,
+      "frac_comum": 0.2879,
+      "neve_a_ha": 83.68,
+      "neve_b_ha": 95.96,
+      "perda_ha": 0.4,
+      "ganho_ha": 12.68,
+      "liquido_ha": 12.28,
+      "liquido_frac_comum": 0.1254
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 1522.88,
+      "frac_comum": 0.8703,
+      "neve_a_ha": 1298.88,
+      "neve_b_ha": 1363.8,
+      "perda_ha": 98.88,
+      "ganho_ha": 163.8,
+      "liquido_ha": 64.92,
+      "liquido_frac_comum": 0.0426
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 75.52,
+      "frac_comum": 0.9844,
+      "neve_a_ha": 75.52,
+      "neve_b_ha": 75.32,
+      "perda_ha": 0.2,
+      "ganho_ha": 0.0,
+      "liquido_ha": -0.2,
+      "liquido_frac_comum": -0.0026
+     }
+    },
+    "maior_aglomerado_perda": {
+     "n_aglomerados": 3,
+     "maior_ha": 0.28,
+     "j": [
+      76,
+      80
+     ],
+     "i": [
+      234,
+      236
+     ],
+     "dim_m": [
+      100,
+      60
+     ],
+     "centro_lon": 85.5076,
+     "centro_lat": 28.2743,
+     "dist_colapso_m": 810
+    }
+   }
+  },
+  "Z_24ago_S2B_S2A_15min": {
+   "s2es|S2B>S2A": {
+    "30": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 198.08,
+      "frac_comum": 0.5823,
+      "neve_a_ha": 134.52,
+      "neve_b_ha": 124.68,
+      "perda_ha": 21.08,
+      "ganho_ha": 11.24,
+      "liquido_ha": -9.84,
+      "liquido_frac_comum": -0.0497
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 836.04,
+      "frac_comum": 0.4778,
+      "neve_a_ha": 711.28,
+      "neve_b_ha": 735.32,
+      "perda_ha": 25.96,
+      "ganho_ha": 50.0,
+      "liquido_ha": 24.04,
+      "liquido_frac_comum": 0.0288
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 60.48,
+      "frac_comum": 0.7883,
+      "neve_a_ha": 60.48,
+      "neve_b_ha": 60.48,
+      "perda_ha": 0.0,
+      "ganho_ha": 0.0,
+      "liquido_ha": 0.0,
+      "liquido_frac_comum": 0.0
+     }
+    },
+    "42": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 198.08,
+      "frac_comum": 0.5823,
+      "neve_a_ha": 126.56,
+      "neve_b_ha": 114.2,
+      "perda_ha": 24.6,
+      "ganho_ha": 12.24,
+      "liquido_ha": -12.36,
+      "liquido_frac_comum": -0.0624
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 836.04,
+      "frac_comum": 0.4778,
+      "neve_a_ha": 664.64,
+      "neve_b_ha": 675.2,
+      "perda_ha": 49.4,
+      "ganho_ha": 59.96,
+      "liquido_ha": 10.56,
+      "liquido_frac_comum": 0.0126
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 60.48,
+      "frac_comum": 0.7883,
+      "neve_a_ha": 60.2,
+      "neve_b_ha": 60.48,
+      "perda_ha": 0.0,
+      "ganho_ha": 0.28,
+      "liquido_ha": 0.28,
+      "liquido_frac_comum": 0.0046
+     }
+    },
+    "50": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 198.08,
+      "frac_comum": 0.5823,
+      "neve_a_ha": 119.16,
+      "neve_b_ha": 107.52,
+      "perda_ha": 25.56,
+      "ganho_ha": 13.92,
+      "liquido_ha": -11.64,
+      "liquido_frac_comum": -0.0588
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 836.04,
+      "frac_comum": 0.4778,
+      "neve_a_ha": 629.92,
+      "neve_b_ha": 623.28,
+      "perda_ha": 71.0,
+      "ganho_ha": 64.36,
+      "liquido_ha": -6.64,
+      "liquido_frac_comum": -0.0079
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 60.48,
+      "frac_comum": 0.7883,
+      "neve_a_ha": 59.4,
+      "neve_b_ha": 60.48,
+      "perda_ha": 0.0,
+      "ganho_ha": 1.08,
+      "liquido_ha": 1.08,
+      "liquido_frac_comum": 0.0179
+     }
+    },
+    "maior_aglomerado_perda": {
+     "n_aglomerados": 37,
+     "maior_ha": 17.04,
+     "j": [
+      113,
+      144
+     ],
+     "i": [
+      198,
+      231
+     ],
+     "dim_m": [
+      640,
+      680
+     ],
+     "centro_lon": 85.5036,
+     "centro_lat": 28.2651,
+     "dist_colapso_m": 1297
+    }
+   },
+   "s2pc|S2B>S2A": {
+    "30": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 192.8,
+      "frac_comum": 0.5668,
+      "neve_a_ha": 130.68,
+      "neve_b_ha": 120.68,
+      "perda_ha": 21.08,
+      "ganho_ha": 11.08,
+      "liquido_ha": -10.0,
+      "liquido_frac_comum": -0.0519
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 826.2,
+      "frac_comum": 0.4721,
+      "neve_a_ha": 702.72,
+      "neve_b_ha": 724.16,
+      "perda_ha": 28.48,
+      "ganho_ha": 49.92,
+      "liquido_ha": 21.44,
+      "liquido_frac_comum": 0.026
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 60.44,
+      "frac_comum": 0.7878,
+      "neve_a_ha": 60.44,
+      "neve_b_ha": 60.44,
+      "perda_ha": 0.0,
+      "ganho_ha": 0.0,
+      "liquido_ha": 0.0,
+      "liquido_frac_comum": 0.0
+     }
+    },
+    "42": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 192.8,
+      "frac_comum": 0.5668,
+      "neve_a_ha": 122.76,
+      "neve_b_ha": 111.12,
+      "perda_ha": 24.52,
+      "ganho_ha": 12.88,
+      "liquido_ha": -11.64,
+      "liquido_frac_comum": -0.0604
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 826.2,
+      "frac_comum": 0.4721,
+      "neve_a_ha": 658.76,
+      "neve_b_ha": 664.4,
+      "perda_ha": 53.32,
+      "ganho_ha": 58.96,
+      "liquido_ha": 5.64,
+      "liquido_frac_comum": 0.0068
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 60.44,
+      "frac_comum": 0.7878,
+      "neve_a_ha": 60.16,
+      "neve_b_ha": 60.44,
+      "perda_ha": 0.0,
+      "ganho_ha": 0.28,
+      "liquido_ha": 0.28,
+      "liquido_frac_comum": 0.0046
+     }
+    },
+    "50": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 192.8,
+      "frac_comum": 0.5668,
+      "neve_a_ha": 116.16,
+      "neve_b_ha": 104.4,
+      "perda_ha": 26.28,
+      "ganho_ha": 14.52,
+      "liquido_ha": -11.76,
+      "liquido_frac_comum": -0.061
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 826.2,
+      "frac_comum": 0.4721,
+      "neve_a_ha": 624.04,
+      "neve_b_ha": 615.12,
+      "perda_ha": 73.16,
+      "ganho_ha": 64.24,
+      "liquido_ha": -8.92,
+      "liquido_frac_comum": -0.0108
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 60.44,
+      "frac_comum": 0.7878,
+      "neve_a_ha": 59.24,
+      "neve_b_ha": 60.44,
+      "perda_ha": 0.0,
+      "ganho_ha": 1.2,
+      "liquido_ha": 1.2,
+      "liquido_frac_comum": 0.0199
+     }
+    },
+    "maior_aglomerado_perda": {
+     "n_aglomerados": 44,
+     "maior_ha": 16.72,
+     "j": [
+      113,
+      142
+     ],
+     "i": [
+      198,
+      231
+     ],
+     "dim_m": [
+      600,
+      680
+     ],
+     "centro_lon": 85.5036,
+     "centro_lat": 28.2653,
+     "dist_colapso_m": 1287
+    }
+   },
+   "s2l1c|S2B>S2A": {
+    "30": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 179.04,
+      "frac_comum": 0.5263,
+      "neve_a_ha": 136.92,
+      "neve_b_ha": 132.0,
+      "perda_ha": 12.72,
+      "ganho_ha": 7.8,
+      "liquido_ha": -4.92,
+      "liquido_frac_comum": -0.0275
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 833.52,
+      "frac_comum": 0.4763,
+      "neve_a_ha": 734.0,
+      "neve_b_ha": 754.72,
+      "perda_ha": 20.36,
+      "ganho_ha": 41.08,
+      "liquido_ha": 20.72,
+      "liquido_frac_comum": 0.0249
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 60.48,
+      "frac_comum": 0.7883,
+      "neve_a_ha": 60.48,
+      "neve_b_ha": 60.48,
+      "perda_ha": 0.0,
+      "ganho_ha": 0.0,
+      "liquido_ha": 0.0,
+      "liquido_frac_comum": 0.0
+     }
+    },
+    "42": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 179.04,
+      "frac_comum": 0.5263,
+      "neve_a_ha": 131.44,
+      "neve_b_ha": 119.8,
+      "perda_ha": 19.92,
+      "ganho_ha": 8.28,
+      "liquido_ha": -11.64,
+      "liquido_frac_comum": -0.065
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 833.52,
+      "frac_comum": 0.4763,
+      "neve_a_ha": 689.88,
+      "neve_b_ha": 691.68,
+      "perda_ha": 46.08,
+      "ganho_ha": 47.88,
+      "liquido_ha": 1.8,
+      "liquido_frac_comum": 0.0022
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 60.48,
+      "frac_comum": 0.7883,
+      "neve_a_ha": 60.2,
+      "neve_b_ha": 60.48,
+      "perda_ha": 0.0,
+      "ganho_ha": 0.28,
+      "liquido_ha": 0.28,
+      "liquido_frac_comum": 0.0046
+     }
+    },
+    "50": {
+     "anfiteatro": {
+      "area_ha": 340.16,
+      "comum_ha": 179.04,
+      "frac_comum": 0.5263,
+      "neve_a_ha": 127.08,
+      "neve_b_ha": 113.48,
+      "perda_ha": 22.64,
+      "ganho_ha": 9.04,
+      "liquido_ha": -13.6,
+      "liquido_frac_comum": -0.076
+     },
+     "alto_fora": {
+      "area_ha": 1749.88,
+      "comum_ha": 833.52,
+      "frac_comum": 0.4763,
+      "neve_a_ha": 656.2,
+      "neve_b_ha": 641.76,
+      "perda_ha": 67.68,
+      "ganho_ha": 53.24,
+      "liquido_ha": -14.44,
+      "liquido_frac_comum": -0.0173
+     },
+     "cume_fora": {
+      "area_ha": 76.72,
+      "comum_ha": 60.48,
+      "frac_comum": 0.7883,
+      "neve_a_ha": 59.56,
+      "neve_b_ha": 60.48,
+      "perda_ha": 0.0,
+      "ganho_ha": 0.92,
+      "liquido_ha": 0.92,
+      "liquido_frac_comum": 0.0152
+     }
+    },
+    "maior_aglomerado_perda": {
+     "n_aglomerados": 25,
+     "maior_ha": 15.24,
+     "j": [
+      108,
+      135
+     ],
+     "i": [
+      199,
+      231
+     ],
+     "dim_m": [
+      560,
+      660
+     ],
+     "centro_lon": 85.5037,
+     "centro_lat": 28.2664,
+     "dist_colapso_m": 1224
+    }
+   }
+  }
+ },
+ "referencia": [
+  {
+   "a": "2026-07-03_S2C",
+   "b": "2026-07-23_S2C",
+   "dias": 20,
+   "anfiteatro": {
+    "frac_comum": 0.5629,
+    "liquido_ha": 20.36,
+    "perda_ha": 12.36,
+    "ganho_ha": 32.72,
+    "liquido_frac_comum": 0.1063
+   },
+   "alto_fora": {
+    "frac_comum": 0.236,
+    "liquido_ha": -16.08,
+    "perda_ha": 60.32,
+    "ganho_ha": 44.24,
+    "liquido_frac_comum": -0.0389
+   },
+   "cume_fora": {
+    "frac_comum": 0.61,
+    "liquido_ha": 8.92,
+    "perda_ha": 0.56,
+    "ganho_ha": 9.48,
+    "liquido_frac_comum": 0.1906
+   }
+  },
+  {
+   "a": "2026-07-05_S2B",
+   "b": "2026-07-23_S2C",
+   "dias": 18,
+   "anfiteatro": {
+    "frac_comum": 0.3034,
+    "liquido_ha": 6.72,
+    "perda_ha": 5.88,
+    "ganho_ha": 12.6,
+    "liquido_frac_comum": 0.0651
+   },
+   "alto_fora": {
+    "frac_comum": 0.1166,
+    "liquido_ha": 31.44,
+    "perda_ha": 11.92,
+    "ganho_ha": 43.36,
+    "liquido_frac_comum": 0.1541
+   },
+   "cume_fora": {
+    "frac_comum": 0.5162,
+    "liquido_ha": 0.8,
+    "perda_ha": 0.04,
+    "ganho_ha": 0.84,
+    "liquido_frac_comum": 0.0202
+   }
+  },
+  {
+   "a": "2026-07-23_S2C",
+   "b": "2026-07-28_S2B",
+   "dias": 5,
+   "anfiteatro": {
+    "frac_comum": 0.5596,
+    "liquido_ha": -104.04,
+    "perda_ha": 104.36,
+    "ganho_ha": 0.32,
+    "liquido_frac_comum": -0.5465
+   },
+   "alto_fora": {
+    "frac_comum": 0.1449,
+    "liquido_ha": -14.16,
+    "perda_ha": 39.04,
+    "ganho_ha": 24.88,
+    "liquido_frac_comum": -0.0558
+   },
+   "cume_fora": {
+    "frac_comum": 0.6084,
+    "liquido_ha": 0.68,
+    "perda_ha": 0.8,
+    "ganho_ha": 1.48,
+    "liquido_frac_comum": 0.0146
+   }
+  },
+  {
+   "a": "2026-07-23_S2C",
+   "b": "2026-08-04_S2B",
+   "dias": 12,
+   "anfiteatro": {
+    "frac_comum": 0.4548,
+    "liquido_ha": -66.32,
+    "perda_ha": 69.56,
+    "ganho_ha": 3.24,
+    "liquido_frac_comum": -0.4286
+   },
+   "alto_fora": {
+    "frac_comum": 0.1823,
+    "liquido_ha": 30.2,
+    "perda_ha": 21.56,
+    "ganho_ha": 51.76,
+    "liquido_frac_comum": 0.0947
+   },
+   "cume_fora": {
+    "frac_comum": 0.61,
+    "liquido_ha": -0.6,
+    "perda_ha": 2.08,
+    "ganho_ha": 1.48,
+    "liquido_frac_comum": -0.0128
+   }
+  },
+  {
+   "a": "2026-07-23_S2C",
+   "b": "2026-08-04_S2A",
+   "dias": 12,
+   "anfiteatro": {
+    "frac_comum": 0.3464,
+    "liquido_ha": -46.8,
+    "perda_ha": 47.72,
+    "ganho_ha": 0.92,
+    "liquido_frac_comum": -0.3971
+   },
+   "alto_fora": {
+    "frac_comum": 0.1164,
+    "liquido_ha": 34.2,
+    "perda_ha": 11.92,
+    "ganho_ha": 46.12,
+    "liquido_frac_comum": 0.1679
+   },
+   "cume_fora": {
+    "frac_comum": 0.2331,
+    "liquido_ha": 1.32,
+    "perda_ha": 0.16,
+    "ganho_ha": 1.48,
+    "liquido_frac_comum": 0.0738
+   }
+  },
+  {
+   "a": "2026-07-23_S2C",
+   "b": "2026-08-07_S2B",
+   "dias": 15,
+   "anfiteatro": {
+    "frac_comum": 0.5936,
+    "liquido_ha": -59.8,
+    "perda_ha": 72.64,
+    "ganho_ha": 12.84,
+    "liquido_frac_comum": -0.2962
+   },
+   "alto_fora": {
+    "frac_comum": 0.111,
+    "liquido_ha": -19.36,
+    "perda_ha": 33.6,
+    "ganho_ha": 14.24,
+    "liquido_frac_comum": -0.0996
+   },
+   "cume_fora": {
+    "frac_comum": 0.61,
+    "liquido_ha": 1.2,
+    "perda_ha": 0.28,
+    "ganho_ha": 1.48,
+    "liquido_frac_comum": 0.0256
+   }
+  },
+  {
+   "a": "2026-07-23_S2C",
+   "b": "2026-08-09_S2C",
+   "dias": 17,
+   "anfiteatro": {
+    "frac_comum": 0.4728,
+    "liquido_ha": -18.16,
+    "perda_ha": 28.96,
+    "ganho_ha": 10.8,
+    "liquido_frac_comum": -0.1129
+   },
+   "alto_fora": {
+    "frac_comum": 0.1413,
+    "liquido_ha": -4.0,
+    "perda_ha": 37.72,
+    "ganho_ha": 33.72,
+    "liquido_frac_comum": -0.0162
+   },
+   "cume_fora": {
+    "frac_comum": 0.0109,
+    "liquido_ha": 0.0,
+    "perda_ha": 0.0,
+    "ganho_ha": 0.0,
+    "liquido_frac_comum": 0.0
+   }
+  },
+  {
+   "a": "2026-07-23_S2C",
+   "b": "2026-08-12_S2C",
+   "dias": 20,
+   "anfiteatro": {
+    "frac_comum": 0.7444,
+    "liquido_ha": -7.4,
+    "perda_ha": 30.04,
+    "ganho_ha": 22.64,
+    "liquido_frac_comum": -0.0292
+   },
+   "alto_fora": {
+    "frac_comum": 0.272,
+    "liquido_ha": 76.8,
+    "perda_ha": 5.88,
+    "ganho_ha": 82.68,
+    "liquido_frac_comum": 0.1613
+   },
+   "cume_fora": {
+    "frac_comum": 0.61,
+    "liquido_ha": 1.48,
+    "perda_ha": 0.0,
+    "ganho_ha": 1.48,
+    "liquido_frac_comum": 0.0316
+   }
+  },
+  {
+   "a": "2026-07-25_S2B",
+   "b": "2026-07-28_S2B",
+   "dias": 3,
+   "anfiteatro": {
+    "frac_comum": 0.3724,
+    "liquido_ha": -9.88,
+    "perda_ha": 17.44,
+    "ganho_ha": 7.56,
+    "liquido_frac_comum": -0.078
+   },
+   "alto_fora": {
+    "frac_comum": 0.1613,
+    "liquido_ha": 0.88,
+    "perda_ha": 28.08,
+    "ganho_ha": 28.96,
+    "liquido_frac_comum": 0.0031
+   },
+   "cume_fora": {
+    "frac_comum": 0.9353,
+    "liquido_ha": -0.8,
+    "perda_ha": 0.8,
+    "ganho_ha": 0.0,
+    "liquido_frac_comum": -0.0111
+   }
+  },
+  {
+   "a": "2026-07-25_S2B",
+   "b": "2026-08-04_S2B",
+   "dias": 10,
+   "anfiteatro": {
+    "frac_comum": 0.3723,
+    "liquido_ha": 3.84,
+    "perda_ha": 9.04,
+    "ganho_ha": 12.88,
+    "liquido_frac_comum": 0.0303
+   },
+   "alto_fora": {
+    "frac_comum": 0.2632,
+    "liquido_ha": 64.4,
+    "perda_ha": 14.96,
+    "ganho_ha": 79.36,
+    "liquido_frac_comum": 0.1398
+   },
+   "cume_fora": {
+    "frac_comum": 1.0,
+    "liquido_ha": -1.16,
+    "perda_ha": 2.08,
+    "ganho_ha": 0.92,
+    "liquido_frac_comum": -0.0151
+   }
+  },
+  {
+   "a": "2026-07-25_S2B",
+   "b": "2026-08-04_S2A",
+   "dias": 10,
+   "anfiteatro": {
+    "frac_comum": 0.3388,
+    "liquido_ha": 7.92,
+    "perda_ha": 5.8,
+    "ganho_ha": 13.72,
+    "liquido_frac_comum": 0.0687
+   },
+   "alto_fora": {
+    "frac_comum": 0.1212,
+    "liquido_ha": 36.2,
+    "perda_ha": 6.4,
+    "ganho_ha": 42.6,
+    "liquido_frac_comum": 0.1706
+   },
+   "cume_fora": {
+    "frac_comum": 0.3358,
+    "liquido_ha": -0.16,
+    "perda_ha": 0.16,
+    "ganho_ha": 0.0,
+    "liquido_frac_comum": -0.0062
+   }
+  },
+  {
+   "a": "2026-07-25_S2B",
+   "b": "2026-08-07_S2B",
+   "dias": 13,
+   "anfiteatro": {
+    "frac_comum": 0.3754,
+    "liquido_ha": 6.96,
+    "perda_ha": 26.28,
+    "ganho_ha": 33.24,
+    "liquido_frac_comum": 0.0545
+   },
+   "alto_fora": {
+    "frac_comum": 0.1799,
+    "liquido_ha": -17.24,
+    "perda_ha": 45.08,
+    "ganho_ha": 27.84,
+    "liquido_frac_comum": -0.0548
+   },
+   "cume_fora": {
+    "frac_comum": 1.0,
+    "liquido_ha": 0.08,
+    "perda_ha": 0.28,
+    "ganho_ha": 0.36,
+    "liquido_frac_comum": 0.001
+   }
+  },
+  {
+   "a": "2026-07-25_S2B",
+   "b": "2026-08-12_S2C",
+   "dias": 18,
+   "anfiteatro": {
+    "frac_comum": 0.3734,
+    "liquido_ha": 68.36,
+    "perda_ha": 0.08,
+    "ganho_ha": 68.44,
+    "liquido_frac_comum": 0.5383
+   },
+   "alto_fora": {
+    "frac_comum": 0.3801,
+    "liquido_ha": 85.76,
+    "perda_ha": 20.28,
+    "ganho_ha": 106.04,
+    "liquido_frac_comum": 0.1289
+   },
+   "cume_fora": {
+    "frac_comum": 1.0,
+    "liquido_ha": 0.92,
+    "perda_ha": 0.0,
+    "ganho_ha": 0.92,
+    "liquido_frac_comum": 0.012
+   }
+  },
+  {
+   "a": "2026-07-25_S2B",
+   "b": "2026-08-14_S2B",
+   "dias": 20,
+   "anfiteatro": {
+    "frac_comum": 0.3013,
+    "liquido_ha": 45.88,
+    "perda_ha": 0.04,
+    "ganho_ha": 45.92,
+    "liquido_frac_comum": 0.4477
+   },
+   "alto_fora": {
+    "frac_comum": 0.3029,
+    "liquido_ha": 33.88,
+    "perda_ha": 31.2,
+    "ganho_ha": 65.08,
+    "liquido_frac_comum": 0.0639
+   },
+   "cume_fora": {
+    "frac_comum": 1.0,
+    "liquido_ha": 0.92,
+    "perda_ha": 0.0,
+    "ganho_ha": 0.92,
+    "liquido_frac_comum": 0.012
+   }
+  },
+  {
+   "a": "2026-07-28_S2B",
+   "b": "2026-08-04_S2B",
+   "dias": 7,
+   "anfiteatro": {
+    "frac_comum": 0.4087,
+    "liquido_ha": 9.76,
+    "perda_ha": 12.28,
+    "ganho_ha": 22.04,
+    "liquido_frac_comum": 0.0702
+   },
+   "alto_fora": {
+    "frac_comum": 0.2047,
+    "liquido_ha": 53.8,
+    "perda_ha": 15.0,
+    "ganho_ha": 68.8,
+    "liquido_frac_comum": 0.1502
+   },
+   "cume_fora": {
+    "frac_comum": 0.9353,
+    "liquido_ha": -1.28,
+    "perda_ha": 2.08,
+    "ganho_ha": 0.8,
+    "liquido_frac_comum": -0.0178
+   }
+  },
+  {
+   "a": "2026-07-28_S2B",
+   "b": "2026-08-04_S2A",
+   "dias": 7,
+   "anfiteatro": {
+    "frac_comum": 0.3365,
+    "liquido_ha": 12.92,
+    "perda_ha": 7.44,
+    "ganho_ha": 20.36,
+    "liquido_frac_comum": 0.1129
+   },
+   "alto_fora": {
+    "frac_comum": 0.1468,
+    "liquido_ha": 58.52,
+    "perda_ha": 9.76,
+    "ganho_ha": 68.28,
+    "liquido_frac_comum": 0.2277
+   },
+   "cume_fora": {
+    "frac_comum": 0.3358,
+    "liquido_ha": -0.16,
+    "perda_ha": 0.16,
+    "ganho_ha": 0.0,
+    "liquido_frac_comum": -0.0062
+   }
+  },
+  {
+   "a": "2026-07-28_S2B",
+   "b": "2026-08-07_S2B",
+   "dias": 10,
+   "anfiteatro": {
+    "frac_comum": 0.4133,
+    "liquido_ha": 21.12,
+    "perda_ha": 16.28,
+    "ganho_ha": 37.4,
+    "liquido_frac_comum": 0.1502
+   },
+   "alto_fora": {
+    "frac_comum": 0.1399,
+    "liquido_ha": -10.16,
+    "perda_ha": 35.96,
+    "ganho_ha": 25.8,
+    "liquido_frac_comum": -0.0415
+   },
+   "cume_fora": {
+    "frac_comum": 0.9353,
+    "liquido_ha": 0.52,
+    "perda_ha": 0.28,
+    "ganho_ha": 0.8,
+    "liquido_frac_comum": 0.0072
+   }
+  },
+  {
+   "a": "2026-07-28_S2B",
+   "b": "2026-08-09_S2C",
+   "dias": 12,
+   "anfiteatro": {
+    "frac_comum": 0.3175,
+    "liquido_ha": 61.16,
+    "perda_ha": 2.36,
+    "ganho_ha": 63.52,
+    "liquido_frac_comum": 0.5663
+   },
+   "alto_fora": {
+    "frac_comum": 0.1783,
+    "liquido_ha": 27.16,
+    "perda_ha": 35.72,
+    "ganho_ha": 62.88,
+    "liquido_frac_comum": 0.0871
+   },
+   "cume_fora": {
+    "frac_comum": 0.0109,
+    "liquido_ha": 0.0,
+    "perda_ha": 0.0,
+    "ganho_ha": 0.0,
+    "liquido_frac_comum": 0.0
+   }
+  },
+  {
+   "a": "2026-07-28_S2B",
+   "b": "2026-08-12_S2C",
+   "dias": 15,
+   "anfiteatro": {
+    "frac_comum": 0.4998,
+    "liquido_ha": 94.52,
+    "perda_ha": 0.6,
+    "ganho_ha": 95.12,
+    "liquido_frac_comum": 0.556
+   },
+   "alto_fora": {
+    "frac_comum": 0.2618,
+    "liquido_ha": 91.12,
+    "perda_ha": 3.92,
+    "ganho_ha": 95.04,
+    "liquido_frac_comum": 0.1989
+   },
+   "cume_fora": {
+    "frac_comum": 0.9353,
+    "liquido_ha": 0.8,
+    "perda_ha": 0.0,
+    "ganho_ha": 0.8,
+    "liquido_frac_comum": 0.0111
+   }
+  },
+  {
+   "a": "2026-08-04_S2B",
+   "b": "2026-08-07_S2B",
+   "dias": 3,
+   "anfiteatro": {
+    "frac_comum": 0.4075,
+    "liquido_ha": 10.4,
+    "perda_ha": 24.52,
+    "ganho_ha": 34.92,
+    "liquido_frac_comum": 0.075
+   },
+   "alto_fora": {
+    "frac_comum": 0.182,
+    "liquido_ha": -55.92,
+    "perda_ha": 69.64,
+    "ganho_ha": 13.72,
+    "liquido_frac_comum": -0.1756
+   },
+   "cume_fora": {
+    "frac_comum": 1.0,
+    "liquido_ha": 1.24,
+    "perda_ha": 0.84,
+    "ganho_ha": 2.08,
+    "liquido_frac_comum": 0.0162
+   }
+  },
+  {
+   "a": "2026-08-04_S2B",
+   "b": "2026-08-09_S2C",
+   "dias": 5,
+   "anfiteatro": {
+    "frac_comum": 0.3171,
+    "liquido_ha": 49.44,
+    "perda_ha": 3.44,
+    "ganho_ha": 52.88,
+    "liquido_frac_comum": 0.4583
+   },
+   "alto_fora": {
+    "frac_comum": 0.2421,
+    "liquido_ha": -39.2,
+    "perda_ha": 61.12,
+    "ganho_ha": 21.92,
+    "liquido_frac_comum": -0.0925
+   },
+   "cume_fora": {
+    "frac_comum": 0.0115,
+    "liquido_ha": 0.08,
+    "perda_ha": 0.0,
+    "ganho_ha": 0.08,
+    "liquido_frac_comum": 0.0909
+   }
+  },
+  {
+   "a": "2026-08-04_S2B",
+   "b": "2026-08-12_S2C",
+   "dias": 8,
+   "anfiteatro": {
+    "frac_comum": 0.4338,
+    "liquido_ha": 77.92,
+    "perda_ha": 0.76,
+    "ganho_ha": 78.68,
+    "liquido_frac_comum": 0.5281
+   },
+   "alto_fora": {
+    "frac_comum": 0.4043,
+    "liquido_ha": 28.84,
+    "perda_ha": 18.12,
+    "ganho_ha": 46.96,
+    "liquido_frac_comum": 0.0408
+   },
+   "cume_fora": {
+    "frac_comum": 1.0,
+    "liquido_ha": 2.08,
+    "perda_ha": 0.0,
+    "ganho_ha": 2.08,
+    "liquido_frac_comum": 0.0271
+   }
+  },
+  {
+   "a": "2026-08-04_S2B",
+   "b": "2026-08-14_S2B",
+   "dias": 10,
+   "anfiteatro": {
+    "frac_comum": 0.3175,
+    "liquido_ha": 40.56,
+    "perda_ha": 2.08,
+    "ganho_ha": 42.64,
+    "liquido_frac_comum": 0.3756
+   },
+   "alto_fora": {
+    "frac_comum": 0.3401,
+    "liquido_ha": -39.72,
+    "perda_ha": 73.16,
+    "ganho_ha": 33.44,
+    "liquido_frac_comum": -0.0667
+   },
+   "cume_fora": {
+    "frac_comum": 1.0,
+    "liquido_ha": 2.08,
+    "perda_ha": 0.0,
+    "ganho_ha": 2.08,
+    "liquido_frac_comum": 0.0271
+   }
+  },
+  {
+   "a": "2026-08-04_S2B",
+   "b": "2026-08-19_S2C",
+   "dias": 15,
+   "anfiteatro": {
+    "frac_comum": 0.3437,
+    "liquido_ha": 1.64,
+    "perda_ha": 17.12,
+    "ganho_ha": 18.76,
+    "liquido_frac_comum": 0.014
+   },
+   "alto_fora": {
+    "frac_comum": 0.1858,
+    "liquido_ha": -47.24,
+    "perda_ha": 62.0,
+    "ganho_ha": 14.76,
+    "liquido_frac_comum": -0.1453
+   },
+   "cume_fora": {
+    "frac_comum": 0.8926,
+    "liquido_ha": -6.52,
+    "perda_ha": 8.6,
+    "ganho_ha": 2.08,
+    "liquido_frac_comum": -0.0952
+   }
+  },
+  {
+   "a": "2026-08-04_S2B",
+   "b": "2026-08-24_S2B",
+   "dias": 20,
+   "anfiteatro": {
+    "frac_comum": 0.3637,
+    "liquido_ha": 49.4,
+    "perda_ha": 2.32,
+    "ganho_ha": 51.72,
+    "liquido_frac_comum": 0.3993
+   },
+   "alto_fora": {
+    "frac_comum": 0.338,
+    "liquido_ha": -48.0,
+    "perda_ha": 73.64,
+    "ganho_ha": 25.64,
+    "liquido_frac_comum": -0.0812
+   },
+   "cume_fora": {
+    "frac_comum": 0.7883,
+    "liquido_ha": 1.8,
+    "perda_ha": 0.28,
+    "ganho_ha": 2.08,
+    "liquido_frac_comum": 0.0298
+   }
+  },
+  {
+   "a": "2026-08-04_S2B",
+   "b": "2026-08-24_S2A",
+   "dias": 20,
+   "anfiteatro": {
+    "frac_comum": 0.447,
+    "liquido_ha": 60.88,
+    "perda_ha": 7.12,
+    "ganho_ha": 68.0,
+    "liquido_frac_comum": 0.4004
+   },
+   "alto_fora": {
+    "frac_comum": 0.2984,
+    "liquido_ha": -17.32,
+    "perda_ha": 47.4,
+    "ganho_ha": 30.08,
+    "liquido_frac_comum": -0.0332
+   },
+   "cume_fora": {
+    "frac_comum": 0.9312,
+    "liquido_ha": 1.48,
+    "perda_ha": 0.6,
+    "ganho_ha": 2.08,
+    "liquido_frac_comum": 0.0207
+   }
+  },
+  {
+   "a": "2026-08-04_S2A",
+   "b": "2026-08-07_S2B",
+   "dias": 3,
+   "anfiteatro": {
+    "frac_comum": 0.3413,
+    "liquido_ha": -6.04,
+    "perda_ha": 27.48,
+    "ganho_ha": 21.44,
+    "liquido_frac_comum": -0.052
+   },
+   "alto_fora": {
+    "frac_comum": 0.0934,
+    "liquido_ha": -33.12,
+    "perda_ha": 37.92,
+    "ganho_ha": 4.8,
+    "liquido_frac_comum": -0.2027
+   },
+   "cume_fora": {
+    "frac_comum": 0.3358,
+    "liquido_ha": -0.04,
+    "perda_ha": 0.08,
+    "ganho_ha": 0.04,
+    "liquido_frac_comum": -0.0016
+   }
+  },
+  {
+   "a": "2026-08-04_S2A",
+   "b": "2026-08-12_S2C",
+   "dias": 8,
+   "anfiteatro": {
+    "frac_comum": 0.3383,
+    "liquido_ha": 53.08,
+    "perda_ha": 0.0,
+    "ganho_ha": 53.08,
+    "liquido_frac_comum": 0.4612
+   },
+   "alto_fora": {
+    "frac_comum": 0.2133,
+    "liquido_ha": 11.28,
+    "perda_ha": 11.68,
+    "ganho_ha": 22.96,
+    "liquido_frac_comum": 0.0302
+   },
+   "cume_fora": {
+    "frac_comum": 0.3358,
+    "liquido_ha": 0.16,
+    "perda_ha": 0.0,
+    "ganho_ha": 0.16,
+    "liquido_frac_comum": 0.0062
+   }
+  },
+  {
+   "a": "2026-08-04_S2A",
+   "b": "2026-08-19_S2C",
+   "dias": 15,
+   "anfiteatro": {
+    "frac_comum": 0.3317,
+    "liquido_ha": -2.32,
+    "perda_ha": 14.68,
+    "ganho_ha": 12.36,
+    "liquido_frac_comum": -0.0206
+   },
+   "alto_fora": {
+    "frac_comum": 0.1284,
+    "liquido_ha": -31.16,
+    "perda_ha": 40.96,
+    "ganho_ha": 9.8,
+    "liquido_frac_comum": -0.1386
+   },
+   "cume_fora": {
+    "frac_comum": 0.3358,
+    "liquido_ha": -0.64,
+    "perda_ha": 0.8,
+    "ganho_ha": 0.16,
+    "liquido_frac_comum": -0.0248
+   }
+  },
+  {
+   "a": "2026-08-04_S2A",
+   "b": "2026-08-24_S2A",
+   "dias": 20,
+   "anfiteatro": {
+    "frac_comum": 0.3376,
+    "liquido_ha": 48.0,
+    "perda_ha": 0.52,
+    "ganho_ha": 48.52,
+    "liquido_frac_comum": 0.418
+   },
+   "alto_fora": {
+    "frac_comum": 0.1687,
+    "liquido_ha": -7.56,
+    "perda_ha": 21.6,
+    "ganho_ha": 14.04,
+    "liquido_frac_comum": -0.0256
+   },
+   "cume_fora": {
+    "frac_comum": 0.3358,
+    "liquido_ha": 0.16,
+    "perda_ha": 0.0,
+    "ganho_ha": 0.16,
+    "liquido_frac_comum": 0.0062
+   }
+  },
+  {
+   "a": "2026-08-07_S2B",
+   "b": "2026-08-12_S2C",
+   "dias": 5,
+   "anfiteatro": {
+    "frac_comum": 0.6217,
+    "liquido_ha": 55.88,
+    "perda_ha": 6.56,
+    "ganho_ha": 62.44,
+    "liquido_frac_comum": 0.2642
+   },
+   "alto_fora": {
+    "frac_comum": 0.3299,
+    "liquido_ha": 68.16,
+    "perda_ha": 30.56,
+    "ganho_ha": 98.72,
+    "liquido_frac_comum": 0.1181
+   },
+   "cume_fora": {
+    "frac_comum": 1.0,
+    "liquido_ha": 0.84,
+    "perda_ha": 0.0,
+    "ganho_ha": 0.84,
+    "liquido_frac_comum": 0.0109
+   }
+  },
+  {
+   "a": "2026-08-07_S2B",
+   "b": "2026-08-14_S2B",
+   "dias": 7,
+   "anfiteatro": {
+    "frac_comum": 0.3216,
+    "liquido_ha": 47.56,
+    "perda_ha": 7.08,
+    "ganho_ha": 54.64,
+    "liquido_frac_comum": 0.4347
+   },
+   "alto_fora": {
+    "frac_comum": 0.1628,
+    "liquido_ha": 43.44,
+    "perda_ha": 9.44,
+    "ganho_ha": 52.88,
+    "liquido_frac_comum": 0.1524
+   },
+   "cume_fora": {
+    "frac_comum": 1.0,
+    "liquido_ha": 0.84,
+    "perda_ha": 0.0,
+    "ganho_ha": 0.84,
+    "liquido_frac_comum": 0.0109
+   }
+  },
+  {
+   "a": "2026-08-07_S2B",
+   "b": "2026-08-19_S2C",
+   "dias": 12,
+   "anfiteatro": {
+    "frac_comum": 0.3437,
+    "liquido_ha": 1.04,
+    "perda_ha": 31.68,
+    "ganho_ha": 32.72,
+    "liquido_frac_comum": 0.0089
+   },
+   "alto_fora": {
+    "frac_comum": 0.1223,
+    "liquido_ha": -8.0,
+    "perda_ha": 34.88,
+    "ganho_ha": 26.88,
+    "liquido_frac_comum": -0.0374
+   },
+   "cume_fora": {
+    "frac_comum": 0.8926,
+    "liquido_ha": -8.32,
+    "perda_ha": 8.52,
+    "ganho_ha": 0.2,
+    "liquido_frac_comum": -0.1215
+   }
+  },
+  {
+   "a": "2026-08-07_S2B",
+   "b": "2026-08-24_S2B",
+   "dias": 17,
+   "anfiteatro": {
+    "frac_comum": 0.5102,
+    "liquido_ha": 40.56,
+    "perda_ha": 15.12,
+    "ganho_ha": 55.68,
+    "liquido_frac_comum": 0.2337
+   },
+   "alto_fora": {
+    "frac_comum": 0.2452,
+    "liquido_ha": -5.56,
+    "perda_ha": 52.08,
+    "ganho_ha": 46.52,
+    "liquido_frac_comum": -0.013
+   },
+   "cume_fora": {
+    "frac_comum": 0.7883,
+    "liquido_ha": 0.0,
+    "perda_ha": 0.28,
+    "ganho_ha": 0.28,
+    "liquido_frac_comum": 0.0
+   }
+  },
+  {
+   "a": "2026-08-07_S2B",
+   "b": "2026-08-24_S2A",
+   "dias": 17,
+   "anfiteatro": {
+    "frac_comum": 0.56,
+    "liquido_ha": 26.92,
+    "perda_ha": 29.6,
+    "ganho_ha": 56.52,
+    "liquido_frac_comum": 0.1413
+   },
+   "alto_fora": {
+    "frac_comum": 0.1647,
+    "liquido_ha": 29.76,
+    "perda_ha": 13.48,
+    "ganho_ha": 43.24,
+    "liquido_frac_comum": 0.1032
+   },
+   "cume_fora": {
+    "frac_comum": 0.9312,
+    "liquido_ha": -0.32,
+    "perda_ha": 0.6,
+    "ganho_ha": 0.28,
+    "liquido_frac_comum": -0.0045
+   }
+  },
+  {
+   "a": "2026-08-09_S2C",
+   "b": "2026-08-12_S2C",
+   "dias": 3,
+   "anfiteatro": {
+    "frac_comum": 0.4758,
+    "liquido_ha": 9.96,
+    "perda_ha": 5.96,
+    "ganho_ha": 15.92,
+    "liquido_frac_comum": 0.0615
+   },
+   "alto_fora": {
+    "frac_comum": 0.4455,
+    "liquido_ha": 118.76,
+    "perda_ha": 17.48,
+    "ganho_ha": 136.24,
+    "liquido_frac_comum": 0.1524
+   },
+   "cume_fora": {
+    "frac_comum": 0.0115,
+    "liquido_ha": 0.0,
+    "perda_ha": 0.0,
+    "ganho_ha": 0.0,
+    "liquido_frac_comum": 0.0
+   }
+  },
+  {
+   "a": "2026-08-09_S2C",
+   "b": "2026-08-24_S2B",
+   "dias": 15,
+   "anfiteatro": {
+    "frac_comum": 0.4364,
+    "liquido_ha": 2.08,
+    "perda_ha": 9.64,
+    "ganho_ha": 11.72,
+    "liquido_frac_comum": 0.014
+   },
+   "alto_fora": {
+    "frac_comum": 0.3506,
+    "liquido_ha": 4.24,
+    "perda_ha": 70.28,
+    "ganho_ha": 74.52,
+    "liquido_frac_comum": 0.0069
+   },
+   "cume_fora": {
+    "frac_comum": 0.0115,
+    "liquido_ha": 0.0,
+    "perda_ha": 0.0,
+    "ganho_ha": 0.0,
+    "liquido_frac_comum": 0.0
+   }
+  },
+  {
+   "a": "2026-08-09_S2C",
+   "b": "2026-08-24_S2A",
+   "dias": 15,
+   "anfiteatro": {
+    "frac_comum": 0.4608,
+    "liquido_ha": -12.56,
+    "perda_ha": 19.8,
+    "ganho_ha": 7.24,
+    "liquido_frac_comum": -0.0801
+   },
+   "alto_fora": {
+    "frac_comum": 0.3001,
+    "liquido_ha": 38.2,
+    "perda_ha": 40.56,
+    "ganho_ha": 78.76,
+    "liquido_frac_comum": 0.0727
+   },
+   "cume_fora": {
+    "frac_comum": 0.0115,
+    "liquido_ha": 0.0,
+    "perda_ha": 0.0,
+    "ganho_ha": 0.0,
+    "liquido_frac_comum": 0.0
+   }
+  },
+  {
+   "a": "2026-08-12_S2C",
+   "b": "2026-08-19_S2C",
+   "dias": 7,
+   "anfiteatro": {
+    "frac_comum": 0.3368,
+    "liquido_ha": -55.88,
+    "perda_ha": 56.48,
+    "ganho_ha": 0.6,
+    "liquido_frac_comum": -0.4878
+   },
+   "alto_fora": {
+    "frac_comum": 0.2383,
+    "liquido_ha": -86.36,
+    "perda_ha": 87.36,
+    "ganho_ha": 1.0,
+    "liquido_frac_comum": -0.2071
+   },
+   "cume_fora": {
+    "frac_comum": 0.8926,
+    "liquido_ha": -8.6,
+    "perda_ha": 8.6,
+    "ganho_ha": 0.0,
+    "liquido_frac_comum": -0.1256
+   }
+  },
+  {
+   "a": "2026-08-12_S2C",
+   "b": "2026-08-24_S2B",
+   "dias": 12,
+   "anfiteatro": {
+    "frac_comum": 0.6254,
+    "liquido_ha": -13.72,
+    "perda_ha": 22.12,
+    "ganho_ha": 8.4,
+    "liquido_frac_comum": -0.0645
+   },
+   "alto_fora": {
+    "frac_comum": 0.6739,
+    "liquido_ha": -157.44,
+    "perda_ha": 178.84,
+    "ganho_ha": 21.4,
+    "liquido_frac_comum": -0.1335
+   },
+   "cume_fora": {
+    "frac_comum": 0.7883,
+    "liquido_ha": -0.28,
+    "perda_ha": 0.28,
+    "ganho_ha": 0.0,
+    "liquido_frac_comum": -0.0046
+   }
+  },
+  {
+   "a": "2026-08-12_S2C",
+   "b": "2026-08-24_S2A",
+   "dias": 12,
+   "anfiteatro": {
+    "frac_comum": 0.7295,
+    "liquido_ha": -36.28,
+    "perda_ha": 38.44,
+    "ganho_ha": 2.16,
+    "liquido_frac_comum": -0.1462
+   },
+   "alto_fora": {
+    "frac_comum": 0.5616,
+    "liquido_ha": -86.16,
+    "perda_ha": 107.32,
+    "ganho_ha": 21.16,
+    "liquido_frac_comum": -0.0877
+   },
+   "cume_fora": {
+    "frac_comum": 0.9312,
+    "liquido_ha": -0.6,
+    "perda_ha": 0.6,
+    "ganho_ha": 0.0,
+    "liquido_frac_comum": -0.0084
+   }
+  },
+  {
+   "a": "2026-08-14_S2B",
+   "b": "2026-08-24_S2B",
+   "dias": 10,
+   "anfiteatro": {
+    "frac_comum": 0.3101,
+    "liquido_ha": 4.0,
+    "perda_ha": 3.56,
+    "ganho_ha": 7.56,
+    "liquido_frac_comum": 0.0379
+   },
+   "alto_fora": {
+    "frac_comum": 0.4694,
+    "liquido_ha": -29.48,
+    "perda_ha": 84.64,
+    "ganho_ha": 55.16,
+    "liquido_frac_comum": -0.0359
+   },
+   "cume_fora": {
+    "frac_comum": 0.7883,
+    "liquido_ha": -0.28,
+    "perda_ha": 0.28,
+    "ganho_ha": 0.0,
+    "liquido_frac_comum": -0.0046
+   }
+  },
+  {
+   "a": "2026-08-14_S2B",
+   "b": "2026-08-24_S2A",
+   "dias": 10,
+   "anfiteatro": {
+    "frac_comum": 0.3127,
+    "liquido_ha": -4.04,
+    "perda_ha": 7.56,
+    "ganho_ha": 3.52,
+    "liquido_frac_comum": -0.038
+   },
+   "alto_fora": {
+    "frac_comum": 0.4278,
+    "liquido_ha": -27.56,
+    "perda_ha": 75.88,
+    "ganho_ha": 48.32,
+    "liquido_frac_comum": -0.0368
+   },
+   "cume_fora": {
+    "frac_comum": 0.9312,
+    "liquido_ha": -0.6,
+    "perda_ha": 0.6,
+    "ganho_ha": 0.0,
+    "liquido_frac_comum": -0.0084
+   }
+  },
+  {
+   "a": "2026-08-19_S2C",
+   "b": "2026-08-24_S2B",
+   "dias": 5,
+   "anfiteatro": {
+    "frac_comum": 0.3035,
+    "liquido_ha": 41.48,
+    "perda_ha": 1.28,
+    "ganho_ha": 42.76,
+    "liquido_frac_comum": 0.4018
+   },
+   "alto_fora": {
+    "frac_comum": 0.1942,
+    "liquido_ha": 42.12,
+    "perda_ha": 15.36,
+    "ganho_ha": 57.48,
+    "liquido_frac_comum": 0.124
+   },
+   "cume_fora": {
+    "frac_comum": 0.7701,
+    "liquido_ha": 8.24,
+    "perda_ha": 0.0,
+    "ganho_ha": 8.24,
+    "liquido_frac_comum": 0.1395
+   }
+  },
+  {
+   "a": "2026-08-19_S2C",
+   "b": "2026-08-24_S2A",
+   "dias": 5,
+   "anfiteatro": {
+    "frac_comum": 0.3341,
+    "liquido_ha": 48.12,
+    "perda_ha": 1.12,
+    "ganho_ha": 49.24,
+    "liquido_frac_comum": 0.4234
+   },
+   "alto_fora": {
+    "frac_comum": 0.204,
+    "liquido_ha": 47.12,
+    "perda_ha": 15.4,
+    "ganho_ha": 62.52,
+    "liquido_frac_comum": 0.132
+   },
+   "cume_fora": {
+    "frac_comum": 0.8806,
+    "liquido_ha": 7.8,
+    "perda_ha": 0.6,
+    "ganho_ha": 8.4,
+    "liquido_frac_comum": 0.1155
+   }
+  },
+  {
+   "a": "2026-08-27_S2B",
+   "b": "2026-09-01_S2C",
+   "dias": 5,
+   "anfiteatro": {
+    "frac_comum": 0.6062,
+    "liquido_ha": -32.76,
+    "perda_ha": 39.44,
+    "ganho_ha": 6.68,
+    "liquido_frac_comum": -0.1589
+   },
+   "alto_fora": {
+    "frac_comum": 0.1746,
+    "liquido_ha": 0.4,
+    "perda_ha": 41.56,
+    "ganho_ha": 41.96,
+    "liquido_frac_comum": 0.0013
+   },
+   "cume_fora": {
+    "frac_comum": 0.1449,
+    "liquido_ha": -1.2,
+    "perda_ha": 1.56,
+    "ganho_ha": 0.36,
+    "liquido_frac_comum": -0.1079
+   }
+  },
+  {
+   "a": "2026-08-27_S2B",
+   "b": "2026-09-03_S2B",
+   "dias": 7,
+   "anfiteatro": {
+    "frac_comum": 0.3866,
+    "liquido_ha": -18.6,
+    "perda_ha": 19.48,
+    "ganho_ha": 0.88,
+    "liquido_frac_comum": -0.1414
+   },
+   "alto_fora": {
+    "frac_comum": 0.3656,
+    "liquido_ha": 46.88,
+    "perda_ha": 26.08,
+    "ganho_ha": 72.96,
+    "liquido_frac_comum": 0.0733
+   },
+   "cume_fora": {
+    "frac_comum": 0.7732,
+    "liquido_ha": 0.0,
+    "perda_ha": 0.0,
+    "ganho_ha": 0.0,
+    "liquido_frac_comum": 0.0
+   }
+  },
+  {
+   "a": "2026-08-27_S2B",
+   "b": "2026-09-06_S2B",
+   "dias": 10,
+   "anfiteatro": {
+    "frac_comum": 0.3965,
+    "liquido_ha": -21.92,
+    "perda_ha": 23.6,
+    "ganho_ha": 1.68,
+    "liquido_frac_comum": -0.1625
+   },
+   "alto_fora": {
+    "frac_comum": 0.1337,
+    "liquido_ha": 18.04,
+    "perda_ha": 2.88,
+    "ganho_ha": 20.92,
+    "liquido_frac_comum": 0.0771
+   },
+   "cume_fora": {
+    "frac_comum": 0.8733,
+    "liquido_ha": 0.0,
+    "perda_ha": 0.0,
+    "ganho_ha": 0.0,
+    "liquido_frac_comum": 0.0
+   }
+  },
+  {
+   "a": "2026-08-27_S2B",
+   "b": "2026-09-08_S2C",
+   "dias": 12,
+   "anfiteatro": {
+    "frac_comum": 0.4106,
+    "liquido_ha": -37.16,
+    "perda_ha": 40.4,
+    "ganho_ha": 3.24,
+    "liquido_frac_comum": -0.266
+   },
+   "alto_fora": {
+    "frac_comum": 0.083,
+    "liquido_ha": 8.08,
+    "perda_ha": 2.88,
+    "ganho_ha": 10.96,
+    "liquido_frac_comum": 0.0556
+   },
+   "cume_fora": {
+    "frac_comum": 0.9546,
+    "liquido_ha": 0.0,
+    "perda_ha": 0.0,
+    "ganho_ha": 0.0,
+    "liquido_frac_comum": 0.0
+   }
+  },
+  {
+   "a": "2026-08-27_S2B",
+   "b": "2026-09-13_S2B",
+   "dias": 17,
+   "anfiteatro": {
+    "frac_comum": 0.4902,
+    "liquido_ha": -34.12,
+    "perda_ha": 39.16,
+    "ganho_ha": 5.04,
+    "liquido_frac_comum": -0.2046
+   },
+   "alto_fora": {
+    "frac_comum": 0.2823,
+    "liquido_ha": -7.12,
+    "perda_ha": 90.24,
+    "ganho_ha": 83.12,
+    "liquido_frac_comum": -0.0144
+   },
+   "cume_fora": {
+    "frac_comum": 0.914,
+    "liquido_ha": -4.76,
+    "perda_ha": 4.76,
+    "ganho_ha": 0.0,
+    "liquido_frac_comum": -0.0679
+   }
+  },
+  {
+   "a": "2026-08-27_S2B",
+   "b": "2026-09-13_S2A",
+   "dias": 17,
+   "anfiteatro": {
+    "frac_comum": 0.5416,
+    "liquido_ha": -36.96,
+    "perda_ha": 44.96,
+    "ganho_ha": 8.0,
+    "liquido_frac_comum": -0.2006
+   },
+   "alto_fora": {
+    "frac_comum": 0.2688,
+    "liquido_ha": 31.84,
+    "perda_ha": 39.0,
+    "ganho_ha": 70.84,
+    "liquido_frac_comum": 0.0677
+   },
+   "cume_fora": {
+    "frac_comum": 0.5474,
+    "liquido_ha": -0.44,
+    "perda_ha": 0.44,
+    "ganho_ha": 0.0,
+    "liquido_frac_comum": -0.0105
+   }
+  },
+  {
+   "a": "2026-08-27_S2B",
+   "b": "2026-09-16_S2B",
+   "dias": 20,
+   "anfiteatro": {
+    "frac_comum": 0.5249,
+    "liquido_ha": 14.76,
+    "perda_ha": 4.72,
+    "ganho_ha": 19.48,
+    "liquido_frac_comum": 0.0827
+   },
+   "alto_fora": {
+    "frac_comum": 0.4169,
+    "liquido_ha": 55.8,
+    "perda_ha": 50.48,
+    "ganho_ha": 106.28,
+    "liquido_frac_comum": 0.0765
+   },
+   "cume_fora": {
+    "frac_comum": 1.0,
+    "liquido_ha": 0.68,
+    "perda_ha": 0.0,
+    "ganho_ha": 0.68,
+    "liquido_frac_comum": 0.0089
+   }
+  },
+  {
+   "a": "2026-08-29_S2C",
+   "b": "2026-09-01_S2C",
+   "dias": 3,
+   "anfiteatro": {
+    "frac_comum": 0.3601,
+    "liquido_ha": -11.76,
+    "perda_ha": 22.64,
+    "ganho_ha": 10.88,
+    "liquido_frac_comum": -0.096
+   },
+   "alto_fora": {
+    "frac_comum": 0.0856,
+    "liquido_ha": 14.6,
+    "perda_ha": 15.08,
+    "ganho_ha": 29.68,
+    "liquido_frac_comum": 0.0975
+   },
+   "cume_fora": {
+    "frac_comum": 0.1392,
+    "liquido_ha": -1.44,
+    "perda_ha": 1.52,
+    "ganho_ha": 0.08,
+    "liquido_frac_comum": -0.1348
+   }
+  },
+  {
+   "a": "2026-08-29_S2C",
+   "b": "2026-09-03_S2B",
+   "dias": 5,
+   "anfiteatro": {
+    "frac_comum": 0.3321,
+    "liquido_ha": 3.6,
+    "perda_ha": 9.56,
+    "ganho_ha": 13.16,
+    "liquido_frac_comum": 0.0319
+   },
+   "alto_fora": {
+    "frac_comum": 0.1372,
+    "liquido_ha": 31.2,
+    "perda_ha": 8.36,
+    "ganho_ha": 39.56,
+    "liquido_frac_comum": 0.1299
+   },
+   "cume_fora": {
+    "frac_comum": 0.5704,
+    "liquido_ha": 0.52,
+    "perda_ha": 0.0,
+    "ganho_ha": 0.52,
+    "liquido_frac_comum": 0.0119
+   }
+  },
+  {
+   "a": "2026-08-29_S2C",
+   "b": "2026-09-06_S2B",
+   "dias": 8,
+   "anfiteatro": {
+    "frac_comum": 0.313,
+    "liquido_ha": 0.24,
+    "perda_ha": 8.76,
+    "ganho_ha": 9.0,
+    "liquido_frac_comum": 0.0023
+   },
+   "alto_fora": {
+    "frac_comum": 0.0795,
+    "liquido_ha": 21.44,
+    "perda_ha": 3.36,
+    "ganho_ha": 24.8,
+    "liquido_frac_comum": 0.1541
+   },
+   "cume_fora": {
+    "frac_comum": 0.6606,
+    "liquido_ha": 1.4,
+    "perda_ha": 0.0,
+    "ganho_ha": 1.4,
+    "liquido_frac_comum": 0.0276
+   }
+  },
+  {
+   "a": "2026-08-29_S2C",
+   "b": "2026-09-08_S2C",
+   "dias": 10,
+   "anfiteatro": {
+    "frac_comum": 0.331,
+    "liquido_ha": -16.0,
+    "perda_ha": 23.68,
+    "ganho_ha": 7.68,
+    "liquido_frac_comum": -0.1421
+   },
+   "alto_fora": {
+    "frac_comum": 0.0418,
+    "liquido_ha": 10.32,
+    "perda_ha": 2.04,
+    "ganho_ha": 12.36,
+    "liquido_frac_comum": 0.1411
+   },
+   "cume_fora": {
+    "frac_comum": 0.6846,
+    "liquido_ha": 3.2,
+    "perda_ha": 0.0,
+    "ganho_ha": 3.2,
+    "liquido_frac_comum": 0.0609
+   }
+  },
+  {
+   "a": "2026-08-29_S2C",
+   "b": "2026-09-13_S2B",
+   "dias": 15,
+   "anfiteatro": {
+    "frac_comum": 0.3879,
+    "liquido_ha": -5.24,
+    "perda_ha": 18.48,
+    "ganho_ha": 13.24,
+    "liquido_frac_comum": -0.0397
+   },
+   "alto_fora": {
+    "frac_comum": 0.1242,
+    "liquido_ha": 8.44,
+    "perda_ha": 34.6,
+    "ganho_ha": 43.04,
+    "liquido_frac_comum": 0.0388
+   },
+   "cume_fora": {
+    "frac_comum": 0.6794,
+    "liquido_ha": -1.52,
+    "perda_ha": 4.04,
+    "ganho_ha": 2.52,
+    "liquido_frac_comum": -0.0292
+   }
+  },
+  {
+   "a": "2026-08-29_S2C",
+   "b": "2026-09-13_S2A",
+   "dias": 15,
+   "anfiteatro": {
+    "frac_comum": 0.351,
+    "liquido_ha": -11.64,
+    "perda_ha": 23.12,
+    "ganho_ha": 11.48,
+    "liquido_frac_comum": -0.0975
+   },
+   "alto_fora": {
+    "frac_comum": 0.1186,
+    "liquido_ha": 29.52,
+    "perda_ha": 19.68,
+    "ganho_ha": 49.2,
+    "liquido_frac_comum": 0.1423
+   },
+   "cume_fora": {
+    "frac_comum": 0.33,
+    "liquido_ha": -0.24,
+    "perda_ha": 0.44,
+    "ganho_ha": 0.2,
+    "liquido_frac_comum": -0.0095
+   }
+  },
+  {
+   "a": "2026-08-29_S2C",
+   "b": "2026-09-16_S2B",
+   "dias": 18,
+   "anfiteatro": {
+    "frac_comum": 0.3743,
+    "liquido_ha": 19.48,
+    "perda_ha": 0.8,
+    "ganho_ha": 20.28,
+    "liquido_frac_comum": 0.153
+   },
+   "alto_fora": {
+    "frac_comum": 0.1549,
+    "liquido_ha": 55.56,
+    "perda_ha": 11.88,
+    "ganho_ha": 67.44,
+    "liquido_frac_comum": 0.2049
+   },
+   "cume_fora": {
+    "frac_comum": 0.708,
+    "liquido_ha": 3.56,
+    "perda_ha": 0.0,
+    "ganho_ha": 3.56,
+    "liquido_frac_comum": 0.0655
+   }
+  },
+  {
+   "a": "2026-09-01_S2C",
+   "b": "2026-09-06_S2B",
+   "dias": 5,
+   "anfiteatro": {
+    "frac_comum": 0.3748,
+    "liquido_ha": -7.48,
+    "perda_ha": 16.24,
+    "ganho_ha": 8.76,
+    "liquido_frac_comum": -0.0587
+   },
+   "alto_fora": {
+    "frac_comum": 0.0594,
+    "liquido_ha": 0.36,
+    "perda_ha": 7.96,
+    "ganho_ha": 8.32,
+    "liquido_frac_comum": 0.0035
+   },
+   "cume_fora": {
+    "frac_comum": 0.1314,
+    "liquido_ha": 1.52,
+    "perda_ha": 0.0,
+    "ganho_ha": 1.52,
+    "liquido_frac_comum": 0.1508
+   }
+  },
+  {
+   "a": "2026-09-01_S2C",
+   "b": "2026-09-08_S2C",
+   "dias": 7,
+   "anfiteatro": {
+    "frac_comum": 0.3899,
+    "liquido_ha": -12.84,
+    "perda_ha": 24.28,
+    "ganho_ha": 11.44,
+    "liquido_frac_comum": -0.0968
+   },
+   "alto_fora": {
+    "frac_comum": 0.0306,
+    "liquido_ha": -1.52,
+    "perda_ha": 5.32,
+    "ganho_ha": 3.8,
+    "liquido_frac_comum": -0.0284
+   },
+   "cume_fora": {
+    "frac_comum": 0.1361,
+    "liquido_ha": 1.56,
+    "perda_ha": 0.0,
+    "ganho_ha": 1.56,
+    "liquido_frac_comum": 0.1494
+   }
+  },
+  {
+   "a": "2026-09-01_S2C",
+   "b": "2026-09-13_S2B",
+   "dias": 12,
+   "anfiteatro": {
+    "frac_comum": 0.4524,
+    "liquido_ha": -5.6,
+    "perda_ha": 24.0,
+    "ganho_ha": 18.4,
+    "liquido_frac_comum": -0.0364
+   },
+   "alto_fora": {
+    "frac_comum": 0.1713,
+    "liquido_ha": -47.24,
+    "perda_ha": 72.72,
+    "ganho_ha": 25.48,
+    "liquido_frac_comum": -0.1576
+   },
+   "cume_fora": {
+    "frac_comum": 0.1319,
+    "liquido_ha": -1.44,
+    "perda_ha": 2.4,
+    "ganho_ha": 0.96,
+    "liquido_frac_comum": -0.1423
+   }
+  },
+  {
+   "a": "2026-09-01_S2C",
+   "b": "2026-09-13_S2A",
+   "dias": 12,
+   "anfiteatro": {
+    "frac_comum": 0.4561,
+    "liquido_ha": -9.68,
+    "perda_ha": 29.0,
+    "ganho_ha": 19.32,
+    "liquido_frac_comum": -0.0624
+   },
+   "alto_fora": {
+    "frac_comum": 0.1818,
+    "liquido_ha": 1.12,
+    "perda_ha": 38.64,
+    "ganho_ha": 39.76,
+    "liquido_frac_comum": 0.0035
+   },
+   "cume_fora": {
+    "frac_comum": 0.1064,
+    "liquido_ha": 0.16,
+    "perda_ha": 0.16,
+    "ganho_ha": 0.32,
+    "liquido_frac_comum": 0.0196
+   }
+  },
+  {
+   "a": "2026-09-01_S2C",
+   "b": "2026-09-16_S2B",
+   "dias": 15,
+   "anfiteatro": {
+    "frac_comum": 0.4485,
+    "liquido_ha": 37.08,
+    "perda_ha": 2.44,
+    "ganho_ha": 39.52,
+    "liquido_frac_comum": 0.2431
+   },
+   "alto_fora": {
+    "frac_comum": 0.203,
+    "liquido_ha": 9.04,
+    "perda_ha": 43.84,
+    "ganho_ha": 52.88,
+    "liquido_frac_comum": 0.0255
+   },
+   "cume_fora": {
+    "frac_comum": 0.1449,
+    "liquido_ha": 1.56,
+    "perda_ha": 0.0,
+    "ganho_ha": 1.56,
+    "liquido_frac_comum": 0.1403
+   }
+  },
+  {
+   "a": "2026-09-01_S2C",
+   "b": "2026-09-21_S2C",
+   "dias": 20,
+   "anfiteatro": {
+    "frac_comum": 0.6254,
+    "liquido_ha": 55.0,
+    "perda_ha": 6.24,
+    "ganho_ha": 61.24,
+    "liquido_frac_comum": 0.2586
+   },
+   "alto_fora": {
+    "frac_comum": 0.1343,
+    "liquido_ha": 26.68,
+    "perda_ha": 10.92,
+    "ganho_ha": 37.6,
+    "liquido_frac_comum": 0.1135
+   },
+   "cume_fora": {
+    "frac_comum": 0.1314,
+    "liquido_ha": 1.52,
+    "perda_ha": 0.0,
+    "ganho_ha": 1.52,
+    "liquido_frac_comum": 0.1508
+   }
+  },
+  {
+   "a": "2026-09-03_S2B",
+   "b": "2026-09-06_S2B",
+   "dias": 3,
+   "anfiteatro": {
+    "frac_comum": 0.3579,
+    "liquido_ha": -7.0,
+    "perda_ha": 14.84,
+    "ganho_ha": 7.84,
+    "liquido_frac_comum": -0.0575
+   },
+   "alto_fora": {
+    "frac_comum": 0.165,
+    "liquido_ha": -2.92,
+    "perda_ha": 21.32,
+    "ganho_ha": 18.4,
+    "liquido_frac_comum": -0.0101
+   },
+   "cume_fora": {
+    "frac_comum": 0.7706,
+    "liquido_ha": 0.0,
+    "perda_ha": 0.0,
+    "ganho_ha": 0.0,
+    "liquido_frac_comum": 0.0
+   }
+  },
+  {
+   "a": "2026-09-03_S2B",
+   "b": "2026-09-08_S2C",
+   "dias": 5,
+   "anfiteatro": {
+    "frac_comum": 0.3306,
+    "liquido_ha": -21.0,
+    "perda_ha": 24.8,
+    "ganho_ha": 3.8,
+    "liquido_frac_comum": -0.1868
+   },
+   "alto_fora": {
+    "frac_comum": 0.0891,
+    "liquido_ha": -8.68,
+    "perda_ha": 12.88,
+    "ganho_ha": 4.2,
+    "liquido_frac_comum": -0.0557
+   },
+   "cume_fora": {
+    "frac_comum": 0.7659,
+    "liquido_ha": 0.0,
+    "perda_ha": 0.0,
+    "ganho_ha": 0.0,
+    "liquido_frac_comum": 0.0
+   }
+  },
+  {
+   "a": "2026-09-03_S2B",
+   "b": "2026-09-13_S2B",
+   "dias": 10,
+   "anfiteatro": {
+    "frac_comum": 0.3615,
+    "liquido_ha": -13.68,
+    "perda_ha": 21.68,
+    "ganho_ha": 8.0,
+    "liquido_frac_comum": -0.1113
+   },
+   "alto_fora": {
+    "frac_comum": 0.3345,
+    "liquido_ha": -72.2,
+    "perda_ha": 131.0,
+    "ganho_ha": 58.8,
+    "liquido_frac_comum": -0.1234
+   },
+   "cume_fora": {
+    "frac_comum": 0.768,
+    "liquido_ha": -4.76,
+    "perda_ha": 4.76,
+    "ganho_ha": 0.0,
+    "liquido_frac_comum": -0.0808
+   }
+  },
+  {
+   "a": "2026-09-03_S2B",
+   "b": "2026-09-13_S2A",
+   "dias": 10,
+   "anfiteatro": {
+    "frac_comum": 0.3574,
+    "liquido_ha": -9.96,
+    "perda_ha": 25.04,
+    "ganho_ha": 15.08,
+    "liquido_frac_comum": -0.0819
+   },
+   "alto_fora": {
+    "frac_comum": 0.332,
+    "liquido_ha": -34.48,
+    "perda_ha": 78.48,
+    "ganho_ha": 44.0,
+    "liquido_frac_comum": -0.0594
+   },
+   "cume_fora": {
+    "frac_comum": 0.5292,
+    "liquido_ha": -0.44,
+    "perda_ha": 0.44,
+    "ganho_ha": 0.0,
+    "liquido_frac_comum": -0.0108
+   }
+  },
+  {
+   "a": "2026-09-03_S2B",
+   "b": "2026-09-16_S2B",
+   "dias": 13,
+   "anfiteatro": {
+    "frac_comum": 0.387,
+    "liquido_ha": 23.2,
+    "perda_ha": 0.88,
+    "ganho_ha": 24.08,
+    "liquido_frac_comum": 0.1762
+   },
+   "alto_fora": {
+    "frac_comum": 0.4085,
+    "liquido_ha": 24.68,
+    "perda_ha": 39.84,
+    "ganho_ha": 64.52,
+    "liquido_frac_comum": 0.0345
+   },
+   "cume_fora": {
+    "frac_comum": 0.7732,
+    "liquido_ha": 0.0,
+    "perda_ha": 0.0,
+    "ganho_ha": 0.0,
+    "liquido_frac_comum": 0.0
+   }
+  },
+  {
+   "a": "2026-09-03_S2B",
+   "b": "2026-09-21_S2C",
+   "dias": 18,
+   "anfiteatro": {
+    "frac_comum": 0.391,
+    "liquido_ha": 21.24,
+    "perda_ha": 4.32,
+    "ganho_ha": 25.56,
+    "liquido_frac_comum": 0.1597
+   },
+   "alto_fora": {
+    "frac_comum": 0.2608,
+    "liquido_ha": 10.64,
+    "perda_ha": 32.88,
+    "ganho_ha": 43.52,
+    "liquido_frac_comum": 0.0233
+   },
+   "cume_fora": {
+    "frac_comum": 0.7628,
+    "liquido_ha": 0.0,
+    "perda_ha": 0.0,
+    "ganho_ha": 0.0,
+    "liquido_frac_comum": 0.0
+   }
+  },
+  {
+   "a": "2026-09-06_S2B",
+   "b": "2026-09-13_S2B",
+   "dias": 7,
+   "anfiteatro": {
+    "frac_comum": 0.3614,
+    "liquido_ha": -5.72,
+    "perda_ha": 16.72,
+    "ganho_ha": 11.0,
+    "liquido_frac_comum": -0.0465
+   },
+   "alto_fora": {
+    "frac_comum": 0.1442,
+    "liquido_ha": -1.12,
+    "perda_ha": 30.36,
+    "ganho_ha": 29.24,
+    "liquido_frac_comum": -0.0044
+   },
+   "cume_fora": {
+    "frac_comum": 0.8691,
+    "liquido_ha": -4.76,
+    "perda_ha": 4.76,
+    "ganho_ha": 0.0,
+    "liquido_frac_comum": -0.0714
+   }
+  },
+  {
+   "a": "2026-09-06_S2B",
+   "b": "2026-09-13_S2A",
+   "dias": 7,
+   "anfiteatro": {
+    "frac_comum": 0.3639,
+    "liquido_ha": -10.6,
+    "perda_ha": 23.6,
+    "ganho_ha": 13.0,
+    "liquido_frac_comum": -0.0856
+   },
+   "alto_fora": {
+    "frac_comum": 0.168,
+    "liquido_ha": 16.48,
+    "perda_ha": 8.4,
+    "ganho_ha": 24.88,
+    "liquido_frac_comum": 0.0561
+   },
+   "cume_fora": {
+    "frac_comum": 0.5318,
+    "liquido_ha": -0.44,
+    "perda_ha": 0.44,
+    "ganho_ha": 0.0,
+    "liquido_frac_comum": -0.0108
+   }
+  },
+  {
+   "a": "2026-09-06_S2B",
+   "b": "2026-09-16_S2B",
+   "dias": 10,
+   "anfiteatro": {
+    "frac_comum": 0.3844,
+    "liquido_ha": 28.6,
+    "perda_ha": 0.32,
+    "ganho_ha": 28.92,
+    "liquido_frac_comum": 0.2187
+   },
+   "alto_fora": {
+    "frac_comum": 0.2177,
+    "liquido_ha": 41.72,
+    "perda_ha": 2.36,
+    "ganho_ha": 44.08,
+    "liquido_frac_comum": 0.1095
+   },
+   "cume_fora": {
+    "frac_comum": 0.8733,
+    "liquido_ha": 0.0,
+    "perda_ha": 0.0,
+    "ganho_ha": 0.0,
+    "liquido_frac_comum": 0.0
+   }
+  },
+  {
+   "a": "2026-09-06_S2B",
+   "b": "2026-09-21_S2C",
+   "dias": 15,
+   "anfiteatro": {
+    "frac_comum": 0.3997,
+    "liquido_ha": 28.12,
+    "perda_ha": 3.28,
+    "ganho_ha": 31.4,
+    "liquido_frac_comum": 0.2068
+   },
+   "alto_fora": {
+    "frac_comum": 0.1696,
+    "liquido_ha": -1.88,
+    "perda_ha": 17.76,
+    "ganho_ha": 15.88,
+    "liquido_frac_comum": -0.0063
+   },
+   "cume_fora": {
+    "frac_comum": 0.7967,
+    "liquido_ha": 0.0,
+    "perda_ha": 0.0,
+    "ganho_ha": 0.0,
+    "liquido_frac_comum": 0.0
+   }
+  },
+  {
+   "a": "2026-09-08_S2C",
+   "b": "2026-09-13_S2B",
+   "dias": 5,
+   "anfiteatro": {
+    "frac_comum": 0.4282,
+    "liquido_ha": 0.32,
+    "perda_ha": 15.76,
+    "ganho_ha": 16.08,
+    "liquido_frac_comum": 0.0022
+   },
+   "alto_fora": {
+    "frac_comum": 0.1089,
+    "liquido_ha": 20.52,
+    "perda_ha": 8.12,
+    "ganho_ha": 28.64,
+    "liquido_frac_comum": 0.1077
+   },
+   "cume_fora": {
+    "frac_comum": 0.9108,
+    "liquido_ha": -4.76,
+    "perda_ha": 4.76,
+    "ganho_ha": 0.0,
+    "liquido_frac_comum": -0.0681
+   }
+  },
+  {
+   "a": "2026-09-08_S2C",
+   "b": "2026-09-13_S2A",
+   "dias": 5,
+   "anfiteatro": {
+    "frac_comum": 0.3909,
+    "liquido_ha": -8.68,
+    "perda_ha": 19.48,
+    "ganho_ha": 10.8,
+    "liquido_frac_comum": -0.0653
+   },
+   "alto_fora": {
+    "frac_comum": 0.0795,
+    "liquido_ha": 9.76,
+    "perda_ha": 3.28,
+    "ganho_ha": 13.04,
+    "liquido_frac_comum": 0.0702
+   },
+   "cume_fora": {
+    "frac_comum": 0.5474,
+    "liquido_ha": -0.44,
+    "perda_ha": 0.44,
+    "ganho_ha": 0.0,
+    "liquido_frac_comum": -0.0105
+   }
+  },
+  {
+   "a": "2026-09-08_S2C",
+   "b": "2026-09-16_S2B",
+   "dias": 8,
+   "anfiteatro": {
+    "frac_comum": 0.3964,
+    "liquido_ha": 41.24,
+    "perda_ha": 2.68,
+    "ganho_ha": 43.92,
+    "liquido_frac_comum": 0.3058
+   },
+   "alto_fora": {
+    "frac_comum": 0.1199,
+    "liquido_ha": 30.0,
+    "perda_ha": 2.08,
+    "ganho_ha": 32.08,
+    "liquido_frac_comum": 0.143
+   },
+   "cume_fora": {
+    "frac_comum": 0.9546,
+    "liquido_ha": 0.0,
+    "perda_ha": 0.0,
+    "ganho_ha": 0.0,
+    "liquido_frac_comum": 0.0
+   }
+  },
+  {
+   "a": "2026-09-08_S2C",
+   "b": "2026-09-21_S2C",
+   "dias": 13,
+   "anfiteatro": {
+    "frac_comum": 0.4448,
+    "liquido_ha": 44.24,
+    "perda_ha": 3.32,
+    "ganho_ha": 47.56,
+    "liquido_frac_comum": 0.2924
+   },
+   "alto_fora": {
+    "frac_comum": 0.0898,
+    "liquido_ha": 4.84,
+    "perda_ha": 7.0,
+    "ganho_ha": 11.84,
+    "liquido_frac_comum": 0.0308
+   },
+   "cume_fora": {
+    "frac_comum": 0.7894,
+    "liquido_ha": 0.0,
+    "perda_ha": 0.0,
+    "ganho_ha": 0.0,
+    "liquido_frac_comum": 0.0
+   }
+  },
+  {
+   "a": "2026-09-13_S2B",
+   "b": "2026-09-16_S2B",
+   "dias": 3,
+   "anfiteatro": {
+    "frac_comum": 0.4621,
+    "liquido_ha": 41.28,
+    "perda_ha": 1.0,
+    "ganho_ha": 42.28,
+    "liquido_frac_comum": 0.2626
+   },
+   "alto_fora": {
+    "frac_comum": 0.3726,
+    "liquido_ha": 129.16,
+    "perda_ha": 31.84,
+    "ganho_ha": 161.0,
+    "liquido_frac_comum": 0.1981
+   },
+   "cume_fora": {
+    "frac_comum": 0.914,
+    "liquido_ha": 4.76,
+    "perda_ha": 0.0,
+    "ganho_ha": 4.76,
+    "liquido_frac_comum": 0.0679
+   }
+  },
+  {
+   "a": "2026-09-13_S2B",
+   "b": "2026-09-21_S2C",
+   "dias": 8,
+   "anfiteatro": {
+    "frac_comum": 0.522,
+    "liquido_ha": 53.48,
+    "perda_ha": 2.24,
+    "ganho_ha": 55.72,
+    "liquido_frac_comum": 0.3012
+   },
+   "alto_fora": {
+    "frac_comum": 0.2356,
+    "liquido_ha": 61.12,
+    "perda_ha": 28.6,
+    "ganho_ha": 89.72,
+    "liquido_frac_comum": 0.1483
+   },
+   "cume_fora": {
+    "frac_comum": 0.7925,
+    "liquido_ha": 4.76,
+    "perda_ha": 0.0,
+    "ganho_ha": 4.76,
+    "liquido_frac_comum": 0.0783
+   }
+  },
+  {
+   "a": "2026-09-13_S2A",
+   "b": "2026-09-16_S2B",
+   "dias": 3,
+   "anfiteatro": {
+    "frac_comum": 0.4988,
+    "liquido_ha": 51.04,
+    "perda_ha": 1.4,
+    "ganho_ha": 52.44,
+    "liquido_frac_comum": 0.3008
+   },
+   "alto_fora": {
+    "frac_comum": 0.3614,
+    "liquido_ha": 30.64,
+    "perda_ha": 40.72,
+    "ganho_ha": 71.36,
+    "liquido_frac_comum": 0.0485
+   },
+   "cume_fora": {
+    "frac_comum": 0.5474,
+    "liquido_ha": 0.44,
+    "perda_ha": 0.0,
+    "ganho_ha": 0.44,
+    "liquido_frac_comum": 0.0105
+   }
+  },
+  {
+   "a": "2026-09-13_S2A",
+   "b": "2026-09-21_S2C",
+   "dias": 8,
+   "anfiteatro": {
+    "frac_comum": 0.5661,
+    "liquido_ha": 72.68,
+    "perda_ha": 1.32,
+    "ganho_ha": 74.0,
+    "liquido_frac_comum": 0.3774
+   },
+   "alto_fora": {
+    "frac_comum": 0.2418,
+    "liquido_ha": 14.64,
+    "perda_ha": 30.48,
+    "ganho_ha": 45.12,
+    "liquido_frac_comum": 0.0346
+   },
+   "cume_fora": {
+    "frac_comum": 0.5188,
+    "liquido_ha": 0.44,
+    "perda_ha": 0.0,
+    "ganho_ha": 0.44,
+    "liquido_frac_comum": 0.0111
+   }
+  },
+  {
+   "a": "2026-09-16_S2B",
+   "b": "2026-09-21_S2C",
+   "dias": 5,
+   "anfiteatro": {
+    "frac_comum": 0.5286,
+    "liquido_ha": 4.68,
+    "perda_ha": 7.92,
+    "ganho_ha": 12.6,
+    "liquido_frac_comum": 0.026
+   },
+   "alto_fora": {
+    "frac_comum": 0.2923,
+    "liquido_ha": -30.04,
+    "perda_ha": 61.32,
+    "ganho_ha": 31.28,
+    "liquido_frac_comum": -0.0587
+   },
+   "cume_fora": {
+    "frac_comum": 0.7967,
+    "liquido_ha": 0.0,
+    "perda_ha": 0.0,
+    "ganho_ha": 0.0,
+    "liquido_frac_comum": 0.0
+   }
+  }
+ ],
+ "erro": {
+  "A_12ago_24ago|S2C>S2A": {
+   "liquido_ha": -36.28,
+   "perda_ha": 38.44,
+   "ganho_ha": 2.16,
+   "comum_ha": 248.16,
+   "frac_comum": 0.7295,
+   "proc_ha": 2.4,
+   "atm_ha": 10.0,
+   "limiar_ha": 5.84,
+   "natural_anf_ha": 60.61,
+   "natural_anf_curto_ha": 58.94,
+   "natural_ctl_ha": 22.83,
+   "sigma_total_ha": 60.11,
+   "extrapolado_liquido_ha": -49.73,
+   "controle_alto_fora": {
+    "area_ha": 1749.88,
+    "comum_ha": 982.68,
+    "frac_comum": 0.5616,
+    "neve_a_ha": 887.48,
+    "neve_b_ha": 801.32,
+    "perda_ha": 107.32,
+    "ganho_ha": 21.16,
+    "liquido_ha": -86.16,
+    "liquido_frac_comum": -0.0877
+   },
+   "controle_cume_fora": {
+    "area_ha": 76.72,
+    "comum_ha": 71.44,
+    "frac_comum": 0.9312,
+    "neve_a_ha": 71.44,
+    "neve_b_ha": 70.84,
+    "perda_ha": 0.6,
+    "ganho_ha": 0.0,
+    "liquido_ha": -0.6,
+    "liquido_frac_comum": -0.0084
+   }
+  },
+  "A_12ago_24ago|S2C>S2B": {
+   "liquido_ha": -13.72,
+   "perda_ha": 22.12,
+   "ganho_ha": 8.4,
+   "comum_ha": 212.72,
+   "frac_comum": 0.6254,
+   "proc_ha": 0.48,
+   "atm_ha": 0.12,
+   "limiar_ha": 3.26,
+   "natural_anf_ha": 51.95,
+   "natural_anf_curto_ha": 50.52,
+   "natural_ctl_ha": 19.57,
+   "sigma_total_ha": 50.63,
+   "extrapolado_liquido_ha": -21.94,
+   "controle_alto_fora": {
+    "area_ha": 1749.88,
+    "comum_ha": 1179.28,
+    "frac_comum": 0.6739,
+    "neve_a_ha": 1060.56,
+    "neve_b_ha": 903.12,
+    "perda_ha": 178.84,
+    "ganho_ha": 21.4,
+    "liquido_ha": -157.44,
+    "liquido_frac_comum": -0.1335
+   },
+   "controle_cume_fora": {
+    "area_ha": 76.72,
+    "comum_ha": 60.48,
+    "frac_comum": 0.7883,
+    "neve_a_ha": 60.48,
+    "neve_b_ha": 60.2,
+    "perda_ha": 0.28,
+    "ganho_ha": 0.0,
+    "liquido_ha": -0.28,
+    "liquido_frac_comum": -0.0046
+   }
+  },
+  "B_24ago_27ago|S2A>S2B": {
+   "liquido_ha": 17.92,
+   "perda_ha": 11.08,
+   "ganho_ha": 29.0,
+   "comum_ha": 230.64,
+   "frac_comum": 0.678,
+   "proc_ha": 1.04,
+   "atm_ha": 0.52,
+   "limiar_ha": 1.4,
+   "natural_anf_ha": 56.33,
+   "natural_anf_curto_ha": 54.78,
+   "natural_ctl_ha": 21.22,
+   "sigma_total_ha": 54.81,
+   "extrapolado_liquido_ha": 26.43,
+   "controle_alto_fora": {
+    "area_ha": 1749.88,
+    "comum_ha": 597.2,
+    "frac_comum": 0.3413,
+    "neve_a_ha": 541.44,
+    "neve_b_ha": 479.28,
+    "perda_ha": 84.64,
+    "ganho_ha": 22.48,
+    "liquido_ha": -62.16,
+    "liquido_frac_comum": -0.1041
+   },
+   "controle_cume_fora": {
+    "area_ha": 76.72,
+    "comum_ha": 71.44,
+    "frac_comum": 0.9312,
+    "neve_a_ha": 70.84,
+    "neve_b_ha": 71.44,
+    "perda_ha": 0.0,
+    "ganho_ha": 0.6,
+    "liquido_ha": 0.6,
+    "liquido_frac_comum": 0.0084
+   }
+  },
+  "B_24ago_27ago|S2B>S2B": {
+   "liquido_ha": 6.04,
+   "perda_ha": 7.32,
+   "ganho_ha": 13.36,
+   "comum_ha": 186.72,
+   "frac_comum": 0.5489,
+   "proc_ha": 0.48,
+   "atm_ha": 1.16,
+   "limiar_ha": 1.42,
+   "natural_anf_ha": 45.6,
+   "natural_anf_curto_ha": 44.35,
+   "natural_ctl_ha": 17.18,
+   "sigma_total_ha": 44.39,
+   "extrapolado_liquido_ha": 11.0,
+   "controle_alto_fora": {
+    "area_ha": 1749.88,
+    "comum_ha": 636.96,
+    "frac_comum": 0.364,
+    "neve_a_ha": 543.76,
+    "neve_b_ha": 515.6,
+    "perda_ha": 72.4,
+    "ganho_ha": 44.24,
+    "liquido_ha": -28.16,
+    "liquido_frac_comum": -0.0442
+   },
+   "controle_cume_fora": {
+    "area_ha": 76.72,
+    "comum_ha": 60.48,
+    "frac_comum": 0.7883,
+    "neve_a_ha": 60.2,
+    "neve_b_ha": 60.48,
+    "perda_ha": 0.0,
+    "ganho_ha": 0.28,
+    "liquido_ha": 0.28,
+    "liquido_frac_comum": 0.0046
+   }
+  },
+  "C_12ago_27ago|S2C>S2B": {
+   "liquido_ha": -17.04,
+   "perda_ha": 22.48,
+   "ganho_ha": 5.44,
+   "comum_ha": 240.0,
+   "frac_comum": 0.7056,
+   "proc_ha": 0.48,
+   "atm_ha": 6.68,
+   "limiar_ha": 3.68,
+   "natural_anf_ha": 58.62,
+   "natural_anf_curto_ha": 57.0,
+   "natural_ctl_ha": 22.08,
+   "sigma_total_ha": 57.51,
+   "extrapolado_liquido_ha": -24.15,
+   "controle_alto_fora": {
+    "area_ha": 1749.88,
+    "comum_ha": 864.48,
+    "frac_comum": 0.494,
+    "neve_a_ha": 818.44,
+    "neve_b_ha": 678.28,
+    "perda_ha": 148.8,
+    "ganho_ha": 8.64,
+    "liquido_ha": -140.16,
+    "liquido_frac_comum": -0.1621
+   },
+   "controle_cume_fora": {
+    "area_ha": 76.72,
+    "comum_ha": 76.72,
+    "frac_comum": 1.0,
+    "neve_a_ha": 76.72,
+    "neve_b_ha": 76.04,
+    "perda_ha": 0.68,
+    "ganho_ha": 0.0,
+    "liquido_ha": -0.68,
+    "liquido_frac_comum": -0.0089
+   }
+  },
+  "D_12ago_18out|S2C>S2C": {
+   "liquido_ha": 86.04,
+   "perda_ha": 2.48,
+   "ganho_ha": 88.52,
+   "comum_ha": 275.68,
+   "frac_comum": 0.8104,
+   "proc_ha": 3.08,
+   "atm_ha": 75.08,
+   "limiar_ha": 4.84,
+   "natural_anf_ha": 67.33,
+   "natural_anf_curto_ha": 65.47,
+   "natural_ctl_ha": 25.36,
+   "sigma_total_ha": 99.78,
+   "extrapolado_liquido_ha": 106.17,
+   "controle_alto_fora": {
+    "area_ha": 1749.88,
+    "comum_ha": 1634.32,
+    "frac_comum": 0.934,
+    "neve_a_ha": 1425.32,
+    "neve_b_ha": 1470.88,
+    "perda_ha": 106.12,
+    "ganho_ha": 151.68,
+    "liquido_ha": 45.56,
+    "liquido_frac_comum": 0.0279
+   },
+   "controle_cume_fora": {
+    "area_ha": 76.72,
+    "comum_ha": 74.52,
+    "frac_comum": 0.9713,
+    "neve_a_ha": 74.52,
+    "neve_b_ha": 74.32,
+    "perda_ha": 0.2,
+    "ganho_ha": 0.0,
+    "liquido_ha": -0.2,
+    "liquido_frac_comum": -0.0027
+   }
+  },
+  "Z_24ago_S2B_S2A_15min|S2B>S2A": {
+   "liquido_ha": -12.36,
+   "perda_ha": 24.6,
+   "ganho_ha": 12.24,
+   "comum_ha": 198.08,
+   "frac_comum": 0.5823,
+   "proc_ha": 0.72,
+   "atm_ha": 0.72,
+   "limiar_ha": 1.26,
+   "natural_anf_ha": 48.38,
+   "natural_anf_curto_ha": 47.04,
+   "natural_ctl_ha": 18.22,
+   "sigma_total_ha": 47.07,
+   "extrapolado_liquido_ha": -21.23,
+   "controle_alto_fora": {
+    "area_ha": 1749.88,
+    "comum_ha": 836.04,
+    "frac_comum": 0.4778,
+    "neve_a_ha": 664.64,
+    "neve_b_ha": 675.2,
+    "perda_ha": 49.4,
+    "ganho_ha": 59.96,
+    "liquido_ha": 10.56,
+    "liquido_frac_comum": 0.0126
+   },
+   "controle_cume_fora": {
+    "area_ha": 76.72,
+    "comum_ha": 60.48,
+    "frac_comum": 0.7883,
+    "neve_a_ha": 60.2,
+    "neve_b_ha": 60.48,
+    "perda_ha": 0.0,
+    "ganho_ha": 0.28,
+    "liquido_ha": 0.28,
+    "liquido_frac_comum": 0.0046
+   }
+  }
+ },
+ "ruido_referencia": {
+  "anf_dp": 0.24422935842797563,
+  "anf_n": 84,
+  "ctl_dp": 0.09198652618726288,
+  "ctl_n": 20,
+  "anf_curto_dp": 0.2374993642096753,
+  "anf_curto_n": 20
+ },
+ "mascara": "estrita"
+}

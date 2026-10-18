@@ -1,0 +1,62 @@
+[
+ {
+  "km": 1.68,
+  "lon": 85.5131,
+  "lat": 28.2856,
+  "cota_m": 3997.41796875,
+  "area_km2": 3.41,
+  "toca_borda": false,
+  "lamina_mm_para_14_2Mm3": 4158.2,
+  "frac_acima_5000m": 0.772
+ },
+ {
+  "km": 5.0,
+  "lon": 85.4983,
+  "lat": 28.3097,
+  "cota_m": 3454.124267578125,
+  "area_km2": 24.49,
+  "toca_borda": false,
+  "lamina_mm_para_14_2Mm3": 579.7,
+  "frac_acima_5000m": 0.587
+ },
+ {
+  "km": 10.0,
+  "lon": 85.4703,
+  "lat": 28.3339,
+  "cota_m": 2742.175537109375,
+  "area_km2": 241.73,
+  "toca_borda": false,
+  "lamina_mm_para_14_2Mm3": 58.7,
+  "frac_acima_5000m": 0.667
+ },
+ {
+  "km": 15.0,
+  "lon": 85.425,
+  "lat": 28.3303,
+  "cota_m": 2278.78466796875,
+  "area_km2": 835.43,
+  "toca_borda": false,
+  "lamina_mm_para_14_2Mm3": 17.0,
+  "frac_acima_5000m": 0.515
+ },
+ {
+  "km": 20.0,
+  "lon": 85.3997,
+  "lat": 28.2992,
+  "cota_m": 2027.41552734375,
+  "area_km2": 866.64,
+  "toca_borda": false,
+  "lamina_mm_para_14_2Mm3": 16.4,
+  "frac_acima_5000m": 0.496
+ },
+ {
+  "km": 25.0,
+  "lon": 85.375,
+  "lat": 28.2664,
+  "cota_m": 1743.6392822265625,
+  "area_km2": 1316.31,
+  "toca_borda": false,
+  "lamina_mm_para_14_2Mm3": 10.8,
+  "frac_acima_5000m": 0.35
+ }
+]

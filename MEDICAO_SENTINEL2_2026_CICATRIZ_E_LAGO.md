@@ -7,6 +7,8 @@
 
 Estas são as **primeiras imagens do ano do evento** analisadas neste projeto. Todo o acervo em `data/satellite_imagery/himalaia_2026/` está datado de **2024**.
 
+> **Correção (18/10/2026).** A perda de gelo de 27,7 ha e o "núcleo coerente de 7,2 ha" da §4 não se sustentam. Refeito com a mesma cena, o núcleo reaparece (8,3 ha em 85,504 E; 28,267 N), mas seus pixels em 27/08 têm verde mediano 1,20 e SWIR 0,84: é nuvem baixa sobre neve, que a SCL não marca. O mesmo setor "perde" 17 ha entre duas imagens de 24/08 tiradas com 15 min de diferença, e em 18/10 está 97 % coberto de neve. Com um teste espectral de nuvem, o par 12/08 → 27/08 dá saldo de −0,2 ± 8,7 ha no anfiteatro. A zona do colapso (5.000–6.000 m) não foi observada nas cenas de 24 e 27/08. O offset zero adotado aqui está certo para o Earth Search, que já aplica o offset BOA. Ver `scripts/neve_anfiteatro/` e `RELATORIO_GELO_MULTIFONTE_LHENDE_2026.html`. O lago de 73,9 ha (§3) não é afetado.
+
 ---
 
 ## 1. Inventário de cenas e o problema da nuvem

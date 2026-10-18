@@ -1,0 +1,1335 @@
+{
+ "pares": [
+  {
+   "orbita": "asc_85",
+   "a": "2026-07-11 12:21:51",
+   "b": "2026-07-23 12:21:52",
+   "evento": false,
+   "anfiteatro": {
+    "sobe": 0.10570183189020439,
+    "desce": 0.07616186605407316,
+    "mediana_db": -0.3233707718632006
+   },
+   "alto_fora": {
+    "sobe": 0.08375071469411093,
+    "desce": 0.09277301315037165,
+    "mediana_db": -0.25114663306788376
+   },
+   "cume_fora": {
+    "sobe": 0.30928636187022407,
+    "desce": 0.03406294521435047,
+    "mediana_db": 1.7224859593664732
+   },
+   "corredor_00_05km": {
+    "sobe": 0.004696246759589736,
+    "desce": 0.015704249164068075,
+    "mediana_db": -0.19202120779962417
+   },
+   "corredor_05_10km": {
+    "sobe": 0.006705844179255146,
+    "desce": 0.010671666005696362,
+    "mediana_db": -0.11377670294500675
+   },
+   "corredor_10_15km": {
+    "sobe": 0.01648076648076648,
+    "desce": 0.0074360074360074364,
+    "mediana_db": 0.2877515829350725
+   },
+   "corredor_15_25km": {
+    "sobe": 0.028487381947669917,
+    "desce": 0.01447592506579966,
+    "mediana_db": 0.3404980313084729
+   }
+  },
+  {
+   "orbita": "asc_85",
+   "a": "2026-07-23 12:21:52",
+   "b": "2026-08-04 12:21:52",
+   "evento": false,
+   "anfiteatro": {
+    "sobe": 0.06567709253696177,
+    "desce": 0.05242386758555693,
+    "mediana_db": 0.43509585926703664
+   },
+   "alto_fora": {
+    "sobe": 0.06930245854774157,
+    "desce": 0.05892510005717553,
+    "mediana_db": 0.2675690114861178
+   },
+   "cume_fora": {
+    "sobe": 0.03147260717523637,
+    "desce": 0.10957129905452662,
+    "mediana_db": -0.33116109222605516
+   },
+   "corredor_00_05km": {
+    "sobe": 0.010369312845174138,
+    "desce": 0.005785776007814555,
+    "mediana_db": -0.007688315609667207
+   },
+   "corredor_05_10km": {
+    "sobe": 0.009445866532069077,
+    "desce": 0.013880376392544256,
+    "mediana_db": -0.10862811586537013
+   },
+   "corredor_10_15km": {
+    "sobe": 0.00858000858000858,
+    "desce": 0.008437008437008437,
+    "mediana_db": -0.09228565171026659
+   },
+   "corredor_15_25km": {
+    "sobe": 0.022952469422511224,
+    "desce": 0.01650797337049079,
+    "mediana_db": 0.16708409886679476
+   }
+  },
+  {
+   "orbita": "asc_85",
+   "a": "2026-08-04 12:21:52",
+   "b": "2026-08-16 12:21:53",
+   "evento": false,
+   "anfiteatro": {
+    "sobe": 0.02032161159215409,
+    "desce": 0.024444837132591154,
+    "mediana_db": -0.13057458049509574
+   },
+   "alto_fora": {
+    "sobe": 0.035060034305317324,
+    "desce": 0.04721555174385363,
+    "mediana_db": -0.21433082582887586
+   },
+   "cume_fora": {
+    "sobe": 0.06825540733065665,
+    "desce": 0.13547467944566766,
+    "mediana_db": -0.7503522374611222
+   },
+   "corredor_00_05km": {
+    "sobe": 0.007551564789420295,
+    "desce": 0.0067250253597325015,
+    "mediana_db": -0.016796478932690206
+   },
+   "corredor_05_10km": {
+    "sobe": 0.006273209070916105,
+    "desce": 0.011969571330713488,
+    "mediana_db": -0.07854558273391632
+   },
+   "corredor_10_15km": {
+    "sobe": 0.00454025454025454,
+    "desce": 0.01934076934076934,
+    "mediana_db": -0.2650050670473565
+   },
+   "corredor_15_25km": {
+    "sobe": 0.006463848893017495,
+    "desce": 0.04396965474531661,
+    "mediana_db": -0.5750142770907238
+   }
+  },
+  {
+   "orbita": "asc_85",
+   "a": "2026-08-16 12:21:53",
+   "b": "2026-08-28 12:21:54",
+   "evento": true,
+   "anfiteatro": {
+    "sobe": 0.0456499970548389,
+    "desce": 0.012516934676326795,
+    "mediana_db": 0.28184714922615006
+   },
+   "alto_fora": {
+    "sobe": 0.0496969696969697,
+    "desce": 0.03379073756432247,
+    "mediana_db": 0.22531069490704048
+   },
+   "cume_fora": {
+    "sobe": 0.02188835643051418,
+    "desce": 0.0744722186245305,
+    "mediana_db": -0.2689878962401977
+   },
+   "corredor_00_05km": {
+    "sobe": 0.367960326107375,
+    "desce": 0.06176503738212421,
+    "mediana_db": 1.7893597574881106
+   },
+   "corredor_05_10km": {
+    "sobe": 0.28633233586905577,
+    "desce": 0.1009481919457764,
+    "mediana_db": 1.1144082833058677
+   },
+   "corredor_10_15km": {
+    "sobe": 0.0957028457028457,
+    "desce": 0.04257829257829258,
+    "mediana_db": 0.46435428672097245
+   },
+   "corredor_15_25km": {
+    "sobe": 0.05395572069979873,
+    "desce": 0.05258166898900759,
+    "mediana_db": 0.21159949898935837
+   }
+  },
+  {
+   "orbita": "asc_85",
+   "a": "2026-08-28 12:21:54",
+   "b": "2026-09-09 12:21:54",
+   "evento": false,
+   "anfiteatro": {
+    "sobe": 0.10782234788242917,
+    "desce": 0.05807857689815633,
+    "mediana_db": 0.3122021454515558
+   },
+   "alto_fora": {
+    "sobe": 0.13478559176672383,
+    "desce": 0.06064608347627216,
+    "mediana_db": 0.20987085104896286
+   },
+   "cume_fora": {
+    "sobe": 0.28208781245952597,
+    "desce": 0.0595777748996244,
+    "mediana_db": 1.1221427564624094
+   },
+   "corredor_00_05km": {
+    "sobe": 0.04174024119923357,
+    "desce": 0.08565954089491679,
+    "mediana_db": -0.38812264277054
+   },
+   "corredor_05_10km": {
+    "sobe": 0.13732559397195082,
+    "desce": 0.14240905649493457,
+    "mediana_db": -0.2361211367815983
+   },
+   "corredor_10_15km": {
+    "sobe": 0.023487773487773488,
+    "desce": 0.028564278564278563,
+    "mediana_db": -0.17297721710812564
+   },
+   "corredor_15_25km": {
+    "sobe": 0.02633921659699644,
+    "desce": 0.0499690354544047,
+    "mediana_db": -0.38995277430576936
+   }
+  },
+  {
+   "orbita": "asc_85",
+   "a": "2026-09-09 12:21:54",
+   "b": "2026-09-21 12:21:54",
+   "evento": false,
+   "anfiteatro": {
+    "sobe": 0.06252577015962774,
+    "desce": 0.06720857630912411,
+    "mediana_db": -0.23309417900135543
+   },
+   "alto_fora": {
+    "sobe": 0.15304745568896513,
+    "desce": 0.03303030303030303,
+    "mediana_db": 0.6903795416138645
+   },
+   "cume_fora": {
+    "sobe": 0.06980961015412511,
+    "desce": 0.010620385960367828,
+    "mediana_db": 0.8391220428927753
+   },
+   "corredor_00_05km": {
+    "sobe": 0.006386895593042041,
+    "desce": 0.04782657699966187,
+    "mediana_db": -0.6685632289265211
+   },
+   "corredor_05_10km": {
+    "sobe": 0.01972095035512132,
+    "desce": 0.03630529617478458,
+    "mediana_db": -0.5366134196564323
+   },
+   "corredor_10_15km": {
+    "sobe": 0.01018876018876019,
+    "desce": 0.02280852280852281,
+    "mediana_db": -0.23919451874935227
+   },
+   "corredor_15_25km": {
+    "sobe": 0.0049156216132528255,
+    "desce": 0.039537854156990244,
+    "mediana_db": -0.4384390945606169
+   }
+  },
+  {
+   "orbita": "asc_85",
+   "a": "2026-09-21 12:21:54",
+   "b": "2026-10-03 12:21:54",
+   "evento": false,
+   "anfiteatro": {
+    "sobe": 0.15173469988808388,
+    "desce": 0.02909819167108441,
+    "mediana_db": 0.44158605632523695
+   },
+   "alto_fora": {
+    "sobe": 0.0947284162378502,
+    "desce": 0.04149799885648942,
+    "mediana_db": 0.46201059209404605
+   },
+   "cume_fora": {
+    "sobe": 0.05867115658593446,
+    "desce": 0.0032379225488926304,
+    "mediana_db": 0.14183952716762782
+   },
+   "corredor_00_05km": {
+    "sobe": 0.018634707142052072,
+    "desce": 0.06326783634519292,
+    "mediana_db": -0.6005965631739612
+   },
+   "corredor_05_10km": {
+    "sobe": 0.003965821826441215,
+    "desce": 0.03702635468868299,
+    "mediana_db": -0.5810265663133558
+   },
+   "corredor_10_15km": {
+    "sobe": 0.0035392535392535394,
+    "desce": 0.021235521235521235,
+    "mediana_db": -0.44628827833914886
+   },
+   "corredor_15_25km": {
+    "sobe": 0.010121535841461526,
+    "desce": 0.013585694379934975,
+    "mediana_db": -0.06559562111845141
+   }
+  },
+  {
+   "orbita": "asc_85",
+   "a": "2026-10-03 12:21:54",
+   "b": "2026-10-15 12:21:54",
+   "evento": false,
+   "anfiteatro": {
+    "sobe": 0.08420215585792543,
+    "desce": 0.005595806090593155,
+    "mediana_db": 0.7205204231593667
+   },
+   "alto_fora": {
+    "sobe": 0.10404802744425386,
+    "desce": 0.006375071469411092,
+    "mediana_db": 0.8568747250050528
+   },
+   "cume_fora": {
+    "sobe": 0.07188188058541639,
+    "desce": 0.004015023960626861,
+    "mediana_db": 0.804713747275235
+   },
+   "corredor_00_05km": {
+    "sobe": 0.02028778600142766,
+    "desce": 0.016418078671525716,
+    "mediana_db": -0.03650019857936737
+   },
+   "corredor_05_10km": {
+    "sobe": 0.002848181129898691,
+    "desce": 0.008977178498035115,
+    "mediana_db": -0.2808831431631127
+   },
+   "corredor_10_15km": {
+    "sobe": 0.003146003146003146,
+    "desce": 0.012047762047762048,
+    "mediana_db": -0.3472983114837582
+   },
+   "corredor_15_25km": {
+    "sobe": 0.0040253909273881405,
+    "desce": 0.017049852918408423,
+    "mediana_db": -0.2810801164711294
+   }
+  },
+  {
+   "orbita": "des_121",
+   "a": "2026-07-02 00:10:46",
+   "b": "2026-07-14 00:10:47",
+   "evento": false,
+   "anfiteatro": {
+    "sobe": 0.03713848147493668,
+    "desce": 0.07766389821523237,
+    "mediana_db": 0.2050036445627157
+   },
+   "alto_fora": {
+    "sobe": 0.02246998284734134,
+    "desce": 0.1134991423670669,
+    "mediana_db": -0.31506378628843024
+   },
+   "cume_fora": {
+    "sobe": 0.009584250744722186,
+    "desce": 0.04157492552778137,
+    "mediana_db": -0.30858964365982366
+   },
+   "corredor_00_05km": {
+    "sobe": 0.021227035353345605,
+    "desce": 0.00338129766690461,
+    "mediana_db": 0.3396185304071757
+   },
+   "corredor_05_10km": {
+    "sobe": 0.026066265277427263,
+    "desce": 0.010996142336950643,
+    "mediana_db": 0.4213623768973598
+   },
+   "corredor_10_15km": {
+    "sobe": 0.05150157180121731,
+    "desce": 0.004548190756471139,
+    "mediana_db": 0.5466943399800588
+   },
+   "corredor_15_25km": {
+    "sobe": NaN,
+    "desce": NaN,
+    "mediana_db": NaN
+   }
+  },
+  {
+   "orbita": "des_121",
+   "a": "2026-07-14 00:10:47",
+   "b": "2026-07-26 00:10:48",
+   "evento": false,
+   "anfiteatro": {
+    "sobe": 0.027036578900865877,
+    "desce": 0.03828709430405843,
+    "mediana_db": -0.3538840781523547
+   },
+   "alto_fora": {
+    "sobe": 0.036369353916523725,
+    "desce": 0.055403087478559175,
+    "mediana_db": -0.3015750978181311
+   },
+   "cume_fora": {
+    "sobe": 0.021111255018779952,
+    "desce": 0.03496956352804041,
+    "mediana_db": -0.14960610406818653
+   },
+   "corredor_00_05km": {
+    "sobe": 0.003306157718751174,
+    "desce": 0.026261411879625805,
+    "mediana_db": -0.5544989012451769
+   },
+   "corredor_05_10km": {
+    "sobe": 0.005191621300068501,
+    "desce": 0.03677398420881855,
+    "mediana_db": -0.6441694464328585
+   },
+   "corredor_10_15km": {
+    "sobe": 0.004146879807370744,
+    "desce": 0.056919269614072635,
+    "mediana_db": -0.7029288362710728
+   },
+   "corredor_15_25km": {
+    "sobe": NaN,
+    "desce": NaN,
+    "mediana_db": NaN
+   }
+  },
+  {
+   "orbita": "des_121",
+   "a": "2026-07-26 00:10:48",
+   "b": "2026-08-07 00:10:48",
+   "evento": false,
+   "anfiteatro": {
+    "sobe": 0.02094009542321965,
+    "desce": 0.021941450197325792,
+    "mediana_db": -0.021558828805456898
+   },
+   "alto_fora": {
+    "sobe": 0.02268724985706118,
+    "desce": 0.05042309891366495,
+    "mediana_db": -0.18721091673592571
+   },
+   "cume_fora": {
+    "sobe": 0.036912317057375986,
+    "desce": 0.050900142468592154,
+    "mediana_db": -0.33137130475108556
+   },
+   "corredor_00_05km": {
+    "sobe": 0.015854529060374947,
+    "desce": 0.008828943908028703,
+    "mediana_db": 0.2666316443430965
+   },
+   "corredor_05_10km": {
+    "sobe": 0.016548292893968346,
+    "desce": 0.008869019720950356,
+    "mediana_db": 0.2121248109762517
+   },
+   "corredor_10_15km": {
+    "sobe": 0.02587313382422482,
+    "desce": 0.011349050868067284,
+    "mediana_db": 0.3129666996704419
+   },
+   "corredor_15_25km": {
+    "sobe": NaN,
+    "desce": NaN,
+    "mediana_db": NaN
+   }
+  },
+  {
+   "orbita": "des_121",
+   "a": "2026-08-07 00:10:48",
+   "b": "2026-08-19 00:10:49",
+   "evento": false,
+   "anfiteatro": {
+    "sobe": 0.05510396418684102,
+    "desce": 0.007510160805796077,
+    "mediana_db": 0.4857950632332
+   },
+   "alto_fora": {
+    "sobe": 0.039736992567181245,
+    "desce": 0.023093196112064035,
+    "mediana_db": 0.2902859587893256
+   },
+   "cume_fora": {
+    "sobe": 0.05893019038984588,
+    "desce": 0.011397487372102059,
+    "mediana_db": 0.39154294118480504
+   },
+   "corredor_00_05km": {
+    "sobe": 0.007138295074576398,
+    "desce": 0.008979223804335575,
+    "mediana_db": 0.008936585520176621
+   },
+   "corredor_05_10km": {
+    "sobe": 0.0102029779716624,
+    "desce": 0.006525579550780546,
+    "mediana_db": 0.09814576125227603
+   },
+   "corredor_10_15km": {
+    "sobe": 0.014822065300985806,
+    "desce": 0.011116548975739356,
+    "mediana_db": 0.13147655282836856
+   },
+   "corredor_15_25km": {
+    "sobe": NaN,
+    "desce": NaN,
+    "mediana_db": NaN
+   }
+  },
+  {
+   "orbita": "des_121",
+   "a": "2026-08-19 00:10:49",
+   "b": "2026-08-31 00:10:50",
+   "evento": true,
+   "anfiteatro": {
+    "sobe": 0.03033515933321553,
+    "desce": 0.017288095658832537,
+    "mediana_db": 0.08814439506678218
+   },
+   "alto_fora": {
+    "sobe": 0.030920526014865637,
+    "desce": 0.020360205831903944,
+    "mediana_db": 0.13543160119956266
+   },
+   "cume_fora": {
+    "sobe": 0.026680481802875276,
+    "desce": 0.044553814272762594,
+    "mediana_db": -0.03206161748697589
+   },
+   "corredor_00_05km": {
+    "sobe": 0.2575797422699778,
+    "desce": 0.10106323026637111,
+    "mediana_db": 1.167923863422919
+   },
+   "corredor_05_10km": {
+    "sobe": 0.2609871291055269,
+    "desce": 0.06053286224177092,
+    "mediana_db": 1.2630130882108572
+   },
+   "corredor_10_15km": {
+    "sobe": 0.18751310913794308,
+    "desce": 0.04894078165419842,
+    "mediana_db": 0.7977680505666849
+   },
+   "corredor_15_25km": {
+    "sobe": NaN,
+    "desce": NaN,
+    "mediana_db": NaN
+   }
+  },
+  {
+   "orbita": "des_121",
+   "a": "2026-08-31 00:10:50",
+   "b": "2026-09-12 00:10:50",
+   "evento": false,
+   "anfiteatro": {
+    "sobe": 0.059050480061259354,
+    "desce": 0.02547564351770042,
+    "mediana_db": 0.04314218542224757
+   },
+   "alto_fora": {
+    "sobe": 0.06226986849628359,
+    "desce": 0.03621497998856489,
+    "mediana_db": -0.03787969980395989
+   },
+   "cume_fora": {
+    "sobe": 0.026939515606786684,
+    "desce": 0.05608081854682036,
+    "mediana_db": -0.2003852993363866
+   },
+   "corredor_00_05km": {
+    "sobe": 0.015741819138144795,
+    "desce": 0.03719427433595071,
+    "mediana_db": -0.5108500168515873
+   },
+   "corredor_05_10km": {
+    "sobe": 0.018314886253019434,
+    "desce": 0.061181814904279486,
+    "mediana_db": -0.6437506538971702
+   },
+   "corredor_10_15km": {
+    "sobe": 0.01431355419662657,
+    "desce": 0.04320946172972247,
+    "mediana_db": -0.48138541698203063
+   },
+   "corredor_15_25km": {
+    "sobe": NaN,
+    "desce": NaN,
+    "mediana_db": NaN
+   }
+  },
+  {
+   "orbita": "des_121",
+   "a": "2026-09-12 00:10:50",
+   "b": "2026-09-24 00:10:50",
+   "evento": false,
+   "anfiteatro": {
+    "sobe": 0.07678034988513872,
+    "desce": 0.025917417682747246,
+    "mediana_db": 0.2555982974857143
+   },
+   "alto_fora": {
+    "sobe": 0.14140080045740422,
+    "desce": 0.01925100057175529,
+    "mediana_db": 0.8230136385998812
+   },
+   "cume_fora": {
+    "sobe": 0.033674394508483356,
+    "desce": 0.04066830721409144,
+    "mediana_db": -0.2802608278409533
+   },
+   "corredor_00_05km": {
+    "sobe": 0.010857722508171469,
+    "desce": 0.0031934477965210204,
+    "mediana_db": 0.07386144748909729
+   },
+   "corredor_05_10km": {
+    "sobe": 0.011140354039730325,
+    "desce": 0.008436384612611314,
+    "mediana_db": 0.1258424997851093
+   },
+   "corredor_10_15km": {
+    "sobe": 0.014536441586280814,
+    "desce": 0.009244372990353697,
+    "mediana_db": 0.20815856765509144
+   },
+   "corredor_15_25km": {
+    "sobe": NaN,
+    "desce": NaN,
+    "mediana_db": NaN
+   }
+  },
+  {
+   "orbita": "des_121",
+   "a": "2026-09-24 00:10:50",
+   "b": "2026-10-06 00:10:50",
+   "evento": false,
+   "anfiteatro": {
+    "sobe": 0.12923366908169878,
+    "desce": 0.008953289744949048,
+    "mediana_db": 0.5783120603267813
+   },
+   "alto_fora": {
+    "sobe": 0.09780445969125215,
+    "desce": 0.010497427101200687,
+    "mediana_db": 0.7099291826679108
+   },
+   "cume_fora": {
+    "sobe": 0.07278849889910634,
+    "desce": 0.022794974744204118,
+    "mediana_db": 0.5577124465253185
+   },
+   "corredor_00_05km": {
+    "sobe": 0.00623661569673517,
+    "desce": 0.07630461734981403,
+    "mediana_db": -0.9710306211633686
+   },
+   "corredor_05_10km": {
+    "sobe": 0.00021631755416952087,
+    "desce": 0.10044345098604751,
+    "mediana_db": -1.2574684394374316
+   },
+   "corredor_10_15km": {
+    "sobe": 0.0009512161978529692,
+    "desce": 0.13942111699959234,
+    "mediana_db": -1.2956106420918991
+   },
+   "corredor_15_25km": {
+    "sobe": NaN,
+    "desce": NaN,
+    "mediana_db": NaN
+   }
+  },
+  {
+   "orbita": "des_121",
+   "a": "2026-10-06 00:10:50",
+   "b": "2026-10-18 00:10:50",
+   "evento": false,
+   "anfiteatro": {
+    "sobe": 0.03543028803675561,
+    "desce": 0.005566354479590033,
+    "mediana_db": 0.3677131761198116
+   },
+   "alto_fora": {
+    "sobe": 0.04403087478559177,
+    "desce": 0.004213836477987422,
+    "mediana_db": 0.6004103853377116
+   },
+   "cume_fora": {
+    "sobe": 0.06540603548763113,
+    "desce": 0.006734878901696671,
+    "mediana_db": 0.6514084235936037
+   },
+   "corredor_00_05km": {
+    "sobe": 0.013675470563925311,
+    "desce": 0.0030431679002141487,
+    "mediana_db": 0.1273813273449509
+   },
+   "corredor_05_10km": {
+    "sobe": 0.0026679165014240904,
+    "desce": 0.0007931643652882432,
+    "mediana_db": -0.1106781029744166
+   },
+   "corredor_10_15km": {
+    "sobe": 0.0029895366218236174,
+    "desce": 0.01032749014811795,
+    "mediana_db": -0.16466554187721005
+   },
+   "corredor_15_25km": {
+    "sobe": NaN,
+    "desce": NaN,
+    "mediana_db": NaN
+   }
+  },
+  {
+   "orbita": "des_19",
+   "a": "2026-07-07 00:18:54",
+   "b": "2026-07-19 00:18:55",
+   "evento": false,
+   "anfiteatro": {
+    "sobe": 0.021057901867232137,
+    "desce": 0.039553513577192674,
+    "mediana_db": 0.10632042798394892
+   },
+   "alto_fora": {
+    "sobe": 0.02254431103487707,
+    "desce": 0.08520297312750143,
+    "mediana_db": -0.22268302201156942
+   },
+   "cume_fora": {
+    "sobe": 0.001165652117601347,
+    "desce": 0.2954280533609636,
+    "mediana_db": -1.9020449050932418
+   },
+   "corredor_00_05km": {
+    "sobe": 0.012510801367547057,
+    "desce": 0.006612315437502348,
+    "mediana_db": 0.3833043413150605
+   },
+   "corredor_05_10km": {
+    "sobe": 0.013664058838374734,
+    "desce": 0.00511951544867866,
+    "mediana_db": 0.18222401859505855
+   },
+   "corredor_10_15km": {
+    "sobe": 0.019197769197769197,
+    "desce": 0.010653510653510653,
+    "mediana_db": 0.22097757863779907
+   },
+   "corredor_15_25km": {
+    "sobe": 0.03669298653042267,
+    "desce": 0.012308406874129122,
+    "mediana_db": 0.4351467528789348
+   }
+  },
+  {
+   "orbita": "des_19",
+   "a": "2026-07-19 00:18:55",
+   "b": "2026-07-31 00:18:55",
+   "evento": false,
+   "anfiteatro": {
+    "sobe": 0.027154385344878365,
+    "desce": 0.014873063556576544,
+    "mediana_db": 0.05535023087843527
+   },
+   "alto_fora": {
+    "sobe": 0.03235563178959405,
+    "desce": 0.053281875357347054,
+    "mediana_db": -0.3607337390664265
+   },
+   "cume_fora": {
+    "sobe": 0.03173164097914778,
+    "desce": 0.012433622587747701,
+    "mediana_db": -0.03905079086636132
+   },
+   "corredor_00_05km": {
+    "sobe": 0.0043956869669759925,
+    "desce": 0.011984821730473006,
+    "mediana_db": -0.2991724524584711
+   },
+   "corredor_05_10km": {
+    "sobe": 0.007787431950102751,
+    "desce": 0.013159317878645852,
+    "mediana_db": -0.1266762874939502
+   },
+   "corredor_10_15km": {
+    "sobe": 0.006363506363506364,
+    "desce": 0.029636779636779638,
+    "mediana_db": -0.2750023876881529
+   },
+   "corredor_15_25km": {
+    "sobe": 0.013701811425917325,
+    "desce": 0.05339448831088404,
+    "mediana_db": -0.5480528373936164
+   }
+  },
+  {
+   "orbita": "des_19",
+   "a": "2026-07-31 00:18:55",
+   "b": "2026-08-12 00:18:56",
+   "evento": false,
+   "anfiteatro": {
+    "sobe": 0.031395417329327914,
+    "desce": 0.007627967249808565,
+    "mediana_db": 0.08102309279407294
+   },
+   "alto_fora": {
+    "sobe": 0.02437392795883362,
+    "desce": 0.025791881074899943,
+    "mediana_db": -0.17125078592896426
+   },
+   "cume_fora": {
+    "sobe": 0.0869058412122782,
+    "desce": 0.03121357337132496,
+    "mediana_db": 0.6374792103082019
+   },
+   "corredor_00_05km": {
+    "sobe": 0.004771386707743172,
+    "desce": 0.01082015253409475,
+    "mediana_db": -0.23594394508449668
+   },
+   "corredor_05_10km": {
+    "sobe": 0.0019829109132206077,
+    "desce": 0.01766593359051087,
+    "mediana_db": -0.33237470175952133
+   },
+   "corredor_10_15km": {
+    "sobe": 0.009867009867009866,
+    "desce": 0.013549263549263548,
+    "mediana_db": -0.1824208663451352
+   },
+   "corredor_15_25km": {
+    "sobe": 0.014514630747793775,
+    "desce": 0.015695154048614338,
+    "mediana_db": -0.1299850417846402
+   }
+  },
+  {
+   "orbita": "des_19",
+   "a": "2026-08-12 00:18:56",
+   "b": "2026-08-24 00:18:57",
+   "evento": false,
+   "anfiteatro": {
+    "sobe": 0.02079283736820404,
+    "desce": 0.015520998998645227,
+    "mediana_db": 0.14314216014897418
+   },
+   "alto_fora": {
+    "sobe": 0.043161806746712404,
+    "desce": 0.04086906803887936,
+    "mediana_db": 0.14111071454333368
+   },
+   "cume_fora": {
+    "sobe": 0.0010361352156456418,
+    "desce": 0.0942883046237534,
+    "mediana_db": -1.0248423346578077
+   },
+   "corredor_00_05km": {
+    "sobe": 0.011872111808242852,
+    "desce": 0.008415674193184806,
+    "mediana_db": 0.08315298677822192
+   },
+   "corredor_05_10km": {
+    "sobe": 0.00793164365288243,
+    "desce": 0.005335833002848181,
+    "mediana_db": 0.19338523870304147
+   },
+   "corredor_10_15km": {
+    "sobe": 0.007757757757757758,
+    "desce": 0.008651508651508651,
+    "mediana_db": -0.019561993584378712
+   },
+   "corredor_15_25km": {
+    "sobe": 0.026068276823037622,
+    "desce": 0.03858956494813438,
+    "mediana_db": -0.01689341243101694
+   }
+  },
+  {
+   "orbita": "des_19",
+   "a": "2026-08-24 00:18:57",
+   "b": "2026-09-05 00:18:57",
+   "evento": true,
+   "anfiteatro": {
+    "sobe": 0.02771396595393768,
+    "desce": 0.019438063262060434,
+    "mediana_db": 0.20784858763861358
+   },
+   "alto_fora": {
+    "sobe": 0.030834762721555175,
+    "desce": 0.02670097198399085,
+    "mediana_db": -0.03553842667611873
+   },
+   "cume_fora": {
+    "sobe": 0.0371713508612874,
+    "desce": 0.004533091568449683,
+    "mediana_db": 0.4750029697513778
+   },
+   "corredor_00_05km": {
+    "sobe": 0.21734230003381297,
+    "desce": 0.09779464252169666,
+    "mediana_db": 0.7768225703179503
+   },
+   "corredor_05_10km": {
+    "sobe": 0.18751126653927966,
+    "desce": 0.06457078991960198,
+    "mediana_db": 0.8228080210917111
+   },
+   "corredor_10_15km": {
+    "sobe": 0.17195767195767195,
+    "desce": 0.05198055198055198,
+    "mediana_db": 0.7818095913419438
+   },
+   "corredor_15_25km": {
+    "sobe": 0.12153584146152656,
+    "desce": 0.03268694844403158,
+    "mediana_db": 0.479214865487704
+   }
+  },
+  {
+   "orbita": "des_19",
+   "a": "2026-09-05 00:18:57",
+   "b": "2026-09-17 00:18:57",
+   "evento": false,
+   "anfiteatro": {
+    "sobe": 0.10540731578017318,
+    "desce": 0.03354538493255581,
+    "mediana_db": 0.20042040370675585
+   },
+   "alto_fora": {
+    "sobe": 0.14085763293310463,
+    "desce": 0.033687821612349914,
+    "mediana_db": 0.715801864102735
+   },
+   "cume_fora": {
+    "sobe": 0.2187540474031861,
+    "desce": 0.015801062038596037,
+    "mediana_db": 1.7697594731913835
+   },
+   "corredor_00_05km": {
+    "sobe": 0.007852124582034038,
+    "desce": 0.015215839501070744,
+    "mediana_db": -0.2880788754967263
+   },
+   "corredor_05_10km": {
+    "sobe": 0.013952482243934096,
+    "desce": 0.02833759959620723,
+    "mediana_db": -0.4479121513146911
+   },
+   "corredor_10_15km": {
+    "sobe": 0.0153010153010153,
+    "desce": 0.015873015873015872,
+    "mediana_db": -0.04778667116796287
+   },
+   "corredor_15_25km": {
+    "sobe": 0.019159312587087786,
+    "desce": 0.025061929091190586,
+    "mediana_db": -0.08054250000968946
+   }
+  },
+  {
+   "orbita": "des_19",
+   "a": "2026-09-17 00:18:57",
+   "b": "2026-09-29 00:18:57",
+   "evento": false,
+   "anfiteatro": {
+    "sobe": 0.12852683041762383,
+    "desce": 0.029186546504093774,
+    "mediana_db": 0.7225889545811581
+   },
+   "alto_fora": {
+    "sobe": 0.2279874213836478,
+    "desce": 0.01084048027444254,
+    "mediana_db": 1.4974065581430005
+   },
+   "cume_fora": {
+    "sobe": 0.12291153995596425,
+    "desce": 0.0077710141173423135,
+    "mediana_db": 1.3598064856810277
+   },
+   "corredor_00_05km": {
+    "sobe": 0.028402900401998724,
+    "desce": 0.035466055528421685,
+    "mediana_db": -0.5454221461693791
+   },
+   "corredor_05_10km": {
+    "sobe": 0.004362404009085337,
+    "desce": 0.030897357320546562,
+    "mediana_db": -0.6101891359116118
+   },
+   "corredor_10_15km": {
+    "sobe": 0.002431002431002431,
+    "desce": 0.03374803374803375,
+    "mediana_db": -0.5509007058842021
+   },
+   "corredor_15_25km": {
+    "sobe": 0.014437219383805542,
+    "desce": 0.05604582752748104,
+    "mediana_db": -0.513371772312081
+   }
+  },
+  {
+   "orbita": "des_19",
+   "a": "2026-09-29 00:18:57",
+   "b": "2026-10-11 00:18:58",
+   "evento": false,
+   "anfiteatro": {
+    "sobe": 0.0674736408081522,
+    "desce": 0.02220651469635389,
+    "mediana_db": 0.4872670355245121
+   },
+   "alto_fora": {
+    "sobe": 0.0644082332761578,
+    "desce": 0.006952544311034877,
+    "mediana_db": 0.5859112228741495
+   },
+   "cume_fora": {
+    "sobe": 0.02460821137158399,
+    "desce": 0.01865043388162155,
+    "mediana_db": 0.4047678358376139
+   },
+   "corredor_00_05km": {
+    "sobe": 0.01690648833452305,
+    "desce": 0.03163391817259646,
+    "mediana_db": 0.2562370740107891
+   },
+   "corredor_05_10km": {
+    "sobe": 0.00789559072718751,
+    "desce": 0.0046508274146446985,
+    "mediana_db": -0.07058563911076998
+   },
+   "corredor_10_15km": {
+    "sobe": 0.005434005434005434,
+    "desce": 0.01018876018876019,
+    "mediana_db": -0.2592180263101218
+   },
+   "corredor_15_25km": {
+    "sobe": 0.014630747793776126,
+    "desce": 0.015017804613717293,
+    "mediana_db": -0.2457501566680591
+   }
+  }
+ ],
+ "evento": {
+  "asc_85": {
+   "a": "2026-08-16 12:21:53",
+   "b": "2026-08-28 12:21:54",
+   "anfiteatro_sobe": 0.0456,
+   "anfiteatro_sobe_ref_media": 0.0854,
+   "anfiteatro_sobe_ref_dp": 0.0387,
+   "anfiteatro_sobe_z": -1.03,
+   "anfiteatro_desce": 0.0125,
+   "anfiteatro_desce_ref_media": 0.0447,
+   "anfiteatro_desce_ref_dp": 0.0237,
+   "anfiteatro_desce_z": -1.36,
+   "anfiteatro_mediana_db": 0.2818,
+   "anfiteatro_mediana_db_ref_media": 0.1746,
+   "anfiteatro_mediana_db_ref_dp": 0.371,
+   "anfiteatro_mediana_db_z": 0.29,
+   "alto_fora_sobe": 0.0497,
+   "alto_fora_sobe_ref_media": 0.0964,
+   "alto_fora_sobe_ref_dp": 0.0366,
+   "alto_fora_sobe_z": -1.27,
+   "alto_fora_desce": 0.0338,
+   "alto_fora_desce_ref_media": 0.0486,
+   "alto_fora_desce_ref_dp": 0.0247,
+   "alto_fora_desce_z": -0.6,
+   "alto_fora_mediana_db": 0.2253,
+   "alto_fora_mediana_db_ref_media": 0.2887,
+   "alto_fora_mediana_db_ref_dp": 0.3901,
+   "alto_fora_mediana_db_z": -0.16,
+   "cume_fora_sobe": 0.0219,
+   "cume_fora_sobe_ref_media": 0.1274,
+   "cume_fora_sobe_ref_dp": 0.1075,
+   "cume_fora_sobe_z": -0.98,
+   "cume_fora_desce": 0.0745,
+   "cume_fora_desce_ref_media": 0.0509,
+   "cume_fora_desce_ref_dp": 0.0493,
+   "cume_fora_desce_z": 0.48,
+   "cume_fora_mediana_db": -0.269,
+   "cume_fora_mediana_db_ref_media": 0.507,
+   "cume_fora_mediana_db_ref_dp": 0.7992,
+   "cume_fora_mediana_db_z": -0.97,
+   "corredor_00_05km_sobe": 0.368,
+   "corredor_00_05km_sobe_ref_media": 0.0157,
+   "corredor_00_05km_sobe_ref_dp": 0.012,
+   "corredor_00_05km_sobe_z": 29.32,
+   "corredor_00_05km_desce": 0.0618,
+   "corredor_00_05km_desce_ref_media": 0.0345,
+   "corredor_00_05km_desce_ref_dp": 0.029,
+   "corredor_00_05km_desce_z": 0.94,
+   "corredor_00_05km_mediana_db": 1.7894,
+   "corredor_00_05km_mediana_db_ref_media": -0.2729,
+   "corredor_00_05km_mediana_db_ref_dp": 0.2606,
+   "corredor_00_05km_mediana_db_z": 7.91,
+   "corredor_05_10km_sobe": 0.2863,
+   "corredor_05_10km_sobe_ref_media": 0.0266,
+   "corredor_05_10km_sobe_ref_dp": 0.0455,
+   "corredor_05_10km_sobe_z": 5.71,
+   "corredor_05_10km_desce": 0.1009,
+   "corredor_05_10km_desce_ref_media": 0.0373,
+   "corredor_05_10km_desce_ref_dp": 0.0443,
+   "corredor_05_10km_desce_z": 1.44,
+   "corredor_05_10km_mediana_db": 1.1144,
+   "corredor_05_10km_mediana_db_ref_media": -0.2765,
+   "corredor_05_10km_mediana_db_ref_dp": 0.1912,
+   "corredor_05_10km_mediana_db_z": 7.27,
+   "corredor_10_15km_sobe": 0.0957,
+   "corredor_10_15km_sobe_ref_media": 0.01,
+   "corredor_10_15km_sobe_ref_dp": 0.007,
+   "corredor_10_15km_sobe_z": 12.22,
+   "corredor_10_15km_desce": 0.0426,
+   "corredor_10_15km_desce_ref_media": 0.0171,
+   "corredor_10_15km_desce_ref_dp": 0.0074,
+   "corredor_10_15km_desce_z": 3.45,
+   "corredor_10_15km_mediana_db": 0.4644,
+   "corredor_10_15km_mediana_db_ref_media": -0.1822,
+   "corredor_10_15km_mediana_db_ref_dp": 0.2191,
+   "corredor_10_15km_mediana_db_z": 2.95,
+   "corredor_15_25km_sobe": 0.054,
+   "corredor_15_25km_sobe_ref_media": 0.0148,
+   "corredor_15_25km_sobe_ref_dp": 0.0099,
+   "corredor_15_25km_sobe_z": 3.94,
+   "corredor_15_25km_desce": 0.0526,
+   "corredor_15_25km_desce_ref_media": 0.0279,
+   "corredor_15_25km_desce_ref_dp": 0.0147,
+   "corredor_15_25km_desce_z": 1.68,
+   "corredor_15_25km_mediana_db": 0.2116,
+   "corredor_15_25km_mediana_db_ref_media": -0.1775,
+   "corredor_15_25km_mediana_db_ref_dp": 0.312,
+   "corredor_15_25km_mediana_db_z": 1.25,
+   "n_ref": 7
+  },
+  "des_121": {
+   "a": "2026-08-19 00:10:49",
+   "b": "2026-08-31 00:10:50",
+   "anfiteatro_sobe": 0.0303,
+   "anfiteatro_sobe_ref_media": 0.0551,
+   "anfiteatro_sobe_ref_dp": 0.0329,
+   "anfiteatro_sobe_z": -0.75,
+   "anfiteatro_desce": 0.0173,
+   "anfiteatro_desce_ref_media": 0.0264,
+   "anfiteatro_desce_ref_dp": 0.022,
+   "anfiteatro_desce_z": -0.41,
+   "anfiteatro_mediana_db": 0.0881,
+   "anfiteatro_mediana_db_ref_media": 0.195,
+   "anfiteatro_mediana_db_ref_dp": 0.282,
+   "anfiteatro_mediana_db_z": -0.38,
+   "alto_fora_sobe": 0.0309,
+   "alto_fora_sobe_ref_media": 0.0583,
+   "alto_fora_sobe_ref_dp": 0.0388,
+   "alto_fora_sobe_z": -0.71,
+   "alto_fora_desce": 0.0204,
+   "alto_fora_desce_ref_media": 0.0391,
+   "alto_fora_desce_ref_dp": 0.0328,
+   "alto_fora_desce_z": -0.57,
+   "alto_fora_mediana_db": 0.1354,
+   "alto_fora_mediana_db_ref_media": 0.1977,
+   "alto_fora_mediana_db_ref_dp": 0.4387,
+   "alto_fora_mediana_db_z": -0.14,
+   "cume_fora_sobe": 0.0267,
+   "cume_fora_sobe_ref_media": 0.0407,
+   "cume_fora_sobe_ref_dp": 0.0211,
+   "cume_fora_sobe_z": -0.66,
+   "cume_fora_desce": 0.0446,
+   "cume_fora_desce_ref_media": 0.0331,
+   "cume_fora_desce_ref_dp": 0.0168,
+   "cume_fora_desce_z": 0.68,
+   "cume_fora_mediana_db": -0.0321,
+   "cume_fora_mediana_db_ref_media": 0.0413,
+   "cume_fora_mediana_db_ref_dp": 0.3907,
+   "cume_fora_mediana_db_z": -0.19,
+   "corredor_00_05km_sobe": 0.2576,
+   "corredor_00_05km_sobe_ref_media": 0.0118,
+   "corredor_00_05km_sobe_ref_dp": 0.0056,
+   "corredor_00_05km_sobe_z": 43.97,
+   "corredor_00_05km_desce": 0.1011,
+   "corredor_00_05km_desce_ref_media": 0.0209,
+   "corredor_00_05km_desce_ref_dp": 0.024,
+   "corredor_00_05km_desce_z": 3.35,
+   "corredor_00_05km_mediana_db": 1.1679,
+   "corredor_00_05km_mediana_db_ref_media": -0.1525,
+   "corredor_00_05km_mediana_db_ref_dp": 0.4378,
+   "corredor_00_05km_mediana_db_z": 3.02,
+   "corredor_05_10km_sobe": 0.261,
+   "corredor_05_10km_sobe_ref_media": 0.0113,
+   "corredor_05_10km_sobe_ref_dp": 0.0081,
+   "corredor_05_10km_sobe_z": 30.66,
+   "corredor_05_10km_desce": 0.0605,
+   "corredor_05_10km_desce_ref_media": 0.0293,
+   "corredor_05_10km_desce_ref_dp": 0.0329,
+   "corredor_05_10km_desce_z": 0.95,
+   "corredor_05_10km_mediana_db": 1.263,
+   "corredor_05_10km_mediana_db_ref_media": -0.2248,
+   "corredor_05_10km_mediana_db_ref_dp": 0.5323,
+   "corredor_05_10km_mediana_db_z": 2.8,
+   "corredor_10_15km_sobe": 0.1875,
+   "corredor_10_15km_sobe_ref_media": 0.0161,
+   "corredor_10_15km_sobe_ref_dp": 0.0154,
+   "corredor_10_15km_sobe_z": 11.12,
+   "corredor_10_15km_desce": 0.0489,
+   "corredor_10_15km_desce_ref_media": 0.0358,
+   "corredor_10_15km_desce_ref_dp": 0.043,
+   "corredor_10_15km_desce_z": 0.31,
+   "corredor_10_15km_mediana_db": 0.7978,
+   "corredor_10_15km_mediana_db_ref_media": -0.1807,
+   "corredor_10_15km_mediana_db_ref_dp": 0.5731,
+   "corredor_10_15km_mediana_db_z": 1.71,
+   "corredor_15_25km_sobe": NaN,
+   "corredor_15_25km_sobe_ref_media": NaN,
+   "corredor_15_25km_sobe_ref_dp": NaN,
+   "corredor_15_25km_sobe_z": null,
+   "corredor_15_25km_desce": NaN,
+   "corredor_15_25km_desce_ref_media": NaN,
+   "corredor_15_25km_desce_ref_dp": NaN,
+   "corredor_15_25km_desce_z": null,
+   "corredor_15_25km_mediana_db": NaN,
+   "corredor_15_25km_mediana_db_ref_media": NaN,
+   "corredor_15_25km_mediana_db_ref_dp": NaN,
+   "corredor_15_25km_mediana_db_z": null,
+   "n_ref": 8
+  },
+  "des_19": {
+   "a": "2026-08-24 00:18:57",
+   "b": "2026-09-05 00:18:57",
+   "anfiteatro_sobe": 0.0277,
+   "anfiteatro_sobe_ref_media": 0.0574,
+   "anfiteatro_sobe_ref_dp": 0.0409,
+   "anfiteatro_sobe_z": -0.73,
+   "anfiteatro_desce": 0.0194,
+   "anfiteatro_desce_ref_media": 0.0232,
+   "anfiteatro_desce_ref_dp": 0.0106,
+   "anfiteatro_desce_z": -0.36,
+   "anfiteatro_mediana_db": 0.2078,
+   "anfiteatro_mediana_db_ref_media": 0.2566,
+   "anfiteatro_mediana_db_ref_dp": 0.2331,
+   "anfiteatro_mediana_db_z": -0.21,
+   "alto_fora_sobe": 0.0308,
+   "alto_fora_sobe_ref_media": 0.0794,
+   "alto_fora_sobe_ref_dp": 0.0716,
+   "alto_fora_sobe_z": -0.68,
+   "alto_fora_desce": 0.0267,
+   "alto_fora_desce_ref_media": 0.0367,
+   "alto_fora_desce_ref_dp": 0.0249,
+   "alto_fora_desce_z": -0.4,
+   "alto_fora_mediana_db": -0.0355,
+   "alto_fora_mediana_db_ref_media": 0.3122,
+   "alto_fora_mediana_db_ref_dp": 0.6146,
+   "alto_fora_mediana_db_z": -0.57,
+   "cume_fora_sobe": 0.0372,
+   "cume_fora_sobe_ref_media": 0.0696,
+   "cume_fora_sobe_ref_dp": 0.0739,
+   "cume_fora_sobe_z": -0.44,
+   "cume_fora_desce": 0.0045,
+   "cume_fora_desce_ref_media": 0.0679,
+   "cume_fora_desce_ref_dp": 0.0968,
+   "cume_fora_desce_z": -0.65,
+   "cume_fora_mediana_db": 0.475,
+   "cume_fora_mediana_db_ref_media": 0.1723,
+   "cume_fora_mediana_db_ref_dp": 1.196,
+   "cume_fora_mediana_db_z": 0.25,
+   "corredor_00_05km_sobe": 0.2173,
+   "corredor_00_05km_sobe_ref_media": 0.0124,
+   "corredor_00_05km_sobe_ref_dp": 0.0077,
+   "corredor_00_05km_sobe_z": 26.47,
+   "corredor_00_05km_desce": 0.0978,
+   "corredor_00_05km_desce_ref_media": 0.0172,
+   "corredor_00_05km_desce_ref_dp": 0.0107,
+   "corredor_00_05km_desce_z": 7.53,
+   "corredor_00_05km_mediana_db": 0.7768,
+   "corredor_00_05km_mediana_db_ref_media": -0.0923,
+   "corredor_00_05km_mediana_db_ref_dp": 0.3129,
+   "corredor_00_05km_mediana_db_z": 2.78,
+   "corredor_05_10km_sobe": 0.1875,
+   "corredor_05_10km_sobe_ref_media": 0.0082,
+   "corredor_05_10km_sobe_ref_dp": 0.0041,
+   "corredor_05_10km_sobe_z": 43.92,
+   "corredor_05_10km_desce": 0.0646,
+   "corredor_05_10km_desce_ref_media": 0.015,
+   "corredor_05_10km_desce_ref_dp": 0.0103,
+   "corredor_05_10km_desce_z": 4.82,
+   "corredor_05_10km_mediana_db": 0.8228,
+   "corredor_05_10km_mediana_db_ref_media": -0.1732,
+   "corredor_05_10km_mediana_db_ref_dp": 0.2841,
+   "corredor_05_10km_mediana_db_z": 3.51,
+   "corredor_10_15km_sobe": 0.172,
+   "corredor_10_15km_sobe_ref_media": 0.0095,
+   "corredor_10_15km_sobe_ref_dp": 0.0054,
+   "corredor_10_15km_sobe_z": 29.86,
+   "corredor_10_15km_desce": 0.052,
+   "corredor_10_15km_desce_ref_media": 0.0175,
+   "corredor_10_15km_desce_ref_dp": 0.0093,
+   "corredor_10_15km_desce_z": 3.7,
+   "corredor_10_15km_mediana_db": 0.7818,
+   "corredor_10_15km_mediana_db_ref_media": -0.1591,
+   "corredor_10_15km_mediana_db_ref_dp": 0.2248,
+   "corredor_10_15km_mediana_db_z": 4.19,
+   "corredor_15_25km_sobe": 0.1215,
+   "corredor_15_25km_sobe_ref_media": 0.0199,
+   "corredor_15_25km_sobe_ref_dp": 0.008,
+   "corredor_15_25km_sobe_z": 12.74,
+   "corredor_15_25km_desce": 0.0327,
+   "corredor_15_25km_desce_ref_media": 0.0309,
+   "corredor_15_25km_desce_ref_dp": 0.0172,
+   "corredor_15_25km_desce_z": 0.11,
+   "corredor_15_25km_mediana_db": 0.4792,
+   "corredor_15_25km_mediana_db_ref_media": -0.1571,
+   "corredor_15_25km_mediana_db_ref_dp": 0.3081,
+   "corredor_15_25km_mediana_db_z": 2.06,
+   "n_ref": 7
+  }
+ },
+ "robusto": {
+  "anfiteatro": {
+   "sobe_2de3_ha": 2.32,
+   "desce_2de3_ha": 0.47,
+   "area_ha": 339.5
+  },
+  "alto_fora": {
+   "sobe_2de3_ha": 7.6,
+   "desce_2de3_ha": 2.19,
+   "area_ha": 1749.0
+  },
+  "cume_fora": {
+   "sobe_2de3_ha": 0.24,
+   "desce_2de3_ha": 0.13,
+   "area_ha": 77.2
+  },
+  "corredor_00_05km": {
+   "sobe_2de3_ha": 55.07,
+   "desce_2de3_ha": 13.51,
+   "area_ha": 266.2
+  },
+  "corredor_05_10km": {
+   "sobe_2de3_ha": 49.37,
+   "desce_2de3_ha": 9.41,
+   "area_ha": 277.4
+  },
+  "corredor_10_15km": {
+   "sobe_2de3_ha": 19.36,
+   "desce_2de3_ha": 3.11,
+   "area_ha": 279.7
+  },
+  "corredor_15_25km": {
+   "sobe_2de3_ha": 1.82,
+   "desce_2de3_ha": 2.2,
+   "area_ha": 516.7
+  }
+ }
+}

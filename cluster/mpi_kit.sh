@@ -12,6 +12,7 @@ NP=${NP:-16}; T=${OMP_NUM_THREADS:-1}
 export OPAL_PREFIX="$K/ompi" PMIX_INSTALL_PREFIX="$K/pmix2"
 export OMPI_MCA_mca_base_component_path="$K/ompi/lib/x86_64-linux-gnu/openmpi/lib/openmpi3"
 export PMIX_PREFIX="$K/pmix2" PMIX_MCA_mca_base_component_path="$K/pmix2/lib/pmix" PMIX_MCA_pmix_mca_base_component_path="$K/pmix2/lib/pmix"
+export PMIX_MCA_gds=hash                               # sem gds/shmem: ele mapeia num endereco fixo que pode colidir com o heap (o ld-linux do kit muda o layout) -> "malloc(): unaligned tcache chunk" intermitente na partida
 export HWLOC_PLUGINS_PATH="$K/hwloc_sem_plugins"      # vazio: o hwloc usa so a deteccao interna (sem X11/OpenCL/libxml2 do sistema)
 mkdir -p "$HWLOC_PLUGINS_PATH"
 ln -sfn "$K/pmix2" /tmp/.kit_mpi_cm1_lhende_pmix_2     # caminho trocado na libpmix.so.2 do kit (montar_kit_mpi.sh)

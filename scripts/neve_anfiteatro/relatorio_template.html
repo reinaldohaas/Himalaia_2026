@@ -1,0 +1,276 @@
+<title>Gelo do Lhende Khola</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Nota técnica de campo: coluna de leitura de ~70 caracteres, figuras e tabelas largas que saem da coluna; azul de geleira para estrutura, ocre de radar para correções */
+:root {
+  --bg: #f4f7f8;
+  --surface: #ffffff;
+  --fg: #15202a;
+  --muted: #566774;
+  --line: #d3dde3;
+  --accent: #1d5d86;
+  --accent-soft: #e2eef5;
+  --warn: #a64b25;
+  --warn-soft: #f7e9e1;
+  --ok: #2b6f52;
+  --f-display: "IBM Plex Sans Condensed", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --f-body: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --s-1: 0.82rem; --s0: 1.02rem; --s1: 1.2rem; --s2: 1.5rem; --s3: 2.1rem;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e1418; --surface: #151d23; --fg: #e2e9ee; --muted: #93a5b2; --line: #2a3742;
+    --accent: #72b3de; --accent-soft: #17303f; --warn: #e3916a; --warn-soft: #3a2219; --ok: #6cc29b; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0e1418; --surface: #151d23; --fg: #e2e9ee; --muted: #93a5b2; --line: #2a3742;
+  --accent: #72b3de; --accent-soft: #17303f; --warn: #e3916a; --warn-soft: #3a2219; --ok: #6cc29b; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--fg); font-family: var(--f-body); font-size: var(--s0); line-height: 1.6;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 2.5rem 4rem; }
+main { max-width: 1120px; margin: 0 auto; display: grid; gap: 2.6rem; }
+.col { max-width: 44rem; min-width: 0; }
+header { display: grid; gap: 0.7rem; border-bottom: 2px solid var(--fg); padding-bottom: 1.4rem; }
+.eyebrow { font-family: var(--f-mono); font-size: var(--s-1); letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin: 0; }
+h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; line-height: 1.15; margin: 0; }
+h1 { font-size: clamp(1.8rem, 4.5vw, 2.7rem); font-weight: 700; max-width: 26ch; }
+h2 { font-size: var(--s2); font-weight: 600; color: var(--accent); }
+h3 { font-size: var(--s1); font-weight: 600; }
+.lede { font-size: var(--s1); color: var(--muted); max-width: 44rem; margin: 0; }
+.byline { font-family: var(--f-mono); font-size: var(--s-1); color: var(--muted); margin: 0; }
+section { display: grid; gap: 1rem; }
+section > p, section > ul, section > ol { margin: 0; max-width: 44rem; }
+p + p { margin-top: 0; }
+.resumo { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--accent); padding: 1.3rem 1.4rem; display: grid; gap: 0.9rem; }
+.resumo ol { margin: 0; padding-left: 1.3rem; display: grid; gap: 0.75rem; max-width: 50rem; }
+.resumo li::marker { font-family: var(--f-display); font-weight: 600; color: var(--accent); }
+.correcao { background: var(--warn-soft); border-left: 4px solid var(--warn); padding: 1rem 1.2rem; max-width: 50rem; }
+.correcao strong { color: var(--warn); }
+.tag { font-family: var(--f-mono); font-size: 0.72rem; letter-spacing: 0.05em; padding: 0.08rem 0.4rem; border: 1px solid currentColor; border-radius: 3px; white-space: nowrap; vertical-align: 0.1em; }
+.t-obs { color: var(--ok); } .t-par { color: var(--warn); } .t-prem { color: var(--muted); }
+.tabela { overflow-x: auto; min-width: 0; border: 1px solid var(--line); background: var(--surface); }
+table { border-collapse: collapse; width: 100%; font-size: 0.92rem; }
+th, td { text-align: left; padding: 0.5rem 0.7rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-family: var(--f-display); font-weight: 600; font-size: 0.86rem; letter-spacing: 0.02em; background: var(--accent-soft); }
+td.n, th.n { text-align: right; font-family: var(--f-mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+tr.destaque td { font-weight: 600; }
+tr:last-child td { border-bottom: 0; }
+.veredito-ok { color: var(--ok); font-weight: 600; } .veredito-nao { color: var(--warn); font-weight: 600; }
+figure { margin: 0; display: grid; gap: 0.5rem; min-width: 0; }
+figure img { width: 100%; height: auto; border: 1px solid var(--line); background: #fff; display: block; }
+figcaption { font-size: 0.9rem; color: var(--muted); max-width: 54rem; }
+figcaption b { color: var(--fg); }
+code, .mono { font-family: var(--f-mono); font-size: 0.86em; }
+.notas { font-size: 0.9rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 1.2rem; display: grid; gap: 0.6rem; }
+.notas ul { margin: 0; padding-left: 1.2rem; display: grid; gap: 0.35rem; }
+a { color: var(--accent); }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.duas { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 30rem), 1fr)); gap: 1.4rem; align-items: start; }
+.duas > * { min-width: 0; }
+</style>
+
+<main>
+<header>
+  <p class="eyebrow">Nota técnica · Lhende Khola, colapso de 26/08/2026 02:52 UTC · 18/10/2026</p>
+  <h1>Quanto gelo saiu do anfiteatro do Lhende Khola?</h1>
+  <p class="lede">Estimativa da cobertura de neve e gelo antes e depois do colapso, com sete fontes de satélite e o erro de cada etapa. Preparada para o Renato.</p>
+  <p class="byline">Reinaldo Haas (pesquisador) · análise e redação com Claude · dados: Sentinel-2, Sentinel-1, Landsat, HLS, MODIS, Copernicus GLO-30</p>
+</header>
+
+<section class="resumo" aria-labelledby="r">
+  <h2 id="r">Resposta curta</h2>
+  <ol>
+    <li><b>Onde os satélites ópticos enxergaram o anfiteatro, a neve e o gelo não diminuíram no evento.</b> Entre 24/08 e 27/08 o saldo foi de <b>+7,5 ± 6,0 ha</b> (1σ) sobre os 182 ha vistos nas duas datas (53 % do anfiteatro). A perda bruta, 3,0 ha, é menor que a "perda" que aparece entre duas imagens tiradas com 15 minutos de diferença (6,6 ha). <span class="tag t-obs">OBSERVADO</span></li>
+    <li><b>A zona do colapso não foi vista.</b> O ponto de colapso fica a 5.617 m. Nas imagens de 24/08 e 27/08, a faixa de 5.000 a 6.000 m estava sob nuvem: só 3 a 26 % dela foi vista nas duas datas ao mesmo tempo. Para essa zona, o óptico não tem informação entre 12/08 e 28/09, e em 28/09 já havia neve nova cobrindo tudo.</li>
+    <li><b>A perda de 27,7 ha e o "núcleo de 7,2 ha" da medição anterior eram nuvem.</b> A máscara de nuvem do Sen2Cor (SCL) não marca nuvem baixa sobre neve. Nos pixels do núcleo, em 27/08, verde = 1,20 e SWIR = 0,84, que é assinatura de nuvem. Em 18/10 o mesmo lugar está 97 % coberto de neve.</li>
+    <li><b>O radar enxerga o fluxo, e ele começa no exutório do anfiteatro.</b> Nas três geometrias do Sentinel-1, o retroespalhamento sobe mais de 3 dB numa faixa contínua que vai do exutório (4.024 m) até cerca de 15 km vale abaixo, de 6 a 44 desvios-padrão acima dos pares sem evento. A mudança ocorreu entre 24/08 00:18 e 28/08 12:21 UTC. Dentro do anfiteatro o radar não distingue mudança: as encostas são íngremes demais.</li>
+    <li><b>A conta da água não fecha com o que se mede de área.</b> Para os 14,2 milhões de m³ de água do repositório, o gelo teria de perder 4,6 m de espessura em todo o anfiteatro, ou 56 m numa mancha de 28 ha. A alternativa seria chuva: 580 mm sobre a bacia de 24,5 km² do km 5, ou 59 mm sobre 242 km² no km 10. Satélite óptico mede área, não espessura; o volume só sai de diferença de modelos digitais de elevação. <span class="tag t-par">PARAMÉTRICO</span></li>
+  </ol>
+</section>
+
+<section aria-labelledby="s1">
+  <h2 id="s1">O que foi medido</h2>
+  <p>O anfiteatro foi delimitado no Copernicus GLO-30 como a bacia acima do ponto onde o talvegue, descendo do ponto de colapso (85,515 E; 28,271 N), chega ao fundo do vale a 4.010 m. São <b>3,41 km²</b>, de 4.010 a 7.216 m (o cume do Langtang Lirung), mediana de 5.912 m, 77 % acima de 5.000 m. O exutório fica em 85,513 E; 28,285 N, a 1,68 km de talvegue do ponto de colapso. O valor confere com os 3,39 km² da análise de MDE anterior do repositório.</p>
+  <p>Dois controles que não participaram do evento servem de referência para a variação natural: o terreno acima de 5.800 m a menos de 6 km do colapso, fora do anfiteatro (18,7 km²), e o entorno do cume (77 ha, fora do anfiteatro).</p>
+  <p>A classe neve/gelo é NDSI = (verde − SWIR)/(verde + SWIR) &gt; 0,42 com verde &gt; 0,11, o mesmo critério da medição anterior. As mudanças são sempre calculadas só nos pixels observados nas duas datas.</p>
+  <div class="tabela" role="region" aria-label="Fontes usadas" tabindex="0">
+  <table>
+    <thead><tr><th>Fonte</th><th class="n">Resolução</th><th class="n">Cenas, 01/07 a 18/10</th><th>Papel</th><th>Veredito</th></tr></thead>
+    <tbody>
+      <tr><td>Sentinel-2 L2A, Earth Search (Element 84)</td><td class="n">20 m</td><td class="n">56</td><td>Fonte principal</td><td class="veredito-ok">Aceita</td></tr>
+      <tr><td>Sentinel-2 L2A, Planetary Computer</td><td class="n">20 m</td><td class="n">55</td><td>Mesmas cenas, outra cadeia de distribuição</td><td class="veredito-ok">Aceita; concorda com a anterior</td></tr>
+      <tr><td>Sentinel-2 L1C, topo da atmosfera (espelho público do Google)</td><td class="n">20 m</td><td class="n">55</td><td>Mede o efeito da correção atmosférica</td><td class="veredito-ok">Aceita como controle</td></tr>
+      <tr><td>HLS S30 e L30 v2 (correção LaSRC)</td><td class="n">30 m</td><td class="n">41 + 7</td><td>Segunda correção atmosférica</td><td class="veredito-nao">Rejeitada em neve fresca: SWIR negativo em 68–83 % dos pixels</td></tr>
+      <tr><td>Landsat 8/9 Coleção 2 L2 (LaSRC)</td><td class="n">30 m</td><td class="n">26</td><td>Satélite independente</td><td class="veredito-nao">Rejeitada pelo mesmo motivo (81 %)</td></tr>
+      <tr><td>MODIS MOD10A1 e MYD10A1 v6.1</td><td class="n">500 m</td><td class="n">215</td><td>Revisita diária</td><td class="veredito-nao">Não informativa: 29 pixels tocam o anfiteatro; Terra e Aqua no mesmo dia diferem com σ = 0,34 na fração de neve</td></tr>
+      <tr><td>Sentinel-1D RTC (γ⁰ VV e VH)</td><td class="n">10 m, filtrado a 50 m</td><td class="n">28</td><td>Independe de nuvem; três geometrias de órbita</td><td class="veredito-ok">Aceita</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p><b>O offset do Sentinel-2 estava certo nos dois trabalhos anteriores, cada um na sua fonte.</b> O Earth Search entrega o L2A com o offset de −0,1 já aplicado (<span class="mono">earthsearch:boa_offset_applied</span>); o Planetary Computer entrega o produto bruto, e a partir da baseline 04.00 é preciso subtrair 1.000 DN. Com esse tratamento, as duas fontes dão a mesma coisa: em 18/10, 313,0 e 311,2 ha de neve no anfiteatro, NDSI mediano de 0,752 e 0,751. Nos pares de datas, a diferença entre elas fica entre 0,2 e 3 ha.</p>
+  <figure>
+    <img src="{{serie_fontes}}" alt="Gráfico da fração de neve no anfiteatro por data, de julho a outubro de 2026, para seis fontes. Os pontos do Sentinel-2 nas duas distribuições se sobrepõem; os do HLS e do Landsat em outubro ficam muito abaixo e estão marcados em vermelho; os do MODIS se espalham entre 0 e 1.">
+    <figcaption><b>Fração de neve/gelo nos pixels observados do anfiteatro, por fonte.</b> Só cenas com pelo menos 50 % do anfiteatro observado. As duas distribuições do Sentinel-2 coincidem. Em outubro, com neve fresca, o HLS e o Landsat (correção LaSRC) dão 0,29–0,66 onde o Sentinel-2 dá 0,92–0,99, porque o SWIR corrigido fica negativo; esses pontos, em vermelho, foram rejeitados. O MODIS espalha de 0 a 1 de um dia para o outro.</figcaption>
+  </figure>
+</section>
+
+<section aria-labelledby="s2">
+  <h2 id="s2">O erro, etapa por etapa</h2>
+  <p>O ponto central é saber quanto da mudança medida é real. Cada etapa da cadeia foi trocada por uma alternativa e a diferença no resultado foi anotada. O par que interessa é o do evento: <b>24/08 05:02 UTC (S2A) → 27/08 04:57 UTC (S2B)</b>, mesma órbita relativa (R119), portanto mesma geometria de visada.</p>
+  <div class="tabela" role="region" aria-label="Orçamento de erro do par do evento" tabindex="0">
+  <table>
+    <thead><tr><th>Componente</th><th>Como foi medido</th><th class="n">Efeito no saldo (ha)</th></tr></thead>
+    <tbody>
+      <tr><td>Cadeia de distribuição e offset</td><td>Earth Search × Planetary Computer, mesma cena</td><td class="n">0,2</td></tr>
+      <tr><td>Correção atmosférica</td><td>L2A (Sen2Cor) × L1C (sem correção)</td><td class="n">2,8</td></tr>
+      <tr><td>Limiar do NDSI</td><td>meia amplitude entre 0,30 e 0,50</td><td class="n">1,7</td></tr>
+      <tr><td>Variação natural em poucos dias</td><td>desvio-padrão do saldo nos pares sem evento de até 5 dias (2,8 % da área comum)</td><td class="n">5,1</td></tr>
+      <tr class="destaque"><td>Total (1σ, soma quadrática)</td><td></td><td class="n">6,0</td></tr>
+      <tr><td>Ruído de classificação de uma cena</td><td>24/08 S2B × 24/08 S2A, 15 minutos de intervalo: a superfície não muda</td><td class="n">perda 6,6 · ganho 6,9</td></tr>
+      <tr><td>Máscara de nuvem</td><td>só SCL × SCL com teste espectral (abaixo)</td><td class="n">saldo +17,9 × +7,5</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p><b>A máscara de nuvem é o maior erro, e ela limita a medição pelos dois lados.</b> A SCL do Sen2Cor deixa passar nuvem baixa sobre neve. Uma nuvem dessas tem NDSI baixo e é lida como "perda de neve". O teste espectral acrescentado (verde &gt; 0,35 e SWIR &gt; 0,25 sem NDSI de neve: claro nas duas bandas) remove essa nuvem. Em dia limpo, ele também remove 0,4–4 % do anfiteatro, que é rocha muito clara, e isso poderia esconder uma exposição de rocha clara. Por isso as duas versões estão na tabela: só SCL é o limite superior da perda; SCL com teste espectral é o limite inferior. Nenhuma das duas mostra perda líquida no evento.</p>
+  <div class="tabela" role="region" aria-label="Pares de datas" tabindex="0">
+  <table>
+    <thead><tr><th>Par (Sentinel-2 L2A, NDSI &gt; 0,42)</th><th class="n">Área vista nas duas datas</th><th class="n">Perda</th><th class="n">Ganho</th><th class="n">Saldo ± 1σ</th><th class="n">Saldo, só SCL</th></tr></thead>
+    <tbody>
+      <tr><td>24/08 S2B × 24/08 S2A (15 min: só ruído)</td><td class="n">157 ha (46 %)</td><td class="n">6,6</td><td class="n">6,9</td><td class="n">+0,3 ± 5,4</td><td class="n">−12,4</td></tr>
+      <tr><td>12/08 → 24/08 (antes do evento)</td><td class="n">206 ha (61 %)</td><td class="n">11,9</td><td class="n">1,7</td><td class="n">−10,2 ± 9,1</td><td class="n">−36,3</td></tr>
+      <tr class="destaque"><td>24/08 → 27/08, mesma órbita (o evento)</td><td class="n">182 ha (53 %)</td><td class="n">3,0</td><td class="n">10,4</td><td class="n">+7,5 ± 6,0</td><td class="n">+17,9</td></tr>
+      <tr><td>24/08 → 27/08, órbitas diferentes</td><td class="n">154 ha (45 %)</td><td class="n">1,8</td><td class="n">8,9</td><td class="n">+7,1 ± 4,7</td><td class="n">+6,0</td></tr>
+      <tr><td>12/08 → 27/08 (o par da medição anterior)</td><td class="n">201 ha (59 %)</td><td class="n">5,2</td><td class="n">5,1</td><td class="n">−0,2 ± 8,7</td><td class="n">−17,0</td></tr>
+      <tr><td>12/08 → 18/10 (pós-monção, neve nova)</td><td class="n">263 ha (77 %)</td><td class="n">2,1</td><td class="n">76,4</td><td class="n">+74,3</td><td class="n">+86,0</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>A cobertura observada não é uniforme, e isso pesa mais do que qualquer número da tabela. Nas duas imagens que cercam o evento, havia um cinturão de nuvem orográfica exatamente na cota do colapso:</p>
+  <div class="tabela" role="region" aria-label="Fração observada por cota" tabindex="0">
+  <table>
+    <thead><tr><th>Faixa de cota</th><th class="n">Área no anfiteatro</th><th class="n">12/08 (céu limpo)</th><th class="n">24/08 S2A</th><th class="n">27/08 S2B</th><th class="n">Par do evento</th></tr></thead>
+    <tbody>
+      <tr><td>4.000–4.500 m</td><td class="n">21 ha</td><td class="n">91 %</td><td class="n">90 %</td><td class="n">95 %</td><td class="n">90 %</td></tr>
+      <tr><td>4.500–5.000 m</td><td class="n">56 ha</td><td class="n">73 %</td><td class="n">70 %</td><td class="n">53 %</td><td class="n">45 %</td></tr>
+      <tr class="destaque"><td>5.000–5.500 m</td><td class="n">45 ha</td><td class="n">63 %</td><td class="n">30 %</td><td class="n">12 %</td><td class="n">6 %</td></tr>
+      <tr class="destaque"><td>5.500–6.000 m (ponto de colapso: 5.617 m)</td><td class="n">60 ha</td><td class="n">78 %</td><td class="n">40 %</td><td class="n">29 %</td><td class="n">14 %</td></tr>
+      <tr><td>6.000–6.500 m</td><td class="n">82 ha</td><td class="n">82 %</td><td class="n">72 %</td><td class="n">84 %</td><td class="n">64 %</td></tr>
+      <tr><td>6.500–7.216 m</td><td class="n">76 ha</td><td class="n">99 %</td><td class="n">98 %</td><td class="n">99 %</td><td class="n">98 %</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Num raio de 300 m do ponto de colapso, a fração vista no par do evento é de 21 %. O resultado "sem perda" vale para as partes baixa e alta do anfiteatro, não para a zona onde o colapso teria começado.</p>
+</section>
+
+<section aria-labelledby="s3">
+  <h2 id="s3">A correção da medição anterior</h2>
+  <div class="correcao">
+    <p style="margin:0"><strong>O que muda.</strong> <span class="mono">MEDICAO_SENTINEL2_2026_CICATRIZ_E_LAGO.md</span> registrou 27,7 ha de gelo perdido entre 12/08 e 27/08 numa janela de 3 × 3 km, com um núcleo coerente de 7,2 ha (580 × 320 m). Refeito com a mesma imagem, o núcleo reaparece (8,3 ha, 340 × 580 m, em 85,504 E; 28,267 N), mas os pixels dele em 27/08 são 100 % "claros nas duas bandas" (verde mediano 1,20; SWIR 0,84). Neve tem SWIR perto de 0,1; rocha, perto de 0,2–0,3. Isso é nuvem. O mesmo setor "perde" 17 ha entre as duas imagens de 24/08 tiradas com 15 minutos de diferença. Em 18/10 ele está 97 % coberto de neve. A cicatriz de 7,2 ha não se sustenta.</p>
+  </div>
+  <figure>
+    <img src="{{quicklook_evento}}" alt="Seis recortes em cor verdadeira do anfiteatro, de 12/08 a 18/10, e abaixo a classificação neve e não-neve usando só a máscara SCL. Contornos coloridos marcam os aglomerados de perda, que ficam na metade sul do anfiteatro.">
+    <figcaption><b>Cor verdadeira e classificação só com a máscara SCL.</b> Amarelo: anfiteatro; x vermelho: ponto de colapso. Contornos: maiores aglomerados de "perda" em 12/08→27/08 (vermelho, o núcleo da medição anterior), 12/08→24/08 (laranja), 24/08→27/08 (magenta) e na falsa perda de 15 minutos de 24/08 (ciano). Os quatro caem no mesmo setor, que muda de classe sem mudar de superfície.</figcaption>
+  </figure>
+  <figure>
+    <img src="{{diag_aglomerados}}" alt="Recortes em falsa cor SWIR, infravermelho e vermelho, ampliados sobre os aglomerados de perda, de 12/08 a 18/10. Em 24/08 e 27/08 os aglomerados ficam sob áreas brancas, que são nuvem.">
+    <figcaption><b>Falsa cor B11-B8A-B04 sobre os mesmos aglomerados.</b> Neve aparece em ciano, nuvem em branco, rocha em marrom ou rosa. Nas datas em que a SCL acusa perda, os aglomerados estão sob nuvem branca.</figcaption>
+  </figure>
+</section>
+
+<section aria-labelledby="s4">
+  <h2 id="s4">O que o radar vê</h2>
+  <p>O Sentinel-1D passou sobre o sítio em três órbitas diferentes, cada uma a cada 12 dias. Os três pares que contêm o colapso são independentes: ascendente 85 (16/08 → 28/08), descendente 121 (19/08 → 31/08) e descendente 19 (24/08 → 05/09). A interseção deles situa a mudança entre <b>24/08 00:18 e 28/08 12:21 UTC</b>. Cada par do evento foi comparado com os 7 ou 8 pares sem evento da mesma órbita, de julho a outubro.</p>
+  <figure>
+    <img src="{{mapa_s1_corredor}}" alt="Mapa da variação de retroespalhamento do radar. Uma faixa azul contínua de aumento acompanha o vale do Lhende Khola, saindo do exutório do anfiteatro para noroeste e depois para oeste, até cerca de 15 km. Dentro do anfiteatro não há padrão.">
+    <figcaption><b>Variação média do retroespalhamento VV nas três geometrias, nos pares que contêm o colapso.</b> Azul: aumento (superfície mais rugosa, típico de depósito de detritos ou de leito escavado). A faixa de aumento acompanha o talvegue desde o exutório. A mancha vermelha e azul a leste do exutório é discutida abaixo.</figcaption>
+  </figure>
+  <div class="duas">
+    <figure>
+      <img src="{{perfil_s1}}" alt="Perfil ao longo do talvegue. Nas três órbitas, a fração da faixa com aumento acima de 3 dB fica entre 20 e 73 por cento do km 1,6 ao km 14, muito acima da faixa de referência, que fica perto de 2 por cento. Nos primeiros 1,6 km a referência oscila de 0 a mais de 100 por cento.">
+      <figcaption><b>Perfil ao longo do talvegue, a partir do ponto de colapso.</b> Linhas: fração da faixa de ±250 m com aumento &gt; 3 dB, no par do evento. Faixas claras: média − 1σ a média + 3σ dos pares sem evento. O sinal começa no km 1,6, a 4.024 m, junto ao exutório, e segue até cerca de 15 km. Nos primeiros 1,6 km, dentro do anfiteatro, a própria referência oscila de 0 a mais de 100 %: encostas desse ângulo produzem sombra e sobreposição no radar, e uma mudança ali não seria detectável.</figcaption>
+    </figure>
+    <div class="tabela" role="region" aria-label="Radar por trecho" tabindex="0">
+    <table>
+      <thead><tr><th>Trecho</th><th class="n">Aumento &gt; 3 dB em ≥ 2 geometrias</th><th class="n">z (3 órbitas)</th></tr></thead>
+      <tbody>
+        <tr><td>Anfiteatro</td><td class="n">2,3 ha (0,7 %)</td><td class="n">−0,7 a −1,0</td></tr>
+        <tr><td>0–5 km a jusante do exutório</td><td class="n">55 ha (21 %)</td><td class="n">26 a 44</td></tr>
+        <tr><td>5–10 km</td><td class="n">49 ha (18 %)</td><td class="n">6 a 44</td></tr>
+        <tr><td>10–15 km</td><td class="n">19 ha (7 %)</td><td class="n">11 a 30</td></tr>
+        <tr><td>15–25 km</td><td class="n">2 ha (0,4 %)</td><td class="n">4 a 13</td></tr>
+        <tr><td>Controle: alto fora do anfiteatro</td><td class="n">7,6 ha (0,4 %)</td><td class="n">−0,7 a −1,3</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+  <p>A órbita descendente 19, cujo par termina em 05/09, mostra sinal até 25 km; as outras duas, cujos pares terminam em 28 e 31/08, param perto de 15 km. Isso sugere um segundo episódio, ou uma extensão do depósito, entre 28/08 e 05/09.</p>
+  <h3>Uma área candidata a leste do exutório</h3>
+  <p>A 1,5 km a leste do exutório, fora do anfiteatro, há a única mudança robusta de encosta da região: uma queda de retroespalhamento de −5,3 dB em <b>28,3 ha</b> (85,528 E; 28,288 N; 4.790–5.180 m), ao lado de aumentos de 12,6 ha (cerca de 5.200 m) e 15,1 ha (4.180–4.750 m) que descem em direção ao exutório. Queda ao lado de aumento é o padrão de uma cicatriz com o depósito logo abaixo, e a área tem a ordem de grandeza dos 20 ha de destacamento citados nas descrições do evento.</p>
+  <p>A interpretação não é única. Em 12/08 essa superfície era detrito sobre gelo, com 32 % de neve, logo abaixo da linha de neve, que estava perto de 5.200 m em 12/08 e 24/08. Neve fresca e molhada sobre detrito também derruba o retroespalhamento em vários dB. A cena óptica limpa seguinte é de 28/09, quando tudo já estava coberto de neve nova (95 % na mancha). Os dados disponíveis não decidem entre as duas leituras.</p>
+  <figure>
+    <img src="{{candidato_fonte}}" alt="Painéis ampliados a leste do exutório: variação do radar, cor verdadeira e falsa cor em 12/08, 24/08, 28/09 e 18/10. A mancha de queda, contornada em vermelho, fica sobre uma encosta de detrito marrom em agosto e coberta de neve em setembro e outubro.">
+    <figcaption><b>Mudança robusta do radar a leste do exutório</b> (círculo amarelo). Vermelho: queda &gt; 3 dB; azul: aumento &gt; 3 dB, ambos em pelo menos 2 das 3 geometrias. Acima, cor verdadeira; abaixo, falsa cor.</figcaption>
+  </figure>
+</section>
+
+<section aria-labelledby="s5">
+  <h2 id="s5">O que isso significa para o volume de água</h2>
+  <p>O repositório trabalha com 14,2 milhões de m³ de água líquida a explicar <span class="tag t-prem">PREMISSA</span>. O número vem de uma reconstrução por Manning com rugosidade, declividade e altura de lâmina atribuídas pelo analista, em regime supercrítico. Ele não foi medido. Mesmo assim, ele serve de escala para as duas fontes possíveis de água. As tabelas abaixo são aritmética sobre esse número.</p>
+  <div class="duas">
+    <div class="tabela" role="region" aria-label="Gelo necessário" tabindex="0">
+    <table>
+      <thead><tr><th>Se a água viesse de gelo perdido em</th><th class="n">Espessura de gelo necessária</th></tr></thead>
+      <tbody>
+        <tr><td>3 ha (perda bruta medida no evento)</td><td class="n">526 m</td></tr>
+        <tr><td>11 ha (perda bruta, só SCL)</td><td class="n">143 m</td></tr>
+        <tr><td>28 ha (a área candidata do radar)</td><td class="n">56 m</td></tr>
+        <tr><td>341 ha (todo o anfiteatro)</td><td class="n">4,6 m</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="tabela" role="region" aria-label="Chuva necessária" tabindex="0">
+    <table>
+      <thead><tr><th>Se a água viesse de chuva sobre a bacia até (km do talvegue a partir do ponto de colapso)</th><th class="n">Área</th><th class="n">Lâmina</th></tr></thead>
+      <tbody>
+        <tr><td>o exutório do anfiteatro</td><td class="n">3,4 km²</td><td class="n">4.158 mm</td></tr>
+        <tr><td>o km 5</td><td class="n">24,5 km²</td><td class="n">580 mm</td></tr>
+        <tr><td>a seção de 55 km² usada no repositório</td><td class="n">55 km²</td><td class="n">258 mm</td></tr>
+        <tr><td>o km 10</td><td class="n">242 km²</td><td class="n">59 mm</td></tr>
+        <tr><td>o km 15</td><td class="n">835 km²</td><td class="n">17 mm</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+  <p>Gelo de 917 kg/m³ (0,9 m³ de água por m³ de gelo). Áreas de bacia pelo GLO-30, nenhuma tocando a borda da janela do MDE. Para comparação, o IMERG (Late Run) deu 5,1 mm de média numa caixa de 0,5° até o colapso, com máximos de célula de 3 a 6,5 mm por meia hora entre 17:30 e 22 UTC. O IMERG subestima chuva convectiva em montanha, e a tempestade que o Himawari mostrou chegando pela borda da bigorna ainda não foi simulada. A simulação WRF que vai testar isso está em andamento.</p>
+  <p>Duas coisas a área não mede. O gelo pode afinar sem expor rocha, e uma superfície de gelo continua com NDSI de neve; nos dois casos a classe não muda e a perda de volume é invisível. Só a diferença entre um MDE anterior e um posterior ao evento mede espessura.</p>
+</section>
+
+<section aria-labelledby="s6">
+  <h2 id="s6">O que falta</h2>
+  <ul>
+    <li><b>Um MDE posterior ao evento.</b> É o único caminho para volume. O GLO-30 é anterior (2011–2015). Seria preciso um par estéreo de alta resolução sobre o anfiteatro depois de 26/08 (Pléiades, WorldView, ou ASTER se houver aquisição), comparado com um MDE de antes.</li>
+    <li><b>A zona do colapso não foi vista no óptico entre 12/08 e 28/09.</b> Uma cena comercial de alta resolução sem nuvem nesse intervalo, se existir em arquivo, resolveria a cicatriz e a área candidata do radar.</li>
+    <li><b>A tempestade.</b> O WRF (ERA5, 9/3/1 km) roda no vlab para saber se o sistema visto pelo Himawari chega ao sítio em 18–22 UTC e quanto precipita na bacia. O critério de aceite foi registrado antes da rodada. A primeira tentativa caiu ao ligar o domínio de 1 km sobre o relevo; a segunda está em execução com passo menor e advecção vertical implícita.</li>
+    <li><b>O segundo episódio sugerido pela órbita descendente 19</b> (sinal até 25 km no par que termina em 05/09) merece uma checagem com as cenas de radar de setembro.</li>
+  </ul>
+</section>
+
+<section class="notas" aria-labelledby="s7">
+  <h3 id="s7">Reprodutibilidade</h3>
+  <p style="margin:0">Repositório <span class="mono">reinaldohaas/Himalaia_2026</span>, branch <span class="mono">claude/himalaia-enchentes-auditoria-fcfdb5</span>, pasta <span class="mono">scripts/neve_anfiteatro/</span>. Todos os dados são abertos e lidos por STAC sem credencial; só a janela de ~12 × 9 km em torno do anfiteatro é lida de cada imagem.</p>
+  <ul>
+    <li><span class="mono">anfiteatro_glo30.py</span>: anfiteatro, controles e talvegue a jusante (priority-flood + D8 no GLO-30).</li>
+    <li><span class="mono">serie_multifonte.py &lt;fonte&gt;</span>: séries por fonte (s2es, s2pc, s2l1c, ls, hlss, hlsl, modis, s1), três máscaras de nuvem, três limiares.</li>
+    <li><span class="mono">analise_pares.py</span>: pares de datas em pixels comuns e orçamento de erro (<span class="mono">MASCARA=estrita</span> para a versão só SCL).</li>
+    <li><span class="mono">diag_aglomerados.py</span>, <span class="mono">quicklook.py</span>: diagnóstico espectral dos aglomerados de perda.</li>
+    <li><span class="mono">analise_s1.py</span>, <span class="mono">perfil_s1.py</span>, <span class="mono">candidato_fonte.py</span>: radar por região, ao longo do talvegue e na área candidata.</li>
+    <li><span class="mono">linha_de_neve.py</span>, <span class="mono">bacias_corredor.py</span>, <span class="mono">figuras_relatorio.py</span>.</li>
+  </ul>
+  <p style="margin:0">Rótulos: <span class="tag t-obs">OBSERVADO</span> instrumento; <span class="tag t-par">PARAMÉTRICO</span> conta feita com um valor atribuído; <span class="tag t-prem">PREMISSA</span> número herdado do repositório sem medição.</p>
+</section>
+</main>
