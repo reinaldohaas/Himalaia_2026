@@ -8,7 +8,7 @@
 #   bash claude_permanente.sh mandar "texto"   # digita o texto no Claude e aperta Enter
 #   bash claude_permanente.sh tela [N]     # ultimas N linhas da tela (padrao 60)
 #   bash claude_permanente.sh reparar      # conserta ~/.claude.json invalido e tira o Claude da tela de erro
-#   bash claude_permanente.sh sentinela    # a cada 10 min grava o estado no Drive (saida/.../ao_vivo/estado_vlab.txt)
+#   bash claude_permanente.sh sentinela    # a cada 1 min: entrega ordens de entrada/ordens/ e grava estado + historico no Drive (ao_vivo/)
 #   bash claude_permanente.sh parar_sentinela
 #   bash claude_permanente.sh parar        # encerra a sessao tmux (e o laco de reinicio)
 #
@@ -165,16 +165,32 @@ LACO
     # a cada INTERVALO s grava o estado (Claude + fila do CM1) em gdrive:vlab_cache/Himalaia_2026/saida/toro_cm1_lhende/ao_vivo/
     ativar_tmux || { echo "ERRO: sem tmux (rode instalar)" >&2; exit 1; }
     if tmux has-session -t sentinela 2>/dev/null; then echo "sentinela ja esta rodando"; exit 0; fi
-    INTERVALO=${INTERVALO:-600}
-    mkdir -p "$AQUI/logs"; S="$AQUI/logs/sentinela.sh"
+    INTERVALO=${INTERVALO:-60}
+    mkdir -p "$AQUI/logs/ordens"; S="$AQUI/logs/sentinela.sh"
     cat > "$S" <<SENT
 #!/bin/bash
 cd "$AQUI"; source restaurar.sh >/dev/null 2>&1
 command -v rclone >/dev/null 2>&1 || export PATH="$ENVDIR/cm1pos/bin:\$PATH"
+PY=python3; [ -x "$ENVDIR/cm1pos/bin/python3" ] && PY="$ENVDIR/cm1pos/bin/python3"
+CX=gdrive:vlab_cache/Himalaia_2026/entrada/ordens
+AV=gdrive:vlab_cache/Himalaia_2026/saida/toro_cm1_lhende/ao_vivo
 while true; do
+  # caixa de ordens: entrega ao Claude, uma por volta, cada ordem_*.txt de entrada/ordens/ (em ordem de nome)
+  # e move o arquivo para entrada/ordens/entregues/ (assim nenhuma ordem e entregue duas vezes)
+  N=\$(rclone lsf --files-only --include "ordem_*.txt" "\$CX" 2>/dev/null | sort | head -1)
+  if [ -n "\$N" ] && rclone copyto "\$CX/\$N" "$AQUI/logs/ordens/\$N" 2>/dev/null && [ -s "$AQUI/logs/ordens/\$N" ]; then
+    if rclone moveto "\$CX/\$N" "\$CX/entregues/\$N" 2>/dev/null; then
+      bash claude_permanente.sh mandar "\$(tr '\r\n' '  ' < "$AQUI/logs/ordens/\$N")" >/dev/null 2>&1 \
+        && echo "[\$(date -u +%FT%TZ)] entregue \$N" >> "$AQUI/logs/ordens.log" \
+        || echo "[\$(date -u +%FT%TZ)] FALHOU ao entregar \$N" >> "$AQUI/logs/ordens.log"
+    fi
+  fi
+  "\$PY" historico_claude.py 60 > "$AQUI/logs/historico_claude.txt" 2>&1
+  rclone copyto "$AQUI/logs/historico_claude.txt" "\$AV/historico_claude.txt" 2>&1 | grep -v client_id >> "$AQUI/logs/sentinela.log"
   O="$AQUI/logs/estado_vlab.txt"
   { echo "estado_vlab  \$(date -u +%FT%TZ)  host=\$(hostname)  (sentinela a cada $INTERVALO s)"
     echo "== Claude (tmux '$SESSAO')"; bash claude_permanente.sh estado 2>&1
+    echo; echo "== Ordens (entrada/ordens -> Claude)"; tail -5 logs/ordens.log 2>/dev/null || echo "nenhuma ordem entregue ainda"
     echo; echo "== CM1 (rodar_direto.sh estado)"; bash rodar_direto.sh estado 2>&1
     echo; echo "== SHA-256 das estatisticas e campos 3D de cada execucao (concluidas)"
     for d in execucoes/*/; do grep -qs "Program terminated normally" "\$d/cm1.print.out" || continue
