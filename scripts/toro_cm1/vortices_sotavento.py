@@ -9,7 +9,7 @@ Para cada saida (30 min):
     de Okubo-Weiss OW = sn^2 + ss^2 - zeta^2 (OW < 0: rotacao domina o cisalhamento/deformacao);
   * vortice = regiao conexa com |zeta| >= ZETA_MIN e OW < 0, area >= 2 celulas (0,5 km^2);
     "orografico" se o |w| maximo na regiao < W_CONV (senao: ligado a conveccao);
-    persistencia: mesmo sinal a menos de 2,5 km de um vortice da saida anterior;
+    persistencia: mesmo sinal a menos de 2,5 km de um vortice da saida anterior (em numero de saidas);
   * janela do anfiteatro (|x|,|y| <= 1,5 km): zeta, delta e w medios por nivel;
   * regime: vento medio do dominio em 5-6 km, N em 4-7 km (perfil medio de theta), Fr = U / (N H), H = 2 km.
 
@@ -43,6 +43,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import grads  # noqa: E402
 
 ZBASE = 3000.0                      # base do modelo (m ASL)
+DT_H = 0.5                          # (h) substituido pelo tapfrq do namelist em main()
 Z_NIVEIS = [4500.0, 5000.0, 5500.0, 6000.0, 7000.0]
 ZETA_MIN = 1.0e-3                   # s^-1 (~15 f)
 W_CONV = 2.0                        # m/s
@@ -95,6 +96,9 @@ def cinematica(u, v):
 
 def main(d_run, h0, prefixo, rotulo=""):
     d, nt, campo = abrir(os.path.join(d_run, "cm1out_s.ctl"))
+    global DT_H                                         # intervalo entre saidas (h), do namelist da rodada
+    import re as _re
+    DT_H = float(_re.search(r"^\s*tapfrq\s*=\s*([0-9.eE+-]+)", open(os.path.join(d_run, "namelist.input")).read(), _re.M).group(1)) / 3600.0
     x = d["xdef"]; y = d["ydef"]
     X, Y = np.meshgrid(x, y)
     zs = campo("zs", 0) + ZBASE
@@ -104,7 +108,7 @@ def main(d_run, h0, prefixo, rotulo=""):
     ant = []                                            # vortices da saida anterior (5,5 km)
     persist = {}
     for t in range(nt):
-        h = h0 + 0.5 * t
+        h = h0 + t * DT_H
         zh = campo("zhval", t) + ZBASE
         u3, v3, w3, th3 = (campo(n, t) for n in ("uinterp", "vinterp", "winterp", "th"))
         reg = {"hora_utc": h, "niveis": {}}
@@ -149,8 +153,8 @@ def main(d_run, h0, prefixo, rotulo=""):
                     r["persist"] = 1 + max([p["persist"] for p in ant
                                             if p["sinal"] == r["sinal"] and np.hypot(p["x"] - r["x"], p["y"] - r["y"]) < 2.5] or [0])
                 ant = vort
-                if t % 2 == 0:
-                    mapas[t] = (zeta / F_COR, u, v)
+                if abs(h * 2 - round(h * 2)) < 1e-6:          # mapas a cada 30 min
+                    mapas[round(h * 2)] = (zeta / F_COR, u, v)
             reg["niveis"][str(int(z0))] = {"vortices": vort, "anfiteatro": janela,
                                            "n_orog": sum(r["tipo"] == "orografico" for r in vort),
                                            "n_conv": sum(r["tipo"] == "convectivo" for r in vort),
@@ -187,12 +191,12 @@ def figura(arq, mapas, x, y, zs, h0, rotulo):
     except Exception as e:                 # sem matplotlib (ou backend invalido): tabelas ficam, figura nao
         print("figura nao gerada:", e); return
     import matplotlib.pyplot as plt
-    alvo = [h for h in (8.0, 14.0, 18.0, 21.0, 24.0, 26.5) if int(round((h - h0) * 2)) in mapas]
+    alvo = [h for h in (8.0, 14.0, 18.0, 21.0, 24.0, 26.5) if int(round(h * 2)) in mapas]
     if not alvo:
         return
     fig, axs = plt.subplots(2, 3, figsize=(15, 9.6), constrained_layout=True)
     for ax, h in zip(axs.flat, alvo):
-        t = int(round((h - h0) * 2)); z, u, v = mapas[t]
+        z, u, v = mapas[int(round(h * 2))]
         pc = ax.pcolormesh(x, y, z, cmap="RdBu_r", vmin=-60, vmax=60, shading="auto")
         ax.contour(x, y, zs, levels=np.arange(3500, 7001, 500), colors="k", linewidths=0.4, alpha=0.6)
         ax.contour(x, y, zs, levels=[5500], colors="k", linewidths=1.2)
