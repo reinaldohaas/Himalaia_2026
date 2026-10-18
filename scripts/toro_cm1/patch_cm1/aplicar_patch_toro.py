@@ -109,6 +109,28 @@ bloco_v = """
       ENDIF
 """
 t = troca(t, "!--------------------------------------------------------------------\n!  V-equation\n", bloco_v, "solve1 vortice v")
+bloco_s = """      ! toro (toro_mod): gelo vindo de cima (semeadura) -- fonte de massa e numero na especie (nq_s, nn_s)
+      IF( toro_ativo .and. seed_on .and. nq_s.ge.1 .and. nq_s.le.numq .and. nn_s.ge.1 .and. nn_s.le.numq )THEN
+        !$omp parallel do default(shared)  &
+        !$omp private(i,j,k,tvx,tvy,tvr,tvh)
+        do k=1,nk
+        do j=1,nj
+        do i=1,ni
+          tvx = xh(i)-xc_s
+          tvy = yh(j)-yc_s
+          tvr = sqrt(tvx*tvx+tvy*tvy)
+          tvh = zh(i,j,k)+zbase_s
+          if( tvr.le.r_s .and. tvh.ge.z1_s .and. tvh.le.z2_s )then
+            qten(i,j,k,nq_s) = qten(i,j,k,nq_s) + sq_s
+            qten(i,j,k,nn_s) = qten(i,j,k,nn_s) + sn_s
+          endif
+        enddo
+        enddo
+        enddo
+      ENDIF
+
+"""
+t = troca(t, "!--------------------------------------------------------------------\n!  U-equation\n", bloco_s, "solve1 semeadura", depois=False)
 arqs["solve1.F"] = t
 
 # ---------------- Makefile ----------------

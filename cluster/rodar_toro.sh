@@ -16,8 +16,10 @@
 set -uo pipefail
 AQUI=$(cd "$(dirname "$0")" && pwd)
 cd "$AQUI"
-export KIT_MPI="$AQUI/kit_mpi_toro"
+export KIT_MPI=${KIT_MPI:-$AQUI/kit_mpi_toro}          # outro kit: KIT_MPI=.../kit_mpi_toro2
 EXPS=${EXPS:-"toro_A_rev_vort toro_Ag_vort toro_vort toro_A toro_A_rev toro_Ag"}
+VALIDA_EXP=${VALIDA_EXP:-}     # ex.: toro_Ag -> 2 h com o executavel novo tem de ser bit a bit execucoes/toro_Ag
+DIAG_EXTRA=${DIAG_EXTRA:-}     # rodadas ja existentes que entram no resumo (ex.: toro_Ag)
 PY=python3; [ -x /home/jovyan/privado/conda_envs/cm1pos/bin/python3 ] && PY=/home/jovyan/privado/conda_envs/cm1pos/bin/python3
 export RCLONE_CONFIG=${RCLONE_CONFIG:-/home/jovyan/privado/.config/rclone/rclone.conf}
 DRIVE=gdrive:vlab_cache/Himalaia_2026/saida/toro_cm1_lhende/toro
@@ -55,7 +57,7 @@ ok_rodada() {     # ok_rodada <dir> [exigir_toro]
 }
 
 diag_tudo() {
-  for e in rad_06utc_hib16x7 $EXPS; do
+  for e in rad_06utc_hib16x7 $DIAG_EXTRA $EXPS; do
     d=execucoes/$e; [ -f "$d/cm1out_s.dat" ] || continue
     "$PY" diag_toro.py "$d" 6 "logs/diag_$e" "$e" >> "$LOG" 2>&1 && { envia "logs/diag_$e.json"; envia "logs/diag_$e.txt"; msg "diagnostico $e enviado"; } \
       || msg "AVISO: diagnostico de $e falhou (ver $LOG)"
@@ -77,6 +79,15 @@ tudo_fg() {
   rcv=$?; envia logs/toro_validacao.txt
   [ $rcv -eq 0 ] || { msg "FALHA: o executavel novo SEM toro_params.txt NAO reproduz a rad_06utc_repro (ver logs/toro_validacao.txt). Parei."; exit 1; }
   msg "validacao OK: executavel do toro desligado = bit a bit a rad_06utc_repro (2 h)"
+  if [ -n "$VALIDA_EXP" ]; then   # 1b. o executavel novo reproduz um experimento anterior (o codigo novo e inerte)
+    prepara_caso toro_valida_exp rad_06utc_2h "experimentos_toro/$VALIDA_EXP.txt" 900.0
+    rm -rf execucoes/toro_valida_exp; roda toro_valida_exp
+    ok_rodada execucoes/toro_valida_exp 1 || exit 1
+    "$PY" comparar_bits.py execucoes/toro_valida_exp "execucoes/$VALIDA_EXP" > logs/toro_validacao_exp.txt 2>&1
+    rcv=$?; envia logs/toro_validacao_exp.txt
+    [ $rcv -eq 0 ] || { msg "FALHA: o executavel novo NAO reproduz $VALIDA_EXP nas 2 h (ver logs/toro_validacao_exp.txt). Parei."; exit 1; }
+    msg "validacao 1b OK: executavel novo = bit a bit $VALIDA_EXP (2 h)"
+  fi
   # 2. teste curto com tudo ligado
   prepara_caso toro_teste rad_06utc experimentos_toro/toro_teste_curto.txt ""
   rm -rf execucoes/toro_teste_teste; roda toro_teste 1

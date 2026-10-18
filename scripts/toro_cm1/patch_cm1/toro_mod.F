@@ -20,6 +20,11 @@
 !    perfil vertical sech^2(h/zr_v), h = altura sobre o relevo [m],
 !    intensidade alpha_v [m/s2]; liga em t1_v com rampa linear de tr_v [s];
 !    desliga em t2_v.
+!
+!  Gelo vindo de cima (semeadura; iseed = 1): fonte de massa sq_s [kg/kg/s] e de numero
+!    sn_s [#/kg/s] na especie (nq_s, nn_s) do vetor qa (NSSL ptype 27: 4 = qi, 11 = cci;
+!    5 = qs, 12 = csw), num cilindro de raio r_s [m] em torno de (xc_s, yc_s), entre z1_s e
+!    z2_s [m ASL; zbase_s = cota da base do modelo], de t1_s a t2_s [s de modelo].
 !-----------------------------------------------------------------------
 module toro_mod
   implicit none
@@ -31,12 +36,17 @@ module toro_mod
   integer, save :: ivortex = 0
   real, save :: xc_v = 0.0, yc_v = 0.0, rmax_v = 2000.0, zr_v = 2000.0
   real, save :: alpha_v = 0.0, t1_v = 0.0, t2_v = 0.0, tr_v = 1800.0
+  integer, save :: iseed = 0, nq_s = 4, nn_s = 11
+  real, save :: xc_s = 0.0, yc_s = 0.0, r_s = 4000.0, z1_s = 5500.0, z2_s = 7500.0, zbase_s = 3000.0
+  real, save :: t1_s = 0.0, t2_s = 0.0, sq_s = 0.0, sn_s = 0.0
   ! estado no instante corrente (toro_atualiza, chamado a cada passo, fora de regiao paralela)
-  logical, save :: mp_A = .false.
+  logical, save :: mp_A = .false., seed_on = .false.
   real, save :: gamm_v = 0.0
   namelist /toro/ modo_mp, fcoal, faccr, fctfz, fcoal_pos, faccr_pos, fctfz_pos,  &
                   t1_mp, t2_mp, qg_rev, ivortex, xc_v, yc_v, rmax_v, zr_v,        &
-                  alpha_v, t1_v, t2_v, tr_v
+                  alpha_v, t1_v, t2_v, tr_v,                                      &
+                  iseed, nq_s, nn_s, xc_s, yc_s, r_s, z1_s, z2_s, zbase_s,        &
+                  t1_s, t2_s, sq_s, sn_s
 
 contains
 
@@ -71,6 +81,7 @@ contains
     gamm_v = 0.0
     if (ivortex == 1 .and. mtime >= dble(t1_v) .and. mtime < dble(t2_v)) &
       gamm_v = real(min(1.0d0, (mtime - dble(t1_v)) / dble(max(tr_v, 1.0))))
+    seed_on = (iseed == 1 .and. mtime >= dble(t1_s) .and. mtime < dble(t2_s))
   end subroutine toro_atualiza
 
   ! fatores no ponto (puras: seguras dentro de regioes paralelas)
