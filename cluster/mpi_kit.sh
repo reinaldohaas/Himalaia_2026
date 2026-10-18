@@ -7,7 +7,7 @@
 set -euo pipefail
 K=${KIT_MPI:-$(cd "$(dirname "$0")" && pwd)/kit_mpi}     # KIT_MPI: outro kit (ex.: kit_mpi_toro); padrao kit_mpi
 LD="$K/lib/ld-linux-x86-64.so.2 --library-path $K/lib"
-if [ "${1:-}" = "rank" ]; then shift; exec $LD "$@"; fi
+if [ "${1:-}" = "rank" ]; then shift; ulimit -s unlimited 2>/dev/null || ulimit -s 4194304 2>/dev/null; exec $LD "$@"; fi   # WRF exige pilha grande
 NP=${NP:-16}; T=${OMP_NUM_THREADS:-1}
 export OPAL_PREFIX="$K/ompi" PMIX_INSTALL_PREFIX="$K/pmix2"
 export OMPI_MCA_mca_base_component_path="$K/ompi/lib/x86_64-linux-gnu/openmpi/lib/openmpi3"
