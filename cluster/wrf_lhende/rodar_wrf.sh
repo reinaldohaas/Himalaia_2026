@@ -59,6 +59,17 @@ prepara_run() {   # prepara_run <dir>
   for f in "$WRFDIR"/run/*; do b=$(basename "$f"); case "$b" in *.exe|namelist*|wrfout*|rsl.*) ;; *) ln -sf "$f" "$b";; esac; done
   ln -sf "$AQUI"/wps_run/met_em.d0* .
   cp "$AQUI/namelist.input" namelist.input
+  cp "$AQUI/iofields_toro.txt" iofields_toro.txt          # saida leve (wrfaux_*): OLR, chuva, superficie
+}
+
+enviar() {        # manda os wrfaux_* (leves) e os logs ao Drive, para o diagnostico fora do vlab
+  export RCLONE_CONFIG=${RCLONE_CONFIG:-/home/jovyan/privado/.config/rclone/rclone.conf}
+  command -v rclone >/dev/null || export PATH="/home/jovyan/privado/conda_envs/cm1pos/bin:$PATH"
+  local dst=gdrive:vlab_cache/Himalaia_2026/saida/wrf_lhende/${1:-wrf_run}
+  for f in "$AQUI/${1:-wrf_run}"/wrfaux_d0* "$AQUI/${1:-wrf_run}"/rsl.error.0000 "$AQUI/${1:-wrf_run}"/namelist.input "$LOG"; do
+    [ -f "$f" ] && rclone copy "$f" "$dst/" 2>&1 | grep -v client_id
+  done
+  msg "enviado ao Drive: $dst ($(ls "$AQUI/${1:-wrf_run}"/wrfaux_d0* 2>/dev/null | wc -l) wrfaux)"
 }
 
 real() {
@@ -91,5 +102,6 @@ estado() {
 
 case "${1:-}" in
   verificar) verificar ;; wps) wps ;; real) real ;; teste) teste ;; wrf) wrf_bg ;; estado) estado ;;
-  *) echo "uso: bash rodar_wrf.sh verificar|wps|real|teste|wrf|estado" >&2; exit 1 ;;
+  enviar) enviar "${2:-wrf_run}" ;;
+  *) echo "uso: bash rodar_wrf.sh verificar|wps|real|teste|wrf|estado|enviar [wrf_run|wrf_teste]" >&2; exit 1 ;;
 esac
