@@ -1,0 +1,19 @@
+Experimentos do toro -- criterios pre-registrados (experimentos_toro/LEIA-ME.md); anfiteatro 3x3 km
+
+rodada             toro      | SLW00-0230  x ctrl |  taxa_max  taxa_ant   C2 | vol_anf00-03 vol_r10 00-03 | F1 00-03   wdown | Tb0230-03
+rad_06utc_hib16x7  desligado |       101     1.0 |       0.0       0.1  nao |         148        2504 |       0   -13.6 | 207/204
+toro_A             LIGADO    |       701     6.9 |       0.4       0.3  nao |        4950      195039 |       1    -7.1 | 241/242/241
+toro_A_rev         LIGADO    |       701     6.9 |       0.3       0.3  nao |        4194      177007 |       1    -7.1 | 241/242/241
+toro_A_rev_vort    LIGADO    |       590     5.8 |       0.3       0.3  nao |        3837      160248 |       1    -7.7 | 242/244/242
+toro_Ag            LIGADO    |      2564    25.3 |       0.0       0.0  nao |         252       15152 |       0   -20.7 | 230/226/232
+toro_Ag_gelo       LIGADO    |      2412    23.8 |       0.0       0.0  nao |         238       14591 |       0   -20.6 | 230/228/232
+toro_Ag_gelo10     LIGADO    |      2178    21.5 |       0.0       0.0  nao |         211       14382 |       0   -20.8 | 230/226/232
+toro_Ag_lev        LIGADO    |       771     7.6 |       0.0       0.0  nao |         198       14166 |       0   -20.6 | 230/228/232
+toro_Ag_lev2       LIGADO    |       864     8.5 |       0.0       0.0  nao |         201       14373 |       0   -20.7 | 230/226/232
+toro_Ag_lev_gelo   LIGADO    |       659     6.5 |       0.0       0.0  nao |         186       13962 |       0   -21.1 | 228/228/232
+toro_Ag_vort       LIGADO    |      1849    18.3 |       0.0       0.0  nao |         220       15615 |       0   -20.7 | 220/226/235
+toro_ctrl_gelo     LIGADO    |       173     1.7 |       0.0       0.1  nao |         150        2516 |       0   -17.0 | 207/207/204
+toro_ctrl_lev      LIGADO    |       173     1.7 |       0.0       0.1  nao |         183        2632 |       0   -17.0 | 205/209/206
+toro_vort          LIGADO    |        96     0.9 |       0.0       0.1  nao |          49        2151 |       0   -16.2 | 204/208/208
+
+C1 (reservatorio) = 'x ctrl' >= 10 | C2 (liberacao explosiva) = taxa media no anfiteatro >= 50 mm/h em 01:30-03 UTC depois de < 1 mm/h em 23:30-01:30 | volumes em m3 (premissa do repositorio: 14,2e6 m3; IMERG: 5 mm ate o colapso) | F1 = raios estimados no raio de 10 km, 00-03 UTC | Himawari 02:50: 272,7 K

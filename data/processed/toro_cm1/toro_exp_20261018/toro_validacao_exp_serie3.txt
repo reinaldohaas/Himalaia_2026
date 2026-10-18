@@ -1,0 +1,45 @@
+cm1out_s:
+  t=0: IDENTICO
+  t=1: IDENTICO
+  t=2: IDENTICO
+  t=3: IDENTICO
+  t=4: IDENTICO
+  t=5: IDENTICO
+  t=6: IDENTICO
+  t=7: IDENTICO
+  t=8: IDENTICO
+  -> 9 saidas comparadas: IDENTICAS
+cm1out_u:
+  t=0: IDENTICO
+  t=1: IDENTICO
+  t=2: IDENTICO
+  t=3: IDENTICO
+  t=4: IDENTICO
+  t=5: IDENTICO
+  t=6: IDENTICO
+  t=7: IDENTICO
+  t=8: IDENTICO
+  -> 9 saidas comparadas: IDENTICAS
+cm1out_v:
+  t=0: IDENTICO
+  t=1: IDENTICO
+  t=2: IDENTICO
+  t=3: IDENTICO
+  t=4: IDENTICO
+  t=5: IDENTICO
+  t=6: IDENTICO
+  t=7: IDENTICO
+  t=8: IDENTICO
+  -> 9 saidas comparadas: IDENTICAS
+cm1out_w:
+  t=0: IDENTICO
+  t=1: IDENTICO
+  t=2: IDENTICO
+  t=3: IDENTICO
+  t=4: IDENTICO
+  t=5: IDENTICO
+  t=6: IDENTICO
+  t=7: IDENTICO
+  t=8: IDENTICO
+  -> 9 saidas comparadas: IDENTICAS
+RESULTADO: BIT A BIT IDENTICO (exceto diagnosticos z0t/z0q)

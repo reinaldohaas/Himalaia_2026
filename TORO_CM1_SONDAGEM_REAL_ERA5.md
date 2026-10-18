@@ -455,8 +455,30 @@ Dentro do CM1 a 500 m, com a atmosfera da ERA5 e sem forçamento de fronteira, *
 
 **Leitura:**
 1. **O gelo chega à camada e começa a consumi-la, mas devagar.** Com 10× mais cristais, a concentração na faixa de Hallett-Mossop sobe para 8–20 L⁻¹ e o gelo sobre o anfiteatro ganha ~250 t; a água super-resfriada cai **10–25 %** (2.564 → 2.178 t às 02:30), ou ~15 % por hora. Uma cadeia de Hallett-Mossop consumiria o reservatório em minutos.
-2. **Não se forma graupel, então a reversão não acontece, e não chove.** Os cristais crescem por deposição numa camada a 0 a −3 °C (perto do mínimo do crescimento por difusão), e o que cai abaixo do 0 °C derrete em gotas que, no Estado A, não coalescem. A regra do pesquisador ("o aparecimento de graupel é a reversão") e a própria anti-varredura se travam mutuamente nesta camada.
+2. **Não se forma graupel, então a reversão não acontece, e não chove.** ~~Os cristais crescem por deposição numa camada a 0 a −3 °C (perto do mínimo do crescimento por difusão)~~ **Corrigido na §10.6:** a água armada do `toro_Ag` está a **−8 a −10 °C**, já na faixa de Hallett-Mossop; os 0 a −3 °C eram da camada noturna da `rad_12utc`, não desta. O motivo de não haver graupel é outro (§10.6): no Estado A as gotículas ficam pequenas demais para o *riming* e para o Hallett-Mossop. A regra do pesquisador ("o aparecimento de graupel é a reversão") e a própria anti-varredura se travam mutuamente nesta camada.
 3. **Sem o Estado A não há o que semear**: no `toro_ctrl_gelo` a camada não existe (0–27 t), e a semeadura não muda nada.
 4. **Água e barulho:** como na §10.3 — mesmo o reservatório inteiro (~2,6 × 10³ t) é quatro ordens abaixo de 14,2 × 10⁶ m³; sem raios.
 
-**Conclusão da série 2:** com o gelo que um sistema de mesoescala poderia trazer, **a camada armada glacia lentamente e não libera chuva**. O toró explosivo não sai desta combinação de anti-varredura, vórtice e semeadura, nesta resolução e com esta atmosfera. O que restaria testar no próprio modelo é uma camada armada **mais fria** (−5 a −15 °C, onde o crescimento por difusão e o Hallett-Mossop são eficientes), o que exigiria levantá-la 1–3 km — mais do que o vórtice e a convergência conseguem aqui. Dados em `data/processed/toro_cm1/toro_exp_20261018/` (`diag_toro_Ag_gelo*.txt`, `diag_toro_ctrl_gelo.txt`, `toro_resumo_serie2.txt`).
+**Conclusão da série 2:** com o gelo que um sistema de mesoescala poderia trazer, **a camada armada glacia lentamente e não libera chuva**. O toró explosivo não sai desta combinação de anti-varredura, vórtice e semeadura, nesta resolução e com esta atmosfera. ~~O que restaria testar no próprio modelo é uma camada armada **mais fria** (−5 a −15 °C, onde o crescimento por difusão e o Hallett-Mossop são eficientes), o que exigiria levantá-la 1–3 km — mais do que o vórtice e a convergência conseguem aqui.~~ (A premissa estava errada: a camada já estava a −8 a −10 °C; ver §10.6.) Dados em `data/processed/toro_cm1/toro_exp_20261018/` (`diag_toro_Ag_gelo*.txt`, `diag_toro_ctrl_gelo.txt`, `toro_resumo_serie2.txt`).
+
+### 10.6 Série 3: levantamento controlado — e uma correção (18/10/2026)
+
+**Correção da §10.5.** O diagnóstico novo (temperatura média da água super-resfriada sobre o anfiteatro, ponderada pela massa) mostra que a camada armada do `toro_Ag` está a **−8,1 a −10,4 °C** entre 02:00 e 02:45 UTC — **dentro** da faixa de Hallett-Mossop. Escrevi "0 a −3 °C" na §10.5 confundindo-a com a camada noturna baixa da `rad_12utc` (§8.3). A série 3 (levantar a camada até −5/−15 °C) partiu dessa premissa errada; os resultados continuam válidos como teste, mas a pergunta que eles respondem é outra.
+
+**Como:** opção `ilift` do `toro_mod` — w relaxado (τ = 300 s) para 1 ou 2 m/s numa coluna gaussiana de 3 km de raio sobre o anfiteatro, 4,5–10 km ASL, 01:45–02:45 UTC. Executável `2355ff92…` (kit `kit_mpi_toro3`, só o `cm1.exe` muda), com as duas validações bit a bit (desligado = `rad_06utc_repro`; parâmetros de `toro_Ag` = `toro_Ag`). Critérios em `cluster/experimentos_toro/LEIA-ME_levantamento.md`.
+
+| Rodada | SLW às 02:30 (t) | T da SLW 02:00–02:45 (°C) | Cristais −3/−8 °C (L⁻¹) | Graupel sobre o anfiteatro (t) | Chuva 01:30–03 | C2 |
+| :--- | ---: | ---: | ---: | :--- | :---: | :---: |
+| `toro_Ag` (sem levantamento) | 2.564 | −8,1 a −10,4 | 0,2–0,4 | 83 às 02:00, depois ≤ 5 | 0 | não |
+| `toro_Ag_lev` (1 m/s) | 771 | −7,6 a −8,1 | 0,2–0,4 | 33 às 02:00, depois 0 | 0 | não |
+| `toro_Ag_lev2` (2 m/s) | 864 | −7,8 a −8,2 | 0,2–0,4 | 35, depois 0 | 0 | não |
+| `toro_Ag_lev_gelo` (1 m/s + gelo 10×) | 659 | −7,4 a −7,7 | 11–26 | 17, depois 0 | 0 | não |
+| `toro_ctrl_lev` (sem Estado A) | 0 | — | 0 | 0 | 0 | não |
+
+**Leitura:**
+1. **O levantamento forçado não esfria a camada e reduz o reservatório** (2.564 → 659–864 t): ele desorganiza a ascendência natural que o construía. Sem o Estado A, não há reservatório a levantar.
+2. **Mesmo a −8 a −10 °C, com até 26 cristais/L, não se forma graupel e não chove.** O graupel aparece por um instante (17–83 t às 02:00) e some.
+3. **O mecanismo da trava:** no Estado A a coalescência está suprimida, e as gotículas ficam **pequenas e numerosas**. O Hallett-Mossop exige gotículas ≥ 24 µm e o *riming* coleta mal gotículas pequenas; sem *riming* não há graupel, e sem graupel a reversão (a regra do pesquisador) não acontece. **A anti-varredura que constrói o reservatório é a mesma que o impede de se liberar.**
+4. Isso coincide com o que o próprio documento do pesquisador diz (`Fundamentacao_Jz_CEAG_2024_rev9`, Rev. 3, item iv): "a retenção existe enquanto a população é uniforme e pequena; assim que a distribuição alarga […] a varredura é habilitada. O aerossol é que decide o ramo." Nesse quadro, **o gatilho não é o gelo nem o levantamento; é o alargamento do espectro de gotas** (aerossol novo ou gigante, gotas grandes vindas de fora).
+
+**Conclusão das três séries:** o modelo reproduz o "armar" (reservatório na hora do colapso, a −8 a −10 °C) e mostra por que ele não dispara sozinho. O teste que falta, coerente com a hipótese do pesquisador, é **desligar a anti-varredura de repente sobre o reservatório armado** (modo 2, às ~02:15 UTC), como faria o alargamento do espectro — e medir a taxa máxima que ~2,6 × 10³ t podem dar. Água e barulho continuam fora de alcance (quatro ordens abaixo; sem raios).
