@@ -438,4 +438,25 @@ Dentro do CM1 a 500 m, com a atmosfera da ERA5 e sem forçamento de fronteira, *
 
 **Limitações:** fatores de microfísica sem base quantitativa (cotas); sondagem única; Δx = 500 m (o vórtice e as células na escala do anfiteatro pedem os 100 m); nenhum modelo explícito de carga — a reversão é uma regra (graupel), não física de cargas.
 
-**Próximos passos possíveis:** (a) verificar as descendentes de −20 m/s (local e altura); (b) um disparo de gelo na camada armada (sementeira vinda de cima, como o sistema de mesoescala faria) para medir a taxa máxima que o reservatório de 2,6 mil t pode dar; (c) 100 m com o modo 2.
+**Próximos passos possíveis:** (a) verificar as descendentes de −20 m/s (local e altura); (b) um disparo de gelo na camada armada (sementeira vinda de cima, como o sistema de mesoescala faria) para medir a taxa máxima que o reservatório de 2,6 mil t pode dar — **feito, §10.5**; (c) 100 m com o modo 2.
+
+### 10.5 Série 2: gelo vindo de cima na camada armada (18/10/2026)
+
+**Pergunta:** se cristais de gelo caírem sobre a camada armada do `toro_Ag` (como cairiam da bigorna do sistema de mesoescala que o Himawari mostrou chegando), a reversão dispara e a água é liberada? Critérios em `cluster/experimentos_toro/LEIA-ME_gelo.md`, fixados antes de rodar.
+
+**Como:** opção nova do `toro_mod` (`iseed`), fonte de cristais de gelo de nuvem (`qi`, `cci`) num cilindro de 4 km de raio sobre o anfiteatro, entre 5,5 e 7,5 km ASL, de 01:45 a 02:45 UTC. O gelo é **gatilho, não fonte de água**: ~10 cristais/L, ~40 t em 1 h (10× no `toro_Ag_gelo10`), contra ~2.600 t do reservatório. Executável `11669694…` (kit `kit_mpi_toro2`, só o `cm1.exe` muda). **Duas validações bit a bit antes:** desligado = `rad_06utc_repro`; com os parâmetros de `toro_Ag` e sem semeadura = `toro_Ag` (9 saídas, 2 h). O código da semeadura é inerte quando desligado.
+
+| Rodada | SLW sobre o anfiteatro às 02:30 (t) | Cristais na faixa −3 a −8 °C às 02:00–02:45 (L⁻¹) | Gelo sobre o anfiteatro às 02:00–02:30 (t) | Chuva 01:30–03:00 | C2 | Raios | Topo 02:30–03 (K) |
+| :--- | ---: | ---: | ---: | :--- | :---: | ---: | ---: |
+| `toro_Ag` (sem gelo) | 2.564 | 0,2–0,4 | 1.100–1.170 | 0 | não | 0 | 226–232 |
+| `toro_Ag_gelo` | 2.412 | 1,0–2,6 | 1.140–1.230 | 0 | não | 0 | 228–232 |
+| `toro_Ag_gelo10` | 2.178 | **8–20** | **1.360–1.400** | 0 | não | 0 | 226–232 |
+| `toro_ctrl_gelo` (sem Estado A) | 3 | 0 | 6.900–11.500 | 0 | não | 0 | 204–207 |
+
+**Leitura:**
+1. **O gelo chega à camada e começa a consumi-la, mas devagar.** Com 10× mais cristais, a concentração na faixa de Hallett-Mossop sobe para 8–20 L⁻¹ e o gelo sobre o anfiteatro ganha ~250 t; a água super-resfriada cai **10–25 %** (2.564 → 2.178 t às 02:30), ou ~15 % por hora. Uma cadeia de Hallett-Mossop consumiria o reservatório em minutos.
+2. **Não se forma graupel, então a reversão não acontece, e não chove.** Os cristais crescem por deposição numa camada a 0 a −3 °C (perto do mínimo do crescimento por difusão), e o que cai abaixo do 0 °C derrete em gotas que, no Estado A, não coalescem. A regra do pesquisador ("o aparecimento de graupel é a reversão") e a própria anti-varredura se travam mutuamente nesta camada.
+3. **Sem o Estado A não há o que semear**: no `toro_ctrl_gelo` a camada não existe (0–27 t), e a semeadura não muda nada.
+4. **Água e barulho:** como na §10.3 — mesmo o reservatório inteiro (~2,6 × 10³ t) é quatro ordens abaixo de 14,2 × 10⁶ m³; sem raios.
+
+**Conclusão da série 2:** com o gelo que um sistema de mesoescala poderia trazer, **a camada armada glacia lentamente e não libera chuva**. O toró explosivo não sai desta combinação de anti-varredura, vórtice e semeadura, nesta resolução e com esta atmosfera. O que restaria testar no próprio modelo é uma camada armada **mais fria** (−5 a −15 °C, onde o crescimento por difusão e o Hallett-Mossop são eficientes), o que exigiria levantá-la 1–3 km — mais do que o vórtice e a convergência conseguem aqui. Dados em `data/processed/toro_cm1/toro_exp_20261018/` (`diag_toro_Ag_gelo*.txt`, `diag_toro_ctrl_gelo.txt`, `toro_resumo_serie2.txt`).
