@@ -387,7 +387,7 @@ Consequências:
 **Consequências:**
 1. Com o mesmo código e o mesmo conjunto de bibliotecas, **nem a decomposição MPI nem o número de threads mudam os bits**: 8 threads e 16 × 7 dão o mesmo resultado. Isso responde ao item 3 da §9.7.
 2. O vlab pode rodar o CM1 com MPI, a uma velocidade cerca de 4 vezes maior, usando metade dos 224 núcleos, **sem mudar a física** em relação à rodada local de referência. Esse é o caminho para a resolução de 100 m.
-3. Ressalvas:
-   * a identidade foi verificada em 2 h de modelo, não nas 21 h;
+3. **Rodada completa, 21 h** (`rad_06utc_hib16x7`, 17/10, mesmo kit): **`cm1out_s`, `u`, `v` e `w` idênticos bit a bit à `rad_06utc_repro` nas 43 saídas** (06 → 03 UTC, inclusive o instante do colapso). Só `z0t`/`z0q` diferem, como antes. Parede: **0,79 h**, contra 1,56 h com OpenMP de 8 threads (**~2×**; 26,7 s de modelo/s). O ganho é menor que nas 2 primeiras horas porque a convecção da tarde e da noite encurta o passo adaptativo. Comparação em `data/processed/toro_cm1/vlab_hib16x7_20261017/comparacao_rad_06utc_hib16x7.txt`.
+4. Ressalvas:
    * um executável compilado de outro jeito (outro compilador, outras opções, outras bibliotecas) volta a exigir esse teste;
    * a 100 m, a grade e o passo de tempo mudam, e a rodada será outra simulação. O teste garante a ferramenta, não o resultado físico em outra resolução.

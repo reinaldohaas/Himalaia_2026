@@ -1,0 +1,181 @@
+cm1out_s:
+  t=0: IDENTICO   [ignorados: z0t(6305 pts, max|d|=0.0001), z0q(775 pts, max|d|=3.6)]
+  t=1: IDENTICO   [ignorados: z0t(6305 pts, max|d|=9.01e-05), z0q(775 pts, max|d|=3.6)]
+  t=2: IDENTICO   [ignorados: z0t(6305 pts, max|d|=6.37e-05), z0q(775 pts, max|d|=3.6)]
+  t=3: IDENTICO   [ignorados: z0t(6305 pts, max|d|=6.5e-05), z0q(775 pts, max|d|=3.6)]
+  t=4: IDENTICO   [ignorados: z0t(6305 pts, max|d|=5.13e-05), z0q(775 pts, max|d|=3.6)]
+  t=5: IDENTICO   [ignorados: z0t(6305 pts, max|d|=4.73e-05), z0q(775 pts, max|d|=3.6)]
+  t=6: IDENTICO   [ignorados: z0t(6305 pts, max|d|=3.68e-05), z0q(775 pts, max|d|=3.6)]
+  t=7: IDENTICO   [ignorados: z0t(6305 pts, max|d|=5.14e-05), z0q(775 pts, max|d|=3.6)]
+  t=8: IDENTICO   [ignorados: z0t(6305 pts, max|d|=3.54e-05), z0q(775 pts, max|d|=3.6)]
+  t=9: IDENTICO   [ignorados: z0t(6305 pts, max|d|=2.98e-05), z0q(775 pts, max|d|=3.6)]
+  t=10: IDENTICO   [ignorados: z0t(6305 pts, max|d|=5.75e-05), z0q(775 pts, max|d|=3.6)]
+  t=11: IDENTICO   [ignorados: z0t(6305 pts, max|d|=3.21e-05), z0q(775 pts, max|d|=3.6)]
+  t=12: IDENTICO   [ignorados: z0t(6305 pts, max|d|=8.44e-05), z0q(775 pts, max|d|=3.6)]
+  t=13: IDENTICO   [ignorados: z0t(6305 pts, max|d|=8.74e-05), z0q(775 pts, max|d|=3.6)]
+  t=14: IDENTICO   [ignorados: z0t(6305 pts, max|d|=2.47e+21), z0q(6185 pts, max|d|=0.0134)]
+  t=15: IDENTICO   [ignorados: z0t(6305 pts, max|d|=2.47e+21), z0q(6185 pts, max|d|=0.0134)]
+  t=16: IDENTICO   [ignorados: z0t(6305 pts, max|d|=2.47e+21), z0q(6185 pts, max|d|=0.0137)]
+  t=17: IDENTICO   [ignorados: z0t(6305 pts, max|d|=2.47e+21), z0q(6185 pts, max|d|=0.0139)]
+  t=18: IDENTICO   [ignorados: z0t(6305 pts, max|d|=2.47e+21), z0q(6185 pts, max|d|=0.0139)]
+  t=19: IDENTICO   [ignorados: z0t(6305 pts, max|d|=2.47e+21), z0q(6185 pts, max|d|=0.0133)]
+  t=20: IDENTICO   [ignorados: z0t(6305 pts, max|d|=2.47e+21), z0q(6185 pts, max|d|=0.0134)]
+  t=21: IDENTICO   [ignorados: z0t(6305 pts, max|d|=2.47e+21), z0q(6185 pts, max|d|=0.0138)]
+  t=22: IDENTICO   [ignorados: z0t(6305 pts, max|d|=2.47e+21), z0q(6185 pts, max|d|=0.0141)]
+  t=23: IDENTICO   [ignorados: z0t(6305 pts, max|d|=2.47e+21), z0q(6185 pts, max|d|=0.014)]
+  t=24: IDENTICO   [ignorados: z0t(6305 pts, max|d|=2.47e+21), z0q(6185 pts, max|d|=0.0139)]
+  t=25: IDENTICO   [ignorados: z0t(6305 pts, max|d|=2.47e+21), z0q(6185 pts, max|d|=0.0137)]
+  t=26: IDENTICO   [ignorados: z0t(6305 pts, max|d|=2.47e+21), z0q(6185 pts, max|d|=0.0136)]
+  t=27: IDENTICO   [ignorados: z0t(6305 pts, max|d|=2.47e+21), z0q(6185 pts, max|d|=0.0134)]
+  t=28: IDENTICO   [ignorados: z0t(6305 pts, max|d|=2.47e+21), z0q(6185 pts, max|d|=0.0136)]
+  t=29: IDENTICO   [ignorados: z0t(6305 pts, max|d|=2.47e+21), z0q(6185 pts, max|d|=0.0138)]
+  t=30: IDENTICO   [ignorados: z0t(6305 pts, max|d|=2.47e+21), z0q(6185 pts, max|d|=0.0136)]
+  t=31: IDENTICO   [ignorados: z0t(6305 pts, max|d|=2.47e+21), z0q(6185 pts, max|d|=0.0138)]
+  t=32: IDENTICO   [ignorados: z0t(6305 pts, max|d|=2.47e+21), z0q(6185 pts, max|d|=0.0144)]
+  t=33: IDENTICO   [ignorados: z0t(6305 pts, max|d|=2.47e+21), z0q(6185 pts, max|d|=0.0154)]
+  t=34: IDENTICO   [ignorados: z0t(6305 pts, max|d|=2.47e+21), z0q(6185 pts, max|d|=0.0155)]
+  t=35: IDENTICO   [ignorados: z0t(6305 pts, max|d|=2.47e+21), z0q(6185 pts, max|d|=0.0157)]
+  t=36: IDENTICO   [ignorados: z0t(6305 pts, max|d|=1.78e-05), z0q(775 pts, max|d|=3.6)]
+  t=37: IDENTICO   [ignorados: z0t(6305 pts, max|d|=3.2e-05), z0q(775 pts, max|d|=3.6)]
+  t=38: IDENTICO   [ignorados: z0t(6305 pts, max|d|=9.85e-05), z0q(775 pts, max|d|=3.6)]
+  t=39: IDENTICO   [ignorados: z0t(6305 pts, max|d|=5.01e-05), z0q(775 pts, max|d|=3.6)]
+  t=40: IDENTICO   [ignorados: z0t(6305 pts, max|d|=7.58e-05), z0q(775 pts, max|d|=3.6)]
+  t=41: IDENTICO   [ignorados: z0t(6305 pts, max|d|=9.28e-05), z0q(775 pts, max|d|=3.6)]
+  t=42: IDENTICO   [ignorados: z0t(6305 pts, max|d|=0.0001), z0q(775 pts, max|d|=3.6)]
+  -> 43 saidas comparadas: IDENTICAS
+cm1out_u:
+  t=0: IDENTICO
+  t=1: IDENTICO
+  t=2: IDENTICO
+  t=3: IDENTICO
+  t=4: IDENTICO
+  t=5: IDENTICO
+  t=6: IDENTICO
+  t=7: IDENTICO
+  t=8: IDENTICO
+  t=9: IDENTICO
+  t=10: IDENTICO
+  t=11: IDENTICO
+  t=12: IDENTICO
+  t=13: IDENTICO
+  t=14: IDENTICO
+  t=15: IDENTICO
+  t=16: IDENTICO
+  t=17: IDENTICO
+  t=18: IDENTICO
+  t=19: IDENTICO
+  t=20: IDENTICO
+  t=21: IDENTICO
+  t=22: IDENTICO
+  t=23: IDENTICO
+  t=24: IDENTICO
+  t=25: IDENTICO
+  t=26: IDENTICO
+  t=27: IDENTICO
+  t=28: IDENTICO
+  t=29: IDENTICO
+  t=30: IDENTICO
+  t=31: IDENTICO
+  t=32: IDENTICO
+  t=33: IDENTICO
+  t=34: IDENTICO
+  t=35: IDENTICO
+  t=36: IDENTICO
+  t=37: IDENTICO
+  t=38: IDENTICO
+  t=39: IDENTICO
+  t=40: IDENTICO
+  t=41: IDENTICO
+  t=42: IDENTICO
+  -> 43 saidas comparadas: IDENTICAS
+cm1out_v:
+  t=0: IDENTICO
+  t=1: IDENTICO
+  t=2: IDENTICO
+  t=3: IDENTICO
+  t=4: IDENTICO
+  t=5: IDENTICO
+  t=6: IDENTICO
+  t=7: IDENTICO
+  t=8: IDENTICO
+  t=9: IDENTICO
+  t=10: IDENTICO
+  t=11: IDENTICO
+  t=12: IDENTICO
+  t=13: IDENTICO
+  t=14: IDENTICO
+  t=15: IDENTICO
+  t=16: IDENTICO
+  t=17: IDENTICO
+  t=18: IDENTICO
+  t=19: IDENTICO
+  t=20: IDENTICO
+  t=21: IDENTICO
+  t=22: IDENTICO
+  t=23: IDENTICO
+  t=24: IDENTICO
+  t=25: IDENTICO
+  t=26: IDENTICO
+  t=27: IDENTICO
+  t=28: IDENTICO
+  t=29: IDENTICO
+  t=30: IDENTICO
+  t=31: IDENTICO
+  t=32: IDENTICO
+  t=33: IDENTICO
+  t=34: IDENTICO
+  t=35: IDENTICO
+  t=36: IDENTICO
+  t=37: IDENTICO
+  t=38: IDENTICO
+  t=39: IDENTICO
+  t=40: IDENTICO
+  t=41: IDENTICO
+  t=42: IDENTICO
+  -> 43 saidas comparadas: IDENTICAS
+cm1out_w:
+  t=0: IDENTICO
+  t=1: IDENTICO
+  t=2: IDENTICO
+  t=3: IDENTICO
+  t=4: IDENTICO
+  t=5: IDENTICO
+  t=6: IDENTICO
+  t=7: IDENTICO
+  t=8: IDENTICO
+  t=9: IDENTICO
+  t=10: IDENTICO
+  t=11: IDENTICO
+  t=12: IDENTICO
+  t=13: IDENTICO
+  t=14: IDENTICO
+  t=15: IDENTICO
+  t=16: IDENTICO
+  t=17: IDENTICO
+  t=18: IDENTICO
+  t=19: IDENTICO
+  t=20: IDENTICO
+  t=21: IDENTICO
+  t=22: IDENTICO
+  t=23: IDENTICO
+  t=24: IDENTICO
+  t=25: IDENTICO
+  t=26: IDENTICO
+  t=27: IDENTICO
+  t=28: IDENTICO
+  t=29: IDENTICO
+  t=30: IDENTICO
+  t=31: IDENTICO
+  t=32: IDENTICO
+  t=33: IDENTICO
+  t=34: IDENTICO
+  t=35: IDENTICO
+  t=36: IDENTICO
+  t=37: IDENTICO
+  t=38: IDENTICO
+  t=39: IDENTICO
+  t=40: IDENTICO
+  t=41: IDENTICO
+  t=42: IDENTICO
+  -> 43 saidas comparadas: IDENTICAS
+RESULTADO: BIT A BIT IDENTICO (exceto diagnosticos z0t/z0q)
