@@ -7,8 +7,8 @@
 ## Configuração
 
 * **WRF 4.7.1 / WPS 4.6.0** já compilados no vlab (`privado/WRF-Chem`, gfortran 11.4, dmpar), rodando pelo `kit_wrf` (carregador + glibc 2.39 + OpenMPI 4.1.6 + netCDF-Fortran 4.5.4 / netCDF 4.9.2 / HDF5 1.10.10). Nada instalado; nada em `privado/WRF-Chem` alterado.
-* **ERA5** horária, níveis de pressão (37) e superfície, 24/08 18 UTC → 26/08 06 UTC, 15–40 N, 70–100 E (`scripts/wrf/baixar_era5.py wrf`).
-* **Domínios** (Lambert, centro 28,5 N 87,5 E): d01 9 km, 240 × 190 (2.160 × 1.710 km); d02 3 km, 334 × 226 (~1.000 × 675 km, 26–32 N, 83–93 E: toda a trajetória do sistema); d03 1 km, 151 × 151, centrado no sítio, de 25/08 06 UTC em diante. 61 níveis, topo 50 hPa, coordenada híbrida.
+* **ERA5** horária, níveis de pressão (37) e superfície, baixada para 24/08 18 UTC → 26/08 06 UTC, 15–40 N, 70–100 E (`scripts/wrf/baixar_era5.py wrf`); a rodada usa **25/08 00 UTC → 26/08 03 UTC (27 h)**, com o d03 a partir de 25/08 12 UTC (o colapso é às 02:52; a aproximação do sistema começa por volta das 17 UTC).
+* **Domínios** (Lambert, centro 28,5 N 87,5 E): d01 9 km, 240 × 190 (2.160 × 1.710 km); d02 3 km, 334 × 226 (~1.000 × 675 km, 26–32 N, 83–93 E: toda a trajetória do sistema); d03 1 km, 151 × 151, centrado no sítio, de 25/08 12 UTC em diante. 61 níveis, topo 50 hPa, coordenada híbrida.
 * **Física:** NSSL 2 momentos (`mp_physics = 18`, CCN 0,6 × 10⁹ m⁻³ como no CM1), RRTMG com inclinação e sombreamento do relevo (d02, d03), YSU, Noah, Grell-Freitas só no d01.
 
 ## Critério pré-registrado (antes de rodar)
