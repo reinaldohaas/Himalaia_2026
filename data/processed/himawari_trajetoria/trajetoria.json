@@ -1,0 +1,4047 @@
+{
+ "sitio": [
+  28.271,
+  85.515
+ ],
+ "limiar_K": 213.0,
+ "caixa": [
+  24.0,
+  33.0,
+  78.0,
+  93.0
+ ],
+ "grade_graus": 0.04,
+ "registros": [
+  {
+   "utc": "2026-08-25T09:00Z",
+   "tb_sitio": 272.3,
+   "area213_150km": 17,
+   "sistema": {
+    "area_km2": 99733,
+    "tb_min": 193.6,
+    "h_topo_km": 14.5,
+    "lat_ap": 30.649,
+    "lon_ap": 90.478,
+    "lat": 30.544,
+    "lon": 90.766,
+    "dist_sitio_km": 569,
+    "rumo_do_sitio": 64
+   },
+   "objetos": [
+    {
+     "area_km2": 99733,
+     "tb_min": 193.6,
+     "h_topo_km": 14.5,
+     "lat_ap": 30.649,
+     "lon_ap": 90.478,
+     "lat": 30.544,
+     "lon": 90.766,
+     "dist_sitio_km": 569,
+     "rumo_do_sitio": 64
+    },
+    {
+     "area_km2": 44352,
+     "tb_min": 193.2,
+     "h_topo_km": 14.9,
+     "lat_ap": 26.023,
+     "lon_ap": 79.216,
+     "lat": 25.923,
+     "lon": 79.679,
+     "dist_sitio_km": 635,
+     "rumo_do_sitio": 246
+    },
+    {
+     "area_km2": 18467,
+     "tb_min": 197.7,
+     "h_topo_km": 14.8,
+     "lat_ap": 29.077,
+     "lon_ap": 78.416,
+     "lat": 28.96,
+     "lon": 78.933,
+     "dist_sitio_km": 648,
+     "rumo_do_sitio": 277
+    },
+    {
+     "area_km2": 14244,
+     "tb_min": 203.4,
+     "h_topo_km": 14.2,
+     "lat_ap": 25.794,
+     "lon_ap": 90.462,
+     "lat": 25.712,
+     "lon": 90.716,
+     "dist_sitio_km": 589,
+     "rumo_do_sitio": 119
+    },
+    {
+     "area_km2": 5311,
+     "tb_min": 196.9,
+     "h_topo_km": 14.4,
+     "lat_ap": 26.731,
+     "lon_ap": 80.862,
+     "lat": 26.634,
+     "lon": 81.276,
+     "dist_sitio_km": 457,
+     "rumo_do_sitio": 246
+    },
+    {
+     "area_km2": 4843,
+     "tb_min": 205.7,
+     "h_topo_km": 13.9,
+     "lat_ap": 31.644,
+     "lon_ap": 84.768,
+     "lat": 31.533,
+     "lon": 85.135,
+     "dist_sitio_km": 365,
+     "rumo_do_sitio": 354
+    },
+    {
+     "area_km2": 3801,
+     "tb_min": 205.6,
+     "h_topo_km": 13.7,
+     "lat_ap": 27.882,
+     "lon_ap": 80.427,
+     "lat": 27.783,
+     "lon": 80.842,
+     "dist_sitio_km": 462,
+     "rumo_do_sitio": 263
+    },
+    {
+     "area_km2": 2739,
+     "tb_min": 203.2,
+     "h_topo_km": 14.0,
+     "lat_ap": 32.564,
+     "lon_ap": 88.733,
+     "lat": 32.451,
+     "lon": 89.048,
+     "dist_sitio_km": 576,
+     "rumo_do_sitio": 36
+    }
+   ]
+  },
+  {
+   "utc": "2026-08-25T09:30Z",
+   "tb_sitio": 268.8,
+   "area213_150km": 260,
+   "sistema": {
+    "area_km2": 109626,
+    "tb_min": 192.5,
+    "h_topo_km": 14.5,
+    "lat_ap": 30.665,
+    "lon_ap": 90.366,
+    "lat": 30.56,
+    "lon": 90.656,
+    "dist_sitio_km": 560,
+    "rumo_do_sitio": 63,
+    "vel_kmh": 21.4,
+    "rumo_desloc": 280
+   },
+   "objetos": [
+    {
+     "area_km2": 109626,
+     "tb_min": 192.5,
+     "h_topo_km": 14.5,
+     "lat_ap": 30.665,
+     "lon_ap": 90.366,
+     "lat": 30.56,
+     "lon": 90.656,
+     "dist_sitio_km": 560,
+     "rumo_do_sitio": 63
+    },
+    {
+     "area_km2": 49654,
+     "tb_min": 192.9,
+     "h_topo_km": 15.0,
+     "lat_ap": 25.953,
+     "lon_ap": 79.18,
+     "lat": 25.852,
+     "lon": 79.645,
+     "dist_sitio_km": 641,
+     "rumo_do_sitio": 245
+    },
+    {
+     "area_km2": 18982,
+     "tb_min": 198.2,
+     "h_topo_km": 14.7,
+     "lat_ap": 29.274,
+     "lon_ap": 78.376,
+     "lat": 29.157,
+     "lon": 78.894,
+     "dist_sitio_km": 654,
+     "rumo_do_sitio": 279
+    },
+    {
+     "area_km2": 10687,
+     "tb_min": 205.6,
+     "h_topo_km": 14.0,
+     "lat_ap": 25.659,
+     "lon_ap": 90.104,
+     "lat": 25.578,
+     "lon": 90.357,
+     "dist_sitio_km": 566,
+     "rumo_do_sitio": 122
+    },
+    {
+     "area_km2": 8083,
+     "tb_min": 205.1,
+     "h_topo_km": 13.9,
+     "lat_ap": 32.0,
+     "lon_ap": 85.117,
+     "lat": 31.887,
+     "lon": 85.481,
+     "dist_sitio_km": 403,
+     "rumo_do_sitio": 360
+    },
+    {
+     "area_km2": 7201,
+     "tb_min": 199.3,
+     "h_topo_km": 14.4,
+     "lat_ap": 26.799,
+     "lon_ap": 80.776,
+     "lat": 26.701,
+     "lon": 81.191,
+     "dist_sitio_km": 461,
+     "rumo_do_sitio": 248
+    },
+    {
+     "area_km2": 5175,
+     "tb_min": 199.0,
+     "h_topo_km": 14.3,
+     "lat_ap": 30.541,
+     "lon_ap": 87.035,
+     "lat": 30.434,
+     "lon": 87.365,
+     "dist_sitio_km": 300,
+     "rumo_do_sitio": 37
+    },
+    {
+     "area_km2": 3045,
+     "tb_min": 198.9,
+     "h_topo_km": 14.4,
+     "lat_ap": 30.887,
+     "lon_ap": 92.487,
+     "lat": 30.782,
+     "lon": 92.752,
+     "dist_sitio_km": 755,
+     "rumo_do_sitio": 68
+    }
+   ]
+  },
+  {
+   "utc": "2026-08-25T10:00Z",
+   "tb_sitio": 268.2,
+   "area213_150km": 1125,
+   "sistema": {
+    "area_km2": 112489,
+    "tb_min": 193.1,
+    "h_topo_km": 14.5,
+    "lat_ap": 30.432,
+    "lon_ap": 89.796,
+    "lat": 30.327,
+    "lon": 90.091,
+    "dist_sitio_km": 500,
+    "rumo_do_sitio": 63,
+    "vel_kmh": 120.2,
+    "rumo_desloc": 244
+   },
+   "objetos": [
+    {
+     "area_km2": 112489,
+     "tb_min": 193.1,
+     "h_topo_km": 14.5,
+     "lat_ap": 30.432,
+     "lon_ap": 89.796,
+     "lat": 30.327,
+     "lon": 90.091,
+     "dist_sitio_km": 500,
+     "rumo_do_sitio": 63
+    },
+    {
+     "area_km2": 56218,
+     "tb_min": 194.4,
+     "h_topo_km": 15.0,
+     "lat_ap": 25.903,
+     "lon_ap": 79.108,
+     "lat": 25.803,
+     "lon": 79.576,
+     "dist_sitio_km": 650,
+     "rumo_do_sitio": 245
+    },
+    {
+     "area_km2": 18179,
+     "tb_min": 199.0,
+     "h_topo_km": 14.6,
+     "lat_ap": 29.493,
+     "lon_ap": 78.361,
+     "lat": 29.376,
+     "lon": 78.879,
+     "dist_sitio_km": 659,
+     "rumo_do_sitio": 281
+    },
+    {
+     "area_km2": 11551,
+     "tb_min": 198.9,
+     "h_topo_km": 14.4,
+     "lat_ap": 32.651,
+     "lon_ap": 92.178,
+     "lat": 32.538,
+     "lon": 92.457,
+     "dist_sitio_km": 818,
+     "rumo_do_sitio": 55
+    },
+    {
+     "area_km2": 8265,
+     "tb_min": 194.9,
+     "h_topo_km": 14.6,
+     "lat_ap": 31.195,
+     "lon_ap": 92.491,
+     "lat": 31.088,
+     "lon": 92.761,
+     "dist_sitio_km": 768,
+     "rumo_do_sitio": 66
+    },
+    {
+     "area_km2": 8077,
+     "tb_min": 200.1,
+     "h_topo_km": 14.2,
+     "lat_ap": 26.895,
+     "lon_ap": 80.657,
+     "lat": 26.798,
+     "lon": 81.07,
+     "dist_sitio_km": 468,
+     "rumo_do_sitio": 250
+    },
+    {
+     "area_km2": 7873,
+     "tb_min": 205.2,
+     "h_topo_km": 13.9,
+     "lat_ap": 32.014,
+     "lon_ap": 85.168,
+     "lat": 31.901,
+     "lon": 85.531,
+     "dist_sitio_km": 404,
+     "rumo_do_sitio": 0
+    },
+    {
+     "area_km2": 5832,
+     "tb_min": 209.3,
+     "h_topo_km": 13.7,
+     "lat_ap": 25.541,
+     "lon_ap": 89.844,
+     "lat": 25.461,
+     "lon": 90.095,
+     "dist_sitio_km": 552,
+     "rumo_do_sitio": 125
+    }
+   ]
+  },
+  {
+   "utc": "2026-08-25T10:30Z",
+   "tb_sitio": 270.7,
+   "area213_150km": 1178,
+   "sistema": {
+    "area_km2": 101588,
+    "tb_min": 190.3,
+    "h_topo_km": 14.7,
+    "lat_ap": 30.77,
+    "lon_ap": 89.911,
+    "lat": 30.662,
+    "lon": 90.21,
+    "dist_sitio_km": 527,
+    "rumo_do_sitio": 60,
+    "vel_kmh": 78.0,
+    "rumo_desloc": 17
+   },
+   "objetos": [
+    {
+     "area_km2": 101588,
+     "tb_min": 190.3,
+     "h_topo_km": 14.7,
+     "lat_ap": 30.77,
+     "lon_ap": 89.911,
+     "lat": 30.662,
+     "lon": 90.21,
+     "dist_sitio_km": 527,
+     "rumo_do_sitio": 60
+    },
+    {
+     "area_km2": 58924,
+     "tb_min": 195.0,
+     "h_topo_km": 15.1,
+     "lat_ap": 25.896,
+     "lon_ap": 79.044,
+     "lat": 25.795,
+     "lon": 79.515,
+     "dist_sitio_km": 656,
+     "rumo_do_sitio": 245
+    },
+    {
+     "area_km2": 24351,
+     "tb_min": 194.5,
+     "h_topo_km": 14.1,
+     "lat_ap": 28.857,
+     "lon_ap": 90.609,
+     "lat": 28.762,
+     "lon": 90.876,
+     "dist_sitio_km": 527,
+     "rumo_do_sitio": 84
+    },
+    {
+     "area_km2": 17354,
+     "tb_min": 200.1,
+     "h_topo_km": 14.5,
+     "lat_ap": 29.67,
+     "lon_ap": 78.336,
+     "lat": 29.553,
+     "lon": 78.851,
+     "dist_sitio_km": 665,
+     "rumo_do_sitio": 282
+    },
+    {
+     "area_km2": 10515,
+     "tb_min": 197.9,
+     "h_topo_km": 14.3,
+     "lat_ap": 32.647,
+     "lon_ap": 92.272,
+     "lat": 32.534,
+     "lon": 92.549,
+     "dist_sitio_km": 825,
+     "rumo_do_sitio": 55
+    },
+    {
+     "area_km2": 5552,
+     "tb_min": 201.5,
+     "h_topo_km": 14.2,
+     "lat_ap": 26.917,
+     "lon_ap": 80.568,
+     "lat": 26.82,
+     "lon": 80.984,
+     "dist_sitio_km": 475,
+     "rumo_do_sitio": 250
+    },
+    {
+     "area_km2": 5478,
+     "tb_min": 199.0,
+     "h_topo_km": 14.9,
+     "lat_ap": 24.229,
+     "lon_ap": 86.615,
+     "lat": 24.145,
+     "lon": 86.921,
+     "dist_sitio_km": 480,
+     "rumo_do_sitio": 163
+    },
+    {
+     "area_km2": 4657,
+     "tb_min": 194.6,
+     "h_topo_km": 14.6,
+     "lat_ap": 28.823,
+     "lon_ap": 88.758,
+     "lat": 28.723,
+     "lon": 89.057,
+     "dist_sitio_km": 350,
+     "rumo_do_sitio": 82
+    }
+   ]
+  },
+  {
+   "utc": "2026-08-25T11:00Z",
+   "tb_sitio": 270.2,
+   "area213_150km": 675,
+   "sistema": {
+    "area_km2": 107269,
+    "tb_min": 190.7,
+    "h_topo_km": 14.6,
+    "lat_ap": 30.781,
+    "lon_ap": 89.979,
+    "lat": 30.673,
+    "lon": 90.277,
+    "dist_sitio_km": 533,
+    "rumo_do_sitio": 60,
+    "vel_kmh": 13.1,
+    "rumo_desloc": 79
+   },
+   "objetos": [
+    {
+     "area_km2": 107269,
+     "tb_min": 190.7,
+     "h_topo_km": 14.6,
+     "lat_ap": 30.781,
+     "lon_ap": 89.979,
+     "lat": 30.673,
+     "lon": 90.277,
+     "dist_sitio_km": 533,
+     "rumo_do_sitio": 60
+    },
+    {
+     "area_km2": 57543,
+     "tb_min": 192.7,
+     "h_topo_km": 15.1,
+     "lat_ap": 25.939,
+     "lon_ap": 78.971,
+     "lat": 25.838,
+     "lon": 79.446,
+     "dist_sitio_km": 660,
+     "rumo_do_sitio": 246
+    },
+    {
+     "area_km2": 16541,
+     "tb_min": 192.1,
+     "h_topo_km": 14.3,
+     "lat_ap": 29.045,
+     "lon_ap": 90.173,
+     "lat": 28.947,
+     "lon": 90.45,
+     "dist_sitio_km": 488,
+     "rumo_do_sitio": 81
+    },
+    {
+     "area_km2": 16426,
+     "tb_min": 201.2,
+     "h_topo_km": 14.3,
+     "lat_ap": 29.854,
+     "lon_ap": 78.305,
+     "lat": 29.737,
+     "lon": 78.818,
+     "dist_sitio_km": 672,
+     "rumo_do_sitio": 284
+    },
+    {
+     "area_km2": 7204,
+     "tb_min": 196.5,
+     "h_topo_km": 14.5,
+     "lat_ap": 28.893,
+     "lon_ap": 88.626,
+     "lat": 28.794,
+     "lon": 88.927,
+     "dist_sitio_km": 339,
+     "rumo_do_sitio": 80
+    },
+    {
+     "area_km2": 7196,
+     "tb_min": 196.6,
+     "h_topo_km": 14.6,
+     "lat_ap": 24.229,
+     "lon_ap": 86.188,
+     "lat": 24.147,
+     "lon": 86.495,
+     "dist_sitio_km": 469,
+     "rumo_do_sitio": 168
+    },
+    {
+     "area_km2": 4981,
+     "tb_min": 203.7,
+     "h_topo_km": 13.9,
+     "lat_ap": 26.986,
+     "lon_ap": 80.425,
+     "lat": 26.89,
+     "lon": 80.839,
+     "dist_sitio_km": 486,
+     "rumo_do_sitio": 252
+    },
+    {
+     "area_km2": 4861,
+     "tb_min": 195.8,
+     "h_topo_km": 14.4,
+     "lat_ap": 32.566,
+     "lon_ap": 92.795,
+     "lat": 32.454,
+     "lon": 93.067,
+     "dist_sitio_km": 862,
+     "rumo_do_sitio": 57
+    }
+   ]
+  },
+  {
+   "utc": "2026-08-25T11:30Z",
+   "tb_sitio": 269.7,
+   "area213_150km": 814,
+   "sistema": {
+    "area_km2": 128760,
+    "tb_min": 193.6,
+    "h_topo_km": 14.6,
+    "lat_ap": 30.569,
+    "lon_ap": 89.897,
+    "lat": 30.463,
+    "lon": 90.193,
+    "dist_sitio_km": 515,
+    "rumo_do_sitio": 62,
+    "vel_kmh": 49.4,
+    "rumo_desloc": 199
+   },
+   "objetos": [
+    {
+     "area_km2": 128760,
+     "tb_min": 193.6,
+     "h_topo_km": 14.6,
+     "lat_ap": 30.569,
+     "lon_ap": 89.897,
+     "lat": 30.463,
+     "lon": 90.193,
+     "dist_sitio_km": 515,
+     "rumo_do_sitio": 62
+    },
+    {
+     "area_km2": 61553,
+     "tb_min": 192.8,
+     "h_topo_km": 14.9,
+     "lat_ap": 26.058,
+     "lon_ap": 78.926,
+     "lat": 25.957,
+     "lon": 79.397,
+     "dist_sitio_km": 659,
+     "rumo_do_sitio": 247
+    },
+    {
+     "area_km2": 14252,
+     "tb_min": 202.3,
+     "h_topo_km": 14.2,
+     "lat_ap": 30.051,
+     "lon_ap": 78.281,
+     "lat": 29.934,
+     "lon": 78.792,
+     "dist_sitio_km": 680,
+     "rumo_do_sitio": 286
+    },
+    {
+     "area_km2": 8404,
+     "tb_min": 197.6,
+     "h_topo_km": 14.4,
+     "lat_ap": 28.881,
+     "lon_ap": 88.438,
+     "lat": 28.782,
+     "lon": 88.738,
+     "dist_sitio_km": 320,
+     "rumo_do_sitio": 80
+    },
+    {
+     "area_km2": 7775,
+     "tb_min": 199.4,
+     "h_topo_km": 14.4,
+     "lat_ap": 24.235,
+     "lon_ap": 85.785,
+     "lat": 24.153,
+     "lon": 86.094,
+     "dist_sitio_km": 462,
+     "rumo_do_sitio": 173
+    },
+    {
+     "area_km2": 4969,
+     "tb_min": 205.7,
+     "h_topo_km": 14.0,
+     "lat_ap": 24.802,
+     "lon_ap": 90.459,
+     "lat": 24.724,
+     "lon": 90.704,
+     "dist_sitio_km": 651,
+     "rumo_do_sitio": 127
+    },
+    {
+     "area_km2": 4590,
+     "tb_min": 202.5,
+     "h_topo_km": 14.1,
+     "lat_ap": 24.836,
+     "lon_ap": 82.567,
+     "lat": 24.75,
+     "lon": 82.925,
+     "dist_sitio_km": 469,
+     "rumo_do_sitio": 213
+    },
+    {
+     "area_km2": 4580,
+     "tb_min": 197.0,
+     "h_topo_km": 14.2,
+     "lat_ap": 32.52,
+     "lon_ap": 92.818,
+     "lat": 32.409,
+     "lon": 93.086,
+     "dist_sitio_km": 861,
+     "rumo_do_sitio": 58
+    }
+   ]
+  },
+  {
+   "utc": "2026-08-25T12:00Z",
+   "tb_sitio": 269.0,
+   "area213_150km": 728,
+   "sistema": {
+    "area_km2": 141681,
+    "tb_min": 191.3,
+    "h_topo_km": 14.5,
+    "lat_ap": 30.406,
+    "lon_ap": 89.781,
+    "lat": 30.301,
+    "lon": 90.076,
+    "dist_sitio_km": 497,
+    "rumo_do_sitio": 63,
+    "vel_kmh": 42.5,
+    "rumo_desloc": 212
+   },
+   "objetos": [
+    {
+     "area_km2": 141681,
+     "tb_min": 191.3,
+     "h_topo_km": 14.5,
+     "lat_ap": 30.406,
+     "lon_ap": 89.781,
+     "lat": 30.301,
+     "lon": 90.076,
+     "dist_sitio_km": 497,
+     "rumo_do_sitio": 63
+    },
+    {
+     "area_km2": 58387,
+     "tb_min": 194.3,
+     "h_topo_km": 14.8,
+     "lat_ap": 26.153,
+     "lon_ap": 78.857,
+     "lat": 26.052,
+     "lon": 79.328,
+     "dist_sitio_km": 661,
+     "rumo_do_sitio": 248
+    },
+    {
+     "area_km2": 12328,
+     "tb_min": 205.0,
+     "h_topo_km": 14.0,
+     "lat_ap": 30.241,
+     "lon_ap": 78.262,
+     "lat": 30.124,
+     "lon": 78.769,
+     "dist_sitio_km": 687,
+     "rumo_do_sitio": 287
+    },
+    {
+     "area_km2": 7692,
+     "tb_min": 203.5,
+     "h_topo_km": 13.9,
+     "lat_ap": 24.731,
+     "lon_ap": 90.74,
+     "lat": 24.653,
+     "lon": 90.981,
+     "dist_sitio_km": 677,
+     "rumo_do_sitio": 126
+    },
+    {
+     "area_km2": 6962,
+     "tb_min": 200.9,
+     "h_topo_km": 14.3,
+     "lat_ap": 24.219,
+     "lon_ap": 85.355,
+     "lat": 24.138,
+     "lon": 85.667,
+     "dist_sitio_km": 460,
+     "rumo_do_sitio": 178
+    },
+    {
+     "area_km2": 4464,
+     "tb_min": 203.5,
+     "h_topo_km": 14.0,
+     "lat_ap": 24.818,
+     "lon_ap": 82.268,
+     "lat": 24.734,
+     "lon": 82.628,
+     "dist_sitio_km": 488,
+     "rumo_do_sitio": 216
+    },
+    {
+     "area_km2": 4434,
+     "tb_min": 193.2,
+     "h_topo_km": 15.0,
+     "lat_ap": 25.155,
+     "lon_ap": 81.406,
+     "lat": 25.062,
+     "lon": 81.81,
+     "dist_sitio_km": 513,
+     "rumo_do_sitio": 226
+    },
+    {
+     "area_km2": 4084,
+     "tb_min": 205.9,
+     "h_topo_km": 13.8,
+     "lat_ap": 32.018,
+     "lon_ap": 85.391,
+     "lat": 31.906,
+     "lon": 85.749,
+     "dist_sitio_km": 405,
+     "rumo_do_sitio": 3
+    }
+   ]
+  },
+  {
+   "utc": "2026-08-25T12:30Z",
+   "tb_sitio": 267.5,
+   "area213_150km": 364,
+   "sistema": {
+    "area_km2": 145746,
+    "tb_min": 193.9,
+    "h_topo_km": 14.4,
+    "lat_ap": 30.302,
+    "lon_ap": 89.793,
+    "lat": 30.198,
+    "lon": 90.085,
+    "dist_sitio_km": 493,
+    "rumo_do_sitio": 64,
+    "vel_kmh": 23.0,
+    "rumo_desloc": 176
+   },
+   "objetos": [
+    {
+     "area_km2": 145746,
+     "tb_min": 193.9,
+     "h_topo_km": 14.4,
+     "lat_ap": 30.302,
+     "lon_ap": 89.793,
+     "lat": 30.198,
+     "lon": 90.085,
+     "dist_sitio_km": 493,
+     "rumo_do_sitio": 64
+    },
+    {
+     "area_km2": 68732,
+     "tb_min": 192.8,
+     "h_topo_km": 14.7,
+     "lat_ap": 26.063,
+     "lon_ap": 79.251,
+     "lat": 25.964,
+     "lon": 79.707,
+     "dist_sitio_km": 630,
+     "rumo_do_sitio": 246
+    },
+    {
+     "area_km2": 8532,
+     "tb_min": 206.9,
+     "h_topo_km": 13.7,
+     "lat_ap": 30.517,
+     "lon_ap": 78.228,
+     "lat": 30.401,
+     "lon": 78.731,
+     "dist_sitio_km": 700,
+     "rumo_do_sitio": 290
+    },
+    {
+     "area_km2": 6293,
+     "tb_min": 202.0,
+     "h_topo_km": 14.1,
+     "lat_ap": 24.219,
+     "lon_ap": 85.002,
+     "lat": 24.139,
+     "lon": 85.316,
+     "dist_sitio_km": 460,
+     "rumo_do_sitio": 182
+    },
+    {
+     "area_km2": 3894,
+     "tb_min": 206.3,
+     "h_topo_km": 13.9,
+     "lat_ap": 24.601,
+     "lon_ap": 90.744,
+     "lat": 24.524,
+     "lon": 90.985,
+     "dist_sitio_km": 687,
+     "rumo_do_sitio": 127
+    },
+    {
+     "area_km2": 3582,
+     "tb_min": 201.0,
+     "h_topo_km": 14.0,
+     "lat_ap": 24.789,
+     "lon_ap": 82.038,
+     "lat": 24.705,
+     "lon": 82.401,
+     "dist_sitio_km": 504,
+     "rumo_do_sitio": 218
+    },
+    {
+     "area_km2": 3066,
+     "tb_min": 200.1,
+     "h_topo_km": 13.8,
+     "lat_ap": 24.673,
+     "lon_ap": 89.8,
+     "lat": 24.596,
+     "lon": 90.049,
+     "dist_sitio_km": 610,
+     "rumo_do_sitio": 132
+    },
+    {
+     "area_km2": 3010,
+     "tb_min": 196.8,
+     "h_topo_km": 14.3,
+     "lat_ap": 32.481,
+     "lon_ap": 92.896,
+     "lat": 32.37,
+     "lon": 93.165,
+     "dist_sitio_km": 865,
+     "rumo_do_sitio": 58
+    }
+   ]
+  },
+  {
+   "utc": "2026-08-25T13:00Z",
+   "tb_sitio": 264.7,
+   "area213_150km": 190,
+   "sistema": {
+    "area_km2": 130720,
+    "tb_min": 191.7,
+    "h_topo_km": 14.4,
+    "lat_ap": 30.134,
+    "lon_ap": 89.888,
+    "lat": 30.032,
+    "lon": 90.177,
+    "dist_sitio_km": 494,
+    "rumo_do_sitio": 67,
+    "vel_kmh": 41.0,
+    "rumo_desloc": 154
+   },
+   "objetos": [
+    {
+     "area_km2": 130720,
+     "tb_min": 191.7,
+     "h_topo_km": 14.4,
+     "lat_ap": 30.134,
+     "lon_ap": 89.888,
+     "lat": 30.032,
+     "lon": 90.177,
+     "dist_sitio_km": 494,
+     "rumo_do_sitio": 67
+    },
+    {
+     "area_km2": 72504,
+     "tb_min": 190.9,
+     "h_topo_km": 14.6,
+     "lat_ap": 26.016,
+     "lon_ap": 79.47,
+     "lat": 25.919,
+     "lon": 79.916,
+     "dist_sitio_km": 614,
+     "rumo_do_sitio": 245
+    },
+    {
+     "area_km2": 9454,
+     "tb_min": 203.9,
+     "h_topo_km": 13.9,
+     "lat_ap": 31.639,
+     "lon_ap": 88.139,
+     "lat": 31.531,
+     "lon": 88.452,
+     "dist_sitio_km": 461,
+     "rumo_do_sitio": 38
+    },
+    {
+     "area_km2": 4316,
+     "tb_min": 194.1,
+     "h_topo_km": 14.8,
+     "lat_ap": 25.467,
+     "lon_ap": 82.664,
+     "lat": 25.375,
+     "lon": 83.04,
+     "dist_sitio_km": 405,
+     "rumo_do_sitio": 217
+    },
+    {
+     "area_km2": 3638,
+     "tb_min": 200.5,
+     "h_topo_km": 14.5,
+     "lat_ap": 24.766,
+     "lon_ap": 89.512,
+     "lat": 24.685,
+     "lon": 89.776,
+     "dist_sitio_km": 583,
+     "rumo_do_sitio": 133
+    },
+    {
+     "area_km2": 3438,
+     "tb_min": 199.3,
+     "h_topo_km": 14.3,
+     "lat_ap": 24.809,
+     "lon_ap": 81.992,
+     "lat": 24.722,
+     "lon": 82.365,
+     "dist_sitio_km": 505,
+     "rumo_do_sitio": 218
+    },
+    {
+     "area_km2": 3250,
+     "tb_min": 207.9,
+     "h_topo_km": 13.8,
+     "lat_ap": 24.377,
+     "lon_ap": 90.441,
+     "lat": 24.302,
+     "lon": 90.681,
+     "dist_sitio_km": 679,
+     "rumo_do_sitio": 131
+    },
+    {
+     "area_km2": 3169,
+     "tb_min": 201.3,
+     "h_topo_km": 14.1,
+     "lat_ap": 30.783,
+     "lon_ap": 85.135,
+     "lat": 30.675,
+     "lon": 85.493,
+     "dist_sitio_km": 268,
+     "rumo_do_sitio": 360
+    }
+   ]
+  },
+  {
+   "utc": "2026-08-25T13:30Z",
+   "tb_sitio": 267.0,
+   "area213_150km": 243,
+   "sistema": {
+    "area_km2": 128255,
+    "tb_min": 190.6,
+    "h_topo_km": 14.3,
+    "lat_ap": 30.061,
+    "lon_ap": 89.839,
+    "lat": 29.959,
+    "lon": 90.127,
+    "dist_sitio_km": 486,
+    "rumo_do_sitio": 67,
+    "vel_kmh": 18.9,
+    "rumo_desloc": 211
+   },
+   "objetos": [
+    {
+     "area_km2": 128255,
+     "tb_min": 190.6,
+     "h_topo_km": 14.3,
+     "lat_ap": 30.061,
+     "lon_ap": 89.839,
+     "lat": 29.959,
+     "lon": 90.127,
+     "dist_sitio_km": 486,
+     "rumo_do_sitio": 67
+    },
+    {
+     "area_km2": 78029,
+     "tb_min": 191.6,
+     "h_topo_km": 14.5,
+     "lat_ap": 25.947,
+     "lon_ap": 79.935,
+     "lat": 25.851,
+     "lon": 80.368,
+     "dist_sitio_km": 577,
+     "rumo_do_sitio": 242
+    },
+    {
+     "area_km2": 6449,
+     "tb_min": 202.5,
+     "h_topo_km": 14.3,
+     "lat_ap": 24.72,
+     "lon_ap": 89.209,
+     "lat": 24.64,
+     "lon": 89.474,
+     "dist_sitio_km": 565,
+     "rumo_do_sitio": 136
+    },
+    {
+     "area_km2": 3869,
+     "tb_min": 194.5,
+     "h_topo_km": 14.5,
+     "lat_ap": 24.87,
+     "lon_ap": 81.83,
+     "lat": 24.782,
+     "lon": 82.211,
+     "dist_sitio_km": 509,
+     "rumo_do_sitio": 220
+    },
+    {
+     "area_km2": 2134,
+     "tb_min": 210.4,
+     "h_topo_km": 13.6,
+     "lat_ap": 24.173,
+     "lon_ap": 90.175,
+     "lat": 24.099,
+     "lon": 90.414,
+     "dist_sitio_km": 675,
+     "rumo_do_sitio": 133
+    },
+    {
+     "area_km2": 1387,
+     "tb_min": 206.3,
+     "h_topo_km": 13.9,
+     "lat_ap": 26.301,
+     "lon_ap": 88.873,
+     "lat": 26.217,
+     "lon": 89.142,
+     "dist_sitio_km": 426,
+     "rumo_do_sitio": 122
+    },
+    {
+     "area_km2": 1362,
+     "tb_min": 209.3,
+     "h_topo_km": 13.6,
+     "lat_ap": 31.995,
+     "lon_ap": 87.978,
+     "lat": 31.888,
+     "lon": 88.291,
+     "dist_sitio_km": 483,
+     "rumo_do_sitio": 34
+    },
+    {
+     "area_km2": 1327,
+     "tb_min": 206.3,
+     "h_topo_km": 13.8,
+     "lat_ap": 30.883,
+     "lon_ap": 85.028,
+     "lat": 30.776,
+     "lon": 85.383,
+     "dist_sitio_km": 279,
+     "rumo_do_sitio": 357
+    }
+   ]
+  },
+  {
+   "utc": "2026-08-25T14:00Z",
+   "tb_sitio": 262.1,
+   "area213_150km": 801,
+   "sistema": {
+    "area_km2": 79199,
+    "tb_min": 194.0,
+    "h_topo_km": 14.5,
+    "lat_ap": 29.534,
+    "lon_ap": 89.018,
+    "lat": 29.432,
+    "lon": 89.317,
+    "dist_sitio_km": 393,
+    "rumo_do_sitio": 71,
+    "vel_kmh": 195.7,
+    "rumo_desloc": 233
+   },
+   "objetos": [
+    {
+     "area_km2": 82240,
+     "tb_min": 190.2,
+     "h_topo_km": 14.5,
+     "lat_ap": 25.847,
+     "lon_ap": 80.342,
+     "lat": 25.752,
+     "lon": 80.764,
+     "dist_sitio_km": 548,
+     "rumo_do_sitio": 239
+    },
+    {
+     "area_km2": 79199,
+     "tb_min": 194.0,
+     "h_topo_km": 14.5,
+     "lat_ap": 29.534,
+     "lon_ap": 89.018,
+     "lat": 29.432,
+     "lon": 89.317,
+     "dist_sitio_km": 393,
+     "rumo_do_sitio": 71
+    },
+    {
+     "area_km2": 35969,
+     "tb_min": 198.1,
+     "h_topo_km": 14.1,
+     "lat_ap": 31.239,
+     "lon_ap": 91.851,
+     "lat": 31.135,
+     "lon": 92.119,
+     "dist_sitio_km": 714,
+     "rumo_do_sitio": 63
+    },
+    {
+     "area_km2": 7679,
+     "tb_min": 204.3,
+     "h_topo_km": 14.1,
+     "lat_ap": 24.65,
+     "lon_ap": 88.925,
+     "lat": 24.571,
+     "lon": 89.189,
+     "dist_sitio_km": 551,
+     "rumo_do_sitio": 138
+    },
+    {
+     "area_km2": 1441,
+     "tb_min": 203.8,
+     "h_topo_km": 13.8,
+     "lat_ap": 24.735,
+     "lon_ap": 83.802,
+     "lat": 24.653,
+     "lon": 84.13,
+     "dist_sitio_km": 426,
+     "rumo_do_sitio": 199
+    },
+    {
+     "area_km2": 995,
+     "tb_min": 204.3,
+     "h_topo_km": 14.1,
+     "lat_ap": 24.093,
+     "lon_ap": 79.405,
+     "lat": 24.007,
+     "lon": 79.821,
+     "dist_sitio_km": 741,
+     "rumo_do_sitio": 230
+    },
+    {
+     "area_km2": 911,
+     "tb_min": 208.2,
+     "h_topo_km": 13.7,
+     "lat_ap": 29.834,
+     "lon_ap": 83.486,
+     "lat": 29.731,
+     "lon": 83.856,
+     "dist_sitio_km": 229,
+     "rumo_do_sitio": 315
+    },
+    {
+     "area_km2": 852,
+     "tb_min": 209.2,
+     "h_topo_km": 13.6,
+     "lat_ap": 30.73,
+     "lon_ap": 89.499,
+     "lat": 30.63,
+     "lon": 89.782,
+     "dist_sitio_km": 490,
+     "rumo_do_sitio": 58
+    }
+   ]
+  },
+  {
+   "utc": "2026-08-25T14:30Z",
+   "tb_sitio": 262.5,
+   "area213_150km": 1100,
+   "sistema": {
+    "area_km2": 77909,
+    "tb_min": 194.5,
+    "h_topo_km": 14.5,
+    "lat_ap": 29.49,
+    "lon_ap": 88.96,
+    "lat": 29.389,
+    "lon": 89.26,
+    "dist_sitio_km": 386,
+    "rumo_do_sitio": 71,
+    "vel_kmh": 14.6,
+    "rumo_desloc": 229
+   },
+   "objetos": [
+    {
+     "area_km2": 77909,
+     "tb_min": 194.5,
+     "h_topo_km": 14.5,
+     "lat_ap": 29.49,
+     "lon_ap": 88.96,
+     "lat": 29.389,
+     "lon": 89.26,
+     "dist_sitio_km": 386,
+     "rumo_do_sitio": 71
+    },
+    {
+     "area_km2": 77199,
+     "tb_min": 190.7,
+     "h_topo_km": 14.6,
+     "lat_ap": 25.804,
+     "lon_ap": 80.579,
+     "lat": 25.709,
+     "lon": 80.996,
+     "dist_sitio_km": 531,
+     "rumo_do_sitio": 238
+    },
+    {
+     "area_km2": 22979,
+     "tb_min": 200.8,
+     "h_topo_km": 13.9,
+     "lat_ap": 30.985,
+     "lon_ap": 91.706,
+     "lat": 30.883,
+     "lon": 91.97,
+     "dist_sitio_km": 689,
+     "rumo_do_sitio": 65
+    },
+    {
+     "area_km2": 6186,
+     "tb_min": 205.4,
+     "h_topo_km": 13.8,
+     "lat_ap": 24.612,
+     "lon_ap": 88.692,
+     "lat": 24.534,
+     "lon": 88.952,
+     "dist_sitio_km": 539,
+     "rumo_do_sitio": 141
+    },
+    {
+     "area_km2": 3827,
+     "tb_min": 201.2,
+     "h_topo_km": 14.2,
+     "lat_ap": 32.182,
+     "lon_ap": 92.86,
+     "lat": 32.073,
+     "lon": 93.125,
+     "dist_sitio_km": 846,
+     "rumo_do_sitio": 60
+    },
+    {
+     "area_km2": 2159,
+     "tb_min": 195.6,
+     "h_topo_km": 14.9,
+     "lat_ap": 24.84,
+     "lon_ap": 83.79,
+     "lat": 24.751,
+     "lon": 84.144,
+     "dist_sitio_km": 415,
+     "rumo_do_sitio": 199
+    },
+    {
+     "area_km2": 1092,
+     "tb_min": 207.0,
+     "h_topo_km": 13.7,
+     "lat_ap": 30.638,
+     "lon_ap": 92.716,
+     "lat": 30.54,
+     "lon": 92.964,
+     "dist_sitio_km": 765,
+     "rumo_do_sitio": 71
+    },
+    {
+     "area_km2": 996,
+     "tb_min": 206.5,
+     "h_topo_km": 13.9,
+     "lat_ap": 24.075,
+     "lon_ap": 79.022,
+     "lat": 23.99,
+     "lon": 79.441,
+     "dist_sitio_km": 772,
+     "rumo_do_sitio": 232
+    }
+   ]
+  },
+  {
+   "utc": "2026-08-25T15:00Z",
+   "tb_sitio": 266.0,
+   "area213_150km": 1136,
+   "sistema": {
+    "area_km2": 77583,
+    "tb_min": 195.0,
+    "h_topo_km": 14.4,
+    "lat_ap": 29.428,
+    "lon_ap": 88.887,
+    "lat": 29.327,
+    "lon": 89.186,
+    "dist_sitio_km": 377,
+    "rumo_do_sitio": 72,
+    "vel_kmh": 19.9,
+    "rumo_desloc": 226
+   },
+   "objetos": [
+    {
+     "area_km2": 77583,
+     "tb_min": 195.0,
+     "h_topo_km": 14.4,
+     "lat_ap": 29.428,
+     "lon_ap": 88.887,
+     "lat": 29.327,
+     "lon": 89.186,
+     "dist_sitio_km": 377,
+     "rumo_do_sitio": 72
+    },
+    {
+     "area_km2": 63465,
+     "tb_min": 189.7,
+     "h_topo_km": 14.8,
+     "lat_ap": 25.731,
+     "lon_ap": 80.88,
+     "lat": 25.635,
+     "lon": 81.297,
+     "dist_sitio_km": 511,
+     "rumo_do_sitio": 235
+    },
+    {
+     "area_km2": 9578,
+     "tb_min": 199.3,
+     "h_topo_km": 13.9,
+     "lat_ap": 31.105,
+     "lon_ap": 91.614,
+     "lat": 31.003,
+     "lon": 91.879,
+     "dist_sitio_km": 687,
+     "rumo_do_sitio": 64
+    },
+    {
+     "area_km2": 7102,
+     "tb_min": 202.9,
+     "h_topo_km": 14.0,
+     "lat_ap": 26.327,
+     "lon_ap": 78.464,
+     "lat": 26.231,
+     "lon": 78.922,
+     "dist_sitio_km": 691,
+     "rumo_do_sitio": 251
+    },
+    {
+     "area_km2": 4685,
+     "tb_min": 194.5,
+     "h_topo_km": 14.3,
+     "lat_ap": 32.054,
+     "lon_ap": 92.748,
+     "lat": 31.945,
+     "lon": 93.014,
+     "dist_sitio_km": 830,
+     "rumo_do_sitio": 60
+    },
+    {
+     "area_km2": 4228,
+     "tb_min": 196.9,
+     "h_topo_km": 15.0,
+     "lat_ap": 24.873,
+     "lon_ap": 83.538,
+     "lat": 24.784,
+     "lon": 83.9,
+     "dist_sitio_km": 420,
+     "rumo_do_sitio": 203
+    },
+    {
+     "area_km2": 3920,
+     "tb_min": 205.6,
+     "h_topo_km": 13.9,
+     "lat_ap": 30.351,
+     "lon_ap": 92.13,
+     "lat": 30.253,
+     "lon": 92.385,
+     "dist_sitio_km": 703,
+     "rumo_do_sitio": 72
+    },
+    {
+     "area_km2": 1780,
+     "tb_min": 203.1,
+     "h_topo_km": 14.2,
+     "lat_ap": 24.967,
+     "lon_ap": 87.625,
+     "lat": 24.885,
+     "lon": 87.907,
+     "dist_sitio_km": 446,
+     "rumo_do_sitio": 148
+    }
+   ]
+  },
+  {
+   "utc": "2026-08-25T15:30Z",
+   "tb_sitio": 249.7,
+   "area213_150km": 1030,
+   "sistema": {
+    "area_km2": 76391,
+    "tb_min": 194.8,
+    "h_topo_km": 14.4,
+    "lat_ap": 29.361,
+    "lon_ap": 88.697,
+    "lat": 29.261,
+    "lon": 88.997,
+    "dist_sitio_km": 357,
+    "rumo_do_sitio": 72,
+    "vel_kmh": 39.5,
+    "rumo_desloc": 248
+   },
+   "objetos": [
+    {
+     "area_km2": 79064,
+     "tb_min": 191.0,
+     "h_topo_km": 14.8,
+     "lat_ap": 25.721,
+     "lon_ap": 80.885,
+     "lat": 25.626,
+     "lon": 81.301,
+     "dist_sitio_km": 511,
+     "rumo_do_sitio": 235
+    },
+    {
+     "area_km2": 76391,
+     "tb_min": 194.8,
+     "h_topo_km": 14.4,
+     "lat_ap": 29.361,
+     "lon_ap": 88.697,
+     "lat": 29.261,
+     "lon": 88.997,
+     "dist_sitio_km": 357,
+     "rumo_do_sitio": 72
+    },
+    {
+     "area_km2": 5246,
+     "tb_min": 196.0,
+     "h_topo_km": 14.3,
+     "lat_ap": 31.95,
+     "lon_ap": 92.602,
+     "lat": 31.842,
+     "lon": 92.869,
+     "dist_sitio_km": 812,
+     "rumo_do_sitio": 61
+    },
+    {
+     "area_km2": 4080,
+     "tb_min": 195.6,
+     "h_topo_km": 14.3,
+     "lat_ap": 25.049,
+     "lon_ap": 87.21,
+     "lat": 24.966,
+     "lon": 87.501,
+     "dist_sitio_km": 418,
+     "rumo_do_sitio": 152
+    },
+    {
+     "area_km2": 3200,
+     "tb_min": 204.4,
+     "h_topo_km": 13.7,
+     "lat_ap": 30.416,
+     "lon_ap": 92.14,
+     "lat": 30.318,
+     "lon": 92.393,
+     "dist_sitio_km": 706,
+     "rumo_do_sitio": 71
+    },
+    {
+     "area_km2": 3006,
+     "tb_min": 204.7,
+     "h_topo_km": 13.8,
+     "lat_ap": 31.159,
+     "lon_ap": 91.044,
+     "lat": 31.056,
+     "lon": 91.315,
+     "dist_sitio_km": 641,
+     "rumo_do_sitio": 61
+    },
+    {
+     "area_km2": 2379,
+     "tb_min": 204.4,
+     "h_topo_km": 13.8,
+     "lat_ap": 31.024,
+     "lon_ap": 92.284,
+     "lat": 30.923,
+     "lon": 92.541,
+     "dist_sitio_km": 741,
+     "rumo_do_sitio": 67
+    },
+    {
+     "area_km2": 2111,
+     "tb_min": 203.7,
+     "h_topo_km": 14.0,
+     "lat_ap": 24.528,
+     "lon_ap": 80.973,
+     "lat": 24.442,
+     "lon": 81.357,
+     "dist_sitio_km": 595,
+     "rumo_do_sitio": 224
+    }
+   ]
+  },
+  {
+   "utc": "2026-08-25T16:00Z",
+   "tb_sitio": 230.1,
+   "area213_150km": 541,
+   "sistema": {
+    "area_km2": 70942,
+    "tb_min": 195.5,
+    "h_topo_km": 14.4,
+    "lat_ap": 29.307,
+    "lon_ap": 88.432,
+    "lat": 29.207,
+    "lon": 88.734,
+    "dist_sitio_km": 331,
+    "rumo_do_sitio": 72,
+    "vel_kmh": 52.5,
+    "rumo_desloc": 257
+   },
+   "objetos": [
+    {
+     "area_km2": 88092,
+     "tb_min": 190.3,
+     "h_topo_km": 14.8,
+     "lat_ap": 25.715,
+     "lon_ap": 80.831,
+     "lat": 25.619,
+     "lon": 81.248,
+     "dist_sitio_km": 516,
+     "rumo_do_sitio": 235
+    },
+    {
+     "area_km2": 70942,
+     "tb_min": 195.5,
+     "h_topo_km": 14.4,
+     "lat_ap": 29.307,
+     "lon_ap": 88.432,
+     "lat": 29.207,
+     "lon": 88.734,
+     "dist_sitio_km": 331,
+     "rumo_do_sitio": 72
+    },
+    {
+     "area_km2": 6073,
+     "tb_min": 200.9,
+     "h_topo_km": 14.5,
+     "lat_ap": 25.07,
+     "lon_ap": 86.872,
+     "lat": 24.986,
+     "lon": 87.17,
+     "dist_sitio_km": 401,
+     "rumo_do_sitio": 156
+    },
+    {
+     "area_km2": 5182,
+     "tb_min": 197.2,
+     "h_topo_km": 14.4,
+     "lat_ap": 31.921,
+     "lon_ap": 92.487,
+     "lat": 31.812,
+     "lon": 92.758,
+     "dist_sitio_km": 802,
+     "rumo_do_sitio": 61
+    },
+    {
+     "area_km2": 1630,
+     "tb_min": 199.8,
+     "h_topo_km": 14.5,
+     "lat_ap": 24.036,
+     "lon_ap": 85.267,
+     "lat": 23.954,
+     "lon": 85.583,
+     "dist_sitio_km": 481,
+     "rumo_do_sitio": 179
+    },
+    {
+     "area_km2": 1623,
+     "tb_min": 207.4,
+     "h_topo_km": 13.7,
+     "lat_ap": 30.558,
+     "lon_ap": 92.155,
+     "lat": 30.46,
+     "lon": 92.407,
+     "dist_sitio_km": 712,
+     "rumo_do_sitio": 70
+    },
+    {
+     "area_km2": 1581,
+     "tb_min": 195.0,
+     "h_topo_km": 15.0,
+     "lat_ap": 32.904,
+     "lon_ap": 88.375,
+     "lat": 32.782,
+     "lon": 88.721,
+     "dist_sitio_km": 589,
+     "rumo_do_sitio": 31
+    },
+    {
+     "area_km2": 1498,
+     "tb_min": 206.2,
+     "h_topo_km": 14.0,
+     "lat_ap": 24.491,
+     "lon_ap": 80.652,
+     "lat": 24.406,
+     "lon": 81.04,
+     "dist_sitio_km": 620,
+     "rumo_do_sitio": 226
+    }
+   ]
+  },
+  {
+   "utc": "2026-08-25T16:30Z",
+   "tb_sitio": 258.8,
+   "area213_150km": 883,
+   "sistema": {
+    "area_km2": 67550,
+    "tb_min": 196.0,
+    "h_topo_km": 14.3,
+    "lat_ap": 29.291,
+    "lon_ap": 88.116,
+    "lat": 29.191,
+    "lon": 88.42,
+    "dist_sitio_km": 302,
+    "rumo_do_sitio": 70,
+    "vel_kmh": 61.1,
+    "rumo_desloc": 267
+   },
+   "objetos": [
+    {
+     "area_km2": 93915,
+     "tb_min": 188.1,
+     "h_topo_km": 14.9,
+     "lat_ap": 25.665,
+     "lon_ap": 80.856,
+     "lat": 25.569,
+     "lon": 81.276,
+     "dist_sitio_km": 517,
+     "rumo_do_sitio": 234
+    },
+    {
+     "area_km2": 67550,
+     "tb_min": 196.0,
+     "h_topo_km": 14.3,
+     "lat_ap": 29.291,
+     "lon_ap": 88.116,
+     "lat": 29.191,
+     "lon": 88.42,
+     "dist_sitio_km": 302,
+     "rumo_do_sitio": 70
+    },
+    {
+     "area_km2": 8691,
+     "tb_min": 198.3,
+     "h_topo_km": 14.5,
+     "lat_ap": 25.166,
+     "lon_ap": 86.685,
+     "lat": 25.081,
+     "lon": 86.988,
+     "dist_sitio_km": 384,
+     "rumo_do_sitio": 158
+    },
+    {
+     "area_km2": 5066,
+     "tb_min": 198.9,
+     "h_topo_km": 14.3,
+     "lat_ap": 31.904,
+     "lon_ap": 92.396,
+     "lat": 31.796,
+     "lon": 92.667,
+     "dist_sitio_km": 793,
+     "rumo_do_sitio": 60
+    },
+    {
+     "area_km2": 2465,
+     "tb_min": 196.3,
+     "h_topo_km": 15.0,
+     "lat_ap": 32.868,
+     "lon_ap": 88.557,
+     "lat": 32.746,
+     "lon": 88.9,
+     "dist_sitio_km": 595,
+     "rumo_do_sitio": 33
+    },
+    {
+     "area_km2": 2416,
+     "tb_min": 194.3,
+     "h_topo_km": 14.4,
+     "lat_ap": 32.823,
+     "lon_ap": 91.36,
+     "lat": 32.709,
+     "lon": 91.651,
+     "dist_sitio_km": 768,
+     "rumo_do_sitio": 50
+    },
+    {
+     "area_km2": 1984,
+     "tb_min": 200.6,
+     "h_topo_km": 14.2,
+     "lat_ap": 24.501,
+     "lon_ap": 78.221,
+     "lat": 24.411,
+     "lon": 78.675,
+     "dist_sitio_km": 806,
+     "rumo_do_sitio": 238
+    },
+    {
+     "area_km2": 1901,
+     "tb_min": 201.2,
+     "h_topo_km": 14.3,
+     "lat_ap": 24.05,
+     "lon_ap": 84.887,
+     "lat": 23.969,
+     "lon": 85.205,
+     "dist_sitio_km": 480,
+     "rumo_do_sitio": 184
+    }
+   ]
+  },
+  {
+   "utc": "2026-08-25T17:00Z",
+   "tb_sitio": 255.1,
+   "area213_150km": 2529,
+   "sistema": {
+    "area_km2": 49463,
+    "tb_min": 197.2,
+    "h_topo_km": 14.3,
+    "lat_ap": 29.268,
+    "lon_ap": 87.529,
+    "lat": 29.167,
+    "lon": 87.842,
+    "dist_sitio_km": 248,
+    "rumo_do_sitio": 66,
+    "vel_kmh": 112.5,
+    "rumo_desloc": 267
+   },
+   "objetos": [
+    {
+     "area_km2": 98791,
+     "tb_min": 188.5,
+     "h_topo_km": 15.1,
+     "lat_ap": 25.602,
+     "lon_ap": 80.917,
+     "lat": 25.506,
+     "lon": 81.339,
+     "dist_sitio_km": 516,
+     "rumo_do_sitio": 233
+    },
+    {
+     "area_km2": 49463,
+     "tb_min": 197.2,
+     "h_topo_km": 14.3,
+     "lat_ap": 29.268,
+     "lon_ap": 87.529,
+     "lat": 29.167,
+     "lon": 87.842,
+     "dist_sitio_km": 248,
+     "rumo_do_sitio": 66
+    },
+    {
+     "area_km2": 12651,
+     "tb_min": 200.0,
+     "h_topo_km": 14.5,
+     "lat_ap": 25.253,
+     "lon_ap": 86.713,
+     "lat": 25.168,
+     "lon": 87.015,
+     "dist_sitio_km": 376,
+     "rumo_do_sitio": 157
+    },
+    {
+     "area_km2": 8039,
+     "tb_min": 205.0,
+     "h_topo_km": 13.9,
+     "lat_ap": 29.575,
+     "lon_ap": 90.422,
+     "lat": 29.479,
+     "lon": 90.691,
+     "dist_sitio_km": 522,
+     "rumo_do_sitio": 75
+    },
+    {
+     "area_km2": 3433,
+     "tb_min": 200.8,
+     "h_topo_km": 14.4,
+     "lat_ap": 31.922,
+     "lon_ap": 92.253,
+     "lat": 31.813,
+     "lon": 92.526,
+     "dist_sitio_km": 782,
+     "rumo_do_sitio": 60
+    },
+    {
+     "area_km2": 2898,
+     "tb_min": 198.3,
+     "h_topo_km": 14.5,
+     "lat_ap": 32.868,
+     "lon_ap": 88.667,
+     "lat": 32.75,
+     "lon": 88.997,
+     "dist_sitio_km": 600,
+     "rumo_do_sitio": 34
+    },
+    {
+     "area_km2": 2757,
+     "tb_min": 208.4,
+     "h_topo_km": 13.7,
+     "lat_ap": 28.36,
+     "lon_ap": 89.61,
+     "lat": 28.27,
+     "lon": 89.877,
+     "dist_sitio_km": 428,
+     "rumo_do_sitio": 90
+    },
+    {
+     "area_km2": 2665,
+     "tb_min": 195.4,
+     "h_topo_km": 14.6,
+     "lat_ap": 32.865,
+     "lon_ap": 91.328,
+     "lat": 32.749,
+     "lon": 91.624,
+     "dist_sitio_km": 769,
+     "rumo_do_sitio": 50
+    }
+   ]
+  },
+  {
+   "utc": "2026-08-25T17:30Z",
+   "tb_sitio": 234.6,
+   "area213_150km": 3878,
+   "sistema": {
+    "area_km2": 40712,
+    "tb_min": 198.4,
+    "h_topo_km": 14.3,
+    "lat_ap": 29.267,
+    "lon_ap": 87.334,
+    "lat": 29.167,
+    "lon": 87.649,
+    "dist_sitio_km": 231,
+    "rumo_do_sitio": 64,
+    "vel_kmh": 37.5,
+    "rumo_desloc": 270
+   },
+   "objetos": [
+    {
+     "area_km2": 108537,
+     "tb_min": 188.2,
+     "h_topo_km": 15.2,
+     "lat_ap": 25.526,
+     "lon_ap": 80.921,
+     "lat": 25.429,
+     "lon": 81.347,
+     "dist_sitio_km": 521,
+     "rumo_do_sitio": 233
+    },
+    {
+     "area_km2": 40712,
+     "tb_min": 198.4,
+     "h_topo_km": 14.3,
+     "lat_ap": 29.267,
+     "lon_ap": 87.334,
+     "lat": 29.167,
+     "lon": 87.649,
+     "dist_sitio_km": 231,
+     "rumo_do_sitio": 64
+    },
+    {
+     "area_km2": 13300,
+     "tb_min": 200.3,
+     "h_topo_km": 14.3,
+     "lat_ap": 25.205,
+     "lon_ap": 86.482,
+     "lat": 25.121,
+     "lon": 86.783,
+     "dist_sitio_km": 373,
+     "rumo_do_sitio": 160
+    },
+    {
+     "area_km2": 5250,
+     "tb_min": 195.0,
+     "h_topo_km": 14.7,
+     "lat_ap": 32.772,
+     "lon_ap": 89.476,
+     "lat": 32.654,
+     "lon": 89.798,
+     "dist_sitio_km": 638,
+     "rumo_do_sitio": 40
+    },
+    {
+     "area_km2": 5037,
+     "tb_min": 206.9,
+     "h_topo_km": 13.8,
+     "lat_ap": 29.562,
+     "lon_ap": 90.276,
+     "lat": 29.466,
+     "lon": 90.545,
+     "dist_sitio_km": 508,
+     "rumo_do_sitio": 75
+    },
+    {
+     "area_km2": 3163,
+     "tb_min": 203.2,
+     "h_topo_km": 14.1,
+     "lat_ap": 31.943,
+     "lon_ap": 92.211,
+     "lat": 31.835,
+     "lon": 92.48,
+     "dist_sitio_km": 780,
+     "rumo_do_sitio": 59
+    },
+    {
+     "area_km2": 2568,
+     "tb_min": 208.9,
+     "h_topo_km": 13.7,
+     "lat_ap": 28.225,
+     "lon_ap": 89.468,
+     "lat": 28.135,
+     "lon": 89.737,
+     "dist_sitio_km": 414,
+     "rumo_do_sitio": 92
+    },
+    {
+     "area_km2": 2481,
+     "tb_min": 196.3,
+     "h_topo_km": 14.7,
+     "lat_ap": 32.853,
+     "lon_ap": 91.291,
+     "lat": 32.736,
+     "lon": 91.589,
+     "dist_sitio_km": 766,
+     "rumo_do_sitio": 50
+    }
+   ]
+  },
+  {
+   "utc": "2026-08-25T18:00Z",
+   "tb_sitio": 234.1,
+   "area213_150km": 4799,
+   "sistema": {
+    "area_km2": 37029,
+    "tb_min": 200.3,
+    "h_topo_km": 14.2,
+    "lat_ap": 29.215,
+    "lon_ap": 87.229,
+    "lat": 29.115,
+    "lon": 87.544,
+    "dist_sitio_km": 219,
+    "rumo_do_sitio": 65,
+    "vel_kmh": 23.5,
+    "rumo_desloc": 240
+   },
+   "objetos": [
+    {
+     "area_km2": 119356,
+     "tb_min": 188.8,
+     "h_topo_km": 15.3,
+     "lat_ap": 25.511,
+     "lon_ap": 80.859,
+     "lat": 25.413,
+     "lon": 81.287,
+     "dist_sitio_km": 527,
+     "rumo_do_sitio": 233
+    },
+    {
+     "area_km2": 37029,
+     "tb_min": 200.3,
+     "h_topo_km": 14.2,
+     "lat_ap": 29.215,
+     "lon_ap": 87.229,
+     "lat": 29.115,
+     "lon": 87.544,
+     "dist_sitio_km": 219,
+     "rumo_do_sitio": 65
+    },
+    {
+     "area_km2": 12273,
+     "tb_min": 202.0,
+     "h_topo_km": 14.1,
+     "lat_ap": 25.228,
+     "lon_ap": 86.221,
+     "lat": 25.144,
+     "lon": 86.523,
+     "dist_sitio_km": 362,
+     "rumo_do_sitio": 164
+    },
+    {
+     "area_km2": 6784,
+     "tb_min": 193.5,
+     "h_topo_km": 14.9,
+     "lat_ap": 32.785,
+     "lon_ap": 89.664,
+     "lat": 32.665,
+     "lon": 89.988,
+     "dist_sitio_km": 651,
+     "rumo_do_sitio": 41
+    },
+    {
+     "area_km2": 3251,
+     "tb_min": 208.2,
+     "h_topo_km": 13.7,
+     "lat_ap": 28.208,
+     "lon_ap": 89.487,
+     "lat": 28.118,
+     "lon": 89.756,
+     "dist_sitio_km": 416,
+     "rumo_do_sitio": 92
+    },
+    {
+     "area_km2": 2864,
+     "tb_min": 207.5,
+     "h_topo_km": 13.7,
+     "lat_ap": 29.514,
+     "lon_ap": 90.144,
+     "lat": 29.419,
+     "lon": 90.413,
+     "dist_sitio_km": 494,
+     "rumo_do_sitio": 75
+    },
+    {
+     "area_km2": 2752,
+     "tb_min": 206.1,
+     "h_topo_km": 13.8,
+     "lat_ap": 32.203,
+     "lon_ap": 90.388,
+     "lat": 32.095,
+     "lon": 90.673,
+     "dist_sitio_km": 654,
+     "rumo_do_sitio": 49
+    },
+    {
+     "area_km2": 2372,
+     "tb_min": 206.6,
+     "h_topo_km": 13.9,
+     "lat_ap": 31.962,
+     "lon_ap": 92.185,
+     "lat": 31.856,
+     "lon": 92.45,
+     "dist_sitio_km": 778,
+     "rumo_do_sitio": 59
+    }
+   ]
+  },
+  {
+   "utc": "2026-08-25T18:30Z",
+   "tb_sitio": 232.4,
+   "area213_150km": 5826,
+   "sistema": {
+    "area_km2": 30640,
+    "tb_min": 200.2,
+    "h_topo_km": 14.1,
+    "lat_ap": 29.134,
+    "lon_ap": 87.195,
+    "lat": 29.036,
+    "lon": 87.508,
+    "dist_sitio_km": 212,
+    "rumo_do_sitio": 66,
+    "vel_kmh": 18.9,
+    "rumo_desloc": 202
+   },
+   "objetos": [
+    {
+     "area_km2": 125804,
+     "tb_min": 188.2,
+     "h_topo_km": 15.3,
+     "lat_ap": 25.539,
+     "lon_ap": 80.773,
+     "lat": 25.441,
+     "lon": 81.204,
+     "dist_sitio_km": 532,
+     "rumo_do_sitio": 234
+    },
+    {
+     "area_km2": 30640,
+     "tb_min": 200.2,
+     "h_topo_km": 14.1,
+     "lat_ap": 29.134,
+     "lon_ap": 87.195,
+     "lat": 29.036,
+     "lon": 87.508,
+     "dist_sitio_km": 212,
+     "rumo_do_sitio": 66
+    },
+    {
+     "area_km2": 8135,
+     "tb_min": 192.1,
+     "h_topo_km": 14.9,
+     "lat_ap": 32.814,
+     "lon_ap": 89.886,
+     "lat": 32.694,
+     "lon": 90.206,
+     "dist_sitio_km": 667,
+     "rumo_do_sitio": 42
+    },
+    {
+     "area_km2": 7793,
+     "tb_min": 205.2,
+     "h_topo_km": 13.9,
+     "lat_ap": 25.123,
+     "lon_ap": 85.974,
+     "lat": 25.041,
+     "lon": 86.274,
+     "dist_sitio_km": 367,
+     "rumo_do_sitio": 168
+    },
+    {
+     "area_km2": 3603,
+     "tb_min": 205.9,
+     "h_topo_km": 13.7,
+     "lat_ap": 28.121,
+     "lon_ap": 89.347,
+     "lat": 28.031,
+     "lon": 89.618,
+     "dist_sitio_km": 404,
+     "rumo_do_sitio": 94
+    },
+    {
+     "area_km2": 2733,
+     "tb_min": 205.4,
+     "h_topo_km": 13.8,
+     "lat_ap": 32.277,
+     "lon_ap": 90.44,
+     "lat": 32.169,
+     "lon": 90.726,
+     "dist_sitio_km": 663,
+     "rumo_do_sitio": 49
+    },
+    {
+     "area_km2": 1666,
+     "tb_min": 200.8,
+     "h_topo_km": 14.1,
+     "lat_ap": 32.88,
+     "lon_ap": 91.333,
+     "lat": 32.768,
+     "lon": 91.619,
+     "dist_sitio_km": 770,
+     "rumo_do_sitio": 49
+    },
+    {
+     "area_km2": 1590,
+     "tb_min": 201.8,
+     "h_topo_km": 14.4,
+     "lat_ap": 25.739,
+     "lon_ap": 85.773,
+     "lat": 25.652,
+     "lon": 86.09,
+     "dist_sitio_km": 297,
+     "rumo_do_sitio": 169
+    }
+   ]
+  },
+  {
+   "utc": "2026-08-25T19:00Z",
+   "tb_sitio": 218.9,
+   "area213_150km": 5970,
+   "sistema": {
+    "area_km2": 25290,
+    "tb_min": 200.7,
+    "h_topo_km": 14.0,
+    "lat_ap": 29.01,
+    "lon_ap": 87.273,
+    "lat": 28.912,
+    "lon": 87.582,
+    "dist_sitio_km": 214,
+    "rumo_do_sitio": 71,
+    "vel_kmh": 31.1,
+    "rumo_desloc": 152
+   },
+   "objetos": [
+    {
+     "area_km2": 130597,
+     "tb_min": 187.5,
+     "h_topo_km": 15.3,
+     "lat_ap": 25.588,
+     "lon_ap": 80.666,
+     "lat": 25.49,
+     "lon": 81.101,
+     "dist_sitio_km": 537,
+     "rumo_do_sitio": 235
+    },
+    {
+     "area_km2": 25290,
+     "tb_min": 200.7,
+     "h_topo_km": 14.0,
+     "lat_ap": 29.01,
+     "lon_ap": 87.273,
+     "lat": 28.912,
+     "lon": 87.582,
+     "dist_sitio_km": 214,
+     "rumo_do_sitio": 71
+    },
+    {
+     "area_km2": 10427,
+     "tb_min": 194.6,
+     "h_topo_km": 14.7,
+     "lat_ap": 32.783,
+     "lon_ap": 90.127,
+     "lat": 32.665,
+     "lon": 90.439,
+     "dist_sitio_km": 680,
+     "rumo_do_sitio": 44
+    },
+    {
+     "area_km2": 3951,
+     "tb_min": 207.5,
+     "h_topo_km": 13.7,
+     "lat_ap": 25.078,
+     "lon_ap": 85.683,
+     "lat": 24.997,
+     "lon": 85.983,
+     "dist_sitio_km": 367,
+     "rumo_do_sitio": 173
+    },
+    {
+     "area_km2": 2713,
+     "tb_min": 208.3,
+     "h_topo_km": 13.7,
+     "lat_ap": 28.07,
+     "lon_ap": 89.206,
+     "lat": 27.98,
+     "lon": 89.477,
+     "dist_sitio_km": 390,
+     "rumo_do_sitio": 95
+    },
+    {
+     "area_km2": 2328,
+     "tb_min": 209.6,
+     "h_topo_km": 13.6,
+     "lat_ap": 28.799,
+     "lon_ap": 90.43,
+     "lat": 28.708,
+     "lon": 90.69,
+     "dist_sitio_km": 509,
+     "rumo_do_sitio": 85
+    },
+    {
+     "area_km2": 1447,
+     "tb_min": 202.9,
+     "h_topo_km": 14.2,
+     "lat_ap": 25.71,
+     "lon_ap": 85.41,
+     "lat": 25.623,
+     "lon": 85.728,
+     "dist_sitio_km": 296,
+     "rumo_do_sitio": 176
+    },
+    {
+     "area_km2": 1101,
+     "tb_min": 205.1,
+     "h_topo_km": 13.8,
+     "lat_ap": 28.161,
+     "lon_ap": 84.609,
+     "lat": 28.066,
+     "lon": 84.948,
+     "dist_sitio_km": 60,
+     "rumo_do_sitio": 248
+    }
+   ]
+  },
+  {
+   "utc": "2026-08-25T19:30Z",
+   "tb_sitio": 234.2,
+   "area213_150km": 4987,
+   "sistema": {
+    "area_km2": 20715,
+    "tb_min": 200.6,
+    "h_topo_km": 14.1,
+    "lat_ap": 28.867,
+    "lon_ap": 87.422,
+    "lat": 28.769,
+    "lon": 87.729,
+    "dist_sitio_km": 224,
+    "rumo_do_sitio": 76,
+    "vel_kmh": 42.8,
+    "rumo_desloc": 138
+   },
+   "objetos": [
+    {
+     "area_km2": 134872,
+     "tb_min": 188.5,
+     "h_topo_km": 15.3,
+     "lat_ap": 25.662,
+     "lon_ap": 80.496,
+     "lat": 25.564,
+     "lon": 80.934,
+     "dist_sitio_km": 546,
+     "rumo_do_sitio": 236
+    },
+    {
+     "area_km2": 20715,
+     "tb_min": 200.6,
+     "h_topo_km": 14.1,
+     "lat_ap": 28.867,
+     "lon_ap": 87.422,
+     "lat": 28.769,
+     "lon": 87.729,
+     "dist_sitio_km": 224,
+     "rumo_do_sitio": 76
+    },
+    {
+     "area_km2": 10209,
+     "tb_min": 196.9,
+     "h_topo_km": 14.6,
+     "lat_ap": 32.776,
+     "lon_ap": 90.298,
+     "lat": 32.66,
+     "lon": 90.607,
+     "dist_sitio_km": 691,
+     "rumo_do_sitio": 45
+    },
+    {
+     "area_km2": 1965,
+     "tb_min": 208.9,
+     "h_topo_km": 13.7,
+     "lat_ap": 28.703,
+     "lon_ap": 90.247,
+     "lat": 28.611,
+     "lon": 90.509,
+     "dist_sitio_km": 490,
+     "rumo_do_sitio": 86
+    },
+    {
+     "area_km2": 1761,
+     "tb_min": 202.9,
+     "h_topo_km": 14.0,
+     "lat_ap": 26.265,
+     "lon_ap": 89.054,
+     "lat": 26.18,
+     "lon": 89.323,
+     "dist_sitio_km": 443,
+     "rumo_do_sitio": 122
+    },
+    {
+     "area_km2": 1608,
+     "tb_min": 200.0,
+     "h_topo_km": 13.9,
+     "lat_ap": 28.099,
+     "lon_ap": 84.651,
+     "lat": 28.003,
+     "lon": 84.99,
+     "dist_sitio_km": 60,
+     "rumo_do_sitio": 240
+    },
+    {
+     "area_km2": 1466,
+     "tb_min": 194.4,
+     "h_topo_km": 14.8,
+     "lat_ap": 24.146,
+     "lon_ap": 86.362,
+     "lat": 24.063,
+     "lon": 86.67,
+     "dist_sitio_km": 482,
+     "rumo_do_sitio": 166
+    },
+    {
+     "area_km2": 922,
+     "tb_min": 196.8,
+     "h_topo_km": 14.8,
+     "lat_ap": 32.239,
+     "lon_ap": 90.064,
+     "lat": 32.123,
+     "lon": 90.375,
+     "dist_sitio_km": 634,
+     "rumo_do_sitio": 47
+    }
+   ]
+  },
+  {
+   "utc": "2026-08-25T20:00Z",
+   "tb_sitio": 251.6,
+   "area213_150km": 4340,
+   "sistema": {
+    "area_km2": 17096,
+    "tb_min": 200.1,
+    "h_topo_km": 14.2,
+    "lat_ap": 28.676,
+    "lon_ap": 87.581,
+    "lat": 28.579,
+    "lon": 87.886,
+    "dist_sitio_km": 235,
+    "rumo_do_sitio": 82,
+    "vel_kmh": 52.2,
+    "rumo_desloc": 144
+   },
+   "objetos": [
+    {
+     "area_km2": 138638,
+     "tb_min": 188.7,
+     "h_topo_km": 15.2,
+     "lat_ap": 25.756,
+     "lon_ap": 80.266,
+     "lat": 25.657,
+     "lon": 80.708,
+     "dist_sitio_km": 559,
+     "rumo_do_sitio": 239
+    },
+    {
+     "area_km2": 17096,
+     "tb_min": 200.1,
+     "h_topo_km": 14.2,
+     "lat_ap": 28.676,
+     "lon_ap": 87.581,
+     "lat": 28.579,
+     "lon": 87.886,
+     "dist_sitio_km": 235,
+     "rumo_do_sitio": 82
+    },
+    {
+     "area_km2": 10302,
+     "tb_min": 197.1,
+     "h_topo_km": 14.6,
+     "lat_ap": 32.631,
+     "lon_ap": 90.304,
+     "lat": 32.515,
+     "lon": 90.612,
+     "dist_sitio_km": 680,
+     "rumo_do_sitio": 46
+    },
+    {
+     "area_km2": 3418,
+     "tb_min": 192.8,
+     "h_topo_km": 15.2,
+     "lat_ap": 24.207,
+     "lon_ap": 86.172,
+     "lat": 24.121,
+     "lon": 86.491,
+     "dist_sitio_km": 472,
+     "rumo_do_sitio": 168
+    },
+    {
+     "area_km2": 1899,
+     "tb_min": 209.9,
+     "h_topo_km": 13.6,
+     "lat_ap": 28.558,
+     "lon_ap": 90.034,
+     "lat": 28.467,
+     "lon": 90.297,
+     "dist_sitio_km": 469,
+     "rumo_do_sitio": 87
+    },
+    {
+     "area_km2": 1801,
+     "tb_min": 207.5,
+     "h_topo_km": 13.8,
+     "lat_ap": 28.105,
+     "lon_ap": 84.761,
+     "lat": 28.011,
+     "lon": 85.096,
+     "dist_sitio_km": 50,
+     "rumo_do_sitio": 235
+    },
+    {
+     "area_km2": 1407,
+     "tb_min": 206.5,
+     "h_topo_km": 13.7,
+     "lat_ap": 26.095,
+     "lon_ap": 88.722,
+     "lat": 26.013,
+     "lon": 88.988,
+     "dist_sitio_km": 426,
+     "rumo_do_sitio": 126
+    },
+    {
+     "area_km2": 1344,
+     "tb_min": 207.3,
+     "h_topo_km": 13.8,
+     "lat_ap": 29.649,
+     "lon_ap": 85.776,
+     "lat": 29.549,
+     "lon": 86.106,
+     "dist_sitio_km": 153,
+     "rumo_do_sitio": 22
+    }
+   ]
+  },
+  {
+   "utc": "2026-08-25T20:30Z",
+   "tb_sitio": 250.1,
+   "area213_150km": 4479,
+   "sistema": {
+    "area_km2": 16868,
+    "tb_min": 200.6,
+    "h_topo_km": 14.1,
+    "lat_ap": 28.602,
+    "lon_ap": 87.51,
+    "lat": 28.506,
+    "lon": 87.816,
+    "dist_sitio_km": 227,
+    "rumo_do_sitio": 83,
+    "vel_kmh": 21.3,
+    "rumo_desloc": 220
+   },
+   "objetos": [
+    {
+     "area_km2": 142035,
+     "tb_min": 191.2,
+     "h_topo_km": 15.1,
+     "lat_ap": 25.857,
+     "lon_ap": 80.049,
+     "lat": 25.759,
+     "lon": 80.493,
+     "dist_sitio_km": 571,
+     "rumo_do_sitio": 241
+    },
+    {
+     "area_km2": 16868,
+     "tb_min": 200.6,
+     "h_topo_km": 14.1,
+     "lat_ap": 28.602,
+     "lon_ap": 87.51,
+     "lat": 28.506,
+     "lon": 87.816,
+     "dist_sitio_km": 227,
+     "rumo_do_sitio": 83
+    },
+    {
+     "area_km2": 9575,
+     "tb_min": 198.8,
+     "h_topo_km": 14.6,
+     "lat_ap": 32.546,
+     "lon_ap": 90.245,
+     "lat": 32.43,
+     "lon": 90.552,
+     "dist_sitio_km": 670,
+     "rumo_do_sitio": 46
+    },
+    {
+     "area_km2": 5822,
+     "tb_min": 197.0,
+     "h_topo_km": 15.0,
+     "lat_ap": 24.223,
+     "lon_ap": 85.911,
+     "lat": 24.138,
+     "lon": 86.229,
+     "dist_sitio_km": 466,
+     "rumo_do_sitio": 171
+    },
+    {
+     "area_km2": 2010,
+     "tb_min": 206.1,
+     "h_topo_km": 14.0,
+     "lat_ap": 32.359,
+     "lon_ap": 84.63,
+     "lat": 32.242,
+     "lon": 85.01,
+     "dist_sitio_km": 445,
+     "rumo_do_sitio": 354
+    },
+    {
+     "area_km2": 1346,
+     "tb_min": 207.9,
+     "h_topo_km": 13.7,
+     "lat_ap": 28.166,
+     "lon_ap": 84.726,
+     "lat": 28.072,
+     "lon": 85.06,
+     "dist_sitio_km": 50,
+     "rumo_do_sitio": 244
+    },
+    {
+     "area_km2": 908,
+     "tb_min": 210.7,
+     "h_topo_km": 13.6,
+     "lat_ap": 28.224,
+     "lon_ap": 89.698,
+     "lat": 28.135,
+     "lon": 89.962,
+     "dist_sitio_km": 436,
+     "rumo_do_sitio": 92
+    },
+    {
+     "area_km2": 741,
+     "tb_min": 208.1,
+     "h_topo_km": 13.7,
+     "lat_ap": 29.645,
+     "lon_ap": 85.638,
+     "lat": 29.545,
+     "lon": 85.97,
+     "dist_sitio_km": 149,
+     "rumo_do_sitio": 17
+    }
+   ]
+  },
+  {
+   "utc": "2026-08-25T21:00Z",
+   "tb_sitio": 225.9,
+   "area213_150km": 4895,
+   "sistema": {
+    "area_km2": 15921,
+    "tb_min": 202.3,
+    "h_topo_km": 14.1,
+    "lat_ap": 28.572,
+    "lon_ap": 87.394,
+    "lat": 28.476,
+    "lon": 87.7,
+    "dist_sitio_km": 215,
+    "rumo_do_sitio": 84,
+    "vel_kmh": 23.7,
+    "rumo_desloc": 254
+   },
+   "objetos": [
+    {
+     "area_km2": 138468,
+     "tb_min": 190.3,
+     "h_topo_km": 15.0,
+     "lat_ap": 25.959,
+     "lon_ap": 79.876,
+     "lat": 25.86,
+     "lon": 80.324,
+     "dist_sitio_km": 580,
+     "rumo_do_sitio": 242
+    },
+    {
+     "area_km2": 15921,
+     "tb_min": 202.3,
+     "h_topo_km": 14.1,
+     "lat_ap": 28.572,
+     "lon_ap": 87.394,
+     "lat": 28.476,
+     "lon": 87.7,
+     "dist_sitio_km": 215,
+     "rumo_do_sitio": 84
+    },
+    {
+     "area_km2": 10604,
+     "tb_min": 199.2,
+     "h_topo_km": 14.5,
+     "lat_ap": 32.468,
+     "lon_ap": 90.199,
+     "lat": 32.353,
+     "lon": 90.504,
+     "dist_sitio_km": 661,
+     "rumo_do_sitio": 47
+    },
+    {
+     "area_km2": 5859,
+     "tb_min": 200.0,
+     "h_topo_km": 14.7,
+     "lat_ap": 24.191,
+     "lon_ap": 85.566,
+     "lat": 24.108,
+     "lon": 85.883,
+     "dist_sitio_km": 465,
+     "rumo_do_sitio": 175
+    },
+    {
+     "area_km2": 1656,
+     "tb_min": 207.5,
+     "h_topo_km": 13.7,
+     "lat_ap": 32.444,
+     "lon_ap": 84.812,
+     "lat": 32.33,
+     "lon": 85.183,
+     "dist_sitio_km": 453,
+     "rumo_do_sitio": 356
+    },
+    {
+     "area_km2": 1223,
+     "tb_min": 208.1,
+     "h_topo_km": 13.7,
+     "lat_ap": 26.683,
+     "lon_ap": 87.952,
+     "lat": 26.598,
+     "lon": 88.231,
+     "dist_sitio_km": 327,
+     "rumo_do_sitio": 125
+    },
+    {
+     "area_km2": 593,
+     "tb_min": 203.6,
+     "h_topo_km": 14.0,
+     "lat_ap": 25.078,
+     "lon_ap": 90.521,
+     "lat": 24.999,
+     "lon": 90.767,
+     "dist_sitio_km": 637,
+     "rumo_do_sitio": 125
+    },
+    {
+     "area_km2": 576,
+     "tb_min": 208.5,
+     "h_topo_km": 13.8,
+     "lat_ap": 24.76,
+     "lon_ap": 78.126,
+     "lat": 24.672,
+     "lon": 78.571,
+     "dist_sitio_km": 800,
+     "rumo_do_sitio": 240
+    }
+   ]
+  },
+  {
+   "utc": "2026-08-25T21:30Z",
+   "tb_sitio": 238.6,
+   "area213_150km": 5433,
+   "sistema": {
+    "area_km2": 15992,
+    "tb_min": 203.7,
+    "h_topo_km": 14.0,
+    "lat_ap": 28.552,
+    "lon_ap": 87.251,
+    "lat": 28.456,
+    "lon": 87.557,
+    "dist_sitio_km": 201,
+    "rumo_do_sitio": 84,
+    "vel_kmh": 28.3,
+    "rumo_desloc": 261
+   },
+   "objetos": [
+    {
+     "area_km2": 133731,
+     "tb_min": 190.3,
+     "h_topo_km": 14.9,
+     "lat_ap": 26.077,
+     "lon_ap": 79.716,
+     "lat": 25.978,
+     "lon": 80.167,
+     "dist_sitio_km": 588,
+     "rumo_do_sitio": 244
+    },
+    {
+     "area_km2": 15992,
+     "tb_min": 203.7,
+     "h_topo_km": 14.0,
+     "lat_ap": 28.552,
+     "lon_ap": 87.251,
+     "lat": 28.456,
+     "lon": 87.557,
+     "dist_sitio_km": 201,
+     "rumo_do_sitio": 84
+    },
+    {
+     "area_km2": 11763,
+     "tb_min": 200.5,
+     "h_topo_km": 14.4,
+     "lat_ap": 32.441,
+     "lon_ap": 90.14,
+     "lat": 32.328,
+     "lon": 90.443,
+     "dist_sitio_km": 654,
+     "rumo_do_sitio": 46
+    },
+    {
+     "area_km2": 5318,
+     "tb_min": 200.7,
+     "h_topo_km": 14.4,
+     "lat_ap": 24.148,
+     "lon_ap": 85.212,
+     "lat": 24.066,
+     "lon": 85.528,
+     "dist_sitio_km": 468,
+     "rumo_do_sitio": 180
+    },
+    {
+     "area_km2": 956,
+     "tb_min": 205.5,
+     "h_topo_km": 14.0,
+     "lat_ap": 26.769,
+     "lon_ap": 88.056,
+     "lat": 26.681,
+     "lon": 88.34,
+     "dist_sitio_km": 330,
+     "rumo_do_sitio": 122
+    },
+    {
+     "area_km2": 581,
+     "tb_min": 204.0,
+     "h_topo_km": 14.1,
+     "lat_ap": 27.452,
+     "lon_ap": 83.104,
+     "lat": 27.356,
+     "lon": 83.472,
+     "dist_sitio_km": 226,
+     "rumo_do_sitio": 243
+    },
+    {
+     "area_km2": 465,
+     "tb_min": 207.2,
+     "h_topo_km": 13.9,
+     "lat_ap": 29.711,
+     "lon_ap": 86.163,
+     "lat": 29.61,
+     "lon": 86.49,
+     "dist_sitio_km": 177,
+     "rumo_do_sitio": 32
+    },
+    {
+     "area_km2": 248,
+     "tb_min": 212.1,
+     "h_topo_km": 13.5,
+     "lat_ap": 26.469,
+     "lon_ap": 87.71,
+     "lat": 26.386,
+     "lon": 87.986,
+     "dist_sitio_km": 322,
+     "rumo_do_sitio": 131
+    }
+   ]
+  },
+  {
+   "utc": "2026-08-25T22:00Z",
+   "tb_sitio": 252.3,
+   "area213_150km": 5903,
+   "sistema": {
+    "area_km2": 13747,
+    "tb_min": 205.5,
+    "h_topo_km": 13.9,
+    "lat_ap": 28.527,
+    "lon_ap": 87.184,
+    "lat": 28.432,
+    "lon": 87.489,
+    "dist_sitio_km": 194,
+    "rumo_do_sitio": 85,
+    "vel_kmh": 14.3,
+    "rumo_desloc": 248
+   },
+   "objetos": [
+    {
+     "area_km2": 132750,
+     "tb_min": 189.9,
+     "h_topo_km": 14.8,
+     "lat_ap": 26.187,
+     "lon_ap": 79.597,
+     "lat": 26.088,
+     "lon": 80.049,
+     "dist_sitio_km": 593,
+     "rumo_do_sitio": 246
+    },
+    {
+     "area_km2": 13747,
+     "tb_min": 205.5,
+     "h_topo_km": 13.9,
+     "lat_ap": 28.527,
+     "lon_ap": 87.184,
+     "lat": 28.432,
+     "lon": 87.489,
+     "dist_sitio_km": 194,
+     "rumo_do_sitio": 85
+    },
+    {
+     "area_km2": 12102,
+     "tb_min": 200.5,
+     "h_topo_km": 14.2,
+     "lat_ap": 32.411,
+     "lon_ap": 90.096,
+     "lat": 32.299,
+     "lon": 90.395,
+     "dist_sitio_km": 649,
+     "rumo_do_sitio": 46
+    },
+    {
+     "area_km2": 4144,
+     "tb_min": 202.8,
+     "h_topo_km": 14.1,
+     "lat_ap": 24.101,
+     "lon_ap": 84.858,
+     "lat": 24.021,
+     "lon": 85.172,
+     "dist_sitio_km": 474,
+     "rumo_do_sitio": 184
+    },
+    {
+     "area_km2": 1878,
+     "tb_min": 205.6,
+     "h_topo_km": 13.9,
+     "lat_ap": 26.682,
+     "lon_ap": 87.81,
+     "lat": 26.595,
+     "lon": 88.094,
+     "dist_sitio_km": 316,
+     "rumo_do_sitio": 126
+    },
+    {
+     "area_km2": 598,
+     "tb_min": 205.3,
+     "h_topo_km": 14.0,
+     "lat_ap": 27.534,
+     "lon_ap": 82.929,
+     "lat": 27.439,
+     "lon": 83.296,
+     "dist_sitio_km": 237,
+     "rumo_do_sitio": 247
+    },
+    {
+     "area_km2": 557,
+     "tb_min": 209.8,
+     "h_topo_km": 13.6,
+     "lat_ap": 28.516,
+     "lon_ap": 90.349,
+     "lat": 28.426,
+     "lon": 90.609,
+     "dist_sitio_km": 499,
+     "rumo_do_sitio": 88
+    },
+    {
+     "area_km2": 431,
+     "tb_min": 208.9,
+     "h_topo_km": 13.7,
+     "lat_ap": 25.133,
+     "lon_ap": 79.564,
+     "lat": 25.045,
+     "lon": 79.973,
+     "dist_sitio_km": 658,
+     "rumo_do_sitio": 237
+    }
+   ]
+  },
+  {
+   "utc": "2026-08-25T22:30Z",
+   "tb_sitio": 244.8,
+   "area213_150km": 5121,
+   "sistema": {
+    "area_km2": 10791,
+    "tb_min": 205.1,
+    "h_topo_km": 13.8,
+    "lat_ap": 28.464,
+    "lon_ap": 87.246,
+    "lat": 28.371,
+    "lon": 87.547,
+    "dist_sitio_km": 199,
+    "rumo_do_sitio": 87,
+    "vel_kmh": 17.7,
+    "rumo_desloc": 140
+   },
+   "objetos": [
+    {
+     "area_km2": 127008,
+     "tb_min": 191.2,
+     "h_topo_km": 14.8,
+     "lat_ap": 26.278,
+     "lon_ap": 79.523,
+     "lat": 26.178,
+     "lon": 79.976,
+     "dist_sitio_km": 596,
+     "rumo_do_sitio": 247
+    },
+    {
+     "area_km2": 10791,
+     "tb_min": 205.1,
+     "h_topo_km": 13.8,
+     "lat_ap": 28.464,
+     "lon_ap": 87.246,
+     "lat": 28.371,
+     "lon": 87.547,
+     "dist_sitio_km": 199,
+     "rumo_do_sitio": 87
+    },
+    {
+     "area_km2": 9933,
+     "tb_min": 202.6,
+     "h_topo_km": 14.0,
+     "lat_ap": 32.321,
+     "lon_ap": 90.054,
+     "lat": 32.211,
+     "lon": 90.349,
+     "dist_sitio_km": 639,
+     "rumo_do_sitio": 47
+    },
+    {
+     "area_km2": 1883,
+     "tb_min": 207.5,
+     "h_topo_km": 13.7,
+     "lat_ap": 24.042,
+     "lon_ap": 84.499,
+     "lat": 23.964,
+     "lon": 84.809,
+     "dist_sitio_km": 485,
+     "rumo_do_sitio": 188
+    },
+    {
+     "area_km2": 1791,
+     "tb_min": 207.2,
+     "h_topo_km": 13.7,
+     "lat_ap": 26.606,
+     "lon_ap": 87.65,
+     "lat": 26.521,
+     "lon": 87.932,
+     "dist_sitio_km": 308,
+     "rumo_do_sitio": 129
+    },
+    {
+     "area_km2": 1187,
+     "tb_min": 209.1,
+     "h_topo_km": 13.7,
+     "lat_ap": 28.322,
+     "lon_ap": 90.151,
+     "lat": 28.232,
+     "lon": 90.412,
+     "dist_sitio_km": 480,
+     "rumo_do_sitio": 91
+    },
+    {
+     "area_km2": 807,
+     "tb_min": 210.3,
+     "h_topo_km": 13.6,
+     "lat_ap": 27.824,
+     "lon_ap": 89.722,
+     "lat": 27.736,
+     "lon": 89.985,
+     "dist_sitio_km": 443,
+     "rumo_do_sitio": 98
+    },
+    {
+     "area_km2": 604,
+     "tb_min": 210.4,
+     "h_topo_km": 13.7,
+     "lat_ap": 29.41,
+     "lon_ap": 86.127,
+     "lat": 29.312,
+     "lon": 86.447,
+     "dist_sitio_km": 147,
+     "rumo_do_sitio": 38
+    }
+   ]
+  },
+  {
+   "utc": "2026-08-25T23:00Z",
+   "tb_sitio": 235.0,
+   "area213_150km": 2878,
+   "sistema": {
+    "area_km2": 4081,
+    "tb_min": 205.7,
+    "h_topo_km": 13.8,
+    "lat_ap": 28.355,
+    "lon_ap": 87.703,
+    "lat": 28.262,
+    "lon": 87.996,
+    "dist_sitio_km": 243,
+    "rumo_do_sitio": 90,
+    "vel_kmh": 91.3,
+    "rumo_desloc": 105
+   },
+   "objetos": [
+    {
+     "area_km2": 119114,
+     "tb_min": 192.5,
+     "h_topo_km": 14.8,
+     "lat_ap": 26.37,
+     "lon_ap": 79.444,
+     "lat": 26.269,
+     "lon": 79.899,
+     "dist_sitio_km": 599,
+     "rumo_do_sitio": 248
+    },
+    {
+     "area_km2": 7027,
+     "tb_min": 204.8,
+     "h_topo_km": 13.9,
+     "lat_ap": 32.23,
+     "lon_ap": 90.023,
+     "lat": 32.122,
+     "lon": 90.316,
+     "dist_sitio_km": 630,
+     "rumo_do_sitio": 47
+    },
+    {
+     "area_km2": 6498,
+     "tb_min": 208.3,
+     "h_topo_km": 13.6,
+     "lat_ap": 27.992,
+     "lon_ap": 89.74,
+     "lat": 27.904,
+     "lon": 90.004,
+     "dist_sitio_km": 443,
+     "rumo_do_sitio": 95
+    },
+    {
+     "area_km2": 4081,
+     "tb_min": 205.7,
+     "h_topo_km": 13.8,
+     "lat_ap": 28.355,
+     "lon_ap": 87.703,
+     "lat": 28.262,
+     "lon": 87.996,
+     "dist_sitio_km": 243,
+     "rumo_do_sitio": 90
+    },
+    {
+     "area_km2": 1450,
+     "tb_min": 210.0,
+     "h_topo_km": 13.6,
+     "lat_ap": 28.202,
+     "lon_ap": 86.769,
+     "lat": 28.11,
+     "lon": 87.07,
+     "dist_sitio_km": 154,
+     "rumo_do_sitio": 97
+    },
+    {
+     "area_km2": 853,
+     "tb_min": 207.2,
+     "h_topo_km": 13.8,
+     "lat_ap": 28.656,
+     "lon_ap": 86.512,
+     "lat": 28.561,
+     "lon": 86.824,
+     "dist_sitio_km": 132,
+     "rumo_do_sitio": 76
+    },
+    {
+     "area_km2": 704,
+     "tb_min": 210.2,
+     "h_topo_km": 13.6,
+     "lat_ap": 24.482,
+     "lon_ap": 79.318,
+     "lat": 24.397,
+     "lon": 79.726,
+     "dist_sitio_km": 721,
+     "rumo_do_sitio": 233
+    },
+    {
+     "area_km2": 550,
+     "tb_min": 211.4,
+     "h_topo_km": 13.5,
+     "lat_ap": 26.517,
+     "lon_ap": 87.477,
+     "lat": 26.433,
+     "lon": 87.756,
+     "dist_sitio_km": 302,
+     "rumo_do_sitio": 133
+    }
+   ]
+  },
+  {
+   "utc": "2026-08-25T23:30Z",
+   "tb_sitio": 217.9,
+   "area213_150km": 1395,
+   "sistema": {
+    "area_km2": 2253,
+    "tb_min": 207.7,
+    "h_topo_km": 13.8,
+    "lat_ap": 28.246,
+    "lon_ap": 87.709,
+    "lat": 28.153,
+    "lon": 88.002,
+    "dist_sitio_km": 244,
+    "rumo_do_sitio": 93,
+    "vel_kmh": 24.3,
+    "rumo_desloc": 177
+   },
+   "objetos": [
+    {
+     "area_km2": 101697,
+     "tb_min": 192.9,
+     "h_topo_km": 14.8,
+     "lat_ap": 26.452,
+     "lon_ap": 79.366,
+     "lat": 26.351,
+     "lon": 79.826,
+     "dist_sitio_km": 602,
+     "rumo_do_sitio": 249
+    },
+    {
+     "area_km2": 2905,
+     "tb_min": 209.4,
+     "h_topo_km": 13.6,
+     "lat_ap": 28.04,
+     "lon_ap": 89.809,
+     "lat": 27.952,
+     "lon": 90.071,
+     "dist_sitio_km": 449,
+     "rumo_do_sitio": 95
+    },
+    {
+     "area_km2": 2507,
+     "tb_min": 207.1,
+     "h_topo_km": 13.8,
+     "lat_ap": 31.945,
+     "lon_ap": 90.029,
+     "lat": 31.838,
+     "lon": 90.317,
+     "dist_sitio_km": 610,
+     "rumo_do_sitio": 49
+    },
+    {
+     "area_km2": 2275,
+     "tb_min": 207.7,
+     "h_topo_km": 13.7,
+     "lat_ap": 32.491,
+     "lon_ap": 89.921,
+     "lat": 32.382,
+     "lon": 90.213,
+     "dist_sitio_km": 643,
+     "rumo_do_sitio": 45
+    },
+    {
+     "area_km2": 2253,
+     "tb_min": 207.7,
+     "h_topo_km": 13.8,
+     "lat_ap": 28.246,
+     "lon_ap": 87.709,
+     "lat": 28.153,
+     "lon": 88.002,
+     "dist_sitio_km": 244,
+     "rumo_do_sitio": 93
+    },
+    {
+     "area_km2": 2226,
+     "tb_min": 208.7,
+     "h_topo_km": 13.7,
+     "lat_ap": 24.126,
+     "lon_ap": 79.556,
+     "lat": 24.043,
+     "lon": 79.957,
+     "dist_sitio_km": 728,
+     "rumo_do_sitio": 230
+    },
+    {
+     "area_km2": 1196,
+     "tb_min": 210.4,
+     "h_topo_km": 13.5,
+     "lat_ap": 27.457,
+     "lon_ap": 89.046,
+     "lat": 27.371,
+     "lon": 89.312,
+     "dist_sitio_km": 387,
+     "rumo_do_sitio": 105
+    },
+    {
+     "area_km2": 714,
+     "tb_min": 209.9,
+     "h_topo_km": 13.7,
+     "lat_ap": 28.608,
+     "lon_ap": 86.386,
+     "lat": 28.514,
+     "lon": 86.697,
+     "dist_sitio_km": 119,
+     "rumo_do_sitio": 77
+    }
+   ]
+  },
+  {
+   "utc": "2026-08-26T00:00Z",
+   "tb_sitio": 222.3,
+   "area213_150km": 908,
+   "sistema": {
+    "area_km2": 1765,
+    "tb_min": 208.9,
+    "h_topo_km": 13.6,
+    "lat_ap": 28.156,
+    "lon_ap": 87.591,
+    "lat": 28.065,
+    "lon": 87.881,
+    "dist_sitio_km": 233,
+    "rumo_do_sitio": 96,
+    "vel_kmh": 30.8,
+    "rumo_desloc": 230
+   },
+   "objetos": [
+    {
+     "area_km2": 89928,
+     "tb_min": 193.1,
+     "h_topo_km": 14.8,
+     "lat_ap": 26.463,
+     "lon_ap": 79.307,
+     "lat": 26.362,
+     "lon": 79.769,
+     "dist_sitio_km": 607,
+     "rumo_do_sitio": 249
+    },
+    {
+     "area_km2": 1765,
+     "tb_min": 208.9,
+     "h_topo_km": 13.6,
+     "lat_ap": 28.156,
+     "lon_ap": 87.591,
+     "lat": 28.065,
+     "lon": 87.881,
+     "dist_sitio_km": 233,
+     "rumo_do_sitio": 96
+    },
+    {
+     "area_km2": 1519,
+     "tb_min": 200.1,
+     "h_topo_km": 14.7,
+     "lat_ap": 25.649,
+     "lon_ap": 82.806,
+     "lat": 25.557,
+     "lon": 83.178,
+     "dist_sitio_km": 381,
+     "rumo_do_sitio": 218
+    },
+    {
+     "area_km2": 1261,
+     "tb_min": 205.7,
+     "h_topo_km": 13.6,
+     "lat_ap": 26.337,
+     "lon_ap": 87.772,
+     "lat": 26.253,
+     "lon": 88.049,
+     "dist_sitio_km": 337,
+     "rumo_do_sitio": 132
+    },
+    {
+     "area_km2": 739,
+     "tb_min": 209.6,
+     "h_topo_km": 13.6,
+     "lat_ap": 32.094,
+     "lon_ap": 86.749,
+     "lat": 31.985,
+     "lon": 87.08,
+     "dist_sitio_km": 440,
+     "rumo_do_sitio": 20
+    },
+    {
+     "area_km2": 667,
+     "tb_min": 209.5,
+     "h_topo_km": 13.6,
+     "lat_ap": 27.646,
+     "lon_ap": 88.401,
+     "lat": 27.558,
+     "lon": 88.678,
+     "dist_sitio_km": 321,
+     "rumo_do_sitio": 104
+    },
+    {
+     "area_km2": 622,
+     "tb_min": 210.4,
+     "h_topo_km": 13.6,
+     "lat_ap": 32.058,
+     "lon_ap": 89.953,
+     "lat": 31.952,
+     "lon": 90.24,
+     "dist_sitio_km": 612,
+     "rumo_do_sitio": 48
+    },
+    {
+     "area_km2": 485,
+     "tb_min": 210.1,
+     "h_topo_km": 13.6,
+     "lat_ap": 25.028,
+     "lon_ap": 80.365,
+     "lat": 24.942,
+     "lon": 80.754,
+     "dist_sitio_km": 602,
+     "rumo_do_sitio": 232
+    }
+   ]
+  },
+  {
+   "utc": "2026-08-26T00:30Z",
+   "tb_sitio": 242.2,
+   "area213_150km": 473,
+   "sistema": {
+    "area_km2": 350,
+    "tb_min": 210.9,
+    "h_topo_km": 13.6,
+    "lat_ap": 28.064,
+    "lon_ap": 87.473,
+    "lat": 27.973,
+    "lon": 87.764,
+    "dist_sitio_km": 223,
+    "rumo_do_sitio": 99,
+    "vel_kmh": 30.8,
+    "rumo_desloc": 228
+   },
+   "objetos": [
+    {
+     "area_km2": 83393,
+     "tb_min": 193.2,
+     "h_topo_km": 14.8,
+     "lat_ap": 26.438,
+     "lon_ap": 79.226,
+     "lat": 26.337,
+     "lon": 79.689,
+     "dist_sitio_km": 615,
+     "rumo_do_sitio": 250
+    },
+    {
+     "area_km2": 2181,
+     "tb_min": 200.0,
+     "h_topo_km": 14.4,
+     "lat_ap": 25.667,
+     "lon_ap": 82.53,
+     "lat": 25.577,
+     "lon": 82.901,
+     "dist_sitio_km": 397,
+     "rumo_do_sitio": 221
+    },
+    {
+     "area_km2": 2133,
+     "tb_min": 202.7,
+     "h_topo_km": 13.9,
+     "lat_ap": 26.311,
+     "lon_ap": 87.523,
+     "lat": 26.225,
+     "lon": 87.81,
+     "dist_sitio_km": 322,
+     "rumo_do_sitio": 135
+    },
+    {
+     "area_km2": 1660,
+     "tb_min": 202.8,
+     "h_topo_km": 14.1,
+     "lat_ap": 32.223,
+     "lon_ap": 87.054,
+     "lat": 32.11,
+     "lon": 87.394,
+     "dist_sitio_km": 464,
+     "rumo_do_sitio": 23
+    },
+    {
+     "area_km2": 473,
+     "tb_min": 209.8,
+     "h_topo_km": 13.6,
+     "lat_ap": 27.877,
+     "lon_ap": 86.48,
+     "lat": 27.786,
+     "lon": 86.783,
+     "dist_sitio_km": 136,
+     "rumo_do_sitio": 113
+    },
+    {
+     "area_km2": 390,
+     "tb_min": 211.1,
+     "h_topo_km": 13.5,
+     "lat_ap": 26.708,
+     "lon_ap": 87.838,
+     "lat": 26.624,
+     "lon": 88.114,
+     "dist_sitio_km": 316,
+     "rumo_do_sitio": 126
+    },
+    {
+     "area_km2": 356,
+     "tb_min": 204.2,
+     "h_topo_km": 14.0,
+     "lat_ap": 26.151,
+     "lon_ap": 82.007,
+     "lat": 26.06,
+     "lon": 82.381,
+     "dist_sitio_km": 396,
+     "rumo_do_sitio": 232
+    },
+    {
+     "area_km2": 350,
+     "tb_min": 210.9,
+     "h_topo_km": 13.6,
+     "lat_ap": 28.064,
+     "lon_ap": 87.473,
+     "lat": 27.973,
+     "lon": 87.764,
+     "dist_sitio_km": 223,
+     "rumo_do_sitio": 99
+    }
+   ]
+  },
+  {
+   "utc": "2026-08-26T01:00Z",
+   "tb_sitio": 268.8,
+   "area213_150km": 333,
+   "sistema": {
+    "area_km2": 316,
+    "tb_min": 211.3,
+    "h_topo_km": 13.5,
+    "lat_ap": 27.733,
+    "lon_ap": 86.414,
+    "lat": 27.643,
+    "lon": 86.716,
+    "dist_sitio_km": 137,
+    "rumo_do_sitio": 121,
+    "vel_kmh": 219.1,
+    "rumo_desloc": 250
+   },
+   "objetos": [
+    {
+     "area_km2": 74892,
+     "tb_min": 193.3,
+     "h_topo_km": 14.7,
+     "lat_ap": 26.421,
+     "lon_ap": 79.093,
+     "lat": 26.32,
+     "lon": 79.559,
+     "dist_sitio_km": 628,
+     "rumo_do_sitio": 250
+    },
+    {
+     "area_km2": 4245,
+     "tb_min": 201.0,
+     "h_topo_km": 14.0,
+     "lat_ap": 32.2,
+     "lon_ap": 87.144,
+     "lat": 32.087,
+     "lon": 87.479,
+     "dist_sitio_km": 465,
+     "rumo_do_sitio": 24
+    },
+    {
+     "area_km2": 2935,
+     "tb_min": 206.8,
+     "h_topo_km": 13.8,
+     "lat_ap": 26.258,
+     "lon_ap": 87.227,
+     "lat": 26.173,
+     "lon": 87.515,
+     "dist_sitio_km": 306,
+     "rumo_do_sitio": 140
+    },
+    {
+     "area_km2": 2234,
+     "tb_min": 202.2,
+     "h_topo_km": 14.3,
+     "lat_ap": 25.668,
+     "lon_ap": 82.27,
+     "lat": 25.578,
+     "lon": 82.642,
+     "dist_sitio_km": 414,
+     "rumo_do_sitio": 224
+    },
+    {
+     "area_km2": 1556,
+     "tb_min": 204.7,
+     "h_topo_km": 14.1,
+     "lat_ap": 26.893,
+     "lon_ap": 81.062,
+     "lat": 26.797,
+     "lon": 81.464,
+     "dist_sitio_km": 432,
+     "rumo_do_sitio": 248
+    },
+    {
+     "area_km2": 427,
+     "tb_min": 207.5,
+     "h_topo_km": 13.8,
+     "lat_ap": 26.179,
+     "lon_ap": 81.786,
+     "lat": 26.089,
+     "lon": 82.161,
+     "dist_sitio_km": 411,
+     "rumo_do_sitio": 234
+    },
+    {
+     "area_km2": 316,
+     "tb_min": 211.3,
+     "h_topo_km": 13.5,
+     "lat_ap": 27.733,
+     "lon_ap": 86.414,
+     "lat": 27.643,
+     "lon": 86.716,
+     "dist_sitio_km": 137,
+     "rumo_do_sitio": 121
+    },
+    {
+     "area_km2": 269,
+     "tb_min": 201.8,
+     "h_topo_km": 14.0,
+     "lat_ap": 25.475,
+     "lon_ap": 83.493,
+     "lat": 25.388,
+     "lon": 83.836,
+     "dist_sitio_km": 362,
+     "rumo_do_sitio": 207
+    }
+   ]
+  },
+  {
+   "utc": "2026-08-26T01:30Z",
+   "tb_sitio": 255.5,
+   "area213_150km": 0,
+   "sistema": null,
+   "objetos": [
+    {
+     "area_km2": 67246,
+     "tb_min": 194.5,
+     "h_topo_km": 14.7,
+     "lat_ap": 26.392,
+     "lon_ap": 78.986,
+     "lat": 26.292,
+     "lon": 79.452,
+     "dist_sitio_km": 639,
+     "rumo_do_sitio": 250
+    },
+    {
+     "area_km2": 5485,
+     "tb_min": 205.0,
+     "h_topo_km": 13.8,
+     "lat_ap": 32.138,
+     "lon_ap": 87.225,
+     "lat": 32.027,
+     "lon": 87.555,
+     "dist_sitio_km": 462,
+     "rumo_do_sitio": 25
+    },
+    {
+     "area_km2": 2687,
+     "tb_min": 209.4,
+     "h_topo_km": 13.6,
+     "lat_ap": 26.208,
+     "lon_ap": 87.145,
+     "lat": 26.124,
+     "lon": 87.429,
+     "dist_sitio_km": 305,
+     "rumo_do_sitio": 142
+    },
+    {
+     "area_km2": 1877,
+     "tb_min": 203.7,
+     "h_topo_km": 13.9,
+     "lat_ap": 25.656,
+     "lon_ap": 82.026,
+     "lat": 25.568,
+     "lon": 82.395,
+     "dist_sitio_km": 432,
+     "rumo_do_sitio": 226
+    },
+    {
+     "area_km2": 1767,
+     "tb_min": 206.0,
+     "h_topo_km": 13.9,
+     "lat_ap": 26.96,
+     "lon_ap": 80.994,
+     "lat": 26.865,
+     "lon": 81.394,
+     "dist_sitio_km": 436,
+     "rumo_do_sitio": 249
+    },
+    {
+     "area_km2": 684,
+     "tb_min": 209.9,
+     "h_topo_km": 13.6,
+     "lat_ap": 27.725,
+     "lon_ap": 80.525,
+     "lat": 27.628,
+     "lon": 80.934,
+     "dist_sitio_km": 456,
+     "rumo_do_sitio": 261
+    },
+    {
+     "area_km2": 644,
+     "tb_min": 206.0,
+     "h_topo_km": 13.9,
+     "lat_ap": 25.488,
+     "lon_ap": 83.152,
+     "lat": 25.402,
+     "lon": 83.498,
+     "dist_sitio_km": 377,
+     "rumo_do_sitio": 212
+    },
+    {
+     "area_km2": 443,
+     "tb_min": 209.7,
+     "h_topo_km": 13.7,
+     "lat_ap": 26.633,
+     "lon_ap": 80.969,
+     "lat": 26.541,
+     "lon": 81.359,
+     "dist_sitio_km": 454,
+     "rumo_do_sitio": 245
+    }
+   ]
+  },
+  {
+   "utc": "2026-08-26T02:00Z",
+   "tb_sitio": 261.8,
+   "area213_150km": 0,
+   "sistema": null,
+   "objetos": [
+    {
+     "area_km2": 56036,
+     "tb_min": 194.6,
+     "h_topo_km": 14.7,
+     "lat_ap": 26.424,
+     "lon_ap": 78.871,
+     "lat": 26.323,
+     "lon": 79.339,
+     "dist_sitio_km": 648,
+     "rumo_do_sitio": 250
+    },
+    {
+     "area_km2": 4540,
+     "tb_min": 196.0,
+     "h_topo_km": 14.2,
+     "lat_ap": 24.635,
+     "lon_ap": 78.665,
+     "lat": 24.545,
+     "lon": 79.109,
+     "dist_sitio_km": 762,
+     "rumo_do_sitio": 237
+    },
+    {
+     "area_km2": 3156,
+     "tb_min": 207.3,
+     "h_topo_km": 13.8,
+     "lat_ap": 32.158,
+     "lon_ap": 87.28,
+     "lat": 32.047,
+     "lon": 87.609,
+     "dist_sitio_km": 466,
+     "rumo_do_sitio": 26
+    },
+    {
+     "area_km2": 1960,
+     "tb_min": 206.9,
+     "h_topo_km": 13.8,
+     "lat_ap": 27.035,
+     "lon_ap": 80.943,
+     "lat": 26.941,
+     "lon": 81.342,
+     "dist_sitio_km": 438,
+     "rumo_do_sitio": 250
+    },
+    {
+     "area_km2": 733,
+     "tb_min": 207.0,
+     "h_topo_km": 13.8,
+     "lat_ap": 25.646,
+     "lon_ap": 81.796,
+     "lat": 25.558,
+     "lon": 82.164,
+     "dist_sitio_km": 449,
+     "rumo_do_sitio": 228
+    },
+    {
+     "area_km2": 698,
+     "tb_min": 207.1,
+     "h_topo_km": 13.8,
+     "lat_ap": 25.512,
+     "lon_ap": 82.809,
+     "lat": 25.427,
+     "lon": 83.158,
+     "dist_sitio_km": 394,
+     "rumo_do_sitio": 216
+    },
+    {
+     "area_km2": 514,
+     "tb_min": 206.2,
+     "h_topo_km": 13.8,
+     "lat_ap": 26.56,
+     "lon_ap": 81.145,
+     "lat": 26.468,
+     "lon": 81.535,
+     "dist_sitio_km": 442,
+     "rumo_do_sitio": 243
+    },
+    {
+     "area_km2": 392,
+     "tb_min": 212.3,
+     "h_topo_km": 13.5,
+     "lat_ap": 26.054,
+     "lon_ap": 86.655,
+     "lat": 25.972,
+     "lon": 86.942,
+     "dist_sitio_km": 292,
+     "rumo_do_sitio": 151
+    }
+   ]
+  },
+  {
+   "utc": "2026-08-26T02:30Z",
+   "tb_sitio": 277.2,
+   "area213_150km": 0,
+   "sistema": null,
+   "objetos": [
+    {
+     "area_km2": 47854,
+     "tb_min": 194.3,
+     "h_topo_km": 14.6,
+     "lat_ap": 26.391,
+     "lon_ap": 78.734,
+     "lat": 26.291,
+     "lon": 79.205,
+     "dist_sitio_km": 662,
+     "rumo_do_sitio": 251
+    },
+    {
+     "area_km2": 4924,
+     "tb_min": 199.3,
+     "h_topo_km": 14.6,
+     "lat_ap": 24.531,
+     "lon_ap": 78.558,
+     "lat": 24.439,
+     "lon": 79.015,
+     "dist_sitio_km": 776,
+     "rumo_do_sitio": 237
+    },
+    {
+     "area_km2": 2330,
+     "tb_min": 206.3,
+     "h_topo_km": 13.9,
+     "lat_ap": 27.092,
+     "lon_ap": 80.829,
+     "lat": 26.997,
+     "lon": 81.232,
+     "dist_sitio_km": 446,
+     "rumo_do_sitio": 251
+    },
+    {
+     "area_km2": 873,
+     "tb_min": 211.1,
+     "h_topo_km": 13.5,
+     "lat_ap": 32.154,
+     "lon_ap": 87.207,
+     "lat": 32.046,
+     "lon": 87.53,
+     "dist_sitio_km": 463,
+     "rumo_do_sitio": 25
+    },
+    {
+     "area_km2": 550,
+     "tb_min": 206.1,
+     "h_topo_km": 14.0,
+     "lat_ap": 26.564,
+     "lon_ap": 81.022,
+     "lat": 26.47,
+     "lon": 81.419,
+     "dist_sitio_km": 452,
+     "rumo_do_sitio": 244
+    },
+    {
+     "area_km2": 268,
+     "tb_min": 212.3,
+     "h_topo_km": 13.5,
+     "lat_ap": 32.333,
+     "lon_ap": 87.43,
+     "lat": 32.225,
+     "lon": 87.75,
+     "dist_sitio_km": 490,
+     "rumo_do_sitio": 26
+    },
+    {
+     "area_km2": 268,
+     "tb_min": 210.9,
+     "h_topo_km": 13.5,
+     "lat_ap": 25.492,
+     "lon_ap": 79.488,
+     "lat": 25.404,
+     "lon": 79.898,
+     "dist_sitio_km": 643,
+     "rumo_do_sitio": 240
+    },
+    {
+     "area_km2": 233,
+     "tb_min": 212.2,
+     "h_topo_km": 13.5,
+     "lat_ap": 25.492,
+     "lon_ap": 82.464,
+     "lat": 25.408,
+     "lon": 82.811,
+     "dist_sitio_km": 417,
+     "rumo_do_sitio": 220
+    }
+   ]
+  },
+  {
+   "utc": "2026-08-26T02:50Z",
+   "tb_sitio": 263.1,
+   "area213_150km": 0,
+   "sistema": null,
+   "objetos": [
+    {
+     "area_km2": 44313,
+     "tb_min": 195.4,
+     "h_topo_km": 14.6,
+     "lat_ap": 26.364,
+     "lon_ap": 78.681,
+     "lat": 26.264,
+     "lon": 79.153,
+     "dist_sitio_km": 668,
+     "rumo_do_sitio": 250
+    },
+    {
+     "area_km2": 5395,
+     "tb_min": 199.2,
+     "h_topo_km": 14.5,
+     "lat_ap": 24.486,
+     "lon_ap": 78.505,
+     "lat": 24.395,
+     "lon": 78.961,
+     "dist_sitio_km": 783,
+     "rumo_do_sitio": 237
+    },
+    {
+     "area_km2": 2417,
+     "tb_min": 206.5,
+     "h_topo_km": 13.9,
+     "lat_ap": 27.137,
+     "lon_ap": 80.795,
+     "lat": 27.04,
+     "lon": 81.201,
+     "dist_sitio_km": 447,
+     "rumo_do_sitio": 252
+    },
+    {
+     "area_km2": 638,
+     "tb_min": 208.6,
+     "h_topo_km": 13.8,
+     "lat_ap": 26.572,
+     "lon_ap": 80.943,
+     "lat": 26.479,
+     "lon": 81.337,
+     "dist_sitio_km": 459,
+     "rumo_do_sitio": 244
+    },
+    {
+     "area_km2": 283,
+     "tb_min": 211.7,
+     "h_topo_km": 13.5,
+     "lat_ap": 26.726,
+     "lon_ap": 87.294,
+     "lat": 26.642,
+     "lon": 87.577,
+     "dist_sitio_km": 273,
+     "rumo_do_sitio": 132
+    },
+    {
+     "area_km2": 211,
+     "tb_min": 210.5,
+     "h_topo_km": 13.6,
+     "lat_ap": 27.653,
+     "lon_ap": 80.363,
+     "lat": 27.556,
+     "lon": 80.773,
+     "dist_sitio_km": 473,
+     "rumo_do_sitio": 260
+    },
+    {
+     "area_km2": 210,
+     "tb_min": 210.4,
+     "h_topo_km": 13.6,
+     "lat_ap": 27.875,
+     "lon_ap": 80.689,
+     "lat": 27.778,
+     "lon": 81.093,
+     "dist_sitio_km": 438,
+     "rumo_do_sitio": 263
+    }
+   ]
+  },
+  {
+   "utc": "2026-08-26T03:00Z",
+   "tb_sitio": 273.9,
+   "area213_150km": 0,
+   "sistema": null,
+   "objetos": [
+    {
+     "area_km2": 42333,
+     "tb_min": 196.0,
+     "h_topo_km": 14.6,
+     "lat_ap": 26.374,
+     "lon_ap": 78.668,
+     "lat": 26.273,
+     "lon": 79.14,
+     "dist_sitio_km": 669,
+     "rumo_do_sitio": 251
+    },
+    {
+     "area_km2": 5558,
+     "tb_min": 199.1,
+     "h_topo_km": 14.5,
+     "lat_ap": 24.464,
+     "lon_ap": 78.453,
+     "lat": 24.373,
+     "lon": 78.908,
+     "dist_sitio_km": 789,
+     "rumo_do_sitio": 237
+    },
+    {
+     "area_km2": 2240,
+     "tb_min": 205.9,
+     "h_topo_km": 14.0,
+     "lat_ap": 27.178,
+     "lon_ap": 80.813,
+     "lat": 27.081,
+     "lon": 81.22,
+     "dist_sitio_km": 444,
+     "rumo_do_sitio": 253
+    },
+    {
+     "area_km2": 798,
+     "tb_min": 208.8,
+     "h_topo_km": 13.7,
+     "lat_ap": 26.593,
+     "lon_ap": 80.876,
+     "lat": 26.501,
+     "lon": 81.267,
+     "dist_sitio_km": 464,
+     "rumo_do_sitio": 245
+    },
+    {
+     "area_km2": 281,
+     "tb_min": 210.4,
+     "h_topo_km": 13.6,
+     "lat_ap": 27.656,
+     "lon_ap": 80.36,
+     "lat": 27.559,
+     "lon": 80.771,
+     "dist_sitio_km": 473,
+     "rumo_do_sitio": 260
+    },
+    {
+     "area_km2": 248,
+     "tb_min": 208.0,
+     "h_topo_km": 13.9,
+     "lat_ap": 26.908,
+     "lon_ap": 80.615,
+     "lat": 26.813,
+     "lon": 81.021,
+     "dist_sitio_km": 472,
+     "rumo_do_sitio": 250
+    },
+    {
+     "area_km2": 248,
+     "tb_min": 210.6,
+     "h_topo_km": 13.6,
+     "lat_ap": 26.789,
+     "lon_ap": 87.413,
+     "lat": 26.704,
+     "lon": 87.696,
+     "dist_sitio_km": 277,
+     "rumo_do_sitio": 129
+    },
+    {
+     "area_km2": 213,
+     "tb_min": 211.7,
+     "h_topo_km": 13.5,
+     "lat_ap": 26.687,
+     "lon_ap": 87.27,
+     "lat": 26.602,
+     "lon": 87.553,
+     "dist_sitio_km": 274,
+     "rumo_do_sitio": 133
+    }
+   ]
+  }
+ ]
+}

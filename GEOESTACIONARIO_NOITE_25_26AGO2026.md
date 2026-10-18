@@ -13,7 +13,7 @@ O INSAT-3D é a geometria ideal (subsatélite a 82 °E, praticamente no nadir do
 O Himawari-9 (140,7 °E) é aberto. Para o sítio a 85,5 °E o ângulo zenital de visada é de **~68°** — oblíquo. Duas consequências, declaradas:
 
 * o pixel se alonga por $1/\cos 68° \approx 2{,}7$, e as áreas abaixo já incluem esse fator;
-* topos altos sofrem **paralaxe**: um topo a 15 km aparece deslocado ~37 km **para leste** da sua posição real. As manchas frias na figura estão, portanto, deslocadas nesse sentido.
+* topos altos sofrem **paralaxe**: um topo a 15 km aparece deslocado ~37 km ~~**para leste**~~ **para oeste** da sua posição real (**corrigido em 18/10/2026**: o satélite está a leste, em 140,7° E, e um topo alto se projeta no chão do lado oposto a ele; a geometria exata, em `scripts/himawari/ahi_hsd.py`, dá ~30 km a oeste para topos a 14–15 km). As manchas frias na figura estão, portanto, deslocadas para oeste. Trajetória do sistema com a paralaxe corrigida: `data/processed/himawari_trajetoria/`.
 
 Nenhum dos dois efeitos impede detectar um sistema de $10^3$ km². Eles apenas limitam a precisão de posição.
 
@@ -78,7 +78,7 @@ O elemento que eu vinha tratando como fatal — o céu limpo — deixa de ser ob
 ## 4. O que isso não resolve
 
 1. **Quanto o sistema precipitou sobre a bacia.** O IR mede topo de nuvem, não precipitação. Sem isso não se sabe se as 8.400 km² de convecção entregaram 10 mm ou 200 mm sobre o anfiteatro. **É o GPM IMERG de 2026** — os 96 grânulos já estão catalogados no repositório e exigem apenas a sua credencial NASA Earthdata. Agora há um motivo concreto e específico para querê-los.
-2. **A posição exata do núcleo convectivo.** A paralaxe de ~37 km para leste, com visada a 68°, impede afirmar que o núcleo estava *sobre* o anfiteatro e não a algumas dezenas de km a oeste. **O INSAT-3D resolveria isso** — a 82 °E ele vê o sítio quase no nadir, sem paralaxe apreciável. Continua dependendo de cadastro no MOSDAC.
+2. **A posição exata do núcleo convectivo.** A paralaxe de ~30–37 km (~~para leste~~ **para oeste**; corrigido em 18/10/2026), com visada a 68°, impede afirmar que o núcleo estava *sobre* o anfiteatro e não a algumas dezenas de km **a leste**. **Atualização (18/10/2026):** com a paralaxe corrigida, o núcleo do sistema nunca chegou ao sítio — ficou a 190–570 km a ENE e se dissipou a ~200 km a leste entre 23 e 01 UTC; o sítio esteve na borda ocidental (a jusante) da bigorna, com Tb de 218–235 K entre 17:30 e 00:30 UTC (`data/processed/himawari_trajetoria/trajetoria.txt`). **O INSAT-3D resolveria isso** — a 82 °E ele vê o sítio quase no nadir, sem paralaxe apreciável. Continua dependendo de cadastro no MOSDAC.
 3. **O elo de Tinsley.** Nada aqui testa se a modulação de $J_z$ teve papel na organização daquele sistema. O que já se mediu é que o flare M6.9 alterou $J_z$ em ordem de $10^{-5}$ % — desprezível. Se a eletrodinâmica atuou, terá sido por outra via, e a única ainda aberta são os decréscimos de Forbush em raios cósmicos.
 4. **O mecanismo de focalização.** Continua de pé o problema numérico: 8.400 km² de sistema contra 3,4 km² de anfiteatro. Deposição de neve ao longo de horas é um mecanismo de concentração muito mais plausível do que descarga instantânea — mas o fator ainda precisa ser quantificado.
 
