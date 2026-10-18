@@ -28,7 +28,8 @@ envia() { command -v rclone >/dev/null && rclone copy "$1" "$DRIVE/" 2>&1 | grep
 
 espera_fila() {   # espera a fila do rodar_direto.sh terminar
   sleep 20
-  while ! bash rodar_direto.sh estado 2>/dev/null | grep -q "nenhuma fila rodando"; do sleep 30; done
+  # grep sem -q: le a saida toda (com pipefail, o -q fecharia o pipe e o laco nunca terminaria)
+  while ! bash rodar_direto.sh estado 2>/dev/null | grep "nenhuma fila rodando" >/dev/null; do sleep 30; done
 }
 
 prepara_caso() {  # prepara_caso <nome> <base> <toro_params ou vazio> <tapfrq ou vazio>
