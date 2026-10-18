@@ -5,7 +5,7 @@
 # Ajustes para conteiner: lancador de maquina unica (plm isolated: o conteiner nao tem ssh/rsh), root permitido, memoria compartilhada em /tmp (o /dev/shm do docker e pequeno),
 # copia unica desligada (process_vm_readv costuma ser bloqueado), so btl self,vader e pml ob1.
 set -euo pipefail
-K=$(cd "$(dirname "$0")" && pwd)/kit_mpi
+K=${KIT_MPI:-$(cd "$(dirname "$0")" && pwd)/kit_mpi}     # KIT_MPI: outro kit (ex.: kit_mpi_toro); padrao kit_mpi
 LD="$K/lib/ld-linux-x86-64.so.2 --library-path $K/lib"
 if [ "${1:-}" = "rank" ]; then shift; exec $LD "$@"; fi
 NP=${NP:-16}; T=${OMP_NUM_THREADS:-1}

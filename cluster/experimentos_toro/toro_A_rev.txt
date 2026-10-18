@@ -1,0 +1,4 @@
+&toro
+ modo_mp = 1, fcoal = 0.1, faccr = 0.1, fctfz = 0.01,
+ t1_mp = 0.0, t2_mp = 70200.0, fcoal_pos = 1.0, faccr_pos = 1.0, fctfz_pos = 10.0,
+/

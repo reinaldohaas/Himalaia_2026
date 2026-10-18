@@ -1,0 +1,4 @@
+&toro
+ modo_mp = 1, t1_mp = 0.0, t2_mp = 0.0,
+ ivortex = 1, xc_v = 0.0, yc_v = 0.0, rmax_v = 2000.0, zr_v = 2000.0, alpha_v = 2.8e-3, t1_v = 64800.0, tr_v = 1800.0, t2_v = 75600.0,
+/
