@@ -1,0 +1,54 @@
+[2026-10-18T02:27:33Z] === inicio (kit /home/jovyan/privado/Himalaia_2026/toro_cm1_lhende/kit_mpi_toro) ===
+casos: toro_validar   threads: 7   teste: 0   log: /home/jovyan/privado/Himalaia_2026/toro_cm1_lhende/logs/direto_20261018_022733.log
+rodando em segundo plano (pid 102453). Acompanhe: bash rodar_direto.sh estado
+[2026-10-18T04:00:40Z] === inicio (kit /home/jovyan/privado/Himalaia_2026/toro_cm1_lhende/kit_mpi_toro) ===
+casos: toro_validar   threads: 7   teste: 0   log: /home/jovyan/privado/Himalaia_2026/toro_cm1_lhende/logs/direto_20261018_040040.log
+rodando em segundo plano (pid 141878). Acompanhe: bash rodar_direto.sh estado
+[2026-10-18T04:12:48Z] validacao OK: executavel do toro desligado = bit a bit a rad_06utc_repro (2 h)
+casos: toro_teste   threads: 7   teste: 1   log: /home/jovyan/privado/Himalaia_2026/toro_cm1_lhende/logs/direto_20261018_041248.log
+rodando em segundo plano (pid 152138). Acompanhe: bash rodar_direto.sh estado
+[2026-10-18T04:13:08Z] teste curto OK (toro ligado, vortice e anti-coalescencia, 120 s)
+[2026-10-18T04:13:08Z] rodando toro_A_rev_vort
+casos: toro_A_rev_vort   threads: 7   teste: 0   log: /home/jovyan/privado/Himalaia_2026/toro_cm1_lhende/logs/direto_20261018_041308.log
+rodando em segundo plano (pid 152697). Acompanhe: bash rodar_direto.sh estado
+[2026-10-18T04:39:48Z] toro_A_rev_vort concluido
+diag gravado: logs/diag_toro_A_rev_vort.{json,txt} | toro LIGADO
+[2026-10-18T04:40:51Z] rodando toro_Ag_vort
+casos: toro_Ag_vort   threads: 7   teste: 0   log: /home/jovyan/privado/Himalaia_2026/toro_cm1_lhende/logs/direto_20261018_044051.log
+rodando em segundo plano (pid 176473). Acompanhe: bash rodar_direto.sh estado
+[2026-10-18T05:06:00Z] toro_Ag_vort concluido
+diag gravado: logs/diag_toro_Ag_vort.{json,txt} | toro LIGADO
+[2026-10-18T05:06:47Z] rodando toro_vort
+casos: toro_vort   threads: 7   teste: 0   log: /home/jovyan/privado/Himalaia_2026/toro_cm1_lhende/logs/direto_20261018_050647.log
+rodando em segundo plano (pid 201097). Acompanhe: bash rodar_direto.sh estado
+[2026-10-18T05:29:59Z] toro_vort concluido
+diag gravado: logs/diag_toro_vort.{json,txt} | toro LIGADO
+[2026-10-18T05:30:46Z] rodando toro_A
+casos: toro_A   threads: 7   teste: 0   log: /home/jovyan/privado/Himalaia_2026/toro_cm1_lhende/logs/direto_20261018_053046.log
+rodando em segundo plano (pid 229921). Acompanhe: bash rodar_direto.sh estado
+[2026-10-18T05:52:51Z] toro_A concluido
+diag gravado: logs/diag_toro_A.{json,txt} | toro LIGADO
+[2026-10-18T05:53:39Z] rodando toro_A_rev
+casos: toro_A_rev   threads: 7   teste: 0   log: /home/jovyan/privado/Himalaia_2026/toro_cm1_lhende/logs/direto_20261018_055339.log
+rodando em segundo plano (pid 250220). Acompanhe: bash rodar_direto.sh estado
+[2026-10-18T06:15:15Z] toro_A_rev concluido
+diag gravado: logs/diag_toro_A_rev.{json,txt} | toro LIGADO
+[2026-10-18T06:15:35Z] rodando toro_Ag
+casos: toro_Ag   threads: 7   teste: 0   log: /home/jovyan/privado/Himalaia_2026/toro_cm1_lhende/logs/direto_20261018_061535.log
+rodando em segundo plano (pid 270611). Acompanhe: bash rodar_direto.sh estado
+[2026-10-18T06:37:16Z] toro_Ag concluido
+diag gravado: logs/diag_toro_Ag.{json,txt} | toro LIGADO
+diag gravado: logs/diag_rad_06utc_hib16x7.{json,txt} | toro desligado
+[2026-10-18T06:37:42Z] diagnostico rad_06utc_hib16x7 enviado
+diag gravado: logs/diag_toro_A_rev_vort.{json,txt} | toro LIGADO
+[2026-10-18T06:37:50Z] diagnostico toro_A_rev_vort enviado
+diag gravado: logs/diag_toro_Ag_vort.{json,txt} | toro LIGADO
+[2026-10-18T06:38:16Z] diagnostico toro_Ag_vort enviado
+diag gravado: logs/diag_toro_vort.{json,txt} | toro LIGADO
+[2026-10-18T06:38:32Z] diagnostico toro_vort enviado
+diag gravado: logs/diag_toro_A.{json,txt} | toro LIGADO
+[2026-10-18T06:38:40Z] diagnostico toro_A enviado
+diag gravado: logs/diag_toro_A_rev.{json,txt} | toro LIGADO
+[2026-10-18T06:38:47Z] diagnostico toro_A_rev enviado
+diag gravado: logs/diag_toro_Ag.{json,txt} | toro LIGADO
+[2026-10-18T06:38:55Z] diagnostico toro_Ag enviado
