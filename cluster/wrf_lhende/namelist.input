@@ -24,6 +24,7 @@
  debug_level              = 0,
  iofields_filename        = 'iofields_toro.txt', 'iofields_toro.txt', 'iofields_toro.txt',
  ignore_iofields_warning  = .true.,
+ nocolons                 = .true.,
  auxhist2_outname         = 'wrfaux_d<domain>_<date>',
  auxhist2_interval        = 60,   30,   15,
  frames_per_auxhist2      = 1000, 1000, 1000,
