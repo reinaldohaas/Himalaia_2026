@@ -180,11 +180,12 @@ def main(d_run, h0, prefixo, rotulo=""):
 
 
 def figura(arq, mapas, x, y, zs, h0, rotulo):
+    os.environ["MPLBACKEND"] = "Agg"        # o Jupyter exporta um backend inline que o matplotlib fora dele recusa
     try:
         import matplotlib
-    except ImportError:
-        print("matplotlib ausente: figura nao gerada"); return
-    matplotlib.use("Agg")
+        matplotlib.use("Agg")
+    except Exception as e:                 # sem matplotlib (ou backend invalido): tabelas ficam, figura nao
+        print("figura nao gerada:", e); return
     import matplotlib.pyplot as plt
     alvo = [h for h in (8.0, 14.0, 18.0, 21.0, 24.0, 26.5) if int(round((h - h0) * 2)) in mapas]
     if not alvo:

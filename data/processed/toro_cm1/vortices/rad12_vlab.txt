@@ -1,0 +1,35 @@
+Vortices de sotavento -- rad_12utc (vlab) (../execucoes/rad_12utc)
+f = 6.91e-05 s-1; vento medio 5-6 km; N 4-7 km; Fr = U/(N*2000 m)
+
+UTC   vel  dir  N      Fr    | vortices a 5,5 km (|zeta|>=1e-03, OW<0)    | vortice orografico mais forte (zeta/f, area, dist. ao anfiteatro, |w| max, saidas seguidas)        | janela 3x3 km a 5,5 km: zeta/f, convergencia (1e-4 s-1), w (m/s)
+ 12.0   1.2 218  0.0136  0.04 |  0 orog  0 conv | nenhum vortice orografico                                          | anf: zeta/f  +0.2  conv  -0.2  w -0.07
+ 12.5   1.1 230  0.0137  0.04 |  4 orog  0 conv | mais forte orog:  -46.3 f, 1.00 km2, a 18.9 km, w  0.6, persist 1 | anf: zeta/f  -5.8  conv  -0.5  w +0.03
+ 13.0   1.1 233  0.0137  0.04 |  5 orog  0 conv | mais forte orog:  -34.5 f, 0.75 km2, a 18.7 km, w  0.2, persist 2 | anf: zeta/f -12.4  conv  +0.8  w -0.01
+ 13.5   1.1 235  0.0137  0.04 |  7 orog  0 conv | mais forte orog:  -48.4 f, 1.50 km2, a  1.4 km, w  0.1, persist 2 | anf: zeta/f -19.3  conv  +1.5  w +0.01
+ 14.0   1.1 237  0.0137  0.04 |  5 orog  0 conv | mais forte orog:  -59.9 f, 1.50 km2, a  1.6 km, w  0.1, persist 3 | anf: zeta/f -25.6  conv  +2.4  w -0.03
+ 14.5   1.1 239  0.0137  0.04 |  9 orog  0 conv | mais forte orog:  -59.6 f, 2.50 km2, a  1.9 km, w  0.1, persist 4 | anf: zeta/f -27.6  conv  +2.3  w -0.02
+ 15.0   1.0 239  0.0137  0.04 |  9 orog  0 conv | mais forte orog:  -57.8 f, 3.50 km2, a  2.2 km, w  0.1, persist 5 | anf: zeta/f -22.4  conv  +2.2  w -0.03
+ 15.5   1.0 240  0.0138  0.04 |  9 orog  0 conv | mais forte orog:  -50.8 f, 4.25 km2, a  2.3 km, w  0.1, persist 6 | anf: zeta/f -18.0  conv  +2.2  w -0.02
+ 16.0   1.0 241  0.0138  0.04 | 10 orog  0 conv | mais forte orog:  -41.5 f, 1.00 km2, a 18.9 km, w  0.3, persist 8 | anf: zeta/f -15.6  conv  +2.3  w -0.02
+ 16.5   1.0 242  0.0139  0.04 |  9 orog  0 conv | mais forte orog:  -40.3 f, 1.50 km2, a 19.2 km, w  0.3, persist 9 | anf: zeta/f -13.0  conv  +2.4  w -0.02
+ 17.0   1.0 243  0.0139  0.03 |  9 orog  0 conv | mais forte orog:  -43.3 f, 0.75 km2, a 18.8 km, w  0.4, persist 10 | anf: zeta/f -10.1  conv  +2.4  w -0.03
+ 17.5   1.0 243  0.0140  0.03 | 16 orog  0 conv | mais forte orog:  -47.9 f, 1.00 km2, a 18.9 km, w  0.5, persist 11 | anf: zeta/f  -6.4  conv  +2.3  w -0.03
+ 18.0   0.9 243  0.0140  0.03 | 12 orog  0 conv | mais forte orog:  -50.8 f, 1.00 km2, a 18.8 km, w  0.4, persist 12 | anf: zeta/f  -4.5  conv  +2.5  w -0.03
+ 18.5   0.9 243  0.0140  0.03 | 12 orog  0 conv | mais forte orog:  -52.9 f, 1.25 km2, a 18.9 km, w  0.4, persist 13 | anf: zeta/f  -3.0  conv  +2.3  w -0.02
+ 19.0   0.9 243  0.0141  0.03 | 14 orog  0 conv | mais forte orog:  -52.6 f, 1.25 km2, a 18.9 km, w  0.6, persist 14 | anf: zeta/f  -0.7  conv  +2.2  w -0.02
+ 19.5   0.9 242  0.0141  0.03 | 21 orog  0 conv | mais forte orog:  -48.7 f, 1.25 km2, a 18.9 km, w  0.3, persist 15 | anf: zeta/f  +0.7  conv  +1.7  w -0.02
+ 20.0   0.9 241  0.0142  0.03 | 27 orog  0 conv | mais forte orog:  -48.8 f, 1.00 km2, a 18.8 km, w  0.4, persist 16 | anf: zeta/f  +1.5  conv  +1.4  w -0.02
+ 20.5   0.9 241  0.0142  0.03 | 25 orog  0 conv | mais forte orog:  -50.8 f, 1.25 km2, a 18.9 km, w  0.4, persist 17 | anf: zeta/f  +2.8  conv  +1.3  w -0.02
+ 21.0   0.9 242  0.0142  0.03 | 27 orog  0 conv | mais forte orog:  -52.8 f, 1.00 km2, a 18.9 km, w  0.4, persist 18 | anf: zeta/f  +3.8  conv  +1.2  w -0.02
+ 21.5   0.9 243  0.0142  0.03 | 33 orog  0 conv | mais forte orog:  -50.1 f, 0.75 km2, a 18.8 km, w  0.2, persist 19 | anf: zeta/f  +5.3  conv  +1.2  w -0.02
+ 22.0   0.9 245  0.0143  0.03 | 36 orog  0 conv | mais forte orog:  -50.1 f, 1.50 km2, a 19.0 km, w  0.5, persist 20 | anf: zeta/f  +4.1  conv  +0.7  w -0.02
+ 22.5   0.9 247  0.0143  0.03 | 47 orog  0 conv | mais forte orog:  -51.0 f, 0.75 km2, a 18.8 km, w  0.4, persist 21 | anf: zeta/f  +4.4  conv  +1.8  w -0.04
+ 23.0   0.9 250  0.0143  0.03 | 54 orog  0 conv | mais forte orog:  -50.3 f, 1.00 km2, a 18.9 km, w  0.6, persist 22 | anf: zeta/f  +2.2  conv  +1.4  w -0.02
+ 23.5   0.9 253  0.0144  0.03 | 64 orog  0 conv | mais forte orog:  -53.4 f, 0.50 km2, a 18.8 km, w  0.8, persist 23 | anf: zeta/f  +0.9  conv  +1.8  w -0.03
+  0.0   1.0 256  0.0144  0.03 | 71 orog  0 conv | mais forte orog:  -51.7 f, 0.75 km2, a 19.0 km, w  0.9, persist 24 | anf: zeta/f  -1.5  conv  +2.3  w -0.04
+  0.5   1.0 259  0.0144  0.03 | 84 orog  0 conv | mais forte orog:  +54.7 f, 0.75 km2, a 16.1 km, w  0.3, persist 8 | anf: zeta/f  -5.0  conv  +2.0  w -0.03
+  1.0   1.0 260  0.0145  0.04 | 68 orog  0 conv | mais forte orog:  -59.3 f, 0.75 km2, a 19.0 km, w  1.2, persist 26 | anf: zeta/f  -6.4  conv  +2.3  w -0.03
+  1.5   1.0 260  0.0145  0.04 | 82 orog  0 conv | mais forte orog:  -53.0 f, 0.75 km2, a 19.1 km, w  0.8, persist 27 | anf: zeta/f  -9.6  conv  +2.2  w -0.03
+  2.0   1.1 260  0.0146  0.04 | 77 orog  0 conv | mais forte orog:  -57.1 f, 1.00 km2, a 19.1 km, w  1.0, persist 28 | anf: zeta/f -11.6  conv  +1.9  w -0.01
+  2.5   1.1 259  0.0146  0.04 | 92 orog  0 conv | mais forte orog:  -76.1 f, 0.75 km2, a 20.3 km, w  0.5, persist 11 | anf: zeta/f -13.0  conv  +1.4  w -0.02
+  3.0   1.1 258  0.0146  0.04 | 94 orog  0 conv | mais forte orog:  -83.3 f, 1.50 km2, a 20.2 km, w  0.7, persist 12 | anf: zeta/f -11.0  conv  +2.8  w -0.03
