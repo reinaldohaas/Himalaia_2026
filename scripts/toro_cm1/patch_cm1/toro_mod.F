@@ -25,6 +25,10 @@
 !    sn_s [#/kg/s] na especie (nq_s, nn_s) do vetor qa (NSSL ptype 27: 4 = qi, 11 = cci;
 !    5 = qs, 12 = csw), num cilindro de raio r_s [m] em torno de (xc_s, yc_s), entre z1_s e
 !    z2_s [m ASL; zbase_s = cota da base do modelo], de t1_s a t2_s [s de modelo].
+!
+!  Levantamento controlado (ilift = 1): relaxa w para o alvo w_l*exp(-(r/r_l)^2)*sin(pi*(z-z1_l)/(z2_l-z1_l))
+!    (r < 2 r_l, z1_l < z < z2_l em m ASL), com escala tau_l [s], de t1_l a t2_l, com rampa tr_l [s].
+!    Fora da coluna, w e livre.
 !-----------------------------------------------------------------------
 module toro_mod
   implicit none
@@ -39,14 +43,18 @@ module toro_mod
   integer, save :: iseed = 0, nq_s = 4, nn_s = 11
   real, save :: xc_s = 0.0, yc_s = 0.0, r_s = 4000.0, z1_s = 5500.0, z2_s = 7500.0, zbase_s = 3000.0
   real, save :: t1_s = 0.0, t2_s = 0.0, sq_s = 0.0, sn_s = 0.0
+  integer, save :: ilift = 0
+  real, save :: xc_l = 0.0, yc_l = 0.0, r_l = 3000.0, z1_l = 4500.0, z2_l = 10000.0
+  real, save :: w_l = 0.0, tau_l = 300.0, t1_l = 0.0, t2_l = 0.0, tr_l = 600.0
   ! estado no instante corrente (toro_atualiza, chamado a cada passo, fora de regiao paralela)
   logical, save :: mp_A = .false., seed_on = .false.
-  real, save :: gamm_v = 0.0
+  real, save :: gamm_v = 0.0, gamm_l = 0.0
   namelist /toro/ modo_mp, fcoal, faccr, fctfz, fcoal_pos, faccr_pos, fctfz_pos,  &
                   t1_mp, t2_mp, qg_rev, ivortex, xc_v, yc_v, rmax_v, zr_v,        &
                   alpha_v, t1_v, t2_v, tr_v,                                      &
                   iseed, nq_s, nn_s, xc_s, yc_s, r_s, z1_s, z2_s, zbase_s,        &
-                  t1_s, t2_s, sq_s, sn_s
+                  t1_s, t2_s, sq_s, sn_s,                                         &
+                  ilift, xc_l, yc_l, r_l, z1_l, z2_l, w_l, tau_l, t1_l, t2_l, tr_l
 
 contains
 
@@ -82,6 +90,9 @@ contains
     if (ivortex == 1 .and. mtime >= dble(t1_v) .and. mtime < dble(t2_v)) &
       gamm_v = real(min(1.0d0, (mtime - dble(t1_v)) / dble(max(tr_v, 1.0))))
     seed_on = (iseed == 1 .and. mtime >= dble(t1_s) .and. mtime < dble(t2_s))
+    gamm_l = 0.0
+    if (ilift == 1 .and. mtime >= dble(t1_l) .and. mtime < dble(t2_l)) &
+      gamm_l = real(min(1.0d0, (mtime - dble(t1_l)) / dble(max(tr_l, 1.0))))
   end subroutine toro_atualiza
 
   ! fatores no ponto (puras: seguras dentro de regioes paralelas)

@@ -81,7 +81,12 @@ def diag(d, h0, prefixo, rotulo):
         qi, qs, qg = campo("qi", t), campo("qs", t), campo("qg", t)
         qhl = campo("qhl", t) if tem("qhl") else 0.0 * qg
         liq = (qc + qr) * rho * dz; gel = (qi + qs + qg + qhl) * rho * dz       # kg/m2 por camada
-        slw = np.where(T < 273.15, liq, 0.0).sum(axis=0)
+        slw3 = np.where(T < 273.15, liq, 0.0)
+        slw = slw3.sum(axis=0)
+        a3 = np.broadcast_to(anf, T.shape)
+        m_slw = float((slw3 * a3).sum())
+        t_slw = float((slw3 * a3 * (T - 273.15)).sum() / m_slw) if m_slw > 0 else float("nan")   # T media da agua super-resfriada
+        grp = float((((qg + qhl) * rho * dz).sum(axis=0))[anf].sum() * AREA / 1000.0)            # graupel + granizo (t)
         ni = (campo("cci", t) + campo("csw", t)) * rho / 1000.0 if tem("cci") else 0.0 * T   # por litro
         banda = (T <= 270.15) & (T >= 265.15)
         cols = np.broadcast_to(anf, T.shape) & banda
@@ -107,7 +112,7 @@ def diag(d, h0, prefixo, rotulo):
                   "vol_r10_m3": float(chuva[r10].sum() / 1000.0 * AREA),
                   "f1_r10": float(f1[r10].sum() * 0.25),
                   "wdown_min": float(np.nanmin(wlow)) if np.isfinite(wlow).any() else 0.0,
-                  "tb_sitio": tb})
+                  "tb_sitio": tb, "t_slw_C": t_slw, "graupel_t": grp})
     # horas: deduz o intervalo das saidas pelo tamanho (tapfrq) a partir do namelist
     nl = open(os.path.join(d, "namelist.input")).read()
     tap = float(re.search(r"^\s*tapfrq\s*=\s*([0-9.eE+-]+)", nl, re.M).group(1))
@@ -121,11 +126,11 @@ def diag(d, h0, prefixo, rotulo):
     json.dump(out, open(prefixo + ".json", "w"), indent=1)
     with open(prefixo + ".txt", "w", encoding="utf-8") as f:
         f.write("%s (%s, toro %s, saidas a cada %.0f s)\n" % (rotulo, d, lido, tap))
-        f.write(" UTC    SLW(t)  gelo(t)  Ni_HM/L  chuva(mm) taxa(mm/h) prate_max  vol_anf(m3)  vol_r10(m3)  F1_r10  wdown  Tb_sitio\n")
+        f.write(" UTC    SLW(t)  gelo(t)  Ni_HM/L  chuva(mm) taxa(mm/h) prate_max  vol_anf(m3)  vol_r10(m3)  F1_r10  wdown  Tb_sitio  T_SLW(C) graupel(t)\n")
         for s in S:
-            f.write("%5.2f %8.0f %8.0f %8.1f %9.2f %9.1f %9.1f %12.0f %12.0f %7.1f %6.1f %8.1f\n" % (
+            f.write("%5.2f %8.0f %8.0f %8.1f %9.2f %9.1f %9.1f %12.0f %12.0f %7.1f %6.1f %8.1f %8.1f %9.0f\n" % (
                 s["hora_utc"] % 24, s["slw_t"], s["gelo_t"], s["ni_hm_L"], s["chuva_mm"], s["taxa_mmh"],
-                s["prate_max_mmh"], s["vol_anf_m3"], s["vol_r10_m3"], s["f1_r10"], s["wdown_min"], s["tb_sitio"]))
+                s["prate_max_mmh"], s["vol_anf_m3"], s["vol_r10_m3"], s["f1_r10"], s["wdown_min"], s["tb_sitio"], s["t_slw_C"], s["graupel_t"]))
     print("diag gravado:", prefixo + ".{json,txt}", "| toro", lido)
 
 

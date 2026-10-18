@@ -129,6 +129,26 @@ bloco_s = """      ! toro (toro_mod): gelo vindo de cima (semeadura) -- fonte de
         enddo
       ENDIF
 
+      ! toro (toro_mod): levantamento controlado -- relaxa w para o alvo na coluna sobre o anfiteatro
+      IF( toro_ativo .and. ilift.eq.1 .and. gamm_l.gt.0.0 )THEN
+        !$omp parallel do default(shared)  &
+        !$omp private(i,j,k,tvx,tvy,tvr,tvs,tvh)
+        do k=2,nk
+        do j=1,nj
+        do i=1,ni
+          tvx = xh(i)-xc_l
+          tvy = yh(j)-yc_l
+          tvr = sqrt(tvx*tvx+tvy*tvy)
+          tvh = zf(i,j,k)+zbase_s
+          if( tvr.lt.2.0*r_l .and. tvh.gt.z1_l .and. tvh.lt.z2_l )then
+            tvs = gamm_l*w_l*exp(-(tvr/r_l)**2)*sin(3.14159265*(tvh-z1_l)/(z2_l-z1_l))
+            wten1(i,j,k) = wten1(i,j,k) + gamm_l*(tvs-wa(i,j,k))/max(tau_l,1.0)
+          endif
+        enddo
+        enddo
+        enddo
+      ENDIF
+
 """
 t = troca(t, "!--------------------------------------------------------------------\n!  U-equation\n", bloco_s, "solve1 semeadura", depois=False)
 arqs["solve1.F"] = t
