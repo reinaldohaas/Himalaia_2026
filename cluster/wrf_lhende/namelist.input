@@ -16,7 +16,7 @@
  history_interval         = 60,   30,   15,
  frames_per_outfile       = 1000, 1000, 1000,
  restart                  = .false.,
- restart_interval         = 180,      ! reinicio a cada 3 h: uma queda nao custa a rodada inteira
+ restart_interval         = 100000,   ! sem reinicio: com 180 o wrfrst_d02 travou no rank 0 (48 B, 112 ranks girando)
  io_form_history          = 2,
  io_form_restart          = 2,
  io_form_input            = 2,
