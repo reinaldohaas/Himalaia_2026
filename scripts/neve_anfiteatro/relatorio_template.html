@@ -294,8 +294,23 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
     </table>
     </div>
   </div>
-  <p>Gelo de 917 kg/m³ (0,9 m³ de água por m³ de gelo). Áreas de bacia pelo GLO-30, nenhuma tocando a borda da janela do MDE. Para comparação, o IMERG (Late Run) deu 5,1 mm de média numa caixa de 0,5° até o colapso, com máximos de célula de 3 a 6,5 mm por meia hora entre 17:30 e 22 UTC. O IMERG subestima chuva convectiva em montanha, e a tempestade que o Himawari mostrou chegando pela borda da bigorna ainda não foi simulada. A simulação WRF que vai testar isso está em andamento.</p>
+  <p>Gelo de 917 kg/m³ (0,9 m³ de água por m³ de gelo). Áreas de bacia pelo GLO-30, nenhuma tocando a borda da janela do MDE. Para comparação, o IMERG (Late Run) deu 5,1 mm de média numa caixa de 0,5° até o colapso, com máximos de célula de 3 a 6,5 mm por meia hora entre 17:30 e 22 UTC. O IMERG subestima chuva convectiva em montanha. A simulação WRF (seção seguinte) não traz a tempestade do planalto até o sítio e não chove sobre o anfiteatro; por isso não decide a questão.</p>
   <p>Duas coisas a área não mede. O gelo pode afinar sem expor rocha, e uma superfície de gelo continua com NDSI de neve; nos dois casos a classe não muda e a perda de volume é invisível. Só a diferença entre um MDE anterior e um posterior ao evento mede espessura.</p>
+</section>
+
+<section aria-labelledby="s5b">
+  <h2 id="s5b">O WRF e a tempestade</h2>
+  <p>O WRF 4.7.1 rodou com a ERA5 nas bordas, em três domínios aninhados (9, 3 e 1 km), de 25/08 00 UTC a 26/08 03 UTC, e terminou sem erro. O critério de aceite foi registrado antes da rodada: entre 18 e 22 UTC, o domínio de 3 km teria de ter um objeto com OLR &lt; 120 W/m² de pelo menos 5.000 km² a até 100 km do centro do sistema observado pelo Himawari. <b>O critério não passa.</b> <span class="tag t-prem">MODELO</span></p>
+  <figure>
+    <img src="{{wrf_himawari}}" alt="Mapas do Himawari e do WRF às 12, 18 e 22 UTC de 25/08 e 02:50 de 26/08, e gráfico das áreas frias. O WRF forma o sistema perto de Lhasa às 12 UTC, bem menor que o observado, e não o traz para oeste; perto do sítio, à noite, o WRF tem área fria parecida com a do Himawari.">
+    <figcaption><b>WRF contra Himawari-9.</b> (a–d) Himawari B13, contorno de 213 K. (e–h) OLR do WRF no domínio de 3 km, contorno de 120 W/m². Laranja: trajetória observada; estrela: anfiteatro. (i) Área do sistema observado (preto) e do maior objeto do WRF seguido por continuidade (vermelho); área de nuvem fria a até 150 km do sítio no Himawari (preto pontilhado) e no WRF (vermelho pontilhado).</figcaption>
+  </figure>
+  <ul>
+    <li><b>O sistema do planalto:</b> o WRF o forma na fase madura, perto de Lhasa, a 66–108 km do centro observado às 12–13 UTC, mas com no máximo 1/7 da área fria (20.782 contra 141.681 km² às 12:30). Ele morre às 16:30 UTC indo para o norte, em vez de seguir para oés-sudoeste. Entre 18 e 22 UTC, os objetos do WRF com 5.000 km² ou mais ficam a 272–489 km do sistema observado.</li>
+    <li><b>A convecção perto do sítio:</b> o Himawari mostra, além do sistema, células com topo abaixo de 213 K de 1.100–1.800 km² a 50–60 km a oés-sudoeste do sítio às 19:00–20:30, e 4.300–6.000 km² de nuvem fria a até 150 km do sítio entre 18:00 e 22:30. O WRF tem a mesma quantidade nos mesmos horários (4.000–5.500 km² a até 150 km), deslocada 30–50 km para o sul.</li>
+    <li><b>Chuva:</b> no domínio de 1 km, 0,0 mm sobre o anfiteatro de 12 a 03 UTC; o máximo a até 30 km é 8 mm, quase todo antes das 23 UTC. Como o critério falhou, essa chuva não é interpretada como a da tempestade.</li>
+    <li><b>O que as saídas não trazem:</b> a refletividade não foi calculada, e graupel e granizo só estão nas saídas completas, que ficaram no vlab.</li>
+  </ul>
 </section>
 
 <section aria-labelledby="s6">
@@ -303,7 +318,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
   <ul>
     <li><b>Um MDE posterior ao evento.</b> É o único caminho para volume. O GLO-30 é anterior (2011–2015). Seria preciso um par estéreo de alta resolução sobre o anfiteatro depois de 26/08 (Pléiades, WorldView, ou ASTER se houver aquisição), comparado com um MDE de antes.</li>
     <li><b>A zona do colapso não foi vista no óptico entre 12/08 e 28/09.</b> Uma cena comercial de alta resolução sem nuvem nesse intervalo, se existir em arquivo, resolveria a cicatriz e a área candidata do radar.</li>
-    <li><b>A tempestade.</b> O WRF (ERA5, 9/3/1 km) roda no vlab para saber se o sistema visto pelo Himawari chega ao sítio em 18–22 UTC e quanto precipita na bacia. O critério de aceite foi registrado antes da rodada. A primeira tentativa caiu ao ligar o domínio de 1 km sobre o relevo; a segunda está em execução com passo menor e advecção vertical implícita.</li>
+    <li><b>A tempestade no modelo.</b> O WRF com a ERA5 não propaga o sistema do planalto para oeste. Para testar se ele poderia ter chovido sobre a fonte, é preciso uma simulação que reproduza a trajetória observada.</li>
     <li><b>O segundo episódio sugerido pela órbita descendente 19</b> (sinal até 25 km no par que termina em 05/09) merece uma checagem com as cenas de radar de setembro.</li>
   </ul>
 </section>
@@ -321,6 +336,6 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
     <li><span class="mono">caracteriza_anfiteatro.py</span>: morfometria do anfiteatro (GLO-30), cobertura por cota e declividade (Sentinel-2) e geleiras do OpenStreetMap.</li>
     <li><span class="mono">nomes_osm.py</span>: nomes dos trechos do talvegue no OpenStreetMap (dados © colaboradores do OpenStreetMap, licença ODbL).</li>
   </ul>
-  <p style="margin:0">Rótulos: <span class="tag t-obs">OBSERVADO</span> instrumento; <span class="tag t-par">PARAMÉTRICO</span> conta feita com um valor atribuído; <span class="tag t-prem">PREMISSA</span> número herdado do repositório sem medição.</p>
+  <p style="margin:0">Rótulos: <span class="tag t-obs">OBSERVADO</span> instrumento; <span class="tag t-par">PARAMÉTRICO</span> conta feita com um valor atribuído; <span class="tag t-prem">PREMISSA</span> número herdado do repositório sem medição; <span class="tag t-prem">MODELO</span> resultado de simulação.</p>
 </section>
 </main>

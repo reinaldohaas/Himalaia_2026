@@ -1,0 +1,961 @@
+{
+ "arquivo": "C:/Users/haas/AppData/Local/Temp/claude/C--Users-haas-github-Himalaia-2026--claude-worktrees-himalaia-enchentes-auditoria-fcfdb5/8b2d9550-0f76-48e0-822f-984d1a07b878/scratchpad/wrf/wrfaux_d02.nc",
+ "criterio_ok": false,
+ "criterio_direto": [
+  {
+   "utc": "2026-08-25_18:00:00",
+   "himawari": {
+    "lat": 29.115,
+    "lon": 87.544,
+    "area_km2": 37029
+   },
+   "maior_objeto_wrf": {
+    "area_km2": 1220,
+    "olr_min": 94.3,
+    "lat": 26.77,
+    "lon": 89.46,
+    "dist": 424,
+    "rumo": 113,
+    "sep_km": 322
+   },
+   "objeto_wrf_mais_proximo": {
+    "area_km2": 588,
+    "olr_min": 104.7,
+    "lat": 29.61,
+    "lon": 88.38,
+    "dist": 316,
+    "rumo": 62,
+    "sep_km": 98
+   },
+   "passa": false
+  },
+  {
+   "utc": "2026-08-25_18:30:00",
+   "himawari": {
+    "lat": 29.115,
+    "lon": 87.544,
+    "area_km2": 37029
+   },
+   "maior_objeto_wrf": {
+    "area_km2": 4312,
+    "olr_min": 88.3,
+    "lat": 27.58,
+    "lon": 85.02,
+    "dist": 91,
+    "rumo": 212,
+    "sep_km": 301
+   },
+   "objeto_wrf_mais_proximo": {
+    "area_km2": 1681,
+    "olr_min": 92.1,
+    "lat": 26.61,
+    "lon": 87.83,
+    "dist": 294,
+    "rumo": 129,
+    "sep_km": 280
+   },
+   "passa": false
+  },
+  {
+   "utc": "2026-08-25_19:00:00",
+   "himawari": {
+    "lat": 28.912,
+    "lon": 87.582,
+    "area_km2": 25290
+   },
+   "maior_objeto_wrf": {
+    "area_km2": 5243,
+    "olr_min": 81.3,
+    "lat": 27.66,
+    "lon": 84.81,
+    "dist": 97,
+    "rumo": 226,
+    "sep_km": 305
+   },
+   "objeto_wrf_mais_proximo": {
+    "area_km2": 2215,
+    "olr_min": 103.9,
+    "lat": 26.54,
+    "lon": 87.48,
+    "dist": 274,
+    "rumo": 135,
+    "sep_km": 264
+   },
+   "passa": false
+  },
+  {
+   "utc": "2026-08-25_19:30:00",
+   "himawari": {
+    "lat": 28.912,
+    "lon": 87.582,
+    "area_km2": 25290
+   },
+   "maior_objeto_wrf": {
+    "area_km2": 5487,
+    "olr_min": 86.1,
+    "lat": 26.29,
+    "lon": 84.2,
+    "dist": 256,
+    "rumo": 211,
+    "sep_km": 443
+   },
+   "objeto_wrf_mais_proximo": {
+    "area_km2": 1166,
+    "olr_min": 113.5,
+    "lat": 26.53,
+    "lon": 87.14,
+    "dist": 252,
+    "rumo": 140,
+    "sep_km": 269
+   },
+   "passa": false
+  },
+  {
+   "utc": "2026-08-25_20:00:00",
+   "himawari": {
+    "lat": 28.579,
+    "lon": 87.886,
+    "area_km2": 17096
+   },
+   "maior_objeto_wrf": {
+    "area_km2": 6265,
+    "olr_min": 91.8,
+    "lat": 26.42,
+    "lon": 83.83,
+    "dist": 265,
+    "rumo": 219,
+    "sep_km": 467
+   },
+   "objeto_wrf_mais_proximo": {
+    "area_km2": 1582,
+    "olr_min": 80.6,
+    "lat": 27.49,
+    "lon": 85.39,
+    "dist": 87,
+    "rumo": 188,
+    "sep_km": 274
+   },
+   "passa": false
+  },
+  {
+   "utc": "2026-08-25_20:30:00",
+   "himawari": {
+    "lat": 28.579,
+    "lon": 87.886,
+    "area_km2": 17096
+   },
+   "maior_objeto_wrf": {
+    "area_km2": 5044,
+    "olr_min": 95.4,
+    "lat": 26.47,
+    "lon": 83.54,
+    "dist": 280,
+    "rumo": 224,
+    "sep_km": 489
+   },
+   "objeto_wrf_mais_proximo": {
+    "area_km2": 3625,
+    "olr_min": 81.3,
+    "lat": 27.54,
+    "lon": 85.23,
+    "dist": 86,
+    "rumo": 199,
+    "sep_km": 285
+   },
+   "passa": false
+  },
+  {
+   "utc": "2026-08-25_21:00:00",
+   "himawari": {
+    "lat": 28.476,
+    "lon": 87.7,
+    "area_km2": 15921
+   },
+   "maior_objeto_wrf": {
+    "area_km2": 5370,
+    "olr_min": 87.5,
+    "lat": 27.59,
+    "lon": 85.12,
+    "dist": 85,
+    "rumo": 207,
+    "sep_km": 272
+   },
+   "objeto_wrf_mais_proximo": {
+    "area_km2": 5370,
+    "olr_min": 87.5,
+    "lat": 27.59,
+    "lon": 85.12,
+    "dist": 85,
+    "rumo": 207,
+    "sep_km": 272
+   },
+   "passa": false
+  },
+  {
+   "utc": "2026-08-25_21:30:00",
+   "himawari": {
+    "lat": 28.476,
+    "lon": 87.7,
+    "area_km2": 15921
+   },
+   "maior_objeto_wrf": {
+    "area_km2": 3987,
+    "olr_min": 93.6,
+    "lat": 27.67,
+    "lon": 84.98,
+    "dist": 86,
+    "rumo": 218,
+    "sep_km": 282
+   },
+   "objeto_wrf_mais_proximo": {
+    "area_km2": 3987,
+    "olr_min": 93.6,
+    "lat": 27.67,
+    "lon": 84.98,
+    "dist": 86,
+    "rumo": 218,
+    "sep_km": 282
+   },
+   "passa": false
+  },
+  {
+   "utc": "2026-08-25_22:00:00",
+   "himawari": {
+    "lat": 28.432,
+    "lon": 87.489,
+    "area_km2": 13747
+   },
+   "maior_objeto_wrf": {
+    "area_km2": 3896,
+    "olr_min": 99.8,
+    "lat": 27.74,
+    "lon": 84.79,
+    "dist": 92,
+    "rumo": 231,
+    "sep_km": 276
+   },
+   "objeto_wrf_mais_proximo": {
+    "area_km2": 958,
+    "olr_min": 101.6,
+    "lat": 26.74,
+    "lon": 87.1,
+    "dist": 231,
+    "rumo": 137,
+    "sep_km": 192
+   },
+   "passa": false
+  },
+  {
+   "utc": "2026-08-25_22:30:00",
+   "himawari": {
+    "lat": 28.432,
+    "lon": 87.489,
+    "area_km2": 13747
+   },
+   "maior_objeto_wrf": {
+    "area_km2": 2314,
+    "olr_min": 106.6,
+    "lat": 27.8,
+    "lon": 84.67,
+    "dist": 98,
+    "rumo": 238,
+    "sep_km": 286
+   },
+   "objeto_wrf_mais_proximo": {
+    "area_km2": 597,
+    "olr_min": 112.0,
+    "lat": 26.64,
+    "lon": 86.79,
+    "dist": 221,
+    "rumo": 145,
+    "sep_km": 211
+   },
+   "passa": false
+  }
+ ],
+ "linhas": [
+  {
+   "utc": "2026-08-25_00:00:00",
+   "wrf": null,
+   "himawari": null,
+   "olr_sitio": 0.0,
+   "chuva_sitio_mm": 0.0
+  },
+  {
+   "utc": "2026-08-25_00:30:00",
+   "wrf": null,
+   "himawari": null,
+   "olr_sitio": 231.0,
+   "chuva_sitio_mm": 0.0
+  },
+  {
+   "utc": "2026-08-25_01:00:00",
+   "wrf": null,
+   "himawari": null,
+   "olr_sitio": 236.6,
+   "chuva_sitio_mm": 0.01
+  },
+  {
+   "utc": "2026-08-25_01:30:00",
+   "wrf": null,
+   "himawari": null,
+   "olr_sitio": 235.5,
+   "chuva_sitio_mm": 0.01
+  },
+  {
+   "utc": "2026-08-25_02:00:00",
+   "wrf": null,
+   "himawari": null,
+   "olr_sitio": 240.1,
+   "chuva_sitio_mm": 0.01
+  },
+  {
+   "utc": "2026-08-25_02:30:00",
+   "wrf": null,
+   "himawari": null,
+   "olr_sitio": 243.9,
+   "chuva_sitio_mm": 0.02
+  },
+  {
+   "utc": "2026-08-25_03:00:00",
+   "wrf": null,
+   "himawari": null,
+   "olr_sitio": 233.3,
+   "chuva_sitio_mm": 0.06
+  },
+  {
+   "utc": "2026-08-25_03:30:00",
+   "wrf": null,
+   "himawari": null,
+   "olr_sitio": 224.5,
+   "chuva_sitio_mm": 0.16
+  },
+  {
+   "utc": "2026-08-25_04:00:00",
+   "wrf": null,
+   "himawari": null,
+   "olr_sitio": 220.3,
+   "chuva_sitio_mm": 0.29
+  },
+  {
+   "utc": "2026-08-25_04:30:00",
+   "wrf": null,
+   "himawari": null,
+   "olr_sitio": 218.2,
+   "chuva_sitio_mm": 0.42
+  },
+  {
+   "utc": "2026-08-25_05:00:00",
+   "wrf": null,
+   "himawari": null,
+   "olr_sitio": 214.0,
+   "chuva_sitio_mm": 0.56
+  },
+  {
+   "utc": "2026-08-25_05:30:00",
+   "wrf": null,
+   "himawari": null,
+   "olr_sitio": 219.4,
+   "chuva_sitio_mm": 0.7
+  },
+  {
+   "utc": "2026-08-25_06:00:00",
+   "wrf": null,
+   "himawari": null,
+   "olr_sitio": 219.3,
+   "chuva_sitio_mm": 0.81
+  },
+  {
+   "utc": "2026-08-25_06:30:00",
+   "wrf": null,
+   "himawari": null,
+   "olr_sitio": 212.6,
+   "chuva_sitio_mm": 0.95
+  },
+  {
+   "utc": "2026-08-25_07:00:00",
+   "wrf": null,
+   "himawari": null,
+   "olr_sitio": 208.8,
+   "chuva_sitio_mm": 1.09
+  },
+  {
+   "utc": "2026-08-25_07:30:00",
+   "wrf": null,
+   "himawari": null,
+   "olr_sitio": 195.0,
+   "chuva_sitio_mm": 2.4
+  },
+  {
+   "utc": "2026-08-25_08:00:00",
+   "wrf": null,
+   "himawari": null,
+   "olr_sitio": 199.1,
+   "chuva_sitio_mm": 3.2
+  },
+  {
+   "utc": "2026-08-25_08:30:00",
+   "wrf": null,
+   "himawari": null,
+   "olr_sitio": 178.2,
+   "chuva_sitio_mm": 4.09
+  },
+  {
+   "utc": "2026-08-25_09:00:00",
+   "wrf": {
+    "area_km2": 841,
+    "olr_min": 91.4,
+    "lat": 30.06,
+    "lon": 90.25,
+    "dist": 502,
+    "rumo": 67
+   },
+   "himawari": {
+    "area_km2": 99733,
+    "lat": 30.544,
+    "lon": 90.766,
+    "dist": 569
+   },
+   "olr_sitio": 175.4,
+   "chuva_sitio_mm": 7.37,
+   "sep_km": 73
+  },
+  {
+   "utc": "2026-08-25_09:30:00",
+   "wrf": {
+    "area_km2": 877,
+    "olr_min": 101.1,
+    "lat": 30.1,
+    "lon": 89.99,
+    "dist": 481,
+    "rumo": 65
+   },
+   "himawari": {
+    "area_km2": 99733,
+    "lat": 30.544,
+    "lon": 90.766,
+    "dist": 569
+   },
+   "olr_sitio": 151.4,
+   "chuva_sitio_mm": 10.47,
+   "sep_km": 89
+  },
+  {
+   "utc": "2026-08-25_10:00:00",
+   "wrf": {
+    "area_km2": 660,
+    "olr_min": 91.3,
+    "lat": 29.52,
+    "lon": 88.88,
+    "dist": 356,
+    "rumo": 67
+   },
+   "himawari": {
+    "area_km2": 112489,
+    "lat": 30.327,
+    "lon": 90.091,
+    "dist": 500
+   },
+   "olr_sitio": 156.2,
+   "chuva_sitio_mm": 12.87,
+   "sep_km": 147
+  },
+  {
+   "utc": "2026-08-25_10:30:00",
+   "wrf": {
+    "area_km2": 768,
+    "olr_min": 100.3,
+    "lat": 29.59,
+    "lon": 88.7,
+    "dist": 343,
+    "rumo": 65
+   },
+   "himawari": {
+    "area_km2": 112489,
+    "lat": 30.327,
+    "lon": 90.091,
+    "dist": 500
+   },
+   "olr_sitio": 163.9,
+   "chuva_sitio_mm": 14.12,
+   "sep_km": 157
+  },
+  {
+   "utc": "2026-08-25_11:00:00",
+   "wrf": {
+    "area_km2": 606,
+    "olr_min": 106.9,
+    "lat": 29.68,
+    "lon": 88.47,
+    "dist": 328,
+    "rumo": 61
+   },
+   "himawari": {
+    "area_km2": 107269,
+    "lat": 30.673,
+    "lon": 90.277,
+    "dist": 533
+   },
+   "olr_sitio": 180.0,
+   "chuva_sitio_mm": 14.38,
+   "sep_km": 206
+  },
+  {
+   "utc": "2026-08-25_11:30:00",
+   "wrf": {
+    "area_km2": 2414,
+    "olr_min": 77.6,
+    "lat": 30.05,
+    "lon": 89.1,
+    "dist": 401,
+    "rumo": 60
+   },
+   "himawari": {
+    "area_km2": 107269,
+    "lat": 30.673,
+    "lon": 90.277,
+    "dist": 533
+   },
+   "olr_sitio": 188.7,
+   "chuva_sitio_mm": 14.4,
+   "sep_km": 133
+  },
+  {
+   "utc": "2026-08-25_12:00:00",
+   "wrf": {
+    "area_km2": 4276,
+    "olr_min": 86.2,
+    "lat": 30.01,
+    "lon": 89.01,
+    "dist": 392,
+    "rumo": 60
+   },
+   "himawari": {
+    "area_km2": 141681,
+    "lat": 30.301,
+    "lon": 90.076,
+    "dist": 497
+   },
+   "olr_sitio": 194.5,
+   "chuva_sitio_mm": 13.5,
+   "sep_km": 108
+  },
+  {
+   "utc": "2026-08-25_12:30:00",
+   "wrf": {
+    "area_km2": 20782,
+    "olr_min": 80.2,
+    "lat": 30.16,
+    "lon": 89.41,
+    "dist": 432,
+    "rumo": 61
+   },
+   "himawari": {
+    "area_km2": 141681,
+    "lat": 30.301,
+    "lon": 90.076,
+    "dist": 497
+   },
+   "olr_sitio": 236.2,
+   "chuva_sitio_mm": 13.5,
+   "sep_km": 66
+  },
+  {
+   "utc": "2026-08-25_13:00:00",
+   "wrf": {
+    "area_km2": 17076,
+    "olr_min": 91.5,
+    "lat": 30.29,
+    "lon": 89.48,
+    "dist": 446,
+    "rumo": 60
+   },
+   "himawari": {
+    "area_km2": 130720,
+    "lat": 30.032,
+    "lon": 90.177,
+    "dist": 494
+   },
+   "olr_sitio": 224.4,
+   "chuva_sitio_mm": 13.5,
+   "sep_km": 73
+  },
+  {
+   "utc": "2026-08-25_13:30:00",
+   "wrf": {
+    "area_km2": 24127,
+    "olr_min": 82.8,
+    "lat": 30.12,
+    "lon": 89.12,
+    "dist": 406,
+    "rumo": 60
+   },
+   "himawari": {
+    "area_km2": 130720,
+    "lat": 30.032,
+    "lon": 90.177,
+    "dist": 494
+   },
+   "olr_sitio": 222.5,
+   "chuva_sitio_mm": 13.5,
+   "sep_km": 102
+  },
+  {
+   "utc": "2026-08-25_14:00:00",
+   "wrf": {
+    "area_km2": 4547,
+    "olr_min": 104.2,
+    "lat": 30.6,
+    "lon": 89.31,
+    "dist": 450,
+    "rumo": 55
+   },
+   "himawari": {
+    "area_km2": 79199,
+    "lat": 29.432,
+    "lon": 89.317,
+    "dist": 393
+   },
+   "olr_sitio": 230.6,
+   "chuva_sitio_mm": 13.5,
+   "sep_km": 130
+  },
+  {
+   "utc": "2026-08-25_14:30:00",
+   "wrf": {
+    "area_km2": 579,
+    "olr_min": 111.9,
+    "lat": 30.4,
+    "lon": 89.93,
+    "dist": 489,
+    "rumo": 61
+   },
+   "himawari": {
+    "area_km2": 79199,
+    "lat": 29.432,
+    "lon": 89.317,
+    "dist": 393
+   },
+   "olr_sitio": 231.7,
+   "chuva_sitio_mm": 13.5,
+   "sep_km": 123
+  },
+  {
+   "utc": "2026-08-25_15:00:00",
+   "wrf": {
+    "area_km2": 524,
+    "olr_min": 87.8,
+    "lat": 31.64,
+    "lon": 89.93,
+    "dist": 568,
+    "rumo": 49
+   },
+   "himawari": {
+    "area_km2": 77583,
+    "lat": 29.327,
+    "lon": 89.186,
+    "dist": 377
+   },
+   "olr_sitio": 230.8,
+   "chuva_sitio_mm": 13.5,
+   "sep_km": 267
+  },
+  {
+   "utc": "2026-08-25_15:30:00",
+   "wrf": {
+    "area_km2": 1473,
+    "olr_min": 97.9,
+    "lat": 31.78,
+    "lon": 89.85,
+    "dist": 572,
+    "rumo": 47
+   },
+   "himawari": {
+    "area_km2": 77583,
+    "lat": 29.327,
+    "lon": 89.186,
+    "dist": 377
+   },
+   "olr_sitio": 226.5,
+   "chuva_sitio_mm": 13.5,
+   "sep_km": 280
+  },
+  {
+   "utc": "2026-08-25_16:00:00",
+   "wrf": {
+    "area_km2": 1148,
+    "olr_min": 102.1,
+    "lat": 31.76,
+    "lon": 89.79,
+    "dist": 566,
+    "rumo": 47
+   },
+   "himawari": {
+    "area_km2": 70942,
+    "lat": 29.207,
+    "lon": 88.734,
+    "dist": 331
+   },
+   "olr_sitio": 227.2,
+   "chuva_sitio_mm": 13.5,
+   "sep_km": 302
+  },
+  {
+   "utc": "2026-08-25_16:30:00",
+   "wrf": {
+    "area_km2": 777,
+    "olr_min": 108.5,
+    "lat": 31.67,
+    "lon": 89.76,
+    "dist": 557,
+    "rumo": 47
+   },
+   "himawari": {
+    "area_km2": 70942,
+    "lat": 29.207,
+    "lon": 88.734,
+    "dist": 331
+   },
+   "olr_sitio": 223.3,
+   "chuva_sitio_mm": 13.5,
+   "sep_km": 291
+  },
+  {
+   "utc": "2026-08-25_17:00:00",
+   "wrf": null,
+   "himawari": {
+    "area_km2": 49463,
+    "lat": 29.167,
+    "lon": 87.842,
+    "dist": 248
+   },
+   "olr_sitio": 222.2,
+   "chuva_sitio_mm": 13.51
+  },
+  {
+   "utc": "2026-08-25_17:30:00",
+   "wrf": null,
+   "himawari": {
+    "area_km2": 49463,
+    "lat": 29.167,
+    "lon": 87.842,
+    "dist": 248
+   },
+   "olr_sitio": 222.0,
+   "chuva_sitio_mm": 13.51
+  },
+  {
+   "utc": "2026-08-25_18:00:00",
+   "wrf": null,
+   "himawari": {
+    "area_km2": 37029,
+    "lat": 29.115,
+    "lon": 87.544,
+    "dist": 219
+   },
+   "olr_sitio": 224.5,
+   "chuva_sitio_mm": 13.52
+  },
+  {
+   "utc": "2026-08-25_18:30:00",
+   "wrf": null,
+   "himawari": {
+    "area_km2": 37029,
+    "lat": 29.115,
+    "lon": 87.544,
+    "dist": 219
+   },
+   "olr_sitio": 217.3,
+   "chuva_sitio_mm": 13.52
+  },
+  {
+   "utc": "2026-08-25_19:00:00",
+   "wrf": null,
+   "himawari": {
+    "area_km2": 25290,
+    "lat": 28.912,
+    "lon": 87.582,
+    "dist": 214
+   },
+   "olr_sitio": 219.0,
+   "chuva_sitio_mm": 13.52
+  },
+  {
+   "utc": "2026-08-25_19:30:00",
+   "wrf": null,
+   "himawari": {
+    "area_km2": 25290,
+    "lat": 28.912,
+    "lon": 87.582,
+    "dist": 214
+   },
+   "olr_sitio": 225.1,
+   "chuva_sitio_mm": 13.52
+  },
+  {
+   "utc": "2026-08-25_20:00:00",
+   "wrf": null,
+   "himawari": {
+    "area_km2": 17096,
+    "lat": 28.579,
+    "lon": 87.886,
+    "dist": 235
+   },
+   "olr_sitio": 227.5,
+   "chuva_sitio_mm": 13.52
+  },
+  {
+   "utc": "2026-08-25_20:30:00",
+   "wrf": null,
+   "himawari": {
+    "area_km2": 17096,
+    "lat": 28.579,
+    "lon": 87.886,
+    "dist": 235
+   },
+   "olr_sitio": 226.7,
+   "chuva_sitio_mm": 13.52
+  },
+  {
+   "utc": "2026-08-25_21:00:00",
+   "wrf": null,
+   "himawari": {
+    "area_km2": 15921,
+    "lat": 28.476,
+    "lon": 87.7,
+    "dist": 215
+   },
+   "olr_sitio": 223.9,
+   "chuva_sitio_mm": 13.52
+  },
+  {
+   "utc": "2026-08-25_21:30:00",
+   "wrf": null,
+   "himawari": {
+    "area_km2": 15921,
+    "lat": 28.476,
+    "lon": 87.7,
+    "dist": 215
+   },
+   "olr_sitio": 221.6,
+   "chuva_sitio_mm": 13.52
+  },
+  {
+   "utc": "2026-08-25_22:00:00",
+   "wrf": null,
+   "himawari": {
+    "area_km2": 13747,
+    "lat": 28.432,
+    "lon": 87.489,
+    "dist": 194
+   },
+   "olr_sitio": 222.8,
+   "chuva_sitio_mm": 13.52
+  },
+  {
+   "utc": "2026-08-25_22:30:00",
+   "wrf": null,
+   "himawari": {
+    "area_km2": 13747,
+    "lat": 28.432,
+    "lon": 87.489,
+    "dist": 194
+   },
+   "olr_sitio": 223.6,
+   "chuva_sitio_mm": 13.52
+  },
+  {
+   "utc": "2026-08-25_23:00:00",
+   "wrf": null,
+   "himawari": {
+    "area_km2": 4081,
+    "lat": 28.262,
+    "lon": 87.996,
+    "dist": 243
+   },
+   "olr_sitio": 222.0,
+   "chuva_sitio_mm": 13.52
+  },
+  {
+   "utc": "2026-08-25_23:30:00",
+   "wrf": null,
+   "himawari": {
+    "area_km2": 4081,
+    "lat": 28.262,
+    "lon": 87.996,
+    "dist": 243
+   },
+   "olr_sitio": 224.3,
+   "chuva_sitio_mm": 13.52
+  },
+  {
+   "utc": "2026-08-26_00:00:00",
+   "wrf": null,
+   "himawari": {
+    "area_km2": 1765,
+    "lat": 28.065,
+    "lon": 87.881,
+    "dist": 233
+   },
+   "olr_sitio": 210.2,
+   "chuva_sitio_mm": 13.52
+  },
+  {
+   "utc": "2026-08-26_00:30:00",
+   "wrf": null,
+   "himawari": {
+    "area_km2": 1765,
+    "lat": 28.065,
+    "lon": 87.881,
+    "dist": 233
+   },
+   "olr_sitio": 202.4,
+   "chuva_sitio_mm": 13.52
+  },
+  {
+   "utc": "2026-08-26_01:00:00",
+   "wrf": null,
+   "himawari": {
+    "area_km2": 316,
+    "lat": 27.643,
+    "lon": 86.716,
+    "dist": 137
+   },
+   "olr_sitio": 230.2,
+   "chuva_sitio_mm": 13.52
+  },
+  {
+   "utc": "2026-08-26_01:30:00",
+   "wrf": null,
+   "himawari": {
+    "area_km2": 316,
+    "lat": 27.643,
+    "lon": 86.716,
+    "dist": 137
+   },
+   "olr_sitio": 233.0,
+   "chuva_sitio_mm": 13.52
+  },
+  {
+   "utc": "2026-08-26_02:00:00",
+   "wrf": null,
+   "himawari": null,
+   "olr_sitio": 235.7,
+   "chuva_sitio_mm": 13.52
+  },
+  {
+   "utc": "2026-08-26_02:30:00",
+   "wrf": null,
+   "himawari": null,
+   "olr_sitio": 237.4,
+   "chuva_sitio_mm": 13.52
+  },
+  {
+   "utc": "2026-08-26_03:00:00",
+   "wrf": null,
+   "himawari": null,
+   "olr_sitio": 238.5,
+   "chuva_sitio_mm": 13.52
+  }
+ ]
+}

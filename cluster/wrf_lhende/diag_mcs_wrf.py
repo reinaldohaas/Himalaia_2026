@@ -52,6 +52,8 @@ def main(arq, traj, pref):
     por_t = []
     for k, t in enumerate(tempos):
         olr = v["OLR"][k]
+        if float(np.nanmax(olr)) <= 0.0:          # instante inicial: o WRF ainda nao calculou a radiacao (OLR = 0 em tudo)
+            por_t.append((t, [])); continue
         lab, n = ndimage.label(olr < 120.0)
         ob = []
         for i in range(1, n + 1):
@@ -88,9 +90,31 @@ def main(arq, traj, pref):
     # criterio pre-registrado: em algum horario de 18 a 22 UTC de 25/08, sistema WRF >= 5.000 km2 a <= 100 km do centro do Himawari
     ok = [l for l in linhas if l["utc"][:10] == "2026-08-25" and 18 <= int(l["utc"][11:13]) <= 22 and l["wrf"]
           and l["wrf"]["area_km2"] >= 5000 and l.get("sep_km", 1e9) <= 100]
-    json.dump({"arquivo": arq, "criterio_ok": bool(ok), "linhas": linhas}, open(pref + ".json", "w"), indent=1)
+    # leitura literal do criterio, sem depender do rastreio: em cada saida de 18 a 22 UTC, QUALQUER objeto >= 5.000 km2
+    # a <= 100 km do centro do Himawari da hora mais proxima
+    direto = []
+    for t, ob in por_t:
+        if t[:10] != "2026-08-25" or not (18 <= int(t[11:13]) <= 22):
+            continue
+        h = H.get(t[:10] + "T" + t[11:13]); hs = h["sistema"] if h else None
+        if not hs:
+            continue
+        cand = [dict(o, sep_km=round(dist(hs["lat"], hs["lon"], o["lat"], o["lon"])[0])) for o in ob]
+        maior = max(cand, key=lambda o: o["area_km2"]) if cand else None
+        perto = min(cand, key=lambda o: o["sep_km"]) if cand else None
+        direto.append({"utc": t, "himawari": {"lat": hs["lat"], "lon": hs["lon"], "area_km2": hs["area_km2"]}, "maior_objeto_wrf": maior,
+                       "objeto_wrf_mais_proximo": perto, "passa": any(o["area_km2"] >= 5000 and o["sep_km"] <= 100 for o in cand)})
+    ok = bool(ok) or any(x["passa"] for x in direto)
+    json.dump({"arquivo": arq, "criterio_ok": bool(ok), "criterio_direto": direto, "linhas": linhas}, open(pref + ".json", "w"), indent=1)
     with open(pref + ".txt", "w", encoding="utf-8") as f:
         f.write("WRF (%s) x Himawari-9 -- objeto OLR < 120 W/m2 | criterio (18-22 UTC: >= 5.000 km2 a <= 100 km do centro observado): %s\n" % (arq, "PASSA" if ok else "NAO PASSA"))
+        f.write("criterio direto (qualquer objeto, sem rastreio):\n")
+        for x in direto:
+            m, p = x["maior_objeto_wrf"], x["objeto_wrf_mais_proximo"]
+            f.write("  %s Himawari %6d km2 em %.2fN %.2fE | WRF maior: %s | WRF mais proximo: %s | %s\n" % (
+                x["utc"], x["himawari"]["area_km2"], x["himawari"]["lat"], x["himawari"]["lon"],
+                ("%d km2 a %d km" % (m["area_km2"], m["sep_km"])) if m else "-", ("%d km2 a %d km" % (p["area_km2"], p["sep_km"])) if p else "-",
+                "passa" if x["passa"] else "nao"))
         f.write(" UTC                 WRF: area_km2  lat    lon    dist | Himawari: area_km2  lat    lon    dist | sep(km) | sitio: OLR  chuva(mm)\n")
         for l in linhas:
             s, hs = l["wrf"], l["himawari"]

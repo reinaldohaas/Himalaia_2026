@@ -53,7 +53,7 @@ Nova seção do texto principal ("A north-facing erosional headwall with almost 
 
 ## O que falta antes de submeter
 
-1. **WRF:** está rodando no vlab. A seção de Methods descreve o critério pré-registrado. Se passar, entra uma seção de resultados e uma figura; se não passar, isso também entra.
+1. **WRF:** terminou em 19/10 e **não passou** no critério pré-registrado. Ele forma o sistema do planalto na fase madura, com no máximo 1/7 da área observada, e não o traz para oeste. Pega a convecção noturna perto do sítio (mesma área e horário, 30–50 km ao sul) e não chove sobre o anfiteatro. Isso entrou no texto (seção da tempestade e Discussion), no Methods e na Extended Data Fig. 4.
 2. **Coautoria:** o artigo está só em seu nome. A Nature não aceita IA como autora, e o uso está declarado em Methods ("Use of AI tools"). Se o Renato ou outros entrarem, é preciso ajustar o `\author` e as contribuições.
 3. **Tamanho:** o `texcount` dá 4.868 palavras de texto no total (resumo, texto principal e Methods), mais 573 nas legendas. São 4 figuras, 1 tabela, 3 figuras e 1 tabela de Extended Data, e 37 referências (limite de 50). Cabe no formato de Article.
 4. **Revisão de inglês** por um falante nativo; o texto segue a grafia britânica (Oxford), como a Nature pede.
