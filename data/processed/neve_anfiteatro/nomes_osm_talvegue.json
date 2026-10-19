@@ -1,0 +1,129 @@
+{
+ "fonte": "OpenStreetMap via Overpass API (ODbL)",
+ "consulta_utc": "2026-10-19T02:10Z",
+ "criterio": "trechos do talvegue a menos de 300 m da geometria do objeto; km a partir da localizacao USGS us7000tbwb",
+ "trechos": {
+  "(sem nome: glacier)": {
+   "nome_local": null,
+   "tipo": "glacier",
+   "km_ini": 1.0,
+   "km_fim": 2.6,
+   "osm": [
+    "way/1553042355"
+   ]
+  },
+  "Chhochen Khola": {
+   "nome_local": "छोचेन खोला",
+   "tipo": "stream",
+   "km_ini": 3.7,
+   "km_fim": 8.7,
+   "osm": [
+    "way/847904249",
+    "way/1553042353"
+   ]
+  },
+  "Chusumdo Tsangpo": {
+   "nome_local": "曲松多藏布",
+   "tipo": "stream",
+   "km_ini": 8.0,
+   "km_fim": 13.6,
+   "osm": [
+    "way/329205828",
+    "way/329205829",
+    "way/937848321"
+   ]
+  },
+  "Richong Chu": {
+   "nome_local": "郭巴怒曲",
+   "tipo": "stream",
+   "km_ini": 9.3,
+   "km_fim": 10.8,
+   "osm": [
+    "way/329205827"
+   ]
+  },
+  "Najalta Khola": {
+   "nome_local": "Najalta Khola",
+   "tipo": "stream",
+   "km_ini": 12.2,
+   "km_fim": 12.9,
+   "osm": [
+    "way/340626520"
+   ]
+  },
+  "Lende Khola": {
+   "nome_local": "东林藏布",
+   "tipo": "river",
+   "km_ini": 13.0,
+   "km_fim": 24.0,
+   "osm": [
+    "way/937405875",
+    "way/996517784",
+    "way/1509505362"
+   ]
+  },
+  "Lhende Khola": {
+   "nome_local": "Lhende Khola",
+   "tipo": "stream",
+   "km_ini": 13.0,
+   "km_fim": 24.0,
+   "osm": [
+    "relation/21285794"
+   ]
+  },
+  "Nyuwasu Khola": {
+   "nome_local": "न्युवासु खोला",
+   "tipo": "stream",
+   "km_ini": 14.2,
+   "km_fim": 14.8,
+   "osm": [
+    "way/335960628"
+   ]
+  },
+  "Dhyalana Khola": {
+   "nome_local": "ध्यालाना खोला",
+   "tipo": "stream",
+   "km_ini": 18.1,
+   "km_fim": 18.7,
+   "osm": [
+    "way/340608631"
+   ]
+  },
+  "Nachhandi Khola": {
+   "nome_local": "नाछान्दी खोला",
+   "tipo": "stream",
+   "km_ini": 21.3,
+   "km_fim": 21.9,
+   "osm": [
+    "way/340607699"
+   ]
+  },
+  "Gyirong Zangbo": {
+   "nome_local": "吉隆藏布",
+   "tipo": "river",
+   "km_ini": 23.2,
+   "km_fim": 24.0,
+   "osm": [
+    "way/904894054"
+   ]
+  },
+  "Bhote Koshi": {
+   "nome_local": "भोटे कोशी",
+   "tipo": "river",
+   "km_ini": 23.3,
+   "km_fim": 26.7,
+   "osm": [
+    "way/201928141"
+   ]
+  },
+  "Ghatte Khola": {
+   "nome_local": "घट्टे खोला",
+   "tipo": "stream",
+   "km_ini": 24.7,
+   "km_fim": 25.3,
+   "osm": [
+    "way/248646101"
+   ]
+  }
+ }
+}

@@ -33,6 +33,7 @@ A classificação veio dos documentos de auditoria do próprio repositório (AUD
 | Jz 4,57 pA/m², V_I 356,4 kV | "não há medição de Jz; os valores preliminares vêm de V_I atribuído à mão"; o crochê magnético e os raios cósmicos dão ΔJz ≲ 1 % | `data/synthetic/README.md`, MAGNETOMETROS, JZ_CONSTRUIDO |
 | CCN < 100 cm⁻³, LWC > 4,5 g/m³, > 500 mm em < 2 h | retirados como fato; o CM1 dá o que dá | sem medição; a ERA5 tem ~0,02–0,04 g/m³ |
 | 38 descargas/h (WWLLN) | retirado | os dados do WWLLN não estão no repositório; as contagens são paramétricas |
+| "O fluxo desceu o Lhende Khola" | o fluxo desceu o **Chhochen Khola** (km 3,7–8,7) e o **Chusumdo Tsangpo** (km 8–13,6) até o **Lhende Khola** (km 13–24, rio de fronteira), e dali ao Bhote Koshi em Rasuwagadhi | nomes do OpenStreetMap ao longo do talvegue do GLO-30 (`scripts/neve_anfiteatro/nomes_osm.py`, `data/processed/neve_anfiteatro/nomes_osm_talvegue.json`); o sinal de radar mais forte fica no Chhochen Khola. O nome do evento ("Lhende Khola") foi mantido no título |
 | Ms 5,2, `us7000tbwb`, 02:52:10 UTC | mantido; **local corrigido para 28,271 N 85,515 E** (o do USGS) | o artigo-base dava 28,261/85,388 |
 | Ondas de Rayleigh em KKN | retirado; a inversão sísmica é proposta como próximo passo | as formas de onda existem no IRIS, mas nunca foram analisadas |
 | 15 Mm³ destacados | retirado; "o volume não pode ser medido com estes dados" | 15 Mm³ e 10⁸ m³ coexistem sem medição |
