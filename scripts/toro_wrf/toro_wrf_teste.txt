@@ -1,0 +1,21 @@
+&toro_wrf
+ t_ini       = 0.0,       ! teste funcional: Estado A de 00:00 a 00:24 UTC, liberacao 00:24-00:30
+ t_rel       = 0.4,
+ t_dur       = 0.1,
+ lat0        = 28.271,
+ lon0        = 85.515,
+ raio_km     = 150.0,
+ fcoal       = 0.0,
+ faccr       = 0.0,
+ fctfz       = 0.0,
+ fnuc        = 0.0,
+ fhm         = 0.0,
+ frfrz       = 0.0,
+ fwfrz       = 0.0,
+ t_hom_c     = -38.0,
+ lat_aer     = 28.271,
+ lon_aer     = 85.515,
+ raio_aer_km = 5.0,
+ fnuc_rel    = 100.0,
+ dominios    = 1, 1, 1,
+/

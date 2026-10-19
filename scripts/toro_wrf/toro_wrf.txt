@@ -1,0 +1,21 @@
+&toro_wrf
+ t_ini       = 17.0,      ! 25/08 17 UTC (horas desde 25/08 00 UTC)
+ t_rel       = 26.25,     ! 26/08 02:15 UTC: fim do Estado A e inicio da liberacao
+ t_dur       = 0.5,       ! liberacao por aerossol ate 02:45 UTC
+ lat0        = 28.271,    ! centro da regiao do Estado A (localizacao USGS us7000tbwb)
+ lon0        = 85.515,
+ raio_km     = 150.0,
+ fcoal       = 0.0,       ! sem chuva quente (autoconversao/autocoleta)
+ faccr       = 0.0,       ! sem acrecao de goticulas pela chuva
+ fctfz       = 0.0,       ! sem congelamento por contato
+ fnuc        = 0.0,       ! sem nucleacao primaria de gelo
+ fhm         = 0.0,       ! sem Hallett-Mossop
+ frfrz       = 0.0,       ! sem congelamento de chuva
+ fwfrz       = 0.0,       ! sem congelamento de goticulas acima de t_hom_c
+ t_hom_c     = -38.0,     ! congelamento homogeneo intacto abaixo de -38 C
+ lat_aer     = 28.271,    ! coluna do aerossol (o vortice) sobre o anfiteatro
+ lon_aer     = 85.515,
+ raio_aer_km = 5.0,
+ fnuc_rel    = 100.0,     ! nucleacao primaria x100 na coluna durante a liberacao
+ dominios    = 1, 1, 1,
+/
