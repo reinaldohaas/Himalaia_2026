@@ -117,7 +117,7 @@ def main(d, png):
     ax.axvline(COLAPSO_T, c="r", lw=1); ax.text(COLAPSO_T, ax.get_ylim()[1], " colapso", color="r", fontsize=8, va="top")
     ax.set_ylabel("linha de neve (m)\n(fração de neve = 50 %)"); ax.legend(fontsize=8); ax.grid(alpha=0.3)
     ax.set_title("Linha de neve na janela do anfiteatro (~12 × 9 km), Sentinel-2, cenas com ≥ 30 % da janela observada", fontsize=10)
-    fig.autofmt_xdate(); fig.tight_layout(); fig.savefig(png, dpi=130)
+    fig.autofmt_xdate(); fig.tight_layout(); __import__('figlang').prepara(fig); fig.savefig(__import__('figlang').caminho(png), dpi=130)
     for x in res["linha"]:
         if x["fonte"] == "s2es" and x["mascara"] == "espectral" and x["frac_obs_janela"] >= 0.3:
             print(x["datetime"][:16], x["id"][:3], "obs %.2f" % x["frac_obs_janela"], "linha", x["linha_neve_m"])

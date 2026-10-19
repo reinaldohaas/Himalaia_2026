@@ -103,7 +103,7 @@ def main(d, png):
     ax[0].set_title("Sentinel-1D RTC ao longo do talvegue: par de 12 dias com o colapso (linha) × pares sem evento (faixa: média−dp a média+3dp)", fontsize=9.5)
     ax[1].plot(km, res["cota_m"], c="k"); ax[1].set_ylabel("cota (m)"); ax[1].set_xlabel("distância ao longo do talvegue a partir do ponto de colapso (km)")
     ax[1].axvline(km_exu, c="k", ls="--", lw=0.8)
-    fig.tight_layout(); fig.savefig(png, dpi=130)
+    fig.tight_layout(); __import__('figlang').prepara(fig); fig.savefig(__import__('figlang').caminho(png), dpi=130)
 
 
 if __name__ == "__main__":

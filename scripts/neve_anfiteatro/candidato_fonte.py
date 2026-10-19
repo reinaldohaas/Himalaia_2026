@@ -131,7 +131,7 @@ def main(d, png):
             contornos(a_)
     fig.suptitle("Mudança robusta do Sentinel-1 a leste do exutório (círculo amarelo; contorno amarelo = anfiteatro): vermelho = queda > 3 dB, azul = aumento > 3 dB "
                  "em ≥ 2 das 3 geometrias", fontsize=9.5)
-    fig.tight_layout(); fig.savefig(png, dpi=130)
+    fig.tight_layout(); __import__('figlang').prepara(fig); fig.savefig(__import__('figlang').caminho(png), dpi=130)
     json.dump(res, open(os.path.join(d, "candidato_fonte.json"), "w"), indent=1)
     json.dump({"type": "FeatureCollection", "features": [{"type": "Feature", "properties": {"tipo": n, "ha": round(a, 1)}, "geometry": mapping(g)} for n, v in polis.items() for a, g in v]},
               open(os.path.join(d, "manchas_s1_exutorio.geojson"), "w"))

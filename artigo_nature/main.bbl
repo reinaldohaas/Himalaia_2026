@@ -1,0 +1,297 @@
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\providecommand{\bibinfo}[2]{#2}
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem{shugar2021}
+\bibinfo{author}{Shugar, D.~H.} \emph{et~al.}
+\newblock \bibinfo{title}{A massive rock and ice avalanche caused the 2021
+  disaster at {Chamoli}, {Indian Himalaya}}.
+\newblock \emph{\bibinfo{journal}{Science}} \textbf{\bibinfo{volume}{373}},
+  \bibinfo{pages}{300--306} (\bibinfo{year}{2021}).
+
+\bibitem{iverson1997}
+\bibinfo{author}{Iverson, R.~M.}
+\newblock \bibinfo{title}{The physics of debris flows}.
+\newblock \emph{\bibinfo{journal}{Rev. Geophys.}}
+  \textbf{\bibinfo{volume}{35}}, \bibinfo{pages}{245--296}
+  (\bibinfo{year}{1997}).
+
+\bibitem{usgs2026}
+\bibinfo{author}{{U.S. Geological Survey}}.
+\newblock \bibinfo{title}{{ComCat} event us7000tbwb, {Ms} 5.2 landslide source,
+  {Nepal--China} border region, 26 {August} 2026 02:52:10 {UTC}}.
+\newblock
+  \bibinfo{howpublished}{\url{https://earthquake.usgs.gov/earthquakes/eventpage/us7000tbwb}}
+  (\bibinfo{year}{2026}).
+
+\bibitem{huffman2019}
+\bibinfo{author}{Huffman, G.~J.} \emph{et~al.}
+\newblock \bibinfo{title}{{NASA} {Global Precipitation Measurement} ({GPM})
+  {Integrated Multi-satellitE Retrievals for GPM} ({IMERG}). {Algorithm
+  Theoretical Basis Document}, version 06}.
+\newblock \bibinfo{type}{Tech. Rep.}, \bibinfo{institution}{NASA Goddard Space
+  Flight Center} (\bibinfo{year}{2019}).
+
+\bibitem{haas2026repo}
+\bibinfo{author}{Haas, R.}
+\newblock \bibinfo{title}{Himalaia\_2026: data, models and audit trail for the
+  26 {August} 2026 {Lhende Khola} debris flow}.
+\newblock
+  \bibinfo{howpublished}{\url{https://github.com/reinaldohaas/Himalaia_2026}}
+  (\bibinfo{year}{2026}).
+
+\bibitem{tinsley2000}
+\bibinfo{author}{Tinsley, B.~A.}
+\newblock \bibinfo{title}{Influence of solar wind on the global electric
+  circuit, and inferred effects on cloud microphysics, temperature, and
+  dynamics in the troposphere}.
+\newblock \emph{\bibinfo{journal}{Space Sci. Rev.}}
+  \textbf{\bibinfo{volume}{94}}, \bibinfo{pages}{231--258}
+  (\bibinfo{year}{2000}).
+
+\bibitem{tinsley2008}
+\bibinfo{author}{Tinsley, B.~A.}
+\newblock \bibinfo{title}{The global atmospheric electric circuit and its
+  effects on cloud microphysics}.
+\newblock \emph{\bibinfo{journal}{Rep. Prog. Phys.}}
+  \textbf{\bibinfo{volume}{71}}, \bibinfo{pages}{066801}
+  (\bibinfo{year}{2008}).
+
+\bibitem{ekstrom2013}
+\bibinfo{author}{Ekstr{\"o}m, G.} \& \bibinfo{author}{Stark, C.~P.}
+\newblock \bibinfo{title}{Simple scaling of catastrophic landslide dynamics}.
+\newblock \emph{\bibinfo{journal}{Science}} \textbf{\bibinfo{volume}{339}},
+  \bibinfo{pages}{1416--1419} (\bibinfo{year}{2013}).
+
+\bibitem{rickenmann1999}
+\bibinfo{author}{Rickenmann, D.}
+\newblock \bibinfo{title}{Empirical relationships for debris flows}.
+\newblock \emph{\bibinfo{journal}{Nat. Hazards}} \textbf{\bibinfo{volume}{19}},
+  \bibinfo{pages}{47--77} (\bibinfo{year}{1999}).
+
+\bibitem{rycroft2000}
+\bibinfo{author}{Rycroft, M.~J.}, \bibinfo{author}{Israelsson, S.} \&
+  \bibinfo{author}{Price, C.}
+\newblock \bibinfo{title}{The global atmospheric electric circuit, solar
+  activity and climate change}.
+\newblock \emph{\bibinfo{journal}{J. Atmos. Sol.-Terr. Phys.}}
+  \textbf{\bibinfo{volume}{62}}, \bibinfo{pages}{1563--1576}
+  (\bibinfo{year}{2000}).
+
+\bibitem{zhou2007}
+\bibinfo{author}{Zhou, L.} \& \bibinfo{author}{Tinsley, B.~A.}
+\newblock \bibinfo{title}{Production of space charge at the boundaries of layer
+  clouds}.
+\newblock \emph{\bibinfo{journal}{J. Geophys. Res.}}
+  \textbf{\bibinfo{volume}{112}}, \bibinfo{pages}{D11203}
+  (\bibinfo{year}{2007}).
+
+\bibitem{harrison2008}
+\bibinfo{author}{Harrison, R.~G.} \& \bibinfo{author}{Ambaum, M. H.~P.}
+\newblock \bibinfo{title}{Enhancement of cloud formation by droplet charging}.
+\newblock \emph{\bibinfo{journal}{Proc. R. Soc. A}}
+  \textbf{\bibinfo{volume}{464}}, \bibinfo{pages}{2561--2573}
+  (\bibinfo{year}{2008}).
+
+\bibitem{hallett1974}
+\bibinfo{author}{Hallett, J.} \& \bibinfo{author}{Mossop, S.~C.}
+\newblock \bibinfo{title}{Production of secondary ice particles during the
+  riming process}.
+\newblock \emph{\bibinfo{journal}{Nature}} \textbf{\bibinfo{volume}{249}},
+  \bibinfo{pages}{26--28} (\bibinfo{year}{1974}).
+
+\bibitem{field2017}
+\bibinfo{author}{Field, P.~R.} \emph{et~al.}
+\newblock \bibinfo{title}{Secondary ice production: current state of the
+  science and recommendations for the future}.
+\newblock \emph{\bibinfo{journal}{Meteorol. Monogr.}}
+  \textbf{\bibinfo{volume}{58}}, \bibinfo{pages}{7.1--7.20}
+  (\bibinfo{year}{2017}).
+
+\bibitem{copdem2021}
+\bibinfo{author}{{European Space Agency}}.
+\newblock \bibinfo{title}{Copernicus global digital elevation model ({GLO-30})}
+  (\bibinfo{year}{2021}).
+
+\bibitem{bessho2016}
+\bibinfo{author}{Bessho, K.} \emph{et~al.}
+\newblock \bibinfo{title}{An introduction to {Himawari-8/9} --- {Japan's}
+  new-generation geostationary meteorological satellites}.
+\newblock \emph{\bibinfo{journal}{J. Meteorol. Soc. Jpn}}
+  \textbf{\bibinfo{volume}{94}}, \bibinfo{pages}{151--183}
+  (\bibinfo{year}{2016}).
+
+\bibitem{houze2004}
+\bibinfo{author}{Houze, J., R.~A.}
+\newblock \bibinfo{title}{Mesoscale convective systems}.
+\newblock \emph{\bibinfo{journal}{Rev. Geophys.}}
+  \textbf{\bibinfo{volume}{42}}, \bibinfo{pages}{RG4003}
+  (\bibinfo{year}{2004}).
+
+\bibitem{houze2007}
+\bibinfo{author}{Houze, J., R.~A.}, \bibinfo{author}{Wilton, D.~C.} \&
+  \bibinfo{author}{Smull, B.~F.}
+\newblock \bibinfo{title}{Monsoon convection in the {Himalayan} region as seen
+  by the {TRMM} {Precipitation Radar}}.
+\newblock \emph{\bibinfo{journal}{Q. J. R. Meteorol. Soc.}}
+  \textbf{\bibinfo{volume}{133}}, \bibinfo{pages}{1389--1411}
+  (\bibinfo{year}{2007}).
+
+\bibitem{bookhagen2006}
+\bibinfo{author}{Bookhagen, B.} \& \bibinfo{author}{Burbank, D.~W.}
+\newblock \bibinfo{title}{Topography, relief, and {TRMM}-derived rainfall
+  variations along the {Himalaya}}.
+\newblock \emph{\bibinfo{journal}{Geophys. Res. Lett.}}
+  \textbf{\bibinfo{volume}{33}}, \bibinfo{pages}{L08405}
+  (\bibinfo{year}{2006}).
+
+\bibitem{hersbach2020}
+\bibinfo{author}{Hersbach, H.} \emph{et~al.}
+\newblock \bibinfo{title}{The {ERA5} global reanalysis}.
+\newblock \emph{\bibinfo{journal}{Q. J. R. Meteorol. Soc.}}
+  \textbf{\bibinfo{volume}{146}}, \bibinfo{pages}{1999--2049}
+  (\bibinfo{year}{2020}).
+
+\bibitem{dozier1989}
+\bibinfo{author}{Dozier, J.}
+\newblock \bibinfo{title}{Spectral signature of alpine snow cover from the
+  {Landsat Thematic Mapper}}.
+\newblock \emph{\bibinfo{journal}{Remote Sens. Environ.}}
+  \textbf{\bibinfo{volume}{28}}, \bibinfo{pages}{9--22} (\bibinfo{year}{1989}).
+
+\bibitem{hall1995}
+\bibinfo{author}{Hall, D.~K.}, \bibinfo{author}{Riggs, G.~A.} \&
+  \bibinfo{author}{Salomonson, V.~V.}
+\newblock \bibinfo{title}{Development of methods for mapping global snow cover
+  using moderate resolution imaging spectroradiometer data}.
+\newblock \emph{\bibinfo{journal}{Remote Sens. Environ.}}
+  \textbf{\bibinfo{volume}{54}}, \bibinfo{pages}{127--140}
+  (\bibinfo{year}{1995}).
+
+\bibitem{vermote2016}
+\bibinfo{author}{Vermote, E.}, \bibinfo{author}{Justice, C.},
+  \bibinfo{author}{Claverie, M.} \& \bibinfo{author}{Franch, B.}
+\newblock \bibinfo{title}{Preliminary analysis of the performance of the
+  {Landsat 8/OLI} land surface reflectance product}.
+\newblock \emph{\bibinfo{journal}{Remote Sens. Environ.}}
+  \textbf{\bibinfo{volume}{185}}, \bibinfo{pages}{46--56}
+  (\bibinfo{year}{2016}).
+
+\bibitem{claverie2018}
+\bibinfo{author}{Claverie, M.} \emph{et~al.}
+\newblock \bibinfo{title}{The {Harmonized Landsat and Sentinel-2} surface
+  reflectance data set}.
+\newblock \emph{\bibinfo{journal}{Remote Sens. Environ.}}
+  \textbf{\bibinfo{volume}{219}}, \bibinfo{pages}{145--161}
+  (\bibinfo{year}{2018}).
+
+\bibitem{mainknorn2017}
+\bibinfo{author}{Main-Knorn, M.} \emph{et~al.}
+\newblock \bibinfo{title}{{Sen2Cor} for {Sentinel-2}}.
+\newblock In \emph{\bibinfo{booktitle}{Proc. SPIE 10427, Image and Signal
+  Processing for Remote Sensing XXIII}}, \bibinfo{pages}{1042704}
+  (\bibinfo{year}{2017}).
+
+\bibitem{torres2012}
+\bibinfo{author}{Torres, R.} \emph{et~al.}
+\newblock \bibinfo{title}{{GMES} {Sentinel-1} mission}.
+\newblock \emph{\bibinfo{journal}{Remote Sens. Environ.}}
+  \textbf{\bibinfo{volume}{120}}, \bibinfo{pages}{9--24}
+  (\bibinfo{year}{2012}).
+
+\bibitem{burrows2019}
+\bibinfo{author}{Burrows, K.}, \bibinfo{author}{Walters, R.~J.},
+  \bibinfo{author}{Milledge, D.}, \bibinfo{author}{Spaans, K.} \&
+  \bibinfo{author}{Densmore, A.~L.}
+\newblock \bibinfo{title}{A new method for large-scale landslide classification
+  from satellite radar}.
+\newblock \emph{\bibinfo{journal}{Remote Sens.}} \textbf{\bibinfo{volume}{11}},
+  \bibinfo{pages}{237} (\bibinfo{year}{2019}).
+
+\bibitem{small2011}
+\bibinfo{author}{Small, D.}
+\newblock \bibinfo{title}{Flattening gamma: radiometric terrain correction for
+  {SAR} imagery}.
+\newblock \emph{\bibinfo{journal}{IEEE Trans. Geosci. Remote Sens.}}
+  \textbf{\bibinfo{volume}{49}}, \bibinfo{pages}{3081--3093}
+  (\bibinfo{year}{2011}).
+
+\bibitem{nagler2000}
+\bibinfo{author}{Nagler, T.} \& \bibinfo{author}{Rott, H.}
+\newblock \bibinfo{title}{Retrieval of wet snow by means of multitemporal {SAR}
+  data}.
+\newblock \emph{\bibinfo{journal}{IEEE Trans. Geosci. Remote Sens.}}
+  \textbf{\bibinfo{volume}{38}}, \bibinfo{pages}{754--765}
+  (\bibinfo{year}{2000}).
+
+\bibitem{bryan2002}
+\bibinfo{author}{Bryan, G.~H.} \& \bibinfo{author}{Fritsch, J.~M.}
+\newblock \bibinfo{title}{A benchmark simulation for moist nonhydrostatic
+  numerical models}.
+\newblock \emph{\bibinfo{journal}{Mon. Weather Rev.}}
+  \textbf{\bibinfo{volume}{130}}, \bibinfo{pages}{2917--2928}
+  (\bibinfo{year}{2002}).
+
+\bibitem{mansell2010}
+\bibinfo{author}{Mansell, E.~R.}, \bibinfo{author}{Ziegler, C.~L.} \&
+  \bibinfo{author}{Bruning, E.~C.}
+\newblock \bibinfo{title}{Simulated electrification of a small thunderstorm
+  with two-moment bulk microphysics}.
+\newblock \emph{\bibinfo{journal}{J. Atmos. Sci.}}
+  \textbf{\bibinfo{volume}{67}}, \bibinfo{pages}{171--194}
+  (\bibinfo{year}{2010}).
+
+\bibitem{iacono2008}
+\bibinfo{author}{Iacono, M.~J.} \emph{et~al.}
+\newblock \bibinfo{title}{Radiative forcing by long-lived greenhouse gases:
+  calculations with the {AER} radiative transfer models}.
+\newblock \emph{\bibinfo{journal}{J. Geophys. Res.}}
+  \textbf{\bibinfo{volume}{113}}, \bibinfo{pages}{D13103}
+  (\bibinfo{year}{2008}).
+
+\bibitem{lawson2015}
+\bibinfo{author}{Lawson, R.~P.}, \bibinfo{author}{Woods, S.} \&
+  \bibinfo{author}{Morrison, H.}
+\newblock \bibinfo{title}{The microphysics of ice and precipitation development
+  in tropical cumulus clouds}.
+\newblock \emph{\bibinfo{journal}{J. Atmos. Sci.}}
+  \textbf{\bibinfo{volume}{72}}, \bibinfo{pages}{2429--2445}
+  (\bibinfo{year}{2015}).
+
+\bibitem{barnes2014}
+\bibinfo{author}{Barnes, R.}, \bibinfo{author}{Lehman, C.} \&
+  \bibinfo{author}{Mulla, D.}
+\newblock \bibinfo{title}{Priority-flood: an optimal depression-filling and
+  watershed-labeling algorithm for digital elevation models}.
+\newblock \emph{\bibinfo{journal}{Comput. Geosci.}}
+  \textbf{\bibinfo{volume}{62}}, \bibinfo{pages}{117--127}
+  (\bibinfo{year}{2014}).
+
+\bibitem{drusch2012}
+\bibinfo{author}{Drusch, M.} \emph{et~al.}
+\newblock \bibinfo{title}{Sentinel-2: {ESA's} optical high-resolution mission
+  for {GMES} operational services}.
+\newblock \emph{\bibinfo{journal}{Remote Sens. Environ.}}
+  \textbf{\bibinfo{volume}{120}}, \bibinfo{pages}{25--36}
+  (\bibinfo{year}{2012}).
+
+\bibitem{skamarock2019}
+\bibinfo{author}{Skamarock, W.~C.} \emph{et~al.}
+\newblock \bibinfo{title}{A description of the {Advanced Research WRF} model
+  version 4}.
+\newblock \bibinfo{type}{Tech. Rep.} \bibinfo{number}{NCAR/TN-556+STR},
+  \bibinfo{institution}{National Center for Atmospheric Research}
+  (\bibinfo{year}{2019}).
+
+\bibitem{wicker2020}
+\bibinfo{author}{Wicker, L.~J.} \& \bibinfo{author}{Skamarock, W.~C.}
+\newblock \bibinfo{title}{An implicit--explicit vertical transport scheme for
+  convection-allowing models}.
+\newblock \emph{\bibinfo{journal}{Mon. Weather Rev.}}
+  \textbf{\bibinfo{volume}{148}}, \bibinfo{pages}{3893--3910}
+  (\bibinfo{year}{2020}).
+
+\end{thebibliography}

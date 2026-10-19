@@ -75,7 +75,7 @@ def main(d, png):
     axs[1, 0].set_ylabel("neve/gelo (NDSI>0,42)\nsó SCL: azul escuro = neve, claro = sem neve, cinza = nuvem", fontsize=8)
     fig.suptitle("Anfiteatro do Lhende Khola (3,41 km², amarelo) — x vermelho = ponto de colapso (85,515E 28,271N)\n"
                  "contornos: maior aglomerado de perda 12/08>27/08 (vermelho), 12/08>24/08 (laranja), 24/08>27/08 mesma orbita (magenta), falsa perda em 15 min 24/08 S2B>S2A (ciano)", fontsize=10)
-    fig.tight_layout(); fig.savefig(png, dpi=130)
+    fig.tight_layout(); __import__('figlang').prepara(fig); fig.savefig(__import__('figlang').caminho(png), dpi=130)
     print("ok", png)
 
 

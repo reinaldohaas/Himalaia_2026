@@ -59,7 +59,7 @@ def serie(d):
     ax.set_ylim(-0.03, 1.08); ax.set_ylabel("fração de neve/gelo nos pixels\nobservados do anfiteatro (NDSI > 0,42)")
     ax.grid(alpha=0.3); ax.legend(fontsize=7.5, ncol=2, loc="lower left")
     ax.set_title("Anfiteatro do Lhende Khola (3,41 km²): seis fontes, 01/07 a 18/10/2026 — cenas com ≥ 50 % do anfiteatro observado", fontsize=10)
-    fig.autofmt_xdate(); fig.tight_layout(); fig.savefig(os.path.join(d, "serie_fontes.png"), dpi=130)
+    fig.autofmt_xdate(); fig.tight_layout(); __import__('figlang').prepara(fig); fig.savefig(__import__('figlang').caminho(os.path.join(d, "serie_fontes.png")), dpi=130)
 
 
 def mapa(d):
@@ -120,7 +120,7 @@ def mapa(d):
     fig.colorbar(h, ax=ax, shrink=0.8, label="ΔVV médio das 3 geometrias (dB), pares de 12 dias com o colapso")
     ax.set_title("Sentinel-1D RTC: mudança de retroespalhamento entre ~16–24/08 e ~28/08–05/09 (azul = aumento)\n"
                  "contorno preto = anfiteatro (3,41 km²); linha = talvegue do Lhende Khola a partir do ponto de colapso", fontsize=9.5)
-    fig.tight_layout(); fig.savefig(os.path.join(d, "mapa_s1_corredor.png"), dpi=130)
+    fig.tight_layout(); __import__('figlang').prepara(fig); fig.savefig(__import__('figlang').caminho(os.path.join(d, "mapa_s1_corredor.png")), dpi=130)
 
 
 if __name__ == "__main__":

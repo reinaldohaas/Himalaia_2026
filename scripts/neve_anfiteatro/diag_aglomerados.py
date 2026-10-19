@@ -87,7 +87,7 @@ def main(d, png):
         print(k, json.dumps(res[k], ensure_ascii=False))
     fig.suptitle("Falsa cor B11-B8A-B04 (neve = ciano/azul; nuvem = branca; rocha = marrom/rosa), 20 m. Contornos: maiores aglomerados de perda — "
                  "C 12/08>27/08 vermelho, A 12/08>24/08 laranja, B 24/08>27/08 mesma órbita magenta, falsa perda em 15 min ciano", fontsize=8.5)
-    fig.tight_layout(); fig.savefig(png, dpi=130)
+    fig.tight_layout(); __import__('figlang').prepara(fig); fig.savefig(__import__('figlang').caminho(png), dpi=130)
     json.dump(res, open(os.path.join(d, "diag_aglomerados.json"), "w"), indent=1, ensure_ascii=False)
 
 

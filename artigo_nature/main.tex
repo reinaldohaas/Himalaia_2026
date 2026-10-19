@@ -1,0 +1,222 @@
+%% Lhende Khola 2026 -- manuscript in Nature format (nature.cls / naturemag.bst)
+%% Build: latexmk -pdf main.tex   (or pdflatex, bibtex, pdflatex, pdflatex)
+%% \previewtrue shows the figures next to their legends; \previewfalse gives the submission layout
+%% (legends only; figures uploaded as separate files, as Nature requires).
+\PassOptionsToPackage{super}{cite}
+\documentclass{nature}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage[T1]{fontenc}
+\let\OrigIncludegraphics\includegraphics
+\newif\ifpreview
+\previewtrue
+\AtBeginDocument{\ifpreview\let\includegraphics\OrigIncludegraphics\fi}
+\newcommand{\fig}[3][]{\ifpreview\par\if\relax\detokenize{#1}\relax\else\noindent\textbf{#1}\par\fi\noindent\OrigIncludegraphics[width=#2]{figures/#3}\par\medskip\fi}
+\newcounter{edfig}
+\newcommand{\edfigure}[3]{\AtEndDocument{\refstepcounter{edfig}\clearpage\sffamily\noindent
+  \ifpreview\OrigIncludegraphics[width=#1]{figures/#2}\par\medskip\fi
+  \noindent\textbf{Extended Data Figure \arabic{edfig}\enspace}#3\par}}
+\newcommand{\degC}{\,\textdegree C}
+
+\bibliographystyle{naturemag}
+
+\title{Satellite and model constraints on the water source of the 2026 Lhende Khola debris flow}
+
+\author{Reinaldo Haas$^{1}$}
+
+\begin{document}
+
+\maketitle
+
+\begin{affiliations}
+ \item Departamento de F\'isica, Universidade Federal de Santa Catarina, Florian\'opolis, SC, Brazil.
+\end{affiliations}
+
+\begin{abstract}
+High-mountain debris flows that carry more water than local rain, lakes or melt can supply are among the hardest Himalayan hazards to attribute and forecast\cite{shugar2021,iverson1997}. On 26 August 2026 at 02:52 UTC a landslide seismic source (Ms 5.2) was recorded on the Nepal--Tibet border below Langtang Lirung\cite{usgs2026}, and a debris flow then destroyed 25 of 33 inventoried bridges along the Bhote Koshi--Trishuli valley. A hydraulic reconstruction gives about $1.4\times10^{7}$\,m$^{3}$ of water, but every input to it was assumed, and satellite rainfall over the site was a few millimetres\cite{huffman2019,haas2026repo}. One proposed explanation is that charge deposited on cloud droplets by the global electric circuit suppressed coalescence, stored supercooled water over the source and released it suddenly\cite{tinsley2000,tinsley2008}. Here we test the event against seven satellite data sets, a geostationary storm track, reanalysis and cloud-resolving simulations that implement this electro-anti-scavenging. In the parts of the source amphitheatre that were cloud-free, snow and ice cover did not decrease during the event ($+7.5\pm6.0$\,ha). Radar shows the flow signature starting at the amphitheatre outlet. The simulated anti-scavenging builds a supercooled reservoir at the right time but cannot release it, and the reservoir is almost four orders of magnitude too small. The water source therefore remains unconstrained, and we identify the observations that would decide it.
+\end{abstract}
+
+Glacier- and permafrost-related mass flows in the Himalaya often reach far beyond their source and carry large volumes of water that are hard to account for. The 2021 Chamoli disaster, for example, was traced to a rock and ice avalanche whose frictional melting and entrained water fed a long-runout flow\cite{shugar2021}. When neither a lake nor rain appears in the record, the attribution has to be made from remote observations of the source and of the atmosphere, and its uncertainty has to be stated explicitly.
+
+The 26 August 2026 event in Rasuwa District (Nepal) is a case of this kind. The US Geological Survey catalogued a long-period seismic source at 02:52:10 UTC (08:37 Nepal time) of surface-wave magnitude 5.2, classified as a landslide, with an automatic location at 28.271\textdegree\,N, 85.515\textdegree\,E (event us7000tbwb)\cite{usgs2026}. That location lies in a north-draining amphitheatre on the flank of Langtang Lirung (7,234\,m). Surface-wave locations of landslides are uncertain by kilometres\cite{ekstrom2013}, so it marks the source region rather than a mapped scar. A debris flow then travelled down the Lhende Khola into the Bhote Koshi. An ICIMOD inventory lists 33 bridges along the affected reach; 25 were washed out, including the Miteri bridge at the Rasuwagadhi border crossing, and three were damaged. The flow also damaged hydropower and border infrastructure, with substantial loss of life that we do not evaluate here.
+
+The debate over this event turns on its water. A Manning reconstruction at the Rasuwagadhi gorge gives a peak discharge of 3,400--4,100\,m$^{3}$\,s$^{-1}$ and a water volume of $1.42\times10^{7}$\,m$^{3}$ (refs~\citen{haas2026repo,rickenmann1999}). However, the roughness, the 8.5\,m stage, the five-hour triangular hydrograph and the sediment concentration of 31\% were all assigned, not measured. No gauged hydrograph is available. Satellite precipitation recorded 5.1\,mm up to the collapse in the 0.1\textdegree{} cell containing the site\cite{huffman2019}. No glacial lake large enough to supply the water was present beforehand: the largest water body in Sentinel-2 imagery of 12--27 August within 914\,km$^{2}$ is 4.8\,ha (ref.~\citen{haas2026repo}). One explanation advanced to close the budget invokes the global atmospheric electric circuit\cite{rycroft2000}. A solar flare (GOES class M6.9, peak 10:02 UTC on 25 August) would have modulated the vertical fair-weather current density $J_z$. Space charge at cloud boundaries\cite{zhou2007} would then have suppressed droplet coalescence\cite{tinsley2000,tinsley2008,harrison2008}, so that supercooled water accumulated over the summit ridges. Its sudden glaciation through rime splintering\cite{hallett1974,field2017} would have produced a localised cloudburst.
+
+Here we confront that chain, and the water budget it is meant to close, with the observations available seven weeks after the event, together with simulations that implement the proposed microphysics. We report each number with its provenance, and we keep values assigned by hand (parametric) separate from measurements.
+
+\section*{The water budget is not constrained by observations}
+
+The 14.2-million-cubic-metre figure is not a measurement, and the conclusion drawn from it depends on the area it is divided by. Using the slope measured on the Copernicus GLO-30 model\cite{copdem2021} (0.066 instead of the assumed 0.045) raises the peak discharge to 4,095\,m$^{3}$\,s$^{-1}$, at a Froude number of 1.6 where Manning's formula is poorly suited. The control section drains 934\,km$^{2}$. Spread over that area the volume corresponds to 15\,mm of water, comparable to the 18.7\,mm that IMERG gives over three days in the surrounding 0.5\textdegree{} box (Methods). The ``tenfold deficit'' appears only when the same volume is assigned to a small sub-basin within a single morning. We delineated the source amphitheatre on GLO-30 as the catchment upstream of the point where the thalweg from the seismic location reaches the valley floor at 4,010\,m. It covers 3.41\,km$^{2}$ between 4,010 and 7,216\,m, and 77\% of it lies above 5,000\,m. The water depth required ranges from 4.2\,m over the amphitheatre to 580\,mm over the 24.5\,km$^{2}$ above kilometre 5 of the thalweg and 59\,mm over the 242\,km$^{2}$ above kilometre 10 (Methods). The budget therefore cannot discriminate between sources until the volume and its timing are measured. Each candidate source can still be tested for its own signature.
+
+\section*{A dissipating storm upstream, absent from the reanalysis}
+
+\begin{figure}
+\caption{\fig{0.92\textwidth}{fig1_himawari.png}\textbf{The mesoscale convective system of 25--26 August 2026 in Himawari-9.} \textbf{a--d}, Band-13 (10.4\,$\mu$m) brightness temperature at 12:00, 18:00 and 22:00\,UTC on 25 August and at 02:50\,UTC on 26 August. Red contour, 213\,K; orange line, parallax-corrected track of the tracked system; orange dot, its position at the time shown; cyan star, the source amphitheatre. \textbf{e}, Area of the tracked system colder than 213\,K (black), its distance to the site (orange) and the brightness temperature over the site (blue, dotted). The vertical red line marks the collapse at 02:52\,UTC.}
+\end{figure}
+
+The rainfall branch of the hypothesis needs a storm over the source. Himawari-9 (ref.~\citen{bessho2016}) shows a mesoscale convective system\cite{houze2004} over the Tibetan Plateau near Lhasa between 09 and 13\,UTC on 25 August, with 100,000--146,000\,km$^{2}$ of cloud tops colder than 213\,K (Fig.~1). After parallax correction we tracked it west-south-westward at 20--60\,km\,h$^{-1}$, in the direction expected for monsoon convection along the Himalayan arc\cite{houze2007,bookhagen2006}. It shrank to 13,700\,km$^{2}$ by 22\,UTC and dissipated about 200\,km east of the site between 23 and 01\,UTC. Its core never reached the source. From 17:30 to 00:30\,UTC the site lay under the downstream edge of the anvil, at brightness temperatures of 218--235\,K. From 01:30\,UTC onwards no cloud colder than 213\,K was present within 150\,km, and the collapse occurred under skies without high cloud. ERA5 (ref.~\citen{hersbach2020}) places the mature system within 10--80\,km of the observed centre at 10--13\,UTC, but dissipates it by 14--16\,UTC and does not propagate it westward. Any model initialised from the reanalysis therefore has to generate the evening approach of the storm on its own.
+
+\section*{No detectable loss of snow and ice where the source could be seen}
+
+If the water came from the source area as ice, meltwater or rain falling on snow, the snow and ice cover of the amphitheatre should change between the last images before and the first images after the event. We built the series from 1 July to 18 October 2026 from seven sources, using the normalised-difference snow index (NDSI\,$>0.42$; refs~\citen{dozier1989,hall1995}). We changed each step of the processing chain in turn and recorded the effect on the result (Table~1, Fig.~2).
+
+\begin{figure}
+\caption{\fig[a]{0.95\textwidth}{serie_fontes.png}\fig[b]{0.95\textwidth}{quicklook_evento.png}\textbf{Snow and ice cover of the source amphitheatre.} \textbf{a}, Snow/ice fraction of the observed amphitheatre pixels (NDSI\,$>0.42$) from 1 July to 18 October 2026, for scenes with at least half of the amphitheatre observed. Blue circles and cyan squares, Sentinel-2 L2A from two distributors; purple triangles, Sentinel-2 L1C (top of atmosphere); olive diamonds and brown triangles, HLS and Landsat (LaSRC correction); grey dots, MODIS. Red symbols, scenes rejected because corrected SWIR reflectance is negative in more than 10\% of pixels. \textbf{b}, Sentinel-2 true colour (top) and classification with the standard scene-classification cloud mask only (bottom) on 12 and 24 August (two acquisitions 15\,min apart), 27 August, 21 September and 18 October. Yellow, amphitheatre; red cross, USGS location of the seismic source. Contours, largest clusters of apparent loss: 12\,$\to$\,27 August (red), 12\,$\to$\,24 August (orange), 24\,$\to$\,27 August, same orbit (magenta), and between the two acquisitions of 24 August (cyan).}
+\end{figure}
+
+Two aspects of the processing turned out to matter far more than the choice of index threshold. The first is atmospheric correction. Over fresh snow in October, the LaSRC correction used for Landsat Collection 2 and for the Harmonized Landsat--Sentinel product\cite{vermote2016,claverie2018} produces negative short-wave-infrared reflectance in 68--83\% of pixels. The resulting snow fractions are 0.29--0.66, against 0.92--0.99 from Sentinel-2 processed with Sen2Cor\cite{mainknorn2017} and from uncorrected top-of-atmosphere data on the same days. Sentinel-2 L2A from the two distributors agrees to within 1\% once each distributor's offset convention is applied (Methods). Daily MODIS at 500\,m resolves only 29 pixels over the amphitheatre, and its Terra and Aqua retrievals on the same day differ with a standard deviation of 0.34 in snow fraction, so it does not constrain the change.
+
+The second is cloud masking, and it decides the result. The Sen2Cor scene classification does not flag low cloud lying over snow. Such cloud has a low NDSI and is read as loss of snow. Two Sentinel-2 acquisitions of 24 August taken 15 minutes apart, between which the surface cannot have changed, show 24.6\,ha of apparent ``loss'' when only the standard mask is used. The largest cluster of this false loss lies in the same sector where a coherent 7.2\,ha ``scar'' had previously been identified from the 12--27 August pair (ref.~\citen{haas2026repo}). In that sector the pixels have a median green reflectance of 1.20 and SWIR reflectance of 0.84 on 27 August. That signature is cloud, not exposed rock, and by 18 October the same pixels are 97\% snow-covered (Extended Data Fig.~1). A spectral cloud test (bright in both green and SWIR without the snow signature) reduces the false loss in the 15-minute pair to 6.6\,ha. That test can also hide some very bright rock, which on clear days amounts to 0.4--4\% of the amphitheatre. We therefore report results with both masks, as bounds on the change.
+
+
+During the event, in the 182\,ha that were observed on both 24 and 27 August (53\% of the amphitheatre), snow and ice cover changed by $+7.5\pm6.0$\,ha. The gross loss of 3.0\,ha is smaller than the 6.6\,ha of noise between two acquisitions 15 minutes apart, and the largest coherent loss cluster covers 0.2--0.6\,ha (Table~1). With the standard mask, which counts unflagged cloud as loss, the gross loss rises only to 7--11\,ha and the net change remains positive.
+
+This result does not cover the place where the collapse would have started. A belt of orographic cloud lay over the source elevations in both scenes that bracket the event. Only 6\% of the 5,000--5,500\,m band and 14\% of the 5,500--6,000\,m band were observed on both dates, compared with 63--78\% on the clear day of 12 August (Extended Data Table~1). The seismic location lies at 5,617\,m, and only 21\% of the area within 300\,m of it was observed in both scenes. The first clear scene of that band, on 28 September, already shows a cover of fresh snow. The snowline in the surrounding 12\,$\times$\,9\,km window stayed between 5,190 and 5,280\,m on 12 and 24 August (Extended Data Fig.~3). Area-based optical mapping also cannot detect ice that thins without exposing rock, because glacier ice and snow share the NDSI signature.
+
+\section*{Radar traces the flow from the amphitheatre outlet}
+
+\begin{figure}
+\caption{\fig[a]{0.95\textwidth}{mapa_s1_corredor.png}\fig[b]{0.85\textwidth}{perfil_s1.png}\textbf{Sentinel-1 backscatter change across the event.} \textbf{a}, Mean change in $\gamma^0_{VV}$ (5\,$\times$\,5-pixel filter) for the three 12-day pairs that contain the collapse: ascending orbit 85, 16\,$\to$\,28 August; descending orbit 121, 19\,$\to$\,31 August; descending orbit 19, 24 August\,$\to$\,5 September. Blue, increase. Black contour, amphitheatre; thin line, thalweg from the seismic location, with distances in kilometres; green cross, seismic location. \textbf{b}, Fraction of a $\pm250$\,m swath along the thalweg with an increase of more than 3\,dB, for each event pair (lines). Shading spans the event-free pairs of the same orbit, from the mean minus one standard deviation to the mean plus three. Lower panel, thalweg elevation; dashed line, amphitheatre outlet at 4,010\,m.}
+\end{figure}
+
+C-band radar\cite{torres2012} sees through cloud, and debris-flow deposits and scoured channels raise backscatter by several decibels\cite{burrows2019}. Only Sentinel-1D was acquiring over the site, but its three orbits give independent 12-day pairs whose common interval is 24 August 00:18 to 28 August 12:21\,UTC. We used terrain-flattened $\gamma^0$ (ref.~\citen{small2011}) and compared each event pair with the seven or eight event-free pairs of the same orbit between July and October (Fig.~3).
+
+Along the thalweg, backscatter rises by more than 3\,dB over 20--73\% of the swath in all three geometries. The signal starts at kilometre 1.6 (4,024\,m elevation), next to the amphitheatre outlet, and continues to about kilometre 15. In the first 5\,km below the outlet, 21\% of the corridor shows an increase in at least two of the three geometries, against 0.4\% on the high terrain around the source. Relative to the event-free pairs, the anomaly is 26 to 44 standard deviations there, 6 to 44 standard deviations between 5 and 10\,km, and 11 to 30 between 10 and 15\,km. In total, 125\,ha of the corridor show a robust increase. The descending-19 pair, the only one that ends on 5 September, shows the signal as far as kilometre 25, which suggests a later surge or an extension of the deposit between 28 August and 5 September.
+
+Inside the amphitheatre the radar cannot decide. There the envelope of the event-free pairs (mean plus three standard deviations) exceeds 100\% in places, because the slopes produce layover and shadow. The event pairs are in fact quieter than normal there (anomalies of $-0.7$ to $-1.0$ standard deviations). The only robust change on a hillslope near the source lies 1.5\,km east of the outlet, outside the amphitheatre. It consists of a 28-ha decrease of 5.3\,dB at 4,790--5,180\,m next to increases of 13 and 15\,ha that descend towards the outlet (Extended Data Fig.~2). A scar with a deposit below it produces this pattern. However, in August the surface there was bare debris just below the snowline, and fresh wet snow on debris also lowers backscatter by several decibels\cite{nagler2000}. The available data do not distinguish the two.
+
+\section*{Electrically suppressed coalescence in a cloud-resolving model}
+
+\begin{figure}
+\caption{\fig{0.78\textwidth}{fig4_cm1_toro.png}\textbf{Cloud-resolving tests of the anti-scavenging hypothesis.} CM1 at 500\,m on the GLO-30 terrain, initialised with the ERA5 sounding at 06\,UTC on 25 August, with radiation and surface fluxes. \textbf{a}, Supercooled liquid water over the 3\,$\times$\,3\,km box centred on the seismic location. \textbf{b}, Rain rate over the same box. \textbf{c}, Equivalent infrared cloud-top (or surface) temperature over the site, against Himawari-9 band 13 (red dots). Black, control; orange, coalescence, accretion and contact freezing suppressed everywhere; blue, suppressed only where graupel is absent (reversal on graupel); dashed blue, with an imposed cyclonic vortex; purple, with ice seeded from above; green, with forced ascent of 1\,m\,s$^{-1}$. The vertical red line marks the collapse.}
+\end{figure}
+
+To test the microphysical mechanism directly, we added an optional module to the cloud model CM1 (ref.~\citen{bryan2002}) and its two-moment NSSL microphysics\cite{mansell2010}. The module scales droplet self-collection and autoconversion, accretion of droplets by rain and contact freezing. This is the effect that charge-modulated collision efficiencies would have, with charge acting as a control parameter rather than being modelled explicitly. With the module switched off the modified code reproduces the reference run bit for bit (Methods). The simulations use 500\,m spacing over the real terrain, start from the ERA5 sounding, and include radiation\cite{iacono2008}, surface fluxes and rime splintering\cite{hallett1974,lawson2015}. All criteria were fixed before the runs.
+
+Without the module the model already produces deep afternoon convection over the massif, with 4,000--9,000\,t of supercooled water over the source box, 82--165 secondary ice crystals per litre in the $-3$ to $-8$\degC{} band and rain focused on the amphitheatre (19--33\,mm by 19\,UTC in two realisations). This is 2.5 times more rain than IMERG and arrives four to six hours too early. By the time of the collapse the supercooled water has fallen to near zero in every configuration without the module.
+
+When coalescence is suppressed only where graupel is absent, which corresponds to the proposed reversal on the first appearance of graupel, a reservoir of 1.8--2.6 thousand tonnes of supercooled water forms over the source between 02:00 and 02:30\,UTC, 18--25 times the control, at $-8$ to $-10$\degC{} (Fig.~4). The mechanism therefore arms the reservoir at the right time and place. In none of the thirteen experiments is the reservoir released, whether the suppression is applied everywhere or only where graupel is absent, and whether or not a vortex, ice falling from above or forced ascent is added. Rain over the source after 23:30\,UTC stays below 0.4\,mm\,h$^{-1}$. The reason is structural. Suppressed coalescence keeps the droplets small and numerous, and small droplets are rimed inefficiently and fall below the size needed for rime splintering\cite{hallett1974,field2017}. Without riming no graupel forms, and without graupel the proposed reversal never happens. Seeding ice at ten times the natural rate reduces the reservoir by only 10--25\% in an hour, and forced ascent dismantles the updraught that built the reservoir. Even at its largest, the reservoir holds about $2.6\times10^{3}$\,m$^{3}$ of water, and the precipitation simulated between 00 and 03\,UTC is $5\times10^{3}$\,m$^{3}$ over the source box and $2\times10^{5}$\,m$^{3}$ within 10\,km. This is three to four orders of magnitude below the reconstructed volume. No configuration produces lightning at night, and none reproduces the clear sky that Himawari observed over the site at 02:50\,UTC.
+
+Two further facts bear on the electrical branch of the chain. There is no measurement of $J_z$ for the event. The values of 3.2--4.6\,pA\,m$^{-2}$ in the preliminary analysis were computed from an ionospheric potential assigned by hand. Ground magnetometer records of the flare-associated crochet and an estimate based on cosmic-ray flux both imply fractional changes in $J_z$ of about 1\% or less (Methods). The solar event itself was a moderate flare, without a proton event and under quiet geomagnetic conditions (Kp 0.3--1.7).
+
+\section*{Discussion}
+
+None of the observations made after the event supports a local cloudburst over the source on the morning of 26 August. The convective system dissipated about 200\,km to the east before the collapse, and the site was under clear sky at 02:50\,UTC. The simulated electrical suppression of coalescence builds a supercooled reservoir that it then prevents from releasing, and the reservoir would in any case be four orders of magnitude too small. In the parts of the source that were observed, snow and ice cover did not decrease. These results do not rule out rain falling on the source before 01:30\,UTC under the edge of the anvil, which IMERG would underestimate at this scale. A regional simulation with real boundary forcing is under way to test that possibility against a criterion registered beforehand (Methods).
+
+What the observations do establish is the geometry of the flow. Its radar signature begins at the outlet of the amphitheatre that contains the seismic location and continues for about 15\,km. The material therefore entered the valley at or above 4,000\,m, consistent with a mass movement from the source area\cite{shugar2021,ekstrom2013}. Whether that mass was mostly ice, rock or saturated debris, and how much water it carried or entrained, cannot be measured from the data used here. Area-based optical data miss thinning, the critical elevation band was under cloud, and radar is blind on the source slopes.
+
+Three observations would close the budget. The first is a post-event stereo elevation model of the amphitheatre and the area east of the outlet, differenced against a pre-event model, which would measure the volume and location of what left. The second is an inversion of the long-period seismic records for the force history of the source\cite{ekstrom2013}, which would give its mass, direction and timing independently of optical data. The third is a gauged or reconstructed hydrograph with its section, duration and base flow measured rather than assumed, which would replace the parametric water volume on which the debate has rested. Until these exist, the water source of the 2026 Lhende Khola debris flow, and with it the case for any atmospheric trigger, remains open.
+
+\begin{methods}
+
+\subsection{Source area and drainage.}
+We read the Copernicus GLO-30 elevation model\cite{copdem2021} over 85.22--85.75\textdegree\,E, 28.12--28.62\textdegree\,N from the Microsoft Planetary Computer. Depressions were filled with a priority-flood algorithm with an increment of $10^{-3}$\,m\cite{barnes2014}, and flow directions were assigned by steepest descent among the eight neighbours. From the USGS location of event us7000tbwb (28.271\textdegree\,N, 85.515\textdegree\,E, 5,617\,m) we followed the flow path until it reached the valley floor at 4,010\,m (85.513\textdegree\,E, 28.285\textdegree\,N, 1.68\,km downstream). The amphitheatre is the catchment above that point: 3.41\,km$^{2}$, compared with 3.39\,km$^{2}$ in an earlier independent delineation. We continued the flow path 25\,km downstream (to 1,690\,m), and computed contributing areas along it with flow accumulation in descending order of filled elevation. None of the catchments touches the edge of the window. Two control regions served as references for natural variability: terrain above 5,800\,m within 6\,km of the source and outside the amphitheatre (18.7\,km$^{2}$), and a 1\,km$^{2}$ box at the summit, also outside the amphitheatre.
+
+\subsection{Optical snow and ice mapping.}
+All imagery was obtained through public STAC catalogues without credentials. Only the window of about 12\,$\times$\,9\,km around the source was read from each cloud-optimised file.
+\begin{itemize}
+\item \textbf{Sentinel-2 L2A\cite{drusch2012}:} 56 scenes from Earth Search and 55 from the Planetary Computer, tile 45RUM. The Earth Search product carries the bottom-of-atmosphere offset already applied, whereas the Planetary Computer product requires subtracting 1,000 digital numbers for processing baseline 04.00 and later. Applying each convention, the two sources agree: on 18 October, 313.0 and 311.2\,ha of snow, and a median NDSI of 0.752 and 0.751.
+\item \textbf{Sentinel-2 L1C:} 55 scenes, read from the public Google Cloud mirror.
+\item \textbf{HLS v2:} 41 S30 and 7 L30 scenes\cite{claverie2018}.
+\item \textbf{Landsat 8/9 Collection 2 Level 2:} 26 scenes. Surface reflectance is $2.75\times10^{-5}\,\mathrm{DN}-0.2$.
+\item \textbf{MODIS MOD10A1 and MYD10A1 v6.1:} 215 granules\cite{hall1995}. Pixel coverage by the polygon was computed by 10\,$\times$\,10 supersampling.
+\end{itemize}
+Snow and ice were mapped as NDSI\,$>0.42$ with green reflectance $>0.11$; pixels with green reflectance $\leq0.11$ (deep shadow) were excluded. Three cloud masks were used:
+\begin{itemize}
+\item \textbf{SCL only (strict):} Sen2Cor classes 1, 3 and 7--10 for Sentinel-2, or the equivalent QA and Fmask bits for the other products.
+\item \textbf{Lenient:} medium- and high-probability cloud only.
+\item \textbf{Spectral:} the strict mask plus pixels with green $>0.35$ and SWIR $>0.25$ that do not meet the snow criterion.
+\end{itemize}
+Changes were computed only for pixels observed on both dates. Acquisitions from the same satellite on the same day were merged, and different satellites were kept separate; this kept the two 24 August acquisitions (S2B, orbit R076, 04:47\,UTC; S2A, orbit R119, 05:02\,UTC) as an independent noise test. The uncertainty of a net change combines four components in quadrature:
+\begin{itemize}
+\item the distributor and offset (Earth Search versus Planetary Computer);
+\item atmospheric correction (L2A versus L1C);
+\item threshold (half the range for NDSI thresholds of 0.30--0.50);
+\item natural variability: the standard deviation of the net change, as a fraction of the commonly observed area, in event-free Sentinel-2 pairs 3--20 days apart from 1 July to 21 September, using pairs of at most 5 days for the event.
+\end{itemize}
+Clusters of loss were labelled with eight-connectivity. For the largest clusters, each pixel was classed as snow, cloud-like (bright in both bands), rock or shadow on each date. The snowline was taken as the elevation at which the snow fraction in 100-m elevation bands of the window crosses 0.5, using only bins with at least 200 observed pixels.
+
+\subsection{Radar change detection.}
+We used 28 Sentinel-1D radiometrically terrain-corrected scenes\cite{small2011} (VV and VH, 10\,m) from the Planetary Computer, all from three relative orbits: ascending 85 at about 12:21\,UTC, and descending 121 and 19 at about 00:10--00:18\,UTC. Power was averaged over 5\,$\times$\,5 pixels before conversion to decibels. For each consecutive pair of the same orbit we computed the change $\Delta\gamma^0_{VV}$ and the fraction of each region with a change of more than $+3$ or less than $-3$\,dB. The single pair in each orbit that spans the collapse was expressed as an anomaly, in standard deviations, relative to the seven or eight event-free pairs. A change was considered robust when it appeared in at least two of the three geometries after bilinear resampling to a common grid. The along-thalweg profile assigns each pixel within 250\,m of the thalweg to the nearest 250-m segment.
+
+\subsection{Geostationary tracking and reanalysis.}
+We read Himawari-9 AHI band-13 full-disk segments\cite{bessho2016} for 25 August 09:00\,UTC to 26 August 03:00\,UTC every 30 minutes from the NOAA open-data bucket. Navigation followed the standard geostationary projection, and the data were resampled to 0.04\textdegree. Objects were defined as contiguous areas colder than 213\,K. Each object's centroid was corrected for parallax using a cloud-top height estimated from brightness temperature, $h=16-0.143\,(T_b-195)$\,km, limited to 9--17\,km. With tops at 14--15\,km this moves the centroid about 30\,km to the east of its apparent position. The tracked system is the largest object within 400\,km of the site, followed forwards and backwards through objects whose centroids lie within 150\,km of the previous one. For ERA5 (ref.~\citen{hersbach2020}), objects were defined by hourly outgoing long-wave radiation below 120\,W\,m$^{-2}$ (and below 150\,W\,m$^{-2}$ as a sensitivity test).
+
+\subsection{Cloud-resolving simulations.}
+We ran CM1 r21.1 (ref.~\citen{bryan2002}) over a 40\,km domain with 500\,m horizontal spacing, terrain-following coordinates, the GLO-30 terrain and land cover from ESA WorldCover. The configuration included NSSL two-moment microphysics\cite{mansell2010} with rime splintering and the Lawson et al. splintering option\cite{lawson2015}, RRTMG radiation\cite{iacono2008} with the real date and location, an MM5 surface layer and a five-layer soil model. Because the original code initialises skin temperature with a single value, which would warm the summits by about 20\,K over 3.5\,km of relief, we added an initialisation option that reads skin temperature, deep-soil temperature and land use for each cell. The base state is the ERA5 sounding at the site with its base at 3,000\,m. Runs start at 06\,UTC on 25 August and continue to 03\,UTC on 26 August.
+
+The anti-scavenging module multiplies three processes by factors between 0 and 1: droplet self-collection and autoconversion ($f_\mathrm{coal}$), accretion of droplets by rain ($f_\mathrm{acc}$) and contact freezing ($f_\mathrm{ctf}$). These factors are applied either everywhere, or only where graupel mixing ratio is below $10^{-6}$\,kg\,kg$^{-1}$, so that the appearance of graupel reverses the suppression point by point. Optional forcings add a tangential cyclonic acceleration ($2.8\times10^{-3}$\,m\,s$^{-2}$, radius 2\,km), a source of cloud ice (about 10 crystals per litre, between 5.5 and 7.5\,km, from 01:45 to 02:45\,UTC), or relaxation of vertical velocity towards 1--2\,m\,s$^{-1}$ in a column of 3\,km radius. No charge is modelled explicitly, and the factors are bounds, because the hypothesis supplies no quantitative collision efficiencies. With the module absent or switched off, the modified executable reproduces the reference run bit for bit. Runs used a hybrid layout of 16 MPI ranks with 7 OpenMP threads. Two realisations of the same configuration, with different compilers, diverge after about one hour of model time through chaotic growth of rounding differences, so we treat a result as robust only if it appears in both. The equivalent infrared top is the temperature of the level at which condensate accumulated from the top down reaches 15\,g\,m$^{-2}$.
+
+\subsection{Regional simulation (in progress).}
+WRF v4.7.1 (ref.~\citen{skamarock2019}) is being run from ERA5 on three nested domains of 9, 3 and 1\,km, from 25 August 00\,UTC to 26 August 03\,UTC. The configuration uses NSSL microphysics, slope-dependent radiation, the YSU boundary layer, the Noah land surface, explicit convection on the inner domains and implicit--explicit vertical advection\cite{wicker2020} for the 1-km domain. The acceptance criterion was registered before the run. Between 18 and 22\,UTC, the 3-km domain must contain an object with outgoing long-wave radiation below 120\,W\,m$^{-2}$ covering at least 5,000\,km$^{2}$, within 100\,km of the Himawari centre. Only if it passes will its precipitation over the source be interpreted.
+
+\subsection{Water-budget arithmetic.}
+Ice volumes are converted to water with a density ratio of 0.9. The water depth required for a volume $V$ over area $A$ is $V/A$. The precipitation figures quoted are IMERG Late Run: 5.1\,mm up to the collapse in the 0.1\textdegree{} cell, and 18.7\,mm over three days in the 0.5\textdegree{} box, with a 30-minute maximum of 6.96\,mm. The $J_z$ bounds come from ground magnetometer records of the flare-associated crochet and from a cosmic-ray-based estimate of the change in columnar conductivity. Both are documented, with the scripts, in the project repository\cite{haas2026repo}.
+
+\subsection{Use of AI tools.}
+Data retrieval, processing scripts, model patches and the first draft of this text were produced with the assistance of an AI coding assistant (Claude, Anthropic), working under the author's direction. Every number in the text is traceable to an output file in the repository; the author is responsible for the content.
+
+\subsection{Data availability.}
+All satellite data are openly available: Sentinel-1 and -2, Landsat, HLS and MODIS through the Microsoft Planetary Computer and Earth Search; Sentinel-2 L1C through the Google Cloud public data set; Himawari-9 through the NOAA open-data bucket; ERA5 through the Copernicus Climate Data Store; IMERG through NASA GES DISC; and the GOES X-ray and proton fluxes and Kp index from NOAA SWPC. The bridge inventory is the ICIMOD damage data set distributed by the Humanitarian OpenStreetMap Team. Derived products are in the project repository\cite{haas2026repo}.
+
+\subsection{Code availability.}
+All scripts, the CM1 patch, the run configurations and the pre-registered criteria are available in the project repository\cite{haas2026repo}, in \texttt{scripts/neve\_anfiteatro}, \texttt{scripts/himawari}, \texttt{scripts/toro\_cm1}, \texttt{cluster} and \texttt{scripts/artigo}.
+
+\end{methods}
+
+\bibliography{refs}
+
+\begin{addendum}
+ \item The author thanks the operators of the open satellite archives listed under Data availability, and the vLab/UFSC for computing time.
+ \item[Author contributions] R.H. conceived the study, formulated the hypothesis tested here, directed the analysis and wrote the paper.
+ \item[Competing interests] The author declares no competing interests.
+ \item[Correspondence] Correspondence and requests for materials should be addressed to R.H.\ (email: reinaldo.haas@ufsc.br).
+\end{addendum}
+
+\begin{table}
+\caption{\textbf{Change in snow/ice cover (NDSI\,$>0.42$) in the source amphitheatre, Sentinel-2 L2A, pixels observed on both dates.} Uncertainty is $1\sigma$, the quadratic sum of the components listed below the table. ``SCL only'' uses the standard cloud mask, which counts unflagged cloud as loss, so its loss is an upper bound. The spectral mask adds a cloud test that can hide very bright rock, so its loss is a lower bound.}
+\centering\small
+\begin{tabular}{lrrrrr}
+\hline
+Pair & Area seen & Loss & Gain & Net change & Net change \\
+ & (ha) & (ha) & (ha) & spectral (ha) & SCL only (ha) \\
+\hline
+24 Aug S2B $\times$ S2A (15\,min; noise only) & 157 & 6.6 & 6.9 & $+0.3\pm5.4$ & $-12.4$ \\
+12 Aug $\to$ 24 Aug (before the event) & 206 & 11.9 & 1.7 & $-10.2\pm9.1$ & $-36.3$ \\
+\textbf{24 Aug $\to$ 27 Aug, same orbit (event)} & \textbf{182} & \textbf{3.0} & \textbf{10.4} & $\mathbf{+7.5\pm6.0}$ & $\mathbf{+17.9}$ \\
+24 Aug $\to$ 27 Aug, different orbits & 154 & 1.8 & 8.9 & $+7.1\pm4.7$ & $+6.0$ \\
+12 Aug $\to$ 27 Aug & 201 & 5.2 & 5.1 & $-0.2\pm8.7$ & $-17.0$ \\
+12 Aug $\to$ 18 Oct (fresh snow) & 263 & 2.1 & 76.4 & $+74.3$ & $+86.0$ \\
+\hline
+\multicolumn{6}{l}{\footnotesize Components for the event pair (ha): distributor and offset 0.2; atmospheric correction (L2A versus L1C) 2.8;}\\
+\multicolumn{6}{l}{\footnotesize NDSI threshold 0.30--0.50, 1.7; natural variability in event-free pairs of $\leq5$\,days, 5.1. Amphitheatre area 341\,ha.}\\
+\end{tabular}
+\end{table}
+
+\begin{table}
+\noindent\textbf{Extended Data Table 1\enspace Fraction of each elevation band of the amphitheatre observed by Sentinel-2 (spectral cloud mask).} The seismic location is at 5,617\,m.\par\medskip
+\centering\small
+\begin{tabular}{lrrrrr}
+\hline
+Elevation band & Area & 12 Aug & 24 Aug & 27 Aug & Both 24 and \\
+ & (ha) & (clear) & (S2A) & (S2B) & 27 Aug \\
+\hline
+4,000--4,500\,m & 21 & 91\% & 90\% & 95\% & 90\% \\
+4,500--5,000\,m & 56 & 73\% & 70\% & 53\% & 45\% \\
+5,000--5,500\,m & 45 & 63\% & 30\% & 12\% & 6\% \\
+5,500--6,000\,m & 60 & 78\% & 40\% & 29\% & 14\% \\
+6,000--6,500\,m & 82 & 82\% & 72\% & 84\% & 64\% \\
+6,500--7,216\,m & 76 & 99\% & 98\% & 99\% & 98\% \\
+\hline
+\end{tabular}
+\end{table}
+
+\edfigure{0.98\textwidth}{diag_aglomerados.png}{\textbf{The previously reported ``scar'' is unmasked cloud.} False-colour composites (B11, B8A, B04; snow cyan, cloud white, rock brown or pink) over the largest clusters of apparent loss obtained with the standard cloud mask, on 12 and 24 August (two acquisitions), 27 August, 1 and 21 September and 18 October. Contours are coloured as in Fig.~2b. On the dates on which the clusters appear as loss they lie under white cloud, with median green reflectance of 1.20 and SWIR reflectance of 0.84 on 27 August.}
+
+\edfigure{0.98\textwidth}{candidato_fonte.png}{\textbf{Robust radar change east of the amphitheatre outlet.} Left, mean $\Delta\gamma^0_{VV}$ of the three event pairs. Other panels, Sentinel-2 true colour (top) and false colour (bottom) on 12 and 24 August, 28 September and 18 October. Red contour, decrease of more than 3\,dB, and blue contours, increase of more than 3\,dB, each in at least two of the three geometries. Yellow circle, amphitheatre outlet. The 28-ha decrease lies on a debris surface just below the snowline at 4,790--5,180\,m.}
+
+\edfigure{0.8\textwidth}{linha_de_neve.png}{\textbf{Snowline around the source.} Elevation at which the Sentinel-2 snow fraction in 100-m bands of the 12\,$\times$\,9\,km window crosses 0.5, for scenes with at least 30\% of the window observed: circles, Earth Search L2A; squares, Planetary Computer L2A; triangles, L1C (all with the spectral mask); crosses, Earth Search L2A with the standard mask. Red line, collapse.}
+
+\end{document}
