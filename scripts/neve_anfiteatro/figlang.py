@@ -27,6 +27,15 @@ EN = [
     (", máscara estrita", ", SCL-only mask"),
     (": sem cena", ": no scene"),
     (" colapso", " collapse"),
+    ("declividade (graus)", "slope (degrees)"),
+    ("área relativa a/A", "relative area a/A"),
+    ("altura relativa h/H", "relative height h/H"),
+    ("área (ha)", "area (ha)"),
+    ("orientação das encostas (ha)", "slope aspect (ha)"),
+    ("não observado", "not observed"),
+    ("sem neve", "no snow"),
+    ("neve/gelo", "snow/ice"),
+    ("fração da faixa, 12/08", "fraction of band, 12 Aug"),
 ]
 
 

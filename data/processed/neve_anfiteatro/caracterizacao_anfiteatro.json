@@ -1,0 +1,266 @@
+{
+ "anfiteatro": {
+  "area_km2": 3.411,
+  "perimetro_km": 11.36,
+  "comprimento_km": 3.18,
+  "largura_media_km": 1.07,
+  "cota_min_m": 4010,
+  "cota_max_m": 7216,
+  "cota_media_m": 5785,
+  "relevo_m": 3206,
+  "razao_de_relevo": 1.01,
+  "melton": 1.74,
+  "razao_alongamento": 0.66,
+  "circularidade": 0.33,
+  "integral_hipsometrica": 0.554,
+  "declividade_media_graus": 47.7,
+  "declividade_p90_graus": 66.8,
+  "frac_declividade": {
+   "0-15": 0.019,
+   "15-30": 0.111,
+   "30-45": 0.3,
+   "45-60": 0.328,
+   "60-90": 0.241
+  },
+  "parede_gt45_ha": 194.4,
+  "fundo_lt15_ha": 6.5,
+  "frac_orientacao": {
+   "N": 0.56,
+   "NE": 0.131,
+   "E": 0.021,
+   "SE": 0.002,
+   "S": 0.001,
+   "SW": 0.0,
+   "W": 0.018,
+   "NW": 0.267
+  },
+  "faixas_500m": {
+   "4000-4500": {
+    "area_ha": 21.1,
+    "declividade_media": 36.0
+   },
+   "4500-5000": {
+    "area_ha": 56.3,
+    "declividade_media": 42.9
+   },
+   "5000-5500": {
+    "area_ha": 45.1,
+    "declividade_media": 55.9
+   },
+   "5500-6000": {
+    "area_ha": 60.0,
+    "declividade_media": 57.0
+   },
+   "6000-6500": {
+    "area_ha": 82.4,
+    "declividade_media": 47.0
+   },
+   "6500-7000": {
+    "area_ha": 69.7,
+    "declividade_media": 43.8
+   },
+   "7000-7500": {
+    "area_ha": 6.3,
+    "declividade_media": 33.3
+   }
+  },
+  "talvegue_usgs_exutorio": {
+   "comprimento_m": 1680,
+   "desnivel_m": 1580,
+   "declividade_media_graus": 43.3,
+   "cota_inicio_m": 5590,
+   "cota_exutorio_m": 4010
+  },
+  "cobertura": {
+   "2026-08-12": {
+    "cena": "S2C_45RUM_20260812_0_L2A",
+    "frac_observada": 0.817,
+    "neve_gelo_ha": 193.1,
+    "sem_neve_ha": 84.8,
+    "nao_observado_ha": 62.3,
+    "por_cota": {
+     "4000-4500": {
+      "obs": 0.91,
+      "neve_frac_obs": 0.58
+     },
+     "4500-5000": {
+      "obs": 0.73,
+      "neve_frac_obs": 0.1
+     },
+     "5000-5500": {
+      "obs": 0.63,
+      "neve_frac_obs": 0.36
+     },
+     "5500-6000": {
+      "obs": 0.78,
+      "neve_frac_obs": 0.6
+     },
+     "6000-6500": {
+      "obs": 0.82,
+      "neve_frac_obs": 0.97
+     },
+     "6500-7000": {
+      "obs": 0.99,
+      "neve_frac_obs": 0.98
+     },
+     "7000-7500": {
+      "obs": 1.0,
+      "neve_frac_obs": 1.0
+     }
+    },
+    "por_declividade": {
+     "0-15": {
+      "area_ha": 6.6,
+      "obs": 0.92,
+      "neve_frac_obs": 0.85
+     },
+     "15-30": {
+      "area_ha": 36.8,
+      "obs": 0.92,
+      "neve_frac_obs": 0.86
+     },
+     "30-45": {
+      "area_ha": 102.3,
+      "obs": 0.87,
+      "neve_frac_obs": 0.64
+     },
+     "45-60": {
+      "area_ha": 112.2,
+      "obs": 0.8,
+      "neve_frac_obs": 0.71
+     },
+     "60-90": {
+      "area_ha": 82.2,
+      "obs": 0.72,
+      "neve_frac_obs": 0.65
+     }
+    }
+   },
+   "2026-10-18": {
+    "cena": "S2C_45RUM_20261018_0_L2A",
+    "frac_observada": 0.93,
+    "neve_gelo_ha": 313.0,
+    "sem_neve_ha": 3.4,
+    "nao_observado_ha": 23.8,
+    "por_cota": {
+     "4000-4500": {
+      "obs": 1.0,
+      "neve_frac_obs": 1.0
+     },
+     "4500-5000": {
+      "obs": 0.97,
+      "neve_frac_obs": 0.99
+     },
+     "5000-5500": {
+      "obs": 0.84,
+      "neve_frac_obs": 0.98
+     },
+     "5500-6000": {
+      "obs": 0.9,
+      "neve_frac_obs": 0.99
+     },
+     "6000-6500": {
+      "obs": 0.94,
+      "neve_frac_obs": 0.99
+     },
+     "6500-7000": {
+      "obs": 0.93,
+      "neve_frac_obs": 0.99
+     },
+     "7000-7500": {
+      "obs": 0.99,
+      "neve_frac_obs": 1.0
+     }
+    },
+    "por_declividade": {
+     "0-15": {
+      "area_ha": 6.6,
+      "obs": 0.66,
+      "neve_frac_obs": 0.96
+     },
+     "15-30": {
+      "area_ha": 36.8,
+      "obs": 0.83,
+      "neve_frac_obs": 0.99
+     },
+     "30-45": {
+      "area_ha": 102.3,
+      "obs": 0.95,
+      "neve_frac_obs": 0.99
+     },
+     "45-60": {
+      "area_ha": 112.2,
+      "obs": 0.95,
+      "neve_frac_obs": 0.98
+     },
+     "60-90": {
+      "area_ha": 82.2,
+      "obs": 0.94,
+      "neve_frac_obs": 0.99
+     }
+    }
+   }
+  },
+  "geleira_osm": [
+   {
+    "osm": "way/338974010",
+    "nome": null,
+    "area_total_ha": 6.0,
+    "area_no_anfiteatro_ha": 6.0
+   },
+   {
+    "osm": "way/338974011",
+    "nome": null,
+    "area_total_ha": 20.1,
+    "area_no_anfiteatro_ha": 7.4
+   },
+   {
+    "osm": "way/338974013",
+    "nome": null,
+    "area_total_ha": 7.0,
+    "area_no_anfiteatro_ha": 7.0
+   },
+   {
+    "osm": "way/338974015",
+    "nome": null,
+    "area_total_ha": 70.9,
+    "area_no_anfiteatro_ha": 19.9
+   },
+   {
+    "osm": "way/338974064",
+    "nome": null,
+    "area_total_ha": 3.3,
+    "area_no_anfiteatro_ha": 3.3
+   },
+   {
+    "osm": "way/338974065",
+    "nome": null,
+    "area_total_ha": 4.7,
+    "area_no_anfiteatro_ha": 4.7
+   },
+   {
+    "osm": "way/1553042338",
+    "nome": null,
+    "area_total_ha": 531.0,
+    "area_no_anfiteatro_ha": 0.7
+   },
+   {
+    "osm": "way/1553042347",
+    "nome": null,
+    "area_total_ha": 2.4,
+    "area_no_anfiteatro_ha": 2.4
+   },
+   {
+    "osm": "way/1553042355",
+    "nome": null,
+    "area_total_ha": 43.0,
+    "area_no_anfiteatro_ha": 2.8
+   }
+  ],
+  "wilford2004": {
+   "melton": 1.74,
+   "comprimento_km": 3.18,
+   "classe": "cheia com detritos"
+  }
+ }
+}

@@ -162,6 +162,30 @@
   \textbf{\bibinfo{volume}{146}}, \bibinfo{pages}{1999--2049}
   (\bibinfo{year}{2020}).
 
+\bibitem{strahler1952}
+\bibinfo{author}{Strahler, A.~N.}
+\newblock \bibinfo{title}{Hypsometric (area-altitude) analysis of erosional
+  topography}.
+\newblock \emph{\bibinfo{journal}{Geol. Soc. Am. Bull.}}
+  \textbf{\bibinfo{volume}{63}}, \bibinfo{pages}{1117--1142}
+  (\bibinfo{year}{1952}).
+
+\bibitem{melton1965}
+\bibinfo{author}{Melton, M.~A.}
+\newblock \bibinfo{title}{The geomorphic and paleoclimatic significance of
+  alluvial deposits in southern {Arizona}}.
+\newblock \emph{\bibinfo{journal}{J. Geol.}} \textbf{\bibinfo{volume}{73}},
+  \bibinfo{pages}{1--38} (\bibinfo{year}{1965}).
+
+\bibitem{wilford2004}
+\bibinfo{author}{Wilford, D.~J.}, \bibinfo{author}{Sakals, M.~E.},
+  \bibinfo{author}{Innes, J.~L.}, \bibinfo{author}{Sidle, R.~C.} \&
+  \bibinfo{author}{Bergerud, W.~A.}
+\newblock \bibinfo{title}{Recognition of debris flow, debris flood and flood
+  hazard through watershed morphometrics}.
+\newblock \emph{\bibinfo{journal}{Landslides}} \textbf{\bibinfo{volume}{1}},
+  \bibinfo{pages}{61--66} (\bibinfo{year}{2004}).
+
 \bibitem{dozier1989}
 \bibinfo{author}{Dozier, J.}
 \newblock \bibinfo{title}{Spectral signature of alpine snow cover from the

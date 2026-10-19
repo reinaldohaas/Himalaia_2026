@@ -43,6 +43,14 @@ A classificação veio dos documentos de auditoria do próprio repositório (AUD
 | Tinsley (2000), Harrison & Ambaum (2008) | títulos corrigidos | os títulos do artigo-base não batem com os artigos reais |
 | Flare "M6.9" | mantido como M6.9 (pico 6,98 × 10⁻⁵ W/m²) | é a classe da NOAA; antes eu tinha escrito "M7,0" no prompt do antigravity, arredondando o fluxo. A lista da NOAA diz M6.9 |
 
+## Caracterização do anfiteatro de erosão (acrescentada em 19/10)
+
+Nova seção do texto principal ("A north-facing erosional headwall with almost no floor"), nova **Fig. 2** (as figuras seguintes passaram a 3, 4 e 5) e **Extended Data Table 2**. Script: `scripts/neve_anfiteatro/caracteriza_anfiteatro.py`; saída: `data/processed/neve_anfiteatro/caracterizacao_anfiteatro.json`.
+
+- **Morfometria (GLO-30):** 3,41 km²; desnível de 3.206 m em 3,18 km (razão de relevo 1,0); declividade média de 48°, com 57 % da área acima de 45° e só 2 % (6,5 ha) abaixo de 15°; 96 % das encostas voltadas para NW–N–NE; integral hipsométrica 0,55; índice de Melton 1,74. Pelo critério de Wilford et al. (2004), o Melton está bem acima do limiar de fluxo de detritos (0,53), mas o comprimento (3,2 km) passa um pouco do limite de 2,7 km.
+- **Cobertura em 12/08 (Sentinel-2):** neve e gelo acima de 6.000 m; mosaico de rocha e gelo entre 5.000 e 6.000 m; rocha e detrito entre 4.500 e 5.000 m; neve no pé da parede. Há 54 ha de geleira mapeados no OSM.
+- **Correção:** a cota da localização do USGS no GLO-30 nativo é **5.590 m**; os 5.617 m anteriores vinham do modelo reamostrado na grade do Sentinel-2. Corrigido no artigo e no relatório.
+
 ## O que falta antes de submeter
 
 1. **WRF:** está rodando no vlab. A seção de Methods descreve o critério pré-registrado. Se passar, entra uma seção de resultados e uma figura; se não passar, isso também entra.
