@@ -1,0 +1,188 @@
+=== d03 (1 km)
+2026-08-25_17:00:00 anfiteatro: SLW 1.68e+02 kg (0.00 kg/m2, Tm -3.2 C, max 0.00 g/kg) GH 0.00e+00 kg tot 2.88e+03 kg w +1/-0 | r30km: SLW 3.50e+03 kg (0.00 kg/m2, Tm -1.2 C, max 0.10 g/kg) GH 0.00e+00 kg tot 4.54e+06 kg w +1/-2 | conv_r50km: SLW 3.27e+08 kg (0.08 kg/m2, Tm -3.3 C, max 1.46 g/kg) GH 3.52e+07 kg tot 2.21e+09 kg w +3/-1 | dominio: SLW 5.09e+08 kg (0.02 kg/m2, Tm -3.1 C, max 1.60 g/kg) GH 5.97e+07 kg tot 3.80e+09 kg w +5/-3
+2026-08-25_17:15:00 anfiteatro: SLW 2.05e+01 kg (0.00 kg/m2, Tm -2.6 C, max 0.00 g/kg) GH 0.00e+00 kg tot 2.48e+03 kg w +0/-0 | r30km: SLW 6.44e+02 kg (0.00 kg/m2, Tm -1.0 C, max 0.01 g/kg) GH 0.00e+00 kg tot 4.85e+06 kg w +1/-2 | conv_r50km: SLW 3.49e+08 kg (0.09 kg/m2, Tm -3.1 C, max 1.78 g/kg) GH 3.97e+07 kg tot 2.14e+09 kg w +2/-1 | dominio: SLW 5.50e+08 kg (0.02 kg/m2, Tm -2.9 C, max 1.97 g/kg) GH 6.31e+07 kg tot 3.58e+09 kg w +4/-2
+2026-08-25_17:30:00 anfiteatro: SLW 1.01e+03 kg (0.00 kg/m2, Tm -2.5 C, max 0.03 g/kg) GH 0.00e+00 kg tot 3.81e+03 kg w +0/-1 | r30km: SLW 7.15e+03 kg (0.00 kg/m2, Tm -1.3 C, max 0.04 g/kg) GH 0.00e+00 kg tot 6.92e+06 kg w +1/-1 | conv_r50km: SLW 3.92e+08 kg (0.10 kg/m2, Tm -3.1 C, max 6.07 g/kg) GH 4.96e+07 kg tot 2.53e+09 kg w +4/-2 | dominio: SLW 6.14e+08 kg (0.03 kg/m2, Tm -2.8 C, max 6.07 g/kg) GH 8.60e+07 kg tot 4.26e+09 kg w +4/-2
+2026-08-25_17:45:00 anfiteatro: SLW 2.36e+04 kg (0.01 kg/m2, Tm -1.9 C, max 0.37 g/kg) GH 0.00e+00 kg tot 2.76e+04 kg w +0/-1 | r30km: SLW 8.20e+04 kg (0.00 kg/m2, Tm -1.6 C, max 0.37 g/kg) GH 0.00e+00 kg tot 1.18e+07 kg w +2/-2 | conv_r50km: SLW 4.53e+08 kg (0.11 kg/m2, Tm -3.2 C, max 5.17 g/kg) GH 9.38e+07 kg tot 3.75e+09 kg w +4/-2 | dominio: SLW 6.85e+08 kg (0.03 kg/m2, Tm -2.7 C, max 5.17 g/kg) GH 1.22e+08 kg tot 5.61e+09 kg w +4/-2
+2026-08-25_18:00:00 anfiteatro: SLW 1.38e+03 kg (0.00 kg/m2, Tm -3.5 C, max 0.05 g/kg) GH 0.00e+00 kg tot 8.01e+03 kg w +0/-1 | r30km: SLW 7.38e+03 kg (0.00 kg/m2, Tm -1.9 C, max 0.06 g/kg) GH 0.00e+00 kg tot 1.41e+07 kg w +2/-2 | conv_r50km: SLW 6.63e+08 kg (0.16 kg/m2, Tm -3.0 C, max 8.69 g/kg) GH 2.07e+08 kg tot 5.41e+09 kg w +8/-4 | dominio: SLW 9.15e+08 kg (0.04 kg/m2, Tm -2.7 C, max 8.69 g/kg) GH 2.20e+08 kg tot 7.32e+09 kg w +8/-4
+2026-08-25_18:15:00 anfiteatro: SLW 5.42e+03 kg (0.00 kg/m2, Tm -3.1 C, max 0.20 g/kg) GH 0.00e+00 kg tot 1.48e+04 kg w +0/-1 | r30km: SLW 7.41e+03 kg (0.00 kg/m2, Tm -2.7 C, max 0.20 g/kg) GH 0.00e+00 kg tot 1.62e+07 kg w +1/-2 | conv_r50km: SLW 7.57e+08 kg (0.19 kg/m2, Tm -2.8 C, max 7.47 g/kg) GH 2.40e+08 kg tot 6.93e+09 kg w +17/-6 | dominio: SLW 1.04e+09 kg (0.05 kg/m2, Tm -2.6 C, max 7.47 g/kg) GH 2.52e+08 kg tot 9.14e+09 kg w +17/-6
+2026-08-25_18:30:00 anfiteatro: SLW 4.47e+02 kg (0.00 kg/m2, Tm -3.8 C, max 0.02 g/kg) GH 0.00e+00 kg tot 1.35e+04 kg w +0/-1 | r30km: SLW 1.08e+04 kg (0.00 kg/m2, Tm -1.1 C, max 0.06 g/kg) GH 0.00e+00 kg tot 2.52e+07 kg w +2/-2 | conv_r50km: SLW 6.73e+08 kg (0.17 kg/m2, Tm -2.7 C, max 6.42 g/kg) GH 2.44e+08 kg tot 7.68e+09 kg w +23/-6 | dominio: SLW 1.04e+09 kg (0.05 kg/m2, Tm -2.4 C, max 6.42 g/kg) GH 2.66e+08 kg tot 1.05e+10 kg w +23/-6
+2026-08-25_18:45:00 anfiteatro: SLW 1.22e+02 kg (0.00 kg/m2, Tm -3.8 C, max 0.01 g/kg) GH 0.00e+00 kg tot 1.42e+04 kg w +0/-1 | r30km: SLW 4.75e+02 kg (0.00 kg/m2, Tm -2.4 C, max 0.01 g/kg) GH 0.00e+00 kg tot 3.16e+07 kg w +2/-2 | conv_r50km: SLW 4.39e+08 kg (0.11 kg/m2, Tm -2.1 C, max 7.16 g/kg) GH 1.70e+08 kg tot 7.42e+09 kg w +12/-7 | dominio: SLW 8.63e+08 kg (0.04 kg/m2, Tm -2.0 C, max 7.16 g/kg) GH 2.05e+08 kg tot 1.09e+10 kg w +12/-7
+2026-08-25_19:00:00 anfiteatro: SLW 0.00e+00 kg (0.00 kg/m2, Tm None C, max 0.00 g/kg) GH 0.00e+00 kg tot 1.01e+04 kg w +0/-1 | r30km: SLW 4.46e+01 kg (0.00 kg/m2, Tm -0.8 C, max 0.00 g/kg) GH 0.00e+00 kg tot 2.00e+07 kg w +1/-3 | conv_r50km: SLW 2.54e+08 kg (0.06 kg/m2, Tm -2.0 C, max 3.81 g/kg) GH 1.35e+08 kg tot 6.91e+09 kg w +13/-3 | dominio: SLW 7.16e+08 kg (0.03 kg/m2, Tm -1.9 C, max 5.27 g/kg) GH 1.78e+08 kg tot 1.08e+10 kg w +13/-3
+2026-08-25_19:15:00 anfiteatro: SLW 0.00e+00 kg (0.00 kg/m2, Tm None C, max 0.00 g/kg) GH 0.00e+00 kg tot 5.37e+03 kg w +0/-1 | r30km: SLW 5.56e+02 kg (0.00 kg/m2, Tm -0.9 C, max 0.01 g/kg) GH 0.00e+00 kg tot 1.08e+07 kg w +1/-3 | conv_r50km: SLW 2.59e+08 kg (0.06 kg/m2, Tm -2.8 C, max 3.95 g/kg) GH 7.59e+07 kg tot 6.63e+09 kg w +9/-4 | dominio: SLW 6.68e+08 kg (0.03 kg/m2, Tm -2.3 C, max 5.13 g/kg) GH 1.14e+08 kg tot 1.07e+10 kg w +9/-4
+2026-08-25_19:30:00 anfiteatro: SLW 0.00e+00 kg (0.00 kg/m2, Tm None C, max 0.00 g/kg) GH 0.00e+00 kg tot 2.14e+03 kg w +0/-1 | r30km: SLW 4.09e-01 kg (0.00 kg/m2, Tm -1.1 C, max 0.00 g/kg) GH 0.00e+00 kg tot 6.99e+06 kg w +1/-2 | conv_r50km: SLW 3.10e+08 kg (0.08 kg/m2, Tm -2.7 C, max 5.32 g/kg) GH 7.01e+07 kg tot 6.65e+09 kg w +10/-4 | dominio: SLW 5.72e+08 kg (0.03 kg/m2, Tm -2.2 C, max 5.45 g/kg) GH 1.26e+08 kg tot 1.06e+10 kg w +10/-4
+2026-08-25_19:45:00 anfiteatro: SLW 0.00e+00 kg (0.00 kg/m2, Tm None C, max 0.00 g/kg) GH 0.00e+00 kg tot 9.18e+02 kg w +0/-1 | r30km: SLW 0.00e+00 kg (0.00 kg/m2, Tm None C, max 0.00 g/kg) GH 0.00e+00 kg tot 6.02e+06 kg w +1/-2 | conv_r50km: SLW 3.43e+08 kg (0.08 kg/m2, Tm -2.7 C, max 5.53 g/kg) GH 7.09e+07 kg tot 6.97e+09 kg w +8/-4 | dominio: SLW 5.05e+08 kg (0.02 kg/m2, Tm -2.3 C, max 5.53 g/kg) GH 1.10e+08 kg tot 1.07e+10 kg w +8/-4
+2026-08-25_20:00:00 anfiteatro: SLW 0.00e+00 kg (0.00 kg/m2, Tm None C, max 0.00 g/kg) GH 0.00e+00 kg tot 1.34e+03 kg w +0/-1 | r30km: SLW 0.00e+00 kg (0.00 kg/m2, Tm None C, max 0.00 g/kg) GH 0.00e+00 kg tot 8.57e+06 kg w +1/-3 | conv_r50km: SLW 2.71e+08 kg (0.07 kg/m2, Tm -2.8 C, max 4.56 g/kg) GH 6.74e+07 kg tot 7.21e+09 kg w +5/-3 | dominio: SLW 4.01e+08 kg (0.02 kg/m2, Tm -2.5 C, max 4.56 g/kg) GH 8.37e+07 kg tot 1.08e+10 kg w +5/-3
+2026-08-25_20:15:00 anfiteatro: SLW 0.00e+00 kg (0.00 kg/m2, Tm None C, max 0.00 g/kg) GH 0.00e+00 kg tot 3.29e+03 kg w +0/-1 | r30km: SLW 0.00e+00 kg (0.00 kg/m2, Tm None C, max 0.00 g/kg) GH 0.00e+00 kg tot 1.52e+07 kg w +2/-3 | conv_r50km: SLW 1.80e+08 kg (0.04 kg/m2, Tm -2.9 C, max 4.59 g/kg) GH 3.94e+07 kg tot 6.86e+09 kg w +4/-3 | dominio: SLW 3.68e+08 kg (0.02 kg/m2, Tm -2.6 C, max 4.59 g/kg) GH 5.17e+07 kg tot 1.06e+10 kg w +4/-3
+2026-08-25_20:30:00 anfiteatro: SLW 0.00e+00 kg (0.00 kg/m2, Tm None C, max 0.00 g/kg) GH 0.00e+00 kg tot 1.13e+04 kg w +0/-1 | r30km: SLW 0.00e+00 kg (0.00 kg/m2, Tm None C, max 0.00 g/kg) GH 0.00e+00 kg tot 2.39e+07 kg w +2/-4 | conv_r50km: SLW 7.91e+07 kg (0.02 kg/m2, Tm -4.8 C, max 3.04 g/kg) GH 1.76e+07 kg tot 6.05e+09 kg w +4/-3 | dominio: SLW 3.48e+08 kg (0.01 kg/m2, Tm -3.3 C, max 3.53 g/kg) GH 3.04e+07 kg tot 1.01e+10 kg w +4/-4
+2026-08-25_20:45:00 anfiteatro: SLW 0.00e+00 kg (0.00 kg/m2, Tm None C, max 0.00 g/kg) GH 0.00e+00 kg tot 3.12e+04 kg w +1/-1 | r30km: SLW 0.00e+00 kg (0.00 kg/m2, Tm None C, max 0.00 g/kg) GH 0.00e+00 kg tot 2.75e+07 kg w +2/-4 | conv_r50km: SLW 2.38e+07 kg (0.01 kg/m2, Tm -3.7 C, max 2.18 g/kg) GH 5.99e+06 kg tot 5.40e+09 kg w +4/-2 | dominio: SLW 3.77e+08 kg (0.02 kg/m2, Tm -3.3 C, max 4.34 g/kg) GH 2.59e+07 kg tot 9.70e+09 kg w +4/-4
+2026-08-25_21:00:00 anfiteatro: SLW 0.00e+00 kg (0.00 kg/m2, Tm None C, max 0.00 g/kg) GH 0.00e+00 kg tot 4.73e+04 kg w +1/-1 | r30km: SLW 0.00e+00 kg (0.00 kg/m2, Tm None C, max 0.00 g/kg) GH 0.00e+00 kg tot 3.17e+07 kg w +2/-5 | conv_r50km: SLW 2.15e+07 kg (0.01 kg/m2, Tm -2.1 C, max 3.88 g/kg) GH 2.79e+06 kg tot 5.10e+09 kg w +3/-2 | dominio: SLW 3.62e+08 kg (0.02 kg/m2, Tm -3.3 C, max 4.31 g/kg) GH 3.49e+07 kg tot 9.23e+09 kg w +4/-5
+2026-08-25_21:15:00 anfiteatro: SLW 0.00e+00 kg (0.00 kg/m2, Tm None C, max 0.00 g/kg) GH 0.00e+00 kg tot 4.49e+04 kg w +1/-1 | r30km: SLW 0.00e+00 kg (0.00 kg/m2, Tm None C, max 0.00 g/kg) GH 0.00e+00 kg tot 3.46e+07 kg w +3/-5 | conv_r50km: SLW 2.17e+07 kg (0.01 kg/m2, Tm -2.9 C, max 2.44 g/kg) GH 1.55e+06 kg tot 4.66e+09 kg w +2/-3 | dominio: SLW 2.83e+08 kg (0.01 kg/m2, Tm -3.9 C, max 3.92 g/kg) GH 3.98e+07 kg tot 8.27e+09 kg w +4/-5
+2026-08-25_21:30:00 anfiteatro: SLW 0.00e+00 kg (0.00 kg/m2, Tm None C, max 0.00 g/kg) GH 0.00e+00 kg tot 3.91e+04 kg w +1/-1 | r30km: SLW 7.91e+04 kg (0.00 kg/m2, Tm -6.2 C, max 0.09 g/kg) GH 0.00e+00 kg tot 3.02e+07 kg w +3/-5 | conv_r50km: SLW 1.24e+07 kg (0.00 kg/m2, Tm -4.8 C, max 1.22 g/kg) GH 5.16e+05 kg tot 3.69e+09 kg w +2/-3 | dominio: SLW 2.25e+08 kg (0.01 kg/m2, Tm -4.3 C, max 2.72 g/kg) GH 2.26e+07 kg tot 6.55e+09 kg w +4/-5
+2026-08-25_21:45:00 anfiteatro: SLW 0.00e+00 kg (0.00 kg/m2, Tm None C, max 0.00 g/kg) GH 0.00e+00 kg tot 3.06e+04 kg w +1/-1 | r30km: SLW 3.95e+05 kg (0.00 kg/m2, Tm -5.8 C, max 0.21 g/kg) GH 0.00e+00 kg tot 2.42e+07 kg w +3/-5 | conv_r50km: SLW 4.30e+06 kg (0.00 kg/m2, Tm -11.9 C, max 0.32 g/kg) GH 1.66e+05 kg tot 2.30e+09 kg w +2/-2 | dominio: SLW 1.40e+08 kg (0.01 kg/m2, Tm -4.2 C, max 2.36 g/kg) GH 8.87e+06 kg tot 4.39e+09 kg w +3/-5
+2026-08-25_22:00:00 anfiteatro: SLW 0.00e+00 kg (0.00 kg/m2, Tm None C, max 0.00 g/kg) GH 0.00e+00 kg tot 2.62e+04 kg w +1/-1 | r30km: SLW 4.17e+05 kg (0.00 kg/m2, Tm -5.4 C, max 0.15 g/kg) GH 0.00e+00 kg tot 2.25e+07 kg w +4/-5 | conv_r50km: SLW 1.39e+06 kg (0.00 kg/m2, Tm -21.5 C, max 0.14 g/kg) GH 6.24e+04 kg tot 1.36e+09 kg w +2/-2 | dominio: SLW 1.16e+08 kg (0.01 kg/m2, Tm -4.1 C, max 1.42 g/kg) GH 2.18e+06 kg tot 2.78e+09 kg w +4/-5
+2026-08-25_22:15:00 anfiteatro: SLW 0.00e+00 kg (0.00 kg/m2, Tm None C, max 0.00 g/kg) GH 0.00e+00 kg tot 2.68e+04 kg w +1/-1 | r30km: SLW 1.63e+06 kg (0.00 kg/m2, Tm -4.6 C, max 0.20 g/kg) GH 0.00e+00 kg tot 2.58e+07 kg w +4/-5 | conv_r50km: SLW 1.41e+05 kg (0.00 kg/m2, Tm -29.8 C, max 0.04 g/kg) GH 2.82e+04 kg tot 8.57e+08 kg w +1/-3 | dominio: SLW 1.30e+08 kg (0.01 kg/m2, Tm -3.8 C, max 1.22 g/kg) GH 6.39e+05 kg tot 1.85e+09 kg w +4/-5
+2026-08-25_22:30:00 anfiteatro: SLW 0.00e+00 kg (0.00 kg/m2, Tm None C, max 0.00 g/kg) GH 0.00e+00 kg tot 3.36e+04 kg w +1/-1 | r30km: SLW 5.53e+06 kg (0.00 kg/m2, Tm -4.9 C, max 0.41 g/kg) GH 1.26e+00 kg tot 3.28e+07 kg w +3/-4 | conv_r50km: SLW 2.01e+04 kg (0.00 kg/m2, Tm -3.7 C, max 0.03 g/kg) GH 1.22e+04 kg tot 5.27e+08 kg w +1/-2 | dominio: SLW 1.19e+08 kg (0.01 kg/m2, Tm -4.1 C, max 0.66 g/kg) GH 2.39e+05 kg tot 1.37e+09 kg w +3/-4
+2026-08-25_22:45:00 anfiteatro: SLW 0.00e+00 kg (0.00 kg/m2, Tm None C, max 0.00 g/kg) GH 0.00e+00 kg tot 5.59e+04 kg w +1/-1 | r30km: SLW 1.03e+07 kg (0.00 kg/m2, Tm -5.0 C, max 0.59 g/kg) GH 5.97e+01 kg tot 4.05e+07 kg w +3/-4 | conv_r50km: SLW 1.16e+03 kg (0.00 kg/m2, Tm -0.6 C, max 0.00 g/kg) GH 4.01e+03 kg tot 2.99e+08 kg w +1/-2 | dominio: SLW 1.04e+08 kg (0.01 kg/m2, Tm -4.1 C, max 1.01 g/kg) GH 8.35e+04 kg tot 1.06e+09 kg w +3/-4
+2026-08-25_23:00:00 anfiteatro: SLW 0.00e+00 kg (0.00 kg/m2, Tm None C, max 0.00 g/kg) GH 0.00e+00 kg tot 7.98e+04 kg w +0/-1 | r30km: SLW 9.56e+06 kg (0.00 kg/m2, Tm -4.7 C, max 0.59 g/kg) GH 1.23e+03 kg tot 4.22e+07 kg w +3/-4 | conv_r50km: SLW 3.51e+03 kg (0.00 kg/m2, Tm -54.5 C, max 0.02 g/kg) GH 4.76e+02 kg tot 1.50e+08 kg w +1/-2 | dominio: SLW 7.79e+07 kg (0.00 kg/m2, Tm -3.9 C, max 1.25 g/kg) GH 5.95e+04 kg tot 8.20e+08 kg w +3/-4
+2026-08-25_23:15:00 anfiteatro: SLW 0.00e+00 kg (0.00 kg/m2, Tm None C, max 0.00 g/kg) GH 0.00e+00 kg tot 7.02e+04 kg w +0/-1 | r30km: SLW 3.92e+06 kg (0.00 kg/m2, Tm -4.0 C, max 0.35 g/kg) GH 2.09e+02 kg tot 3.79e+07 kg w +3/-5 | conv_r50km: SLW 8.97e-01 kg (0.00 kg/m2, Tm -0.9 C, max 0.00 g/kg) GH 2.81e+01 kg tot 9.11e+07 kg w +1/-2 | dominio: SLW 4.86e+07 kg (0.00 kg/m2, Tm -3.6 C, max 1.63 g/kg) GH 9.48e+04 kg tot 7.06e+08 kg w +3/-5
+2026-08-25_23:30:00 anfiteatro: SLW 0.00e+00 kg (0.00 kg/m2, Tm None C, max 0.00 g/kg) GH 0.00e+00 kg tot 3.27e+04 kg w +1/-1 | r30km: SLW 6.08e+05 kg (0.00 kg/m2, Tm -4.9 C, max 0.25 g/kg) GH 2.57e+02 kg tot 3.84e+07 kg w +2/-5 | conv_r50km: SLW 6.45e-02 kg (0.00 kg/m2, Tm -0.1 C, max 0.00 g/kg) GH 7.99e-01 kg tot 5.19e+07 kg w +1/-1 | dominio: SLW 3.05e+07 kg (0.00 kg/m2, Tm -4.3 C, max 1.38 g/kg) GH 7.29e+04 kg tot 7.08e+08 kg w +2/-5
+2026-08-25_23:45:00 anfiteatro: SLW 0.00e+00 kg (0.00 kg/m2, Tm None C, max 0.00 g/kg) GH 0.00e+00 kg tot 2.62e+04 kg w +1/-1 | r30km: SLW 1.99e+05 kg (0.00 kg/m2, Tm -10.7 C, max 0.14 g/kg) GH 1.22e+02 kg tot 4.40e+07 kg w +2/-4 | conv_r50km: SLW 0.00e+00 kg (0.00 kg/m2, Tm None C, max 0.00 g/kg) GH 0.00e+00 kg tot 3.34e+07 kg w +1/-2 | dominio: SLW 1.18e+07 kg (0.00 kg/m2, Tm -4.9 C, max 0.69 g/kg) GH 1.88e+04 kg tot 8.02e+08 kg w +2/-4
+2026-08-26_00:00:00 anfiteatro: SLW 0.00e+00 kg (0.00 kg/m2, Tm None C, max 0.00 g/kg) GH 0.00e+00 kg tot 4.53e+04 kg w +1/-1 | r30km: SLW 3.13e+05 kg (0.00 kg/m2, Tm -10.4 C, max 0.10 g/kg) GH 2.30e+01 kg tot 4.72e+07 kg w +2/-4 | conv_r50km: SLW 0.00e+00 kg (0.00 kg/m2, Tm None C, max 0.00 g/kg) GH 0.00e+00 kg tot 2.58e+07 kg w +1/-2 | dominio: SLW 5.89e+06 kg (0.00 kg/m2, Tm -3.3 C, max 0.27 g/kg) GH 1.95e+03 kg tot 9.38e+08 kg w +2/-4
+2026-08-26_00:15:00 anfiteatro: SLW 0.00e+00 kg (0.00 kg/m2, Tm None C, max 0.00 g/kg) GH 0.00e+00 kg tot 6.81e+04 kg w +1/-1 | r30km: SLW 5.17e+04 kg (0.00 kg/m2, Tm -10.0 C, max 0.11 g/kg) GH 5.94e+00 kg tot 4.87e+07 kg w +2/-3 | conv_r50km: SLW 0.00e+00 kg (0.00 kg/m2, Tm None C, max 0.00 g/kg) GH 0.00e+00 kg tot 3.09e+07 kg w +1/-2 | dominio: SLW 1.94e+07 kg (0.00 kg/m2, Tm -3.6 C, max 1.42 g/kg) GH 2.61e+05 kg tot 1.04e+09 kg w +2/-3
+2026-08-26_00:30:00 anfiteatro: SLW 0.00e+00 kg (0.00 kg/m2, Tm None C, max 0.00 g/kg) GH 0.00e+00 kg tot 9.58e+04 kg w +1/-1 | r30km: SLW 3.11e+04 kg (0.00 kg/m2, Tm -9.3 C, max 0.13 g/kg) GH 9.13e-02 kg tot 4.91e+07 kg w +2/-3 | conv_r50km: SLW 0.00e+00 kg (0.00 kg/m2, Tm None C, max 0.00 g/kg) GH 0.00e+00 kg tot 4.58e+07 kg w +1/-2 | dominio: SLW 9.98e+06 kg (0.00 kg/m2, Tm -3.4 C, max 0.75 g/kg) GH 3.58e+06 kg tot 1.08e+09 kg w +2/-3
+2026-08-26_00:45:00 anfiteatro: SLW 9.98e-04 kg (0.00 kg/m2, Tm -1.3 C, max 0.00 g/kg) GH 0.00e+00 kg tot 1.11e+05 kg w +1/-1 | r30km: SLW 2.92e+04 kg (0.00 kg/m2, Tm -9.5 C, max 0.15 g/kg) GH 0.00e+00 kg tot 5.51e+07 kg w +2/-3 | conv_r50km: SLW 0.00e+00 kg (0.00 kg/m2, Tm None C, max 0.00 g/kg) GH 0.00e+00 kg tot 7.23e+07 kg w +1/-2 | dominio: SLW 1.56e+06 kg (0.00 kg/m2, Tm -5.1 C, max 0.29 g/kg) GH 1.64e+05 kg tot 1.09e+09 kg w +2/-3
+2026-08-26_01:00:00 anfiteatro: SLW 5.77e-01 kg (0.00 kg/m2, Tm -0.9 C, max 0.00 g/kg) GH 0.00e+00 kg tot 9.02e+04 kg w +1/-1 | r30km: SLW 1.20e+04 kg (0.00 kg/m2, Tm -9.6 C, max 0.11 g/kg) GH 0.00e+00 kg tot 6.21e+07 kg w +2/-3 | conv_r50km: SLW 0.00e+00 kg (0.00 kg/m2, Tm None C, max 0.00 g/kg) GH 0.00e+00 kg tot 1.18e+08 kg w +1/-2 | dominio: SLW 1.32e+06 kg (0.00 kg/m2, Tm -4.0 C, max 0.26 g/kg) GH 7.78e+03 kg tot 1.07e+09 kg w +2/-3
+2026-08-26_01:15:00 anfiteatro: SLW 1.61e-01 kg (0.00 kg/m2, Tm -1.1 C, max 0.00 g/kg) GH 0.00e+00 kg tot 8.72e+04 kg w +1/-1 | r30km: SLW 1.10e+04 kg (0.00 kg/m2, Tm -9.8 C, max 0.09 g/kg) GH 0.00e+00 kg tot 6.57e+07 kg w +2/-3 | conv_r50km: SLW 0.00e+00 kg (0.00 kg/m2, Tm None C, max 0.00 g/kg) GH 0.00e+00 kg tot 2.01e+08 kg w +2/-2 | dominio: SLW 1.14e+06 kg (0.00 kg/m2, Tm -3.6 C, max 0.35 g/kg) GH 8.90e+02 kg tot 1.24e+09 kg w +2/-3
+2026-08-26_01:30:00 anfiteatro: SLW 1.75e-04 kg (0.00 kg/m2, Tm -4.4 C, max 0.00 g/kg) GH 0.00e+00 kg tot 1.95e+04 kg w +1/-1 | r30km: SLW 2.20e+05 kg (0.00 kg/m2, Tm -8.8 C, max 0.16 g/kg) GH 0.00e+00 kg tot 6.74e+07 kg w +2/-3 | conv_r50km: SLW 0.00e+00 kg (0.00 kg/m2, Tm None C, max 0.00 g/kg) GH 0.00e+00 kg tot 3.19e+08 kg w +2/-2 | dominio: SLW 2.37e+06 kg (0.00 kg/m2, Tm -1.8 C, max 0.87 g/kg) GH 4.22e+02 kg tot 1.60e+09 kg w +2/-3
+2026-08-26_01:45:00 anfiteatro: SLW 1.37e+03 kg (0.00 kg/m2, Tm -4.3 C, max 0.03 g/kg) GH 0.00e+00 kg tot 1.62e+03 kg w +1/-1 | r30km: SLW 9.76e+05 kg (0.00 kg/m2, Tm -7.5 C, max 0.23 g/kg) GH 0.00e+00 kg tot 6.28e+07 kg w +2/-3 | conv_r50km: SLW 0.00e+00 kg (0.00 kg/m2, Tm None C, max 0.00 g/kg) GH 0.00e+00 kg tot 4.55e+08 kg w +2/-2 | dominio: SLW 6.58e+06 kg (0.00 kg/m2, Tm -2.0 C, max 2.16 g/kg) GH 1.63e+04 kg tot 2.02e+09 kg w +3/-3
+2026-08-26_02:00:00 anfiteatro: SLW 1.38e+03 kg (0.00 kg/m2, Tm -4.2 C, max 0.05 g/kg) GH 0.00e+00 kg tot 1.38e+03 kg w +1/-1 | r30km: SLW 1.25e+06 kg (0.00 kg/m2, Tm -6.0 C, max 0.30 g/kg) GH 0.00e+00 kg tot 4.39e+07 kg w +2/-3 | conv_r50km: SLW 0.00e+00 kg (0.00 kg/m2, Tm None C, max 0.00 g/kg) GH 0.00e+00 kg tot 5.85e+08 kg w +2/-2 | dominio: SLW 1.86e+07 kg (0.00 kg/m2, Tm -1.5 C, max 1.82 g/kg) GH 1.88e+05 kg tot 2.24e+09 kg w +2/-3
+2026-08-26_02:15:00 anfiteatro: SLW 1.32e+01 kg (0.00 kg/m2, Tm -4.3 C, max 0.00 g/kg) GH 0.00e+00 kg tot 1.32e+01 kg w +1/-1 | r30km: SLW 1.09e+06 kg (0.00 kg/m2, Tm -5.7 C, max 0.33 g/kg) GH 0.00e+00 kg tot 3.53e+07 kg w +2/-2 | conv_r50km: SLW 0.00e+00 kg (0.00 kg/m2, Tm None C, max 0.00 g/kg) GH 0.00e+00 kg tot 6.67e+08 kg w +2/-2 | dominio: SLW 2.86e+07 kg (0.00 kg/m2, Tm -1.7 C, max 1.76 g/kg) GH 3.94e+05 kg tot 2.24e+09 kg w +2/-2
+2026-08-26_02:30:00 anfiteatro: SLW 9.77e-01 kg (0.00 kg/m2, Tm -4.2 C, max 0.00 g/kg) GH 0.00e+00 kg tot 2.99e+01 kg w +1/-1 | r30km: SLW 1.84e+06 kg (0.00 kg/m2, Tm -6.1 C, max 0.49 g/kg) GH 3.25e-02 kg tot 5.08e+07 kg w +2/-3 | conv_r50km: SLW 7.57e-01 kg (0.00 kg/m2, Tm -0.5 C, max 0.00 g/kg) GH 0.00e+00 kg tot 6.64e+08 kg w +2/-2 | dominio: SLW 2.04e+07 kg (0.00 kg/m2, Tm -2.2 C, max 1.25 g/kg) GH 2.40e+05 kg tot 1.98e+09 kg w +3/-3
+2026-08-26_02:45:00 anfiteatro: SLW 1.99e+02 kg (0.00 kg/m2, Tm -4.1 C, max 0.01 g/kg) GH 0.00e+00 kg tot 2.49e+02 kg w +1/-1 | r30km: SLW 2.64e+06 kg (0.00 kg/m2, Tm -5.8 C, max 0.53 g/kg) GH 2.21e-01 kg tot 6.76e+07 kg w +2/-3 | conv_r50km: SLW 5.38e+05 kg (0.00 kg/m2, Tm -0.6 C, max 1.23 g/kg) GH 0.00e+00 kg tot 7.30e+08 kg w +4/-2 | dominio: SLW 1.19e+07 kg (0.00 kg/m2, Tm -2.4 C, max 1.23 g/kg) GH 2.33e+04 kg tot 1.76e+09 kg w +4/-3
+2026-08-26_03:00:00 anfiteatro: SLW 2.15e+03 kg (0.00 kg/m2, Tm -3.7 C, max 0.08 g/kg) GH 0.00e+00 kg tot 2.15e+03 kg w +1/-1 | r30km: SLW 2.71e+06 kg (0.00 kg/m2, Tm -5.6 C, max 0.55 g/kg) GH 3.58e-01 kg tot 8.31e+07 kg w +2/-3 | conv_r50km: SLW 1.93e+06 kg (0.00 kg/m2, Tm -0.8 C, max 0.85 g/kg) GH 1.26e-03 kg tot 9.26e+08 kg w +4/-2 | dominio: SLW 1.45e+07 kg (0.00 kg/m2, Tm -2.1 C, max 1.36 g/kg) GH 5.03e+02 kg tot 1.99e+09 kg w +4/-3
+=== d02 (3 km)
+2026-08-25_17:00:00 r30km: SLW 0.00e+00 kg (0.00 kg/m2, Tm None C, max 0.00 g/kg) GH 0.00e+00 kg tot 4.39e+06 kg w +0/-1 | conv_r50km: SLW 3.27e+08 kg (0.04 kg/m2, Tm -3.3 C, max 1.26 g/kg) GH 3.53e+07 kg tot 2.80e+09 kg w +2/-1 | dominio: SLW 2.25e+09 kg (0.02 kg/m2, Tm -4.5 C, max 3.11 g/kg) GH 3.58e+08 kg tot 3.15e+10 kg w +6/-2
+2026-08-25_17:30:00 r30km: SLW 0.00e+00 kg (0.00 kg/m2, Tm None C, max 0.00 g/kg) GH 0.00e+00 kg tot 5.98e+06 kg w +0/-1 | conv_r50km: SLW 3.97e+08 kg (0.05 kg/m2, Tm -3.1 C, max 3.40 g/kg) GH 5.57e+07 kg tot 3.73e+09 kg w +3/-1 | dominio: SLW 2.61e+09 kg (0.02 kg/m2, Tm -4.2 C, max 4.68 g/kg) GH 7.31e+08 kg tot 4.34e+10 kg w +14/-2
+2026-08-25_18:00:00 r30km: SLW 0.00e+00 kg (0.00 kg/m2, Tm None C, max 0.00 g/kg) GH 0.00e+00 kg tot 1.14e+07 kg w +0/-1 | conv_r50km: SLW 7.16e+08 kg (0.09 kg/m2, Tm -2.9 C, max 7.70 g/kg) GH 3.35e+08 kg tot 8.30e+09 kg w +11/-3 | dominio: SLW 3.15e+09 kg (0.02 kg/m2, Tm -4.5 C, max 7.70 g/kg) GH 9.18e+08 kg tot 5.85e+10 kg w +11/-3
+2026-08-25_18:30:00 r30km: SLW 0.00e+00 kg (0.00 kg/m2, Tm None C, max 0.00 g/kg) GH 0.00e+00 kg tot 2.32e+07 kg w +1/-1 | conv_r50km: SLW 6.81e+08 kg (0.09 kg/m2, Tm -2.7 C, max 3.70 g/kg) GH 2.80e+08 kg tot 1.19e+10 kg w +13/-4 | dominio: SLW 3.28e+09 kg (0.02 kg/m2, Tm -4.7 C, max 4.33 g/kg) GH 9.25e+08 kg tot 7.27e+10 kg w +13/-4
+2026-08-25_19:00:00 r30km: SLW 0.00e+00 kg (0.00 kg/m2, Tm None C, max 0.00 g/kg) GH 0.00e+00 kg tot 1.95e+07 kg w +0/-2 | conv_r50km: SLW 2.74e+08 kg (0.04 kg/m2, Tm -2.0 C, max 3.12 g/kg) GH 1.42e+08 kg tot 1.06e+10 kg w +7/-2 | dominio: SLW 3.43e+09 kg (0.03 kg/m2, Tm -4.9 C, max 6.42 g/kg) GH 8.92e+08 kg tot 8.35e+10 kg w +10/-2
+2026-08-25_19:30:00 r30km: SLW 0.00e+00 kg (0.00 kg/m2, Tm None C, max 0.00 g/kg) GH 0.00e+00 kg tot 5.98e+06 kg w +0/-1 | conv_r50km: SLW 3.41e+08 kg (0.04 kg/m2, Tm -2.6 C, max 4.94 g/kg) GH 8.47e+07 kg tot 1.13e+10 kg w +7/-2 | dominio: SLW 4.08e+09 kg (0.03 kg/m2, Tm -4.8 C, max 6.72 g/kg) GH 1.26e+09 kg tot 9.79e+10 kg w +9/-4
+2026-08-25_20:00:00 r30km: SLW 0.00e+00 kg (0.00 kg/m2, Tm None C, max 0.00 g/kg) GH 0.00e+00 kg tot 7.93e+06 kg w +0/-2 | conv_r50km: SLW 3.01e+08 kg (0.04 kg/m2, Tm -2.7 C, max 3.74 g/kg) GH 9.04e+07 kg tot 1.17e+10 kg w +5/-2 | dominio: SLW 5.01e+09 kg (0.04 kg/m2, Tm -5.5 C, max 9.48 g/kg) GH 2.59e+09 kg tot 1.11e+11 kg w +11/-4
+2026-08-25_20:30:00 r30km: SLW 0.00e+00 kg (0.00 kg/m2, Tm None C, max 0.00 g/kg) GH 0.00e+00 kg tot 2.37e+07 kg w +1/-2 | conv_r50km: SLW 1.70e+08 kg (0.02 kg/m2, Tm -3.1 C, max 4.74 g/kg) GH 2.92e+07 kg tot 1.06e+10 kg w +4/-2 | dominio: SLW 4.96e+09 kg (0.04 kg/m2, Tm -5.2 C, max 4.74 g/kg) GH 1.39e+09 kg tot 1.09e+11 kg w +8/-3
+2026-08-25_21:00:00 r30km: SLW 0.00e+00 kg (0.00 kg/m2, Tm None C, max 0.00 g/kg) GH 0.00e+00 kg tot 3.16e+07 kg w +1/-2 | conv_r50km: SLW 6.62e+07 kg (0.01 kg/m2, Tm -2.8 C, max 2.79 g/kg) GH 4.59e+06 kg tot 8.21e+09 kg w +2/-2 | dominio: SLW 4.37e+09 kg (0.03 kg/m2, Tm -4.1 C, max 5.27 g/kg) GH 1.04e+09 kg tot 9.95e+10 kg w +8/-3
+2026-08-25_21:30:00 r30km: SLW 6.37e+04 kg (0.00 kg/m2, Tm -6.4 C, max 0.02 g/kg) GH 0.00e+00 kg tot 2.99e+07 kg w +1/-3 | conv_r50km: SLW 2.14e+07 kg (0.00 kg/m2, Tm -3.4 C, max 1.08 g/kg) GH 1.12e+06 kg tot 5.60e+09 kg w +2/-1 | dominio: SLW 3.16e+09 kg (0.02 kg/m2, Tm -4.1 C, max 3.09 g/kg) GH 1.10e+09 kg tot 8.54e+10 kg w +6/-3
+2026-08-25_22:00:00 r30km: SLW 3.86e+05 kg (0.00 kg/m2, Tm -4.9 C, max 0.05 g/kg) GH 0.00e+00 kg tot 2.25e+07 kg w +2/-3 | conv_r50km: SLW 1.60e+06 kg (0.00 kg/m2, Tm -20.2 C, max 0.10 g/kg) GH 9.34e+04 kg tot 2.78e+09 kg w +1/-1 | dominio: SLW 2.68e+09 kg (0.02 kg/m2, Tm -4.6 C, max 2.99 g/kg) GH 1.71e+09 kg tot 7.63e+10 kg w +12/-3
+2026-08-25_22:30:00 r30km: SLW 4.95e+06 kg (0.00 kg/m2, Tm -4.9 C, max 0.22 g/kg) GH 1.13e+00 kg tot 3.22e+07 kg w +1/-2 | conv_r50km: SLW 2.23e+04 kg (0.00 kg/m2, Tm -3.1 C, max 0.01 g/kg) GH 1.68e+04 kg tot 1.41e+09 kg w +1/-1 | dominio: SLW 2.32e+09 kg (0.02 kg/m2, Tm -4.4 C, max 3.99 g/kg) GH 2.09e+09 kg tot 7.54e+10 kg w +12/-3
+2026-08-25_23:00:00 r30km: SLW 8.75e+06 kg (0.00 kg/m2, Tm -4.7 C, max 0.41 g/kg) GH 1.25e+03 kg tot 4.12e+07 kg w +1/-2 | conv_r50km: SLW 3.63e+03 kg (0.00 kg/m2, Tm -52.9 C, max 0.00 g/kg) GH 1.22e+03 kg tot 6.52e+08 kg w +1/-1 | dominio: SLW 1.94e+09 kg (0.01 kg/m2, Tm -3.9 C, max 3.66 g/kg) GH 1.75e+09 kg tot 7.54e+10 kg w +9/-2
+{
+ "d03": {
+  "anfiteatro": {
+   "slw_kg": [
+    23648.904101526252,
+    "2026-08-25_17:45:00"
+   ],
+   "graupel_granizo_kg": [
+    0.0,
+    "2026-08-26_03:00:00"
+   ],
+   "condensado_total_kg": [
+    110590.9672806969,
+    "2026-08-26_00:45:00"
+   ]
+  },
+  "r10km": {
+   "slw_kg": [
+    81962.4298443441,
+    "2026-08-25_17:45:00"
+   ],
+   "graupel_granizo_kg": [
+    0.0,
+    "2026-08-26_03:00:00"
+   ],
+   "condensado_total_kg": [
+    6406897.270227997,
+    "2026-08-26_00:30:00"
+   ]
+  },
+  "r30km": {
+   "slw_kg": [
+    10312108.07054337,
+    "2026-08-25_22:45:00"
+   ],
+   "graupel_granizo_kg": [
+    1230.7774595752517,
+    "2026-08-25_23:00:00"
+   ],
+   "condensado_total_kg": [
+    83050122.08813635,
+    "2026-08-26_03:00:00"
+   ]
+  },
+  "conv_r50km": {
+   "slw_kg": [
+    757105929.2873213,
+    "2026-08-25_18:15:00"
+   ],
+   "graupel_granizo_kg": [
+    243702939.0927297,
+    "2026-08-25_18:30:00"
+   ],
+   "condensado_total_kg": [
+    7679302243.326904,
+    "2026-08-25_18:30:00"
+   ]
+  },
+  "dominio": {
+   "slw_kg": [
+    1043426692.3091426,
+    "2026-08-25_18:30:00"
+   ],
+   "graupel_granizo_kg": [
+    266130733.24092668,
+    "2026-08-25_18:30:00"
+   ],
+   "condensado_total_kg": [
+    10890511841.545147,
+    "2026-08-25_18:45:00"
+   ]
+  }
+ },
+ "d02": {
+  "r30km": {
+   "slw_kg": [
+    8747831.011864984,
+    "2026-08-25_23:00:00"
+   ],
+   "graupel_granizo_kg": [
+    1251.8398013867252,
+    "2026-08-25_23:00:00"
+   ],
+   "condensado_total_kg": [
+    41219401.388930984,
+    "2026-08-25_23:00:00"
+   ]
+  },
+  "r100km": {
+   "slw_kg": [
+    1257216915.6593578,
+    "2026-08-25_18:30:00"
+   ],
+   "graupel_granizo_kg": [
+    597321455.9781263,
+    "2026-08-25_20:00:00"
+   ],
+   "condensado_total_kg": [
+    25318933394.114613,
+    "2026-08-25_20:00:00"
+   ]
+  },
+  "conv_r50km": {
+   "slw_kg": [
+    715587337.7479947,
+    "2026-08-25_18:00:00"
+   ],
+   "graupel_granizo_kg": [
+    335117267.80531937,
+    "2026-08-25_18:00:00"
+   ],
+   "condensado_total_kg": [
+    11860313821.339214,
+    "2026-08-25_18:30:00"
+   ]
+  },
+  "dominio": {
+   "slw_kg": [
+    5010793037.947503,
+    "2026-08-25_20:00:00"
+   ],
+   "graupel_granizo_kg": [
+    2594521461.9645357,
+    "2026-08-25_20:00:00"
+   ],
+   "condensado_total_kg": [
+    110899340874.47688,
+    "2026-08-25_20:00:00"
+   ]
+  }
+ }
+}
