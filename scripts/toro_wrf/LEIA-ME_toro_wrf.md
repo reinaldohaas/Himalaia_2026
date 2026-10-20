@@ -65,3 +65,30 @@ Alvo do critério 1: 1,4 × 10¹⁰ kg de água super-resfriada. Himawari às 02
 2. **Sem gelo, a convecção enfraquece.** No d03 às 21 UTC: ascendente máxima de 4 m/s em B contra 18 em A; graupel e granizo 3,5 × 10⁷ kg contra 1,9 × 10⁹; condensado total 9,2 × 10⁹ contra 1,5 × 10¹⁰ kg. Sem o calor latente do congelamento, a tempestade perde força e o reservatório não cresce.
 3. **Sobre a bacia não há o que soltar.** A até 30 km há ~10⁷ kg; sobre o anfiteatro, toneladas. A liberação por aerossol às 02:15 não produz nada além do controle.
 4. **Limite do modelo:** a água daquela noite existiu (~10¹⁰ kg de condensado a até 100 km), mas a ~90 km a sudoeste do sítio, e na fase de gelo. O modo super-resfriado, nesta forma, não a traz para a bacia nem a mantém líquida.
+
+## Experimento C: vórtice dinâmico que inicia a nucleação secundária (20/10/2026)
+
+**Pedido do pesquisador:** pôr um vórtice dinâmico no WRF, e que esse vórtice inicie a nucleação secundária.
+
+**Código (executável C):** o mesmo patch, estendido.
+* `toro_vortice`: força tangencial ciclônica somada a `RUBLTEN`/`RVBLTEN` no driver da camada limite. A força é F = γ(t)·α·(r/rₘ)·e^(1−r/rₘ)·sech²(h/z_r), com h a altura acima do terreno e γ uma rampa linear.
+* No **núcleo do vórtice** (r ≤ `raio_vn_km`, a partir de `t_vn_ini`), o Estado A é levantado, o Hallett–Mossop é multiplicado por `fhm_v` e a nucleação primária por `fnuc_v`. É o aerossol que o vórtice traz. Fora do núcleo, o Estado A continua até o fim.
+* `main/depend.common` ganha a dependência do driver da camada limite no arquivo do NSSL. Sem `toro_wrf.txt`, C também fica inerte.
+
+**Configuração** (`toro_wrf_vortice.txt`):
+* Estado A de 17 UTC até 03 UTC a até 150 km, sem liberação por tempo.
+* Vórtice de 00 UTC a 03 UTC (rampa de 1 h), centrado no anfiteatro, só no d03, com rₘ = 5 km, z_r = 3 km e α = 1 × 10⁻² m/s².
+* Nucleação no núcleo (r ≤ 5 km) a partir de 01:30, com Hallett–Mossop ×10 e nucleação primária ×100.
+
+**Validação:**
+1. C sem `toro_wrf.txt` = A, byte a byte (30 min, d01 + d02).
+2. C com `toro_wrf_teste_v.txt` (vórtice e núcleo no d02, 30 min): as linhas `toro_wrf` aparecem e U e V diferem de C inerte em torno do anfiteatro.
+
+**Critérios** (fixados antes de rodar; comparação com B e com A):
+1. **Vórtice:** vento tangencial máximo e vorticidade relativa máxima entre 2 e 6 km acima do terreno, a até 10 km do anfiteatro, às 01:30 e às 02:30 UTC.
+2. **Reservatório no núcleo antes de 01:30:** água super-resfriada a até 5 km e a até 30 km, e ascendente máxima no núcleo.
+3. **Nucleação secundária depois de 01:30:** número e massa de gelo (QNICE, QICE) e graupel e granizo no núcleo; fração da água super-resfriada congelada por hora; calor latente de congelamento liberado (L_f × massa congelada).
+4. **Liberação:** taxa máxima de chuva, volume precipitado a até 30 km e sobre o anfiteatro de 01:30 a 03 UTC, e descendente máxima.
+5. **Satélite:** OLR sobre o sítio às 02:45, contra o Himawari.
+
+O resultado só conta como candidato ao toró se (2) mostrar um reservatório da ordem de 10¹⁰ kg sobre a bacia e (4) uma liberação da ordem de 10⁶–10⁷ m³. Abaixo disso, é o limite do modelo, e isso será dito.

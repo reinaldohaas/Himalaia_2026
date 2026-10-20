@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 """
-Aplica o "modo super-resfriado" (module_toro_wrf) a uma COPIA do WRF v4.7.1 (commit f52c197): so acrescenta
-linhas, em phys/module_mp_nssl_2mom.F e phys/module_microphysics_driver.F. O module_toro_wrf entra no proprio
-arquivo do NSSL, antes do modulo original, para nao mexer em Makefiles nem em main/depend.common.
+Aplica o "modo super-resfriado" e o vortice dinamico (module_toro_wrf) a uma COPIA do WRF v4.7.1 (commit f52c197):
+so acrescenta linhas, em phys/module_mp_nssl_2mom.F, phys/module_microphysics_driver.F, phys/module_pbl_driver.F e
+main/depend.common (o PBL passa a depender do arquivo do NSSL). O module_toro_wrf entra no proprio arquivo do
+NSSL, antes do modulo original, para nao mexer em Makefiles.
 Cada insercao confere que a ancora aparece uma unica vez; se algo nao bater, para sem gravar nada.
 Os trechos inseridos so executam com toro_call = .true. (arquivo toro_wrf.txt presente e lido).
 
@@ -14,7 +15,9 @@ import sys
 
 WRF, MOD = sys.argv[1], sys.argv[2]
 SHA_ESPERADO = {"phys/module_mp_nssl_2mom.F": "29f42e76fbeca027a3ffb2ac805b148aaa1425c7f99ed1d8f19a90ebc1d015f8",
-                "phys/module_microphysics_driver.F": "3a840534acbb42cb723e53f60ea3e9f20f284daa4c095ab106a2c0aa5ca70f72"}
+                "phys/module_microphysics_driver.F": "3a840534acbb42cb723e53f60ea3e9f20f284daa4c095ab106a2c0aa5ca70f72",
+                "phys/module_pbl_driver.F": "42ff53571ba1fb926fa6063108806d9a2f8ff5fdd1fa2ecfc1fdde60f2bf65fb",
+                "main/depend.common": "2eb1406426469b6b4c6277ce0ecc81af85d8a60ccb65ecd5c9d3c8cedb79b26f"}
 
 
 def sha(p):
@@ -130,6 +133,22 @@ t = troca(t, "\n         CALL nssl_2mom_driver(                          &\n", "
          ENDIF
 """, "chamada no driver", depois=False)
 arq["phys/module_microphysics_driver.F"] = t
+
+# ---------------- driver da camada limite: vortice dinamico ----------------
+t = arq["phys/module_pbl_driver.F"]
+t = troca(t, "   USE module_bl_ysu\n", "   USE module_toro_wrf, ONLY: toro_vortice   ! toro_wrf: vortice dinamico\n", "use no PBL")
+t = troca(t, "     IF (distributed_ahe_opt == 1) THEN\n", """! toro_wrf: vortice dinamico (forca tangencial ciclonica em RUBLTEN/RVBLTEN) -- inerte sem toro_wrf.txt
+     IF ( PRESENT(id) .AND. PRESENT(xlat_u) .AND. PRESENT(xlong_u) ) THEN
+       CALL toro_vortice(id, gmt, xtime, xlat_u, xlong_u, z, ht, rublten, rvblten, &
+                         ims, ime, jms, jme, kms, kme, its, ite, jts, jte, kts, kte)
+     ENDIF
+""", "chamada do vortice no PBL", depois=False)
+arq["phys/module_pbl_driver.F"] = t
+
+# ---------------- dependencia: o PBL usa o module_toro_wrf, que esta no arquivo do NSSL ----------------
+t = arq["main/depend.common"]
+t = troca(t, "module_pbl_driver.o: \\\n", "\tmodule_mp_nssl_2mom.o \\\n", "depend.common")
+arq["main/depend.common"] = t
 
 for f, txt in arq.items():
     p = os.path.join(WRF, f)
