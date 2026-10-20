@@ -36,7 +36,7 @@ for f, h in SHA_ESPERADO.items():
     if sha(os.path.join(WRF, f)) != h:
         sys.exit("ERRO: %s nao e o v4.7.1 esperado (sha256 diferente); nada gravado" % f)
 
-IJ = "igs(mgs)+its-1, jyslab"
+IJ = "igs(mgs)+its-1, jyslab, wvel(mgs), qx(mgs,lc)+qx(mgs,lr), temg(mgs)"   # ponto, w, agua liquida e T (disparo no nucleo)
 arq = {f: open(os.path.join(WRF, f), encoding="latin-1", newline="").read() for f in SHA_ESPERADO}
 modsrc = open(MOD, encoding="latin-1").read()
 
@@ -75,7 +75,7 @@ t = troca(t, "         qwctfz(mgs) = min(qwctfz(mgs),qcmxd(mgs))\n        ENDIF\
 # congelamento de goticulas (Bigg) acima de t_hom_c
 t = troca(t, "        if ( xplate(mgs) .eq. 1 ) then\n          qwfrzp(mgs) = qwfrz(mgs)\n", """! toro_wrf: Estado A -- congelamento de goticulas (Bigg) acima de t_hom_c (fwfrz); o homogeneo fica intacto
         IF ( toro_call ) THEN
-          tfator = toro_fwfrz(%s, temg(mgs))
+          tfator = toro_fwfrz(%s)
           qwfrz(mgs) = tfator*qwfrz(mgs)
           cwfrz(mgs) = tfator*cwfrz(mgs)
         ENDIF

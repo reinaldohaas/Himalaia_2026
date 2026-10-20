@@ -92,3 +92,31 @@ Alvo do critério 1: 1,4 × 10¹⁰ kg de água super-resfriada. Himawari às 02
 5. **Satélite:** OLR sobre o sítio às 02:45, contra o Himawari.
 
 O resultado só conta como candidato ao toró se (2) mostrar um reservatório da ordem de 10¹⁰ kg sobre a bacia e (4) uma liberação da ordem de 10⁶–10⁷ m³. Abaixo disso, é o limite do modelo, e isso será dito.
+
+## Experimento D: nucleação no núcleo disparada pela ascendente (20/10/2026)
+
+**Pedido do pesquisador:** a água super-resfriada tem de continuar retida sobre o anfiteatro. A nucleação secundária e a liberação do calor latente só começam onde as ascendentes do vórtice chegam. Em C, o núcleo inteiro (r ≤ 5 km) passava à física normal às 01:30, com ou sem ascendente. Em D isso deixa de acontecer.
+
+**Código (executável D):** o mesmo patch de C, com uma condição de disparo ponto a ponto na microfísica.
+* No núcleo do vórtice (r ≤ `raio_vn_km`, de `t_vn_ini` a `t_v_fim`), o disparo vale onde:
+  * w > `w_crit` (2 m/s);
+  * a água líquida qc + qr > `q_crit` (10⁻⁵ kg/kg, 0,01 g/kg);
+  * T < 0 °C.
+* Onde há disparo, o Estado A é levantado, o Hallett–Mossop é multiplicado por `fhm_v` e a nucleação primária por `fnuc_v`.
+* No resto do núcleo e fora dele, o Estado A continua (a máscara do Estado A agora inclui o núcleo).
+* O w usado é `wvel(mgs)`, a média de w nas duas faces do ponto, calculada pelo próprio NSSL. O NSSL já usa w > 2 m/s como limiar de ascendente (`wvel(mgs) > 2.0`), e por isso 2 m/s.
+* No primeiro disparo, o processo grava no seu `rsl.error` a linha `toro_wrf: nucleacao no nucleo disparada`, com w, ql e T.
+
+**Configuração** (`toro_wrf_vortice_D.txt`): igual à de C (`toro_wrf_vortice.txt`), mais `w_crit = 2.0` e `q_crit = 1.0e-5`.
+
+**Ordem:** D só roda depois que a rodada C terminar, no mesmo host. Os passos de D no `rodar_toro_wrf.sh` recusam rodar enquanto `wrf_C.exe` estiver ativo.
+
+**Validação:**
+1. D sem `toro_wrf.txt` = A, byte a byte (30 min, d01 + d02).
+2. D com `toro_wrf_teste_vD.txt` (vórtice e núcleo no d02, 30 min, limiar baixado para 0,2 m/s só no teste): a linha do disparo aparece.
+
+**Critérios** (fixados antes de rodar). São os mesmos cinco de C, comparados com C, B e A, mais dois:
+6. **Disparo:** fração dos pontos do núcleo com w > 2 m/s e água líquida abaixo de 0 °C, por hora de 01:30 a 03 UTC, e altura desses pontos.
+7. **Reservatório retido em D contra C depois de 01:30:** água super-resfriada a até 5 km e a até 30 km. D tem de manter mais água do que C, salvo onde houve disparo.
+
+A regra de C vale para D: o resultado só conta como candidato ao toró com um reservatório da ordem de 10¹⁰ kg sobre a bacia e uma liberação da ordem de 10⁶–10⁷ m³. Abaixo disso, é o limite do modelo, e isso será dito.

@@ -1,0 +1,33 @@
+&toro_wrf
+ t_ini       = 17.0,      ! Estado A (anti-varredura) a partir de 25/08 17 UTC
+ t_rel       = 27.0,      ! ate o fim da rodada (26/08 03 UTC); no nucleo, so onde a ascendente dispara
+ t_dur       = 0.0,       ! sem liberacao por tempo: quem libera e o vortice
+ lat0        = 28.271,
+ lon0        = 85.515,
+ raio_km     = 150.0,
+ fcoal       = 0.0,
+ faccr       = 0.0,
+ fctfz       = 0.0,
+ fnuc        = 0.0,
+ fhm         = 0.0,
+ frfrz       = 0.0,
+ fwfrz       = 0.0,
+ t_hom_c     = -38.0,
+ dominios    = 1, 1, 1,
+ ivortex     = 1,         ! vortice dinamico ligado
+ t_v_ini     = 24.0,      ! 26/08 00 UTC
+ tr_v        = 1.0,       ! rampa de 1 h
+ t_v_fim     = 27.0,      ! ate 03 UTC
+ lat_v       = 28.271,    ! centrado no anfiteatro (localizacao USGS)
+ lon_v       = 85.515,
+ rmax_v_km   = 5.0,       ! raio do vento maximo (5 pontos do d03)
+ zr_v_m      = 3000.0,    ! decaimento vertical sech^2(h/3 km) acima do terreno
+ alpha_v     = 1.0e-2,    ! m s-2 (~36 m/s em 1 h sem atrito)
+ dominios_v  = 0, 0, 1,   ! so no d03 (1 km)
+ t_vn_ini    = 25.5,      ! 01:30 UTC: o vortice inicia a nucleacao secundaria
+ raio_vn_km  = 5.0,
+ fhm_v       = 10.0,      ! Hallett-Mossop x10 no disparo
+ fnuc_v      = 100.0,     ! nucleacao primaria x100 no disparo (aerossol trazido pelo vortice)
+ w_crit      = 2.0,       ! D: disparo so onde w > 2 m/s (o limiar de ascendente do proprio NSSL)
+ q_crit      = 1.0e-5,    ! D: e com agua liquida (qc + qr) > 0,01 g/kg abaixo de 0 C
+/

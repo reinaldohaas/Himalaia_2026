@@ -12,6 +12,10 @@
 #   bash rodar_toro_wrf.sh teste_bits_C     -> C (patch com o vortice) sem toro_wrf.txt contra A (toro_tC/)
 #   bash rodar_toro_wrf.sh teste_ativo_C    -> C com toro_wrf_teste_v.txt (vortice e nucleacao no nucleo, d02)
 #   bash rodar_toro_wrf.sh rodada C         -> 27 h: Estado A + vortice dinamico + nucleacao no nucleo (toro_C/)
+#   bash rodar_toro_wrf.sh teste_bits_D     -> D (nucleacao no nucleo so onde w > w_crit) sem toro_wrf.txt contra A
+#   bash rodar_toro_wrf.sh teste_ativo_D    -> D com toro_wrf_teste_vD.txt (limiar baixo, d02): o disparo tem de aparecer
+#   bash rodar_toro_wrf.sh rodada D         -> 27 h: como C, mas o nucleo so nucleia onde a ascendente chega (toro_D/)
+#   (os passos de D recusam rodar enquanto a rodada C estiver em andamento)
 #   bash rodar_toro_wrf.sh enviar <dir>     -> wrfaux, rsl.error.0000, namelist e toro_wrf.txt ao Drive
 # Variaveis: NP (padrao 112), WRFDIR (tabelas), BIN (padrao ./bin_toro).
 set -uo pipefail
@@ -35,6 +39,11 @@ prepara() {   # prepara <dir>: tabelas, met_em, namelist (com refletividade) e i
   rm -f toro_wrf.txt
 }
 
+espera_C() {  # D so depois que a rodada C terminar (o host e o mesmo)
+  pgrep -f "wrf_C.exe" > /dev/null && falha "a rodada C ainda esta em andamento; D so depois que ela terminar"
+  grep -q "SUCCESS COMPLETE WRF" "$AQUI/toro_C/rsl.error.0000" 2>/dev/null || msg "aviso: toro_C/rsl.error.0000 nao tem SUCCESS COMPLETE WRF"
+}
+
 liga_ic() { ln -sf "$AQUI"/toro_real/wrfinput_d0* "$AQUI"/toro_real/wrfbdy_d01 . ; }
 
 curto() {     # curto <exe>: 30 min, d01 + d02
@@ -45,7 +54,7 @@ curto() {     # curto <exe>: 30 min, d01 + d02
 
 case "${1:-}" in
   verificar)
-    for e in "$BIN/real_A.exe" "$BIN/wrf_A.exe" "$BIN/wrf_B.exe" "$BIN/wrf_C.exe"; do
+    for e in "$BIN/real_A.exe" "$BIN/wrf_A.exe" "$BIN/wrf_B.exe" "$BIN/wrf_C.exe" "$BIN/wrf_D.exe"; do
       [ -x "$e" ] || falha "falta $e"
       echo "  $(basename "$e"): $( $LD --list "$e" 2>&1 | grep -c 'not found') bibliotecas faltando pelo kit; sha256 $(sha256sum "$e" | cut -c1-16)"
     done
@@ -64,21 +73,31 @@ case "${1:-}" in
     prepara toro_tBa; liga_ic; cp "$BIN/toro_wrf_teste.txt" toro_wrf.txt
     msg "teste B com o modulo ativo (30 min)"; curto "$BIN/wrf_B.exe"
     grep -m1 "toro_wrf" rsl.error.0000 | sed 's/^/  /'; msg "teste B ativo ok" ;;
-  teste_bits_C)   # C (patch com o vortice) sem toro_wrf.txt tem de ser = A (toro_tA/ ja rodado)
+  teste_bits_C|teste_bits_D)   # C ou D sem toro_wrf.txt tem de ser = A (toro_tA/ ja rodado)
+    x=${1#teste_bits_}; [ "$x" = D ] && espera_C
     [ -f toro_tA/wrfout_d02_2026-08-25_00:00:00 ] || falha "falta toro_tA (rode teste_bits antes)"
-    prepara toro_tC; liga_ic; msg "teste C sem toro_wrf.txt (30 min)"; curto "$BIN/wrf_C.exe"
+    prepara toro_t$x; liga_ic; msg "teste $x sem toro_wrf.txt (30 min)"; curto "$BIN/wrf_$x.exe"
     for f in wrfout_d01_2026-08-25_00:00:00 wrfout_d02_2026-08-25_00:00:00; do
-      cmp -s "$AQUI/toro_tA/$f" "$f" && msg "  $f: C = A byte a byte" || msg "  $f: C DIFERE de A"
+      cmp -s "$AQUI/toro_tA/$f" "$f" && msg "  $f: $x = A byte a byte" || msg "  $f: $x DIFERE de A"
     done ;;
-  teste_ativo_C)  # C com o vortice e a nucleacao no nucleo ligados (no d02, 30 min)
-    prepara toro_tCa; liga_ic; cp "$BIN/toro_wrf_teste_v.txt" toro_wrf.txt
-    msg "teste C com vortice ativo (30 min)"; curto "$BIN/wrf_C.exe"
-    grep "toro_wrf" rsl.error.0000 | sort | uniq -c | sed 's/^/  /'; msg "teste C ativo ok" ;;
+  teste_ativo_C|teste_ativo_D)  # C ou D com o vortice e a nucleacao no nucleo ligados (no d02, 30 min)
+    x=${1#teste_ativo_}; [ "$x" = D ] && espera_C
+    t=toro_wrf_teste_v.txt; [ "$x" = D ] && t=toro_wrf_teste_vD.txt
+    prepara toro_t${x}a; liga_ic; cp "$BIN/$t" toro_wrf.txt
+    msg "teste $x com vortice ativo (30 min)"; curto "$BIN/wrf_$x.exe"
+    grep "toro_wrf" rsl.error.0000 | sort | uniq -c | sed 's/^/  /'
+    if [ "$x" = D ]; then   # o aviso sai no rsl.error do processo que tem o nucleo
+      n=$(grep -l "nucleacao no nucleo disparada" rsl.error.* 2>/dev/null | wc -l)
+      [ "$n" -gt 0 ] && msg "  D: disparo registrado em $n processo(s)" || msg "  D: nenhum disparo registrado em 30 min"
+    fi
+    msg "teste $x ativo ok" ;;
   rodada)
-    case "${2:-}" in B) d=toro_B; e=wrf_B.exe ;; A) d=toro_A; e=wrf_A.exe ;; C) d=toro_C; e=wrf_C.exe ;; *) falha "rodada B|A|C" ;; esac
+    case "${2:-}" in B) d=toro_B; e=wrf_B.exe ;; A) d=toro_A; e=wrf_A.exe ;; C) d=toro_C; e=wrf_C.exe ;; D) d=toro_D; e=wrf_D.exe ;; *) falha "rodada B|A|C|D" ;; esac
+    [ "$2" = D ] && espera_C
     prepara "$d"; liga_ic
     [ "$2" = B ] && cp "$BIN/toro_wrf.txt" toro_wrf.txt
     [ "$2" = C ] && cp "$BIN/toro_wrf_vortice.txt" toro_wrf.txt
+    [ "$2" = D ] && cp "$BIN/toro_wrf_vortice_D.txt" toro_wrf.txt
     msg "rodada $2 (27 h, NP=$NP) em segundo plano em $d"
     setsid nohup bash -c "NP=$NP OMP_NUM_THREADS=1 BIND=core bash '$AQUI/mpi_kit.sh' '$BIN/$e' > wrf.out 2>&1; echo \"[\$(date -u +%FT%TZ)] rodada $2 terminou: \$(tail -1 rsl.error.0000)\" >> '$LOG'" > /dev/null 2>&1 < /dev/null & ;;
   enviar)
@@ -89,5 +108,5 @@ case "${1:-}" in
       [ -f "$f" ] && rclone copy "$f" "$dst/" 2>&1 | grep -v client_id
     done
     msg "enviado ao Drive: $dst" ;;
-  *) echo "uso: bash rodar_toro_wrf.sh verificar|real|teste_bits|teste_ativo|teste_bits_C|teste_ativo_C|rodada B|A|C|enviar <dir>" >&2; exit 1 ;;
+  *) echo "uso: bash rodar_toro_wrf.sh verificar|real|teste_bits|teste_ativo|teste_bits_C|teste_ativo_C|teste_bits_D|teste_ativo_D|rodada B|A|C|D|enviar <dir>" >&2; exit 1 ;;
 esac

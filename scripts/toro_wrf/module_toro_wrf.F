@@ -20,8 +20,9 @@
 !   ciclonica F = gamm*alpha_v*(r/rmax)*exp(1 - r/rmax)*sech^2(h/zr_v), somada a RUBLTEN/RVBLTEN (m s-2) no driver
 !   da camada limite; r = distancia a (lat_v,lon_v); h = altura acima do terreno.
 ! Nucleacao secundaria iniciada pelo vortice (t_vn_ini <= t < t_v_fim, a ate raio_vn_km de (lat_v,lon_v)):
-!   no nucleo, o Estado A e levantado (fatores = 1), o Hallett-Mossop e multiplicado por fhm_v e a nucleacao
-!   primaria por fnuc_v (o aerossol trazido pelo vortice); fora do nucleo o Estado A continua.
+!   no nucleo, ONDE A ASCENDENTE CHEGA (w > w_crit, agua liquida qc+qr > q_crit e T < 0 C), o Estado A e
+!   levantado (fatores = 1), o Hallett-Mossop e multiplicado por fhm_v e a nucleacao primaria por fnuc_v (o
+!   aerossol trazido pelo vortice). No resto do nucleo e fora dele o Estado A continua (versao D).
 ! Tempo t em horas desde 25/08/2026 00 UTC: t = gmt + xtime/60 (todos os dominios comecam em 25/08).
 ! Tiles: supoe OMP_NUM_THREADS = 1 (as mascaras sao do modulo, recalculadas a cada chamada de tile).
 !
@@ -44,12 +45,14 @@ MODULE module_toro_wrf
   REAL,    SAVE :: lat_v = 28.271, lon_v = 85.515, rmax_v_km = 5.0, zr_v_m = 3000.0, alpha_v = 1.0e-2
   INTEGER, SAVE :: dominios_v(3) = (/ 0, 0, 1 /)
   REAL,    SAVE :: t_vn_ini = 25.5, raio_vn_km = 5.0, fhm_v = 10.0, fnuc_v = 100.0
+  REAL,    SAVE :: w_crit = 2.0, q_crit = 1.0e-5       ! disparo no nucleo: m/s e kg/kg
+  LOGICAL, SAVE :: avisou_disparo = .false.
   LOGICAL, ALLOCATABLE, SAVE :: msup(:,:), maer(:,:), mvn(:,:)
 
   NAMELIST /toro_wrf/ t_ini, t_rel, t_dur, lat0, lon0, raio_km, fcoal, faccr, fctfz, fnuc, fhm, frfrz, fwfrz, &
                       t_hom_c, lat_aer, lon_aer, raio_aer_km, fnuc_rel, dominios, &
                       ivortex, t_v_ini, t_v_fim, tr_v, lat_v, lon_v, rmax_v_km, zr_v_m, alpha_v, dominios_v, &
-                      t_vn_ini, raio_vn_km, fhm_v, fnuc_v
+                      t_vn_ini, raio_vn_km, fhm_v, fnuc_v, w_crit, q_crit
 
 CONTAINS
 
@@ -101,7 +104,7 @@ CONTAINS
       DO i = its, ite
         IF ( em_vn ) mvn(i,j) = ( dist_km(xlat(i,j), xlong(i,j), lat_v, lon_v) <= raio_vn_km )
         IF ( th >= t_ini .and. th < t_rel ) THEN
-          msup(i,j) = ( dist_km(xlat(i,j), xlong(i,j), lat0, lon0) <= raio_km ) .and. .not. mvn(i,j)
+          msup(i,j) = ( dist_km(xlat(i,j), xlong(i,j), lat0, lon0) <= raio_km )
         ELSEIF ( th >= t_rel .and. th < t_rel + t_dur ) THEN
           maer(i,j) = ( dist_km(xlat(i,j), xlong(i,j), lat_aer, lon_aer) <= raio_aer_km )
         ENDIF
@@ -148,12 +151,26 @@ CONTAINS
     ENDDO
   END SUBROUTINE toro_vortice
 
-  ! fator do processo k no ponto (i,j): nucleo do vortice > Estado A > 1
-  REAL FUNCTION toro_f(k, i, j)
+  ! disparo no nucleo do vortice: a ascendente chegou e ha agua liquida super-resfriada no ponto
+  LOGICAL FUNCTION disparo(i, j, wl, ql, tk)
+    INTEGER, INTENT(IN) :: i, j
+    REAL,    INTENT(IN) :: wl, ql, tk
+    disparo = .false.
+    IF ( .not. mvn(i,j) ) RETURN
+    disparo = ( wl > w_crit .and. ql > q_crit .and. tk < 273.15 )
+    IF ( disparo .and. .not. avisou_disparo ) THEN
+      avisou_disparo = .true.
+      WRITE(0,'(a,f6.2,a,es9.2,a,f7.2)') 'toro_wrf: nucleacao no nucleo disparada (w = ', wl, ' m/s, ql = ', ql, ' kg/kg, T = ', tk
+    ENDIF
+  END FUNCTION disparo
+
+  ! fator do processo k no ponto (i,j): disparo no nucleo > Estado A > 1
+  REAL FUNCTION toro_f(k, i, j, wl, ql, tk)
     INTEGER, INTENT(IN) :: k, i, j
+    REAL,    INTENT(IN) :: wl, ql, tk
     toro_f = 1.0
     IF ( .not. toro_call ) RETURN
-    IF ( mvn(i,j) ) THEN
+    IF ( disparo(i, j, wl, ql, tk) ) THEN
       IF ( k == 5 ) toro_f = fhm_v
       RETURN
     ENDIF
@@ -167,12 +184,13 @@ CONTAINS
     END SELECT
   END FUNCTION toro_f
 
-  ! nucleacao primaria: fnuc_v no nucleo do vortice; fnuc no Estado A; fnuc_rel na coluna da liberacao por tempo
-  REAL FUNCTION toro_fnuc(i, j)
+  ! nucleacao primaria: fnuc_v no disparo; fnuc no Estado A; fnuc_rel na coluna da liberacao por tempo
+  REAL FUNCTION toro_fnuc(i, j, wl, ql, tk)
     INTEGER, INTENT(IN) :: i, j
+    REAL,    INTENT(IN) :: wl, ql, tk
     toro_fnuc = 1.0
     IF ( .not. toro_call ) RETURN
-    IF ( mvn(i,j) ) THEN
+    IF ( disparo(i, j, wl, ql, tk) ) THEN
       toro_fnuc = fnuc_v
     ELSEIF ( msup(i,j) ) THEN
       toro_fnuc = fnuc
@@ -181,13 +199,14 @@ CONTAINS
     ENDIF
   END FUNCTION toro_fnuc
 
-  ! congelamento de goticulas (Bigg): suprimido no Estado A so acima de t_hom_c (congelamento homogeneo intacto)
-  REAL FUNCTION toro_fwfrz(i, j, temk)
+  ! congelamento de goticulas (Bigg): suprimido no Estado A so acima de t_hom_c; livre no disparo
+  REAL FUNCTION toro_fwfrz(i, j, wl, ql, tk)
     INTEGER, INTENT(IN) :: i, j
-    REAL,    INTENT(IN) :: temk
+    REAL,    INTENT(IN) :: wl, ql, tk
     toro_fwfrz = 1.0
     IF ( .not. toro_call ) RETURN
-    IF ( msup(i,j) .and. temk > 273.15 + t_hom_c ) toro_fwfrz = fwfrz
+    IF ( disparo(i, j, wl, ql, tk) ) RETURN
+    IF ( msup(i,j) .and. tk > 273.15 + t_hom_c ) toro_fwfrz = fwfrz
   END FUNCTION toro_fwfrz
 
 END MODULE module_toro_wrf
