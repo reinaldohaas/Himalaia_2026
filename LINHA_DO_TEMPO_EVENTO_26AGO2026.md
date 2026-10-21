@@ -28,7 +28,8 @@ Os textos `levantamento_relatos_som_descargas_eletricas.md` e `relatorio_avalanc
 | 26/08 00:30 → 01:30 | — | **sobre o sítio** | **Topo da nuvem desce de ~10 km ao terreno** (234 → 261 → 273 K) | idem | A |
 | 02:15 | "8:00am" (NPT) | DHM | Boletim rotineiro de previsão de cheia (não é precursor) | Nepali Times, 31/08 | M |
 | 02:30 | "8月26日10时30分许", sem fuso (Reuters: "10:30 AM (0230 GMT)") | Porto de Kyirong | Primeiro horário oficial chinês do fluxo | [Xinhua](https://www.news.cn/20260826/ae1b8e34e4c94c2cbe342f62367644ee/c.html), [MEM](https://www.mem.gov.cn/xw/yjglbgzdt/202608/t20260826_708718.shtml) | A como declaração; B como horário físico (22 min antes do sismo) |
-| **~02:35** | "8:20 am" (NPT) / "~17 min antes" | "perto da fronteira de Rasuwagadhi" (The Week); rede NEMRC (Adhikari) | **Evento sísmico pequeno precursor: ML 2,5 (Adhikari et al., localizado com P e S) / "M2,6" (The Week)** | [Adhikari et al. 2026, *Seismica* 5(2)](https://doi.org/10.26443/seismica.v5i2.3433); [The Week, 27/08](https://www.theweek.in/news/world/2026/08/27/tragic-10-hours-inside-the-timeline-of-the-cross-border-flood-that-hit-nepal.html) | M: coordenadas e hora exata só no PDF do artigo |
+| horas antes | — | perto da fonte | "Vários eventos nas horas anteriores com formas de onda semelhantes às do ML 2,5" (detecção por modelo de forma de onda; horários a publicar em outro estudo) | Adhikari et al. 2026 | M |
+| **02:35:12** | "17 min 4 s before the mass movement" (origem 02:52:16 UTC); "8:20 am" (NPT, The Week) | **~28,21 N / 85,58 E** (lido na Fig. 2 do artigo), **~9,7 km a SSE da cicatriz**; profundidade ~9 km (mal resolvida) | **Evento sísmico precursor ML 2,5**, localizado com P e S pela rede NEMRC. Os autores julgam origem tectônica "menos provável" do que um "slide-quake" raso ligado ao movimento gravitacional. | [Adhikari et al. 2026, *Seismica* 5(2)](https://doi.org/10.26443/seismica.v5i2.3433), § 3.1; [The Week, 27/08](https://www.theweek.in/news/world/2026/08/27/tragic-10-hours-inside-the-timeline-of-the-cross-border-flood-that-hit-nepal.html) ("M2,6") | A |
 | 02:50 | "8:35 am" (NPT) | Porto de Kyirong | Última travessia no sistema de imigração do Nepal | BBC, 01/09 (via en.wikipedia) | M |
 | 02:50 | — | sítio | Nenhum topo de nuvem que se distinga da montanha a até 30 km | Himawari-9, § 6 | A |
 | **02:52:10–02:52:23** | USGS 02:52:10Z; "北京时间10时52分12秒" (BJT); CENC 10:52:20 (BJT); GFZ 02:52:23Z | flanco norte entre o Langtang Lirung e o Tsangbu Ri | **Ruptura principal**, sinal de "deslizamento" (Ms 5,2 USGS; M 5,1 CENC; Mw 5,7 GFZ). O sinal dura ~18,5 min; fase da avalanche ~88 s. | [USGS us7000tbwb](https://earthquake.usgs.gov/earthquakes/eventpage/us7000tbwb); CENC; [GFZ](https://geofon.gfz.de/eqinfo/event.php?id=gfz2026qrfy); SKLGP/CDUT via [The Paper](https://www.thepaper.cn/newsDetail_forward_33972765); Chen Ningsheng via [QQ](https://news.qq.com/rain/a/20260914A0BW4500) | A |
@@ -40,7 +41,7 @@ Os textos `levantamento_relatos_som_descargas_eletricas.md` e `relatorio_avalanc
 | 03:15 | "around 9:00 am" (NPT) | Bhote Koshi | O FFD é avisado por telefone; o nível começa a subir rápido | [Himalayan Times](https://thehimalayantimes.com/ampArticle/1040002); ICIMOD | A |
 | 03:30–03:31 | "9:15–9:16am" (NPT) | Rasuwa, Nuwakot, Dhading, Chitwan | 679.295 alertas por SMS | KP; NDRRMA | A |
 | 04:43 | "10:28 hrs" (NPT) | Galchhi | Cheia chega a Galchhi | NDRRMA | A |
-| **06:00:35** | 06:00:35Z; ADRC "11:45" (NPT) | **28,3281 N, 85,4798 E (7,2 km a NNW)** | **Segundo deslizamento**, Ms 4,2, achado no pós-processamento de período longo; "criou uma barragem e um lago temporários" | [USGS us7000tc90](https://earthquake.usgs.gov/earthquakes/eventpage/us7000tc90) | A |
+| **05:59–06:00:35** | 06:00:35Z (USGS); "~05:59 UTC" (Adhikari); ADRC "11:45" (NPT) | **28,3281 N, 85,4798 E (7,2 km a NNW)**, posto por imagem | **Segundo deslizamento**, Ms 4,2, ~10⁷ m³ (uma ordem abaixo do principal); "criou uma barragem e um lago temporários" | [USGS us7000tc90](https://earthquake.usgs.gov/earthquakes/eventpage/us7000tc90); Adhikari et al. 2026 | A |
 | 10:15 | "4pm" (NPT) | Devghat | Pico de 6,57 m, ~5.850 m³/s | KP; NDRRMA | A |
 
 ---
@@ -49,9 +50,11 @@ Os textos `levantamento_relatos_som_descargas_eletricas.md` e `relatorio_avalanc
 
 Não há registro verificável de um evento **uma hora** antes. Há cinco candidatos:
 
-1. **O evento sísmico precursor de ~02:35 UTC (08:20 NPT), 17 min antes.** É o único instrumental.
-   * Adhikari et al. (rede NEMRC) dão ML 2,5, localizado com fases P e S. The Week o descreve como "M2,6 perto da fronteira de Rasuwagadhi".
-   * Pode ter sido em outro lugar: as coordenadas estão só no PDF do artigo (16 MB), que ainda não lemos.
+1. **O evento sísmico precursor das 02:35:12 UTC (08:20 NPT), 17 min 4 s antes.** É o único instrumental e foi **em outro lugar**.
+   * Adhikari et al. (rede NEMRC) dão ML 2,5, localizado com fases P e S, a menos de 10 km a sudeste da fonte. Na Fig. 2 do artigo ele está em ~28,21 N / 85,58 E, ~9,7 km a sul-sudeste da cicatriz, do outro lado da crista do Tsangbu Ri, no vale ao sul. A profundidade é de ~9 km sob o Langtang Lirung, mas mal resolvida.
+   * Os autores acham origem tectônica "menos provável" do que um tremor raso de deslizamento ("slide-quake"). Ele seria ligado ao movimento gravitacional, porque se repetiu nos dias anteriores perto da fonte. Avisam que coincidência no tempo e no espaço não prova causa.
+   * The Week o descreve como "M2,6 perto da fronteira de Rasuwagadhi".
+   * O mesmo artigo diz que a detecção por modelo de forma de onda achou **mais de 60 eventos menores nas duas semanas anteriores**, "incluindo vários nas horas anteriores", com formas de onda parecidas com a do ML 2,5. Os horários desses eventos ficaram para um estudo separado. É o que mais se aproxima de "algo uma hora antes".
 2. **O "10:30" da Xinhua.** Lido em BJT, é 02:30 UTC, 22 min antes do sismo; não é confusão de fuso inteiro. Convertido para o Nepal dá 08:15, e é daí que veio o boato de que "a China sabia às 8:15". Os horários chineses posteriores (10:52 e 10:59 BJT) batem com o sismo e com a câmera do porto.
 3. **O desprendimento em 25/08 à tarde, "perto de Deding" (IRDR).** São 19 h antes, e nenhum catálogo sísmico registra nada em 25/08. O ICIMOD diz que a questão está "em aberto".
 4. **Santosh Nepal (Onlinekhabar, 28/08).** Escreve que a massa atingiu o chão "por volta das 9:38", exatamente 1 h depois de 8:37–8:38. Provavelmente é um erro de digitação, mas foi publicado assim.
@@ -70,7 +73,8 @@ A Universidade de Wuhan fala em "vários sinais anômalos na fonte horas antes d
 | GFZ | 28,30 / 85,50 | 3,5 km | não | Epicentro fixado; só o tempo foi resolvido |
 | CENC | 28,20 / 85,58 | 10 km SE | não | Relocada com estações do Nepal |
 | IDC (CTBTO) | 28,1706 / 85,3895 | 17 km SW | não | Elipse de 27 × 12 km que contém o sítio |
-| **Retroprojeção de período longo** (Adhikari et al.) | 28,2604 / 85,5057 | 1,5 km SW | sim | Única localização sísmica de campo próximo; resolução ~1 km ou pior |
+| **Retroprojeção de período longo** (Adhikari et al.) | 28,2604 / 85,5057 | 1,5 km SW | sim | Coerência de forma de onda de período longo; grade de ~1 km, incerteza maior que a grade |
+| **Primeiras chegadas de alta frequência, NonLinLoc** (Adhikari et al.) | 28,298 / 85,566 | 5,8 km ENE | não | Origem 02:52:16 UTC; incerteza realista de ~5 km; 19 estações, lacuna azimutal de 133°, estação mais próxima a 63 km. Fica 3,9 km a E da zona de ruptura de Petley. |
 | **Zona de ruptura mapeada** (Petley, 07/09) | 28,2921 / 85,5271 | 2,6 km NNE | **não (1,6 km fora)** | Coroa a ~5.140 m, base a ~3.990 m, ~2 km de comprimento, superfície de ruptura **em rocha**, ~10⁸ m³ |
 | Segundo deslizamento (us7000tc90) | 28,3281 / 85,4798 | 7,2 km NNW | não | Também posto por imagem de satélite |
 
@@ -79,7 +83,9 @@ A Universidade de Wuhan fala em "vários sinais anômalos na fonte horas antes d
 * o ponto de Petley cai dentro dela, a ~0,5 km do centro;
 * ela fica logo a leste do exutório do anfiteatro (4.024 m), onde começa o sinal do Sentinel-1 ao longo do talvegue.
 
-O relatório de neve e gelo a tinha como candidata ambígua. Com o mapeamento de Petley, ela passa a ser a **localização mais provável da ruptura**.
+A **cicatriz verificada em campo** na Fig. 2 de Adhikari et al. (linha vermelha, de ~28,283 N / 85,522 E a ~28,295 N / 85,530 E) cai sobre a mesma mancha. O relatório de neve e gelo a tinha como candidata ambígua. Com o mapeamento de Petley, ela passa a ser a **localização mais provável da ruptura**.
+
+Adhikari et al. dão nome à fonte: **flanco norte do Tsangbu Ri (6.781 m)**, perto do Langtang Lirung. Segundo eles, o volume é da ordem de 10⁸ m³, "principalmente rocha, com uma parte menor de gelo". Pelas imagens de satélite, não havia lago glacial na origem.
 
 **Consequência:** a ruptura foi no flanco logo a nordeste do exutório, entre ~4.000 e ~5.140 m, e não dentro da bacia de 3,41 km² que caracterizamos (4.000–7.200 m). O anfiteatro fica a montante e a sudoeste dela. O ponto do USGS e a retroprojeção caem no anfiteatro, mas o primeiro foi posto a olho e a segunda não resolve 2–3 km.
 
@@ -117,7 +123,7 @@ O relatório de neve e gelo a tinha como candidata ambígua. Com o mapeamento de
 * Qualquer massa entregue pela nuvem seria uma fração pequena desse volume. No máximo, um carregamento final sobre uma encosta que já estava em ruptura progressiva.
 
 **O que falta para fechar:**
-1. **Adhikari et al. 2026, *Seismica* 5(2)** (PDF de 16 MB): a localização do precursor ML 2,5 e a hora exata dele, e a localização NonLinLoc do evento principal.
+1. **Os horários e locais dos "vários eventos nas horas anteriores"** que Adhikari et al. detectaram por modelo de forma de onda. Eles prometem publicá-los em outro estudo; pode-se pedir aos autores (NEMRC). Interessa saber se algum caiu entre 00:30 e 01:30 UTC, durante a descida da nuvem. O artigo (lido em 21/10/2026) dá a hora do ML 2,5 (02:35:12 UTC) e a localização NonLinLoc do principal (28,298 / 85,566 ± 5 km). A posição do ML 2,5 só aparece na Fig. 2, de onde foi lida: ~28,21 N / 85,58 E.
 2. **A inversão da história de força do sinal de período longo** (Ekström), que daria massa, direção e tempo.
 3. **O INSAT-3D**, que vê o sítio quase no nadir, para o colapso da nuvem sem paralaxe.
 4. **Relatos com horário de quem estava perto da fonte entre 00:30 e 02:35 UTC.** As notícias até agora não trazem nenhum.
