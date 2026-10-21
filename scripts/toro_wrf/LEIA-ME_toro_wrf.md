@@ -120,3 +120,55 @@ O resultado só conta como candidato ao toró se (2) mostrar um reservatório da
 7. **Reservatório retido em D contra C depois de 01:30:** água super-resfriada a até 5 km e a até 30 km. D tem de manter mais água do que C, salvo onde houve disparo.
 
 A regra de C vale para D: o resultado só conta como candidato ao toró com um reservatório da ordem de 10¹⁰ kg sobre a bacia e uma liberação da ordem de 10⁶–10⁷ m³. Abaixo disso, é o limite do modelo, e isso será dito.
+
+## Resultado do experimento C (21/10/2026)
+
+**A rodada:**
+* A primeira tentativa morreu com a queda do contêiner do vlab.
+* C foi relançada do zero no host novo e terminou sem erro (`SUCCESS COMPLETE WRF` às 09:41:02 UTC de 21/10, em 5 h 35 min).
+* CFL igual ao de A e B: 66 linhas no d01 e nenhuma no d02 e no d03, nem com o vórtice ligado.
+* **C = B bit a bit até 23:45 UTC.** Só se separa depois que o vórtice liga, às 00 UTC.
+* Relatório do vlab: `saida/wrf_lhende/relatorios/toro_wrf/LEIA_toro_wrf_C.txt`.
+
+**Análise:** `scripts/wrf/criterios_toro_C.py` e `scripts/wrf/agua_superresfriada_wrf.py`, sobre os recortes do d03 (1 km). Saídas em `data/processed/wrf_lhende/toro_wrf/criterios_C.json` e `agua_sr_C.log`.
+
+| Critério | C | B | A |
+| :--- | ---: | ---: | ---: |
+| 1. Vento tangencial máximo, 2–6 km acima do terreno, até 10 km (00:00 / 01:30 / 02:30) | 7,6 / 13,1 / 14,4 m/s | — | — |
+| 1. Vorticidade relativa máxima (01:30 / 02:30) | 7,7 / 6,7 × 10⁻³ s⁻¹ | — | — |
+| 2. Água super-resfriada máxima até 5 km, 23:00–01:30 | 2,9 × 10⁶ kg | 80 kg | 420 kg |
+| 2. Idem até 30 km | 1,6 × 10⁷ kg | 9,6 × 10⁶ kg | 5,2 × 10⁶ kg |
+| 2. Água super-resfriada até 30 km às 02:00–02:30 | ~5 × 10⁷ kg (máx. 1,7 g/kg, ~−2 °C) | 1–2 × 10⁶ kg | — |
+| 2. Ascendente máxima até 5 km, antes de 01:30 | 3,8 m/s | 1,5 m/s | 1,5 m/s |
+| 3. QNICE máximo até 5 km, 01:30–03:00 | 0,6–1,6 × 10⁵ /kg | — | — |
+| 3. Variação da massa de gelo até 5 km, 01:30 → 03:00 | −8,1 × 10⁵ kg (sem congelamento líquido) | −6,5 × 10⁵ kg | −3,7 × 10⁵ kg |
+| 3. Graupel e granizo sobre o anfiteatro e até 30 km | ≤ 40 kg | ~0 | ~0 |
+| 4. Chuva 01:30–03:00 sobre o anfiteatro | 0,01 mm | 0,00 mm | 0,00 mm |
+| 4. Volume de chuva até 30 km, 01:30–03:00 | 2,0 × 10³ m³ | 5,1 × 10⁴ m³ | 7,1 × 10⁴ m³ |
+| 4. Descendente mínima até 30 km, 01:30–03:00 | −14,1 m/s | −2,8 m/s | −3,2 m/s |
+| 5. OLR sobre o sítio às 02:45 | 241 W/m² | 238 W/m² | 238 W/m² |
+
+**Leitura:**
+1. **O vórtice funciona como dinâmica.**
+   * Gira a ~13–14 m/s entre 2 e 6 km, com vorticidade de ~7 × 10⁻³ s⁻¹.
+   * Produz ascendentes de até 8 m/s e descendentes de até 14 m/s a até 30 km, contra 2–3 m/s em A e B.
+2. **O vórtice concentra água super-resfriada, mas pouca.**
+   * Até 5 km do centro: 2,9 × 10⁶ kg, contra 80–400 kg em B e A.
+   * Até 30 km: ~5 × 10⁷ kg às 02:00–02:30, ~25 vezes B.
+   * Ainda assim, 2,5–3,5 ordens de grandeza abaixo dos ~1,4 × 10¹⁰ kg pedidos.
+   * A água fica a ~−2 °C, pouco super-resfriada.
+3. **Não há surto de congelamento.**
+   * A massa de gelo no núcleo cai de 01:30 a 03:00 em C, como em B e A.
+   * Graupel e granizo não passam de dezenas de kg.
+   * O Hallett–Mossop ×10 e a nucleação ×100 no núcleo não geram congelamento líquido mensurável. Com a água a −2 °C, abaixo da faixa ativa do Hallett–Mossop (−3 a −8 °C), o efeito do primeiro fica pequeno.
+   * O calor latente de congelamento estimado é nulo.
+4. **Não há liberação.**
+   * A chuva sobre o anfiteatro continua nula.
+   * O volume de chuva até 30 km é menor que em B e A (2 × 10³ contra 5–7 × 10⁴ m³), apesar das descendentes fortes.
+   * Muito abaixo de 10⁶–10⁷ m³.
+5. **O OLR às 02:45 é igual ao de A e B** (~241 W/m², ~255 K). Não reproduz o céu sem nuvem alta que o Himawari mostra (topo ≥ 263 K, § 6 do GEOESTACIONARIO).
+
+**Veredito pela regra pré-registrada:**
+* C **não** é candidato ao toró: o reservatório fica em ~10⁷ kg sobre a bacia, contra 10¹⁰, e a liberação é ~10³ m³, contra 10⁶–10⁷.
+* É o limite do modelo nesta configuração. O vórtice gera a dinâmica, mas a microfísica não acumula nem congela água em escala comparável.
+* **O experimento D** (nucleação só onde w > 2 m/s) testa se reter a água fora das ascendentes aumenta o reservatório e concentra o congelamento.

@@ -1,0 +1,21 @@
+C vortice lido: 17 horarios
+C gelo lido: 17 horarios
+C:\Users\haas\github\Himalaia_2026\.claude\worktrees\himalaia-enchentes-auditoria-fcfdb5\scripts\wrf\criterios_toro_C.py:116: DeprecationWarning: The 'shapely.vectorized.contains' function is deprecated and will be removed a future version. Use 'shapely.contains_xy' instead (available since shapely 2.0.0).
+  anf = vectorized.contains(an, lon, lat)
+B gelo lido: 17 horarios
+A gelo lido: 17 horarios
+
+1. vortice (C): 00:00 vt 7.6 m/s, zeta 2.0e-03 /s; 01:30 vt 13.1 m/s, zeta 7.7e-03 /s; 02:30 vt 14.4 m/s, zeta 6.7e-03 /s
+2. C: SLW max (23:00-01:30) r5 2.85e+06 kg, r30 1.63e+07 kg; w max r5 3.8 m/s
+3. C: dgelo r5 01:30->03:00 -8.09e+05 kg (L_f x = 0.0e+00 J); dSLW -4.53e+05 kg
+4. C: chuva 01:30-03 anfiteatro 0.01 mm, max r30 0.46 mm, volume r30 2.01e+03 m3, taxa max 0.5 mm/h; w min r30 -14.1 m/s
+5. C: OLR no sitio 02:45 = 241.2 W/m2
+2. B: SLW max (23:00-01:30) r5 8.00e+01 kg, r30 9.56e+06 kg; w max r5 1.5 m/s
+3. B: dgelo r5 01:30->03:00 -6.51e+05 kg (L_f x = 0.0e+00 J); dSLW 1.74e+04 kg
+4. B: chuva 01:30-03 anfiteatro 0.00 mm, max r30 1.33 mm, volume r30 5.13e+04 m3, taxa max 2.4 mm/h; w min r30 -2.8 m/s
+5. B: OLR no sitio 02:45 = 238.1 W/m2
+2. A: SLW max (23:00-01:30) r5 4.21e+02 kg, r30 5.18e+06 kg; w max r5 1.5 m/s
+3. A: dgelo r5 01:30->03:00 -3.67e+05 kg (L_f x = 0.0e+00 J); dSLW 6.43e+03 kg
+4. A: chuva 01:30-03 anfiteatro 0.00 mm, max r30 1.69 mm, volume r30 7.12e+04 m3, taxa max 3.6 mm/h; w min r30 -3.2 m/s
+5. A: OLR no sitio 02:45 = 237.8 W/m2
+QNICE max r5 (C): 23:00 1.96e+03 /kg; 23:30 1.31e+03 /kg; 00:00 6.48e+04 /kg; 00:30 1.39e+05 /kg; 01:00 7.64e+04 /kg; 01:30 6.65e+04 /kg; 02:00 6.33e+04 /kg; 02:30 1.03e+05 /kg; 03:00 1.60e+05 /kg
