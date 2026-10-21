@@ -206,4 +206,39 @@ Adhikari et al. dão nome à fonte: **flanco norte do Tsangbu Ri (6.781 m)**, pe
    * Limite: num vale estreito e íngreme, a geometria do radar (sombra e inversão de relevo) pode esconder uma faixa de água estreita.
    * O "lago temporário" do texto do USGS continua sem nenhuma confirmação independente.
 
+---
+
+## 7. Leitura integrada: a hipótese, os dois colapsos de nuvem e os dois deslizamentos
+
+Figura: `data/processed/linha_do_tempo/linha_do_tempo.png` (`scripts/himawari/linha_do_tempo_fig.py`).
+
+**Dois colapsos de nuvem, que não são a mesma coisa:**
+
+| | O quê | Quando (UTC) | Medida |
+| :--- | :--- | :--- | :--- |
+| **2a** | Colapso da **convecção profunda perto do sítio** | **22:00 → 01:00**; antes dele há um mínimo às 20:00–20:30 | Área de topos < 213 K a até 150 km: ~5.900 km² (22:00) → 2.900 (23:00) → 900 (00:00) → 330 (01:00) → 0 (01:30) |
+| **2b** | Descida do **topo da nuvem que estava sobre o anfiteatro** | **00:00 → 01:20** | Tb com paralaxe invertida: ~222 K (00:00, ~12 km) → 235 K (00:30) → 262 K (01:00) → 273 K (01:20, terreno) |
+
+O 2a é o que se vê nas imagens regionais, como a que o pesquisador anotou. O 2b é o que acontece exatamente sobre a fonte e vem logo depois do 2a.
+
+**Fases da hipótese contra a observação:**
+
+| Fase da hipótese | O que se observa | Encaixe |
+| :--- | :--- | :--- |
+| 1. Reservatório sem chuva (anti-varredura) | Nuvem espessa sobre o sítio de ~17:30 a 00:00 (218–240 K), com ~5 mm de chuva na célula do IMERG até o colapso | **Compatível.** O satélite não mede a água líquida embaixo do topo de gelo. |
+| 2. Nucleação secundária, calor latente e colapso da nuvem | 2a (22–01 UTC) e 2b (00:00–01:20) | **Compatível no tempo e no lugar.** O 2b é sobre o próprio anfiteatro. Nenhuma observação mede nucleação ou calor latente; é isso que os modelos C e D testam. |
+| 3. Massa densa entregue ao anfiteatro durante o colapso | Depois de 01:20, nada mais frio que o terreno sobre o sítio | **Não excluída.** Uma massa perto de 0 °C dentro do anfiteatro é invisível no infravermelho. **Não confirmada:** a geleira não mostra perda nem ganho acima do ruído (Sentinel-2, out/2025 × out/2026). |
+| 4. Ruptura | Precursor ML 2,5 às 02:35:12 (~10 km SSE); ruptura às 02:52:16 | **Exige uma espera:** ~1,5 h depois do 2b e 3–5 h depois do 2a. A hipótese precisa explicar o que acontece nesse intervalo. Os pequenos eventos sísmicos "nas horas anteriores" (Adhikari et al.) são a única pista instrumental dele, mas os horários não foram publicados. |
+| 5. Segundo deslizamento | 05:59–06:00 UTC, 7 km NNW, ~10 vezes menor, na ponta do depósito junto ao Lhende Khola; nenhum lago acima de ~1 ha | **Sem dado atmosférico.** O Himawari analisado vai só até 03:30. O mais simples é um rearranjo do depósito e das margens já desestabilizadas, sem papel da nuvem, mas isso não foi testado. |
+
+**O que o quadro diz:**
+1. A ordem dos fatos é a que a hipótese pede: reservatório, colapso da nuvem sobre a fonte e, depois, a ruptura.
+2. O ponto fraco é o intervalo: 1,5 h entre o fim do colapso sobre o sítio e a ruptura, e 3–5 h se a referência for o colapso regional. A hipótese precisa dizer o que segura a massa ou a encosta nesse tempo e o que a solta às 02:52.
+3. O segundo deslizamento não tem, por enquanto, nenhum vínculo com a nuvem.
+
+**Testes que faltam:**
+* Os horários e locais dos pequenos eventos sísmicos das horas anteriores (pedir ao NEMRC). Interessa sobretudo se algum caiu entre 22:00 e 01:20.
+* O Himawari de 03:30 a 06:30: houve nuvem ou convecção sobre a fonte antes do segundo deslizamento?
+* As rodadas WRF C e D: o modelo produz o colapso 2b, e com que massa e fase?
+
 **Arquivos de trabalho das buscas** (fora do repositório, no scratchpad da sessão): respostas brutas dos catálogos em `scratchpad\seis\`; textos do ADRC e do NDRRMA em `scratchpad\adrc\` e `scratchpad\ndrrma\`.
