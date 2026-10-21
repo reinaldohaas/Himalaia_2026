@@ -241,4 +241,30 @@ O 2a é o que se vê nas imagens regionais, como a que o pesquisador anotou. O 2
 * O Himawari de 03:30 a 06:30: houve nuvem ou convecção sobre a fonte antes do segundo deslizamento?
 * As rodadas WRF C e D: o modelo produz o colapso 2b, e com que massa e fase?
 
+---
+
+## 8. "Dois terremotos", barulhos e relâmpagos
+
+**Não foram dois terremotos.**
+* Os dois sinais do USGS (02:52:10 e 06:00:35 UTC) estão classificados como **deslizamento** (`landslide`). O "M4,4 earthquake" foi a classificação preliminar, depois corrigida.
+* O CENC chama o principal de "崩塌型地震", sismo do tipo colapso. O GFZ também o classifica como deslizamento.
+* O único evento que poderia ser tectônico é o **precursor ML 2,5 das 02:35:12** (~9 km de profundidade, mal resolvida). Mesmo para ele, Adhikari et al. acham mais provável um tremor raso de deslizamento, porque se repetiu nos dias anteriores perto da fonte.
+
+**Barulhos: compatíveis com o que se sabe, mas quase sem fonte verificável.**
+* **Estrondo às 08:37 NPT (02:52 UTC):** é o próprio deslizamento. Na fonte verificável, um fotógrafo (CNN, "10:30 local", fuso ambíguo) ouviu a geleira cair e pensou que fosse exercício militar.
+* **"Rugido maciço" no rompimento:** aparece no IRDR (via ADRC), atribuído a moradores, às 08:30–08:37 NPT.
+* **Rugido contínuo por dezenas de minutos:** é o que se espera da cheia de detritos. O sinal sísmico da cheia durou mais de 2 h (Adhikari et al.).
+* **Os depoimentos citados em `levantamento_relatos_som_descargas_eletricas.md`** (aspas de guardas, operadores e moradores, com horários) **não têm fonte localizável.** A busca nas notícias e nos boletins oficiais não achou nenhum deles. Não devem ser usados como observação.
+
+**Relâmpagos: o satélite os torna improváveis justamente na hora que o relatório indica.**
+* O relatório do repositório põe "trovões contínuos e relâmpagos frequentes nas cristas" entre 07:15 e 08:15 NPT (01:30–02:30 UTC).
+* Nessa hora, porém, não há topo de nuvem mais frio que ~263 K (−10 °C) a até 30 km do sítio, nem nenhum abaixo de 213 K a até 150 km (§ 7 e GEOESTACIONARIO § 6).
+* Relâmpago exige separação de carga em nuvem de fase mista, com graupel e ascendentes que passam bem de −10 °C, ou seja, topos muito mais frios. Com topos a −10 °C ou mais quentes, relâmpagos frequentes são muito improváveis.
+* Relâmpagos são plausíveis **antes, entre ~18:00 e 00:00 UTC** (23:45–05:45 NPT), quando o sítio estava sob topos de 218–235 K e havia convecção profunda a até 150 km. Mas nenhuma fonte verificável os relata.
+* Os "clarões azuis" às 09:24–09:35 NPT na UHE Rasuwagadhi seriam **arcos elétricos** das linhas de 132/220 kV arrancadas pela cheia, não relâmpagos. É plausível, mas não achamos fonte primária.
+
+**Como verificar:**
+* Rede de detecção de descargas: WWLLN (acadêmica, por solicitação), Blitzortung (comunitária) e o imageador de relâmpagos do FY-4A/4B (LMI; carta já preparada em `docs/solicitacoes_institucionais/CARTA_06_NSMC_CMA_FY4A_LMI.md`).
+* Fica a pergunta: houve descargas a até 50 km da fonte entre 17:00 e 03:00 UTC?
+
 **Arquivos de trabalho das buscas** (fora do repositório, no scratchpad da sessão): respostas brutas dos catálogos em `scratchpad\seis\`; textos do ADRC e do NDRRMA em `scratchpad\adrc\` e `scratchpad\ndrrma\`.
