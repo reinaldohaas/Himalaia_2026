@@ -1,0 +1,117 @@
+{
+ "pares": {
+  "antes": [
+   "2025-10-13",
+   "2025-10-18"
+  ],
+  "depois": [
+   "2026-10-13",
+   "2026-10-18"
+  ]
+ },
+ "area_valida_ha": 1914.0,
+ "neve_gelo_para_nao_neve_ha": 14.1,
+ "nao_neve_para_neve_ha": 27.7,
+ "ruido_2025_perda_ha": 27.1,
+ "ruido_2025_ganho_ha": 15.2,
+ "maior_mancha_perda": {
+  "ha": 2.4,
+  "lat": 28.293,
+  "lon": 85.5288
+ },
+ "lago": [
+  {
+   "data": "2025-10-13",
+   "nuvem_perto_tc90_%": 0.0,
+   "agua_perto_tc90_ha": 0.0,
+   "nuvem_vale_%": 1.0,
+   "agua_vale_ha": 0.0
+  },
+  {
+   "data": "2025-10-18",
+   "nuvem_perto_tc90_%": 13.0,
+   "agua_perto_tc90_ha": 0.0,
+   "nuvem_vale_%": 15.0,
+   "agua_vale_ha": 0.04
+  },
+  {
+   "data": "2026-08-14",
+   "nuvem_perto_tc90_%": 67.0,
+   "agua_perto_tc90_ha": 0.0,
+   "nuvem_vale_%": 82.0,
+   "agua_vale_ha": 0.0
+  },
+  {
+   "data": "2026-08-24",
+   "nuvem_perto_tc90_%": 24.0,
+   "agua_perto_tc90_ha": 0.0,
+   "nuvem_vale_%": 28.0,
+   "agua_vale_ha": 0.0
+  },
+  {
+   "data": "2026-09-03",
+   "nuvem_perto_tc90_%": 100.0,
+   "agua_perto_tc90_ha": 0.0,
+   "nuvem_vale_%": 100.0,
+   "agua_vale_ha": 0.0
+  },
+  {
+   "data": "2026-09-08",
+   "nuvem_perto_tc90_%": 34.0,
+   "agua_perto_tc90_ha": 0.0,
+   "nuvem_vale_%": 49.0,
+   "agua_vale_ha": 0.0
+  },
+  {
+   "data": "2026-09-18",
+   "nuvem_perto_tc90_%": 75.0,
+   "agua_perto_tc90_ha": 0.0,
+   "nuvem_vale_%": 70.0,
+   "agua_vale_ha": 0.0
+  },
+  {
+   "data": "2026-09-28",
+   "nuvem_perto_tc90_%": 0.0,
+   "agua_perto_tc90_ha": 0.0,
+   "nuvem_vale_%": 0.0,
+   "agua_vale_ha": 0.0
+  },
+  {
+   "data": "2026-10-03",
+   "nuvem_perto_tc90_%": 0.0,
+   "agua_perto_tc90_ha": 0.0,
+   "nuvem_vale_%": 3.0,
+   "agua_vale_ha": 0.24
+  },
+  {
+   "data": "2026-10-08",
+   "nuvem_perto_tc90_%": 91.0,
+   "agua_perto_tc90_ha": 0.0,
+   "nuvem_vale_%": 96.0,
+   "agua_vale_ha": 0.0
+  },
+  {
+   "data": "2026-10-13",
+   "nuvem_perto_tc90_%": 0.0,
+   "agua_perto_tc90_ha": 0.0,
+   "nuvem_vale_%": 13.0,
+   "agua_vale_ha": 0.04
+  },
+  {
+   "data": "2026-10-18",
+   "nuvem_perto_tc90_%": 0.0,
+   "agua_perto_tc90_ha": 0.0,
+   "nuvem_vale_%": 0.0,
+   "agua_vale_ha": 0.0
+  }
+ ],
+ "deposito": {
+  "ha_total": 553.6,
+  "ha_em_manchas_ge_5ha": 511.2,
+  "maior_mancha_ha": 218.1,
+  "ruido_2025_ha_total": 22.2,
+  "ruido_2025_ha_em_manchas_ge_5ha": 0.0,
+  "ruido_2025_maior_mancha_ha": 0.0
+ },
+ "agua_sobre_deposito_ha": 0.0
+}

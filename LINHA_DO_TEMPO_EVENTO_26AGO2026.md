@@ -128,4 +128,50 @@ Adhikari et al. dão nome à fonte: **flanco norte do Tsangbu Ri (6.781 m)**, pe
 3. **O INSAT-3D**, que vê o sítio quase no nadir, para o colapso da nuvem sem paralaxe.
 4. **Relatos com horário de quem estava perto da fonte entre 00:30 e 02:35 UTC.** As notícias até agora não trazem nenhum.
 
+---
+
+## 6. Cicatriz, depósito e o "lago temporário", no Sentinel-2 (21/10/2026)
+
+**Por que:** o pesquisador desconfia dos 10⁸ m³ de Adhikari et al. Duas razões: "não há tanta diferença na geleira" e "o cálculo da água não continha tanta rocha". Também acha estranho o "lago temporário" atribuído ao segundo deslizamento.
+
+**Método** (`scripts/neve_anfiteatro/cicatriz_e_lago.py`, saídas em `data/processed/cicatriz_lago/`):
+* Sentinel-2 L2A, na mesma órbita (passagem das ~04:47 UTC) e na mesma época do ano: 13 e 18/10/2025 (antes) contra 13 e 18/10/2026 (depois). Iluminação e neve sazonal são as mesmas.
+* O par de 2025 entre si dá o ruído de cada teste.
+* A cicatriz de referência é a linha de campo da Fig. 2 de Adhikari et al.
+
+**Resultados:**
+
+1. **A geleira acima da cicatriz quase não mudou.**
+   * A até 2 km da cicatriz, a área que era neve/gelo nas duas cenas de antes e não é nas duas de depois soma **14 ha**. O ruído do par de 2025 é de 27 ha, então a perda não se distingue dele.
+   * A maior mancha contínua de perda tem 2,4 ha, em 28,293 N / 85,529 E, sobre a cicatriz.
+   * A observação do pesquisador se confirma. A massa que rompeu era sobretudo rocha (é também o que o artigo diz), e a geleira por cima ficou.
+   * Na cena de antes (out/2025) já havia, abaixo da cicatriz, um corredor de rocha exposta de ~2 km, uma trilha antiga de avalanche ou detritos.
+2. **O depósito é grande e está no vale, não no rio.**
+   * Solo exposto ou detrito novo sobre o que era vegetação nas duas cenas de antes: **511 ha (5,1 km²)** em manchas de 5 ha ou mais. A maior mancha contínua tem 218 ha. O mesmo teste no par de 2025 dá **0 ha**.
+   * O depósito sai do pé da cicatriz para noroeste, ~6 km até o Lhende Khola, e segue o vale para oeste além da borda do recorte (85,45 E).
+   * Os 5,1 km² não contam a parte alta do corredor, que já era rocha antes. A área real é maior.
+3. **O volume depende da espessura, que o Sentinel-2 não mede:**
+
+   | Espessura média do depósito | Volume sobre 5,1 km² |
+   | ---: | ---: |
+   | 2 m | ~10 M m³ |
+   | 5 m | ~26 M m³ |
+   | 10 m | ~51 M m³ |
+   | 20 m | ~100 M m³ |
+
+   * **O lado do depósito não exclui os 10⁸ m³.** Para isso bastaria um depósito de ~20 m de espessura média, comum em avalanches de rocha.
+   * **Isso corrige a crítica anterior,** que se baseava na mancha de 28 ha do radar como área da fonte. A zona de ruptura de Petley tem ~2 km de comprimento. Com 1–2 km² e 50–100 m de profundidade, 10⁸ m³ fica possível.
+   * O número de 10⁸ m³ continua **não medido**: vem de uma calibração de amplitude sísmica que os próprios autores chamam de muito incerta. Para decidir é preciso um modelo de elevação pós-evento por estereoscopia (ASTER, por exemplo), comparado com o GLO-30.
+4. **Rocha e água não andaram juntas.**
+   * A rocha ficou, em grande parte, no depósito de ~6 km entre a cicatriz e o Lhende Khola.
+   * O que desceu o Bhote Koshi e o Trishuli foi sobretudo água com sedimento.
+   * Isso é compatível com o cálculo de água do repositório, que não continha tanta rocha. Os dois números (10⁷–10⁸ m³ de rocha parada e ~10⁷ m³ de água que passou por Rasuwagadhi) não se contradizem.
+5. **Não há lago visível no ponto do segundo deslizamento.**
+   * Teste de água estrito: NDWI > 0,15, NIR baixo, SWIR1 < 0,04 e SWIR2 < 0,03, para não confundir com sombra de relevo.
+   * Ele dá **0 ha de água** a até 1,5 km do ponto do us7000tc90 em todas as cenas utilizáveis depois do evento: 08/09 (34% de nuvem no local), 28/09, 03/10, 13/10 e 18/10.
+   * No vale do Lhende Khola inteiro (28,30–28,36 N, 85,45–85,52 E), o máximo é ≤ 0,24 ha, igual ao de antes.
+   * As cenas de 14 e 24/08 são anteriores ao evento, e a de 03/09 é 100% nuvem. Entre 26/08 e 08/09 não há cena óptica utilizável.
+   * O ponto do us7000tc90 fica junto à ponta inferior do depósito, onde ele encontra o Lhende Khola. Se houve barragem e lago, eles se esvaziaram antes de 08/09.
+   * O Sentinel-1, que vê através de nuvem, pode testar a janela de 26/08 a 08/09.
+
 **Arquivos de trabalho das buscas** (fora do repositório, no scratchpad da sessão): respostas brutas dos catálogos em `scratchpad\seis\`; textos do ADRC e do NDRRMA em `scratchpad\adrc\` e `scratchpad\ndrrma\`.
