@@ -255,6 +255,11 @@ O 2a é o que se vê nas imagens regionais, como a que o pesquisador anotou. O 2
 * **"Rugido maciço" no rompimento:** aparece no IRDR (via ADRC), atribuído a moradores, às 08:30–08:37 NPT.
 * **Rugido contínuo por dezenas de minutos:** é o que se espera da cheia de detritos. O sinal sísmico da cheia durou mais de 2 h (Adhikari et al.).
 * **Os depoimentos citados em `levantamento_relatos_som_descargas_eletricas.md`** (aspas de guardas, operadores e moradores, com horários) **não têm fonte localizável.** A busca nas notícias e nos boletins oficiais não achou nenhum deles. Não devem ser usados como observação.
+* **Os relatos reais, com fonte, estão em `CATALOGO_RELATOS_EVENTO_26AGO2026.md`.** Mais de 25 testemunhas em Timure, Syabrubesi, no porto de Kyirong e em mirantes do lado tibetano. O que dizem:
+  * tremor seguido da cheia em Timure;
+  * nenhuma chuva no Nepal, mas **nevoeiro e névoa sobre o maciço** no lado tibetano;
+  * sons "como trovão" na hora do colapso;
+  * **nenhum relato de relâmpago ou de luz azul**.
 
 **Relâmpagos: o satélite os torna improváveis justamente na hora que o relatório indica.**
 * O relatório do repositório põe "trovões contínuos e relâmpagos frequentes nas cristas" entre 07:15 e 08:15 NPT (01:30–02:30 UTC).
