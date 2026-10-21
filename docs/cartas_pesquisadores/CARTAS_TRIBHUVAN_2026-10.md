@@ -3,8 +3,6 @@
 **Data:** 21 de outubro de 2026
 
 **Antes de enviar, preencher:**
-* `[TITLE OF THE BOOK]`: título do livro;
-* `[publisher, year]`: editora e ano;
 * `[department]`: seu departamento na UFSC;
 * `[e-mail]` e `[phone]`.
 
@@ -33,7 +31,9 @@ I should be open from the start: my hypothesis is heterodox. I think the event m
 * A vortex with strong updrafts would then have brought aerosol, triggered secondary ice production and released latent heat.
 * The cloud would have collapsed onto the source, as a dense ice–water mass, before the failure.
 
-These ideas belong to a long tradition of observations and interpretations of sudden "water from the sky" catastrophes in mountains, which I discuss in my book *[TITLE OF THE BOOK]* (in press, [publisher, year]). I know such a hypothesis has to earn its place with data, and that is what I have been trying to do.
+These ideas come from my book *Como encontrar seu dragão* ("How to find your dragon"), now in final revision for publication in Portuguese. It deals with events that are common in Brazil and that led me to propose a phenomenon that Brazilian Indigenous peoples call *toró*. I know the hypothesis is heterodox. What supports it, in the book, is a list of more than 50 geomyths: traditional accounts, in Brazil and elsewhere, that describe the phenomenon and contain details that can be tested against modern explanations. That is why I take eyewitness accounts seriously. A hypothesis like this has to earn its place with data, and that is what I have been trying to do.
+
+By "the amphitheatre" I mean the steep erosional headwall basin (cirque-like, 3.4 km², from about 4,000 to 7,200 m) on the north face of Langtang Lirung, centred at about 28.27°N, 85.52°E, about 13 km east of Rasuwagadhi. It drains north through the Chhochen Khola to the Lhende Khola, on the Nepal–China border. The mapped scar of the 26 August failure lies on the north flank of Tsangbu Ri, just north-east of the amphitheatre's outlet.
 
 **What I have done so far** (code, data and reports are open at https://github.com/reinaldohaas/Himalaia_2026):
 * **Satellite.** Himawari-9 every 10 minutes, with the parallax inverted for a cloud directly over the source. A thick ice-topped cloud stayed over the source from about 17:30 to 00:30 UTC. Its top then descended from about 10 km to the terrain between 00:30 and 01:30 UTC, 1.5–2.5 h before the seismic onset (02:52:16 UTC; Adhikari et al. 2026, *Seismica*). At 02:50 UTC no cloud top distinguishable from the terrain lay within 30 km.
@@ -74,7 +74,9 @@ I study the atmosphere over the Tsangbu Ri / Langtang Lirung source in the hours
 * I think an electrical "anti-scavenging" effect of the kind proposed by Tinsley may have held a large reservoir of supercooled water over the source without rain during the night.
 * Its later release, through secondary ice production and the collapse of the cloud, would have reached the slope.
 
-This idea is part of a long tradition of accounts of sudden atmospheric catastrophes in mountains, which I discuss in my book *[TITLE OF THE BOOK]* (in press, [publisher, year]).
+These ideas come from my book *Como encontrar seu dragão* ("How to find your dragon"), now in final revision for publication in Portuguese. It deals with events that are common in Brazil and that led me to propose a phenomenon that Brazilian Indigenous peoples call *toró*. I know the hypothesis is heterodox. What supports it, in the book, is a list of more than 50 geomyths: traditional accounts, in Brazil and elsewhere, that describe the phenomenon and contain details that can be tested against modern explanations. That is why I take eyewitness accounts seriously.
+
+By "the amphitheatre" I mean the steep erosional headwall basin (cirque-like, 3.4 km², from about 4,000 to 7,200 m) on the north face of Langtang Lirung, centred at about 28.27°N, 85.52°E, about 13 km east of Rasuwagadhi. It drains north through the Chhochen Khola to the Lhende Khola, on the Nepal–China border. The mapped scar of the 26 August failure lies on the north flank of Tsangbu Ri, just north-east of the amphitheatre's outlet.
 
 **What I have found so far** (open at https://github.com/reinaldohaas/Himalaia_2026):
 * **Satellite.** In Himawari-9, a thick cloud with tops at 218–235 K (10–13 km) stayed over the source for about seven hours. Its top descended to the terrain between 00:30 and 01:30 UTC.
@@ -108,11 +110,13 @@ Dear Dr. Pokharel,
 My name is Reinaldo Haas. I am a meteorologist at the Federal University of Santa Catarina (UFSC), Brazil. I am writing because of your background in the microphysics of orographic clouds, in particular your work at Wyoming on shallow orographic clouds with large supercooled droplets and glaciogenic seeding. It touches the centre of a hypothesis I am testing for the 26 August 2026 Tsangbu Ri – Lhende Khola event.
 
 I want to be clear that the hypothesis is heterodox. It has three steps:
-1. During the night of 25–26 August, a large reservoir of supercooled water would have been held over the source amphitheatre without precipitating, through an electrical suppression of collection of the kind proposed by Tinsley.
+1. During the night of 25–26 August, a large reservoir of supercooled water would have been held over the amphitheatre (described below) without precipitating, through an electrical suppression of collection of the kind proposed by Tinsley.
 2. A vortex with strong updrafts would then have brought ice-nucleating aerosol and triggered rime splintering and other secondary ice production, with a large release of latent heat.
 3. The cloud would have collapsed and funnelled onto the source as a dense ice–water mass, perhaps one tenth of the density of ice, before the failure.
 
-This line of thought belongs to a long tradition of accounts of sudden atmospheric catastrophes in mountains, which I discuss in my book *[TITLE OF THE BOOK]* (in press, [publisher, year]).
+These ideas come from my book *Como encontrar seu dragão* ("How to find your dragon"), now in final revision for publication in Portuguese. It deals with events that are common in Brazil and that led me to propose a phenomenon that Brazilian Indigenous peoples call *toró*. I know the hypothesis is heterodox. What supports it, in the book, is a list of more than 50 geomyths: traditional accounts, in Brazil and elsewhere, that describe the phenomenon and contain details that can be tested against modern explanations. That is why I take eyewitness accounts seriously.
+
+By "the amphitheatre" I mean the steep erosional headwall basin (cirque-like, 3.4 km², from about 4,000 to 7,200 m) on the north face of Langtang Lirung, centred at about 28.27°N, 85.52°E, about 13 km east of Rasuwagadhi. It drains north through the Chhochen Khola to the Lhende Khola, on the Nepal–China border. The mapped scar of the 26 August failure lies on the north flank of Tsangbu Ri, just north-east of the amphitheatre's outlet.
 
 **What I have done** (all open at https://github.com/reinaldohaas/Himalaia_2026):
 * **CM1 at 500 m** on the real terrain, with NSSL two-moment microphysics. When coalescence is suppressed, the model holds a reservoir of only a few thousand tonnes of supercooled water, about four orders of magnitude too small.
