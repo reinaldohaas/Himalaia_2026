@@ -317,6 +317,22 @@
   \textbf{\bibinfo{volume}{120}}, \bibinfo{pages}{25--36}
   (\bibinfo{year}{2012}).
 
+\bibitem{setvak1991}
+\bibinfo{author}{Setv{\'a}k, M.} \& \bibinfo{author}{Doswell, C.~A.}
+\newblock \bibinfo{title}{The {AVHRR} channel 3 cloud top reflectivity of
+  convective storms}.
+\newblock \emph{\bibinfo{journal}{Monthly Weather Review}}
+  \textbf{\bibinfo{volume}{119}}, \bibinfo{pages}{142--153}
+  (\bibinfo{year}{1991}).
+
+\bibitem{rosenfeld1998}
+\bibinfo{author}{Rosenfeld, D.} \& \bibinfo{author}{Lensky, I.~M.}
+\newblock \bibinfo{title}{Satellite-based insights into precipitation formation
+  processes in continental and maritime convective clouds}.
+\newblock \emph{\bibinfo{journal}{Bulletin of the American Meteorological
+  Society}} \textbf{\bibinfo{volume}{79}}, \bibinfo{pages}{2457--2476}
+  (\bibinfo{year}{1998}).
+
 \bibitem{wicker2020}
 \bibinfo{author}{Wicker, L.~J.} \& \bibinfo{author}{Skamarock, W.~C.}
 \newblock \bibinfo{title}{An implicit--explicit vertical transport scheme for

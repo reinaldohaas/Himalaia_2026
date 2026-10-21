@@ -53,6 +53,8 @@ Isso é consistente, e de forma independente, com tudo o que já havia sido apur
 
 **A versão da hipótese em que o pistão desaba do céu no instante do evento está excluída pela observação.** Não havia pistão no ar às 02:52 UTC.
 
+**Atualização (21/10/2026):** com o B07 e o B13 a cada 10 min e a paralaxe invertida para a nuvem que estava de fato sobre o sítio (§ 6), o topo dessa nuvem desceu de ~10 km até o terreno entre 00:30 e 01:30 UTC. Às 02:50 não há, a até 30 km, topo que se distinga da montanha. "Céu limpo" vale para nuvem alta; o infravermelho não separa uma massa perto de 0 °C dentro do anfiteatro do próprio terreno.
+
 ### 3.3 A versão que sobrevive — e ela é melhor
 
 O que os dados suportam é uma cadeia deslocada no tempo:
@@ -96,3 +98,57 @@ area por pixel: 2 x 2 km x 2,7 (correcao de obliquidade a 68 graus de zenite)
 ```
 
 Validação do leitor: banda 13 a 10,407 µm, grade 550 × 5500, sub_lon 140,7°, COFF = LOFF = 2750,5, CFAC = LFAC = 20466275 — todos lidos do próprio arquivo e consistentes com a especificação do JMA. O pixel geolocalizado para o sítio cai em 85,510 °E / 28,257 °N, a menos de 2 km do alvo.
+
+---
+
+## 6. Fase do topo a cada 10 min sobre o anfiteatro (21/10/2026)
+
+**Por que:** o GIF `data/processed/himawari_trajetoria/nuvem_atravessa_himalaia_colapso.gif`, feito pelo Antigravity, sugere que o sistema "colapsa sobre a arena". O pesquisador lembrava de uma imagem com um núcleo menor colapsando a sotavento sobre o anfiteatro. Revisto o GIF, ele tem quatro problemas:
+1. Só acompanha o maior objeto abaixo de 213 K. A nuvem de 218–235 K que estava sobre o sítio fica fora.
+2. A imagem está na posição aparente, mas a trajetória está corrigida da paralaxe, que é de 25–35 km para topos de 10–14 km.
+3. O último trecho da trajetória, de 00:30 a 01:00 UTC, de 223 para 137 km a "219 km/h", é troca de objeto, não deslocamento.
+4. A frase "colapsa sobre a arena" não se sustenta para o núcleo profundo, que morreu a 140–240 km a leste-sudeste.
+
+No repositório não há imagem de satélite com um núcleo pequeno sobre a arena às 02:50. Por isso fizemos o teste abaixo.
+
+**Dados e método** (`scripts/himawari/fase_topo_10min.py`, `scripts/himawari/mapa_fase_topo.py`):
+* B07 (3,9 µm) e B13 (10,4 µm), segmento 3, a cada 10 min, de 25/08 22:00 a 26/08 03:30 UTC. Não há a varredura das 02:40 no arquivo.
+* **De 00:00 UTC em diante é dia no sítio:** o sol nasce por volta de 23:55 UTC, e 02:50 UTC são 08:35 NPT. Por isso não se usa a diferença B07 − B13 noturna, e sim a refletância em 3,9 µm, r₃₉ = (L₇ − B₇(T₁₃)) / (E₇ cos θ₀ / π − B₇(T₁₃)) (Setvák & Doswell 1991; Rosenfeld & Lensky 1998).
+  * Gotas pequenas de água dão r₃₉ de 0,1–0,3.
+  * Gelo e neve dão menos de ~0,05.
+  * No recorte, topos de gelo espesso deram 0,05 e a superfície 0,16, coerente com a literatura.
+* **Paralaxe invertida:** para cada altura de topo, de 4 a 14 km, achamos o pixel aparente de uma nuvem que estivesse exatamente sobre o sítio e pegamos o pixel mais frio do bloco 3 × 3 em volta.
+
+**Resultados** (`data/processed/himawari_fase_topo/fase_topo_sitio_10min.txt` e `mapa_fase_topo.png`):
+
+| UTC (NPT) | Topo da nuvem sobre o sítio (pixel para 8–10 km) | Leitura |
+| :--- | ---: | :--- |
+| 17:30–00:30 | 218–235 K, r₃₉ ≈ 0,05 | topo de gelo a 10–13 km, ~7 h sobre o sítio |
+| 00:30 (06:15) | 234 K | |
+| 00:40 (06:25) | 249 K | |
+| 00:50 (06:35) | 258 K | |
+| 01:00 (06:45) | 261 K | |
+| 01:10 (06:55) | 267 K | |
+| 01:30 (07:15) | 273 K | topo chega ao terreno |
+| 01:30–03:30 | 264–278 K | sem topo frio que se distinga da montanha |
+
+1. **O colapso da nuvem sobre o sítio foi observado, entre 00:30 e 01:30 UTC.** O topo desceu de ~10 km até o terreno em uma hora, de 1,5 a 2,5 h antes do sinal sísmico das 02:52:10 (USGS `us7000tbwb`, na própria fonte, sem tempo de viagem a descontar).
+2. **Às 02:50 não havia nuvem fria sobre o anfiteatro.** A até 30 km do sítio, nenhum topo mais frio que ~263 K. As poucas feições de 263–269 K, de 15–50 km², têm a mesma r₃₉ da superfície sem neve (~0,16) e não se distinguem dela.
+3. **Topos claramente de água super-resfriada só aparecem depois do evento.** A partir de 03:00 UTC surgem nuvens de 248–256 K (~8 km), r₃₉ de 0,20–0,21 e ~450 km² cada, a 30–45 km a nordeste e a sudeste. Parece convecção da manhã.
+
+**Consequência para a hipótese:**
+* **Reservatório de nuvem comum, na casa de g/m³:** excluído às 02:50. Juntar ~10¹⁰ kg sobre a bacia exigiria uma nuvem profunda, de topo frio, e ela apareceria.
+* **Massa densa:** não excluída. Na escala proposta pelo pesquisador (~1/10 da densidade do gelo, 92 kg/m³), 1,4 × 10¹⁰ kg sobre 3,4 km² dão uma camada de ~45 m. Dentro do anfiteatro, abaixo das cristas, o topo dela estaria perto de 0 °C e seria indistinguível do terreno no infravermelho.
+* **Versão compatível com o satélite:**
+  1. a nuvem colapsa sobre o sítio entre 00:30 e 01:30;
+  2. a massa fica no anfiteatro por ~1,5 h;
+  3. a ruptura acontece às 02:52.
+* **O que a hipótese passa a ter de explicar** é essa espera de 1,5–2,5 h entre o colapso observado e a ruptura.
+* **Distância:** os 140–240 km do GIF são do núcleo profundo do sistema. O colapso que importa aconteceu sobre o próprio sítio.
+
+**Limites:**
+* O método não separa um topo perto de 0 °C do terreno alto.
+* Rocha nua tem r₃₉ parecida com a de nuvem de água.
+* Com o sol baixo (θ₀ > 75°, antes de ~01:00 UTC), a r₃₉ fica ruidosa.
+* A relação entre altura do topo e Tb é empírica.
+* O INSAT-3D, quase no nadir, continua sendo o dado que eliminaria a paralaxe.
