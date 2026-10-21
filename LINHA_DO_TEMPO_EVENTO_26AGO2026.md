@@ -159,9 +159,15 @@ Adhikari et al. dão nome à fonte: **flanco norte do Tsangbu Ri (6.781 m)**, pe
    | 10 m | ~51 M m³ |
    | 20 m | ~100 M m³ |
 
-   * **O lado do depósito não exclui os 10⁸ m³.** Para isso bastaria um depósito de ~20 m de espessura média, comum em avalanches de rocha.
-   * **Isso corrige a crítica anterior,** que se baseava na mancha de 28 ha do radar como área da fonte. A zona de ruptura de Petley tem ~2 km de comprimento. Com 1–2 km² e 50–100 m de profundidade, 10⁸ m³ fica possível.
-   * O número de 10⁸ m³ continua **não medido**: vem de uma calibração de amplitude sísmica que os próprios autores chamam de muito incerta. Para decidir é preciso um modelo de elevação pós-evento por estereoscopia (ASTER, por exemplo), comparado com o GLO-30.
+   * **Escalas empíricas da área do depósito** (Griswold & Iverson 2008, área planimétrica B = c·V^(2/3)): 5,1 km² correspondem a **~4 M m³ se o fluxo foi um fluxo de detritos molhado** (c = 200) e a ~130 M m³ só se foi uma avalanche de rocha seca (c = 20). O que desceu foi uma enxurrada com muita água, o que favorece o primeiro caso.
+   * **Escala área–volume da fonte** (Larsen et al. 2010, rocha):
+     * 0,28 km² (mancha do radar) dá ~4 M m³; para chegar a 10⁸ m³ seriam ~350 m de profundidade média;
+     * ~1,2 km² (o maior que as descrições permitem: ~2 km por ~600 m) dá ~30 M m³.
+   * **Correção (21/10/2026):** numa versão anterior deste item escrevi que os 10⁸ m³ "ficam possíveis" com ~20 m de depósito. Isso é só aritmética, não evidência. A espessura é exatamente o que não foi medido.
+   * **Peso das evidências:**
+     * a geleira sem perda acima do ruído, a área da fonte, o cálculo de água com pouca rocha e a escala do depósito para fluxo molhado apontam todos para **~10⁷ m³ (~5–30 M m³)**;
+     * os 10⁸ m³ se apoiam só na calibração de amplitude sísmica, que os próprios autores chamam de muito incerta, e só seriam compatíveis com o depósito se o fluxo tivesse sido seco;
+     * para decidir é preciso um modelo de elevação pós-evento por estereoscopia (item 6).
 4. **Rocha e água não andaram juntas.**
    * A rocha ficou, em grande parte, no depósito de ~6 km entre a cicatriz e o Lhende Khola.
    * O que desceu o Bhote Koshi e o Trishuli foi sobretudo água com sedimento.
