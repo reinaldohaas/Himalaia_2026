@@ -172,3 +172,39 @@ A regra de C vale para D: o resultado só conta como candidato ao toró com um r
 * C **não** é candidato ao toró: o reservatório fica em ~10⁷ kg sobre a bacia, contra 10¹⁰, e a liberação é ~10³ m³, contra 10⁶–10⁷.
 * É o limite do modelo nesta configuração. O vórtice gera a dinâmica, mas a microfísica não acumula nem congela água em escala comparável.
 * **O experimento D** (nucleação só onde w > 2 m/s) testa se reter a água fora das ascendentes aumenta o reservatório e concentra o congelamento.
+
+## Executável único: A, B, C e D pelo `namelist.input` (21/10/2026)
+
+**Pedido do pesquisador:** administrar os experimentos pelo `namelist.input`, e não por executáveis diferentes.
+
+**Código:** o mesmo módulo, versão 3 (`module_toro_wrf.F`), compilado uma vez em `wrf_toro.exe` (sha256 `422faac0…`).
+* **Configuração** no grupo `&toro_wrf` do próprio `namelist.input`. O WRF ignora grupos de namelist que não conhece. A forma antiga, o arquivo `toro_wrf.txt`, continua aceita.
+* **A** = sem o grupo, ou com `ligado = .false.`: o módulo fica inerte.
+* **Duas chaves novas** fazem C e D saírem do mesmo código:
+
+  | Chave | D (padrão) | C |
+  | :--- | :--- | :--- |
+  | `disparo_w` | `.true.`: nucleação no núcleo só onde w > `w_crit`, com água líquida e T < 0 °C | `.false.`: no núcleo inteiro |
+  | `nucleo_no_estado_A` | `.true.`: o núcleo segue no Estado A fora do disparo | `.false.`: o núcleo fica fora do Estado A |
+
+* **Configurações por experimento:**
+
+  | Experimento | Arquivo do grupo |
+  | :--- | :--- |
+  | B | `toro_wrf.txt` |
+  | C | `toro_wrf_vortice_C.txt` (= `toro_wrf_vortice.txt` + as duas chaves em `.false.`) |
+  | D | `toro_wrf_vortice_D.txt` |
+
+  Testes: `toro_wrf_teste.txt`, `toro_wrf_teste_vC.txt` e `toro_wrf_teste_vD.txt`.
+* **Script:** `rodar_toro_wrf.sh rodada_u A|B|C|D` acrescenta o grupo ao `namelist.input` da rodada e roda o `wrf_toro.exe`.
+
+**Validação (antes de usar):** `rodar_toro_wrf.sh teste_unico` roda os quatro testes de 30 min com o executável único. O `wrfout_d01` e o `wrfout_d02` têm de ser iguais, byte a byte, aos dos testes já feitos com os executáveis separados:
+
+| Teste com o executável único | Referência |
+| :--- | :--- |
+| A | `toro_tA` |
+| B | `toro_tBa` |
+| C | `toro_tCa` |
+| D | `toro_tDa` |
+
+Se os quatro baterem, os executáveis separados podem ser aposentados, e as rodadas A–D já feitas continuam valendo.

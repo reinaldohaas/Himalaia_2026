@@ -2,9 +2,11 @@
 ! module_toro_wrf -- "modo super-resfriado" (Estado A da anti-varredura de Tinsley) para a microfisica NSSL
 ! de 2 momentos do WRF, um vortice dinamico imposto e a nucleacao secundaria iniciada no nucleo do vortice.
 !
-! Fica INERTE se nao existir o arquivo toro_wrf.txt no diretorio da rodada: nenhum fator e aplicado e o
-! WRF reproduz bit a bit a rodada original (os trechos inseridos so executam com toro_call = .true. ou com
-! o vortice ligado, e nada disso acontece sem o arquivo).
+! Configuracao: grupo &toro_wrf no proprio namelist.input (o WRF ignora grupos que nao conhece) ou, na forma
+! antiga, no arquivo toro_wrf.txt. Sem grupo (ou com ligado = .false.) o modulo fica INERTE: nenhum fator e
+! aplicado e o WRF reproduz bit a bit a rodada original. Um so executavel faz os experimentos:
+!   A = sem grupo;  B = Estado A;  C = B + vortice + nucleacao no nucleo inteiro (disparo_w = .false.,
+!   nucleo_no_estado_A = .false.);  D = como C, mas o nucleo so nucleia onde w > w_crit (padroes .true.).
 !
 ! Estado A (t_ini <= t < t_rel, dentro de raio_km do centro (lat0,lon0), nos dominios marcados em dominios):
 !   fcoal  autoconversao e autocoleta de goticulas (qrcnw, crcnw, cautn)          -> chuva quente
@@ -47,30 +49,66 @@ MODULE module_toro_wrf
   REAL,    SAVE :: t_vn_ini = 25.5, raio_vn_km = 5.0, fhm_v = 10.0, fnuc_v = 100.0
   REAL,    SAVE :: w_crit = 2.0, q_crit = 1.0e-5       ! disparo no nucleo: m/s e kg/kg
   LOGICAL, SAVE :: avisou_disparo = .false.
+  LOGICAL, SAVE :: ligado = .true.               ! .false. desliga o modulo mesmo com o grupo presente
+  LOGICAL, SAVE :: disparo_w = .true.            ! D: nucleacao no nucleo so onde w > w_crit; .false. = C
+  LOGICAL, SAVE :: nucleo_no_estado_A = .true.   ! D: o nucleo segue no Estado A fora do disparo; .false. = C
   LOGICAL, ALLOCATABLE, SAVE :: msup(:,:), maer(:,:), mvn(:,:)
 
   NAMELIST /toro_wrf/ t_ini, t_rel, t_dur, lat0, lon0, raio_km, fcoal, faccr, fctfz, fnuc, fhm, frfrz, fwfrz, &
                       t_hom_c, lat_aer, lon_aer, raio_aer_km, fnuc_rel, dominios, &
                       ivortex, t_v_ini, t_v_fim, tr_v, lat_v, lon_v, rmax_v_km, zr_v_m, alpha_v, dominios_v, &
-                      t_vn_ini, raio_vn_km, fhm_v, fnuc_v, w_crit, q_crit
+                      t_vn_ini, raio_vn_km, fhm_v, fnuc_v, w_crit, q_crit, &
+                      ligado, disparo_w, nucleo_no_estado_A
 
 CONTAINS
 
+  ! o arquivo tem uma linha que comeca com &toro_wrf (sem distinguir maiusculas)?
+  LOGICAL FUNCTION tem_grupo(arq)
+    CHARACTER(len=*), INTENT(IN) :: arq
+    CHARACTER(len=512) :: linha
+    INTEGER :: iu, ios, k, c
+    LOGICAL :: existe
+    tem_grupo = .false.
+    INQUIRE( FILE=arq, EXIST=existe )
+    IF ( .not. existe ) RETURN
+    OPEN( NEWUNIT=iu, FILE=arq, STATUS='old', ACTION='read', IOSTAT=ios )
+    DO WHILE ( ios == 0 .and. .not. tem_grupo )
+      READ( iu, '(a)', IOSTAT=ios ) linha
+      IF ( ios /= 0 ) EXIT
+      linha = adjustl(linha)
+      DO k = 1, 9
+        c = ichar(linha(k:k)); IF ( c >= 65 .and. c <= 90 ) linha(k:k) = char(c + 32)
+      ENDDO
+      tem_grupo = ( linha(1:9) == '&toro_wrf' )
+    ENDDO
+    CLOSE( iu )
+  END FUNCTION tem_grupo
+
   SUBROUTINE le_config()
     INTEGER :: iu, ios
-    LOGICAL :: existe
+    CHARACTER(len=32) :: fonte
     IF ( lido ) RETURN
     lido = .true.
-    INQUIRE( FILE='toro_wrf.txt', EXIST=existe )
-    IF ( .not. existe ) RETURN
-    iu = 77
-    OPEN( iu, FILE='toro_wrf.txt', STATUS='old', ACTION='read', IOSTAT=ios )
+    IF ( tem_grupo('namelist.input') ) THEN
+      fonte = 'namelist.input'
+    ELSEIF ( tem_grupo('toro_wrf.txt') ) THEN
+      fonte = 'toro_wrf.txt'
+    ELSE
+      RETURN                                     ! experimento A: modulo inerte
+    ENDIF
+    OPEN( NEWUNIT=iu, FILE=trim(fonte), STATUS='old', ACTION='read', IOSTAT=ios )
     IF ( ios == 0 ) READ( iu, NML=toro_wrf, IOSTAT=ios )
     CLOSE( iu )
-    ativo = ( ios == 0 )
-    IF ( ativo ) WRITE(0,'(a)') 'toro_wrf: modo super-resfriado ATIVO (toro_wrf.txt lido)'
+    IF ( ios /= 0 ) THEN
+      WRITE(0,'(a)') 'toro_wrf: ERRO lendo &toro_wrf em ' // trim(fonte) // ' -- modulo INATIVO'
+      RETURN
+    ENDIF
+    ativo = ligado
+    IF ( .not. ativo ) WRITE(0,'(a)') 'toro_wrf: grupo &toro_wrf com ligado = .false. em ' // trim(fonte) // ' -- modulo INATIVO'
+    IF ( ativo ) WRITE(0,'(a)') 'toro_wrf: modo super-resfriado ATIVO (' // trim(fonte) // ' lido)'
     IF ( ativo .and. ivortex == 1 ) WRITE(0,'(a)') 'toro_wrf: vortice dinamico LIGADO'
-    IF ( .not. ativo ) WRITE(0,'(a)') 'toro_wrf: ERRO lendo toro_wrf.txt -- modulo INATIVO'
+    IF ( ativo .and. ivortex == 1 ) WRITE(0,'(a,l1,a,l1)') 'toro_wrf: disparo_w = ', disparo_w, &
+                                                          ', nucleo_no_estado_A = ', nucleo_no_estado_A
   END SUBROUTINE le_config
 
   REAL FUNCTION dist_km(la, lo, la0, lo0)
@@ -104,7 +142,8 @@ CONTAINS
       DO i = its, ite
         IF ( em_vn ) mvn(i,j) = ( dist_km(xlat(i,j), xlong(i,j), lat_v, lon_v) <= raio_vn_km )
         IF ( th >= t_ini .and. th < t_rel ) THEN
-          msup(i,j) = ( dist_km(xlat(i,j), xlong(i,j), lat0, lon0) <= raio_km )
+          msup(i,j) = ( dist_km(xlat(i,j), xlong(i,j), lat0, lon0) <= raio_km ) .and. &
+                      ( nucleo_no_estado_A .or. .not. mvn(i,j) )
         ELSEIF ( th >= t_rel .and. th < t_rel + t_dur ) THEN
           maer(i,j) = ( dist_km(xlat(i,j), xlong(i,j), lat_aer, lon_aer) <= raio_aer_km )
         ENDIF
@@ -157,6 +196,10 @@ CONTAINS
     REAL,    INTENT(IN) :: wl, ql, tk
     disparo = .false.
     IF ( .not. mvn(i,j) ) RETURN
+    IF ( .not. disparo_w ) THEN                  ! experimento C: o nucleo inteiro, sem condicao de ascendente
+      disparo = .true.
+      RETURN
+    ENDIF
     disparo = ( wl > w_crit .and. ql > q_crit .and. tk < 273.15 )
     IF ( disparo .and. .not. avisou_disparo ) THEN
       avisou_disparo = .true.

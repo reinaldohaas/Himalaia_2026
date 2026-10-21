@@ -5,7 +5,7 @@ so acrescenta linhas, em phys/module_mp_nssl_2mom.F, phys/module_microphysics_dr
 main/depend.common (o PBL passa a depender do arquivo do NSSL). O module_toro_wrf entra no proprio arquivo do
 NSSL, antes do modulo original, para nao mexer em Makefiles.
 Cada insercao confere que a ancora aparece uma unica vez; se algo nao bater, para sem gravar nada.
-Os trechos inseridos so executam com toro_call = .true. (arquivo toro_wrf.txt presente e lido).
+Os trechos inseridos so executam com toro_call = .true. (grupo &toro_wrf no namelist.input, ou toro_wrf.txt, presente e lido).
 
 Uso: python3 aplicar_patch_toro_wrf.py <dir_WRF> <caminho/module_toro_wrf.F>
 """

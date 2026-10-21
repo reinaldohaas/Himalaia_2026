@@ -16,6 +16,10 @@
 #   bash rodar_toro_wrf.sh teste_ativo_D    -> D com toro_wrf_teste_vD.txt (limiar baixo, d02): o disparo tem de aparecer
 #   bash rodar_toro_wrf.sh rodada D         -> 27 h: como C, mas o nucleo so nucleia onde a ascendente chega (toro_D/)
 #   (os passos de D recusam rodar enquanto a rodada C estiver em andamento)
+#   bash rodar_toro_wrf.sh teste_unico      -> executavel UNICO (wrf_toro.exe): A, B, C e D escolhidos pelo grupo
+#                                              &toro_wrf no namelist.input; 4 testes de 30 min comparados byte a byte
+#                                              com toro_tA, toro_tBa, toro_tCa e toro_tDa
+#   bash rodar_toro_wrf.sh rodada_u A|B|C|D -> 27 h com o executavel unico (toro_uX/)
 #   bash rodar_toro_wrf.sh enviar <dir>     -> wrfaux, rsl.error.0000, namelist e toro_wrf.txt ao Drive
 # Variaveis: NP (padrao 112), WRFDIR (tabelas), BIN (padrao ./bin_toro).
 set -uo pipefail
@@ -42,6 +46,16 @@ prepara() {   # prepara <dir>: tabelas, met_em, namelist (com refletividade) e i
 espera_C() {  # D so depois que a rodada C terminar (o host e o mesmo)
   pgrep -f "wrf_C.exe" > /dev/null && falha "a rodada C ainda esta em andamento; D so depois que ela terminar"
   grep -q "SUCCESS COMPLETE WRF" "$AQUI/toro_C/rsl.error.0000" 2>/dev/null || msg "aviso: toro_C/rsl.error.0000 nao tem SUCCESS COMPLETE WRF"
+}
+
+grupo() {     # grupo <arquivo de configuracao>: acrescenta o grupo &toro_wrf ao namelist.input da rodada
+  [ -f "$BIN/$1" ] || falha "falta $BIN/$1"
+  { echo; cat "$BIN/$1"; } >> namelist.input
+  grep -q "^&toro_wrf" namelist.input || falha "o grupo &toro_wrf nao entrou no namelist.input"
+}
+
+cfg_u() {     # configuracao de cada experimento no executavel unico
+  case "$1" in B) echo toro_wrf.txt ;; C) echo toro_wrf_vortice_C.txt ;; D) echo toro_wrf_vortice_D.txt ;; esac
 }
 
 liga_ic() { ln -sf "$AQUI"/toro_real/wrfinput_d0* "$AQUI"/toro_real/wrfbdy_d01 . ; }
@@ -91,6 +105,24 @@ case "${1:-}" in
       [ "$n" -gt 0 ] && msg "  D: disparo registrado em $n processo(s)" || msg "  D: nenhum disparo registrado em 30 min"
     fi
     msg "teste $x ativo ok" ;;
+  teste_unico)  # o executavel unico tem de reproduzir os quatro testes ja feitos com os executaveis A, B, C e D
+    e="$BIN/wrf_toro.exe"; [ -x "$e" ] || falha "falta $e"
+    for par in "A:toro_tA:" "B:toro_tBa:toro_wrf_teste.txt" "C:toro_tCa:toro_wrf_teste_vC.txt" "D:toro_tDa:toro_wrf_teste_vD.txt"; do
+      x=${par%%:*}; r=${par#*:}; ref=${r%%:*}; cfg=${r#*:}
+      [ -f "$AQUI/$ref/wrfout_d02_2026-08-25_00:00:00" ] || { msg "  $x: falta $ref (referencia), pulado"; continue; }
+      ( prepara toro_tU$x; liga_ic; [ -n "$cfg" ] && grupo "$cfg"
+        msg "teste unico $x (30 min)"; curto "$e" ) || exit 1
+      for f in wrfout_d01_2026-08-25_00:00:00 wrfout_d02_2026-08-25_00:00:00; do
+        cmp -s "$AQUI/$ref/$f" "$AQUI/toro_tU$x/$f" && msg "  $x $f: unico = $ref byte a byte" || msg "  $x $f: unico DIFERE de $ref"
+      done
+      grep -h "toro_wrf" "$AQUI"/toro_tU$x/rsl.error.* 2>/dev/null | sort | uniq -c | sed 's/^/    /'
+    done ;;
+  rodada_u)
+    x=${2:-}; case "$x" in A|B|C|D) ;; *) falha "rodada_u A|B|C|D" ;; esac
+    e="$BIN/wrf_toro.exe"; [ -x "$e" ] || falha "falta $e"
+    d=toro_u$x; prepara "$d"; liga_ic; c=$(cfg_u "$x"); [ -n "$c" ] && grupo "$c"
+    msg "rodada_u $x (27 h, NP=$NP, executavel unico) em segundo plano em $d"
+    setsid nohup bash -c "NP=$NP OMP_NUM_THREADS=1 BIND=core bash '$AQUI/mpi_kit.sh' '$e' > wrf.out 2>&1; echo \"[\$(date -u +%FT%TZ)] rodada_u $x terminou: \$(tail -1 rsl.error.0000)\" >> '$LOG'" > /dev/null 2>&1 < /dev/null & ;;
   rodada)
     case "${2:-}" in B) d=toro_B; e=wrf_B.exe ;; A) d=toro_A; e=wrf_A.exe ;; C) d=toro_C; e=wrf_C.exe ;; D) d=toro_D; e=wrf_D.exe ;; *) falha "rodada B|A|C|D" ;; esac
     [ "$2" = D ] && espera_C
@@ -108,5 +140,5 @@ case "${1:-}" in
       [ -f "$f" ] && rclone copy "$f" "$dst/" 2>&1 | grep -v client_id
     done
     msg "enviado ao Drive: $dst" ;;
-  *) echo "uso: bash rodar_toro_wrf.sh verificar|real|teste_bits|teste_ativo|teste_bits_C|teste_ativo_C|teste_bits_D|teste_ativo_D|rodada B|A|C|D|enviar <dir>" >&2; exit 1 ;;
+  *) echo "uso: bash rodar_toro_wrf.sh verificar|real|teste_bits|teste_ativo|teste_bits_C|teste_ativo_C|teste_bits_D|teste_ativo_D|teste_unico|rodada B|A|C|D|rodada_u A|B|C|D|enviar <dir>" >&2; exit 1 ;;
 esac
