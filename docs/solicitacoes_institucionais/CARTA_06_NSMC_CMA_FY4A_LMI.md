@@ -5,6 +5,21 @@
 **Contato de dados:** `nsmc_service@cma.gov.cn` · `feedback@nsmc.cma.gov.cn`
 **Objeto:** dados do Lightning Mapping Imager do FY-4A para a noite de 25–26 de agosto de 2026, região do Langtang / Gyirong
 
+> **Atualização (21/10/2026): esta carta está desatualizada quanto ao satélite.**
+>
+> **FY-4A:** saiu de serviço em 5/03/2024 (NSMC; ESSD 2026). Antes disso foi deslocado para 86,5 °E (05/2024–01/2025) e depois para 123,5 °E. Não há LMI do FY-4A para 2026.
+>
+> **FY-4B:** não carrega LMI.
+>
+> **FY-4C:** a opção que resta.
+> * Lançado em 27/12/2025, a 133 °E, com um LMI melhorado em "modo de disco completo" (NSMC).
+> * Em 12/10/2026, o OSCAR/WMO ainda o listava como "em comissionamento", sem acesso público aos dados.
+> * O sítio fica a ~53° do ponto subsatélite, o que dá visada muito oblíqua e eficiência de detecção menor. Não está confirmado que 85,5 °E esteja no campo de visada efetivo.
+>
+> **Para o colega com contatos na China,** o pedido deve ser: **FY-4C LMI** (eventos, grupos e flashes), na mesma janela e na mesma caixa abaixo, e uma confirmação de que o produto cobre 85,5 °E / 28,3 °N.
+>
+> O resto desta carta (janela, caixa, finalidade) continua válido. O pedido ao Nepal está na `CARTA_07_DHM_NEPAL.md`.
+
 ---
 
 ## 1. Por que o FY-4A, e não o FY-4B
