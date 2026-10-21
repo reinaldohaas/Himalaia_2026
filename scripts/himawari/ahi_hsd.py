@@ -49,7 +49,8 @@ def ler_segmento(caminho):
         te = hp * cl / (kb * lam_m) / np.log(2.0 * hp * cl ** 2 / (lam_m ** 5 * rad * 1e6) + 1.0)
         tb = c0 + c1 * te + c2 * te ** 2
     tb[ruim | ~np.isfinite(tb) | (rad <= 0)] = np.nan
-    return {"tb": tb.astype(np.float32), "lin0": lin0, "ncol": ncol, "nlin": nlin, "cfac": cfac, "lfac": lfac,
+    rad = np.where(ruim, np.nan, rad)
+    return {"tb": tb.astype(np.float32), "rad": rad.astype(np.float32), "lin0": lin0, "ncol": ncol, "nlin": nlin, "cfac": cfac, "lfac": lfac,
             "coff": coff, "loff": loff, "sub_lon": sub_lon, "banda": banda, "lambda_um": lam,
             "segmento": (seg_num, seg_total)}
 
