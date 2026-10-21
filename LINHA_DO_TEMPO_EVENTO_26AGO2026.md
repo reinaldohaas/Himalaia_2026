@@ -172,6 +172,32 @@ Adhikari et al. dão nome à fonte: **flanco norte do Tsangbu Ri (6.781 m)**, pe
    * No vale do Lhende Khola inteiro (28,30–28,36 N, 85,45–85,52 E), o máximo é ≤ 0,24 ha, igual ao de antes.
    * As cenas de 14 e 24/08 são anteriores ao evento, e a de 03/09 é 100% nuvem. Entre 26/08 e 08/09 não há cena óptica utilizável.
    * O ponto do us7000tc90 fica junto à ponta inferior do depósito, onde ele encontra o Lhende Khola. Se houve barragem e lago, eles se esvaziaram antes de 08/09.
-   * O Sentinel-1, que vê através de nuvem, pode testar a janela de 26/08 a 08/09.
+   * O Sentinel-1, que vê através de nuvem, pode testar a janela de 26/08 a 08/09. Feito no item 7.
+
+6. **ASTER: o modelo de elevação pós-evento existe, mas está sobre nuvem** (`scripts/neve_anfiteatro/aster_dh.py`, `data/processed/cicatriz_lago/aster_dh.json`).
+   * O LP DAAC tem modelos AST14DEM (30 m) de 27/05, 16/06 e 11/07/2026 (antes) e de **30/08/2026** (quatro dias depois). Não há aquisição ASTER posterior até 21/10.
+   * O de 30/08 cobre todo o depósito, mas fica em média **4.458 m acima do terreno** do GLO-30. Em nenhum pixel do depósito a diferença é menor que 50 m. É o topo das nuvens da monção (~7,6 km), não o chão. As cenas tinham 41–53% de nuvem, e sobre o sítio ela era total.
+   * O de 16/06, de controle, alinhado ao GLO-30 (deslocamento de −60/+30 m), dá no depósito **mediana de −1,5 m** e dispersão de 12–20 m. Esse é o ruído do método: sem evento, nada muda. O de 11/07 não cobre a área.
+   * **Resultado:** o ASTER não mede a profundidade da cicatriz nem a espessura do depósito. Não há ICESat-2 nem GEDI cruzando a área entre julho e outubro de 2026.
+   * Para medir o volume falta um par estéreo pós-evento sem nuvem. As opções são todas por solicitação: Pléiades, WorldView ou SkySat (comerciais), ou um modelo TanDEM-X (DLR).
+7. **Sentinel-1: nenhum lago acima de ~1 ha no ponto do segundo deslizamento a partir de 28/08** (`scripts/neve_anfiteatro/s1_lago.py`, `data/processed/cicatriz_lago/s1_lago.json`).
+   * Teste: VV antes > −15 dB, para descartar sombra de relevo e água antiga; VV depois < −18 dB; queda > 5 dB na mesma órbita. Três órbitas, com o par de antes do evento como ruído.
+
+   | Órbita | Par | "Água nova" a até 2 km do tc90 | Maior mancha contínua |
+   | :--- | :--- | ---: | ---: |
+   | 121 | 07/08 → 19/08 (ruído) | 0,20 ha | 0,04 ha |
+   | 121 | 19/08 → 31/08 | 0,36 ha | 0,08 ha |
+   | 121 | 19/08 → 12/09 | 0,48 ha | 0,24 ha |
+   | 19 | 12/08 → 24/08 (ruído) | 0,08 ha | 0,04 ha |
+   | 19 | 24/08 → 05/09 | 0,88 ha | 0,48 ha |
+   | 19 | 24/08 → 17/09 | 1,16 ha | 0,72 ha |
+   | 85 | 04/08 → 16/08 (ruído) | 0,20 ha | 0,04 ha |
+   | 85 | 16/08 → **28/08** | 2,00 ha | 0,60 ha |
+   | 85 | 16/08 → 09/09 | 1,52 ha | 0,28 ha |
+
+   * Há um pouco mais de "água nova" que no ruído, mas espalhada em pixels soltos, com a maior mancha abaixo de 1 ha. O mesmo padrão aparece na neve alta ao sul, onde é neve molhada, não lago.
+   * A primeira passagem é de 28/08 às 12:21 UTC, ~2,3 dias depois do segundo deslizamento. **Se houve barragem e lago no Lhende Khola, eles tinham menos de ~1 ha ou já se tinham esvaziado** nesse prazo. Um lago de 1 ha com 5–10 m de profundidade guardaria só ~0,05–0,1 M m³.
+   * Limite: num vale estreito e íngreme, a geometria do radar (sombra e inversão de relevo) pode esconder uma faixa de água estreita.
+   * O "lago temporário" do texto do USGS continua sem nenhuma confirmação independente.
 
 **Arquivos de trabalho das buscas** (fora do repositório, no scratchpad da sessão): respostas brutas dos catálogos em `scratchpad\seis\`; textos do ADRC e do NDRRMA em `scratchpad\adrc\` e `scratchpad\ndrrma\`.

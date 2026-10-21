@@ -1,0 +1,86 @@
+{
+ "criterio": "VV antes > -15 dB, VV depois < -18 dB, queda > 5 dB (mesma orbita)",
+ "pares": [
+  {
+   "orbita": 121,
+   "par": "ruido 2026-08-07 > 2026-08-19",
+   "agua_nova_perto_tc90_ha": 0.2,
+   "agua_nova_vale_ha": 1.16,
+   "agua_nova_sobre_deposito_ha": 0.04,
+   "dVV_mediana_deposito_dB": 0.1,
+   "maior_mancha_perto_tc90_ha": 0.04
+  },
+  {
+   "orbita": 121,
+   "par": "2026-08-19 > 2026-08-31",
+   "agua_nova_perto_tc90_ha": 0.36,
+   "agua_nova_vale_ha": 1.6,
+   "agua_nova_sobre_deposito_ha": 0.08,
+   "dVV_mediana_deposito_dB": 1.1,
+   "maior_mancha_perto_tc90_ha": 0.08
+  },
+  {
+   "orbita": 121,
+   "par": "2026-08-19 > 2026-09-12",
+   "agua_nova_perto_tc90_ha": 0.48,
+   "agua_nova_vale_ha": 1.92,
+   "agua_nova_sobre_deposito_ha": 0.4,
+   "dVV_mediana_deposito_dB": 0.4,
+   "maior_mancha_perto_tc90_ha": 0.24
+  },
+  {
+   "orbita": 19,
+   "par": "ruido 2026-08-12 > 2026-08-24",
+   "agua_nova_perto_tc90_ha": 0.08,
+   "agua_nova_vale_ha": 0.88,
+   "agua_nova_sobre_deposito_ha": 0.08,
+   "dVV_mediana_deposito_dB": 0.2,
+   "maior_mancha_perto_tc90_ha": 0.04
+  },
+  {
+   "orbita": 19,
+   "par": "2026-08-24 > 2026-09-05",
+   "agua_nova_perto_tc90_ha": 0.88,
+   "agua_nova_vale_ha": 2.72,
+   "agua_nova_sobre_deposito_ha": 0.28,
+   "dVV_mediana_deposito_dB": 0.7,
+   "maior_mancha_perto_tc90_ha": 0.48
+  },
+  {
+   "orbita": 19,
+   "par": "2026-08-24 > 2026-09-17",
+   "agua_nova_perto_tc90_ha": 1.16,
+   "agua_nova_vale_ha": 2.8,
+   "agua_nova_sobre_deposito_ha": 0.52,
+   "dVV_mediana_deposito_dB": 0.3,
+   "maior_mancha_perto_tc90_ha": 0.72
+  },
+  {
+   "orbita": 85,
+   "par": "ruido 2026-08-04 > 2026-08-16",
+   "agua_nova_perto_tc90_ha": 0.2,
+   "agua_nova_vale_ha": 0.76,
+   "agua_nova_sobre_deposito_ha": 0.04,
+   "dVV_mediana_deposito_dB": -0.1,
+   "maior_mancha_perto_tc90_ha": 0.04
+  },
+  {
+   "orbita": 85,
+   "par": "2026-08-16 > 2026-08-28",
+   "agua_nova_perto_tc90_ha": 2.0,
+   "agua_nova_vale_ha": 2.24,
+   "agua_nova_sobre_deposito_ha": 1.8,
+   "dVV_mediana_deposito_dB": 1.1,
+   "maior_mancha_perto_tc90_ha": 0.6
+  },
+  {
+   "orbita": 85,
+   "par": "2026-08-16 > 2026-09-09",
+   "agua_nova_perto_tc90_ha": 1.52,
+   "agua_nova_vale_ha": 2.4,
+   "agua_nova_sobre_deposito_ha": 1.2,
+   "dVV_mediana_deposito_dB": 0.8,
+   "maior_mancha_perto_tc90_ha": 0.28
+  }
+ ]
+}

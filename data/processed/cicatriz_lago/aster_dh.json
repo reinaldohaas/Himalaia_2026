@@ -1,0 +1,32 @@
+{
+ "grade_m": 20.0,
+ "area_deposito_km2": 5.11,
+ "area_zona_cicatriz_km2": 3.2,
+ "dems": {
+  "2026-06-16": {
+   "deslocamento_m": [
+    -60,
+    30
+   ],
+   "offset_vertical_m": 0.4,
+   "nmad_estavel_m": 19.7,
+   "estavel_cobertura_%": 63.0,
+   "deposito": {
+    "cobertura_%": 94.0,
+    "mediana_m": -1.5,
+    "media_m": -1.2,
+    "nmad_m": 11.6,
+    "volume_Mm3_area_valida": -5.5,
+    "volume_Mm3_extrapolado": -5.9
+   },
+   "zona_cicatriz": {
+    "cobertura_%": 87.0,
+    "mediana_m": 5.4,
+    "media_m": 0.3,
+    "nmad_m": 23.4,
+    "volume_Mm3_area_valida": 0.9,
+    "volume_Mm3_extrapolado": 1.0
+   }
+  }
+ }
+}
