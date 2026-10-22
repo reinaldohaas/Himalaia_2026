@@ -208,3 +208,42 @@ A regra de C vale para D: o resultado só conta como candidato ao toró com um r
 | D | `toro_tDa` |
 
 Se os quatro baterem, os executáveis separados podem ser aposentados, e as rodadas A–D já feitas continuam valendo.
+
+**Andamento em 22/10/2026:** A, B e C conferem byte a byte (`wrfout_d01` e `wrfout_d02`). O teste de D estava rodando; o `orterun` caiu cinco vezes na partida.
+
+## Resultado do experimento D (22/10/2026)
+
+**A rodada:**
+* Foi lançada três vezes por causa das quedas do contêiner.
+* A última terminou com `SUCCESS COMPLETE WRF` às 15:53:44 UTC de 21/10, 17 s antes de mais uma queda.
+* **D = C bit a bit até 01:30 UTC**, inclusive no d03. As duas só podiam se separar a partir do início da nucleação no núcleo (`t_vn_ini` = 01:30).
+* **O disparo aconteceu uma única vez:**
+  * só em um dos 112 processos (`rsl.error.0060`), logo depois de 01:30;
+  * no ponto, w = 2,03 m/s, logo acima do limiar, ql = 7,8 × 10⁻⁴ kg/kg e T = 271,72 K (−1,4 °C);
+  * nenhum outro processo registrou disparo até 03 UTC.
+* Relatório do vlab: `relatorios/toro_wrf/LEIA_toro_wrf_D.txt`.
+
+**Análise:** `scripts/wrf/criterios_toro_C.py` com os rótulos D, C, B. Saídas em `data/processed/wrf_lhende/toro_wrf/criterios_D.json` e `.log`.
+
+| Critério | D | C | B |
+| :--- | ---: | ---: | ---: |
+| 1. Vento tangencial máximo (00:00 / 01:30 / 02:30) | 7,6 / 13,1 / 14,4 m/s | igual | — |
+| 2. Água super-resfriada máxima até 5 km, 23:00–01:30 | 2,9 × 10⁶ kg | igual | 80 kg |
+| 3. QNICE máximo até 5 km às 02:00 / 02:30 / 03:00 | 1,1 × 10² / 0,4 / 0,04 por kg | 0,6–1,6 × 10⁵ por kg | — |
+| 3. Variação da massa de gelo até 5 km, 01:30 → 03:00 | −8,1 × 10⁵ kg | −8,1 × 10⁵ kg | −6,5 × 10⁵ kg |
+| 7. Variação da água super-resfriada até 5 km, 01:30 → 03:00 | −4,0 × 10⁵ kg | −4,5 × 10⁵ kg | +1,7 × 10⁴ kg |
+| 4. Chuva sobre o anfiteatro, 01:30–03:00 | 0,00 mm | 0,01 mm | 0,00 mm |
+| 4. Volume de chuva até 30 km, 01:30–03:00 | 1,9 × 10² m³ | 2,0 × 10³ m³ | 5,1 × 10⁴ m³ |
+| 4. Descendente mínima até 30 km | −14,1 m/s | −14,1 m/s | −2,8 m/s |
+| 5. OLR sobre o sítio às 02:45 | 242 W/m² | 241 W/m² | 238 W/m² |
+
+**Leitura:**
+1. **O disparo pela ascendente quase não acontece.** No núcleo, pontos com w > 2 m/s, água líquida e T < 0 °C aparecem uma vez, num só processo, e logo depois de 01:30. A água do núcleo está a ~−1 a −2 °C. As ascendentes fortes do vórtice (até 8 m/s) ficam em sua maioria fora dessa água ou abaixo de 0 °C.
+2. **Sem disparo, o núcleo volta ao Estado A e o gelo some.** O QNICE no núcleo cai de ~10⁵ para ~0 por kg entre 01:30 e 03:00 (em C fica em ~10⁵). A massa de gelo cai como em C.
+3. **A água retida é praticamente a mesma de C:** D retém ~5 × 10⁴ kg a mais até 5 km. O critério 7 passa por pouco, sem efeito físico relevante.
+4. **Não há liberação:** a chuva até 30 km é ainda menor que em C.
+
+**Veredito pela regra pré-registrada:**
+* D **não** é candidato ao toró: o reservatório é de ~10⁷ kg e a liberação de ~10² m³.
+* A condição de disparo, que era a correção pedida, mostrou outra coisa. **No modelo, a água super-resfriada do núcleo e as ascendentes que poderiam disparar a nucleação quase não coincidem.**
+* Na hipótese revisada (22/10/2026; `LINHA_DO_TEMPO_EVENTO_26AGO2026.md` § 9), a pergunta passa a ser o acúmulo de granizo, graupel e neve no chão das encostas altas. A próxima diagnose é `SNOWNC`, `GRAUPELNC` e `HAILNC` nas rodadas A–D.

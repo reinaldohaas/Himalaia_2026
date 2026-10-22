@@ -134,14 +134,15 @@ def recorte(d, nome):
     raise FileNotFoundError(os.path.join(d, nome))
 
 
-def main(dc, db, da, geo, saida):
+def main(dc, db, da, geo, saida, rotulos="C,B,A"):
+    R = rotulos.split(",")
     from shapely.geometry import shape
     an = shape(json.load(open(geo, encoding="utf-8"))["features"][0]["geometry"])
-    res = {"C_vortice": analisa_vortice(recorte(dc, "recorte_vortice_d03.nc"))}
-    for rot, d in (("C", dc), ("B", db), ("A", da)):
+    res = {R[0] + "_vortice": analisa_vortice(recorte(dc, "recorte_vortice_d03.nc"))}
+    for rot, d in ((R[0], dc), (R[1], db), (R[2], da)):
         res[rot + "_gelo"] = analisa_gelo(recorte(d, "recorte_gelo_d03.nc"), rot)
         res[rot + "_liberacao"] = analisa_aux(d, an)
-    for rot in ("C", "B", "A"):
+    for rot in R:
         g = res[rot + "_gelo"]
         a, b = g.get("2026-08-26_01:30"), g.get("2026-08-26_03:00")
         if a and b:
@@ -150,10 +151,10 @@ def main(dc, db, da, geo, saida):
                                        "dslw_r5_0130_0300_kg": b["slw_r5_kg"] - a["slw_r5_kg"]}
     json.dump(res, open(saida, "w", encoding="utf-8"), indent=1)
     # resumo legivel
-    vt = res["C_vortice"]
-    print("\n1. vortice (C): " + "; ".join("%s vt %.1f m/s, zeta %.1e /s" % (t[11:], vt[t]["vt_max_2_6km_r10"], vt[t]["zeta_max_2_6km_r10"])
+    vt = res[R[0] + "_vortice"]
+    print("\n1. vortice (%s): " % R[0] + "; ".join("%s vt %.1f m/s, zeta %.1e /s" % (t[11:], vt[t]["vt_max_2_6km_r10"], vt[t]["zeta_max_2_6km_r10"])
                                          for t in ("2026-08-26_00:00", "2026-08-26_01:30", "2026-08-26_02:30") if t in vt))
-    for rot in ("C", "B", "A"):
+    for rot in R:
         g = res[rot + "_gelo"]
         pre = [g[t] for t in g if "2026-08-25_23:00" <= t <= "2026-08-26_01:30"]
         print("2. %s: SLW max (23:00-01:30) r5 %.2e kg, r30 %.2e kg; w max r5 %.1f m/s" % (
@@ -168,8 +169,8 @@ def main(dc, db, da, geo, saida):
             rot, li["chuva_anfiteatro_mm"], li["chuva_max_r30_mm"], li["volume_r30_m3"], li["taxa_max_r30_mm_h"],
             min(p["w_min_r30"] for p in pos)))
         print("5. %s: OLR no sitio 02:45 = %.1f W/m2" % (rot, li["olr_sitio_0245_W_m2"]))
-    print("QNICE max r5 (C): " + "; ".join("%s %.2e /kg" % (t[11:], vt[t]["qnice_max_r5_porkg"]) for t in sorted(vt)[::2]))
+    print("QNICE max r5 (%s): " % R[0] + "; ".join("%s %.2e /kg" % (t[11:], vt[t]["qnice_max_r5_porkg"]) for t in sorted(vt)[::2]))
 
 
 if __name__ == "__main__":
-    main(*sys.argv[1:6])
+    main(*sys.argv[1:7])
