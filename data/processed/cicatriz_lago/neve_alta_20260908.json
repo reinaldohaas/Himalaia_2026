@@ -1,0 +1,92 @@
+{
+ "caixa": [
+  85.48,
+  28.24,
+  85.58,
+  28.3
+ ],
+ "antes": [
+  "2026-08-24"
+ ],
+ "depois": [
+  "2026-09-08"
+ ],
+ "ruido": [
+  "2025-08-19",
+  "2025-09-03"
+ ],
+ "faixas": [
+  {
+   "faixa_m": [
+    3500,
+    4500
+   ],
+   "area_ha": 1036.0,
+   "valida_%": 16.0,
+   "neve_para_rocha_ha": 0.0,
+   "rocha_para_neve_ha": 0.5,
+   "ruido_perda_ha": 0.0,
+   "ruido_ganho_ha": 0.0
+  },
+  {
+   "faixa_m": [
+    4500,
+    5000
+   ],
+   "area_ha": 1127.0,
+   "valida_%": 8.0,
+   "neve_para_rocha_ha": 3.0,
+   "rocha_para_neve_ha": 5.8,
+   "ruido_perda_ha": 0.0,
+   "ruido_ganho_ha": 0.0
+  },
+  {
+   "faixa_m": [
+    5000,
+    5500
+   ],
+   "area_ha": 1498.0,
+   "valida_%": 4.0,
+   "neve_para_rocha_ha": 0.2,
+   "rocha_para_neve_ha": 0.8,
+   "ruido_perda_ha": 0.0,
+   "ruido_ganho_ha": 1.1
+  },
+  {
+   "faixa_m": [
+    5500,
+    6000
+   ],
+   "area_ha": 1553.0,
+   "valida_%": 3.0,
+   "neve_para_rocha_ha": 0.0,
+   "rocha_para_neve_ha": 1.0,
+   "ruido_perda_ha": 0.0,
+   "ruido_ganho_ha": 0.0
+  },
+  {
+   "faixa_m": [
+    6000,
+    6500
+   ],
+   "area_ha": 827.0,
+   "valida_%": 11.0,
+   "neve_para_rocha_ha": 2.3,
+   "rocha_para_neve_ha": 0.9,
+   "ruido_perda_ha": 0.0,
+   "ruido_ganho_ha": 0.0
+  },
+  {
+   "faixa_m": [
+    6500,
+    7300
+   ],
+   "area_ha": 420.0,
+   "valida_%": 63.0,
+   "neve_para_rocha_ha": 5.6,
+   "rocha_para_neve_ha": 0.6,
+   "ruido_perda_ha": 0.0,
+   "ruido_ganho_ha": 0.0
+  }
+ ]
+}

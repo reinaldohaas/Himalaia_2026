@@ -94,6 +94,9 @@
 7. **Luz azul.** Nenhum relato de luz azul, cores ou nuvem iridescente foi encontrado. O que existe é o **som de transformador estourando** e fios balançando (Lamichhane).
 8. **Cheiro de terra** em dois relatos independentes: Xiao Fugui (porto) e Li Bin (80 km abaixo).
 9. **O segundo deslizamento (06:00 UTC)** não tem nenhuma testemunha.
+10. **O vídeo do drone de 黑沐, visto pelo pesquisador (22/10/2026):** mostra neve escorrendo do ponto mais alto do maciço e algo colapsando naquele momento.
+    * Isso levou à hipótese revisada da § 9 da linha do tempo: a massa densa se forma no alto, escorrega até a zona da ruptura e então tudo colapsa.
+    * O vídeo tem hora gravada de 10:53 BJT (02:53 UTC), ~40 s depois do início sísmico. Falta estabelecer, com o arquivo original, se a neve escorreu antes da ruptura ou faz parte dela.
 
 ---
 

@@ -30,8 +30,8 @@ DEPOIS = ["2026-10-13", "2026-10-18"]
 BANDAS = ["B02", "B03", "B04", "B08", "B11", "B12", "SCL"]
 
 
-def itens():
-    it = stac_busca(PC, ["sentinel-2-l2a"], list(AOI), "2025-10-01/2026-10-20", {"eo:cloud_cover": {"lt": 70}})
+def itens(datas="2025-10-01/2026-10-20"):
+    it = stac_busca(PC, ["sentinel-2-l2a"], list(AOI), datas, {"eo:cloud_cover": {"lt": 70}})
     return [f for f in it if f["properties"]["datetime"][11:13] == "04" and f["properties"]["datetime"][14:16] in ("46", "47", "48")]
 
 

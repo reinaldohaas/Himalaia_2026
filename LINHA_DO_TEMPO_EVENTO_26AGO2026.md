@@ -272,4 +272,45 @@ O 2a é o que se vê nas imagens regionais, como a que o pesquisador anotou. O 2
 * Rede de detecção de descargas: WWLLN (acadêmica, por solicitação), Blitzortung (comunitária) e o imageador de relâmpagos do FY-4A/4B (LMI; carta já preparada em `docs/solicitacoes_institucionais/CARTA_06_NSMC_CMA_FY4A_LMI.md`).
 * Fica a pergunta: houve descargas a até 50 km da fonte entre 17:00 e 03:00 UTC?
 
+---
+
+## 9. Hipótese revisada: a massa se forma no alto, escorrega e então tudo colapsa (22/10/2026)
+
+**O que motivou a revisão:** o pesquisador assistiu ao vídeo do drone de 黑沐, que mostra o maciço no instante do colapso (catálogo de relatos, § 1). Ele viu duas coisas:
+* neve escorrendo do ponto mais alto;
+* algo colapsando naquele momento.
+
+**A hipótese revisada:** o evento de granizo/gelo concentrado aconteceu **mais alto**, nas encostas superiores do anfiteatro e do maciço (6–7 km). A massa escorregou até a zona da ruptura (~4.000–5.140 m, a cicatriz do Tsangbu Ri) e só então tudo colapsou.
+
+**O que ela resolve:**
+1. **A posição.** O anfiteatro sobe até ~7.200 m, e a cicatriz fica abaixo, a nordeste da saída dele. Uma massa descendo do alto liga as duas coisas.
+2. **A espera de ~1,5 h** entre a descida do topo da nuvem sobre o sítio (00:30–01:30 UTC) e a ruptura (02:52:16). Escorregar e carregar a encosta leva tempo. Isso combina com:
+   * os "vários eventos nas horas anteriores" (Adhikari et al.);
+   * o precursor ML 2,5 às 02:35:12;
+   * os estrondos graves que Ziha ouviu antes do estalo.
+3. **A geleira pouco mudada.** Uma massa que chega por cima e sai com a ruptura deixa pouca mudança líquida.
+
+**Que questões ela abre:**
+1. **A ordem no vídeo.** O vídeo tem hora gravada de 10:53 BJT (02:53 UTC), ~40 s depois do início sísmico. A neve que escorre do alto pode ser a frente da própria ruptura e a sua nuvem de pó. A hipótese pede que ela tenha escorrido antes. O arquivo original, com a hora de cada quadro, decide (pedido em andamento).
+2. **O satélite não mostra rastro claro no alto:**
+
+   | Comparação | Faixa | Resultado |
+   | :--- | :--- | :--- |
+   | out/2025 × out/2026 | acima de 5.500 m | nenhuma mudança de neve/gelo acima do ruído (0–1 ha) |
+   | 24/08 × 28/09/2026 | abaixo de 6 km | 200–500 ha de "rocha → neve": **nevou muito em setembro** e qualquer rastro ficou coberto |
+   | 24/08 × 08/09/2026 (13 dias depois; quase toda nublada) | 6.500–7.300 m (63% visível) | **5,6 ha de neve/gelo → rocha**, contra 0 no ruído (19/08 × 03/09/2025) |
+
+   Os pixels de 08/09 ficam na borda de nuvens e podem ser sombra ou borda que a máscara não pegou. **O resultado é inconclusivo.** Script `scripts/neve_anfiteatro/neve_alta_massico.py`; saídas `data/processed/cicatriz_lago/neve_alta*.json` e `.png`.
+3. **A pergunta aos modelos muda.** Não é mais "quanta água ficou suspensa sobre o anfiteatro", e sim **"quanto granizo, graupel e neve se acumularam no chão das encostas altas (6–7 km) durante a noite"**.
+   * O WRF guarda isso em `SNOWNC`, `GRAUPELNC` e `HAILNC`, nos `wrfout` das rodadas A–D, que ficaram no vlab.
+   * O pedido vai ao vlab depois do pós-processamento de D.
+4. **A chuva medida perto não ajuda a hipótese:** Kyanjin (3.850 m, no vale do Langtang) teve ~1 mm nas 24 h até 08:45 de 26/08, e o IMERG ~5 mm na célula.
+   * Isso não exclui acumulação no alto da face norte, que fica do outro lado da crista.
+   * Mas ela teria de vir de nuvem local sobre o maciço, e o Himawari a mostra até ~00:30.
+
+**Testes que faltam:**
+* o vídeo quadro a quadro (o que se move primeiro, de onde, e quanto antes de 02:52:16);
+* o Sentinel-1, que vê através de nuvem, nas encostas altas, entre 24/08 e 05/09;
+* os acumulados de neve, graupel e granizo no solo, no WRF, nas encostas altas.
+
 **Arquivos de trabalho das buscas** (fora do repositório, no scratchpad da sessão): respostas brutas dos catálogos em `scratchpad\seis\`; textos do ADRC e do NDRRMA em `scratchpad\adrc\` e `scratchpad\ndrrma\`.
