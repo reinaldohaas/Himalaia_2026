@@ -1,0 +1,250 @@
+{
+ "A": {
+  "anfiteatro": {
+   "pontos_1km2": 4,
+   "cota_media_m": 5749.0,
+   "ate_0130": {
+    "total_mm_media": 0.01,
+    "solido_mm_media": 0.0,
+    "solido_mm_max": 0.0,
+    "graupel_granizo_mm_media": 0.0,
+    "massa_solida_kg": 57.0,
+    "dSWE_kg_m2_media": 0.0
+   },
+   "ate_0245": {
+    "total_mm_media": 0.01,
+    "solido_mm_media": 0.0,
+    "solido_mm_max": 0.0,
+    "graupel_granizo_mm_media": 0.0,
+    "massa_solida_kg": 58.0,
+    "dSWE_kg_m2_media": -0.0
+   }
+  },
+  "encostas_altas_6km": {
+   "pontos_1km2": 5,
+   "cota_media_m": 6255.0,
+   "ate_0130": {
+    "total_mm_media": 0.01,
+    "solido_mm_media": 0.0,
+    "solido_mm_max": 0.0,
+    "graupel_granizo_mm_media": 0.0,
+    "massa_solida_kg": 108.0,
+    "dSWE_kg_m2_media": 0.02
+   },
+   "ate_0245": {
+    "total_mm_media": 0.01,
+    "solido_mm_media": 0.0,
+    "solido_mm_max": 0.0,
+    "graupel_granizo_mm_media": 0.0,
+    "massa_solida_kg": 111.0,
+    "dSWE_kg_m2_media": 0.01
+   }
+  },
+  "cicatriz_1km": {
+   "pontos_1km2": 7,
+   "cota_media_m": 4930.0,
+   "ate_0130": {
+    "total_mm_media": 0.0,
+    "solido_mm_media": 0.0,
+    "solido_mm_max": 0.0,
+    "graupel_granizo_mm_media": 0.0,
+    "massa_solida_kg": 2.0,
+    "dSWE_kg_m2_media": -0.0
+   },
+   "ate_0245": {
+    "total_mm_media": 0.0,
+    "solido_mm_media": 0.0,
+    "solido_mm_max": 0.0,
+    "graupel_granizo_mm_media": 0.0,
+    "massa_solida_kg": 2.0,
+    "dSWE_kg_m2_media": -0.0
+   }
+  }
+ },
+ "B": {
+  "anfiteatro": {
+   "pontos_1km2": 4,
+   "cota_media_m": 5749.0,
+   "ate_0130": {
+    "total_mm_media": 0.0,
+    "solido_mm_media": 0.0,
+    "solido_mm_max": 0.0,
+    "graupel_granizo_mm_media": 0.0,
+    "massa_solida_kg": 62.0,
+    "dSWE_kg_m2_media": -0.0
+   },
+   "ate_0245": {
+    "total_mm_media": 0.0,
+    "solido_mm_media": 0.0,
+    "solido_mm_max": 0.0,
+    "graupel_granizo_mm_media": 0.0,
+    "massa_solida_kg": 62.0,
+    "dSWE_kg_m2_media": -0.01
+   }
+  },
+  "encostas_altas_6km": {
+   "pontos_1km2": 5,
+   "cota_media_m": 6255.0,
+   "ate_0130": {
+    "total_mm_media": 0.0,
+    "solido_mm_media": 0.0,
+    "solido_mm_max": 0.0,
+    "graupel_granizo_mm_media": 0.0,
+    "massa_solida_kg": 117.0,
+    "dSWE_kg_m2_media": 0.0
+   },
+   "ate_0245": {
+    "total_mm_media": 0.0,
+    "solido_mm_media": 0.0,
+    "solido_mm_max": 0.0,
+    "graupel_granizo_mm_media": 0.0,
+    "massa_solida_kg": 117.0,
+    "dSWE_kg_m2_media": 0.0
+   }
+  },
+  "cicatriz_1km": {
+   "pontos_1km2": 7,
+   "cota_media_m": 4930.0,
+   "ate_0130": {
+    "total_mm_media": 0.0,
+    "solido_mm_media": 0.0,
+    "solido_mm_max": 0.0,
+    "graupel_granizo_mm_media": 0.0,
+    "massa_solida_kg": 3.0,
+    "dSWE_kg_m2_media": -0.0
+   },
+   "ate_0245": {
+    "total_mm_media": 0.0,
+    "solido_mm_media": 0.0,
+    "solido_mm_max": 0.0,
+    "graupel_granizo_mm_media": 0.0,
+    "massa_solida_kg": 3.0,
+    "dSWE_kg_m2_media": -0.0
+   }
+  }
+ },
+ "C": {
+  "anfiteatro": {
+   "pontos_1km2": 4,
+   "cota_media_m": 5749.0,
+   "ate_0130": {
+    "total_mm_media": 0.0,
+    "solido_mm_media": 0.0,
+    "solido_mm_max": 0.0,
+    "graupel_granizo_mm_media": 0.0,
+    "massa_solida_kg": 0.0,
+    "dSWE_kg_m2_media": -0.0
+   },
+   "ate_0245": {
+    "total_mm_media": 0.01,
+    "solido_mm_media": 0.0,
+    "solido_mm_max": 0.0,
+    "graupel_granizo_mm_media": 0.0,
+    "massa_solida_kg": 0.0,
+    "dSWE_kg_m2_media": -0.01
+   }
+  },
+  "encostas_altas_6km": {
+   "pontos_1km2": 5,
+   "cota_media_m": 6255.0,
+   "ate_0130": {
+    "total_mm_media": 0.0,
+    "solido_mm_media": 0.0,
+    "solido_mm_max": 0.0,
+    "graupel_granizo_mm_media": 0.0,
+    "massa_solida_kg": 0.0,
+    "dSWE_kg_m2_media": 0.0
+   },
+   "ate_0245": {
+    "total_mm_media": 0.03,
+    "solido_mm_media": 0.0,
+    "solido_mm_max": 0.0,
+    "graupel_granizo_mm_media": 0.0,
+    "massa_solida_kg": 0.0,
+    "dSWE_kg_m2_media": -0.0
+   }
+  },
+  "cicatriz_1km": {
+   "pontos_1km2": 7,
+   "cota_media_m": 4930.0,
+   "ate_0130": {
+    "total_mm_media": 0.0,
+    "solido_mm_media": 0.0,
+    "solido_mm_max": 0.0,
+    "graupel_granizo_mm_media": 0.0,
+    "massa_solida_kg": 0.0,
+    "dSWE_kg_m2_media": -0.0
+   },
+   "ate_0245": {
+    "total_mm_media": 0.0,
+    "solido_mm_media": 0.0,
+    "solido_mm_max": 0.0,
+    "graupel_granizo_mm_media": 0.0,
+    "massa_solida_kg": 0.0,
+    "dSWE_kg_m2_media": -0.01
+   }
+  }
+ },
+ "D": {
+  "anfiteatro": {
+   "pontos_1km2": 4,
+   "cota_media_m": 5749.0,
+   "ate_0130": {
+    "total_mm_media": 0.0,
+    "solido_mm_media": 0.0,
+    "solido_mm_max": 0.0,
+    "graupel_granizo_mm_media": 0.0,
+    "massa_solida_kg": 0.0,
+    "dSWE_kg_m2_media": -0.0
+   },
+   "ate_0245": {
+    "total_mm_media": 0.0,
+    "solido_mm_media": 0.0,
+    "solido_mm_max": 0.0,
+    "graupel_granizo_mm_media": 0.0,
+    "massa_solida_kg": 0.0,
+    "dSWE_kg_m2_media": -0.01
+   }
+  },
+  "encostas_altas_6km": {
+   "pontos_1km2": 5,
+   "cota_media_m": 6255.0,
+   "ate_0130": {
+    "total_mm_media": 0.0,
+    "solido_mm_media": 0.0,
+    "solido_mm_max": 0.0,
+    "graupel_granizo_mm_media": 0.0,
+    "massa_solida_kg": 0.0,
+    "dSWE_kg_m2_media": 0.0
+   },
+   "ate_0245": {
+    "total_mm_media": 0.0,
+    "solido_mm_media": 0.0,
+    "solido_mm_max": 0.0,
+    "graupel_granizo_mm_media": 0.0,
+    "massa_solida_kg": 0.0,
+    "dSWE_kg_m2_media": 0.0
+   }
+  },
+  "cicatriz_1km": {
+   "pontos_1km2": 7,
+   "cota_media_m": 4930.0,
+   "ate_0130": {
+    "total_mm_media": 0.0,
+    "solido_mm_media": 0.0,
+    "solido_mm_max": 0.0,
+    "graupel_granizo_mm_media": 0.0,
+    "massa_solida_kg": 0.0,
+    "dSWE_kg_m2_media": -0.0
+   },
+   "ate_0245": {
+    "total_mm_media": 0.0,
+    "solido_mm_media": 0.0,
+    "solido_mm_max": 0.0,
+    "graupel_granizo_mm_media": 0.0,
+    "massa_solida_kg": 0.0,
+    "dSWE_kg_m2_media": -0.01
+   }
+  }
+ }
+}

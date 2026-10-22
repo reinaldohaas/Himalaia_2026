@@ -209,7 +209,9 @@ A regra de C vale para D: o resultado só conta como candidato ao toró com um r
 
 Se os quatro baterem, os executáveis separados podem ser aposentados, e as rodadas A–D já feitas continuam valendo.
 
-**Andamento em 22/10/2026:** A, B e C conferem byte a byte (`wrfout_d01` e `wrfout_d02`). O teste de D estava rodando; o `orterun` caiu cinco vezes na partida.
+**Resultado (22/10/2026): validado.** Os quatro testes (A, B, C e D) conferem byte a byte com as referências, no `wrfout_d01` e no `wrfout_d02`; o de D rodou das 13:38 às 13:47 UTC. Relatório do vlab: `relatorios/toro_wrf/LEIA_toro_wrf_U.txt`.
+* O `wrf_toro.exe` lê o grupo pelo `namelist.input` ("modo super-resfriado ATIVO (namelist.input lido)").
+* Daqui em diante os experimentos se escolhem só pelo namelist (`rodar_toro_wrf.sh rodada_u A|B|C|D`).
 
 ## Resultado do experimento D (22/10/2026)
 
@@ -247,3 +249,28 @@ Se os quatro baterem, os executáveis separados podem ser aposentados, e as roda
 * D **não** é candidato ao toró: o reservatório é de ~10⁷ kg e a liberação de ~10² m³.
 * A condição de disparo, que era a correção pedida, mostrou outra coisa. **No modelo, a água super-resfriada do núcleo e as ascendentes que poderiam disparar a nucleação quase não coincidem.**
 * Na hipótese revisada (22/10/2026; `LINHA_DO_TEMPO_EVENTO_26AGO2026.md` § 9), a pergunta passa a ser o acúmulo de granizo, graupel e neve no chão das encostas altas. A próxima diagnose é `SNOWNC`, `GRAUPELNC` e `HAILNC` nas rodadas A–D.
+
+## Precipitação sólida acumulada no solo, rodadas A–D (22/10/2026)
+
+**Pergunta da hipótese revisada:** quanto granizo, graupel e neve se acumularam no chão das encostas altas durante a noite?
+
+**Dados e saídas:**
+* Recortes `recorte_solo_d03.nc` do vlab (d03, 1 km; `RAINNC`, `SNOWNC`, `GRAUPELNC`, `HAILNC`, `SNOW`, `SNOWH`, de 25/08 17:00 a 26/08 03:00).
+* Script `scripts/wrf/acumulado_solo.py`; saída `data/processed/wrf_lhende/toro_wrf/acumulado_solo.json`.
+
+**Resultado, 17:00 → 02:45 UTC, nas quatro rodadas:**
+
+| Região | Células de 1 km | Cota média no WRF | Precipitação total | Sólida (neve + graupel + granizo) | Graupel + granizo | ΔSWE |
+| :--- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Anfiteatro | 4 | 5.749 m | ≤ 0,01 mm | 0,00 mm (≤ 60 kg) | 0 | ~0 |
+| Encostas altas, ≥ 6.000 m (caixa 85,48–85,58 E, 28,24–28,30 N) | 5 | 6.255 m | ≤ 0,03 mm | 0,00 mm (≤ 120 kg) | 0 | ~0 |
+| Até 1 km da cicatriz | 7 | 4.930 m | 0,00 mm | 0,00 mm | 0 | ~0 |
+
+**Leitura:**
+1. **Nenhuma das rodadas deposita precipitação sólida apreciável no maciço**, nem nas encostas altas nem sobre a cicatriz. Os máximos do d03 às 02:45 (neve 18 mm, graupel 6,6 mm, granizo 0,1 mm) ficam longe do sítio.
+2. **O relevo do WRF a 1 km está muito suavizado:**
+   * no maciço, o ponto mais alto do modelo tem **6.438 m, contra 7.216 m no GLO-30**;
+   * a área acima de 6.000 m cai de 11,8 km² (GLO-30) para 5 células (5 km²);
+   * as encostas altas, onde a hipótese revisada põe a acumulação, praticamente não existem no modelo.
+   * É um argumento forte para o ERF, com terreno imerso e refinamento local.
+3. **Em resumo:** com o terreno e a microfísica atuais, o WRF não acumula a massa no alto. Isso pode ser um limite do modelo, por causa do relevo rebaixado, e não um teste conclusivo da hipótese.
