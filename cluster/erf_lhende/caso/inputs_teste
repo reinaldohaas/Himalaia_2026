@@ -1,0 +1,55 @@
+# ERF 26.09 -- caso idealizado Lhende/Tsangbu Ri, terreno imerso (gerar_caso_erf.py)
+# z = 0 do modelo = 3000 m ASL; relevo do GLO-30 (max 7032 m ASL), 500 m
+max_step = 10
+stop_time = 20.0
+amrex.fpe_trap_invalid = 1
+fabarray.mfiter_tile_size = 1024 1024 1024
+
+geometry.prob_extent = 20000 20000 16000
+amr.n_cell           = 40 40 64
+geometry.is_periodic = 1 1 0
+zlo.type = "NoSlipWall"
+zhi.type = "SlipWall"
+
+erf.fixed_dt           = 2.0
+erf.fixed_mri_dt_ratio = 6
+erf.sum_interval = 10
+erf.v = 1
+amr.v = 1
+amr.max_level = 0
+amr.max_grid_size = 20 20 32
+amr.blocking_factor = 1
+
+erf.check_file = chk
+erf.check_int  = -1
+erf.plot_file_1 = plt
+erf.plot_int_1  = 5
+erf.plot_vars_1 = density x_velocity y_velocity z_velocity pressure temp theta qv qc qi qr qs qg terrain_IB_mask rain_accum snow_accum graup_accum
+
+erf.use_gravity = true
+erf.molec_diff_type = "None"
+erf.les_type = "Smagorinsky"
+erf.Cs = 0.17
+erf.rayleigh_damp_U = true
+erf.rayleigh_damp_V = true
+erf.rayleigh_damp_W = true
+erf.rayleigh_damp_T = true
+prob.dampcoef = 0.2
+prob.zdamp = 4000.
+
+erf.init_type = "input_sounding"
+erf.sounding_type = Ideal
+erf.input_sounding_file = "input_sounding"
+
+erf.terrain_type = ImmersedForcing
+erf.terrain_file_name = terreno_dx500.txt
+erf.immersed_forcing_substep = true
+eb2.small_volfrac = 0.005
+eb2.cover_multiple_cuts = 1
+erf.if_use_most = true
+erf.if_surf_temp_flux = 0.0
+
+erf.use_coriolis = false
+erf.moisture_model = "Morrison"
+erf.moistscal_horiz_adv_type = Upwind_3rd_SL
+erf.moistscal_vert_adv_type  = Upwind_3rd_SL
