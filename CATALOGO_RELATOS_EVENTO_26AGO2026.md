@@ -97,6 +97,15 @@
 10. **O vídeo do drone de 黑沐, visto pelo pesquisador (22/10/2026):** mostra neve escorrendo do ponto mais alto do maciço e algo colapsando naquele momento.
     * Isso levou à hipótese revisada da § 9 da linha do tempo: a massa densa se forma no alto, escorrega até a zona da ruptura e então tudo colapsa.
     * O vídeo tem hora gravada de 10:53 BJT (02:53 UTC), ~40 s depois do início sísmico. Falta estabelecer, com o arquivo original, se a neve escorreu antes da ruptura ou faz parte dela.
+    * **Análise das cópias (22/10/2026).** O original foi retirado do Douyin e do Xiaohongshu. As cópias ficam fora do repositório, porque o vídeo é de terceiros.
+      * **Cópia mais próxima do original:** X, @Aliyang04559341 e @CarlZha, 27/08, 26,6 s, 1280×720.
+        * **A ruptura já está em curso no segundo 3:** há uma pluma marrom subindo da encosta.
+        * **Uma faixa branco-acinzentada desce em diagonal** da plataforma da geleira suspensa, por um sulco, até uma pluma de poeira no meio da encosta. Uma segunda pluma, maior e mais escura, sobe no fundo do vale, no nível do mar de nuvens.
+        * Nos 14 s de zoom (12–26 s), a faixa e as plumas pouco mudam: é um fluxo já estabelecido, não o instante inicial.
+        * **Tempo visível:** mar de nuvens baixas enchendo os vales (topo a ~4–4,5 km), uma faixa fina de estratos no meio da encosta, cúmulos agarrados às cristas, e sol e cirros acima. Nenhum cumulonimbus e nenhuma chuva visível. Isso confirma o nevoeiro relatado e explica os topos de 265–275 K que o Himawari não separa do terreno.
+      * **Bilibili BV1J74Z6cEG3, parte 7 (35,7 s, 360p, sem login):** montagem promocional do mesmo autor (pessoa numa crista, picos, mar de nuvens, o "observatório" de onde ele filmava). **Não mostra o início do colapso**, apesar da anotação "o evento começa aos 6 s".
+      * **Conclusão:** nenhuma cópia encontrada mostra o instante inicial. A sequência visível (faixa da geleira suspensa → poeira na encosta → poeira no vale) é compatível com material da geleira entrando numa ruptura em rocha logo abaixo. É a leitura de Kunda Dixit, no Nepali Times, e também a hipótese revisada (§ 9 da linha do tempo). Mas o vídeo não diz se a neve escorreu antes da ruptura.
+      * **Faltam:** o arquivo original de 黑沐 (nota do Xiaohongshu `6a907421000000002503fed1`, exige login) e a parte 5 do Bilibili (49 s, "mesmo autor, publicado às 10:00").
 
 ---
 
