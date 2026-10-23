@@ -101,10 +101,10 @@ amr.max_grid_size = {mgs}
 amr.blocking_factor = 1
 
 erf.check_file = chk
-erf.check_int  = {chk}
+{chk}
 erf.plot_file_1 = plt
 erf.plot_int_1  = {plot}
-erf.plot_vars_1 = density x_velocity y_velocity z_velocity pressure temp theta qv qc qi qr qs qg terrain_IB_mask rain_accum snow_accum graup_accum
+erf.plot_vars_1 = density x_velocity y_velocity z_velocity pressure temp theta qv qc qi qrain qsnow qgraup terrain_IB_mask rain_accum snow_accum graup_accum
 
 erf.use_gravity = true
 erf.molec_diff_type = "None"
@@ -145,8 +145,9 @@ def main():
     ls[0] = "%s %s %s" % (ps, th0, qv0)
     open(os.path.join(CASO, "input_sounding"), "w", newline="\n").write("\n".join(ls))
     for nome, dx, nz, dt, mri, max_step, stop, plot, chk, mgs in (
-            ("teste", 500.0, 64, 2.0, 6, 10, 20.0, 5, -1, "20 20 32"),
-            ("vlab", 200.0, 160, 1.0, 6, 1000000, 10800.0, 600, 3600, "25 25 32")):
+            ("teste", 500.0, 64, 2.0, 6, 10, 20.0, 5, "erf.check_int = -1", "20 20 32"),
+            # dt = 0,5 s: com 1 s o caso de 200 m estourou no passo 5 (T de 115-186 K nas cristas; LEIA_erf_gpu.txt)
+            ("vlab", 200.0, 160, 0.5, 6, 1000000, 10800.0, 1200, "erf.check_per = 3600.0   # reinicio a cada 1 h de modelo (erf.restart = chkNNNNN)", "25 25 32")):
         s, h, zmax = relevo(dx)
         ter = "terreno_dx%d.txt" % dx
         grava_relevo(os.path.join(CASO, ter), s, h)

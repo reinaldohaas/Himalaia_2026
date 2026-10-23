@@ -21,10 +21,10 @@ amr.max_grid_size = 20 20 32
 amr.blocking_factor = 1
 
 erf.check_file = chk
-erf.check_int  = -1
+erf.check_int = -1
 erf.plot_file_1 = plt
 erf.plot_int_1  = 5
-erf.plot_vars_1 = density x_velocity y_velocity z_velocity pressure temp theta qv qc qi qr qs qg terrain_IB_mask rain_accum snow_accum graup_accum
+erf.plot_vars_1 = density x_velocity y_velocity z_velocity pressure temp theta qv qc qi qrain qsnow qgraup terrain_IB_mask rain_accum snow_accum graup_accum
 
 erf.use_gravity = true
 erf.molec_diff_type = "None"
