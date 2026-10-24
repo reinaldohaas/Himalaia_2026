@@ -14,7 +14,7 @@ Ressalvas: rocha nua e solo seco tambem tem r39 moderada; com o sol baixo (sza >
 A paralaxe e tratada como em tb_paralaxe: para cada altura de topo h, o pixel aparente que o Himawari ve para
 uma nuvem a h km sobre o sitio (inversao de ahi_hsd.paralaxe).
 
-Uso: python fase_topo_10min.py [dir_bruto] [dir_saida]
+Uso: python fase_topo_10min.py [dir_bruto] [dir_saida] [lat,lon] [nome]
 """
 import os
 import re
@@ -32,7 +32,8 @@ RAIZ = os.path.abspath(os.path.join(AQUI, "..", ".."))
 BRUTO = sys.argv[1] if len(sys.argv) > 1 else os.path.join(RAIZ, "data", "raw", "himawari_10min")
 SAIDA = sys.argv[2] if len(sys.argv) > 2 else os.path.join(RAIZ, "data", "processed", "himawari_fase_topo")
 BUCKET = "https://noaa-himawari9.s3.amazonaws.com"
-SITIO = (28.271, 85.515)
+SITIO = tuple(map(float, sys.argv[3].split(","))) if len(sys.argv) > 3 else (28.271, 85.515)   # lat,lon
+NOME = sys.argv[4] if len(sys.argv) > 4 else "sitio"
 ALTURAS = (4, 6, 8, 10, 12, 14)          # km acima do nivel do mar
 H_PLANCK, C_LUZ, K_B = 6.62607015e-34, 2.99792458e8, 1.380649e-23
 
@@ -118,9 +119,9 @@ def main():
         linhas.append("%s %s %5.1f | %s" % (t.strftime("%H:%M"), npt, sza, " | ".join("      " + c for c in cel)))
         reg.append(ent)
         print(linhas[-1], flush=True)
-    open(os.path.join(SAIDA, "fase_topo_sitio_10min.txt"), "w", encoding="utf-8").write("\n".join(linhas) + "\n")
+    open(os.path.join(SAIDA, "fase_topo_%s_10min.txt" % NOME), "w", encoding="utf-8").write("\n".join(linhas) + "\n")
     import json
-    json.dump(reg, open(os.path.join(SAIDA, "fase_topo_sitio_10min.json"), "w", encoding="utf-8"), indent=1)
+    json.dump(reg, open(os.path.join(SAIDA, "fase_topo_%s_10min.json" % NOME), "w", encoding="utf-8"), indent=1)
     print("gravado em", SAIDA)
 
 
