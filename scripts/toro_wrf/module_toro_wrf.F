@@ -7,6 +7,9 @@
 ! aplicado e o WRF reproduz bit a bit a rodada original. Um so executavel faz os experimentos:
 !   A = sem grupo;  B = Estado A;  C = B + vortice + nucleacao no nucleo inteiro (disparo_w = .false.,
 !   nucleo_no_estado_A = .false.);  D = como C, mas o nucleo so nucleia onde w > w_crit (padroes .true.).
+!   E = como D, com o vortice em niveis medios (perfil_v = 1: gaussiana em z ASL centrada em zc_v_m, meia-largura
+!   zw_v_m) e o disparo restrito a faixa de temperatura t_nuc_min_c < T < t_nuc_max_c (C), p. ex. -8 a -3 (Hallett-Mossop).
+!   Padroes: perfil_v = 0 (sech^2 a partir do chao) e faixa -999 a 0 C, que reproduzem A-D bit a bit.
 !
 ! Estado A (t_ini <= t < t_rel, dentro de raio_km do centro (lat0,lon0), nos dominios marcados em dominios):
 !   fcoal  autoconversao e autocoleta de goticulas (qrcnw, crcnw, cautn)          -> chuva quente
@@ -52,13 +55,16 @@ MODULE module_toro_wrf
   LOGICAL, SAVE :: ligado = .true.               ! .false. desliga o modulo mesmo com o grupo presente
   LOGICAL, SAVE :: disparo_w = .true.            ! D: nucleacao no nucleo so onde w > w_crit; .false. = C
   LOGICAL, SAVE :: nucleo_no_estado_A = .true.   ! D: o nucleo segue no Estado A fora do disparo; .false. = C
+  INTEGER, SAVE :: perfil_v = 0                  ! 0: sech^2(h/zr_v_m) a partir do chao; 1: gaussiana em z ASL (E)
+  REAL,    SAVE :: zc_v_m = 7500.0, zw_v_m = 1500.0   ! perfil_v = 1: altitude do maximo e meia-largura (m)
+  REAL,    SAVE :: t_nuc_min_c = -999.0, t_nuc_max_c = 0.0   ! faixa de T (C) do disparo no nucleo
   LOGICAL, ALLOCATABLE, SAVE :: msup(:,:), maer(:,:), mvn(:,:)
 
   NAMELIST /toro_wrf/ t_ini, t_rel, t_dur, lat0, lon0, raio_km, fcoal, faccr, fctfz, fnuc, fhm, frfrz, fwfrz, &
                       t_hom_c, lat_aer, lon_aer, raio_aer_km, fnuc_rel, dominios, &
                       ivortex, t_v_ini, t_v_fim, tr_v, lat_v, lon_v, rmax_v_km, zr_v_m, alpha_v, dominios_v, &
                       t_vn_ini, raio_vn_km, fhm_v, fnuc_v, w_crit, q_crit, &
-                      ligado, disparo_w, nucleo_no_estado_A
+                      ligado, disparo_w, nucleo_no_estado_A, perfil_v, zc_v_m, zw_v_m, t_nuc_min_c, t_nuc_max_c
 
 CONTAINS
 
@@ -109,6 +115,10 @@ CONTAINS
     IF ( ativo .and. ivortex == 1 ) WRITE(0,'(a)') 'toro_wrf: vortice dinamico LIGADO'
     IF ( ativo .and. ivortex == 1 ) WRITE(0,'(a,l1,a,l1)') 'toro_wrf: disparo_w = ', disparo_w, &
                                                           ', nucleo_no_estado_A = ', nucleo_no_estado_A
+    IF ( ativo .and. ivortex == 1 .and. perfil_v == 1 ) WRITE(0,'(a,f7.0,a,f6.0,a)') &
+      'toro_wrf: perfil do vortice em niveis medios: maximo a ', zc_v_m, ' m ASL, meia-largura ', zw_v_m, ' m'
+    IF ( ativo .and. ivortex == 1 .and. t_nuc_min_c > -900.0 ) WRITE(0,'(a,f6.1,a,f6.1,a)') &
+      'toro_wrf: disparo so com ', t_nuc_min_c, ' < T < ', t_nuc_max_c, ' C'
   END SUBROUTINE le_config
 
   REAL FUNCTION dist_km(la, lo, la0, lo0)
@@ -181,8 +191,12 @@ CONTAINS
         s = r/rmax
         prof = gamm*alpha_v*s*exp(1.0 - s)
         DO k = kts, kte-1
-          h = z(i,k,j) - ht(i,j)
-          fv = prof/cosh( min(h/zr_v_m, 20.0) )**2
+          IF ( perfil_v == 1 ) THEN
+            fv = prof*exp( -( (z(i,k,j) - zc_v_m)/zw_v_m )**2 )
+          ELSE
+            h = z(i,k,j) - ht(i,j)
+            fv = prof/cosh( min(h/zr_v_m, 20.0) )**2
+          ENDIF
           rublten(i,k,j) = rublten(i,k,j) - fv*y/r
           rvblten(i,k,j) = rvblten(i,k,j) + fv*x/r
         ENDDO
@@ -200,7 +214,7 @@ CONTAINS
       disparo = .true.
       RETURN
     ENDIF
-    disparo = ( wl > w_crit .and. ql > q_crit .and. tk < 273.15 )
+    disparo = ( wl > w_crit .and. ql > q_crit .and. tk < 273.15 + t_nuc_max_c .and. tk > 273.15 + t_nuc_min_c )
     IF ( disparo .and. .not. avisou_disparo ) THEN
       avisou_disparo = .true.
       WRITE(0,'(a,f6.2,a,es9.2,a,f7.2)') 'toro_wrf: nucleacao no nucleo disparada (w = ', wl, ' m/s, ql = ', ql, ' kg/kg, T = ', tk

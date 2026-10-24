@@ -274,3 +274,38 @@ Se os quatro baterem, os executáveis separados podem ser aposentados, e as roda
    * as encostas altas, onde a hipótese revisada põe a acumulação, praticamente não existem no modelo.
    * É um argumento forte para o ERF, com terreno imerso e refinamento local.
 3. **Em resumo:** com o terreno e a microfísica atuais, o WRF não acumula a massa no alto. Isso pode ser um limite do modelo, por causa do relevo rebaixado, e não um teste conclusivo da hipótese.
+
+## Experimento E: vórtice em níveis médios sobre as encostas altas (24/10/2026)
+
+**Motivo:** a hipótese revisada (`LINHA_DO_TEMPO_EVENTO_26AGO2026.md` § 9) põe a formação do granizo e do gelo **no alto**. A massa se formaria sobre as encostas de 6–7 km e escorregaria até a cicatriz (~4.000–5.140 m). Em C e D, o vórtice tinha três desencontros com isso:
+* estava centrado no anfiteatro (ponto do USGS);
+* tinha a força máxima junto ao chão;
+* ligava às 00 UTC e só nucleava a partir de 01:30, depois que o topo da nuvem sobre o sítio já tinha descido ao terreno (Himawari, 00:00–01:20).
+
+Em D, a água do núcleo estava a −1/−2 °C e quase nunca coincidia com as ascendentes.
+
+**Código (módulo versão 4, executável único):** duas opções novas. Com os valores padrão, o comportamento de A–D não muda (a validar byte a byte).
+* `perfil_v = 1`: força tangencial gaussiana em altitude, F ∝ exp(−((z − `zc_v_m`)/`zw_v_m`)²). O padrão (`perfil_v = 0`) é o sech²(h/`zr_v_m`) a partir do chão.
+* `t_nuc_min_c` e `t_nuc_max_c`: o disparo da nucleação no núcleo só acontece com `t_nuc_min_c` < T < `t_nuc_max_c` (°C). Os padrões −999 e 0 equivalem ao T < 0 °C de D.
+
+**Configuração** (`toro_wrf_vortice_E.txt`; o resto igual a D):
+
+| Parâmetro | D | E | Base |
+| :--- | :--- | :--- | :--- |
+| Centro do vórtice | 28,271 N / 85,515 E | **28,270 N / 85,535 E** | faixa de 6.000–6.500 m do GLO-30 a ~2 km ao sul (morro acima) da cicatriz, centrada em 28,268 N / 85,534 E; deslocamento de ~1 km a leste pela deriva (vento de 1,5–5 m/s de NE–E entre 7 e 9 km nas sondagens ERA5 das 18 e 00 UTC: um granizo caindo de ~8 km deriva só 1–3 km) |
+| Perfil vertical | sech²(h/3 km) a partir do chão | **gaussiana centrada em 7.500 m ASL, meia-largura 1.500 m** | mesociclone em níveis médios, onde ficam a água super-resfriada e o crescimento do granizo |
+| Vórtice ligado | 00:00–03:00 (rampa de 1 h) | **22:00–01:30** (rampa de 1 h) | colapso da convecção perto do sítio (22–01 UTC) e descida do topo sobre o sítio (00:00–01:20) |
+| Nucleação no núcleo | a partir de 01:30, w > 2 m/s, T < 0 °C | **a partir de 00:00, w > 1 m/s, −8 < T < −3 °C** | faixa ativa do Hallett–Mossop, que no perfil de agosto fica a ~5,8–6,6 km ASL, a altura das encostas altas |
+
+**Validação:**
+1. `teste_unico`: A–D com o executável novo, byte a byte iguais às referências.
+2. `teste_ativo_u E`: 30 min com `toro_wrf_teste_vE.txt` (no d02); as linhas novas do `toro_wrf` aparecem e o d02 difere de `toro_tDa`.
+
+**Critérios (fixados antes de rodar), comparados com D e A:**
+1. **Vórtice:** vento tangencial e vorticidade entre 6 e 9 km ASL, a até 10 km do centro, às 23:00, 00:30 e 01:30.
+2. **Disparo:** quantos processos registram disparo, quando e a que temperatura.
+3. **Água super-resfriada e gelo** a até 5 e 30 km do centro, de 22:00 a 01:30.
+4. **O critério principal da hipótese revisada:** **graupel, granizo e neve acumulados no chão** (`recorte_solo_d03.nc`) nas encostas ≥ 6.000 m e a até 1 km da cicatriz, de 22:00 a 02:45.
+5. **Chuva e descendente** sobre o anfiteatro e a até 30 km.
+
+Regra: o resultado só conta como **candidato** se o critério 4 der uma massa sólida no chão das encostas altas da ordem de 10⁹–10¹⁰ kg, o que corresponde a ~10⁶–10⁷ m³ de gelo. Abaixo disso, é o limite do modelo, que tem o relevo rebaixado a 1 km (a ser testado no d04).
