@@ -98,6 +98,7 @@ def main():
                           "km2_acima_6000": round((zm >= 6000).sum() * a_cel, 3), "km2_acima_5500": round((zm >= 5500).sum() * a_cel, 3),
                           "declividade_media": round(decl[m2].mean(), 1),
                           "faixas_500m_km2": {"%d-%d" % (c, c + 500): round(((zm >= c) & (zm < c + 500)).sum() * a_cel, 3) for c in range(4000, 7500, 500)}}
+    np.savez_compressed(os.path.join(SAIDA, "bacia_ponto.npz"), mascara=m2, lat=lat, lon=lon)
     json.dump(r, open(os.path.join(SAIDA, "ponto_drone.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1, default=float)
     print(json.dumps(r, ensure_ascii=False, indent=1, default=float))
 
