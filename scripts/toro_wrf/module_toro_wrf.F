@@ -190,16 +190,22 @@ CONTAINS
         IF ( r < 1.0 .or. r > 10.0*rmax ) CYCLE
         s = r/rmax
         prof = gamm*alpha_v*s*exp(1.0 - s)
-        DO k = kts, kte-1
-          IF ( perfil_v == 1 ) THEN
+        ! dois lacos separados: com o IF dentro do laco o gfortran deixa de vetorizar o cosh (libmvec) e o
+        ! perfil sech^2 muda no ultimo bit; assim o caminho padrao e o mesmo codigo de A-D (v4.1)
+        IF ( perfil_v == 1 ) THEN
+          DO k = kts, kte-1
             fv = prof*exp( -( (z(i,k,j) - zc_v_m)/zw_v_m )**2 )
-          ELSE
+            rublten(i,k,j) = rublten(i,k,j) - fv*y/r
+            rvblten(i,k,j) = rvblten(i,k,j) + fv*x/r
+          ENDDO
+        ELSE
+          DO k = kts, kte-1
             h = z(i,k,j) - ht(i,j)
             fv = prof/cosh( min(h/zr_v_m, 20.0) )**2
-          ENDIF
-          rublten(i,k,j) = rublten(i,k,j) - fv*y/r
-          rvblten(i,k,j) = rvblten(i,k,j) + fv*x/r
-        ENDDO
+            rublten(i,k,j) = rublten(i,k,j) - fv*y/r
+            rvblten(i,k,j) = rvblten(i,k,j) + fv*x/r
+          ENDDO
+        ENDIF
       ENDDO
     ENDDO
   END SUBROUTINE toro_vortice

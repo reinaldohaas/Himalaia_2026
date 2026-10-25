@@ -309,3 +309,14 @@ Em D, a água do núcleo estava a −1/−2 °C e quase nunca coincidia com as a
 5. **Chuva e descendente** sobre o anfiteatro e a até 30 km.
 
 Regra: o resultado só conta como **candidato** se o critério 4 der uma massa sólida no chão das encostas altas da ordem de 10⁹–10¹⁰ kg, o que corresponde a ~10⁶–10⁷ m³ de gelo. Abaixo disso, é o limite do modelo, que tem o relevo rebaixado a 1 km (a ser testado no d04).
+
+## v4.1: a vetorização do cosh e a reprodução bit a bit (25/10/2026)
+
+* **Sintoma:** com o v4 (sha `f1cef7ae…`), A e B saíram idênticos às referências, mas C não. Às 00:30, C difere de `toro_tCa` em 90 das 210 variáveis em quase todo o d02 (máximo de 1,9 m/s no vento e 1,2 K na temperatura).
+* **O vlab descartou o ambiente:** mesmo NP (112), mesma decomposição (8 × 14), mesmas entradas e mesmo namelist (`relatorios/toro_wrf/LEIA_diagnostico_v4.txt`).
+* **Causa, vista na desmontagem do `toro_vortice` nos dois executáveis:**
+  * no v3, o laço do perfil sech² chama o `coshf` vetorial da libmvec (`_ZGVbN4v_coshf`), porque o gfortran 13 vetoriza com `-O2 -ftree-vectorize` mesmo sem `-ffast-math`;
+  * no v4, o `IF ( perfil_v == 1 )` dentro do laço impediu a vetorização, e o `coshf` passou a ser o escalar;
+  * as duas versões diferem no último bit, e com o vórtice ligado a diferença cresce caoticamente.
+* **Correção (v4.1, sha `d76faa55…`):** os dois perfis ficam em laços separados, e o caminho padrão volta a ser o laço de A–D. A desmontagem mostra de novo 1 chamada vetorial e 6 escalares de `coshf`, como no v3. O pacote é `bin_toro_V41.tar.gz` (sha `62cf2fdf…`), e a validação (`teste_unico` com os 8 `cmp`) fica com o vlab.
+* **Lição para a análise:** nos experimentos com vórtice, uma diferença do tamanho do arredondamento já muda o d02 inteiro em 30 min. Diferenças entre C, D e E menores que esse ruído não podem ser atribuídas à física dos experimentos.
