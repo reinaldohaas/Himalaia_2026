@@ -5,7 +5,9 @@ Agua super-resfriada no topo das nuvens perto do anfiteatro e do ponto do drone 
 
 1) Posicao: cada pixel e levado da posicao aparente para a verdadeira com a altura do topo tirada do B13 pela sondagem
    do ERA5 (input_sounding_pre_colapso_4322 do CM1). A 66 graus de zenite, um topo a 8 km desloca ~20 km.
-2) Fase do topo (so pixels com 238 K <= T13 < 273 K, isto e, topo abaixo de 0 C e acima do limite de -35 C):
+2) Fase do topo (so pixels com 238 K <= T13 < 273 K, isto e, topo abaixo de 0 C e acima do limite de -35 C).
+   De dia o relevo frio passa nesse teste (controle: a manha quase limpa de 25/08 da ~2.000 km2 de "agua" ate 30 km);
+   por isso, de dia, so conta o pixel que tambem difere de 25/08 na mesma hora (T13 4 K mais frio, B05 +0,08 ou B03 +0,10).
    noite (sza > 88): agua se BTD = T07 - T13 <= -2 K (gotas emitem menos em 3,9 um que em 10,4 um);
    dia: agua se r39 >= 0,10 (refletancia em 3,9 um; gelo < ~0,05) e B05 (1,6 um) >= 0,25.
    Com o sol baixo (75 <= sza <= 88, 00:00-01:00 UTC) a r39 e o B05/cos(sza) explodem: fase indeterminada (sem pixel de agua).
@@ -36,7 +38,8 @@ import ahi_hsd as hsd
 
 RAIZ = os.path.abspath(os.path.join(AQUI, "..", ".."))
 DIR_IR, DIR_B03, DIR_B05 = sys.argv[1:4]
-SAIDA = os.path.join(RAIZ, "data", "processed", "agua_sr_satelite")
+REF = len(sys.argv) > 4 and sys.argv[4] == "ref25"      # controle: manha de 25/08 (quase limpa), mesmo classificador
+SAIDA = os.path.join(RAIZ, "data", "processed", "agua_sr_satelite" + ("_ref25" if REF else ""))
 SOND = os.path.join(RAIZ, "data", "processed", "toro_cm1", "input_sounding_pre_colapso_4322")
 BUCKET = "https://noaa-himawari9.s3.amazonaws.com"
 P = (28.293985, 85.523964)
@@ -104,9 +107,13 @@ def main():
     print("area por pixel %.1f km2" % area_px)
     dkm = lambda la, lo: np.hypot((la - P[0]) * 111.32, (lo - P[1]) * 111.32 * np.cos(np.radians(P[0])))
 
-    reg, mapas = [], {}
-    t = datetime(2026, 8, 25, 17, 0)
-    while t <= datetime(2026, 8, 26, 3, 0):
+    reg, mapas, cubo_ref = [], {}, {}
+    # de dia, o relevo frio (rocha e neve a 5-7 km, T13 < 273 K) passa no teste de fase: so conta como nuvem o que no
+    # mesmo pixel e na mesma hora difere da manha quase limpa de 25/08 (rodada "ref25")
+    fref = os.path.join(RAIZ, "data", "processed", "agua_sr_satelite_ref25", "ref25.npz")
+    REFD = np.load(fref) if (not REF and os.path.exists(fref)) else None
+    t, t_fim = (datetime(2026, 8, 25, 0, 0), datetime(2026, 8, 25, 3, 0)) if REF else (datetime(2026, 8, 25, 17, 0), datetime(2026, 8, 26, 3, 0))
+    while t <= t_fim:
         try:
             s7, s13 = hsd.ler_segmento(baixar(t, "B07", DIR_IR)), hsd.ler_segmento(baixar(t, "B13", DIR_IR))
         except Exception as e:
@@ -137,6 +144,14 @@ def main():
                 R03 = np.full(T13.shape, np.nan)
             # com sza >= 75 a r39 e o B05/cos(sza) explodem (denominador pequeno): fase indeterminada
             agua = frio & (r39 >= 0.10) & ((b05 >= 0.25) | ~np.isfinite(b05)) & (sza < 75)
+            hk = t.strftime("%H%M")
+            if REF:
+                cubo_ref["T13_" + hk] = T13; cubo_ref["B05_" + hk] = b05; cubo_ref["R03_" + hk] = R03
+            elif REFD is not None and ("T13_" + hk) in REFD.files:
+                nuvem = ((T13 < REFD["T13_" + hk] - 4.0) | (b05 > REFD["B05_" + hk] + 0.08) | (R03 > REFD["R03_" + hk] + 0.10))
+                agua = agua & nuvem
+            elif REFD is not None:
+                agua = np.zeros_like(agua)          # sem referencia neste horario: nao classifica
         # posicao verdadeira de cada pixel com a altura do topo
         TLA, TLO = LA.copy(), LO.copy()
         for a, b in zip(*np.where(np.isfinite(LA) & (T13 < 285))):
@@ -177,6 +192,9 @@ def main():
     open(os.path.join(SAIDA, "agua_sr_satelite.txt"), "w", encoding="utf-8").write("\n".join(lin) + "\n")
     json.dump({"z0_km": z0, "area_px_km2": area_px, "registros": reg}, open(os.path.join(SAIDA, "agua_sr_satelite.json"), "w", encoding="utf-8"), indent=1)
 
+    if REF:
+        np.savez_compressed(os.path.join(SAIDA, "ref25.npz"), **cubo_ref)
+        print("controle gravado em", SAIDA); return
     np.savez_compressed(os.path.join(SAIDA, "agua_sr_mapas.npz"),
                         **{"%s_%s" % (h.replace(" ", "_").replace(":", ""), n): v for h, tup in mapas.items()
                            for n, v in zip(("lat", "lon", "T13", "agua", "sza"), tup)})

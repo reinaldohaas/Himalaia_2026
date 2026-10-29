@@ -1429,26 +1429,26 @@
    "fase": "ok",
    "r5": {
     "area_frio_km2": 26.0,
-    "area_agua_km2": 26.0,
-    "zt_med_km": 6.2,
-    "massa_sint_f1_kg": 3300491.816385772,
-    "massa_vis_kg": 4611749.96738658,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
     "T13_min": 269.9
    },
    "r10": {
     "area_frio_km2": 155.0,
-    "area_agua_km2": 129.0,
-    "zt_med_km": 6.7,
-    "massa_sint_f1_kg": 77887984.89722258,
-    "massa_vis_kg": 12017026.150994858,
+    "area_agua_km2": 52.0,
+    "zt_med_km": 6.9,
+    "massa_sint_f1_kg": 39608319.83123175,
+    "massa_vis_kg": 5113445.521709045,
     "T13_min": 262.7
    },
    "r30": {
     "area_frio_km2": 1721.0,
-    "area_agua_km2": 1216.0,
-    "zt_med_km": 7.6,
-    "massa_sint_f1_kg": 3170925634.0581264,
-    "massa_vis_kg": 98321499.45542014,
+    "area_agua_km2": 569.0,
+    "zt_med_km": 7.9,
+    "massa_sint_f1_kg": 2004329351.136364,
+    "massa_vis_kg": 38852328.62824894,
     "T13_min": 231.9
    }
   },
@@ -1466,18 +1466,18 @@
    },
    "r10": {
     "area_frio_km2": 91.0,
-    "area_agua_km2": 65.0,
+    "area_agua_km2": 39.0,
     "zt_med_km": 6.3,
-    "massa_sint_f1_kg": 12410246.271160075,
-    "massa_vis_kg": 5441637.63378184,
+    "massa_sint_f1_kg": 8978971.83314735,
+    "massa_vis_kg": 4596124.166385014,
     "T13_min": 268.3
    },
    "r30": {
     "area_frio_km2": 1566.0,
-    "area_agua_km2": 1139.0,
-    "zt_med_km": 7.5,
-    "massa_sint_f1_kg": 2575344670.6049705,
-    "massa_vis_kg": 85216456.34189734,
+    "area_agua_km2": 556.0,
+    "zt_med_km": 7.9,
+    "massa_sint_f1_kg": 1807246796.3199034,
+    "massa_vis_kg": 37655931.97846342,
     "T13_min": 238.8
    }
   },
@@ -1495,18 +1495,18 @@
    },
    "r10": {
     "area_frio_km2": 39.0,
-    "area_agua_km2": 39.0,
-    "zt_med_km": 6.4,
-    "massa_sint_f1_kg": 7144148.731368568,
-    "massa_vis_kg": 1726263.9976675087,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
     "T13_min": 269.4
    },
    "r30": {
     "area_frio_km2": 1229.0,
-    "area_agua_km2": 983.0,
-    "zt_med_km": 7.2,
-    "massa_sint_f1_kg": 1740221443.409033,
-    "massa_vis_kg": 88208009.49947809,
+    "area_agua_km2": 595.0,
+    "zt_med_km": 7.5,
+    "massa_sint_f1_kg": 1340763286.0352905,
+    "massa_vis_kg": 37570054.57283657,
     "T13_min": 247.5
    }
   },
@@ -1516,26 +1516,26 @@
    "fase": "ok",
    "r5": {
     "area_frio_km2": 39.0,
-    "area_agua_km2": 39.0,
+    "area_agua_km2": 13.0,
     "zt_med_km": 5.8,
-    "massa_sint_f1_kg": 51695.453842231,
-    "massa_vis_kg": 3109970.7908009603,
+    "massa_sint_f1_kg": 611.8616685571185,
+    "massa_vis_kg": 1468035.112095856,
     "T13_min": 272.8
    },
    "r10": {
     "area_frio_km2": 52.0,
-    "area_agua_km2": 52.0,
-    "zt_med_km": 6.1,
-    "massa_sint_f1_kg": 11358460.58723055,
-    "massa_vis_kg": 3624721.611344327,
+    "area_agua_km2": 13.0,
+    "zt_med_km": 5.8,
+    "massa_sint_f1_kg": 611.8616685571185,
+    "massa_vis_kg": 1468035.112095856,
     "T13_min": 266.3
    },
    "r30": {
     "area_frio_km2": 919.0,
-    "area_agua_km2": 686.0,
-    "zt_med_km": 7.2,
-    "massa_sint_f1_kg": 1067013024.4743958,
-    "massa_vis_kg": 45414520.268743046,
+    "area_agua_km2": 466.0,
+    "zt_med_km": 7.4,
+    "massa_sint_f1_kg": 876370495.6295688,
+    "massa_vis_kg": 29079014.71519078,
     "T13_min": 244.3
    }
   },
@@ -1545,26 +1545,26 @@
    "fase": "ok",
    "r5": {
     "area_frio_km2": 13.0,
-    "area_agua_km2": 13.0,
-    "zt_med_km": 6.2,
-    "massa_sint_f1_kg": 1246200.2800743994,
-    "massa_vis_kg": 1215965.4040024397,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
     "T13_min": 271.0
    },
    "r10": {
     "area_frio_km2": 52.0,
-    "area_agua_km2": 52.0,
-    "zt_med_km": 6.1,
-    "massa_sint_f1_kg": 3752195.93746737,
-    "massa_vis_kg": 2752152.756532408,
+    "area_agua_km2": 13.0,
+    "zt_med_km": 6.3,
+    "massa_sint_f1_kg": 2075178.0232711164,
+    "massa_vis_kg": 444378.03626783664,
     "T13_min": 270.4
    },
    "r30": {
     "area_frio_km2": 725.0,
-    "area_agua_km2": 582.0,
-    "zt_med_km": 7.2,
-    "massa_sint_f1_kg": 812863910.8940653,
-    "massa_vis_kg": 30517032.72733652,
+    "area_agua_km2": 427.0,
+    "zt_med_km": 7.3,
+    "massa_sint_f1_kg": 672516238.7546839,
+    "massa_vis_kg": 20822842.652877722,
     "T13_min": 244.9
    }
   },
@@ -1574,26 +1574,26 @@
    "fase": "ok",
    "r5": {
     "area_frio_km2": 13.0,
-    "area_agua_km2": 13.0,
-    "zt_med_km": 6.5,
-    "massa_sint_f1_kg": 3178457.4271880263,
-    "massa_vis_kg": 1283590.3543041896,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
     "T13_min": 269.7
    },
    "r10": {
     "area_frio_km2": 39.0,
-    "area_agua_km2": 39.0,
-    "zt_med_km": 6.6,
-    "massa_sint_f1_kg": 13392691.086369596,
-    "massa_vis_kg": 3398064.9585096124,
+    "area_agua_km2": 26.0,
+    "zt_med_km": 6.7,
+    "massa_sint_f1_kg": 10214233.65918157,
+    "massa_vis_kg": 2114474.6042054226,
     "T13_min": 268.4
    },
    "r30": {
     "area_frio_km2": 660.0,
-    "area_agua_km2": 531.0,
-    "zt_med_km": 7.2,
-    "massa_sint_f1_kg": 757412477.0631487,
-    "massa_vis_kg": 27336958.022288036,
+    "area_agua_km2": 427.0,
+    "zt_med_km": 7.3,
+    "massa_sint_f1_kg": 650015901.9079618,
+    "massa_vis_kg": 21533638.869865786,
     "T13_min": 243.4
    }
   },
@@ -1611,18 +1611,18 @@
    },
    "r10": {
     "area_frio_km2": 65.0,
-    "area_agua_km2": 65.0,
-    "zt_med_km": 6.2,
-    "massa_sint_f1_kg": 6382636.413677403,
-    "massa_vis_kg": 3561632.4517845544,
+    "area_agua_km2": 26.0,
+    "zt_med_km": 6.1,
+    "massa_sint_f1_kg": 1282286.2485410615,
+    "massa_vis_kg": 2263816.5467222715,
     "T13_min": 269.4
    },
    "r30": {
     "area_frio_km2": 699.0,
-    "area_agua_km2": 595.0,
+    "area_agua_km2": 492.0,
     "zt_med_km": 7.1,
-    "massa_sint_f1_kg": 773353099.2043426,
-    "massa_vis_kg": 28985159.21301479,
+    "massa_sint_f1_kg": 706244220.1516762,
+    "massa_vis_kg": 25433901.731514532,
     "T13_min": 242.1
    }
   },
@@ -1648,10 +1648,10 @@
    },
    "r30": {
     "area_frio_km2": 543.0,
-    "area_agua_km2": 427.0,
+    "area_agua_km2": 414.0,
     "zt_med_km": 7.2,
-    "massa_sint_f1_kg": 598043852.6740642,
-    "massa_vis_kg": 22409543.045486756,
+    "massa_sint_f1_kg": 595766912.3691394,
+    "massa_vis_kg": 19857794.75703007,
     "T13_min": 246.8
    }
   },
@@ -1677,10 +1677,10 @@
    },
    "r30": {
     "area_frio_km2": 595.0,
-    "area_agua_km2": 453.0,
+    "area_agua_km2": 440.0,
     "zt_med_km": 7.2,
-    "massa_sint_f1_kg": 706671413.2821716,
-    "massa_vis_kg": 29197895.158094853,
+    "massa_sint_f1_kg": 703905426.3814515,
+    "massa_vis_kg": 25182075.350138623,
     "T13_min": 242.1
    }
   },
