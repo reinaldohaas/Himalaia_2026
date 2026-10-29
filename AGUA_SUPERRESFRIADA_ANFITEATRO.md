@@ -40,6 +40,10 @@ Script: `scripts/himawari/agua_sr_satelite.py`. Saídas: `data/processed/agua_sr
 
 ![água super-resfriada no satélite](data/processed/agua_sr_satelite/agua_sr_satelite.png)
 
+![mapas de T13 nas posições verdadeiras](data/processed/agua_sr_satelite/agua_sr_mapas.png)
+
+Nos mapas, às 22:30 e às 00:00 UTC o núcleo mais frio da convecção (~210–220 K) está sobre o ponto do drone e o Langtang Lirung. Às 00:50 o topo esquentou em toda a área. Às 01:10 os topos de água super-resfriada ficam sobretudo a S e a W do ponto; sobre o ponto, a ~275 K, há nuvem baixa ou chão.
+
 **Resultados:**
 
 1. **À noite (17:00–23:50), nenhum topo de água super-resfriada até 30 km.**

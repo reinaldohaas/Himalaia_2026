@@ -16,7 +16,7 @@ Agua super-resfriada no topo das nuvens perto do anfiteatro e do ponto do drone 
    b) de dia, pela refletancia do B03 (duas correntes, g = 0,85): tau = 2R / ((1-g)(1-R)); LWP = (2/3) rho tau re,
       re = 10 um (6-15 um). Vale so com sza < 75.
 Aneis: 5, 10 e 30 km do ponto do drone (posicoes verdadeiras).
-Uso: python agua_sr_satelite.py <dir_b07_b13> <dir_b03> <dir_b05>
+Uso: python agua_sr_satelite.py <dir_b07_b13> <dir_b03> <dir_b05> [figuras]   (figuras: so refaz as figuras)
 Saidas: data/processed/agua_sr_satelite/agua_sr_satelite.txt, .json, .png
 """
 import json
@@ -156,7 +156,7 @@ def main():
                 "massa_vis_kg": float(np.nansum(lwp_vis[m]) * area_px * 1e6) if (m.any() and sza < 75) else None,
                 "T13_min": round(float(np.nanmin(T13[dist <= r])), 1)}
         reg.append(ent)
-        if t.strftime("%H%M") in ("1900", "2100", "2300", "0000", "0050", "0130", "0230", "0250"):
+        if t.strftime("%H%M") in ("1900", "2100", "2230", "0000", "0050", "0110", "0150", "0250"):
             mapas[t.strftime("%d %H:%M")] = (TLA, TLO, T13, agua, sza)
         e30, e10 = ent["r30"], ent["r10"]
         print("%s sza %5.1f | r10 agua %4.0f km2 | r30 frio %5.0f agua %5.0f km2 zt %s sint %.1e vis %s" % (
@@ -177,36 +177,107 @@ def main():
     open(os.path.join(SAIDA, "agua_sr_satelite.txt"), "w", encoding="utf-8").write("\n".join(lin) + "\n")
     json.dump({"z0_km": z0, "area_px_km2": area_px, "registros": reg}, open(os.path.join(SAIDA, "agua_sr_satelite.json"), "w", encoding="utf-8"), indent=1)
 
-    # serie temporal e mapas
-    fig = plt.figure(figsize=(15, 9))
-    ax = fig.add_subplot(2, 1, 1)
-    x = np.arange(len(reg)); rot = [e["utc"][3:] for e in reg]
-    for r, cor in zip(ANEIS, ("C3", "C1", "C0")):
-        ax.plot(x, [e["r%d" % r]["area_agua_km2"] for e in reg], "-o", ms=3, color=cor, label="topo de agua super-resfriada, ate %d km" % r)
-    ax.plot(x, [e["r30"]["area_frio_km2"] for e in reg], "k--", lw=1, label="topo entre -35 e 0 C, ate 30 km")
-    ax.set_ylabel("area (km2)"); ax.set_xticks(x[::3]); ax.set_xticklabels(rot[::3], fontsize=7)
-    ax2 = ax.twinx(); ax2.semilogy(x, [max(e["r30"]["massa_sint_f1_kg"], 1) for e in reg], "g-", lw=1.5, label="massa sintetica ate 30 km (f = 1)")
-    ax2.semilogy(x, [e["r30"]["massa_vis_kg"] or np.nan for e in reg], "g^", ms=4, label="massa pelo B03 ate 30 km")
-    ax2.set_ylabel("kg"); ax2.set_ylim(1e5, 1e11)
-    for xx, tt in ((rot.index("26 00:00") if "26 00:00" in rot else None, "nascer do sol"),):
-        if xx is not None: ax.axvline(xx, color="0.6", lw=0.8)
-    ax.legend(loc="upper left", fontsize=7); ax2.legend(loc="upper right", fontsize=7)
-    ax.set_title("Himawari-9: area com topo de agua super-resfriada perto do ponto do drone e massa da nuvem sintetica, 25/08 17:00 a 26/08 03:00 UTC", fontsize=9)
-    for n, (h, (TLA, TLO, T13, agua, sza)) in enumerate(mapas.items()):
-        a = fig.add_subplot(2, 8, 9 + n)
-        sc = a.scatter(TLO, TLA, c=T13, s=6, cmap="inferno", vmin=200, vmax=290)
-        a.scatter(TLO[agua], TLA[agua], s=8, facecolors="none", edgecolors="c", linewidths=0.6)
-        th = np.linspace(0, 2 * np.pi, 100)
-        for r in (10, 30):
-            a.plot(P[1] + r / (111.32 * np.cos(np.radians(P[0]))) * np.cos(th), P[0] + r / 111.32 * np.sin(th), "w-", lw=0.6)
-        a.plot(P[1], P[0], "y*", ms=8, mec="k")
-        a.set_xlim(P[1] - 0.4, P[1] + 0.4); a.set_ylim(P[0] - 0.35, P[0] + 0.35); a.set_aspect(1 / np.cos(np.radians(P[0])))
-        a.set_title(h + " UTC", fontsize=7); a.tick_params(labelsize=5)
-    fig.text(0.5, 0.02, "Mapas: T13 nas posicoes verdadeiras (cor; 200-290 K); circulos ciano = topo de agua super-resfriada; aneis de 10 e 30 km do ponto (estrela)",
-             ha="center", fontsize=8)
-    fig.savefig(os.path.join(SAIDA, "agua_sr_satelite.png"), dpi=120, bbox_inches="tight")
+    np.savez_compressed(os.path.join(SAIDA, "agua_sr_mapas.npz"),
+                        **{"%s_%s" % (h.replace(" ", "_").replace(":", ""), n): v for h, tup in mapas.items()
+                           for n, v in zip(("lat", "lon", "T13", "agua", "sza"), tup)})
     print("gravado em", SAIDA)
+    figuras()
+
+
+def figuras():
+    """serie temporal (area e massa em paineis separados) e mapas de T13 nas posicoes verdadeiras, a partir dos arquivos gravados"""
+    from scipy.spatial import cKDTree
+    J = json.load(open(os.path.join(SAIDA, "agua_sr_satelite.json"), encoding="utf-8")); reg = J["registros"]
+    M = np.load(os.path.join(SAIDA, "agua_sr_mapas.npz"))
+    rot = [e["utc"][3:] for e in reg]; x = np.arange(len(reg))
+    xi = lambda h: rot.index(h) if h in rot else None
+
+    fig, (a1, a2) = plt.subplots(2, 1, figsize=(13, 8.5), sharex=True)
+    n0 = next(k for k, e in enumerate(reg) if e["sza"] <= 90)
+    ind = [k for k, e in enumerate(reg) if e.get("fase", "ok") != "ok"]
+    for a in (a1, a2):
+        a.axvspan(-0.5, n0 - 0.5, color="0.90", zorder=0)
+        if ind:
+            a.axvspan(ind[0] - 0.5, ind[-1] + 0.5, color="#fff2c2", zorder=0)
+        if xi("00:30") is not None and xi("01:20") is not None:
+            a.axvspan(xi("00:30"), xi("01:20"), color="#cfe3ff", alpha=0.7, zorder=0)
+        if xi("02:50") is not None:
+            a.axvline(xi("02:50") + 0.2, color="r", lw=1.5)
+        a.grid(alpha=0.3)
+    for r, cor in zip(ANEIS, ("C3", "C1", "C0")):
+        a1.plot(x, [e["r%d" % r]["area_agua_km2"] for e in reg], "-o", ms=3, color=cor, label="topo de agua super-resfriada ate %d km do ponto" % r)
+    a1.plot(x, [e["r30"]["area_frio_km2"] for e in reg], "k--", lw=1, label="todo topo entre -35 e 0 C ate 30 km (gelo ou agua)")
+    a1.set_ylabel("area (km2)"); a1.legend(loc="upper center", fontsize=8, ncol=2)
+    a1.set_title("Himawari-9 perto do ponto do drone, 25/08 17:00 a 26/08 03:00 UTC (posicoes corrigidas da paralaxe)", fontsize=10)
+    fv = lambda e, r: e["r%d" % r]["massa_vis_kg"] or np.nan
+    a2.semilogy(x, [fv(e, 10) for e in reg], "^", color="C1", ms=6, label="pelo visivel (B03), ate 10 km")
+    a2.semilogy(x, [fv(e, 30) for e in reg], "^", color="C0", ms=6, label="pelo visivel (B03), ate 30 km")
+    s1 = np.array([e["r30"]["massa_sint_f1_kg"] or np.nan for e in reg], float); s1[s1 <= 0] = np.nan
+    a2.semilogy(x, s1, "-", color="C0", lw=1.2, label="nuvem sintetica ate 30 km, f = 1 (teto)")
+    a2.semilogy(x, 0.3 * s1, ":", color="C0", lw=1.2, label="nuvem sintetica ate 30 km, f = 0,3")
+    if xi("02:30") is not None:
+        a2.semilogy([xi("02:30")], [5.0e7], "s", color="k", ms=8, label="WRF C e D ate 30 km (02:30)")
+        a2.semilogy([xi("02:30")], [4.3e6], "D", color="k", ms=6, label="WRF C e D ate 5 km (02:30)")
+    a2.axhline(1e8, color="m", lw=1.2, ls="--")
+    a2.text(1, 1.3e8, "10^8 kg: gelo que a bacia do ponto (1,2 km2) exigiria", color="m", fontsize=8)
+    a2.set_ylim(1e5, 1e10); a2.set_ylabel("agua super-resfriada (kg)"); a2.legend(loc="upper left", fontsize=7.5, ncol=2)
+    a2.set_xticks(x[::3]); a2.set_xticklabels(rot[::3], fontsize=8); a2.set_xlabel("UTC (NPT = UTC + 5:45)")
+    fig.text(0.01, 0.005, "Cinza: noite (so infravermelho; nenhum topo de gotas). Amarelo: sol a menos de 15 graus, fase indeterminada. "
+             "Azul: colapso do topo (00:30-01:20). Vermelho: ruptura (02:52).", fontsize=8)
+    fig.tight_layout(rect=(0, 0.02, 1, 1))
+    fig.savefig(os.path.join(SAIDA, "agua_sr_satelite.png"), dpi=130)
+    plt.close(fig)
+
+    # mapas de T13 nas posicoes verdadeiras, em grade regular
+    horas = sorted({k.rsplit("_", 1)[0] for k in M.files}, key=lambda h: (h.split("_")[0], h.split("_")[1]))
+    dg = 0.01
+    glat = np.arange(P[0] - 0.36, P[0] + 0.36, dg); glon = np.arange(P[1] - 0.42, P[1] + 0.42, dg)
+    GLO, GLA = np.meshgrid(glon, glat)
+    kx = 111.32 * np.cos(np.radians(P[0]))
+    tile = os.path.join(RAIZ, "cluster", "wrf_lhende", "d04", "glo30_3s", "00001-00540.00001-00480")
+    zr = np.fromfile(tile, ">i2").reshape(480, 540)[::6, ::6] / 1000.0
+    zlat = 28.08 + (np.arange(480)[::6] + 0.5) / 1200.0; zlon = 85.30 + (np.arange(540)[::6] + 0.5) / 1200.0
+    nc = 4; nl = int(np.ceil(len(horas) / nc))
+    fig, axs = plt.subplots(nl, nc, figsize=(4.3 * nc, 4.1 * nl), squeeze=False)
+    for ax in axs.ravel()[len(horas):]:
+        ax.axis("off")
+    G = np.c_[((GLO - P[1]) * kx).ravel(), ((GLA - P[0]) * 111.32).ravel()]
+    for ax, h in zip(axs.ravel(), horas):
+        la, lo, T, ag, sz = (M["%s_%s" % (h, n)] for n in ("lat", "lon", "T13", "agua", "sza"))
+        ok = np.isfinite(la) & np.isfinite(lo) & np.isfinite(T)
+        pts = np.c_[(lo[ok] - P[1]) * kx, (la[ok] - P[0]) * 111.32]
+        d, ii = cKDTree(pts).query(G)
+        longe = d.reshape(GLA.shape) > 3.0
+        Tg = T[ok][ii].reshape(GLA.shape).astype(float); Ag = ag[ok][ii].reshape(GLA.shape).astype(float)
+        Tg[longe] = np.nan; Ag[longe] = np.nan
+        im = ax.pcolormesh(glon, glat, Tg, cmap="inferno", vmin=200, vmax=290, shading="nearest")
+        if np.nansum(Ag) > 0:
+            ax.contourf(glon, glat, np.nan_to_num(Ag), levels=[0.5, 1.5], colors="none", hatches=["////"])
+            ax.contour(glon, glat, np.nan_to_num(Ag), levels=[0.5], colors="cyan", linewidths=1.2)
+        ax.contour(zlon, zlat, zr, levels=[5.0, 6.0], colors=["0.7", "w"], linewidths=[0.5, 0.9])
+        th = np.linspace(0, 2 * np.pi, 200)
+        for r in (10, 30):
+            ax.plot(P[1] + r / kx * np.cos(th), P[0] + r / 111.32 * np.sin(th), "--", color="w", lw=1.0)
+        ax.plot(P[1], P[0], "*", color="yellow", ms=12, mec="k")
+        ax.plot(85.5193, 28.2563, "^", color="w", ms=7, mec="k")
+        d0, hh = h.split("_")
+        npt = (datetime(2026, 8, int(d0), int(hh[:2]), int(hh[2:])) + timedelta(hours=5, minutes=45)).strftime("%H:%M")
+        fase = "noite" if float(sz) > 88 else ("sol baixo: fase indeterminada" if float(sz) >= 75 else "dia")
+        ax.set_title("%s/08 %s:%s UTC (%s NPT) - %s" % (d0, hh[:2], hh[2:], npt, fase), fontsize=8.5)
+        ax.set_xlim(glon[0], glon[-1]); ax.set_ylim(glat[0], glat[-1]); ax.set_aspect(1 / np.cos(np.radians(P[0])))
+        ax.tick_params(labelsize=7)
+    cb = fig.colorbar(im, ax=axs.ravel().tolist(), shrink=0.6, pad=0.02)
+    cb.set_label("temperatura do topo T13 (K)   [273 K = 0 C; 238 K = -35 C]")
+    fig.suptitle("Himawari-9 B13 nas posicoes verdadeiras (paralaxe corrigida pela altura do topo). Hachura ciano = topo de agua super-resfriada;\n"
+                 "estrela = ponto do drone; triangulo = cume do Langtang Lirung; tracejado = 10 e 30 km do ponto; curvas = relevo de 5 km (cinza) e 6 km (branco)",
+                 fontsize=9.5)
+    fig.savefig(os.path.join(SAIDA, "agua_sr_mapas.png"), dpi=130, bbox_inches="tight")
+    plt.close(fig)
+    print("figuras gravadas")
 
 
 if __name__ == "__main__":
-    main()
+    if len(sys.argv) > 4 and sys.argv[4] == "figuras":
+        figuras()
+    else:
+        main()
