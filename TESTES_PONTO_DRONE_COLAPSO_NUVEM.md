@@ -75,6 +75,25 @@ Scripts: `scripts/himawari/b03_ponto_drone.py` (prancha por dia) e `scripts/hima
    * **Ressalva:** o pixel tem 0,5 km nominal e ~1,2 km na direção da visada, e a bacia tem só ~5 pixels. Um depósito concentrado num talvegue de ~0,1 km² não apareceria.
 4. **Vales abaixo de 4 km: mais claros no dia 26 a partir das 02:20,** de +0,10 a +0,20. É o nevoeiro ou mar de nuvens do vídeo do drone, que não existia no dia 25.
 
+## 3c. B05 (1,6 µm): neve ou nuvem na mancha do Langtang Lirung
+
+Script: `scripts/himawari/b05_neve_nuvem.py`. Saídas: `data/processed/himawari_b03/b05_neve_nuvem.*`.
+
+Em 1,6 µm a neve e o gelo absorvem, e a nuvem de gotas reflete. As regiões são três: a mancha (1,3 km² acima de 5 km, mais clara no B03 de 26/08), a neve antiga do maciço acima de 6 km e a bacia do ponto.
+
+| 00:50–01:20 UTC | B03 | B05 | NDSI | T13 |
+|---|---|---|---|---|
+| mancha, 26/08 | 1,00–1,31 | 0,34–0,43 | 0,45–0,54 | 258–273 K |
+| mancha, 25/08 | 0,93–1,03 | 0,26–0,28 | 0,54–0,59 | 261–269 K |
+| bacia do ponto, 26/08 | 0,26–0,41 | 0,28–0,37 | −0,18 a +0,18 | 266–278 K |
+
+* **A mancha é nuvem com gotas por cima da neve, não neve nova.** No dia 26, o B05 da mancha fica 0,08–0,25 acima do dia 25, das 00:50 às 03:00. Neve nova deixaria o B05 igual ou mais baixo.
+* **É água super-resfriada:**
+  * das 00:50 às 01:20 o topo dessa nuvem está a 258–273 K, ou −15 a 0 °C;
+  * das 01:30 às 03:00 o B13 sobe para 277–279 K, nuvem baixa e quente ou mistura com o chão;
+  * a neve antiga do maciço acima de 6 km mostra o mesmo B05 mais alto no dia 26, então essa nuvem cobria o maciço todo.
+* **Bacia do ponto: sem neve nem gelo.** O NDSI fica de −0,18 a +0,18, e de 01:10 às 03:00 o B05 supera o B03. É assinatura de rocha descoberta, igual à do dia 25.
+
 ## 4. Balanço de massa na bacia do ponto (1,19 km²)
 
 1 mm de água equivalente sobre a bacia = 1,19 × 10⁶ kg.
@@ -98,11 +117,12 @@ Scripts: `scripts/himawari/b03_ponto_drone.py` (prancha por dia) e `scripts/hima
 | 2. Termodinâmica | Bacia inteira a +0–6 °C; granizo nasce a 6,4–7,6 km | Possível, com fusão parcial e água de fusão |
 | 3. Himawari | Convecção profunda sobre o ponto até 00:30; colapso 00:30–01:20; sem nuvem fria às 02:50 | Compatível no tempo (atraso de 1,5–2,5 h); o IR a 2 km não localiza o núcleo |
 | 3b. Visível B03 | Encostas de 5–6,5 km do Langtang Lirung mais claras no dia 26 (00:50–02:30); bacia do ponto sem mudança quando iluminada (02:10–03:00); nevoeiro nos vales a partir das 02:20 | Contra um acúmulo extenso na bacia do ponto; a favor de neve ou granizo (ou nuvem presa) nas encostas altas do Langtang Lirung, fora da bacia |
+| 3c. B05 | A mancha do Langtang Lirung é nuvem de gotas super-resfriadas (topo a −15–0 °C, 00:50–01:20) sobre a neve, não neve nova; a bacia do ponto segue sem neve | Há água super-resfriada sobre o maciço logo depois do colapso; não há granizo visível na bacia |
 | 4. Massa | ~10⁸ kg é alcançável; 10⁹ exige concentração de 10–50×; 10¹⁰ fica excluído | Possível só como carga mais água; não como fonte da maior parte do volume |
 
 ## 6. Próximos testes antes de simular
 
-1. **Feito (3b).** Falta separar neve de nuvem na mancha do Langtang Lirung: no B05 (1,6 µm, 2 km), neve e gelo são escuros e nuvem de água é clara. São arquivos pequenos.
+1. **Feito (3b e 3c).**
 2. **Diferença B07 − B13 à noite (17:00–23:50 UTC)** para nevoeiro e nuvem baixa no vale.
 3. **Visada do drone.** Com a posição e a altura do drone (se houver alguma pista nas fontes chinesas), conferir se o ponto e a encosta acima dele estavam à vista.
 4. **WRF.** Só depois desses testes: vórtice do E recentrado no ponto, critério de massa refeito para a bacia de 1,2 km² e d04, porque a 1 km esse maciço de 5,6 km também é suavizado.

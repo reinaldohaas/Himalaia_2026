@@ -1,0 +1,1746 @@
+{
+ "z0_km": 5.776384685690513,
+ "area_px_km2": 12.940297307558826,
+ "registros": [
+  {
+   "utc": "25 17:00",
+   "sza": 136.0,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 91.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 254.0
+   },
+   "r10": {
+    "area_frio_km2": 259.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 248.1
+   },
+   "r30": {
+    "area_frio_km2": 2756.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 218.2
+   }
+  },
+  {
+   "utc": "25 17:10",
+   "sza": 137.1,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 91.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 255.7
+   },
+   "r10": {
+    "area_frio_km2": 336.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 247.0
+   },
+   "r30": {
+    "area_frio_km2": 2834.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 237.2
+   }
+  },
+  {
+   "utc": "25 17:20",
+   "sza": 138.0,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 91.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 253.1
+   },
+   "r10": {
+    "area_frio_km2": 298.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 250.8
+   },
+   "r30": {
+    "area_frio_km2": 2743.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 217.4
+   }
+  },
+  {
+   "utc": "25 17:30",
+   "sza": 138.7,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 78.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 254.6
+   },
+   "r10": {
+    "area_frio_km2": 272.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 249.5
+   },
+   "r30": {
+    "area_frio_km2": 2588.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 215.3
+   }
+  },
+  {
+   "utc": "25 17:40",
+   "sza": 139.4,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 52.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 249.8
+   },
+   "r10": {
+    "area_frio_km2": 246.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 242.3
+   },
+   "r30": {
+    "area_frio_km2": 2420.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 212.7
+   }
+  },
+  {
+   "utc": "25 17:50",
+   "sza": 139.9,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 52.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 238.3
+   },
+   "r10": {
+    "area_frio_km2": 207.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 233.9
+   },
+   "r30": {
+    "area_frio_km2": 2135.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 213.8
+   }
+  },
+  {
+   "utc": "25 18:00",
+   "sza": 140.3,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 65.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 234.1
+   },
+   "r10": {
+    "area_frio_km2": 194.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 229.5
+   },
+   "r30": {
+    "area_frio_km2": 1643.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 216.9
+   }
+  },
+  {
+   "utc": "25 18:10",
+   "sza": 140.5,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 78.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 237.4
+   },
+   "r10": {
+    "area_frio_km2": 220.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 226.5
+   },
+   "r30": {
+    "area_frio_km2": 1566.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 218.4
+   }
+  },
+  {
+   "utc": "25 18:20",
+   "sza": 140.6,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 39.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 237.4
+   },
+   "r10": {
+    "area_frio_km2": 168.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 229.1
+   },
+   "r30": {
+    "area_frio_km2": 1605.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 218.3
+   }
+  },
+  {
+   "utc": "25 18:30",
+   "sza": 140.5,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 26.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 234.6
+   },
+   "r10": {
+    "area_frio_km2": 168.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 228.1
+   },
+   "r30": {
+    "area_frio_km2": 1423.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 218.9
+   }
+  },
+  {
+   "utc": "25 18:40",
+   "sza": 140.3,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 78.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 233.0
+   },
+   "r10": {
+    "area_frio_km2": 259.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 227.1
+   },
+   "r30": {
+    "area_frio_km2": 1385.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 217.7
+   }
+  },
+  {
+   "utc": "25 18:50",
+   "sza": 139.9,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 65.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 249.5
+   },
+   "r10": {
+    "area_frio_km2": 272.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 231.0
+   },
+   "r30": {
+    "area_frio_km2": 1126.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 217.2
+   }
+  },
+  {
+   "utc": "25 19:00",
+   "sza": 139.4,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 52.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 244.7
+   },
+   "r10": {
+    "area_frio_km2": 259.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 225.0
+   },
+   "r30": {
+    "area_frio_km2": 932.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 216.1
+   }
+  },
+  {
+   "utc": "25 19:10",
+   "sza": 138.8,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 78.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 241.1
+   },
+   "r10": {
+    "area_frio_km2": 207.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 225.8
+   },
+   "r30": {
+    "area_frio_km2": 712.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 214.3
+   }
+  },
+  {
+   "utc": "25 19:20",
+   "sza": 138.0,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 39.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 234.4
+   },
+   "r10": {
+    "area_frio_km2": 155.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 220.7
+   },
+   "r30": {
+    "area_frio_km2": 401.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 214.8
+   }
+  },
+  {
+   "utc": "25 19:30",
+   "sza": 137.1,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 26.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 227.0
+   },
+   "r10": {
+    "area_frio_km2": 78.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 219.1
+   },
+   "r30": {
+    "area_frio_km2": 246.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 216.7
+   }
+  },
+  {
+   "utc": "25 19:40",
+   "sza": 136.1,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 0.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 219.4
+   },
+   "r10": {
+    "area_frio_km2": 0.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 219.0
+   },
+   "r30": {
+    "area_frio_km2": 414.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 217.1
+   }
+  },
+  {
+   "utc": "25 19:50",
+   "sza": 135.0,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 0.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 219.9
+   },
+   "r10": {
+    "area_frio_km2": 0.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 218.8
+   },
+   "r30": {
+    "area_frio_km2": 686.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 215.5
+   }
+  },
+  {
+   "utc": "25 20:00",
+   "sza": 133.8,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 0.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 218.9
+   },
+   "r10": {
+    "area_frio_km2": 104.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 218.9
+   },
+   "r30": {
+    "area_frio_km2": 945.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 209.8
+   }
+  },
+  {
+   "utc": "25 20:10",
+   "sza": 132.5,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 0.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 221.9
+   },
+   "r10": {
+    "area_frio_km2": 104.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 221.2
+   },
+   "r30": {
+    "area_frio_km2": 1074.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 209.2
+   }
+  },
+  {
+   "utc": "25 20:20",
+   "sza": 131.1,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 0.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 225.4
+   },
+   "r10": {
+    "area_frio_km2": 104.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 223.1
+   },
+   "r30": {
+    "area_frio_km2": 1048.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 208.2
+   }
+  },
+  {
+   "utc": "25 20:30",
+   "sza": 129.7,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 0.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 226.6
+   },
+   "r10": {
+    "area_frio_km2": 104.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 225.3
+   },
+   "r30": {
+    "area_frio_km2": 932.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 207.9
+   }
+  },
+  {
+   "utc": "25 20:40",
+   "sza": 128.1,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 0.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 230.1
+   },
+   "r10": {
+    "area_frio_km2": 129.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 226.0
+   },
+   "r30": {
+    "area_frio_km2": 828.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 208.4
+   }
+  },
+  {
+   "utc": "25 20:50",
+   "sza": 126.5,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 26.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 232.5
+   },
+   "r10": {
+    "area_frio_km2": 142.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 225.9
+   },
+   "r30": {
+    "area_frio_km2": 595.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 209.0
+   }
+  },
+  {
+   "utc": "25 21:00",
+   "sza": 124.9,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 39.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 232.8
+   },
+   "r10": {
+    "area_frio_km2": 91.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 226.9
+   },
+   "r30": {
+    "area_frio_km2": 440.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 210.7
+   }
+  },
+  {
+   "utc": "25 21:10",
+   "sza": 123.1,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 0.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 230.7
+   },
+   "r10": {
+    "area_frio_km2": 0.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 225.6
+   },
+   "r30": {
+    "area_frio_km2": 246.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 212.1
+   }
+  },
+  {
+   "utc": "25 21:20",
+   "sza": 121.4,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 0.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 229.1
+   },
+   "r10": {
+    "area_frio_km2": 0.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 222.1
+   },
+   "r30": {
+    "area_frio_km2": 194.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 213.6
+   }
+  },
+  {
+   "utc": "25 21:30",
+   "sza": 119.6,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 0.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 222.8
+   },
+   "r10": {
+    "area_frio_km2": 0.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 219.7
+   },
+   "r30": {
+    "area_frio_km2": 181.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 213.4
+   }
+  },
+  {
+   "utc": "25 21:40",
+   "sza": 117.7,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 0.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 220.0
+   },
+   "r10": {
+    "area_frio_km2": 0.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 218.8
+   },
+   "r30": {
+    "area_frio_km2": 324.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 214.4
+   }
+  },
+  {
+   "utc": "25 21:50",
+   "sza": 115.8,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 0.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 219.1
+   },
+   "r10": {
+    "area_frio_km2": 0.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 219.1
+   },
+   "r30": {
+    "area_frio_km2": 634.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 216.1
+   }
+  },
+  {
+   "utc": "25 22:00",
+   "sza": 113.9,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 0.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 219.6
+   },
+   "r10": {
+    "area_frio_km2": 0.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 219.0
+   },
+   "r30": {
+    "area_frio_km2": 906.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 216.2
+   }
+  },
+  {
+   "utc": "25 22:10",
+   "sza": 112.0,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 0.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 219.1
+   },
+   "r10": {
+    "area_frio_km2": 0.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 219.1
+   },
+   "r30": {
+    "area_frio_km2": 1100.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 217.1
+   }
+  },
+  {
+   "utc": "25 22:20",
+   "sza": 110.0,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 0.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 218.8
+   },
+   "r10": {
+    "area_frio_km2": 0.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 218.8
+   },
+   "r30": {
+    "area_frio_km2": 1152.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 217.9
+   }
+  },
+  {
+   "utc": "25 22:30",
+   "sza": 108.0,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 0.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 224.1
+   },
+   "r10": {
+    "area_frio_km2": 26.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 219.3
+   },
+   "r30": {
+    "area_frio_km2": 1074.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 219.1
+   }
+  },
+  {
+   "utc": "25 22:40",
+   "sza": 106.0,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 13.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 227.5
+   },
+   "r10": {
+    "area_frio_km2": 39.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 225.4
+   },
+   "r30": {
+    "area_frio_km2": 932.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 220.5
+   }
+  },
+  {
+   "utc": "25 22:50",
+   "sza": 103.9,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 13.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 230.6
+   },
+   "r10": {
+    "area_frio_km2": 39.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 227.6
+   },
+   "r30": {
+    "area_frio_km2": 893.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 223.9
+   }
+  },
+  {
+   "utc": "25 23:00",
+   "sza": 101.9,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 0.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 229.3
+   },
+   "r10": {
+    "area_frio_km2": 13.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 229.3
+   },
+   "r30": {
+    "area_frio_km2": 932.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 221.9
+   }
+  },
+  {
+   "utc": "25 23:10",
+   "sza": 99.8,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 0.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 228.0
+   },
+   "r10": {
+    "area_frio_km2": 26.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 228.0
+   },
+   "r30": {
+    "area_frio_km2": 1191.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 220.1
+   }
+  },
+  {
+   "utc": "25 23:20",
+   "sza": 97.7,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 0.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 227.4
+   },
+   "r10": {
+    "area_frio_km2": 13.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 227.4
+   },
+   "r30": {
+    "area_frio_km2": 1152.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 220.9
+   }
+  },
+  {
+   "utc": "25 23:30",
+   "sza": 95.6,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 0.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 228.9
+   },
+   "r10": {
+    "area_frio_km2": 13.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 224.7
+   },
+   "r30": {
+    "area_frio_km2": 1074.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 221.0
+   }
+  },
+  {
+   "utc": "25 23:40",
+   "sza": 93.5,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 0.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 224.5
+   },
+   "r10": {
+    "area_frio_km2": 26.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 223.4
+   },
+   "r30": {
+    "area_frio_km2": 1229.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 219.3
+   }
+  },
+  {
+   "utc": "25 23:50",
+   "sza": 91.3,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 0.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 225.9
+   },
+   "r10": {
+    "area_frio_km2": 39.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 222.6
+   },
+   "r30": {
+    "area_frio_km2": 1203.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 219.6
+   }
+  },
+  {
+   "utc": "26 00:00",
+   "sza": 89.2,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 13.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 229.7
+   },
+   "r10": {
+    "area_frio_km2": 65.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 225.0
+   },
+   "r30": {
+    "area_frio_km2": 1281.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 219.8
+   }
+  },
+  {
+   "utc": "26 00:10",
+   "sza": 87.0,
+   "fase": "indeterminada",
+   "r5": {
+    "area_frio_km2": 26.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 227.2
+   },
+   "r10": {
+    "area_frio_km2": 104.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 225.5
+   },
+   "r30": {
+    "area_frio_km2": 1436.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 221.8
+   }
+  },
+  {
+   "utc": "26 00:20",
+   "sza": 84.9,
+   "fase": "indeterminada",
+   "r5": {
+    "area_frio_km2": 39.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 234.3
+   },
+   "r10": {
+    "area_frio_km2": 155.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 228.9
+   },
+   "r30": {
+    "area_frio_km2": 1656.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 221.9
+   }
+  },
+  {
+   "utc": "26 00:30",
+   "sza": 82.7,
+   "fase": "indeterminada",
+   "r5": {
+    "area_frio_km2": 65.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 240.1
+   },
+   "r10": {
+    "area_frio_km2": 246.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 233.7
+   },
+   "r30": {
+    "area_frio_km2": 1941.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 221.8
+   }
+  },
+  {
+   "utc": "26 00:40",
+   "sza": 80.5,
+   "fase": "indeterminada",
+   "r5": {
+    "area_frio_km2": 78.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 248.2
+   },
+   "r10": {
+    "area_frio_km2": 298.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 240.0
+   },
+   "r30": {
+    "area_frio_km2": 2161.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 224.2
+   }
+  },
+  {
+   "utc": "26 00:50",
+   "sza": 78.3,
+   "fase": "indeterminada",
+   "r5": {
+    "area_frio_km2": 116.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 257.9
+   },
+   "r10": {
+    "area_frio_km2": 349.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 248.6
+   },
+   "r30": {
+    "area_frio_km2": 2446.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 226.6
+   }
+  },
+  {
+   "utc": "26 01:00",
+   "sza": 76.1,
+   "fase": "indeterminada",
+   "r5": {
+    "area_frio_km2": 39.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 263.4
+   },
+   "r10": {
+    "area_frio_km2": 246.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 261.2
+   },
+   "r30": {
+    "area_frio_km2": 2277.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 229.0
+   }
+  },
+  {
+   "utc": "26 01:10",
+   "sza": 73.9,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 26.0,
+    "area_agua_km2": 26.0,
+    "zt_med_km": 6.2,
+    "massa_sint_f1_kg": 3300491.816385772,
+    "massa_vis_kg": 4611749.96738658,
+    "T13_min": 269.9
+   },
+   "r10": {
+    "area_frio_km2": 155.0,
+    "area_agua_km2": 129.0,
+    "zt_med_km": 6.7,
+    "massa_sint_f1_kg": 77887984.89722258,
+    "massa_vis_kg": 12017026.150994858,
+    "T13_min": 262.7
+   },
+   "r30": {
+    "area_frio_km2": 1721.0,
+    "area_agua_km2": 1216.0,
+    "zt_med_km": 7.6,
+    "massa_sint_f1_kg": 3170925634.0581264,
+    "massa_vis_kg": 98321499.45542014,
+    "T13_min": 231.9
+   }
+  },
+  {
+   "utc": "26 01:20",
+   "sza": 71.7,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 0.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 273.5
+   },
+   "r10": {
+    "area_frio_km2": 91.0,
+    "area_agua_km2": 65.0,
+    "zt_med_km": 6.3,
+    "massa_sint_f1_kg": 12410246.271160075,
+    "massa_vis_kg": 5441637.63378184,
+    "T13_min": 268.3
+   },
+   "r30": {
+    "area_frio_km2": 1566.0,
+    "area_agua_km2": 1139.0,
+    "zt_med_km": 7.5,
+    "massa_sint_f1_kg": 2575344670.6049705,
+    "massa_vis_kg": 85216456.34189734,
+    "T13_min": 238.8
+   }
+  },
+  {
+   "utc": "26 01:30",
+   "sza": 69.5,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 0.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 273.9
+   },
+   "r10": {
+    "area_frio_km2": 39.0,
+    "area_agua_km2": 39.0,
+    "zt_med_km": 6.4,
+    "massa_sint_f1_kg": 7144148.731368568,
+    "massa_vis_kg": 1726263.9976675087,
+    "T13_min": 269.4
+   },
+   "r30": {
+    "area_frio_km2": 1229.0,
+    "area_agua_km2": 983.0,
+    "zt_med_km": 7.2,
+    "massa_sint_f1_kg": 1740221443.409033,
+    "massa_vis_kg": 88208009.49947809,
+    "T13_min": 247.5
+   }
+  },
+  {
+   "utc": "26 01:40",
+   "sza": 67.3,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 39.0,
+    "area_agua_km2": 39.0,
+    "zt_med_km": 5.8,
+    "massa_sint_f1_kg": 51695.453842231,
+    "massa_vis_kg": 3109970.7908009603,
+    "T13_min": 272.8
+   },
+   "r10": {
+    "area_frio_km2": 52.0,
+    "area_agua_km2": 52.0,
+    "zt_med_km": 6.1,
+    "massa_sint_f1_kg": 11358460.58723055,
+    "massa_vis_kg": 3624721.611344327,
+    "T13_min": 266.3
+   },
+   "r30": {
+    "area_frio_km2": 919.0,
+    "area_agua_km2": 686.0,
+    "zt_med_km": 7.2,
+    "massa_sint_f1_kg": 1067013024.4743958,
+    "massa_vis_kg": 45414520.268743046,
+    "T13_min": 244.3
+   }
+  },
+  {
+   "utc": "26 01:50",
+   "sza": 65.1,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 13.0,
+    "area_agua_km2": 13.0,
+    "zt_med_km": 6.2,
+    "massa_sint_f1_kg": 1246200.2800743994,
+    "massa_vis_kg": 1215965.4040024397,
+    "T13_min": 271.0
+   },
+   "r10": {
+    "area_frio_km2": 52.0,
+    "area_agua_km2": 52.0,
+    "zt_med_km": 6.1,
+    "massa_sint_f1_kg": 3752195.93746737,
+    "massa_vis_kg": 2752152.756532408,
+    "T13_min": 270.4
+   },
+   "r30": {
+    "area_frio_km2": 725.0,
+    "area_agua_km2": 582.0,
+    "zt_med_km": 7.2,
+    "massa_sint_f1_kg": 812863910.8940653,
+    "massa_vis_kg": 30517032.72733652,
+    "T13_min": 244.9
+   }
+  },
+  {
+   "utc": "26 02:00",
+   "sza": 62.9,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 13.0,
+    "area_agua_km2": 13.0,
+    "zt_med_km": 6.5,
+    "massa_sint_f1_kg": 3178457.4271880263,
+    "massa_vis_kg": 1283590.3543041896,
+    "T13_min": 269.7
+   },
+   "r10": {
+    "area_frio_km2": 39.0,
+    "area_agua_km2": 39.0,
+    "zt_med_km": 6.6,
+    "massa_sint_f1_kg": 13392691.086369596,
+    "massa_vis_kg": 3398064.9585096124,
+    "T13_min": 268.4
+   },
+   "r30": {
+    "area_frio_km2": 660.0,
+    "area_agua_km2": 531.0,
+    "zt_med_km": 7.2,
+    "massa_sint_f1_kg": 757412477.0631487,
+    "massa_vis_kg": 27336958.022288036,
+    "T13_min": 243.4
+   }
+  },
+  {
+   "utc": "26 02:10",
+   "sza": 60.7,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 0.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 274.2
+   },
+   "r10": {
+    "area_frio_km2": 65.0,
+    "area_agua_km2": 65.0,
+    "zt_med_km": 6.2,
+    "massa_sint_f1_kg": 6382636.413677403,
+    "massa_vis_kg": 3561632.4517845544,
+    "T13_min": 269.4
+   },
+   "r30": {
+    "area_frio_km2": 699.0,
+    "area_agua_km2": 595.0,
+    "zt_med_km": 7.1,
+    "massa_sint_f1_kg": 773353099.2043426,
+    "massa_vis_kg": 28985159.21301479,
+    "T13_min": 242.1
+   }
+  },
+  {
+   "utc": "26 02:20",
+   "sza": 58.5,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 0.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 275.8
+   },
+   "r10": {
+    "area_frio_km2": 0.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 274.4
+   },
+   "r30": {
+    "area_frio_km2": 543.0,
+    "area_agua_km2": 427.0,
+    "zt_med_km": 7.2,
+    "massa_sint_f1_kg": 598043852.6740642,
+    "massa_vis_kg": 22409543.045486756,
+    "T13_min": 246.8
+   }
+  },
+  {
+   "utc": "26 02:30",
+   "sza": 56.4,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 0.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 276.5
+   },
+   "r10": {
+    "area_frio_km2": 0.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 273.9
+   },
+   "r30": {
+    "area_frio_km2": 595.0,
+    "area_agua_km2": 453.0,
+    "zt_med_km": 7.2,
+    "massa_sint_f1_kg": 706671413.2821716,
+    "massa_vis_kg": 29197895.158094853,
+    "T13_min": 242.1
+   }
+  },
+  {
+   "utc": "26 02:50",
+   "sza": 52.0,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 0.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 276.5
+   },
+   "r10": {
+    "area_frio_km2": 13.0,
+    "area_agua_km2": 13.0,
+    "zt_med_km": 6.6,
+    "massa_sint_f1_kg": 3887246.9517030236,
+    "massa_vis_kg": 687616.9684602831,
+    "T13_min": 269.3
+   },
+   "r30": {
+    "area_frio_km2": 518.0,
+    "area_agua_km2": 349.0,
+    "zt_med_km": 6.8,
+    "massa_sint_f1_kg": 254190240.7283485,
+    "massa_vis_kg": 22173752.04958684,
+    "T13_min": 250.3
+   }
+  },
+  {
+   "utc": "26 03:00",
+   "sza": 49.8,
+   "fase": "ok",
+   "r5": {
+    "area_frio_km2": 0.0,
+    "area_agua_km2": 0.0,
+    "zt_med_km": null,
+    "massa_sint_f1_kg": 0.0,
+    "massa_vis_kg": null,
+    "T13_min": 274.5
+   },
+   "r10": {
+    "area_frio_km2": 13.0,
+    "area_agua_km2": 13.0,
+    "zt_med_km": 6.1,
+    "massa_sint_f1_kg": 525546.9726921727,
+    "massa_vis_kg": 646564.0222337722,
+    "T13_min": 271.8
+   },
+   "r30": {
+    "area_frio_km2": 660.0,
+    "area_agua_km2": 479.0,
+    "zt_med_km": 6.7,
+    "massa_sint_f1_kg": 387673977.98645014,
+    "massa_vis_kg": 31875733.36344584,
+    "T13_min": 241.3
+   }
+  }
+ ]
+}
