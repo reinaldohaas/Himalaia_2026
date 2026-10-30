@@ -56,7 +56,7 @@ grupo() {     # grupo <arquivo de configuracao>: acrescenta o grupo &toro_wrf ao
 
 cfg_u() {     # configuracao de cada experimento no executavel unico
   case "$1" in B) echo toro_wrf.txt ;; C) echo toro_wrf_vortice_C.txt ;; D) echo toro_wrf_vortice_D.txt ;;
-               E) echo toro_wrf_vortice_E.txt ;; esac
+               E) echo toro_wrf_vortice_E.txt ;; E2) echo toro_wrf_vortice_E2.txt ;; esac
 }
 
 liga_ic() { ln -sf "$AQUI"/toro_real/wrfinput_d0* "$AQUI"/toro_real/wrfbdy_d01 . ; }
@@ -128,7 +128,7 @@ case "${1:-}" in
         || msg "  $x $f: difere de toro_tDa (esperado)"
     done ;;
   rodada_u)
-    x=${2:-}; case "$x" in A|B|C|D|E) ;; *) falha "rodada_u A|B|C|D|E" ;; esac
+    x=${2:-}; case "$x" in A|B|C|D|E|E2) ;; *) falha "rodada_u A|B|C|D|E|E2" ;; esac
     e="$BIN/wrf_toro.exe"; [ -x "$e" ] || falha "falta $e"
     d=toro_u$x; prepara "$d"; liga_ic; c=$(cfg_u "$x"); [ -n "$c" ] && grupo "$c"
     msg "rodada_u $x (27 h, NP=$NP, executavel unico) em segundo plano em $d"

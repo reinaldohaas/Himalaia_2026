@@ -345,6 +345,8 @@ Regra: o resultado só conta como **candidato** se o critério 4 der uma massa s
 
 O raio do vento máximo continua em 5 km, que são 15 pontos do d04. A deriva de um granizo que cai de 7–8 km com o vento de NE–ENE de 3–5 m/s é de 1–2 km para WSW, dentro do núcleo; por isso o centro fica na própria frente, sem deslocamento.
 
+**Executável:** `bin_toro_V42.tar.gz` (sha `bbed3d30…`), compilado no WSL como a v4.1, com `wrf_toro.exe` sha `478962a3…`. O `toro_vortice` tem de novo 1 chamada vetorial e 6 escalares de `coshf`, como na v4.1, e o módulo embutido no `module_mp_nssl_2mom.F` é o deste repositório. O teste funcional do d04 usa `toro_wrf_teste_vE2_d04.txt`: 30 min, vórtice e núcleo no d03 e no d04, centro E2.
+
 **Ordem no vlab (depois que o teste de 30 min do d04 passar):**
 1. Compilar a v4.2 (`aplicar_patch_toro_wrf.py` sobre cópia limpa do v4.7.1) e rodar `teste_unico` com A–D: os 8 `cmp` iguais aos da v4.1.
 2. `teste_ativo_u` com `toro_wrf_teste_vE.txt` e `max_dom = 4`: a linha do disparo aparece e o d04 difere do d04 de A.

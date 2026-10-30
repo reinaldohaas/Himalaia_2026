@@ -1,0 +1,38 @@
+&toro_wrf
+ t_ini       = 0.0,       ! teste funcional do d04 (30 min, max_dom = 4, v4.2): Estado A desde 00 UTC
+ t_rel       = 0.5,
+ t_dur       = 0.0,
+ lat0        = 28.271,
+ lon0        = 85.515,
+ raio_km     = 150.0,
+ fcoal       = 0.0,
+ faccr       = 0.0,
+ fctfz       = 0.0,
+ fnuc        = 0.0,
+ fhm         = 0.0,
+ frfrz       = 0.0,
+ fwfrz       = 0.0,
+ t_hom_c     = -38.0,
+ dominios    = 1, 1, 1, 1,
+ ivortex     = 1,
+ t_v_ini     = 0.0,       ! vortice desde 00 UTC, rampa de 6 min
+ tr_v        = 0.1,
+ t_v_fim     = 0.5,
+ lat_v       = 28.2918,   ! E2: frente de gelo
+ lon_v       = 85.5284,
+ rmax_v_km   = 5.0,       ! E2: no d03 e no d04, como na rodada
+ zr_v_m      = 3000.0,
+ alpha_v     = 1.0e-2,
+ dominios_v  = 0, 0, 1, 1, ! E2: d03 e d04
+ t_vn_ini    = 0.2,       ! nucleo do vortice a partir de 00:12
+ raio_vn_km  = 5.0,
+ fhm_v       = 10.0,
+ fnuc_v      = 100.0,
+ w_crit      = 0.2,       ! teste: limiar baixo para o disparo aparecer em 30 min (na rodada D e 2 m/s)
+ q_crit      = 1.0e-5,
+ perfil_v    = 1,         ! E2: maximo em niveis medios
+ zc_v_m      = 7500.0,    ! 
+ zw_v_m      = 1500.0,    ! 
+ t_nuc_min_c = -8.0,      ! E2: faixa de -8 a -3 C
+ t_nuc_max_c = -3.0,      ! 
+/
