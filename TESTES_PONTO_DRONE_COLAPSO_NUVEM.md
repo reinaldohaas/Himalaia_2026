@@ -125,7 +125,12 @@ Em 1,6 µm a neve e o gelo absorvem, e a nuvem de gotas reflete. As regiões sã
 1. **Feito (3b e 3c).**
 2. **Diferença B07 − B13 à noite (17:00–23:50 UTC)** para nevoeiro e nuvem baixa no vale.
 3. **Visada do drone.** Com a posição e a altura do drone (se houver alguma pista nas fontes chinesas), conferir se o ponto e a encosta acima dele estavam à vista. A frente de gelo já foi localizada pelo S2 (§ 7); a visada exata depende do registro de voo pedido a Hei Mu.
-4. **WRF.** Só depois desses testes: vórtice do E recentrado na frente de gelo (§ 7, configuração E2), critério de massa refeito para a bacia de 1,2 km² e d04, porque a 1 km esse maciço de 5,6 km também é suavizado.
+4. **Transporte com o ERA5 em ensemble (feito, 30/10):** `TRANSPORTE_GELO_ERA5_ENSEMBLE.md`.
+   * O vento do ERA5 é fraco e confiável, e uma célula sobre a frente deposita o gelo nela.
+   * Fontes a 4–7 km, como a mancha super-resfriada do Langtang Lirung, exigiriam 4–9 m/s contra o ERA5.
+   * O granizo e o graupel grande sobrevivem à fusão.
+   * O que falta no ERA5 é a própria célula: os 10 membros têm CAPE zero e subsidência sobre o alvo.
+5. **WRF.** Só depois desses testes: vórtice do E recentrado na frente de gelo (§ 7, configuração E2), critério de massa refeito para a bacia de 1,2 km² e d04, porque a 1 km esse maciço de 5,6 km também é suavizado.
 
 ## 7. A frente de gelo do quadro do Xinhua (29/10/2026)
 

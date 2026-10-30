@@ -1,0 +1,83 @@
+Transporte do gelo ate a frente de gelo (28,2918 N / 85,5284 E, 5,0 km) com o ERA5 em ensemble (EDA, 10 membros)
+horas: 2026-08-25T22:00, 2026-08-25T23:00, 2026-08-26T00:00, 2026-08-26T00:30, 2026-08-26T01:00
+
+z_0C_m                                 media  5802.02  min  5650.00  max  5915.00
+z_0C_bulbo_umido_m                     media  5393.26  min  5282.00  max  5570.00
+vento_medio_abaixo_0C_ms               media     0.81  min     0.08  max     2.03
+gelo_para_isotermica_ate_5000m_mm      media     3.04  min     2.42  max     3.74
+gelo_para_isotermica_ate_4638m_mm      media     6.50  min     5.67  max     7.45
+agua_precipitavel_acima_5000m_mm       media     9.33  min     8.50  max    10.60
+
+Solta a 7,0 km sobre o alvo: distancia do pouso a 5,0 km, fracao na bacia do ponto, massa restante (5,63 / 5,0 / 4,64 km)
+  neve (agregado 5 mm)    1.63 km (0.10-3.71)  ate 1 km 0.26  bacia 0.02   massa 1.00 / 0.02 / 0.00
+  graupel 2 mm            0.82 km (0.04-1.86)  ate 1 km 0.72  bacia 0.04   massa 1.00 / 0.29 / 0.00
+  graupel 5 mm            0.44 km (0.02-1.01)  ate 1 km 0.98  bacia 0.04   massa 1.00 / 0.85 / 0.49
+  granizo 10 mm           0.12 km (0.01-0.28)  ate 1 km 1.00  bacia 0.08   massa 1.00 / 0.99 / 0.95
+  granizo 20 mm           0.09 km (0.01-0.20)  ate 1 km 1.00  bacia 0.10   massa 1.00 / 1.00 / 0.99
+
+Vento necessario menos vento efetivo do ERA5 (m/s) e em desvios do ensemble, solta a 6,4 e 7,6 km
+  sobre o alvo | neve (agregado 5 mm) @ 6400 m                     0.79 m/s (0.67-0.90)      1.3 desvios
+  sobre o alvo | neve (agregado 5 mm) @ 7600 m                     1.39 m/s (1.15-1.60)      2.2 desvios
+  sobre o alvo | graupel 2 mm @ 6400 m                             0.77 m/s (0.64-0.88)      1.3 desvios
+  sobre o alvo | graupel 2 mm @ 7600 m                             1.35 m/s (1.08-1.56)      2.2 desvios
+  sobre o alvo | graupel 5 mm @ 6400 m                             0.77 m/s (0.64-0.88)      1.3 desvios
+  sobre o alvo | graupel 5 mm @ 7600 m                             1.36 m/s (1.10-1.57)      2.2 desvios
+  sobre o alvo | granizo 10 mm @ 6400 m                            0.77 m/s (0.65-0.90)      1.3 desvios
+  sobre o alvo | granizo 10 mm @ 7600 m                            1.36 m/s (1.10-1.56)      2.2 desvios
+  sobre o alvo | granizo 20 mm @ 6400 m                            0.75 m/s (0.62-0.85)      1.3 desvios
+  sobre o alvo | granizo 20 mm @ 7600 m                            1.32 m/s (1.07-1.53)      2.2 desvios
+  mancha SR leste (B03/B05) | neve (agregado 5 mm) @ 6400 m        5.11 m/s (4.99-5.23)      7.7 desvios
+  mancha SR leste (B03/B05) | neve (agregado 5 mm) @ 7600 m        3.81 m/s (3.63-3.99)      5.9 desvios
+  mancha SR leste (B03/B05) | graupel 2 mm @ 6400 m                9.15 m/s (8.85-9.35)     14.4 desvios
+  mancha SR leste (B03/B05) | graupel 2 mm @ 7600 m                6.12 m/s (5.79-6.34)      9.8 desvios
+  mancha SR leste (B03/B05) | graupel 5 mm @ 6400 m               16.51 m/s (16.38-16.64)     26.0 desvios
+  mancha SR leste (B03/B05) | graupel 5 mm @ 7600 m               10.22 m/s (9.96-10.43)     16.3 desvios
+  mancha SR leste (B03/B05) | granizo 10 mm @ 6400 m              56.34 m/s (56.22-56.50)     89.8 desvios
+  mancha SR leste (B03/B05) | granizo 10 mm @ 7600 m              32.56 m/s (32.31-32.77)     52.4 desvios
+  mancha SR leste (B03/B05) | granizo 20 mm @ 6400 m              78.62 m/s (78.50-78.75)    126.5 desvios
+  mancha SR leste (B03/B05) | granizo 20 mm @ 7600 m              44.68 m/s (44.43-44.89)     73.0 desvios
+  mancha SR oeste (B03/B05) | neve (agregado 5 mm) @ 6400 m        7.21 m/s (7.01-7.51)     12.9 desvios
+  mancha SR oeste (B03/B05) | neve (agregado 5 mm) @ 7600 m        4.90 m/s (4.79-5.06)      8.4 desvios
+  mancha SR oeste (B03/B05) | graupel 2 mm @ 6400 m               13.46 m/s (13.11-13.67)     25.6 desvios
+  mancha SR oeste (B03/B05) | graupel 2 mm @ 7600 m                8.45 m/s (8.13-8.67)     15.3 desvios
+  mancha SR oeste (B03/B05) | graupel 5 mm @ 6400 m               24.81 m/s (24.73-24.92)     47.7 desvios
+  mancha SR oeste (B03/B05) | graupel 5 mm @ 7600 m               14.75 m/s (14.52-14.95)     27.2 desvios
+  mancha SR oeste (B03/B05) | granizo 10 mm @ 6400 m              86.22 m/s (86.15-86.36)    168.6 desvios
+  mancha SR oeste (B03/B05) | granizo 10 mm @ 7600 m              49.19 m/s (48.98-49.38)     93.5 desvios
+  mancha SR oeste (B03/B05) | granizo 20 mm @ 6400 m             120.60 m/s (120.52-120.71)    239.0 desvios
+  mancha SR oeste (B03/B05) | granizo 20 mm @ 7600 m              67.90 m/s (67.69-68.09)    131.7 desvios
+  cume do Langtang Lirung | neve (agregado 5 mm) @ 6400 m          4.68 m/s (4.59-4.77)      7.1 desvios
+  cume do Langtang Lirung | neve (agregado 5 mm) @ 7600 m          3.47 m/s (3.29-3.64)      5.5 desvios
+  cume do Langtang Lirung | graupel 2 mm @ 6400 m                  8.21 m/s (7.92-8.38)     12.9 desvios
+  cume do Langtang Lirung | graupel 2 mm @ 7600 m                  5.47 m/s (5.17-5.68)      9.0 desvios
+  cume do Langtang Lirung | graupel 5 mm @ 6400 m                 14.63 m/s (14.49-14.75)     22.8 desvios
+  cume do Langtang Lirung | graupel 5 mm @ 7600 m                  9.04 m/s (8.80-9.23)     14.9 desvios
+  cume do Langtang Lirung | granizo 10 mm @ 6400 m                49.34 m/s (49.20-49.48)     77.6 desvios
+  cume do Langtang Lirung | granizo 10 mm @ 7600 m                28.51 m/s (28.27-28.69)     47.6 desvios
+  cume do Langtang Lirung | granizo 20 mm @ 6400 m                68.75 m/s (68.61-68.87)    108.4 desvios
+  cume do Langtang Lirung | granizo 20 mm @ 7600 m                39.06 m/s (38.83-39.24)     66.5 desvios
+
+Precipitacao dos membros 21-03 UTC no alvo (mm): 0.026 0.107 0.097 0.054 0.057 0.034 0.029 0.034 0.188 0.317
+  maximo nos 4 nos vizinhos (mm): 0.06 0.25 0.23 0.14 0.13 0.07 0.04 0.08 0.99 0.88
+  massa na bacia (kg): 3e+04 1.3e+05 1.2e+05 6.4e+04 6.8e+04 4.1e+04 3.5e+04 4.1e+04 2.2e+05 3.8e+05
+  CAPE de superficie 00 UTC (J/kg): 0.3 0.6 0.3 0.2 1.3 0.7 0.5 0.1 0.6 0.2
+  CAPE regional (media dos membros): 2026-08-25T18 max 529 J/kg em 27.0/84.0 (208 km), no no 28/85 200; 2026-08-25T21 max 284 J/kg em 27.5/84.0 (174 km), no no 28/85 106; 2026-08-26T00 max 35 J/kg em 27.0/84.0 (208 km), no no 28/85 1
+
+2026-08-25T22:00  div 600-450 3.3e-06 +- 1.7e-06 /s  omega500 0.104 +- 0.047 Pa/s  spread500 {'u': 0.63, 'v': 0.72, 't': 0.32}  CAPE elevado (det.) {'600 hPa': 0.0, '550 hPa': 0.0, '500 hPa': 0.0}
+    para conveccao (parcela de 600 hPa, det.): {'UR_600hPa': 0.74, 'aquecimento_K_para_50': 3.0, 'aquecimento_K_para_250': 4.0, 'umedecimento_g_kg_para_50': None, 'umedecimento_g_kg_para_250': None, 'cape_parcela_saturada_J_kg': 24.6}  spread600 {'t': 0.249, 'q': 0.000338}
+2026-08-25T23:00  div 600-450 4.2e-06 +- 1.7e-06 /s  omega500 0.096 +- 0.070 Pa/s  spread500 {'u': 0.57, 'v': 0.76, 't': 0.31}  CAPE elevado (det.) {'600 hPa': 0.0, '550 hPa': 0.0, '500 hPa': 0.0}
+    para conveccao (parcela de 600 hPa, det.): {'UR_600hPa': 0.74, 'aquecimento_K_para_50': 3.25, 'aquecimento_K_para_250': 4.25, 'umedecimento_g_kg_para_50': None, 'umedecimento_g_kg_para_250': None, 'cape_parcela_saturada_J_kg': 13.1}  spread600 {'t': 0.301, 'q': 0.00035}
+2026-08-26T00:00  div 600-450 5e-06 +- 2.7e-06 /s  omega500 0.088 +- 0.107 Pa/s  spread500 {'u': 0.51, 'v': 0.8, 't': 0.3}  CAPE elevado (det.) {'600 hPa': 0.0, '550 hPa': 0.0, '500 hPa': 0.0}
+    para conveccao (parcela de 600 hPa, det.): {'UR_600hPa': 0.74, 'aquecimento_K_para_50': 3.25, 'aquecimento_K_para_250': 4.25, 'umedecimento_g_kg_para_50': None, 'umedecimento_g_kg_para_250': None, 'cape_parcela_saturada_J_kg': 10.9}  spread600 {'t': 0.353, 'q': 0.000362}
+2026-08-26T00:30  div 600-450 5e-06 +- 2.3e-06 /s  omega500 0.075 +- 0.089 Pa/s  spread500 {'u': 0.53, 'v': 0.76, 't': 0.3}  CAPE elevado (det.) {'600 hPa': 0.0, '550 hPa': 0.0, '500 hPa': 0.0}
+    para conveccao (parcela de 600 hPa, det.): {'UR_600hPa': 0.74, 'aquecimento_K_para_50': 3.25, 'aquecimento_K_para_250': 4.25, 'umedecimento_g_kg_para_50': None, 'umedecimento_g_kg_para_250': None, 'cape_parcela_saturada_J_kg': 8.9}  spread600 {'t': 0.326, 'q': 0.000361}
+2026-08-26T01:00  div 600-450 4.9e-06 +- 2.1e-06 /s  omega500 0.062 +- 0.073 Pa/s  spread500 {'u': 0.56, 'v': 0.71, 't': 0.3}  CAPE elevado (det.) {'600 hPa': 0.0, '550 hPa': 0.0, '500 hPa': 0.0}
+    para conveccao (parcela de 600 hPa, det.): {'UR_600hPa': 0.75, 'aquecimento_K_para_50': 3.25, 'aquecimento_K_para_250': 4.25, 'umedecimento_g_kg_para_50': None, 'umedecimento_g_kg_para_250': None, 'cape_parcela_saturada_J_kg': 7.2}  spread600 {'t': 0.299, 'q': 0.00036}
+
+Entrada necessaria (eficiencia 0.3, 2.5 h, vapor 600-450 hPa 9.1 kg/m2)
+  M 1e+06 kg  Rc 2 km  chuva    0.8 mm  entrada 0.034 m/s  convergencia 3.4e-05 /s  ascensao na base 0.065 m/s
+  M 1e+06 kg  Rc 5 km  chuva    0.8 mm  entrada 0.085 m/s  convergencia 3.4e-05 /s  ascensao na base 0.065 m/s
+  M 1e+07 kg  Rc 2 km  chuva    8.4 mm  entrada 0.340 m/s  convergencia 0.00034 /s  ascensao na base 0.647 m/s
+  M 1e+07 kg  Rc 5 km  chuva    8.4 mm  entrada 0.851 m/s  convergencia 0.00034 /s  ascensao na base 0.647 m/s
+  M 1e+08 kg  Rc 2 km  chuva   84.0 mm  entrada 3.404 m/s  convergencia 0.0034 /s  ascensao na base 6.475 m/s
+  M 1e+08 kg  Rc 5 km  chuva   84.0 mm  entrada 8.511 m/s  convergencia 0.0034 /s  ascensao na base 6.475 m/s
