@@ -320,3 +320,42 @@ Regra: o resultado só conta como **candidato** se o critério 4 der uma massa s
   * as duas versões diferem no último bit, e com o vórtice ligado a diferença cresce caoticamente.
 * **Correção (v4.1, sha `d76faa55…`):** os dois perfis ficam em laços separados, e o caminho padrão volta a ser o laço de A–D. A desmontagem mostra de novo 1 chamada vetorial e 6 escalares de `coshf`, como no v3. O pacote é `bin_toro_V41.tar.gz` (sha `62cf2fdf…`), e a validação (`teste_unico` com os 8 `cmp`) fica com o vlab.
 * **Lição para a análise:** nos experimentos com vórtice, uma diferença do tamanho do arredondamento já muda o d02 inteiro em 30 min. Diferenças entre C, D e E menores que esse ruído não podem ser atribuídas à física dos experimentos.
+
+## v4.2 e experimento E2: vórtice sobre a frente de gelo, com d04 (29/10/2026)
+
+**Pedido do pesquisador:** no quadro do Xinhua Video (cópia do vídeo de Hei Mu), o gelo desce de uma frente de geleira no alto do paredão. É ali que o vórtice deve ficar.
+
+**Onde fica a frente:** a geleira suspensa logo a leste da cicatriz. O gelo de 24/08 que sumiu depois (S2) soma ~9,4 ha entre 4,8 e 5,15 km de altitude. A média pesada pela área dá **28,2918 N / 85,5284 E**, 0,5 km a ESE do ponto do drone e 2,4 km ao norte do centro do E (`TESTES_PONTO_DRONE_COLAPSO_NUVEM.md` § 7; `data/processed/gelo_xinhua/gelo_xinhua.json`).
+
+**v4.2: por que o módulo tinha de mudar para o d04.**
+* Na v4.1, `toro_wrf_prepara` e `toro_vortice` saíam com `id > 3`, e `dominios` e `dominios_v` tinham 3 posições.
+* Com `max_dom = 4`, o d04 rodaria sem Estado A e sem vórtice.
+* Com `feedback = 1` (o namelist do Lhende), o d04 sobrescreve o d03 na área dele, 30 × 30 km sobre o maciço. O vórtice e a anti-varredura seriam apagados justamente onde devem atuar.
+* **Correção:** os dois vetores passam a ter 4 posições, com padrões `dominios = 0, 1, 1, 1` e `dominios_v = 0, 0, 1, 1`, e o limite vai para `id > 4`.
+  * Com `max_dom = 3` nada muda; `teste_unico` (A–D byte a byte) deve continuar igual.
+  * Um namelist que só lista 3 valores herda o 4.º do padrão. Com `max_dom = 4`, uma configuração antiga de B, C ou D liga o d04 também, e isso é o que se quer, por causa do feedback.
+
+**Configuração** (`toro_wrf_vortice_E2.txt`): igual à de E, salvo:
+
+| Parâmetro | E | E2 | Base |
+| :--- | :--- | :--- | :--- |
+| Centro do vórtice | 28,270 N / 85,535 E | **28,2918 N / 85,5284 E** | frente de gelo do quadro do Xinhua = gelo perdido no S2 |
+| Domínios do Estado A | 1, 1, 1 | **1, 1, 1, 1** | o d04 também |
+| Domínios do vórtice | 0, 0, 1 | **0, 0, 1, 1** | d03 e d04 (feedback) |
+
+O raio do vento máximo continua em 5 km, que são 15 pontos do d04. A deriva de um granizo que cai de 7–8 km com o vento de NE–ENE de 3–5 m/s é de 1–2 km para WSW, dentro do núcleo; por isso o centro fica na própria frente, sem deslocamento.
+
+**Ordem no vlab (depois que o teste de 30 min do d04 passar):**
+1. Compilar a v4.2 (`aplicar_patch_toro_wrf.py` sobre cópia limpa do v4.7.1) e rodar `teste_unico` com A–D: os 8 `cmp` iguais aos da v4.1.
+2. `teste_ativo_u` com `toro_wrf_teste_vE.txt` e `max_dom = 4`: a linha do disparo aparece e o d04 difere do d04 de A.
+3. Rodada A (controle) e E2 com d03 e d04 começando às 12 UTC de 25/08.
+
+**Critérios (fixados antes de rodar), comparados com E e A:**
+1. **Vórtice:** vento tangencial e vorticidade entre 6 e 9 km ASL, a até 10 km do centro, às 23:00, 00:30 e 01:30.
+2. **Disparo:** quantos processos registram disparo, quando e a que temperatura.
+3. **Água super-resfriada e gelo** a até 5 e 30 km do centro, de 22:00 a 01:30.
+4. **Principal:** **graupel, granizo e neve no chão do d04** na bacia do ponto do drone (1,19 km²; `data/processed/ponto_drone/bacia_ponto.npz`) e sobre a geleira a até 1 km do centro, de 22:00 a 02:45. Conta também a água de fusão desse gelo.
+5. **Chuva e descendente** sobre a bacia e a até 30 km.
+
+**Regra:** o critério 4 passa a ser o de um gatilho, não o de uma fonte de volume. A ruptura foi em rocha. O resultado conta como **candidato** se o critério 4 der **≥ 10⁶ kg** de gelo no chão na bacia e na geleira. A referência é de 10⁶–10⁷ kg para um gatilho (`AGUA_SUPERRESFRIADA_ANFITEATRO.md`); 10⁸ kg é o máximo que a precipitação local daria (84 mm sobre 1,2 km²). Abaixo de 10⁶ kg, é o limite do modelo, e isso será dito.
+

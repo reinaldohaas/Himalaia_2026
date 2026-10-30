@@ -124,5 +124,30 @@ Em 1,6 µm a neve e o gelo absorvem, e a nuvem de gotas reflete. As regiões sã
 
 1. **Feito (3b e 3c).**
 2. **Diferença B07 − B13 à noite (17:00–23:50 UTC)** para nevoeiro e nuvem baixa no vale.
-3. **Visada do drone.** Com a posição e a altura do drone (se houver alguma pista nas fontes chinesas), conferir se o ponto e a encosta acima dele estavam à vista.
-4. **WRF.** Só depois desses testes: vórtice do E recentrado no ponto, critério de massa refeito para a bacia de 1,2 km² e d04, porque a 1 km esse maciço de 5,6 km também é suavizado.
+3. **Visada do drone.** Com a posição e a altura do drone (se houver alguma pista nas fontes chinesas), conferir se o ponto e a encosta acima dele estavam à vista. A frente de gelo já foi localizada pelo S2 (§ 7); a visada exata depende do registro de voo pedido a Hei Mu.
+4. **WRF.** Só depois desses testes: vórtice do E recentrado na frente de gelo (§ 7, configuração E2), critério de massa refeito para a bacia de 1,2 km² e d04, porque a 1 km esse maciço de 5,6 km também é suavizado.
+
+## 7. A frente de gelo do quadro do Xinhua (29/10/2026)
+
+O pesquisador mostrou um quadro do Xinhua Video, cópia do vídeo de Hei Mu. Nele se vê uma faixa branca descer de uma frente de gelo no alto de um paredão até a nuvem de poeira cinza; por cima da frente fica uma geleira com fendas. Conclusão do pesquisador: o gelo veio dessa parte de cima, e é ali que o vórtice deve ficar.
+
+Script: `scripts/neve_anfiteatro/gelo_xinhua.py` (Sentinel-2 L2A de 12/08, 24/08, 27/08 e 18/10/2026, do Planetary Computer, com o GLO-30). Saídas: `data/processed/gelo_xinhua/gelo_xinhua.json` e `gelo_xinhua_mapa.png`. Os recortes do S2 (`s2_*.npz`) ficam fora do git.
+
+![frente de gelo](data/processed/gelo_xinhua/gelo_xinhua_mapa.png)
+
+* **A geleira do quadro existe e fica logo a leste da cicatriz.** No S2 de 24/08 ela aparece com fendas, descendo de SE e terminando no alto do paredão, entre 28,289 e 28,295 N e 85,527 e 85,530 E, a 4,8–5,15 km de altitude. A coroa da ruptura de Petley está a ~5.140 m.
+* **Foi ali que o gelo sumiu.** Contei o gelo de 24/08 (NDSI > 0,4 e NIR > 0,2) que não era gelo em nenhuma das cenas limpas de 27/08 e 18/10. Isso é exigente: o 18/10 tem 3–4 vezes mais neve que o fim de agosto.
+  * 5,2 ha em 28,2908 N / 85,5283 E, de 4.914 a 5.145 m;
+  * 3,3 ha em 28,2929 N / 85,5290 E, de 4.969 a 5.126 m (dentro da bacia do ponto);
+  * 0,9 ha em 28,2930 N / 85,5268 E, de 4.809 a 4.947 m, num trecho de 48° (dentro da bacia do ponto).
+  * Somados, ~9,4 ha. Fora daí só há manchas de ≤ 0,5 ha, a maioria no fundo do vale (depósito).
+* **Frentes de gelo sobre paredão (> 40°)** no S2 de 24/08: há duas a ~4.930 m, em 28,2939 / 85,5279 e 28,2908 / 85,5267, a 0,4–0,45 km do ponto do drone. São as bordas inferiores da mesma geleira, e a primeira fica dentro da bacia do ponto.
+* **Centro adotado para o vórtice:** a média das três manchas pesada pela área, **28,2918 N / 85,5284 E**, a 0,5 km a ESE do ponto do drone. Fica 2,4 km ao norte do centro do E (28,270 / 85,535).
+* **Coerência com o quadro:** no quadro, a frente de gelo fica acima e à esquerda da poeira. Para uma câmera ao norte olhando para o sul, a esquerda é o leste, e a frente fica de fato a leste do ponto, morro acima. Tentei confirmar com uma vista sintética do GLO-30, mas sem a posição, a altura e a direção da câmera o ajuste fica indeterminado, e a 90 m o relevo é grosso demais. O registro de voo pedido a Hei Mu resolveria isso.
+* **O que isso muda:**
+  * A fonte do gelo é uma geleira suspensa sobre o paredão da ruptura, a geleira que Wang et al. (2026) viram acelerar de 7,4 para 55 m/ano. Não são as encostas de 6–7 km do Langtang Lirung.
+  * Para a hipótese do gatilho, a nuvem teria de pôr granizo e água de fusão sobre essa geleira e na borda dela, a 4,8–5,6 km, inteiramente acima de 0 °C.
+  * ~9 ha de gelo com 20–50 m de espessura dão ~2–5 × 10⁶ m³, ou ~2–4 × 10⁹ kg. É gelo da geleira, não da nuvem. Por isso ele não entra no balanço do § 4.
+
+**WRF:** a configuração E2 (`scripts/toro_wrf/toro_wrf_vortice_E2.txt`) põe o vórtice nesse centro, no d03 e no d04. Para isso o módulo precisou ir para a v4.2: na v4.1, o d04 ficava fora do módulo, e com `feedback = 1` apagaria o vórtice sobre o maciço (ver `scripts/toro_wrf/LEIA-ME_toro_wrf.md`).
+

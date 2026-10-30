@@ -10,6 +10,8 @@
 !   E = como D, com o vortice em niveis medios (perfil_v = 1: gaussiana em z ASL centrada em zc_v_m, meia-largura
 !   zw_v_m) e o disparo restrito a faixa de temperatura t_nuc_min_c < T < t_nuc_max_c (C), p. ex. -8 a -3 (Hallett-Mossop).
 !   Padroes: perfil_v = 0 (sech^2 a partir do chao) e faixa -999 a 0 C, que reproduzem A-D bit a bit.
+!   v4.2: ate 4 dominios (d04 de 333 m). Antes, id > 3 saia do modulo: o d04 ficava sem Estado A e sem vortice e,
+!   com feedback = 1, apagava os dois no d03 sobre o macico. Com max_dom = 3 nada muda.
 !
 ! Estado A (t_ini <= t < t_rel, dentro de raio_km do centro (lat0,lon0), nos dominios marcados em dominios):
 !   fcoal  autoconversao e autocoleta de goticulas (qrcnw, crcnw, cautn)          -> chuva quente
@@ -43,12 +45,12 @@ MODULE module_toro_wrf
   REAL,    SAVE :: fcoal = 0.0, faccr = 0.0, fctfz = 0.0, fnuc = 0.0, fhm = 0.0, frfrz = 0.0, fwfrz = 0.0
   REAL,    SAVE :: t_hom_c = -38.0
   REAL,    SAVE :: lat_aer = 28.271, lon_aer = 85.515, raio_aer_km = 5.0, fnuc_rel = 100.0
-  INTEGER, SAVE :: dominios(3) = (/ 0, 1, 1 /)
+  INTEGER, SAVE :: dominios(4) = (/ 0, 1, 1, 1 /)
   ! vortice dinamico e nucleacao no nucleo
   INTEGER, SAVE :: ivortex = 0
   REAL,    SAVE :: t_v_ini = 25.0, t_v_fim = 27.0, tr_v = 0.5
   REAL,    SAVE :: lat_v = 28.271, lon_v = 85.515, rmax_v_km = 5.0, zr_v_m = 3000.0, alpha_v = 1.0e-2
-  INTEGER, SAVE :: dominios_v(3) = (/ 0, 0, 1 /)
+  INTEGER, SAVE :: dominios_v(4) = (/ 0, 0, 1, 1 /)
   REAL,    SAVE :: t_vn_ini = 25.5, raio_vn_km = 5.0, fhm_v = 10.0, fnuc_v = 100.0
   REAL,    SAVE :: w_crit = 2.0, q_crit = 1.0e-5       ! disparo no nucleo: m/s e kg/kg
   LOGICAL, SAVE :: avisou_disparo = .false.
@@ -136,7 +138,7 @@ CONTAINS
     CALL le_config()
     toro_call = .false.
     IF ( .not. ativo ) RETURN
-    IF ( id < 1 .or. id > 3 ) RETURN
+    IF ( id < 1 .or. id > 4 ) RETURN
     IF ( dominios(id) /= 1 ) RETURN
     th = gmt + xtime/60.0
     em_vn = ( ivortex == 1 .and. dominios_v(id) == 1 .and. th >= t_vn_ini .and. th < t_v_fim )
@@ -174,7 +176,7 @@ CONTAINS
     REAL :: th, gamm, la, lo, x, y, r, s, prof, h, fv, rmax
     CALL le_config()
     IF ( .not. ativo .or. ivortex /= 1 ) RETURN
-    IF ( id < 1 .or. id > 3 ) RETURN
+    IF ( id < 1 .or. id > 4 ) RETURN
     IF ( dominios_v(id) /= 1 ) RETURN
     th = gmt + xtime/60.0
     IF ( th < t_v_ini .or. th >= t_v_fim ) RETURN

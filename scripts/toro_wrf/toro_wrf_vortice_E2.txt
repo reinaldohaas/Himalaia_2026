@@ -1,0 +1,38 @@
+&toro_wrf
+ t_ini       = 17.0,      ! Estado A (anti-varredura) a partir de 25/08 17 UTC
+ t_rel       = 27.0,      ! ate o fim da rodada (26/08 03 UTC); no nucleo, so onde a ascendente dispara
+ t_dur       = 0.0,       ! sem liberacao por tempo: quem libera e o vortice
+ lat0        = 28.271,
+ lon0        = 85.515,
+ raio_km     = 150.0,
+ fcoal       = 0.0,
+ faccr       = 0.0,
+ fctfz       = 0.0,
+ fnuc        = 0.0,
+ fhm         = 0.0,
+ frfrz       = 0.0,
+ fwfrz       = 0.0,
+ t_hom_c     = -38.0,
+ dominios    = 1, 1, 1, 1,  ! E2: tambem o d04 (333 m; modulo v4.2)
+ ivortex     = 1,         ! vortice dinamico ligado
+ t_v_ini     = 22.0,      ! E e E2: 25/08 22 UTC (colapso da conveccao perto do sitio, 22-01 UTC)
+ tr_v        = 1.0,       ! rampa de 1 h
+ t_v_fim     = 25.5,      ! E: ate 01:30 UTC (o topo sobre o sitio chega ao terreno ~01:20)
+ lat_v       = 28.2918,   ! E2: frente de gelo do quadro do Xinhua = gelo de 24/08 que sumiu (S2), 4,8-5,15 km,
+ lon_v       = 85.5284,   !     0,5 km a ESE do ponto do drone (data/processed/gelo_xinhua/gelo_xinhua.json)
+ rmax_v_km   = 5.0,       ! raio do vento maximo (5 pontos do d03)
+ zr_v_m      = 3000.0,    ! decaimento vertical sech^2(h/3 km) acima do terreno
+ alpha_v     = 1.0e-2,    ! m s-2 (~36 m/s em 1 h sem atrito)
+ dominios_v  = 0, 0, 1, 1, ! E2: d03 e d04 (com feedback = 1 o d04 sobrescreve o d03 sobre o macico)
+ t_vn_ini    = 24.0,      ! E: nucleacao no nucleo a partir de 00 UTC (inicio da descida do topo)
+ raio_vn_km  = 5.0,
+ fhm_v       = 10.0,      ! Hallett-Mossop x10 no disparo
+ fnuc_v      = 100.0,     ! nucleacao primaria x100 no disparo (aerossol trazido pelo vortice)
+ w_crit      = 1.0,       ! E: ascendente > 1 m/s
+ q_crit      = 1.0e-5,    ! D: e com agua liquida (qc + qr) > 0,01 g/kg abaixo de 0 C
+ perfil_v    = 1,         ! E: maximo do vortice em niveis medios
+ zc_v_m      = 7500.0,    ! E: altitude do maximo (m ASL)
+ zw_v_m      = 1500.0,    ! E: meia-largura vertical (m)
+ t_nuc_min_c = -8.0,      ! E: disparo so entre -8 e -3 C (Hallett-Mossop)
+ t_nuc_max_c = -3.0,      ! 
+/

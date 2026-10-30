@@ -1,0 +1,190 @@
+{
+ "cenas": [
+  {
+   "id": "S2A_MSIL2A_20260824T050231_R119_T45RUM_20260824T115710",
+   "datetime": "2026-08-24T05:02:31.024000Z",
+   "nuvem_ate_2_5km": 0.29,
+   "gelo_ate_2_5km_ha": 195.0
+  },
+  {
+   "id": "S2B_MSIL2A_20260824T044659_R076_T45RUM_20260824T083447",
+   "datetime": "2026-08-24T04:46:59.024000Z",
+   "nuvem_ate_2_5km": 0.25,
+   "gelo_ate_2_5km_ha": 256.9
+  },
+  {
+   "id": "S2B_MSIL2A_20260827T045659_R119_T45RUM_20260827T084453",
+   "datetime": "2026-08-27T04:56:59.024000Z",
+   "nuvem_ate_2_5km": 0.62,
+   "gelo_ate_2_5km_ha": 206.2
+  },
+  {
+   "id": "S2C_MSIL2A_20260812T045701_R119_T45RUM_20260812T100317",
+   "datetime": "2026-08-12T04:57:01.025000Z",
+   "nuvem_ate_2_5km": 0.01,
+   "gelo_ate_2_5km_ha": 328.9
+  },
+  {
+   "id": "S2C_MSIL2A_20261018T044811_R076_T45RUM_20261018T074216",
+   "datetime": "2026-10-18T04:48:11.025000Z",
+   "nuvem_ate_2_5km": 0.0,
+   "gelo_ate_2_5km_ha": 984.2
+  }
+ ],
+ "perda_de_gelo_24ago_para_27ago_18out": [
+  {
+   "ha": 5.2,
+   "lat": 28.2908,
+   "lon": 85.5283,
+   "cota_min_m": 4914,
+   "cota_max_m": 5145,
+   "decl_media_graus": 34.5
+  },
+  {
+   "ha": 3.3,
+   "lat": 28.2929,
+   "lon": 85.529,
+   "cota_min_m": 4969,
+   "cota_max_m": 5126,
+   "decl_media_graus": 31.7
+  },
+  {
+   "ha": 0.9,
+   "lat": 28.293,
+   "lon": 85.5268,
+   "cota_min_m": 4809,
+   "cota_max_m": 4947,
+   "decl_media_graus": 48.2
+  },
+  {
+   "ha": 0.5,
+   "lat": 28.288,
+   "lon": 85.5116,
+   "cota_min_m": 3878,
+   "cota_max_m": 3918,
+   "decl_media_graus": 33.7
+  },
+  {
+   "ha": 0.5,
+   "lat": 28.2872,
+   "lon": 85.5108,
+   "cota_min_m": 3918,
+   "cota_max_m": 3939,
+   "decl_media_graus": 21.4
+  },
+  {
+   "ha": 0.3,
+   "lat": 28.2939,
+   "lon": 85.5268,
+   "cota_min_m": 4808,
+   "cota_max_m": 4870,
+   "decl_media_graus": 45.7
+  },
+  {
+   "ha": 0.3,
+   "lat": 28.2914,
+   "lon": 85.5229,
+   "cota_min_m": 4529,
+   "cota_max_m": 4580,
+   "decl_media_graus": 48.4
+  },
+  {
+   "ha": 0.2,
+   "lat": 28.2921,
+   "lon": 85.5232,
+   "cota_min_m": 4557,
+   "cota_max_m": 4617,
+   "decl_media_graus": 43.0
+  },
+  {
+   "ha": 0.2,
+   "lat": 28.2908,
+   "lon": 85.5264,
+   "cota_min_m": 4893,
+   "cota_max_m": 4921,
+   "decl_media_graus": 35.4
+  },
+  {
+   "ha": 0.2,
+   "lat": 28.2887,
+   "lon": 85.5118,
+   "cota_min_m": 3824,
+   "cota_max_m": 3868,
+   "decl_media_graus": 34.1
+  }
+ ],
+ "frentes_de_gelo_24ago": [
+  {
+   "pixels": 257,
+   "comprimento_km": 5.14,
+   "lat": 28.2749,
+   "lon": 85.5268,
+   "cota_media_m": 5520,
+   "dist_ponto_drone_km": 2.14
+  },
+  {
+   "pixels": 59,
+   "comprimento_km": 1.18,
+   "lat": 28.3016,
+   "lon": 85.5335,
+   "cota_media_m": 5499,
+   "dist_ponto_drone_km": 1.27
+  },
+  {
+   "pixels": 41,
+   "comprimento_km": 0.82,
+   "lat": 28.2939,
+   "lon": 85.5279,
+   "cota_media_m": 4933,
+   "dist_ponto_drone_km": 0.38
+  },
+  {
+   "pixels": 35,
+   "comprimento_km": 0.7,
+   "lat": 28.2908,
+   "lon": 85.5267,
+   "cota_media_m": 4930,
+   "dist_ponto_drone_km": 0.45
+  },
+  {
+   "pixels": 23,
+   "comprimento_km": 0.46,
+   "lat": 28.2784,
+   "lon": 85.5229,
+   "cota_media_m": 5008,
+   "dist_ponto_drone_km": 1.73
+  },
+  {
+   "pixels": 15,
+   "comprimento_km": 0.3,
+   "lat": 28.2825,
+   "lon": 85.5285,
+   "cota_media_m": 5123,
+   "dist_ponto_drone_km": 1.36
+  },
+  {
+   "pixels": 15,
+   "comprimento_km": 0.3,
+   "lat": 28.2771,
+   "lon": 85.5202,
+   "cota_media_m": 4925,
+   "dist_ponto_drone_km": 1.91
+  },
+  {
+   "pixels": 8,
+   "comprimento_km": 0.16,
+   "lat": 28.2832,
+   "lon": 85.5247,
+   "cota_media_m": 4867,
+   "dist_ponto_drone_km": 1.21
+  },
+  {
+   "pixels": 8,
+   "comprimento_km": 0.16,
+   "lat": 28.2741,
+   "lon": 85.5173,
+   "cota_media_m": 5278,
+   "dist_ponto_drone_km": 2.31
+  }
+ ]
+}
