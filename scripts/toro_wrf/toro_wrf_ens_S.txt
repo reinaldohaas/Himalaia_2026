@@ -1,0 +1,17 @@
+&toro_wrf
+ t_ini       = 17.0,      ! Estado A a partir de 25/08 17 UTC (como B-E2)
+ t_rel       = 27.0,      ! ate o fim da rodada (26/08 03 UTC): sem liberacao
+ t_dur       = 0.0,
+ lat0        = 28.271,    ! mesmo centro e raio de E2: S = E2 bit a bit ate o vortice ligar (22 UTC)
+ lon0        = 85.515,
+ raio_km     = 150.0,
+ fcoal       = 0.0,
+ faccr       = 0.0,
+ fctfz       = 0.0,
+ fnuc        = 0.0,
+ fhm         = 0.0,
+ frfrz       = 0.0,
+ fwfrz       = 0.0,
+ t_hom_c     = -38.0,     ! so o congelamento de goticulas abaixo de -38 C fica livre (Bigg: limiar efetivo -35 a -38 C pelo tamanho)
+ dominios    = 1, 1, 1, 1,
+/

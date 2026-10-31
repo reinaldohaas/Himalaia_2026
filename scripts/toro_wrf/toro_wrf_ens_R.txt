@@ -1,0 +1,21 @@
+&toro_wrf
+ t_ini       = 17.0,      ! Estado A a partir de 25/08 17 UTC: R = S bit a bit ate t_rel
+ t_rel       = 23.5,      ! 25/08 23:30 UTC, meio dos topos frios sobre o ponto (Himawari, 22:00-00:30)
+ t_dur       = 1.0,       ! ate 00:30: fisica normal em todo lugar e aerossol na coluna da frente; depois, fisica normal
+ lat0        = 28.271,    ! mesmo centro e raio de S e E2
+ lon0        = 85.515,
+ raio_km     = 150.0,
+ fcoal       = 0.0,
+ faccr       = 0.0,
+ fctfz       = 0.0,
+ fnuc        = 0.0,
+ fhm         = 0.0,
+ frfrz       = 0.0,
+ fwfrz       = 0.0,
+ t_hom_c     = -38.0,
+ lat_aer     = 28.2918,   ! coluna do aerossol na frente de gelo (E2)
+ lon_aer     = 85.5284,
+ raio_aer_km = 5.0,
+ fnuc_rel    = 100.0,     ! nucleacao primaria x100 na coluna (nucleos de gelo chegando: via 1 de Tinsley)
+ dominios    = 1, 1, 1, 1,
+/

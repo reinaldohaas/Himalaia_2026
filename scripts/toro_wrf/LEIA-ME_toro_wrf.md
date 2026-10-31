@@ -361,3 +361,38 @@ O raio do vento máximo continua em 5 km, que são 15 pontos do d04. A deriva de
 
 **Regra:** o critério 4 passa a ser o de um gatilho, não o de uma fonte de volume. A ruptura foi em rocha. O resultado conta como **candidato** se o critério 4 der **≥ 10⁶ kg** de gelo no chão na bacia e na geleira. A referência é de 10⁶–10⁷ kg para um gatilho (`AGUA_SUPERRESFRIADA_ANFITEATRO.md`); 10⁸ kg é o máximo que a precipitação local daria (84 mm sobre 1,2 km²). Abaixo de 10⁶ kg, é o limite do modelo, e isso será dito.
 
+## Ensemble no d03: o experimento definitivo (30/10/2026)
+
+**Por que muda.** A análise de transporte com o ensemble do ERA5 (`TRANSPORTE_GELO_ERA5_ENSEMBLE.md`) tratava o condensado como gelo desde a soltura. O pesquisador apontou que, com a anti-varredura do Jz, ele seria gotícula super-resfriada, que anda com o vento e pode se concentrar mais. Nos 10 membros do ERA5, o vento de 5 a 7,6 km sopra para 200–225° a 1–2,5 m/s: a frente de gelo fica a barlavento das manchas super-resfriadas do Himawari (a 4–7 km a SW e SSW). A água iria da frente para as manchas, não o contrário. O que continua valendo é o fim da cadeia: de 7 km, só graupel de 5 mm ou granizo pousa dentro da bacia. O experimento tem de dizer se a água retida sobre a frente vira gelo desse tamanho.
+
+**Por que no d03 e em ensemble.**
+* O d04 estourou no 5.º passo (w de 462 m/s a 6.175 m, numa encosta de 58°). O relevo de 333 m chega a 58–62°; o d03 chega a ~45°. O d04 fica para depois, com o declive limitado, só no braço que passar e no controle. Antes, um teste de 30 min com o `wrf_A.exe` (v4.7.1 sem patch) decide se a causa é o relevo ou o código.
+* Uma realização não basta: a §9 do CM1 deu 10–37 t numa e 0–1 t na outra, e aqui uma diferença de arredondamento muda o d02 inteiro em 30 min (v4.1).
+
+**Desenho.** 4 braços × 5 membros, com o `wrf_toro.exe` v4.2 e `max_dom = 3`. Os membros diferem pelo SKEBS no d01 e no d02 (`nens` = membro, `skebs_vertstruc = 1`, amplitudes padrão); a mesma semente nos quatro braços, para comparar por pares. Script: `cluster/wrf_lhende/rodar_ensemble_d03.sh`.
+
+| Braço | Configuração | Pergunta |
+| :--- | :--- | :--- |
+| A | sem grupo | controle |
+| S | `toro_wrf_ens_S.txt`: Estado A de 17 UTC ao fim, sem liberação; só o congelamento abaixo de −38 °C livre | teto do reservatório e o que o congelamento homogêneo faz sozinho |
+| E2 | `toro_wrf_vortice_E2.txt` | reversão pela ascendente do vórtice na frente de gelo (Hallett–Mossop ×10, nucleação ×100, −8 < T < −3 °C) |
+| R | `toro_wrf_ens_R.txt`: Estado A até 23:30, física normal e nucleação ×100 numa coluna de 5 km na frente até 00:30 | reversão pela chegada de núcleos de gelo, sem vórtice (via 1 de Tinsley) |
+
+O limiar `t_hom_c` fica em −38 °C. No NSSL de dois momentos, o congelamento das gotículas é o de Bigg, que depende do volume: em 1 min, gotículas de 8–10 µm só congelam a −36/−37 °C, e as de 15–20 µm a −34/−35 °C. Um braço com −35 °C sairia quase igual a S se as gotículas forem pequenas; o diâmetro é diagnóstico (C1).
+
+**Validação, antes da fila:**
+1. `teste_unico` da v4.2 com os 8 `cmp` iguais.
+2. `rodar_ensemble_d03.sh teste`: A1 = S1 byte a byte; A1 ≠ A2 (o `nens` atua); A1 ≠ `toro_tA` (o SKEBS atua).
+3. Nas rodadas, por membro: S = E2 = R bit a bit antes de 22:00 (E2) e de 23:30 (R); A = S antes de 17:00.
+
+**Critérios, fixados antes de rodar.** A caixa é um raio em torno da frente de gelo (28,2918 N / 85,5284 E), porque nem o d03 nem o d04 resolvem a bacia de 1,19 km².
+* **C1, reservatório:** água super-resfriada (`QCLOUD` + `QRAIN`, T < 0 °C) até 5 km da frente, máximo de 22:00 a 01:30. São relatados também a temperatura média pesada pela massa e o diâmetro médio das gotículas (`QCLOUD` e `QNCLOUD`) nas faixas de −3 a −8 °C e de −30 a −38 °C.
+* **C2, surto:** em E2 e R, a maior fração do reservatório de C1 que congela em 30 min depois do disparo ou da liberação, contra a mesma janela em S. No CM1 foi ~15 %/h.
+* **C3, tamanho:** diâmetro médio-massa do graupel e do granizo no nível mais baixo, até 3 km da frente (massa, número e volume do NSSL), de 22:00 a 02:35.
+* **C4, principal:** gelo no chão (`GRAUPELNC` + `HAILNC` + `SNOWNC`) acumulado de 22:00 a 02:35, em média até 3 km da frente, convertido para a bacia (média em kg/m² × 1,19 × 10⁶ m²). Para ser candidato: ≥ 10⁶ kg (≥ 0,84 mm de equivalente em água) em pelo menos 4 dos 5 membros, e o braço acima de A em todos os 5 pares.
+* **C5, observação:** OLR até 5 km do ponto do drone ≤ 175 W/m² (~235 K) em algum instante de 22:00 a 00:30, e ≥ 280 W/m² (~265 K) de 02:00 a 02:50. Relata-se também se há nuvem super-resfriada de 3 a 8 km a SSW da frente às 00:50–01:20 (as manchas do Himawari).
+
+**Regra de decisão.** Um braço é candidato se passar em C4 e C5 em pelo menos 4 dos 5 membros. Se nenhum passar, o resultado é que o modelo não produz o gatilho com essas alavancas, e se diz em que elo parou: o reservatório (C1), o surto (C2), o tamanho do gelo (C3) ou o chão (C4). O efeito de um braço só conta se o sinal da diferença contra A for o mesmo nos 5 pares.
+
+**Custo.** Cada rodada de 27 h levou 4,2–5,5 h com NP = 112 (B, A, C e D em 19–21/10). As 20 rodadas somam ~90 h, ou ~4 dias, sem quedas do contêiner. A fila roda por membro (os 4 braços do membro 1, depois os do 2), então o primeiro conjunto completo sai em ~18 h. A fila pula o que já tem `SUCCESS` e guarda as rodadas parciais, para retomar depois de uma queda.
+
