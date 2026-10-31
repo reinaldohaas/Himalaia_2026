@@ -22,7 +22,7 @@ Massa de água líquida abaixo de 0 °C, de 17:00 a 03:00 UTC. Fontes: `data/pro
 * **Limites do modelo:**
   * o relevo do d03 vai só até 6.438 m, contra 7.216 m no GLO-30;
   * a 1 km, o maciço de 5,6 km do ponto do drone também é suavizado;
-  * com o vórtice ligado, uma diferença do tamanho do arredondamento já muda o d02 inteiro em 30 min (ver o v4.1 em `scripts/toro_wrf/LEIA-ME_toro_wrf.md`).
+  * com o vórtice ligado, uma diferença do tamanho do arredondamento já muda o d02 inteiro em 30 min (ver o módulo toro_wrf 4.1 em `scripts/toro_wrf/LEIA-ME_toro_wrf.md`).
 
 ## 2. Satélite (Himawari-9, 25/08 17:00 a 26/08 03:00 UTC, a cada 10 min)
 

@@ -6,11 +6,13 @@
 
 ## Código
 
+**Numeração:** o WRF é sempre o 4.7.1. Os números 3, 4, 4.1 e 4.2 são versões do módulo toro_wrf, o patch acrescentado ao NSSL; os pacotes (`bin_toro_V41`, `bin_toro_V42`) seguem essa numeração.
+
 * `module_toro_wrf.F`: módulo novo, inserido no próprio arquivo do NSSL. É **inerte sem `toro_wrf.txt`** no diretório da rodada.
-* `aplicar_patch_toro_wrf.py`: só acrescenta linhas em `phys/module_mp_nssl_2mom.F` (185) e em `phys/module_microphysics_driver.F`. Confere o sha256 do v4.7.1 (f52c197) antes e para se alguma âncora não for única.
+* `aplicar_patch_toro_wrf.py`: só acrescenta linhas em `phys/module_mp_nssl_2mom.F` (185) e em `phys/module_microphysics_driver.F`. Confere o sha256 do WRF 4.7.1 (f52c197) antes e para se alguma âncora não for única.
 * Compilação no WSL (gfortran 13.3, Open MPI 4.1.6, netCDF-Fortran 4.5.4, dmpar, sem química), em dois executáveis da mesma ferramenta:
-  * **A**: v4.7.1 sem alteração;
-  * **B**: v4.7.1 com o patch.
+  * **A**: WRF 4.7.1 sem alteração;
+  * **B**: WRF 4.7.1 com o patch.
 * O executável que rodou em 18–19/10 foi compilado em outra máquina (gfortran 11.4, CMake, com química), cuja árvore não existe mais. Por isso o **controle é refeito com A**.
 
 ## Validação (antes de qualquer experimento)
@@ -284,7 +286,7 @@ Se os quatro baterem, os executáveis separados podem ser aposentados, e as roda
 
 Em D, a água do núcleo estava a −1/−2 °C e quase nunca coincidia com as ascendentes.
 
-**Código (módulo versão 4, executável único):** duas opções novas. Com os valores padrão, o comportamento de A–D não muda (a validar byte a byte).
+**Código (módulo toro_wrf 4, executável único):** duas opções novas. Com os valores padrão, o comportamento de A–D não muda (a validar byte a byte).
 * `perfil_v = 1`: força tangencial gaussiana em altitude, F ∝ exp(−((z − `zc_v_m`)/`zw_v_m`)²). O padrão (`perfil_v = 0`) é o sech²(h/`zr_v_m`) a partir do chão.
 * `t_nuc_min_c` e `t_nuc_max_c`: o disparo da nucleação no núcleo só acontece com `t_nuc_min_c` < T < `t_nuc_max_c` (°C). Os padrões −999 e 0 equivalem ao T < 0 °C de D.
 
@@ -310,25 +312,25 @@ Em D, a água do núcleo estava a −1/−2 °C e quase nunca coincidia com as a
 
 Regra: o resultado só conta como **candidato** se o critério 4 der uma massa sólida no chão das encostas altas da ordem de 10⁹–10¹⁰ kg, o que corresponde a ~10⁶–10⁷ m³ de gelo. Abaixo disso, é o limite do modelo, que tem o relevo rebaixado a 1 km (a ser testado no d04).
 
-## v4.1: a vetorização do cosh e a reprodução bit a bit (25/10/2026)
+## Módulo toro_wrf 4.1: a vetorização do cosh e a reprodução bit a bit (25/10/2026)
 
-* **Sintoma:** com o v4 (sha `f1cef7ae…`), A e B saíram idênticos às referências, mas C não. Às 00:30, C difere de `toro_tCa` em 90 das 210 variáveis em quase todo o d02 (máximo de 1,9 m/s no vento e 1,2 K na temperatura).
+* **Sintoma:** com o módulo toro_wrf 4 (sha `f1cef7ae…`), A e B saíram idênticos às referências, mas C não. Às 00:30, C difere de `toro_tCa` em 90 das 210 variáveis em quase todo o d02 (máximo de 1,9 m/s no vento e 1,2 K na temperatura).
 * **O vlab descartou o ambiente:** mesmo NP (112), mesma decomposição (8 × 14), mesmas entradas e mesmo namelist (`relatorios/toro_wrf/LEIA_diagnostico_v4.txt`).
 * **Causa, vista na desmontagem do `toro_vortice` nos dois executáveis:**
-  * no v3, o laço do perfil sech² chama o `coshf` vetorial da libmvec (`_ZGVbN4v_coshf`), porque o gfortran 13 vetoriza com `-O2 -ftree-vectorize` mesmo sem `-ffast-math`;
-  * no v4, o `IF ( perfil_v == 1 )` dentro do laço impediu a vetorização, e o `coshf` passou a ser o escalar;
+  * no módulo 3, o laço do perfil sech² chama o `coshf` vetorial da libmvec (`_ZGVbN4v_coshf`), porque o gfortran 13 vetoriza com `-O2 -ftree-vectorize` mesmo sem `-ffast-math`;
+  * no módulo 4, o `IF ( perfil_v == 1 )` dentro do laço impediu a vetorização, e o `coshf` passou a ser o escalar;
   * as duas versões diferem no último bit, e com o vórtice ligado a diferença cresce caoticamente.
-* **Correção (v4.1, sha `d76faa55…`):** os dois perfis ficam em laços separados, e o caminho padrão volta a ser o laço de A–D. A desmontagem mostra de novo 1 chamada vetorial e 6 escalares de `coshf`, como no v3. O pacote é `bin_toro_V41.tar.gz` (sha `62cf2fdf…`), e a validação (`teste_unico` com os 8 `cmp`) fica com o vlab.
+* **Correção (módulo toro_wrf 4.1, sha `d76faa55…`):** os dois perfis ficam em laços separados, e o caminho padrão volta a ser o laço de A–D. A desmontagem mostra de novo 1 chamada vetorial e 6 escalares de `coshf`, como no módulo 3. O pacote é `bin_toro_V41.tar.gz` (sha `62cf2fdf…`), e a validação (`teste_unico` com os 8 `cmp`) fica com o vlab.
 * **Lição para a análise:** nos experimentos com vórtice, uma diferença do tamanho do arredondamento já muda o d02 inteiro em 30 min. Diferenças entre C, D e E menores que esse ruído não podem ser atribuídas à física dos experimentos.
 
-## v4.2 e experimento E2: vórtice sobre a frente de gelo, com d04 (29/10/2026)
+## Módulo toro_wrf 4.2 e experimento E2: vórtice sobre a frente de gelo, com d04 (29/10/2026)
 
 **Pedido do pesquisador:** no quadro do Xinhua Video (cópia do vídeo de Hei Mu), o gelo desce de uma frente de geleira no alto do paredão. É ali que o vórtice deve ficar.
 
 **Onde fica a frente:** a geleira suspensa logo a leste da cicatriz. O gelo de 24/08 que sumiu depois (S2) soma ~9,4 ha entre 4,8 e 5,15 km de altitude. A média pesada pela área dá **28,2918 N / 85,5284 E**, 0,5 km a ESE do ponto do drone e 2,4 km ao norte do centro do E (`TESTES_PONTO_DRONE_COLAPSO_NUVEM.md` § 7; `data/processed/gelo_xinhua/gelo_xinhua.json`).
 
-**v4.2: por que o módulo tinha de mudar para o d04.**
-* Na v4.1, `toro_wrf_prepara` e `toro_vortice` saíam com `id > 3`, e `dominios` e `dominios_v` tinham 3 posições.
+**Módulo toro_wrf 4.2: por que o módulo tinha de mudar para o d04.**
+* No módulo 4.1, `toro_wrf_prepara` e `toro_vortice` saíam com `id > 3`, e `dominios` e `dominios_v` tinham 3 posições.
 * Com `max_dom = 4`, o d04 rodaria sem Estado A e sem vórtice.
 * Com `feedback = 1` (o namelist do Lhende), o d04 sobrescreve o d03 na área dele, 30 × 30 km sobre o maciço. O vórtice e a anti-varredura seriam apagados justamente onde devem atuar.
 * **Correção:** os dois vetores passam a ter 4 posições, com padrões `dominios = 0, 1, 1, 1` e `dominios_v = 0, 0, 1, 1`, e o limite vai para `id > 4`.
@@ -345,10 +347,10 @@ Regra: o resultado só conta como **candidato** se o critério 4 der uma massa s
 
 O raio do vento máximo continua em 5 km, que são 15 pontos do d04. A deriva de um granizo que cai de 7–8 km com o vento de NE–ENE de 3–5 m/s é de 1–2 km para WSW, dentro do núcleo; por isso o centro fica na própria frente, sem deslocamento.
 
-**Executável:** `bin_toro_V42.tar.gz` (sha `bbed3d30…`), compilado no WSL como a v4.1, com `wrf_toro.exe` sha `478962a3…`. O `toro_vortice` tem de novo 1 chamada vetorial e 6 escalares de `coshf`, como na v4.1, e o módulo embutido no `module_mp_nssl_2mom.F` é o deste repositório. O teste funcional do d04 usa `toro_wrf_teste_vE2_d04.txt`: 30 min, vórtice e núcleo no d03 e no d04, centro E2.
+**Executável:** `bin_toro_V42.tar.gz` (sha `bbed3d30…`), compilado no WSL como o módulo 4.1, com `wrf_toro.exe` sha `478962a3…`. O `toro_vortice` tem de novo 1 chamada vetorial e 6 escalares de `coshf`, como no módulo 4.1, e o módulo embutido no `module_mp_nssl_2mom.F` é o deste repositório. O teste funcional do d04 usa `toro_wrf_teste_vE2_d04.txt`: 30 min, vórtice e núcleo no d03 e no d04, centro E2.
 
 **Ordem no vlab (depois que o teste de 30 min do d04 passar):**
-1. Compilar a v4.2 (`aplicar_patch_toro_wrf.py` sobre cópia limpa do v4.7.1) e rodar `teste_unico` com A–D: os 8 `cmp` iguais aos da v4.1.
+1. Compilar o módulo toro_wrf 4.2 (`aplicar_patch_toro_wrf.py` sobre cópia limpa do WRF 4.7.1) e rodar `teste_unico` com A–D: os 8 `cmp` iguais aos do módulo 4.1.
 2. `teste_ativo_u` com `toro_wrf_teste_vE.txt` e `max_dom = 4`: a linha do disparo aparece e o d04 difere do d04 de A.
 3. Rodada A (controle) e E2 com d03 e d04 começando às 12 UTC de 25/08.
 
@@ -366,10 +368,10 @@ O raio do vento máximo continua em 5 km, que são 15 pontos do d04. A deriva de
 **Por que muda.** A análise de transporte com o ensemble do ERA5 (`TRANSPORTE_GELO_ERA5_ENSEMBLE.md`) tratava o condensado como gelo desde a soltura. O pesquisador apontou que, com a anti-varredura do Jz, ele seria gotícula super-resfriada, que anda com o vento e pode se concentrar mais. Nos 10 membros do ERA5, o vento de 5 a 7,6 km sopra para 200–225° a 1–2,5 m/s: a frente de gelo fica a barlavento das manchas super-resfriadas do Himawari (a 4–7 km a SW e SSW). A água iria da frente para as manchas, não o contrário. O que continua valendo é o fim da cadeia: de 7 km, só graupel de 5 mm ou granizo pousa dentro da bacia. O experimento tem de dizer se a água retida sobre a frente vira gelo desse tamanho.
 
 **Por que no d03 e em ensemble.**
-* O d04 estourou no 5.º passo (w de 462 m/s a 6.175 m, numa encosta de 58°). O relevo de 333 m chega a 58–62°; o d03 chega a ~45°. O d04 fica para depois, com o declive limitado, só no braço que passar e no controle. Antes, um teste de 30 min com o `wrf_A.exe` (v4.7.1 sem patch) decide se a causa é o relevo ou o código.
-* Uma realização não basta: a §9 do CM1 deu 10–37 t numa e 0–1 t na outra, e aqui uma diferença de arredondamento muda o d02 inteiro em 30 min (v4.1).
+* O d04 estourou no 5.º passo (w de 462 m/s a 6.175 m, numa encosta de 58°). O relevo de 333 m chega a 58–62°; o d03 chega a ~45°. O d04 fica para depois, com o declive limitado, só no braço que passar e no controle. Antes, um teste de 30 min com o `wrf_A.exe` (WRF 4.7.1 sem patch) decide se a causa é o relevo ou o código.
+* Uma realização não basta: a §9 do CM1 deu 10–37 t numa e 0–1 t na outra, e aqui uma diferença de arredondamento muda o d02 inteiro em 30 min (módulo toro_wrf 4.1).
 
-**Desenho.** 4 braços × 5 membros, com o `wrf_toro.exe` v4.2 e `max_dom = 3`. Os membros diferem pelo SKEBS no d01 e no d02 (`nens` = membro, `skebs_vertstruc = 1`, amplitudes padrão); a mesma semente nos quatro braços, para comparar por pares. Script: `cluster/wrf_lhende/rodar_ensemble_d03.sh`.
+**Desenho.** 4 braços × 5 membros, com o `wrf_toro.exe` (WRF 4.7.1 com o módulo toro_wrf 4.2) e `max_dom = 3`. Os membros diferem pelo SKEBS no d01 e no d02 (`nens` = membro, `skebs_vertstruc = 1`, amplitudes padrão); a mesma semente nos quatro braços, para comparar por pares. Script: `cluster/wrf_lhende/rodar_ensemble_d03.sh`.
 
 | Braço | Configuração | Pergunta |
 | :--- | :--- | :--- |
@@ -381,7 +383,7 @@ O raio do vento máximo continua em 5 km, que são 15 pontos do d04. A deriva de
 O limiar `t_hom_c` fica em −38 °C. No NSSL de dois momentos, o congelamento das gotículas é o de Bigg, que depende do volume: em 1 min, gotículas de 8–10 µm só congelam a −36/−37 °C, e as de 15–20 µm a −34/−35 °C. Um braço com −35 °C sairia quase igual a S se as gotículas forem pequenas; o diâmetro é diagnóstico (C1).
 
 **Validação, antes da fila:**
-1. `teste_unico` da v4.2 com os 8 `cmp` iguais.
+1. `teste_unico` do módulo toro_wrf 4.2 com os 8 `cmp` iguais.
 2. `rodar_ensemble_d03.sh teste`: A1 = S1 byte a byte; A1 ≠ A2 (o `nens` atua); A1 ≠ `toro_tA` (o SKEBS atua).
 3. Nas rodadas, por membro: S = E2 = R bit a bit antes de 22:00 (E2) e de 23:30 (R); A = S antes de 17:00.
 

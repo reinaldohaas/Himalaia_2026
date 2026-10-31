@@ -154,5 +154,5 @@ Script: `scripts/neve_anfiteatro/gelo_xinhua.py` (Sentinel-2 L2A de 12/08, 24/08
   * Para a hipótese do gatilho, a nuvem teria de pôr granizo e água de fusão sobre essa geleira e na borda dela, a 4,8–5,6 km, inteiramente acima de 0 °C.
   * ~9 ha de gelo com 20–50 m de espessura dão ~2–5 × 10⁶ m³, ou ~2–4 × 10⁹ kg. É gelo da geleira, não da nuvem. Por isso ele não entra no balanço do § 4.
 
-**WRF:** a configuração E2 (`scripts/toro_wrf/toro_wrf_vortice_E2.txt`) põe o vórtice nesse centro, no d03 e no d04. Para isso o módulo precisou ir para a v4.2: na v4.1, o d04 ficava fora do módulo, e com `feedback = 1` apagaria o vórtice sobre o maciço (ver `scripts/toro_wrf/LEIA-ME_toro_wrf.md`).
+**WRF:** a configuração E2 (`scripts/toro_wrf/toro_wrf_vortice_E2.txt`) põe o vórtice nesse centro, no d03 e no d04. Para isso foi preciso passar ao módulo toro_wrf 4.2: no 4.1, o d04 ficava fora do módulo, e com `feedback = 1` apagaria o vórtice sobre o maciço (ver `scripts/toro_wrf/LEIA-ME_toro_wrf.md`).
 
