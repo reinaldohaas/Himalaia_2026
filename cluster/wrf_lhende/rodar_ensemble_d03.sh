@@ -29,6 +29,7 @@ cfg() { case "$1" in A) echo "" ;; S) echo toro_wrf_ens_S.txt ;; E2) echo toro_w
 
 prepara() {   # prepara <dir> <braco> <membro>: tabelas, met_em, condicoes iniciais, namelist com &stoch e o grupo do braco
   mkdir -p "$1" && cd "$1" || falha "$1"
+  local f b c   # sem o local, o b do laco das tabelas sobrescrevia o braco do chamador (so nas mensagens do log)
   for f in "$WRFDIR"/run/*; do b=$(basename "$f"); case "$b" in *.exe|namelist*|wrfout*|rsl.*) ;; *) ln -sf "$f" "$b";; esac; done
   ln -sf "$AQUI"/wps_run/met_em.d0* .
   ln -sf "$AQUI"/toro_real/wrfinput_d0* "$AQUI"/toro_real/wrfbdy_d01 .
