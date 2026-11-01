@@ -106,7 +106,7 @@ def recorte(pasta, saida):
         raise SystemExit("sem wrfout_d03 em %s" % pasta)
     nc = Nc(it3[0][0]); leitor = nc.tipo
     lat, lon = np.array(nc.var("XLAT")[0]), np.array(nc.var("XLONG")[0])
-    dx = float(nc.attr("DX")); nc.close()
+    dx = float(np.ravel(nc.attr("DX"))[0]); nc.close()   # no wrf_run o scipy devolve o atributo como vetor de 1 elemento
     jc, ic = np.unravel_index(np.argmin(km(lat, lon, FRENTE)[0]), lat.shape)
     j0, j1, i0, i1 = jc - MEIA, jc + MEIA + 1, ic - MEIA, ic + MEIA + 1
     if j0 < 0 or i0 < 0 or j1 > lat.shape[0] or i1 > lat.shape[1]:
