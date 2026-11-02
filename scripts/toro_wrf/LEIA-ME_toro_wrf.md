@@ -398,3 +398,34 @@ O limiar `t_hom_c` fica em −38 °C. No NSSL de dois momentos, o congelamento d
 
 **Custo.** Cada rodada de 27 h levou 4,2–5,5 h com NP = 112 (B, A, C e D em 19–21/10). As 20 rodadas somam ~90 h, ou ~4 dias, sem quedas do contêiner. A fila roda por membro (os 4 braços do membro 1, depois os do 2), então o primeiro conjunto completo sai em ~18 h. A fila pula o que já tem `SUCCESS` e guarda as rodadas parciais, para retomar depois de uma queda.
 
+## E2 suspenso e módulo toro_wrf 4.3 com o experimento E3 (02/11/2026)
+
+**Por que o E2 saiu dos membros 2–5.** No E2_m1 o vórtice formou o reservatório (9,3 × 10⁶ kg de água super-resfriada até 5 km da frente à meia-noite, a ~6 km e −3,6 °C), mas nada congelou (C2 = 0): a concentração de gelo ficou ~0 L⁻¹ onde estava a água, e ~95 % dela evaporou. A leitura do fonte do NSSL no vlab (`relatorios/toro_wrf/ens_d03/leitura_disparo_nssl_20261101.txt`) mostrou por quê. É um erro de método do módulo, não do WRF:
+* com os padrões (`icenucopt = 1`, `imeyers5 = .false.`, sem `&nssl_mp_params`), a nucleação primária e o congelamento de Bigg só existem abaixo de −5 °C. Às 00:00, 80 % da água estava entre 0 e −5 °C. O `fnuc_v = 100` multiplicava um termo nulo;
+* o `fhm_v` multiplicava os fragmentos de gotas que congelam (`csplinter`), que valem zero com `nsplinter = 0`. O Hallett–Mossop por acreção sobre graupel (`chmul1`) não recebia o fator e exige graupel, que não havia.
+
+O E2_m1 fica como **inconclusivo**, não como resultado negativo. A fila segue com A, S e R (`BRACOS="A S R"`).
+
+**A hipótese do E3 (definida pelo pesquisador).** A injeção de núcleos de glaciação num ambiente com muita água super-resfriada leva à glaciação secundária explosiva. O E3 coloca só a injeção; a explosão, se vier, é a da física do NSSL.
+
+**Módulo toro_wrf 4.3** (`module_toro_wrf.F`, `aplicar_patch_toro_wrf.py`):
+* `inj = 1`: de `t_inj_ini` a `t_inj_fim`, no núcleo (até `raio_vn_km` da frente), onde há água líquida (qc + qr > `q_crit`) com `t_inj_min_c` < T < `t_inj_max_c`, os núcleos congelam gotículas por imersão até o gelo de nuvem chegar a `n_inj` (L⁻¹). Cada gotícula congelada vira um cristal com a massa média das gotículas. Entra no ponto do congelamento de Bigg, que o NSSL percorre em qualquer temperatura;
+* `t_vn_fim`: fim da janela do núcleo. No E2 o Estado A voltava ao núcleo em `t_v_fim` (01:30);
+* com `inj = 0` e `t_vn_fim < 0` (padrões), o caminho é o do 4.2.
+
+**E3** (`toro_wrf_ens_E3.txt`):
+* até 00:00 é o E2: Estado A desde 17:00 e o vórtice das 22:00 às 01:30;
+* a partir das 00:00, o núcleo de 5 km fica sem Estado A até o fim (`nucleo_no_estado_A = .false.`, `t_vn_fim = 27`). Fora do núcleo, o Estado A continua;
+* injeção das 00:00 às 00:30, com `n_inj = 10` L⁻¹ e −20 < T < −2 °C;
+* nada é multiplicado (`fhm_v = fnuc_v = 1`).
+
+Os critérios C1–C5 e a regra de decisão são os mesmos. O C2 usa a janela do E2 (a partir das 00:00).
+
+**Validação, antes de entrar na fila:**
+1. `BIN=bin_toro_v43 rodar_toro_wrf.sh teste_unico`: os 8 `cmp` iguais a A–D. O módulo 4.3 reproduz o 4.2 com a injeção desligada.
+2. `teste_ativo_u E3` e `teste_ativo_u E3sem` (`toro_wrf_teste_vE3*.txt`, 30 min, d02): os dois têm de diferir, e o rsl tem de ter "injecao de nucleos iniciada".
+3. Nas rodadas: E3 = S bit a bit antes de 22:00, e E3_m1 = E2_m1 antes de 00:00 (`criterios_ens_d03.py`, pares S–E3 e E2–E3).
+
+**O limite já conhecido do reservatório.** O limiar do C4 (10⁶ kg) equivale a 0,84 kg/m² em média até 3 km da frente. No E2_m1, à meia-noite, a coluna média de água super-resfriada até 3 km era 0,05 kg/m², e só colunas isoladas chegavam a 1,2–1,4 kg/m². Mesmo que tudo congele e caia no lugar, o E3 só passa no C4 se o gelo convergir para a frente ou se o reservatório crescer.
+
+**Compilação:** `compilar_toro_v43.sh`, no WSL, a partir da árvore do 4.2 (`wrf471_toroV`): os 4 arquivos voltam ao original (`*.antes_toro`), o patch é aplicado e a recompilação é incremental. Compara também as chamadas de `coshf` com o 4.2.

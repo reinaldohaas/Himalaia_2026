@@ -1,0 +1,2158 @@
+{
+ "sitio_aparente": [
+  28.340043153932772,
+  85.27611898860457
+ ],
+ "registros": [
+  {
+   "utc": "2026-08-25T17:00Z",
+   "tb_min_sitio": 245.14334106445312,
+   "tb_med_sitio": 254.82606506347656,
+   "btd_07_13_sitio": null,
+   "sistema": {
+    "area_km2": 45784.0,
+    "tb_min": 196.994873046875,
+    "lat": 29.22903197623619,
+    "lon": 87.63823868600304,
+    "dist_sitio_km": 251.42324637305768
+   },
+   "tb_min_30km": 230.48977661132812,
+   "min_30km_lat_lon": [
+    28.31999999999997,
+    84.97999999999972
+   ],
+   "objeto_sitio": {
+    "area_km2": 3812.0,
+    "tb_min": 215.5828399658203,
+    "tem_nucleo_213": false,
+    "contem_sistema": false,
+    "lon_oeste_faixa_28_28p6": 83.6
+   },
+   "sela_ate_sistema_K": 246.0,
+   "sela_menos_min_local_K": 15.510223388671875,
+   "rotulo_sitio": 12
+  },
+  {
+   "utc": "2026-08-25T17:10Z",
+   "tb_min_sitio": 248.55955505371094,
+   "tb_med_sitio": 255.2870330810547,
+   "btd_07_13_sitio": null,
+   "sistema": {
+    "area_km2": 43440.0,
+    "tb_min": 196.7533416748047,
+    "lat": 29.24322836095759,
+    "lon": 87.53705893185925,
+    "dist_sitio_km": 242.9978814059869
+   },
+   "tb_min_30km": 232.86920166015625,
+   "min_30km_lat_lon": [
+    28.119999999999973,
+    85.43999999999963
+   ],
+   "objeto_sitio": {
+    "area_km2": 188.0,
+    "tb_min": 228.50015258789062,
+    "tem_nucleo_213": false,
+    "contem_sistema": false,
+    "lon_oeste_faixa_28_28p6": 85.41999999999963
+   },
+   "sela_ate_sistema_K": 242.0,
+   "sela_menos_min_local_K": 9.13079833984375,
+   "antecessor": {
+    "rotulo": 11,
+    "sobreposicao_km2": 92.0,
+    "area_km2": 92.0,
+    "tb_min": 231.37168884277344,
+    "lat": 28.06608695652172,
+    "lon": 85.52608695652134,
+    "tem_nucleo_213": false
+   },
+   "rotulo_sitio": 9,
+   "dtb_10min_sitio": 3.4162139892578125
+  },
+  {
+   "utc": "2026-08-25T17:20Z",
+   "tb_min_sitio": 248.29248046875,
+   "tb_med_sitio": 255.4084930419922,
+   "btd_07_13_sitio": null,
+   "sistema": {
+    "area_km2": 40596.0,
+    "tb_min": 197.59225463867188,
+    "lat": 29.265695142378505,
+    "lon": 87.44781948960413,
+    "dist_sitio_km": 236.15084013527016
+   },
+   "tb_min_30km": 230.66725158691406,
+   "min_30km_lat_lon": [
+    28.119999999999973,
+    85.39999999999964
+   ],
+   "objeto_sitio": {
+    "area_km2": 272.0,
+    "tb_min": 225.73204040527344,
+    "tem_nucleo_213": false,
+    "contem_sistema": false,
+    "lon_oeste_faixa_28_28p6": 85.37999999999964
+   },
+   "sela_ate_sistema_K": 241.0,
+   "sela_menos_min_local_K": 10.332748413085938,
+   "antecessor": {
+    "rotulo": 9,
+    "sobreposicao_km2": 188.0,
+    "area_km2": 188.0,
+    "tb_min": 228.50015258789062,
+    "lat": 28.054468085106347,
+    "lon": 85.56127659574427,
+    "tem_nucleo_213": false
+   },
+   "rotulo_sitio": 5,
+   "dtb_10min_sitio": -0.2670745849609375
+  },
+  {
+   "utc": "2026-08-25T17:30Z",
+   "tb_min_sitio": 244.01235961914062,
+   "tb_med_sitio": 254.3019561767578,
+   "btd_07_13_sitio": null,
+   "sistema": {
+    "area_km2": 36500.0,
+    "tb_min": 198.4136962890625,
+    "lat": 29.302033972602683,
+    "lon": 87.30096657534173,
+    "dist_sitio_km": 225.19457149740717
+   },
+   "tb_min_30km": 222.12945556640625,
+   "min_30km_lat_lon": [
+    28.099999999999973,
+    85.35999999999964
+   ],
+   "objeto_sitio": {
+    "area_km2": 932.0,
+    "tb_min": 222.12945556640625,
+    "tem_nucleo_213": false,
+    "contem_sistema": false,
+    "lon_oeste_faixa_28_28p6": 85.29999999999966
+   },
+   "sela_ate_sistema_K": 240.0,
+   "sela_menos_min_local_K": 17.87054443359375,
+   "antecessor": {
+    "rotulo": 4,
+    "sobreposicao_km2": 292.0,
+    "area_km2": 372.0,
+    "tb_min": 222.19845581054688,
+    "lat": 27.87053763440858,
+    "lon": 85.82752688171998,
+    "tem_nucleo_213": false
+   },
+   "rotulo_sitio": 5,
+   "dtb_10min_sitio": -4.280120849609375
+  },
+  {
+   "utc": "2026-08-25T17:40Z",
+   "tb_min_sitio": 233.4914093017578,
+   "tb_med_sitio": 249.49200439453125,
+   "btd_07_13_sitio": 16.53974151611328,
+   "sistema": {
+    "area_km2": 35280.0,
+    "tb_min": 199.445556640625,
+    "lat": 29.272659863945524,
+    "lon": 87.28411111111038,
+    "dist_sitio_km": 222.20129336774235
+   },
+   "tb_min_30km": 218.1107177734375,
+   "min_30km_lat_lon": [
+    28.15999999999997,
+    85.29999999999966
+   ],
+   "objeto_sitio": {
+    "area_km2": 1296.0,
+    "tb_min": 217.05406188964844,
+    "tem_nucleo_213": false,
+    "contem_sistema": false,
+    "lon_oeste_faixa_28_28p6": 85.23999999999967
+   },
+   "sela_ate_sistema_K": 241.0,
+   "sela_menos_min_local_K": 22.8892822265625,
+   "antecessor": {
+    "rotulo": 5,
+    "sobreposicao_km2": 832.0,
+    "area_km2": 932.0,
+    "tb_min": 222.12945556640625,
+    "lat": 27.99416309012873,
+    "lon": 85.64214592274635,
+    "tem_nucleo_213": false
+   },
+   "rotulo_sitio": 5,
+   "dtb_10min_sitio": -10.520950317382812
+  },
+  {
+   "utc": "2026-08-25T17:50Z",
+   "tb_min_sitio": 232.5270233154297,
+   "tb_med_sitio": 240.95767211914062,
+   "btd_07_13_sitio": 17.087154388427734,
+   "sistema": {
+    "area_km2": 34644.0,
+    "tb_min": 200.00759887695312,
+    "lat": 29.235801870453706,
+    "lon": 87.27793788246088,
+    "dist_sitio_km": 219.7796353082117
+   },
+   "tb_min_30km": 211.90817260742188,
+   "min_30km_lat_lon": [
+    28.099999999999973,
+    85.31999999999965
+   ],
+   "objeto_sitio": {
+    "area_km2": 128980.0,
+    "tb_min": 200.00759887695312,
+    "tem_nucleo_213": true,
+    "contem_sistema": true,
+    "lon_oeste_faixa_28_28p6": 85.13999999999969
+   },
+   "sela_ate_sistema_K": 235.0,
+   "sela_menos_min_local_K": 23.091827392578125,
+   "antecessor": {
+    "rotulo": 1,
+    "sobreposicao_km2": 123240.0,
+    "area_km2": 127040.0,
+    "tb_min": 199.445556640625,
+    "lat": 28.933104534004997,
+    "lon": 87.85934886649788,
+    "tem_nucleo_213": true
+   },
+   "rotulo_sitio": 3,
+   "dtb_10min_sitio": -0.964385986328125
+  },
+  {
+   "utc": "2026-08-25T18:00Z",
+   "tb_min_sitio": 222.61048889160156,
+   "tb_med_sitio": 237.0947723388672,
+   "btd_07_13_sitio": 16.746400833129883,
+   "sistema": {
+    "area_km2": 33976.0,
+    "tb_min": 200.3411102294922,
+    "lat": 29.210678125735765,
+    "lon": 87.2536472804325,
+    "dist_sitio_km": 216.39905644758133
+   },
+   "tb_min_30km": 212.7497100830078,
+   "min_30km_lat_lon": [
+    28.079999999999973,
+    85.29999999999966
+   ],
+   "objeto_sitio": {
+    "area_km2": 131312.0,
+    "tb_min": 200.3411102294922,
+    "tem_nucleo_213": true,
+    "contem_sistema": true,
+    "lon_oeste_faixa_28_28p6": 85.0599999999997
+   },
+   "sela_ate_sistema_K": 233.0,
+   "sela_menos_min_local_K": 20.250289916992188,
+   "antecessor": {
+    "rotulo": 3,
+    "sobreposicao_km2": 125128.0,
+    "area_km2": 128980.0,
+    "tb_min": 200.00759887695312,
+    "lat": 28.901964955807063,
+    "lon": 87.79496045898505,
+    "tem_nucleo_213": true
+   },
+   "rotulo_sitio": 1,
+   "dtb_10min_sitio": -9.916534423828125
+  },
+  {
+   "utc": "2026-08-25T18:10Z",
+   "tb_min_sitio": 222.88340759277344,
+   "tb_med_sitio": 239.2095184326172,
+   "btd_07_13_sitio": 15.669024467468262,
+   "sistema": {
+    "area_km2": 31328.0,
+    "tb_min": 200.3411102294922,
+    "lat": 29.158059244126612,
+    "lon": 87.28344228804829,
+    "dist_sitio_km": 216.48814372485612
+   },
+   "tb_min_30km": 215.18820190429688,
+   "min_30km_lat_lon": [
+    28.099999999999973,
+    85.29999999999966
+   ],
+   "objeto_sitio": {
+    "area_km2": 138672.0,
+    "tb_min": 200.3411102294922,
+    "tem_nucleo_213": true,
+    "contem_sistema": true,
+    "lon_oeste_faixa_28_28p6": 83.91999999999993
+   },
+   "sela_ate_sistema_K": 228.0,
+   "sela_menos_min_local_K": 12.811798095703125,
+   "antecessor": {
+    "rotulo": 1,
+    "sobreposicao_km2": 127968.0,
+    "area_km2": 131312.0,
+    "tb_min": 200.3411102294922,
+    "lat": 28.87054404776406,
+    "lon": 87.74570001218389,
+    "tem_nucleo_213": true
+   },
+   "rotulo_sitio": 1,
+   "dtb_10min_sitio": 0.272918701171875
+  },
+  {
+   "utc": "2026-08-25T18:20Z",
+   "tb_min_sitio": 225.01759338378906,
+   "tb_med_sitio": 237.69175720214844,
+   "btd_07_13_sitio": 15.958712577819824,
+   "sistema": {
+    "area_km2": 30172.0,
+    "tb_min": 200.6719207763672,
+    "lat": 29.14350258517826,
+    "lon": 87.24076362190037,
+    "dist_sitio_km": 212.01795488294178
+   },
+   "tb_min_30km": 215.2673797607422,
+   "min_30km_lat_lon": [
+    28.139999999999972,
+    85.17999999999968
+   ],
+   "objeto_sitio": {
+    "area_km2": 140512.0,
+    "tb_min": 200.6719207763672,
+    "tem_nucleo_213": true,
+    "contem_sistema": true,
+    "lon_oeste_faixa_28_28p6": 83.89999999999993
+   },
+   "sela_ate_sistema_K": 229.0,
+   "sela_menos_min_local_K": 13.732620239257812,
+   "antecessor": {
+    "rotulo": 1,
+    "sobreposicao_km2": 134812.0,
+    "area_km2": 138672.0,
+    "tb_min": 200.3411102294922,
+    "lat": 28.823654090227258,
+    "lon": 87.61084631360252,
+    "tem_nucleo_213": true
+   },
+   "rotulo_sitio": 1,
+   "dtb_10min_sitio": 2.134185791015625
+  },
+  {
+   "utc": "2026-08-25T18:30Z",
+   "tb_min_sitio": 224.42591857910156,
+   "tb_med_sitio": 237.2103271484375,
+   "btd_07_13_sitio": 15.937833786010742,
+   "sistema": {
+    "area_km2": 28228.0,
+    "tb_min": 200.23023986816406,
+    "lat": 29.125421567238156,
+    "lon": 87.22473855745994,
+    "dist_sitio_km": 209.7516793738784
+   },
+   "tb_min_30km": 211.65272521972656,
+   "min_30km_lat_lon": [
+    28.079999999999973,
+    85.33999999999965
+   ],
+   "objeto_sitio": {
+    "area_km2": 141292.0,
+    "tb_min": 200.23023986816406,
+    "tem_nucleo_213": true,
+    "contem_sistema": true,
+    "lon_oeste_faixa_28_28p6": 83.87999999999994
+   },
+   "sela_ate_sistema_K": 230.0,
+   "sela_menos_min_local_K": 18.347274780273438,
+   "antecessor": {
+    "rotulo": 1,
+    "sobreposicao_km2": 136104.0,
+    "area_km2": 140512.0,
+    "tb_min": 200.6719207763672,
+    "lat": 28.797800045547667,
+    "lon": 87.5812804600311,
+    "tem_nucleo_213": true
+   },
+   "rotulo_sitio": 1,
+   "dtb_10min_sitio": -0.5916748046875
+  },
+  {
+   "utc": "2026-08-25T18:40Z",
+   "tb_min_sitio": 226.2458038330078,
+   "tb_med_sitio": 241.10162353515625,
+   "btd_07_13_sitio": 15.27928352355957,
+   "sistema": {
+    "area_km2": 26616.0,
+    "tb_min": 200.45167541503906,
+    "lat": 29.102317403065772,
+    "lon": 87.18342350465812,
+    "dist_sitio_km": 205.006796077285
+   },
+   "tb_min_30km": 209.6459197998047,
+   "min_30km_lat_lon": [
+    28.079999999999973,
+    85.23999999999967
+   ],
+   "objeto_sitio": {
+    "area_km2": 141160.0,
+    "tb_min": 200.45167541503906,
+    "tem_nucleo_213": true,
+    "contem_sistema": true,
+    "lon_oeste_faixa_28_28p6": 83.85999999999994
+   },
+   "sela_ate_sistema_K": 231.0,
+   "sela_menos_min_local_K": 21.354080200195312,
+   "antecessor": {
+    "rotulo": 1,
+    "sobreposicao_km2": 135748.0,
+    "area_km2": 141292.0,
+    "tb_min": 200.23023986816406,
+    "lat": 28.77216034878121,
+    "lon": 87.56684936160497,
+    "tem_nucleo_213": true
+   },
+   "rotulo_sitio": 1,
+   "dtb_10min_sitio": 1.81988525390625
+  },
+  {
+   "utc": "2026-08-25T18:50Z",
+   "tb_min_sitio": 223.22256469726562,
+   "tb_med_sitio": 242.69400024414062,
+   "btd_07_13_sitio": 13.519632339477539,
+   "sistema": {
+    "area_km2": 25296.0,
+    "tb_min": 201.00009155273438,
+    "lat": 29.082169512966427,
+    "lon": 87.14000316255462,
+    "dist_sitio_km": 200.21148216839038
+   },
+   "tb_min_30km": 209.6459197998047,
+   "min_30km_lat_lon": [
+    28.079999999999973,
+    85.19999999999968
+   ],
+   "objeto_sitio": {
+    "area_km2": 140468.0,
+    "tb_min": 201.00009155273438,
+    "tem_nucleo_213": true,
+    "contem_sistema": true,
+    "lon_oeste_faixa_28_28p6": 83.85999999999994
+   },
+   "sela_ate_sistema_K": 234.0,
+   "sela_menos_min_local_K": 24.354080200195312,
+   "antecessor": {
+    "rotulo": 1,
+    "sobreposicao_km2": 135232.0,
+    "area_km2": 141160.0,
+    "tb_min": 200.45167541503906,
+    "lat": 28.74043808444315,
+    "lon": 87.54426353074446,
+    "tem_nucleo_213": true
+   },
+   "rotulo_sitio": 1,
+   "dtb_10min_sitio": -3.0232391357421875
+  },
+  {
+   "utc": "2026-08-25T19:00Z",
+   "tb_min_sitio": 220.08778381347656,
+   "tb_med_sitio": 240.40304565429688,
+   "btd_07_13_sitio": 12.865486145019531,
+   "sistema": {
+    "area_km2": 23360.0,
+    "tb_min": 200.6719207763672,
+    "lat": 29.04205821917804,
+    "lon": 87.13582191780752,
+    "dist_sitio_km": 198.03861504144857
+   },
+   "tb_min_30km": 209.46717834472656,
+   "min_30km_lat_lon": [
+    28.099999999999973,
+    85.17999999999968
+   ],
+   "objeto_sitio": {
+    "area_km2": 139068.0,
+    "tb_min": 200.6719207763672,
+    "tem_nucleo_213": true,
+    "contem_sistema": true,
+    "lon_oeste_faixa_28_28p6": 83.85999999999994
+   },
+   "sela_ate_sistema_K": 235.0,
+   "sela_menos_min_local_K": 25.532821655273438,
+   "antecessor": {
+    "rotulo": 1,
+    "sobreposicao_km2": 133924.0,
+    "area_km2": 140468.0,
+    "tb_min": 201.00009155273438,
+    "lat": 28.722055414756344,
+    "lon": 87.5139841102592,
+    "tem_nucleo_213": true
+   },
+   "rotulo_sitio": 1,
+   "dtb_10min_sitio": -3.1347808837890625
+  },
+  {
+   "utc": "2026-08-25T19:10Z",
+   "tb_min_sitio": 214.71034240722656,
+   "tb_med_sitio": 236.47222900390625,
+   "btd_07_13_sitio": 12.02618408203125,
+   "sistema": {
+    "area_km2": 21556.0,
+    "tb_min": 200.45167541503906,
+    "lat": 29.026019669697483,
+    "lon": 87.16865466691337,
+    "dist_sitio_km": 200.30984447627293
+   },
+   "tb_min_30km": 212.0776824951172,
+   "min_30km_lat_lon": [
+    28.099999999999973,
+    85.13999999999969
+   ],
+   "objeto_sitio": {
+    "area_km2": 138120.0,
+    "tb_min": 200.45167541503906,
+    "tem_nucleo_213": true,
+    "contem_sistema": true,
+    "lon_oeste_faixa_28_28p6": 83.91999999999993
+   },
+   "sela_ate_sistema_K": 235.0,
+   "sela_menos_min_local_K": 22.922317504882812,
+   "antecessor": {
+    "rotulo": 1,
+    "sobreposicao_km2": 132240.0,
+    "area_km2": 139068.0,
+    "tb_min": 200.6719207763672,
+    "lat": 28.709448615065966,
+    "lon": 87.48341070555335,
+    "tem_nucleo_213": true
+   },
+   "rotulo_sitio": 1,
+   "dtb_10min_sitio": -5.37744140625
+  },
+  {
+   "utc": "2026-08-25T19:20Z",
+   "tb_min_sitio": 215.5828399658203,
+   "tb_med_sitio": 231.19410705566406,
+   "btd_07_13_sitio": 11.379803657531738,
+   "sistema": {
+    "area_km2": 19824.0,
+    "tb_min": 200.1190643310547,
+    "lat": 28.986275221953143,
+    "lon": 87.218890234059,
+    "dist_sitio_km": 203.26035413417438
+   },
+   "tb_min_30km": 213.16490173339844,
+   "min_30km_lat_lon": [
+    28.15999999999997,
+    85.21999999999967
+   ],
+   "objeto_sitio": {
+    "area_km2": 135940.0,
+    "tb_min": 200.1190643310547,
+    "tem_nucleo_213": true,
+    "contem_sistema": true,
+    "lon_oeste_faixa_28_28p6": 83.83999999999995
+   },
+   "sela_ate_sistema_K": 233.0,
+   "sela_menos_min_local_K": 19.835098266601562,
+   "antecessor": {
+    "rotulo": 1,
+    "sobreposicao_km2": 130536.0,
+    "area_km2": 138120.0,
+    "tb_min": 200.45167541503906,
+    "lat": 28.68856183029246,
+    "lon": 87.44634636547852,
+    "tem_nucleo_213": true
+   },
+   "rotulo_sitio": 1,
+   "dtb_10min_sitio": 0.87249755859375
+  },
+  {
+   "utc": "2026-08-25T19:30Z",
+   "tb_min_sitio": 216.51715087890625,
+   "tb_med_sitio": 225.32752990722656,
+   "btd_07_13_sitio": 12.781424522399902,
+   "sistema": {
+    "area_km2": 19036.0,
+    "tb_min": 200.00759887695312,
+    "lat": 28.947081319604916,
+    "lon": 87.23820130279398,
+    "dist_sitio_km": 203.54283186578053
+   },
+   "tb_min_30km": 211.1375732421875,
+   "min_30km_lat_lon": [
+    28.119999999999973,
+    85.0999999999997
+   ],
+   "objeto_sitio": {
+    "area_km2": 133492.0,
+    "tb_min": 200.00759887695312,
+    "tem_nucleo_213": true,
+    "contem_sistema": true,
+    "lon_oeste_faixa_28_28p6": 83.77999999999996
+   },
+   "sela_ate_sistema_K": 233.0,
+   "sela_menos_min_local_K": 21.8624267578125,
+   "antecessor": {
+    "rotulo": 1,
+    "sobreposicao_km2": 128612.0,
+    "area_km2": 135940.0,
+    "tb_min": 200.1190643310547,
+    "lat": 28.679915845225793,
+    "lon": 87.42551596292405,
+    "tem_nucleo_213": true
+   },
+   "rotulo_sitio": 1,
+   "dtb_10min_sitio": 0.9343109130859375
+  },
+  {
+   "utc": "2026-08-25T19:40Z",
+   "tb_min_sitio": 215.97430419921875,
+   "tb_med_sitio": 222.4678192138672,
+   "btd_07_13_sitio": 11.061766624450684,
+   "sistema": {
+    "area_km2": 15292.0,
+    "tb_min": 199.89581298828125,
+    "lat": 28.75053099659949,
+    "lon": 87.54322783154511,
+    "dist_sitio_km": 226.52326279990476
+   },
+   "tb_min_30km": 207.6397247314453,
+   "min_30km_lat_lon": [
+    28.139999999999972,
+    85.13999999999969
+   ],
+   "objeto_sitio": {
+    "area_km2": 130812.0,
+    "tb_min": 199.89581298828125,
+    "tem_nucleo_213": true,
+    "contem_sistema": true,
+    "lon_oeste_faixa_28_28p6": 83.69999999999997
+   },
+   "sela_ate_sistema_K": 232.0,
+   "sela_menos_min_local_K": 24.360275268554688,
+   "antecessor": {
+    "rotulo": 1,
+    "sobreposicao_km2": 125684.0,
+    "area_km2": 133492.0,
+    "tb_min": 200.00759887695312,
+    "lat": 28.65379917897698,
+    "lon": 87.38986546010172,
+    "tem_nucleo_213": true
+   },
+   "rotulo_sitio": 1,
+   "dtb_10min_sitio": -0.5428466796875
+  },
+  {
+   "utc": "2026-08-25T19:50Z",
+   "tb_min_sitio": 217.13027954101562,
+   "tb_med_sitio": 224.65338134765625,
+   "btd_07_13_sitio": 10.037077903747559,
+   "sistema": {
+    "area_km2": 15492.0,
+    "tb_min": 200.56195068359375,
+    "lat": 28.724441001807342,
+    "lon": 87.5329925122636,
+    "dist_sitio_km": 224.97302409155967
+   },
+   "tb_min_30km": 206.88723754882812,
+   "min_30km_lat_lon": [
+    28.119999999999973,
+    85.0999999999997
+   ],
+   "objeto_sitio": {
+    "area_km2": 125844.0,
+    "tb_min": 200.56195068359375,
+    "tem_nucleo_213": true,
+    "contem_sistema": true,
+    "lon_oeste_faixa_28_28p6": 83.65999999999998
+   },
+   "sela_ate_sistema_K": 229.0,
+   "sela_menos_min_local_K": 22.112762451171875,
+   "antecessor": {
+    "rotulo": 1,
+    "sobreposicao_km2": 121308.0,
+    "area_km2": 130812.0,
+    "tb_min": 199.89581298828125,
+    "lat": 28.62237042473164,
+    "lon": 87.36414518545624,
+    "tem_nucleo_213": true
+   },
+   "rotulo_sitio": 1,
+   "dtb_10min_sitio": 1.155975341796875
+  },
+  {
+   "utc": "2026-08-25T20:00Z",
+   "tb_min_sitio": 218.9989776611328,
+   "tb_med_sitio": 227.29666137695312,
+   "btd_07_13_sitio": 7.7487382888793945,
+   "sistema": {
+    "area_km2": 15900.0,
+    "tb_min": 200.00759887695312,
+    "lat": 28.698661635220088,
+    "lon": 87.50676226415015,
+    "dist_sitio_km": 221.92026188229167
+   },
+   "tb_min_30km": 207.6397247314453,
+   "min_30km_lat_lon": [
+    28.139999999999972,
+    85.13999999999969
+   ],
+   "objeto_sitio": {
+    "area_km2": 123980.0,
+    "tb_min": 200.00759887695312,
+    "tem_nucleo_213": true,
+    "contem_sistema": true,
+    "lon_oeste_faixa_28_28p6": 83.63999999999999
+   },
+   "sela_ate_sistema_K": 230.0,
+   "sela_menos_min_local_K": 22.360275268554688,
+   "antecessor": {
+    "rotulo": 1,
+    "sobreposicao_km2": 119084.0,
+    "area_km2": 125844.0,
+    "tb_min": 200.56195068359375,
+    "lat": 28.603910238072494,
+    "lon": 87.335166714344,
+    "tem_nucleo_213": true
+   },
+   "rotulo_sitio": 1,
+   "dtb_10min_sitio": 1.8686981201171875
+  },
+  {
+   "utc": "2026-08-25T20:10Z",
+   "tb_min_sitio": 221.22418212890625,
+   "tb_med_sitio": 230.09988403320312,
+   "btd_07_13_sitio": 7.124706745147705,
+   "sistema": {
+    "area_km2": 15752.0,
+    "tb_min": 199.89581298828125,
+    "lat": 28.665134586084267,
+    "lon": 87.48464195022777,
+    "dist_sitio_km": 219.14526764429306
+   },
+   "tb_min_30km": 208.562744140625,
+   "min_30km_lat_lon": [
+    28.15999999999997,
+    85.0999999999997
+   ],
+   "objeto_sitio": {
+    "area_km2": 120716.0,
+    "tb_min": 199.89581298828125,
+    "tem_nucleo_213": true,
+    "contem_sistema": true,
+    "lon_oeste_faixa_28_28p6": 83.61999999999999
+   },
+   "sela_ate_sistema_K": 229.0,
+   "sela_menos_min_local_K": 20.437255859375,
+   "antecessor": {
+    "rotulo": 1,
+    "sobreposicao_km2": 116552.0,
+    "area_km2": 123980.0,
+    "tb_min": 200.00759887695312,
+    "lat": 28.57696725278267,
+    "lon": 87.31313889336916,
+    "tem_nucleo_213": true
+   },
+   "rotulo_sitio": 1,
+   "dtb_10min_sitio": 2.2252044677734375
+  },
+  {
+   "utc": "2026-08-25T20:20Z",
+   "tb_min_sitio": 222.951416015625,
+   "tb_med_sitio": 230.53671264648438,
+   "btd_07_13_sitio": 7.276983737945557,
+   "sistema": {
+    "area_km2": 15492.0,
+    "tb_min": 200.45167541503906,
+    "lat": 28.62677510973402,
+    "lon": 87.48134262845261,
+    "dist_sitio_km": 218.16275385710276
+   },
+   "tb_min_30km": 209.19773864746094,
+   "min_30km_lat_lon": [
+    28.19999999999997,
+    85.01999999999971
+   ],
+   "objeto_sitio": {
+    "area_km2": 117984.0,
+    "tb_min": 200.45167541503906,
+    "tem_nucleo_213": true,
+    "contem_sistema": true,
+    "lon_oeste_faixa_28_28p6": 83.6
+   },
+   "sela_ate_sistema_K": 230.0,
+   "sela_menos_min_local_K": 20.802261352539062,
+   "antecessor": {
+    "rotulo": 1,
+    "sobreposicao_km2": 114088.0,
+    "area_km2": 120716.0,
+    "tb_min": 199.89581298828125,
+    "lat": 28.554231750554983,
+    "lon": 87.29657311375385,
+    "tem_nucleo_213": true
+   },
+   "rotulo_sitio": 1,
+   "dtb_10min_sitio": 1.72723388671875
+  },
+  {
+   "utc": "2026-08-25T20:30Z",
+   "tb_min_sitio": 221.71359252929688,
+   "tb_med_sitio": 231.73931884765625,
+   "btd_07_13_sitio": 5.151069164276123,
+   "sistema": {
+    "area_km2": 15532.0,
+    "tb_min": 200.56195068359375,
+    "lat": 28.603090394025198,
+    "lon": 87.45428277105253,
+    "dist_sitio_km": 215.16944603137705
+   },
+   "tb_min_30km": 210.3539276123047,
+   "min_30km_lat_lon": [
+    28.21999999999997,
+    85.01999999999971
+   ],
+   "objeto_sitio": {
+    "area_km2": 114104.0,
+    "tb_min": 200.56195068359375,
+    "tem_nucleo_213": true,
+    "contem_sistema": true,
+    "lon_oeste_faixa_28_28p6": 83.6
+   },
+   "sela_ate_sistema_K": 229.0,
+   "sela_menos_min_local_K": 18.646072387695312,
+   "antecessor": {
+    "rotulo": 1,
+    "sobreposicao_km2": 110448.0,
+    "area_km2": 117984.0,
+    "tb_min": 200.45167541503906,
+    "lat": 28.540528207214503,
+    "lon": 87.29246406292305,
+    "tem_nucleo_213": true
+   },
+   "rotulo_sitio": 1,
+   "dtb_10min_sitio": -1.237823486328125
+  },
+  {
+   "utc": "2026-08-25T20:40Z",
+   "tb_min_sitio": 222.74713134765625,
+   "tb_med_sitio": 233.95994567871094,
+   "btd_07_13_sitio": 5.063677787780762,
+   "sistema": {
+    "area_km2": 14476.0,
+    "tb_min": 200.78160095214844,
+    "lat": 28.528670903564485,
+    "lon": 87.44369162752064,
+    "dist_sitio_km": 213.16997452674053
+   },
+   "tb_min_30km": 211.4816436767578,
+   "min_30km_lat_lon": [
+    28.17999999999997,
+    85.13999999999969
+   ],
+   "objeto_sitio": {
+    "area_km2": 111376.0,
+    "tb_min": 200.78160095214844,
+    "tem_nucleo_213": true,
+    "contem_sistema": true,
+    "lon_oeste_faixa_28_28p6": 83.67999999999998
+   },
+   "sela_ate_sistema_K": 228.0,
+   "sela_menos_min_local_K": 16.518356323242188,
+   "antecessor": {
+    "rotulo": 1,
+    "sobreposicao_km2": 107388.0,
+    "area_km2": 114104.0,
+    "tb_min": 200.56195068359375,
+    "lat": 28.515155998036846,
+    "lon": 87.29745775783421,
+    "tem_nucleo_213": true
+   },
+   "rotulo_sitio": 1,
+   "dtb_10min_sitio": 1.033538818359375
+  },
+  {
+   "utc": "2026-08-25T20:50Z",
+   "tb_min_sitio": 221.4344940185547,
+   "tb_med_sitio": 234.56846618652344,
+   "btd_07_13_sitio": 6.002989768981934,
+   "sistema": {
+    "area_km2": 14708.0,
+    "tb_min": 201.43359375,
+    "lat": 28.532548273048643,
+    "lon": 87.42058743540852,
+    "dist_sitio_km": 210.96321747917142
+   },
+   "tb_min_30km": 210.96458435058594,
+   "min_30km_lat_lon": [
+    28.17999999999997,
+    85.13999999999969
+   ],
+   "objeto_sitio": {
+    "area_km2": 109848.0,
+    "tb_min": 201.43359375,
+    "tem_nucleo_213": true,
+    "contem_sistema": true,
+    "lon_oeste_faixa_28_28p6": 83.65999999999998
+   },
+   "sela_ate_sistema_K": 232.0,
+   "sela_menos_min_local_K": 21.035415649414062,
+   "antecessor": {
+    "rotulo": 1,
+    "sobreposicao_km2": 106136.0,
+    "area_km2": 111376.0,
+    "tb_min": 200.78160095214844,
+    "lat": 28.48427021979597,
+    "lon": 87.29243786812167,
+    "tem_nucleo_213": true
+   },
+   "rotulo_sitio": 1,
+   "dtb_10min_sitio": -1.3126373291015625
+  },
+  {
+   "utc": "2026-08-25T21:00Z",
+   "tb_min_sitio": 220.80096435546875,
+   "tb_med_sitio": 232.90032958984375,
+   "btd_07_13_sitio": 6.754253387451172,
+   "sistema": {
+    "area_km2": 14688.0,
+    "tb_min": 202.1814727783203,
+    "lat": 28.53369281045748,
+    "lon": 87.37974400871383,
+    "dist_sitio_km": 207.00018787904932
+   },
+   "tb_min_30km": 211.73802185058594,
+   "min_30km_lat_lon": [
+    28.19999999999997,
+    85.01999999999971
+   ],
+   "objeto_sitio": {
+    "area_km2": 106772.0,
+    "tb_min": 202.1814727783203,
+    "tem_nucleo_213": true,
+    "contem_sistema": true,
+    "lon_oeste_faixa_28_28p6": 83.79999999999995
+   },
+   "sela_ate_sistema_K": 233.0,
+   "sela_menos_min_local_K": 21.261978149414062,
+   "antecessor": {
+    "rotulo": 1,
+    "sobreposicao_km2": 102608.0,
+    "area_km2": 109848.0,
+    "tb_min": 201.43359375,
+    "lat": 28.46454227660036,
+    "lon": 87.29331221323939,
+    "tem_nucleo_213": true
+   },
+   "rotulo_sitio": 1,
+   "dtb_10min_sitio": -0.6335296630859375
+  },
+  {
+   "utc": "2026-08-25T21:10Z",
+   "tb_min_sitio": 220.51687622070312,
+   "tb_med_sitio": 230.726318359375,
+   "btd_07_13_sitio": 8.629996299743652,
+   "sistema": {
+    "area_km2": 14876.0,
+    "tb_min": 202.4979248046875,
+    "lat": 28.52907233127181,
+    "lon": 87.3414466254362,
+    "dist_sitio_km": 203.2190321808355
+   },
+   "tb_min_30km": 212.16221618652344,
+   "min_30km_lat_lon": [
+    28.559999999999963,
+    85.41999999999963
+   ],
+   "objeto_sitio": {
+    "area_km2": 13248.0,
+    "tb_min": 210.79092407226562,
+    "tem_nucleo_213": true,
+    "contem_sistema": false,
+    "lon_oeste_faixa_28_28p6": 83.67999999999998
+   },
+   "sela_ate_sistema_K": 237.0,
+   "sela_menos_min_local_K": 24.837783813476562,
+   "antecessor": {
+    "rotulo": 1,
+    "sobreposicao_km2": 12268.0,
+    "area_km2": 106772.0,
+    "tb_min": 202.1814727783203,
+    "lat": 28.4265470348031,
+    "lon": 87.33474468961826,
+    "tem_nucleo_213": true
+   },
+   "rotulo_sitio": 5,
+   "dtb_10min_sitio": -0.284088134765625
+  },
+  {
+   "utc": "2026-08-25T21:20Z",
+   "tb_min_sitio": 218.5568084716797,
+   "tb_med_sitio": 226.82798767089844,
+   "btd_07_13_sitio": 9.825031280517578,
+   "sistema": {
+    "area_km2": 14764.0,
+    "tb_min": 203.22714233398438,
+    "lat": 28.524790029802187,
+    "lon": 87.29804389054384,
+    "dist_sitio_km": 198.94483575988463
+   },
+   "tb_min_30km": 212.41490173339844,
+   "min_30km_lat_lon": [
+    28.519999999999964,
+    85.31999999999965
+   ],
+   "objeto_sitio": {
+    "area_km2": 101928.0,
+    "tb_min": 203.22714233398438,
+    "tem_nucleo_213": true,
+    "contem_sistema": true,
+    "lon_oeste_faixa_28_28p6": 83.65999999999998
+   },
+   "sela_ate_sistema_K": 232.0,
+   "sela_menos_min_local_K": 19.585098266601562,
+   "antecessor": {
+    "rotulo": 1,
+    "sobreposicao_km2": 86756.0,
+    "area_km2": 91448.0,
+    "tb_min": 202.4979248046875,
+    "lat": 28.391278103402993,
+    "lon": 87.69783046102621,
+    "tem_nucleo_213": true
+   },
+   "rotulo_sitio": 1,
+   "dtb_10min_sitio": -1.9600677490234375
+  },
+  {
+   "utc": "2026-08-25T21:30Z",
+   "tb_min_sitio": 216.59420776367188,
+   "tb_med_sitio": 222.22047424316406,
+   "btd_07_13_sitio": 11.91029167175293,
+   "sistema": {
+    "area_km2": 14584.0,
+    "tb_min": 203.74038696289062,
+    "lat": 28.520466264399303,
+    "lon": 87.26894679100312,
+    "dist_sitio_km": 196.06282991766815
+   },
+   "tb_min_30km": 212.58261108398438,
+   "min_30km_lat_lon": [
+    28.519999999999964,
+    85.27999999999966
+   ],
+   "objeto_sitio": {
+    "area_km2": 98948.0,
+    "tb_min": 203.74038696289062,
+    "tem_nucleo_213": true,
+    "contem_sistema": true,
+    "lon_oeste_faixa_28_28p6": 83.6
+   },
+   "sela_ate_sistema_K": 232.0,
+   "sela_menos_min_local_K": 19.417388916015625,
+   "antecessor": {
+    "rotulo": 1,
+    "sobreposicao_km2": 95924.0,
+    "area_km2": 101928.0,
+    "tb_min": 203.22714233398438,
+    "lat": 28.357141511655257,
+    "lon": 87.35502943253987,
+    "tem_nucleo_213": true
+   },
+   "rotulo_sitio": 1,
+   "dtb_10min_sitio": -1.9626007080078125
+  },
+  {
+   "utc": "2026-08-25T21:40Z",
+   "tb_min_sitio": 215.5828399658203,
+   "tb_med_sitio": 219.91001892089844,
+   "btd_07_13_sitio": 10.379948616027832,
+   "sistema": {
+    "area_km2": 14212.0,
+    "tb_min": 203.84228515625,
+    "lat": 28.505235012665317,
+    "lon": 87.23367858147972,
+    "dist_sitio_km": 192.46062947792637
+   },
+   "tb_min_30km": 214.38909912109375,
+   "min_30km_lat_lon": [
+    28.519999999999964,
+    85.21999999999967
+   ],
+   "objeto_sitio": {
+    "area_km2": 91844.0,
+    "tb_min": 203.84228515625,
+    "tem_nucleo_213": true,
+    "contem_sistema": true,
+    "lon_oeste_faixa_28_28p6": 83.67999999999998
+   },
+   "sela_ate_sistema_K": 232.0,
+   "sela_menos_min_local_K": 17.61090087890625,
+   "antecessor": {
+    "rotulo": 1,
+    "sobreposicao_km2": 89588.0,
+    "area_km2": 98948.0,
+    "tb_min": 203.74038696289062,
+    "lat": 28.325565751707934,
+    "lon": 87.36475158669124,
+    "tem_nucleo_213": true
+   },
+   "rotulo_sitio": 1,
+   "dtb_10min_sitio": -1.0113677978515625
+  },
+  {
+   "utc": "2026-08-25T21:50Z",
+   "tb_min_sitio": 215.89627075195312,
+   "tb_med_sitio": 220.5616912841797,
+   "btd_07_13_sitio": 9.857366561889648,
+   "sistema": {
+    "area_km2": 13488.0,
+    "tb_min": 204.64889526367188,
+    "lat": 28.505877817319057,
+    "lon": 87.21293001186167,
+    "dist_sitio_km": 190.44628787155858
+   },
+   "tb_min_30km": 215.73980712890625,
+   "min_30km_lat_lon": [
+    28.439999999999966,
+    85.25999999999966
+   ],
+   "objeto_sitio": {
+    "area_km2": 89856.0,
+    "tb_min": 204.64889526367188,
+    "tem_nucleo_213": true,
+    "contem_sistema": true,
+    "lon_oeste_faixa_28_28p6": 83.81999999999995
+   },
+   "sela_ate_sistema_K": 233.0,
+   "sela_menos_min_local_K": 17.26019287109375,
+   "antecessor": {
+    "rotulo": 1,
+    "sobreposicao_km2": 87332.0,
+    "area_km2": 91844.0,
+    "tb_min": 203.84228515625,
+    "lat": 28.223795130874063,
+    "lon": 87.46576020208101,
+    "tem_nucleo_213": true
+   },
+   "rotulo_sitio": 1,
+   "dtb_10min_sitio": 0.3134307861328125
+  },
+  {
+   "utc": "2026-08-25T22:00Z",
+   "tb_min_sitio": 216.8246612548828,
+   "tb_med_sitio": 222.36276245117188,
+   "btd_07_13_sitio": 9.283698081970215,
+   "sistema": {
+    "area_km2": 12744.0,
+    "tb_min": 205.44061279296875,
+    "lat": 28.504664155681073,
+    "lon": 87.17516635279276,
+    "dist_sitio_km": 186.75487334918975
+   },
+   "tb_min_30km": 216.2076873779297,
+   "min_30km_lat_lon": [
+    28.439999999999966,
+    85.15999999999968
+   ],
+   "objeto_sitio": {
+    "area_km2": 88708.0,
+    "tb_min": 205.44061279296875,
+    "tem_nucleo_213": true,
+    "contem_sistema": true,
+    "lon_oeste_faixa_28_28p6": 83.97999999999992
+   },
+   "sela_ate_sistema_K": 235.0,
+   "sela_menos_min_local_K": 18.792312622070312,
+   "antecessor": {
+    "rotulo": 1,
+    "sobreposicao_km2": 85480.0,
+    "area_km2": 89856.0,
+    "tb_min": 204.64889526367188,
+    "lat": 28.18774394586892,
+    "lon": 87.49970975783398,
+    "tem_nucleo_213": true
+   },
+   "rotulo_sitio": 1,
+   "dtb_10min_sitio": 0.9283905029296875
+  },
+  {
+   "utc": "2026-08-25T22:10Z",
+   "tb_min_sitio": 218.48272705078125,
+   "tb_med_sitio": 225.9302215576172,
+   "btd_07_13_sitio": 7.796670913696289,
+   "sistema": {
+    "area_km2": 11976.0,
+    "tb_min": 205.14541625976562,
+    "lat": 28.485470941883733,
+    "lon": 87.16067468269802,
+    "dist_sitio_km": 185.14488921134773
+   },
+   "tb_min_30km": 217.05406188964844,
+   "min_30km_lat_lon": [
+    28.439999999999966,
+    85.11999999999969
+   ],
+   "objeto_sitio": {
+    "area_km2": 7832.0,
+    "tb_min": 217.05406188964844,
+    "tem_nucleo_213": false,
+    "contem_sistema": false,
+    "lon_oeste_faixa_28_28p6": 83.97999999999992
+   },
+   "sela_ate_sistema_K": 236.0,
+   "sela_menos_min_local_K": 18.945938110351562,
+   "antecessor": {
+    "rotulo": 1,
+    "sobreposicao_km2": 7500.0,
+    "area_km2": 88708.0,
+    "tb_min": 205.44061279296875,
+    "lat": 28.157446904450524,
+    "lon": 87.52856833656412,
+    "tem_nucleo_213": true
+   },
+   "rotulo_sitio": 5,
+   "dtb_10min_sitio": 1.6580657958984375
+  },
+  {
+   "utc": "2026-08-25T22:20Z",
+   "tb_min_sitio": 220.1595458984375,
+   "tb_med_sitio": 229.45684814453125,
+   "btd_07_13_sitio": 7.407646179199219,
+   "sistema": {
+    "area_km2": 10980.0,
+    "tb_min": 205.34243774414062,
+    "lat": 28.47752276867028,
+    "lon": 87.14029143897926,
+    "dist_sitio_km": 183.08181899351155
+   },
+   "tb_min_30km": 218.40855407714844,
+   "min_30km_lat_lon": [
+    28.31999999999997,
+    84.99999999999972
+   ],
+   "objeto_sitio": {
+    "area_km2": 6336.0,
+    "tb_min": 217.88616943359375,
+    "tem_nucleo_213": false,
+    "contem_sistema": false,
+    "lon_oeste_faixa_28_28p6": 84.0399999999999
+   },
+   "sela_ate_sistema_K": 237.0,
+   "sela_menos_min_local_K": 18.591445922851562,
+   "antecessor": {
+    "rotulo": 5,
+    "sobreposicao_km2": 6080.0,
+    "area_km2": 7832.0,
+    "tb_min": 217.05406188964844,
+    "lat": 28.416823289070447,
+    "lon": 84.8548825331969,
+    "tem_nucleo_213": false
+   },
+   "rotulo_sitio": 3,
+   "dtb_10min_sitio": 1.67681884765625
+  },
+  {
+   "utc": "2026-08-25T22:30Z",
+   "tb_min_sitio": 222.74713134765625,
+   "tb_med_sitio": 231.760009765625,
+   "btd_07_13_sitio": 6.711721897125244,
+   "sistema": {
+    "area_km2": 9900.0,
+    "tb_min": 205.14541625976562,
+    "lat": 28.451644444444405,
+    "lon": 87.17405252525181,
+    "dist_sitio_km": 186.16067461992895
+   },
+   "tb_min_30km": 219.29161071777344,
+   "min_30km_lat_lon": [
+    28.379999999999967,
+    85.0799999999997
+   ],
+   "objeto_sitio": {
+    "area_km2": 4628.0,
+    "tb_min": 219.1455078125,
+    "tem_nucleo_213": false,
+    "contem_sistema": false,
+    "lon_oeste_faixa_28_28p6": 84.41999999999983
+   },
+   "sela_ate_sistema_K": 239.0,
+   "sela_menos_min_local_K": 19.708389282226562,
+   "antecessor": {
+    "rotulo": 3,
+    "sobreposicao_km2": 4408.0,
+    "area_km2": 6336.0,
+    "tb_min": 217.88616943359375,
+    "lat": 28.436767676767648,
+    "lon": 84.84453282828257,
+    "tem_nucleo_213": false
+   },
+   "rotulo_sitio": 4,
+   "dtb_10min_sitio": 2.58758544921875
+  },
+  {
+   "utc": "2026-08-25T22:40Z",
+   "tb_min_sitio": 225.66748046875,
+   "tb_med_sitio": 232.96878051757812,
+   "btd_07_13_sitio": 7.13049840927124,
+   "sistema": {
+    "area_km2": 8788.0,
+    "tb_min": 204.94749450683594,
+    "lat": 28.44128356850247,
+    "lon": 87.19756030951224,
+    "dist_sitio_km": 188.38392052772505
+   },
+   "tb_min_30km": 220.80096435546875,
+   "min_30km_lat_lon": [
+    28.399999999999967,
+    85.01999999999971
+   ],
+   "objeto_sitio": {
+    "area_km2": 81604.0,
+    "tb_min": 204.94749450683594,
+    "tem_nucleo_213": true,
+    "contem_sistema": true,
+    "lon_oeste_faixa_28_28p6": 84.41999999999983
+   },
+   "sela_ate_sistema_K": 235.0,
+   "sela_menos_min_local_K": 14.19903564453125,
+   "antecessor": {
+    "rotulo": 1,
+    "sobreposicao_km2": 76104.0,
+    "area_km2": 78976.0,
+    "tb_min": 205.14541625976562,
+    "lat": 28.061040316045354,
+    "lon": 87.81615782009641,
+    "tem_nucleo_213": true
+   },
+   "rotulo_sitio": 2,
+   "dtb_10min_sitio": 2.92034912109375
+  },
+  {
+   "utc": "2026-08-25T22:50Z",
+   "tb_min_sitio": 226.3734893798828,
+   "tb_med_sitio": 233.74029541015625,
+   "btd_07_13_sitio": 7.871623516082764,
+   "sistema": {
+    "area_km2": 7468.0,
+    "tb_min": 205.44061279296875,
+    "lat": 28.42713444027849,
+    "lon": 87.20181039100088,
+    "dist_sitio_km": 188.71184916383103
+   },
+   "tb_min_30km": 223.89443969726562,
+   "min_30km_lat_lon": [
+    28.419999999999966,
+    84.99999999999972
+   ],
+   "objeto_sitio": {
+    "area_km2": 79512.0,
+    "tb_min": 205.44061279296875,
+    "tem_nucleo_213": true,
+    "contem_sistema": true,
+    "lon_oeste_faixa_28_28p6": 84.41999999999983
+   },
+   "sela_ate_sistema_K": 232.0,
+   "sela_menos_min_local_K": 8.105560302734375,
+   "antecessor": {
+    "rotulo": 2,
+    "sobreposicao_km2": 76920.0,
+    "area_km2": 81604.0,
+    "tb_min": 204.94749450683594,
+    "lat": 28.05917356992302,
+    "lon": 87.69604333120843,
+    "tem_nucleo_213": true
+   },
+   "rotulo_sitio": 1,
+   "dtb_10min_sitio": 0.7060089111328125
+  },
+  {
+   "utc": "2026-08-25T23:00Z",
+   "tb_min_sitio": 224.42591857910156,
+   "tb_med_sitio": 233.7982177734375,
+   "btd_07_13_sitio": 9.48512077331543,
+   "sistema": {
+    "area_km2": 4500.0,
+    "tb_min": 208.92669677734375,
+    "lat": 27.78735999999998,
+    "lon": 89.46597333333217,
+    "dist_sitio_km": 414.63156673744123
+   },
+   "tb_min_30km": 221.8525848388672,
+   "min_30km_lat_lon": [
+    28.19999999999997,
+    85.35999999999964
+   ],
+   "objeto_sitio": {
+    "area_km2": 78480.0,
+    "tb_min": 205.7338104248047,
+    "tem_nucleo_213": true,
+    "contem_sistema": true,
+    "lon_oeste_faixa_28_28p6": 84.49999999999982
+   },
+   "sela_ate_sistema_K": 232.0,
+   "sela_menos_min_local_K": 10.147415161132812,
+   "antecessor": {
+    "rotulo": 1,
+    "sobreposicao_km2": 75616.0,
+    "area_km2": 79512.0,
+    "tb_min": 205.44061279296875,
+    "lat": 28.040142871516224,
+    "lon": 87.72817084213621,
+    "tem_nucleo_213": true
+   },
+   "rotulo_sitio": 1,
+   "dtb_10min_sitio": -1.94757080078125
+  },
+  {
+   "utc": "2026-08-25T23:10Z",
+   "tb_min_sitio": 228.86715698242188,
+   "tb_med_sitio": 233.53216552734375,
+   "btd_07_13_sitio": 11.586897850036621,
+   "sistema": {
+    "area_km2": 4696.0,
+    "tb_min": 208.37965393066406,
+    "lat": 27.77018739352639,
+    "lon": 89.43465076660871,
+    "dist_sitio_km": 411.889639369674
+   },
+   "tb_min_30km": 220.08778381347656,
+   "min_30km_lat_lon": [
+    28.17999999999997,
+    85.27999999999966
+   ],
+   "objeto_sitio": {
+    "area_km2": 75556.0,
+    "tb_min": 206.50613403320312,
+    "tem_nucleo_213": true,
+    "contem_sistema": true,
+    "lon_oeste_faixa_28_28p6": 85.0599999999997
+   },
+   "sela_ate_sistema_K": 229.0,
+   "sela_menos_min_local_K": 8.912216186523438,
+   "antecessor": {
+    "rotulo": 1,
+    "sobreposicao_km2": 73064.0,
+    "area_km2": 78480.0,
+    "tb_min": 205.7338104248047,
+    "lat": 28.03399490316001,
+    "lon": 87.7444709480114,
+    "tem_nucleo_213": true
+   },
+   "rotulo_sitio": 2,
+   "dtb_10min_sitio": 4.4412384033203125
+  },
+  {
+   "utc": "2026-08-25T23:20Z",
+   "tb_min_sitio": 226.18185424804688,
+   "tb_med_sitio": 232.49127197265625,
+   "btd_07_13_sitio": 12.647011756896973,
+   "sistema": {
+    "area_km2": 2196.0,
+    "tb_min": 207.35903930664062,
+    "lat": 28.2733333333333,
+    "lon": 87.72958105646546,
+    "dist_sitio_km": 240.2295170238663
+   },
+   "tb_min_30km": 220.44561767578125,
+   "min_30km_lat_lon": [
+    28.31999999999997,
+    85.5799999999996
+   ],
+   "objeto_sitio": {
+    "area_km2": 75300.0,
+    "tb_min": 207.35903930664062,
+    "tem_nucleo_213": true,
+    "contem_sistema": true,
+    "lon_oeste_faixa_28_28p6": 85.0599999999997
+   },
+   "sela_ate_sistema_K": 221.0,
+   "sela_menos_min_local_K": 0.55438232421875,
+   "antecessor": {
+    "rotulo": 2,
+    "sobreposicao_km2": 72716.0,
+    "area_km2": 75556.0,
+    "tb_min": 206.50613403320312,
+    "lat": 28.02601725872198,
+    "lon": 87.7986563608441,
+    "tem_nucleo_213": true
+   },
+   "rotulo_sitio": 2,
+   "dtb_10min_sitio": -2.685302734375
+  },
+  {
+   "utc": "2026-08-25T23:30Z",
+   "tb_min_sitio": 221.64395141601562,
+   "tb_med_sitio": 229.47763061523438,
+   "btd_07_13_sitio": 14.174737930297852,
+   "sistema": {
+    "area_km2": 2124.0,
+    "tb_min": 209.37754821777344,
+    "lat": 27.983992467043286,
+    "lon": 89.69322033898183,
+    "dist_sitio_km": 434.101217099376
+   },
+   "tb_min_30km": 216.51715087890625,
+   "min_30km_lat_lon": [
+    28.23999999999997,
+    85.5599999999996
+   ],
+   "objeto_sitio": {
+    "area_km2": 74428.0,
+    "tb_min": 207.73287963867188,
+    "tem_nucleo_213": true,
+    "contem_sistema": true,
+    "lon_oeste_faixa_28_28p6": 85.01999999999971
+   },
+   "sela_ate_sistema_K": 218.0,
+   "sela_menos_min_local_K": 1.48284912109375,
+   "antecessor": {
+    "rotulo": 2,
+    "sobreposicao_km2": 71872.0,
+    "area_km2": 75300.0,
+    "tb_min": 207.35903930664062,
+    "lat": 28.005726427622818,
+    "lon": 87.79531049136702,
+    "tem_nucleo_213": true
+   },
+   "rotulo_sitio": 2,
+   "dtb_10min_sitio": -4.53790283203125
+  },
+  {
+   "utc": "2026-08-25T23:40Z",
+   "tb_min_sitio": 221.78314208984375,
+   "tb_med_sitio": 227.03128051757812,
+   "btd_07_13_sitio": 14.533638000488281,
+   "sistema": {
+    "area_km2": 2028.0,
+    "tb_min": 208.19581604003906,
+    "lat": 28.22437869822483,
+    "lon": 87.66650887573883,
+    "dist_sitio_km": 234.29549779193476
+   },
+   "tb_min_30km": 217.13027954101562,
+   "min_30km_lat_lon": [
+    28.23999999999997,
+    85.51999999999961
+   ],
+   "objeto_sitio": {
+    "area_km2": 73672.0,
+    "tb_min": 208.19581604003906,
+    "tem_nucleo_213": true,
+    "contem_sistema": true,
+    "lon_oeste_faixa_28_28p6": 84.99999999999972
+   },
+   "sela_ate_sistema_K": 219.0,
+   "sela_menos_min_local_K": 1.869720458984375,
+   "antecessor": {
+    "rotulo": 2,
+    "sobreposicao_km2": 70732.0,
+    "area_km2": 74428.0,
+    "tb_min": 207.73287963867188,
+    "lat": 27.980729832858575,
+    "lon": 87.79737733111111,
+    "tem_nucleo_213": true
+   },
+   "rotulo_sitio": 1,
+   "dtb_10min_sitio": 0.139190673828125
+  },
+  {
+   "utc": "2026-08-25T23:50Z",
+   "tb_min_sitio": 219.5825653076172,
+   "tb_med_sitio": 227.21588134765625,
+   "btd_07_13_sitio": 14.482872009277344,
+   "sistema": {
+    "area_km2": 1900.0,
+    "tb_min": 208.37965393066406,
+    "lat": 28.20294736842102,
+    "lon": 87.61671578947289,
+    "dist_sitio_km": 229.5757794579328
+   },
+   "tb_min_30km": 217.88616943359375,
+   "min_30km_lat_lon": [
+    28.23999999999997,
+    85.41999999999963
+   ],
+   "objeto_sitio": {
+    "area_km2": 70716.0,
+    "tb_min": 208.287841796875,
+    "tem_nucleo_213": true,
+    "contem_sistema": true,
+    "lon_oeste_faixa_28_28p6": 85.0599999999997
+   },
+   "sela_ate_sistema_K": 220.0,
+   "sela_menos_min_local_K": 2.11383056640625,
+   "antecessor": {
+    "rotulo": 1,
+    "sobreposicao_km2": 68080.0,
+    "area_km2": 73672.0,
+    "tb_min": 208.19581604003906,
+    "lat": 27.942969920729695,
+    "lon": 87.8035758497114,
+    "tem_nucleo_213": true
+   },
+   "rotulo_sitio": 2,
+   "dtb_10min_sitio": -2.2005767822265625
+  },
+  {
+   "utc": "2026-08-26T00:00Z",
+   "tb_min_sitio": 220.23121643066406,
+   "tb_med_sitio": 228.5720977783203,
+   "btd_07_13_sitio": 16.822214126586914,
+   "sistema": {
+    "area_km2": 1580.0,
+    "tb_min": 208.8359832763672,
+    "lat": 28.176708860759465,
+    "lon": 87.56632911392327,
+    "dist_sitio_km": 224.87248635131698
+   },
+   "tb_min_30km": 217.88616943359375,
+   "min_30km_lat_lon": [
+    28.21999999999997,
+    85.53999999999961
+   ],
+   "objeto_sitio": {
+    "area_km2": 70140.0,
+    "tb_min": 208.8359832763672,
+    "tem_nucleo_213": true,
+    "contem_sistema": true,
+    "lon_oeste_faixa_28_28p6": 85.03999999999971
+   },
+   "sela_ate_sistema_K": 220.0,
+   "sela_menos_min_local_K": 2.11383056640625,
+   "antecessor": {
+    "rotulo": 2,
+    "sobreposicao_km2": 67928.0,
+    "area_km2": 70716.0,
+    "tb_min": 208.287841796875,
+    "lat": 27.878831381865467,
+    "lon": 87.8802307822832,
+    "tem_nucleo_213": true
+   },
+   "rotulo_sitio": 2,
+   "dtb_10min_sitio": 0.648651123046875
+  },
+  {
+   "utc": "2026-08-26T00:10Z",
+   "tb_min_sitio": 223.29013061523438,
+   "tb_med_sitio": 230.9770965576172,
+   "btd_07_13_sitio": 19.602148056030273,
+   "sistema": {
+    "area_km2": 1052.0,
+    "tb_min": 209.556640625,
+    "lat": 28.11247148288971,
+    "lon": 87.52304182509425,
+    "dist_sitio_km": 221.35259345293548
+   },
+   "tb_min_30km": 217.58518981933594,
+   "min_30km_lat_lon": [
+    28.17999999999997,
+    85.51999999999961
+   ],
+   "objeto_sitio": {
+    "area_km2": 70740.0,
+    "tb_min": 209.19773864746094,
+    "tem_nucleo_213": true,
+    "contem_sistema": true,
+    "lon_oeste_faixa_28_28p6": 85.01999999999971
+   },
+   "sela_ate_sistema_K": 221.0,
+   "sela_menos_min_local_K": 3.4148101806640625,
+   "antecessor": {
+    "rotulo": 2,
+    "sobreposicao_km2": 67728.0,
+    "area_km2": 70140.0,
+    "tb_min": 208.8359832763672,
+    "lat": 27.856135728542892,
+    "lon": 87.88961277445024,
+    "tem_nucleo_213": true
+   },
+   "rotulo_sitio": 1,
+   "dtb_10min_sitio": 3.0589141845703125
+  },
+  {
+   "utc": "2026-08-26T00:20Z",
+   "tb_min_sitio": 225.86093139648438,
+   "tb_med_sitio": 234.79879760742188,
+   "btd_07_13_sitio": 21.96605682373047,
+   "sistema": {
+    "area_km2": 632.0,
+    "tb_min": 210.26602172851562,
+    "lat": 28.091645569620226,
+    "lon": 87.47430379746758,
+    "dist_sitio_km": 216.89738384537102
+   },
+   "tb_min_30km": 218.25985717773438,
+   "min_30km_lat_lon": [
+    28.139999999999972,
+    85.47999999999962
+   ],
+   "objeto_sitio": {
+    "area_km2": 70348.0,
+    "tb_min": 209.19773864746094,
+    "tem_nucleo_213": true,
+    "contem_sistema": true,
+    "lon_oeste_faixa_28_28p6": 85.0599999999997
+   },
+   "sela_ate_sistema_K": 224.0,
+   "sela_menos_min_local_K": 5.740142822265625,
+   "antecessor": {
+    "rotulo": 1,
+    "sobreposicao_km2": 67960.0,
+    "area_km2": 70740.0,
+    "tb_min": 209.19773864746094,
+    "lat": 27.839578173593416,
+    "lon": 87.87240938648488,
+    "tem_nucleo_213": true
+   },
+   "rotulo_sitio": 1,
+   "dtb_10min_sitio": 2.57080078125
+  },
+  {
+   "utc": "2026-08-26T00:30Z",
+   "tb_min_sitio": 227.13345336914062,
+   "tb_med_sitio": 240.8844757080078,
+   "btd_07_13_sitio": 25.285917282104492,
+   "sistema": {
+    "area_km2": 468.0,
+    "tb_min": 209.10757446289062,
+    "lat": 27.88153846153844,
+    "lon": 86.4577777777772,
+    "dist_sitio_km": 126.38588102296461
+   },
+   "tb_min_30km": 220.23121643066406,
+   "min_30km_lat_lon": [
+    28.119999999999973,
+    85.43999999999963
+   ],
+   "objeto_sitio": {
+    "area_km2": 69136.0,
+    "tb_min": 209.10757446289062,
+    "tem_nucleo_213": true,
+    "contem_sistema": true,
+    "lon_oeste_faixa_28_28p6": 85.0799999999997
+   },
+   "sela_ate_sistema_K": 221.0,
+   "sela_menos_min_local_K": 0.7687835693359375,
+   "antecessor": {
+    "rotulo": 1,
+    "sobreposicao_km2": 67132.0,
+    "area_km2": 70348.0,
+    "tb_min": 209.19773864746094,
+    "lat": 27.822116335929923,
+    "lon": 87.88382669016801,
+    "tem_nucleo_213": true
+   },
+   "rotulo_sitio": 2,
+   "dtb_10min_sitio": 1.27252197265625
+  },
+  {
+   "utc": "2026-08-26T00:40Z",
+   "tb_min_sitio": 231.37168884277344,
+   "tb_med_sitio": 249.7860107421875,
+   "btd_07_13_sitio": 27.604248046875,
+   "sistema": {
+    "area_km2": 500.0,
+    "tb_min": 209.37754821777344,
+    "lat": 27.84303999999998,
+    "lon": 86.42271999999943,
+    "dist_sitio_km": 125.08565091150787
+   },
+   "tb_min_30km": 222.61048889160156,
+   "min_30km_lat_lon": [
+    28.099999999999973,
+    85.35999999999964
+   ],
+   "objeto_sitio": {
+    "area_km2": 67928.0,
+    "tb_min": 209.37754821777344,
+    "tem_nucleo_213": true,
+    "contem_sistema": true,
+    "lon_oeste_faixa_28_28p6": 85.0999999999997
+   },
+   "sela_ate_sistema_K": 223.0,
+   "sela_menos_min_local_K": 0.3895111083984375,
+   "antecessor": {
+    "rotulo": 2,
+    "sobreposicao_km2": 65416.0,
+    "area_km2": 69136.0,
+    "tb_min": 209.10757446289062,
+    "lat": 27.807515621383917,
+    "lon": 87.89779796343353,
+    "tem_nucleo_213": true
+   },
+   "rotulo_sitio": 2,
+   "dtb_10min_sitio": 4.2382354736328125
+  },
+  {
+   "utc": "2026-08-26T00:50Z",
+   "tb_min_sitio": 241.34445190429688,
+   "tb_med_sitio": 258.8684997558594,
+   "btd_07_13_sitio": null,
+   "sistema": {
+    "area_km2": 408.0,
+    "tb_min": 210.17794799804688,
+    "lat": 27.80352941176469,
+    "lon": 86.39901960784259,
+    "dist_sitio_km": 125.04450249972984
+   },
+   "tb_min_30km": 225.0829315185547,
+   "min_30km_lat_lon": [
+    28.099999999999973,
+    85.29999999999966
+   ],
+   "objeto_sitio": {
+    "area_km2": 66492.0,
+    "tb_min": 210.17794799804688,
+    "tem_nucleo_213": true,
+    "contem_sistema": true,
+    "lon_oeste_faixa_28_28p6": 85.0599999999997
+   },
+   "sela_ate_sistema_K": 227.0,
+   "sela_menos_min_local_K": 1.9170684814453125,
+   "antecessor": {
+    "rotulo": 2,
+    "sobreposicao_km2": 64476.0,
+    "area_km2": 67928.0,
+    "tb_min": 209.37754821777344,
+    "lat": 27.79472735837944,
+    "lon": 87.90688611470883,
+    "tem_nucleo_213": true
+   },
+   "rotulo_sitio": 1,
+   "dtb_10min_sitio": 9.972763061523438
+  },
+  {
+   "utc": "2026-08-26T01:00Z",
+   "tb_min_sitio": 251.55943298339844,
+   "tb_med_sitio": 265.8553466796875,
+   "btd_07_13_sitio": null,
+   "sistema": {
+    "area_km2": 292.0,
+    "tb_min": 211.30992126464844,
+    "lat": 27.747397260273953,
+    "lon": 86.38849315068438,
+    "dist_sitio_km": 127.25736551002771
+   },
+   "tb_min_30km": 228.19247436523438,
+   "min_30km_lat_lon": [
+    28.079999999999973,
+    85.25999999999966
+   ],
+   "objeto_sitio": {
+    "area_km2": 65248.0,
+    "tb_min": 211.30992126464844,
+    "tem_nucleo_213": true,
+    "contem_sistema": true,
+    "lon_oeste_faixa_28_28p6": 85.11999999999969
+   },
+   "sela_ate_sistema_K": 229.0,
+   "sela_menos_min_local_K": 0.807525634765625,
+   "antecessor": {
+    "rotulo": 1,
+    "sobreposicao_km2": 63104.0,
+    "area_km2": 66492.0,
+    "tb_min": 210.17794799804688,
+    "lat": 27.784384286831482,
+    "lon": 87.93160801299318,
+    "tem_nucleo_213": true
+   },
+   "rotulo_sitio": 1,
+   "dtb_10min_sitio": 10.214981079101562
+  },
+  {
+   "utc": "2026-08-26T01:10Z",
+   "tb_min_sitio": 261.19720458984375,
+   "tb_med_sitio": 271.23455810546875,
+   "btd_07_13_sitio": null,
+   "sistema": {
+    "area_km2": 208.0,
+    "tb_min": 211.73802185058594,
+    "lat": 27.372307692307686,
+    "lon": 87.83269230769146,
+    "dist_sitio_km": 272.3646502450116
+   },
+   "tb_min_30km": 231.89443969726562,
+   "min_30km_lat_lon": [
+    28.119999999999973,
+    85.15999999999968
+   ],
+   "objeto_sitio": {
+    "area_km2": 63420.0,
+    "tb_min": 208.8359832763672,
+    "tem_nucleo_213": true,
+    "contem_sistema": true,
+    "lon_oeste_faixa_28_28p6": 85.0599999999997
+   },
+   "sela_ate_sistema_K": 234.0,
+   "sela_menos_min_local_K": 2.105560302734375,
+   "antecessor": {
+    "rotulo": 1,
+    "sobreposicao_km2": 60664.0,
+    "area_km2": 65248.0,
+    "tb_min": 211.30992126464844,
+    "lat": 27.782056154977912,
+    "lon": 87.94923001471223,
+    "tem_nucleo_213": true
+   },
+   "rotulo_sitio": 2,
+   "dtb_10min_sitio": 9.637771606445312
+  },
+  {
+   "utc": "2026-08-26T01:20Z",
+   "tb_min_sitio": 267.7965087890625,
+   "tb_med_sitio": 275.5022888183594,
+   "btd_07_13_sitio": null,
+   "sistema": {
+    "area_km2": 108.0,
+    "tb_min": 210.441650390625,
+    "lat": 26.82074074074075,
+    "lon": 87.86074074073991,
+    "dist_sitio_km": 304.17869400333126
+   },
+   "tb_min_30km": 235.3197784423828,
+   "min_30km_lat_lon": [
+    28.119999999999973,
+    85.0999999999997
+   ],
+   "rotulo_sitio": 0,
+   "dtb_10min_sitio": 6.59930419921875
+  },
+  {
+   "utc": "2026-08-26T01:30Z",
+   "tb_min_sitio": 271.6018981933594,
+   "tb_med_sitio": 278.735595703125,
+   "btd_07_13_sitio": null,
+   "sistema": {
+    "area_km2": 120.0,
+    "tb_min": 210.6166229248047,
+    "lat": 26.88066666666666,
+    "lon": 87.89533333333249,
+    "dist_sitio_km": 303.3839805017229
+   },
+   "tb_min_30km": 240.14471435546875,
+   "min_30km_lat_lon": [
+    28.23999999999997,
+    85.5599999999996
+   ],
+   "rotulo_sitio": 0,
+   "dtb_10min_sitio": 3.805389404296875
+  },
+  {
+   "utc": "2026-08-26T01:40Z",
+   "tb_min_sitio": 273.103759765625,
+   "tb_med_sitio": 280.1658630371094,
+   "btd_07_13_sitio": null,
+   "sistema": {
+    "area_km2": 104.0,
+    "tb_min": 211.1375732421875,
+    "lat": 26.835384615384616,
+    "lon": 87.84307692307607,
+    "dist_sitio_km": 301.8370081264564
+   },
+   "tb_min_30km": 236.8286895751953,
+   "min_30km_lat_lon": [
+    28.23999999999997,
+    85.5599999999996
+   ],
+   "rotulo_sitio": 0,
+   "dtb_10min_sitio": 1.501861572265625
+  },
+  {
+   "utc": "2026-08-26T01:50Z",
+   "tb_min_sitio": 273.9733581542969,
+   "tb_med_sitio": 280.6726379394531,
+   "btd_07_13_sitio": null,
+   "sistema": {
+    "area_km2": 120.0,
+    "tb_min": 210.87783813476562,
+    "lat": 26.857333333333326,
+    "lon": 87.78266666666585,
+    "dist_sitio_km": 295.5659866344278
+   },
+   "tb_min_30km": 236.29408264160156,
+   "min_30km_lat_lon": [
+    28.17999999999997,
+    85.51999999999961
+   ],
+   "rotulo_sitio": 0,
+   "dtb_10min_sitio": 0.869598388671875
+  },
+  {
+   "utc": "2026-08-26T02:00Z",
+   "tb_min_sitio": 268.3800964355469,
+   "tb_med_sitio": 280.50726318359375,
+   "btd_07_13_sitio": null,
+   "sistema": {
+    "area_km2": 140.0,
+    "tb_min": 209.91270446777344,
+    "lat": 26.853142857142856,
+    "lon": 87.70399999999918,
+    "dist_sitio_km": 289.47388867420676
+   },
+   "tb_min_30km": 235.53765869140625,
+   "min_30km_lat_lon": [
+    28.15999999999997,
+    85.49999999999962
+   ],
+   "rotulo_sitio": 0,
+   "dtb_10min_sitio": -5.59326171875
+  },
+  {
+   "utc": "2026-08-26T02:10Z",
+   "tb_min_sitio": 271.0733337402344,
+   "tb_med_sitio": 279.8742980957031,
+   "btd_07_13_sitio": null,
+   "sistema": {
+    "area_km2": 136.0,
+    "tb_min": 209.82394409179688,
+    "lat": 26.839411764705886,
+    "lon": 87.60411764705803,
+    "dist_sitio_km": 282.4047953056492
+   },
+   "tb_min_30km": 235.70054626464844,
+   "min_30km_lat_lon": [
+    28.139999999999972,
+    85.47999999999962
+   ],
+   "rotulo_sitio": 0,
+   "dtb_10min_sitio": 2.6932373046875
+  },
+  {
+   "utc": "2026-08-26T02:20Z",
+   "tb_min_sitio": 273.4268493652344,
+   "tb_med_sitio": 279.6152648925781,
+   "btd_07_13_sitio": null,
+   "sistema": {
+    "area_km2": 152.0,
+    "tb_min": 209.91270446777344,
+    "lat": 26.819473684210532,
+    "lon": 87.56052631578869,
+    "dist_sitio_km": 280.3060370940606
+   },
+   "tb_min_30km": 235.42881774902344,
+   "min_30km_lat_lon": [
+    28.139999999999972,
+    85.47999999999962
+   ],
+   "rotulo_sitio": 0,
+   "dtb_10min_sitio": 2.353515625
+  },
+  {
+   "utc": "2026-08-26T02:30Z",
+   "tb_min_sitio": 276.09503173828125,
+   "tb_med_sitio": 279.55340576171875,
+   "btd_07_13_sitio": null,
+   "sistema": {
+    "area_km2": 64.0,
+    "tb_min": 210.17794799804688,
+    "lat": 26.8125,
+    "lon": 87.50249999999923,
+    "dist_sitio_km": 276.27392400269923
+   },
+   "tb_min_30km": 236.34776306152344,
+   "min_30km_lat_lon": [
+    28.119999999999973,
+    85.43999999999963
+   ],
+   "rotulo_sitio": 0,
+   "dtb_10min_sitio": 2.668182373046875
+  },
+  {
+   "utc": "2026-08-26T02:50Z",
+   "tb_min_sitio": 275.68731689453125,
+   "tb_med_sitio": 279.1982116699219,
+   "btd_07_13_sitio": null,
+   "sistema": {
+    "area_km2": 112.0,
+    "tb_min": 210.3539276123047,
+    "lat": 26.822142857142865,
+    "lon": 87.5571428571421,
+    "dist_sitio_km": 279.8629033966448
+   },
+   "tb_min_30km": 240.84730529785156,
+   "min_30km_lat_lon": [
+    28.359999999999967,
+    85.5799999999996
+   ],
+   "rotulo_sitio": 0,
+   "dtb_10min_sitio": -0.40771484375
+  },
+  {
+   "utc": "2026-08-26T03:00Z",
+   "tb_min_sitio": 276.65655517578125,
+   "tb_med_sitio": 279.01416015625,
+   "btd_07_13_sitio": null,
+   "sistema": {
+    "area_km2": 104.0,
+    "tb_min": 210.6166229248047,
+    "lat": 26.807692307692314,
+    "lon": 87.45846153846075,
+    "dist_sitio_km": 273.2206995352874
+   },
+   "tb_min_30km": 241.34445190429688,
+   "min_30km_lat_lon": [
+    28.339999999999968,
+    85.5599999999996
+   ],
+   "rotulo_sitio": 0,
+   "dtb_10min_sitio": 0.96923828125
+  },
+  {
+   "utc": "2026-08-26T03:10Z",
+   "tb_min_sitio": 273.7808532714844,
+   "tb_med_sitio": 278.5594787597656,
+   "btd_07_13_sitio": null,
+   "sistema": {
+    "area_km2": 76.0,
+    "tb_min": 212.16221618652344,
+    "lat": 27.704210526315777,
+    "lon": 89.177894736841,
+    "dist_sitio_km": 388.34832166174976
+   },
+   "tb_min_30km": 244.20220947265625,
+   "min_30km_lat_lon": [
+    28.31999999999997,
+    85.51999999999961
+   ],
+   "rotulo_sitio": 0,
+   "dtb_10min_sitio": -2.875701904296875
+  },
+  {
+   "utc": "2026-08-26T03:20Z",
+   "tb_min_sitio": 274.5802001953125,
+   "tb_med_sitio": 278.0938415527344,
+   "btd_07_13_sitio": null,
+   "sistema": {
+    "area_km2": 92.0,
+    "tb_min": 211.8231658935547,
+    "lat": 27.68782608695651,
+    "lon": 89.1321739130424,
+    "dist_sitio_km": 384.28902369537906
+   },
+   "tb_min_30km": 249.61766052246094,
+   "min_30km_lat_lon": [
+    28.27999999999997,
+    85.47999999999962
+   ],
+   "rotulo_sitio": 0,
+   "dtb_10min_sitio": 0.799346923828125
+  },
+  {
+   "utc": "2026-08-26T03:30Z",
+   "tb_min_sitio": 273.1361083984375,
+   "tb_med_sitio": 277.8553161621094,
+   "btd_07_13_sitio": null,
+   "sistema": {
+    "area_km2": 68.0,
+    "tb_min": 212.0776824951172,
+    "lat": 27.655294117647042,
+    "lon": 89.0529411764695,
+    "dist_sitio_km": 377.3900381047762
+   },
+   "tb_min_30km": 251.21812438964844,
+   "min_30km_lat_lon": [
+    28.399999999999967,
+    85.53999999999961
+   ],
+   "rotulo_sitio": 0,
+   "dtb_10min_sitio": -1.444091796875
+  }
+ ]
+}

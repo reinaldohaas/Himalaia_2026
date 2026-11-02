@@ -42,8 +42,11 @@ V2D = ["OLR", "GRAUPELNC", "HAILNC", "SNOWNC", "RAINNC"]
 HASH_D03 = ["T", "QCLOUD", "W"]
 HASH_D02 = ["T", "QCLOUD"]
 RD, CP, G = 287.04, 1004.5, 9.81
-CORTES = {("A", "S"): "2026-08-25_17:00:00", ("S", "E2"): "2026-08-25_22:00:00", ("S", "R"): "2026-08-25_23:30:00"}
-T0_C2 = {"E2": "2026-08-26_00:00:00", "R": "2026-08-25_23:30:00"}
+CORTES = {("A", "S"): "2026-08-25_17:00:00", ("S", "E2"): "2026-08-25_22:00:00", ("S", "R"): "2026-08-25_23:30:00",
+          ("S", "E3"): "2026-08-25_22:00:00", ("E2", "E3"): "2026-08-26_00:00:00"}   # E3: modulo 4.3 contra 4.2
+T0_C2 = {"E2": "2026-08-26_00:00:00", "R": "2026-08-25_23:30:00"}   # o E3 usa a janela do E2 (injecao as 00:00)
+# E2 fora dos membros 2-5 (01/11/2026): o fnuc_v e o fhm_v multiplicam termos nulos do NSSL entre -3 e -5 C
+SUSPENSO = {"E2": "suspenso apos o membro 1: disparo sem efeito entre -3 e -5 C (leitura_disparo_nssl_20261101.txt)"}
 
 
 class Nc:
@@ -206,7 +209,7 @@ def diag(r):
                 f = max(0.0, min(m_slw[k] - m_slw[k + 2], m_gel[k + 2] - m_gel[k])) / m_slw[k]
                 if f > best[0]:
                     best = (f, tt[k])
-        out["C2"]["janela_" + braco] = {"fracao_max": best[0], "inicio": best[1]}
+        out["C2"]["janela_" + braco] = {"fracao_max": float(best[0]), "inicio": best[1]}
     # C3: tamanho no nivel mais baixo, ate 3 km
     k3 = idx(tt, "2026-08-25_22:00:00", "2026-08-26_02:35:00")
     c3 = {}
@@ -269,7 +272,7 @@ def criterios(pasta_npz, saida):
     os.makedirs(saida, exist_ok=True)
     R = {}
     for arq in sorted(glob.glob(os.path.join(pasta_npz, "*_m*.npz"))):
-        m = re.match(r"^(A|S|E2|R)_m(\d+)\.npz$", os.path.basename(arq))
+        m = re.match(r"^(A|S|E2|R|E3)_m(\d+)\.npz$", os.path.basename(arq))
         if m:
             R[(m.group(1), int(m.group(2)))] = carrega(arq)
     if not R:
@@ -292,7 +295,7 @@ def criterios(pasta_npz, saida):
     fmt = lambda x, f="%.3g": "-" if x is None else f % x
     L += ["", "%-6s %-10s %-6s %-9s %-9s %-9s %-8s %-8s %-10s %-9s %-9s %-6s"
           % ("rodada", "C1 SLW kg", "quando", "T med C", "Dgot-8-3", "Dgot-38-30", "C2 E2", "C2 R", "C3 Dmax mm", "C4 kg", "C5 OLR", "C5")]
-    for k in sorted(R, key=lambda k: (k[1], ["A", "S", "E2", "R"].index(k[0]))):
+    for k in sorted(R, key=lambda k: (k[1], ["A", "S", "E2", "R", "E3"].index(k[0]))):
         d = D[k]
         L.append("%-6s %-10s %-6s %-9s %-9s %-9s %-8s %-8s %-10s %-9s %-9s %-6s" % (
             "%s_m%d" % k, fmt(d["C1"]["slw_max_kg"]), d["C1"]["quando"][11:16], fmt(d["C1"]["t_media_c"], "%.1f"),
@@ -306,7 +309,7 @@ def criterios(pasta_npz, saida):
           "   de 22:00 a 02:35, media ate 3 km x 1,19e6 m2; C5: OLR medio ate 5 km do drone, menor de 22:00-00:30 / de 02:00-02:45)", ""]
     L.append("Regra de decisao (C4 >= 1e6 kg e acima de A no mesmo membro; C5; candidato com os dois em >= 80 % dos membros):")
     decisao = {}
-    for b in ("S", "E2", "R"):
+    for b in ("S", "E2", "R", "E3"):
         ms = [m for m in membros if (b, m) in R and ("A", m) in R]
         if not ms:
             continue
@@ -317,11 +320,13 @@ def criterios(pasta_npz, saida):
         decisao[b] = {"membros": ms, "c4": c4, "c5": c5, "sinal_c4_vs_A": sorted(sinais), "candidato": cand}
         L.append("  %-3s membros %s: C4 em %d, C5 em %d; sinal de C4 - A nos pares: %s -> %s%s" % (
             b, ms, len(c4), len(c5), sorted(sinais), "CANDIDATO" if cand else "nao candidato",
-            "" if len(ms) == 5 else " (provisorio: %d de 5 membros)" % len(ms)))
+            "" if len(ms) == 5 else " (%s)" % SUSPENSO[b] if b in SUSPENSO else " (provisorio: %d de 5 membros)" % len(ms)))
+        if b in SUSPENSO:
+            decisao[b]["suspenso"] = SUSPENSO[b]
     txt = "\n".join(L) + "\n"
     open(os.path.join(saida, "criterios_ens_d03.txt"), "w").write(txt)
     json.dump({"rodadas": {"%s_m%d" % k: v for k, v in D.items()}, "identidade": ident, "decisao": decisao},
-              open(os.path.join(saida, "criterios_ens_d03.json"), "w"), indent=1)
+              open(os.path.join(saida, "criterios_ens_d03.json"), "w"), indent=1, default=float)   # np.float32 que escape vira float
     print(txt)
 
 
@@ -329,7 +334,7 @@ def tudo(ens, saida):
     rec = os.path.join(saida, "recortes"); os.makedirs(rec, exist_ok=True)
     for p in sorted(glob.glob(os.path.join(ens, "*_m*"))):
         nome = os.path.basename(p)
-        if not re.match(r"^(A|S|E2|R)_m\d+$", nome) or os.path.exists(os.path.join(rec, nome + ".npz")):
+        if not re.match(r"^(A|S|E2|R|E3)_m\d+$", nome) or os.path.exists(os.path.join(rec, nome + ".npz")):
             continue
         try:
             ok = "SUCCESS COMPLETE WRF" in open(os.path.join(p, "rsl.error.0000"), errors="replace").read()

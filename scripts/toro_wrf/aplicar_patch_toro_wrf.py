@@ -44,10 +44,10 @@ modsrc = open(MOD, encoding="latin-1").read()
 t = arq["phys/module_mp_nssl_2mom.F"]
 t = troca(t, "\nMODULE module_mp_nssl_2mom\n", "\n" + modsrc + "\n", "modulo toro_wrf antes do NSSL", depois=False)
 t = troca(t, "\nMODULE module_mp_nssl_2mom\n",
-          "  USE module_toro_wrf, ONLY: toro_call, toro_f, toro_fnuc, toro_fwfrz   ! toro_wrf (modo super-resfriado)\n",
+          "  USE module_toro_wrf, ONLY: toro_call, toro_f, toro_fnuc, toro_fwfrz, toro_inj   ! toro_wrf (modo super-resfriado)\n",
           "use no NSSL")
 t = troca(t, "      integer jyslab,its,ids,ide,jds,jde ! domain boundaries\n",
-          "      real :: tfator   ! toro_wrf\n", "declaracao em nssl_2mom_gs")
+          "      real :: tfator, tninj, tcinj   ! toro_wrf\n", "declaracao em nssl_2mom_gs")
 # coalescencia e acrecao (chuva quente)
 t = troca(t, "      ENDIF  !  ( ipconc .ge. 2 )\n", """
 ! toro_wrf: Estado A -- autoconversao/autocoleta (fcoal) e acrecao de goticulas pela chuva (faccr)
@@ -78,8 +78,15 @@ t = troca(t, "        if ( xplate(mgs) .eq. 1 ) then\n          qwfrzp(mgs) = qw
           tfator = toro_fwfrz(%s)
           qwfrz(mgs) = tfator*qwfrz(mgs)
           cwfrz(mgs) = tfator*cwfrz(mgs)
+! toro_wrf v4.3: injecao de nucleos de glaciacao -- congelamento por imersao de goticulas ate n_inj cristais
+          tninj = toro_inj(%s)
+          IF ( tninj > 0.0 .and. qx(mgs,lc) > qxmin(lc) .and. cx(mgs,lc) > cxmin ) THEN
+            tcinj = Min( Max(0.0, tninj - cx(mgs,li))*dtpinv, cx(mgs,lc)*dtpinv )
+            cwfrz(mgs) = cwfrz(mgs) + tcinj
+            qwfrz(mgs) = Min( qwfrz(mgs) + tcinj*qx(mgs,lc)/cx(mgs,lc), qcmxd(mgs) )
+          ENDIF
         ENDIF
-""" % IJ, "Bigg", depois=False)
+""" % (IJ, IJ), "Bigg", depois=False)
 # Hallett-Mossop
 t = troca(t, "        qsplinter(mgs) = Min(0.1*qiacr(mgs), csplinter(mgs)*splintermass/rho0(mgs) ) ! makes splinters smaller if too much mass is taken from graupel\n",
           """! toro_wrf: Estado A -- Hallett-Mossop (fhm)

@@ -1,0 +1,48 @@
+&toro_wrf
+ t_ini       = 17.0,      ! Estado A a partir de 25/08 17 UTC (como S e E2): E3 = S bit a bit ate 22 UTC
+ t_rel       = 27.0,      ! fora do nucleo, Estado A ate o fim (como E2)
+ t_dur       = 0.0,
+ lat0        = 28.271,
+ lon0        = 85.515,
+ raio_km     = 150.0,
+ fcoal       = 0.0,
+ faccr       = 0.0,
+ fctfz       = 0.0,
+ fnuc        = 0.0,
+ fhm         = 0.0,
+ frfrz       = 0.0,
+ fwfrz       = 0.0,
+ t_hom_c     = -38.0,
+ dominios    = 1, 1, 1, 1,
+ ivortex     = 1,         ! vortice do E2, para formar o reservatorio: E3 = E2 bit a bit ate 00 UTC
+ t_v_ini     = 22.0,
+ tr_v        = 1.0,
+ t_v_fim     = 25.5,
+ lat_v       = 28.2918,   ! frente de gelo do quadro do Xinhua
+ lon_v       = 85.5284,
+ rmax_v_km   = 5.0,
+ zr_v_m      = 3000.0,
+ alpha_v     = 1.0e-2,
+ dominios_v  = 0, 0, 1, 1,
+ perfil_v    = 1,
+ zc_v_m      = 7500.0,
+ zw_v_m      = 1500.0,
+ w_crit      = 1.0,
+ q_crit      = 1.0e-5,    ! agua liquida (qc + qr) > 0,01 g/kg para injetar
+ t_nuc_min_c = -8.0,
+ t_nuc_max_c = -3.0,
+ ! E3 (modulo toro_wrf 4.3): a injecao de nucleos de glaciacao no reservatorio dispara a glaciacao secundaria
+ ! (hipotese do pesquisador, 02/11/2026). Nada e multiplicado: depois da injecao, a fisica do nucleo e a do NSSL.
+ t_vn_ini    = 24.0,      ! nucleo (ate 5 km da frente) sem Estado A a partir de 00 UTC (pico do reservatorio no E2_m1)
+ t_vn_fim    = 27.0,      !   ate o fim da rodada (no E2 o Estado A voltava ao nucleo em t_v_fim = 01:30)
+ raio_vn_km  = 5.0,
+ nucleo_no_estado_A = .false.,
+ fhm_v       = 1.0,       ! sem Hallett-Mossop imposto
+ fnuc_v      = 1.0,       ! sem nucleacao primaria imposta
+ inj         = 1,         ! injecao de nucleos de glaciacao
+ t_inj_ini   = 24.0,      ! 00:00-00:30 UTC
+ t_inj_fim   = 24.5,
+ n_inj       = 10.0,      ! L-1 de cristais por congelamento de goticulas (imersao)
+ t_inj_min_c = -20.0,     ! nucleos ativos entre -20 e -2 C
+ t_inj_max_c = -2.0,
+/

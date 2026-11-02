@@ -12,6 +12,8 @@
 !   Padroes: perfil_v = 0 (sech^2 a partir do chao) e faixa -999 a 0 C, que reproduzem A-D bit a bit.
 !   v4.2: ate 4 dominios (d04 de 333 m). Antes, id > 3 saia do modulo: o d04 ficava sem Estado A e sem vortice e,
 !   com feedback = 1, apagava os dois no d03 sobre o macico. Com max_dom = 3 nada muda.
+!   v4.3 (E3): injecao de nucleos de glaciacao no reservatorio (inj = 1) e fim proprio da janela do nucleo
+!   (t_vn_fim). Com inj = 0 e t_vn_fim < 0 (padroes) o caminho e o da v4.2.
 !
 ! Estado A (t_ini <= t < t_rel, dentro de raio_km do centro (lat0,lon0), nos dominios marcados em dominios):
 !   fcoal  autoconversao e autocoleta de goticulas (qrcnw, crcnw, cautn)          -> chuva quente
@@ -30,13 +32,18 @@
 !   no nucleo, ONDE A ASCENDENTE CHEGA (w > w_crit, agua liquida qc+qr > q_crit e T < 0 C), o Estado A e
 !   levantado (fatores = 1), o Hallett-Mossop e multiplicado por fhm_v e a nucleacao primaria por fnuc_v (o
 !   aerossol trazido pelo vortice). No resto do nucleo e fora dele o Estado A continua (versao D).
+!   A janela do nucleo vai de t_vn_ini a t_vn_fim (t_vn_fim < 0: ate t_v_fim, como na v4.2).
+! Injecao de nucleos de glaciacao (inj = 1; t_inj_ini <= t < t_inj_fim, no nucleo): onde ha goticulas (qc + qr >
+!   q_crit) com t_inj_min_c < T < t_inj_max_c, os nucleos congelam goticulas por imersao ate o gelo de nuvem chegar
+!   a n_inj (L-1); cada goticula congelada vira um cristal com a massa media das goticulas. O resto (crescimento,
+!   acrecao, graupel, Hallett-Mossop) e a fisica do NSSL: no E3 fhm_v = fnuc_v = 1 e nucleo_no_estado_A = .false.
 ! Tempo t em horas desde 25/08/2026 00 UTC: t = gmt + xtime/60 (todos os dominios comecam em 25/08).
 ! Tiles: supoe OMP_NUM_THREADS = 1 (as mascaras sao do modulo, recalculadas a cada chamada de tile).
 !
 MODULE module_toro_wrf
   IMPLICIT NONE
   PRIVATE
-  PUBLIC :: toro_wrf_prepara, toro_vortice, toro_call, toro_f, toro_fnuc, toro_fwfrz
+  PUBLIC :: toro_wrf_prepara, toro_vortice, toro_call, toro_f, toro_fnuc, toro_fwfrz, toro_inj
 
   LOGICAL, SAVE :: lido = .false., ativo = .false.
   LOGICAL, SAVE :: toro_call = .false.
@@ -60,13 +67,21 @@ MODULE module_toro_wrf
   INTEGER, SAVE :: perfil_v = 0                  ! 0: sech^2(h/zr_v_m) a partir do chao; 1: gaussiana em z ASL (E)
   REAL,    SAVE :: zc_v_m = 7500.0, zw_v_m = 1500.0   ! perfil_v = 1: altitude do maximo e meia-largura (m)
   REAL,    SAVE :: t_nuc_min_c = -999.0, t_nuc_max_c = 0.0   ! faixa de T (C) do disparo no nucleo
+  REAL,    SAVE :: t_vn_fim = -1.0                ! fim da janela do nucleo (h); < 0: t_v_fim (v4.2)
+  ! injecao de nucleos de glaciacao (v4.3, E3)
+  INTEGER, SAVE :: inj = 0
+  REAL,    SAVE :: t_inj_ini = 24.0, t_inj_fim = 24.5, n_inj = 10.0   ! horas; n_inj em L-1
+  REAL,    SAVE :: t_inj_min_c = -20.0, t_inj_max_c = -2.0            ! faixa de T (C) da injecao
+  REAL,    SAVE :: th_mod = -1.0                  ! hora do dominio na ultima chamada de toro_wrf_prepara
+  LOGICAL, SAVE :: avisou_inj = .false.
   LOGICAL, ALLOCATABLE, SAVE :: msup(:,:), maer(:,:), mvn(:,:)
 
   NAMELIST /toro_wrf/ t_ini, t_rel, t_dur, lat0, lon0, raio_km, fcoal, faccr, fctfz, fnuc, fhm, frfrz, fwfrz, &
                       t_hom_c, lat_aer, lon_aer, raio_aer_km, fnuc_rel, dominios, &
                       ivortex, t_v_ini, t_v_fim, tr_v, lat_v, lon_v, rmax_v_km, zr_v_m, alpha_v, dominios_v, &
                       t_vn_ini, raio_vn_km, fhm_v, fnuc_v, w_crit, q_crit, &
-                      ligado, disparo_w, nucleo_no_estado_A, perfil_v, zc_v_m, zw_v_m, t_nuc_min_c, t_nuc_max_c
+                      ligado, disparo_w, nucleo_no_estado_A, perfil_v, zc_v_m, zw_v_m, t_nuc_min_c, t_nuc_max_c, &
+                      t_vn_fim, inj, t_inj_ini, t_inj_fim, n_inj, t_inj_min_c, t_inj_max_c
 
 CONTAINS
 
@@ -121,6 +136,10 @@ CONTAINS
       'toro_wrf: perfil do vortice em niveis medios: maximo a ', zc_v_m, ' m ASL, meia-largura ', zw_v_m, ' m'
     IF ( ativo .and. ivortex == 1 .and. t_nuc_min_c > -900.0 ) WRITE(0,'(a,f6.1,a,f6.1,a)') &
       'toro_wrf: disparo so com ', t_nuc_min_c, ' < T < ', t_nuc_max_c, ' C'
+    IF ( ativo .and. ivortex == 1 .and. t_vn_fim >= 0.0 ) WRITE(0,'(a,f6.2,a,f6.2,a)') &
+      'toro_wrf: janela do nucleo de ', t_vn_ini, ' a ', t_vn_fim, ' h'
+    IF ( ativo .and. inj == 1 ) WRITE(0,'(a,f7.2,a,f6.2,a,f6.2,a,f6.1,a,f6.1,a)') 'toro_wrf: injecao de nucleos de glaciacao: ', &
+      n_inj, ' L-1 de ', t_inj_ini, ' a ', t_inj_fim, ' h, com ', t_inj_min_c, ' < T < ', t_inj_max_c, ' C'
   END SUBROUTINE le_config
 
   REAL FUNCTION dist_km(la, lo, la0, lo0)
@@ -133,7 +152,7 @@ CONTAINS
     REAL,    INTENT(IN) :: xtime, gmt
     REAL,    INTENT(IN) :: xlat(ims:ime, jms:jme), xlong(ims:ime, jms:jme)
     INTEGER :: i, j
-    REAL :: th
+    REAL :: th, tvf
     LOGICAL :: em_vn
     CALL le_config()
     toro_call = .false.
@@ -141,7 +160,10 @@ CONTAINS
     IF ( id < 1 .or. id > 4 ) RETURN
     IF ( dominios(id) /= 1 ) RETURN
     th = gmt + xtime/60.0
-    em_vn = ( ivortex == 1 .and. dominios_v(id) == 1 .and. th >= t_vn_ini .and. th < t_v_fim )
+    th_mod = th
+    tvf = t_v_fim
+    IF ( t_vn_fim >= 0.0 ) tvf = t_vn_fim
+    em_vn = ( ivortex == 1 .and. dominios_v(id) == 1 .and. th >= t_vn_ini .and. th < tvf )
     IF ( ( th < t_ini .or. th >= t_rel + t_dur ) .and. .not. em_vn ) RETURN
     IF ( allocated(msup) ) THEN
       IF ( lbound(msup,1) /= ims .or. ubound(msup,1) /= ime .or. lbound(msup,2) /= jms .or. ubound(msup,2) /= jme ) THEN
@@ -273,5 +295,21 @@ CONTAINS
     IF ( disparo(i, j, wl, ql, tk) ) RETURN
     IF ( msup(i,j) .and. tk > 273.15 + t_hom_c ) toro_fwfrz = fwfrz
   END FUNCTION toro_fwfrz
+
+  ! injecao de nucleos de glaciacao (v4.3): concentracao-alvo de gelo de nuvem (m-3) no ponto; 0 fora da injecao
+  REAL FUNCTION toro_inj(i, j, wl, ql, tk)
+    INTEGER, INTENT(IN) :: i, j
+    REAL,    INTENT(IN) :: wl, ql, tk
+    toro_inj = 0.0
+    IF ( .not. toro_call .or. inj /= 1 ) RETURN
+    IF ( .not. mvn(i,j) ) RETURN
+    IF ( th_mod < t_inj_ini .or. th_mod >= t_inj_fim ) RETURN
+    IF ( ql <= q_crit .or. tk >= 273.15 + t_inj_max_c .or. tk <= 273.15 + t_inj_min_c ) RETURN
+    toro_inj = n_inj*1.0e3
+    IF ( .not. avisou_inj ) THEN
+      avisou_inj = .true.
+      WRITE(0,'(a,f6.2,a,es9.2,a,f7.2)') 'toro_wrf: injecao de nucleos iniciada (w = ', wl, ' m/s, ql = ', ql, ' kg/kg, T = ', tk
+    ENDIF
+  END FUNCTION toro_inj
 
 END MODULE module_toro_wrf
